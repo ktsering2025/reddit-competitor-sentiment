@@ -1,7 +1,8 @@
 """
-Comprehensive Reddit Scraper for HelloFresh Competitor Analysis
-Gets data for ALL competitors from dedicated subreddits and targeted searches
-Based on Brian's requirement for complete competitor sentiment data
+CORE FILE FOR BRIAN'S PROJECT - Reddit Scraper
+Purpose: Web scrapes Reddit daily to find competitor sentiment (Brian's main request)
+What it does: Acts like a browser to download Reddit HTML and extract competitor mentions
+Status: 70% complete - scraping works, need to connect to email delivery system
 """
 
 import requests

@@ -1,6 +1,8 @@
 """
-Configuration settings for Reddit Competitor Sentiment Agent
-Based on HelloFresh US Market Insights (August 2025)
+ESSENTIAL FILE FOR BRIAN'S PROJECT - Competitor Configuration
+Purpose: Lists all competitors to track (HelloFresh vs external brands)
+Why needed: Tells the scraper which companies to look for in Reddit posts
+Based on: HelloFresh US Market Insights (August 2025) Brian provided
 """
 
 import os

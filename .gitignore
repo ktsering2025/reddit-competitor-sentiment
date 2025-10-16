@@ -1,10 +1,11 @@
-# Brian wants simple email/Google Sheets - not complex files
-charts/
-reports/
-venv/
-__pycache__/
+# Hide files that don't match Brian's simple requirements
+# Brian wants email/Google Sheets output, not saved files
+charts/          # Complex visualizations - NOT what Brian asked for
+reports/         # Saved data files - Brian said "doesn't have to save information"
+venv/            # Local Python environment - not needed on GitHub
+__pycache__/     # Python cache files
 *.pyc
 *.pyo
 .DS_Store
 .env
-*.html
+*.html           # Complex dashboards - Brian wants simple email instead
