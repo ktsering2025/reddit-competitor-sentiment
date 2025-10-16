@@ -1,33 +1,25 @@
-# Brian's Reddit Competitor Sentiment Agent
+# Reddit Competitor Sentiment Agent - 70% Complete
 
-## What I Built
-I created a Reddit scraping agent that answers Brian's questions about competitor sentiment.
+## What Brian Actually Asked For
+> *"Build an agent that will scrub reddit each day to build a report on competitor sentiment. It can just live in the email that is sent to end users or a google sheet."*
 
-**Live Page:** file:///Users/kunsang.tsering/Desktop/reddit-competitor-sentiment/index.html
+## ✅ What I Built (70% Complete)
+- `reddit_scraper.py` - Web scraping agent that gets Reddit data ✅
+- `config.py` - Competitor list for tracking ✅  
+- `requirements.txt` - Python dependencies ✅
 
-## Files in My Project
-- `index.html` - Simple page showing Reddit customer discussions with clickable links
-- `reddit_scraper.py` - Gets live Reddit data from r/MealKits, r/ButcherBox, r/DogFood  
-- `config.py` - List of competitors to track
-- `requirements.txt` - Python dependencies
+## ❌ What I Need to Finish (30% Missing)
+- **Email system** to send daily reports to end users
+- **Google Sheets integration** (Brian's preferred simple output)
+- **Remove complex files** (Brian said don't save data)
 
-## What Brian Asked For
-> *"Build an agent that will scrub reddit each day to build a report on competitor sentiment. Which competitors are doing well, which ones are doing poorly and receiving negative comments, what does volume look like per competitor vs HF?"*
+## Current Status
+**Project Completion: 70%**  
+**Missing:** Simple email reports or Google Sheets output (Brian's actual preference)
 
-## What I Delivered
-✅ **Volume tracking:** HelloFresh 3 posts vs Competitors 7 posts  
-✅ **Well-performing:** HelloFresh brands (green borders)  
-✅ **Poorly-performing:** Sunbasket "SCAM" posts, Marley Spoon "BUST" complaints  
-✅ **Real Reddit links:** Click to read actual customer discussions  
-✅ **Live data:** 33 Reddit posts scraped daily
+## Next Steps
+1. Build email system for daily reports
+2. Add Google Sheets integration option  
+3. Focus on simplicity (no HTML dashboards or saved files)
 
-## Brian's Response
-> *"I agree with the 'next development' phase. I think the methodology for sentiment scoring is something that we can brainstorm together, since that can become quite subjective and smart categorization of comment types would be helpful."*
-
-## Next Phase
-Ready to collaborate with Brian on:
-- Enhanced sentiment scoring methodology
-- Smart comment categorization  
-- Daily email reports for stakeholders
-
-**Status:** Phase 1 complete, Phase 2 ready for Brian's input
+**Brian wants simple, not complex - I overcomplicated this.**
