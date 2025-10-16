@@ -3,7 +3,7 @@
 ## What I Built
 I created a Reddit scraping agent that answers Brian's questions about competitor sentiment.
 
-**Live Page:** https://ktsering2025.github.io/reddit-competitor-sentiment/
+**Live Page:** file:///Users/kunsang.tsering/Desktop/reddit-competitor-sentiment/index.html
 
 ## Files in My Project
 - `index.html` - Simple page showing Reddit customer discussions with clickable links
