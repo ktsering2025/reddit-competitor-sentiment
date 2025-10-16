@@ -1,0 +1,26 @@
+# Basic web scraping
+requests
+beautifulsoup4
+
+# Data processing
+pandas
+numpy
+
+# Sentiment analysis
+textblob
+vaderSentiment
+
+# Visualization and reporting
+matplotlib
+seaborn
+
+# Environment and configuration
+python-dotenv
+
+# Scheduling (for daily automation)
+schedule
+
+# Email sending (smtplib is built-in to Python)
+
+# Excel export
+openpyxl

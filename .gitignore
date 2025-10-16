@@ -1,0 +1,17 @@
+# Hide unnecessary folders from GitHub
+charts/
+reports/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+.env
+
+# Keep only essential files for Brian:
+# - index.html (main page)
+# - reddit_scraper.py (gets data)
+# - update_brian_page.py (refreshes page)
+# - config.py (competitor list)
+# - requirements.txt (dependencies)
+# - README.md (simple description)
