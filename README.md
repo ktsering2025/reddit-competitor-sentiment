@@ -3,7 +3,7 @@
 ## Overview
 Automated competitive intelligence system that tracks HelloFresh competitor mentions and sentiment across Reddit communities for daily business insights.
 
-## ✅ Step 1 Complete: Stacked Bar Chart with Sentiment Analysis
+## Step 1 Complete: Stacked Bar Chart with Sentiment Analysis
 
 ![Competitor Sentiment Chart](reports/step1_competitor_sentiment_chart.png)
 
@@ -42,9 +42,9 @@ python3 sentiment_analyzer.py  # Analyze sentiment
 ```
 
 ## Next Steps: Brian's 3-Phase Plan
-- ✅ **Step 1:** Post volume bar chart with sentiment (COMPLETE)
-- 🔄 **Step 2:** HelloFresh deep dive with actionable insights
-- ⏳ **Step 3:** Competitor analysis table with improvement recommendations
+- **Step 1:** Post volume bar chart with sentiment (COMPLETE)
+- **Step 2:** HelloFresh deep dive with actionable insights
+- **Step 3:** Competitor analysis table with improvement recommendations
 
 ## Data Sources
 - **33 verified Reddit posts** from active food communities
