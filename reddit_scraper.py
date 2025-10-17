@@ -87,13 +87,13 @@ class ComprehensiveRedditScraper:
                         if post['competitors_mentioned']:
                             posts.append(post)
                 
-                print(f"✅ r/{subreddit}: Found {len(posts)} posts with competitor mentions")
+                print(f"SUCCESS r/{subreddit}: Found {len(posts)} posts with competitor mentions")
                 
             else:
-                print(f"❌ r/{subreddit}: Status {response.status_code}")
+                print(f"ERROR r/{subreddit}: Status {response.status_code}")
                 
         except Exception as e:
-            print(f"❌ r/{subreddit}: Error - {str(e)}")
+            print(f"ERROR r/{subreddit}: Error - {str(e)}")
         
         time.sleep(random.uniform(2, 4))
         return posts
@@ -160,14 +160,14 @@ class ComprehensiveRedditScraper:
         """
         Comprehensive scraping of ALL competitors across relevant subreddits
         """
-        print("🚀 COMPREHENSIVE COMPETITOR SCRAPING")
+        print("COMPREHENSIVE COMPETITOR SCRAPING")
         print("Getting data for ALL HelloFresh competitors...")
         print("=" * 70)
         
         all_posts = []
         
         # Step 1: Scrape dedicated subreddits for general discussions
-        print("\n📍 STEP 1: Scraping dedicated subreddits...")
+        print("\nSTEP 1: Scraping dedicated subreddits...")
         key_subreddits = ['hellofresh', 'MealKits', 'ButcherBox', 'DogFood', 'mealprep']
         
         for subreddit in key_subreddits:
@@ -175,7 +175,7 @@ class ComprehensiveRedditScraper:
             all_posts.extend(posts)
         
         # Step 2: Search for specific high-priority competitors
-        print("\n🎯 STEP 2: Targeted brand searches...")
+        print("\nSTEP 2: Targeted brand searches...")
         priority_competitors = [
             ("HelloFresh", ['MealKits', 'mealprep', 'Frugal']),
             ("ButcherBox", ['Frugal', 'Cooking', 'BuyItForLife']),
@@ -188,7 +188,7 @@ class ComprehensiveRedditScraper:
         ]
         
         for brand, subreddits in priority_competitors:
-            print(f"\n🔍 Searching for {brand}:")
+            print(f"\nSearching for {brand}:")
             brand_posts = self.search_brand_specifically(brand, subreddits, limit=5)
             all_posts.extend(brand_posts)
         
@@ -202,8 +202,8 @@ class ComprehensiveRedditScraper:
         
         self.scraped_posts = unique_posts
         
-        print(f"\n🎉 SCRAPING COMPLETE!")
-        print(f"📊 Total unique posts: {len(unique_posts)}")
+        print(f"\nSCRAPING COMPLETE!")
+        print(f"Total unique posts: {len(unique_posts)}")
         return unique_posts
     
     def get_comprehensive_summary(self):
@@ -245,7 +245,7 @@ class ComprehensiveRedditScraper:
 
 def main():
     """Run comprehensive competitor scraping"""
-    print("🍽️ HelloFresh Comprehensive Competitor Intelligence")
+    print("HelloFresh Comprehensive Competitor Intelligence")
     print("Scraping ALL competitors across ALL relevant subreddits")
     print("=" * 70)
     
@@ -253,15 +253,15 @@ def main():
     posts = scraper.scrape_all_competitors()
     
     # Show detailed results
-    print(f"\n📋 DETAILED RESULTS:")
+    print(f"\nDETAILED RESULTS:")
     summary = scraper.get_comprehensive_summary()
     
-    print(f"\n📊 OVERVIEW:")
+    print(f"\nOVERVIEW:")
     print(f"   • Total posts found: {summary['total_posts']}")
     print(f"   • Competitors mentioned: {summary['competitors_found']}")
     print(f"   • Subreddits covered: {len(summary['top_subreddits'])}")
     
-    print(f"\n🏆 COMPETITOR BREAKDOWN:")
+    print(f"\nCOMPETITOR BREAKDOWN:")
     for competitor, stats in summary['competitor_breakdown'].items():
         is_hf = COMPETITORS.get(competitor, {}).get('hf_brand', False)
         brand_type = "HF BRAND" if is_hf else "COMPETITOR"
@@ -276,20 +276,20 @@ def main():
         print()
     
     # Show sample posts
-    print(f"📝 SAMPLE POSTS:")
+    print(f"SAMPLE POSTS:")
     for i, post in enumerate(posts[:5]):
         competitors = ', '.join(post['competitors_mentioned'])
         print(f"\n{i+1}. [{competitors}] (Score: {post['score']})")
-        print(f"   📝 {post['title'][:80]}...")
-        print(f"   📍 r/{post['subreddit']} | 💬 {post['num_comments']} comments")
-        print(f"   🔗 {post['url']}")
+        print(f"   {post['title'][:80]}...")
+        print(f"   r/{post['subreddit']} | {post['num_comments']} comments")
+        print(f"   {post['url']}")
     
-    print(f"\n🎯 THIS IS THE DATA BRIAN WANTS:")
-    print(f"   ✅ Complete competitor mentions across Reddit")
-    print(f"   ✅ Volume comparison (post counts per competitor)")
-    print(f"   ✅ Engagement data (scores, comments)")
-    print(f"   ✅ Source tracking (which subreddits)")
-    print(f"   ✅ Ready for sentiment analysis")
+    print(f"\nTHIS IS THE DATA BRIAN WANTS:")
+    print(f"   Complete competitor mentions across Reddit")
+    print(f"   Volume comparison (post counts per competitor)")
+    print(f"   Engagement data (scores, comments)")
+    print(f"   Source tracking (which subreddits)")
+    print(f"   Ready for sentiment analysis")
 
 if __name__ == "__main__":
     main()

@@ -29,7 +29,7 @@
 **Why needed:** Get Brian's input on email format, recipients, timing  
 **Status:** 10 questions ready for Brian's feedback  
 
-## Hidden Files (Not What Brian Asked For)
+## Hidden Files (Not What Brian Asked For, Just for me to see overall data from Insights.pdf slide) 
 
 ### `charts/` folder - UNNECESSARY COMPLEXITY  
 **What it is:** Complex visualizations and market analysis charts  
