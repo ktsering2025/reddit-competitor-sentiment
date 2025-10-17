@@ -1,52 +1,48 @@
-# Reddit Competitor Sentiment Analysis for Brian
+# Reddit Competitor Sentiment Analysis
 
-## Overview
-Automated competitive intelligence system that tracks HelloFresh competitor mentions and sentiment across Reddit communities for daily business insights.
+## What I Built for Brian
 
-## Step 1 Complete: Stacked Bar Chart with Sentiment Analysis
+I created a system that tracks what people are saying about HelloFresh competitors on Reddit. Brian asked for daily competitive intelligence, so I built this to scrape Reddit discussions and analyze sentiment.
+
+## Step 1 Complete: Bar Chart with Sentiment
 
 ![Competitor Sentiment Chart](reports/step1_competitor_sentiment_chart.png)
 
-### Key Business Findings:
-- **ButcherBox:** 9 posts (highest competitor discussion volume)
-- **HungryRoot:** 100% positive sentiment (competitive threat)  
-- **HelloFresh:** Mixed performance (operational insights available)
-- **Sunbasket:** 66.7% negative sentiment (customer acquisition opportunity)
+This chart shows what I found from 33 real Reddit posts:
 
-## System Features
-- **Real-time Reddit scraping** across food communities (r/MealKits, r/ButcherBox, r/DogFood)
-- **Accurate sentiment analysis** using VADER + custom food industry keywords
-- **Professional visualizations** ready for daily email reports
-- **100% verified data accuracy** - all competitor mentions validated
+- **ButcherBox** has the most discussion (9 posts) - mostly positive
+- **HungryRoot** has perfect sentiment (100% positive) - this is a threat
+- **HelloFresh** has mixed reviews (some complaints to address)
+- **Sunbasket** is struggling (66% negative) - opportunity for us
 
-## Files Structure
-```
-├── reddit_scraper.py          # Core data collection engine
-├── sentiment_analyzer.py      # Sentiment classification system  
-├── chart_generator.py         # Visualization generator
-├── config.py                  # Competitor database
-└── reports/
-    ├── step1_competitor_sentiment_chart.png    # Brian's deliverable
-    ├── chart_documentation.md                  # Complete explanation
-    └── step1_chart_summary.txt                # Quick insights
-```
+## How It Works
 
-## Usage
+I scrape Reddit communities where people talk about meal kits and food:
+- r/MealKits (general meal kit discussions)
+- r/ButcherBox (meat delivery community) 
+- r/DogFood (pet food discussions)
+
+Then I analyze each post to see if it's positive, negative, or neutral about each competitor.
+
+## Files
+
+- `reddit_scraper.py` - Gets the Reddit data
+- `sentiment_analyzer.py` - Figures out if posts are positive/negative
+- `chart_generator.py` - Makes the chart
+- `config.py` - List of competitors to track
+
+## Running It
+
 ```bash
-# Generate complete Step 1 analysis
-python3 chart_generator.py
-
-# Run individual components
-python3 reddit_scraper.py      # Collect Reddit data
-python3 sentiment_analyzer.py  # Analyze sentiment
+python3 chart_generator.py  # Makes the full chart
+python3 reddit_scraper.py   # Just gets Reddit data
 ```
 
-## Next Steps: Brian's 3-Phase Plan
-- **Step 1:** Post volume bar chart with sentiment (COMPLETE)
-- **Step 2:** HelloFresh deep dive with actionable insights
-- **Step 3:** Competitor analysis table with improvement recommendations
+## What's Next
 
-## Data Sources
-- **33 verified Reddit posts** from active food communities
-- **12 competitors analyzed** with accurate attribution
-- **Recent timeframe** for relevant competitive intelligence
+Brian wants three things:
+1. Bar chart showing post volume (done)
+2. Deep dive on HelloFresh posts with actionable insights
+3. Analysis of what competitors do better than us
+
+I'm working on steps 2 and 3 next.
