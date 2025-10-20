@@ -11,7 +11,7 @@ import time
 import random
 from datetime import datetime
 import re
-from config import COMPETITORS
+from competitors import COMPETITORS
 
 class ComprehensiveRedditScraper:
     def __init__(self):
@@ -77,13 +77,13 @@ class ComprehensiveRedditScraper:
                             'competitors_mentioned': []
                         }
                         
-                        # Check which competitors are mentioned
+                        # Check which competitors are mentioned Scraper checks if competitors are mentioned in the post titles/text:
                         full_text = (post['title'] + ' ' + post['selftext']).lower()
                         for competitor_name in COMPETITORS.keys():
                             if competitor_name.lower() in full_text:
                                 post['competitors_mentioned'].append(competitor_name)
                         
-                        # Only include posts that mention competitors
+                        # Only include posts that mention competitors 
                         if post['competitors_mentioned']:
                             posts.append(post)
                 
@@ -174,10 +174,21 @@ class ComprehensiveRedditScraper:
             posts = self.scrape_subreddit_directly(subreddit, limit=30)
             all_posts.extend(posts)
         
-        # Step 2: Search for specific high-priority competitors
-        print("\nSTEP 2: Targeted brand searches...")
+        # Step 2: Global search for HelloFresh (workaround for 403 error)
+        print("\nSTEP 2: Global Reddit search for HelloFresh...")
+        try:
+            hf_posts = self.search_reddit_globally("HelloFresh", limit=15)
+            if hf_posts:
+                print(f"SUCCESS Global search: Found {len(hf_posts)} HelloFresh posts")
+                all_posts.extend(hf_posts)
+            else:
+                print("SUCCESS Global search: Found 0 HelloFresh posts")
+        except Exception as e:
+            print(f"ERROR Global search: {e}")
+        
+        # Step 3: Search for other high-priority competitors
+        print("\nSTEP 3: Targeted brand searches...")
         priority_competitors = [
-            ("HelloFresh", ['MealKits', 'mealprep', 'Frugal']),
             ("ButcherBox", ['Frugal', 'Cooking', 'BuyItForLife']),
             ("The Farmer's Dog", ['DogFood', 'dogs', 'puppy101']),
             ("Factor", ['MealKits', 'mealprep', 'fitness']),
@@ -205,6 +216,50 @@ class ComprehensiveRedditScraper:
         print(f"\nSCRAPING COMPLETE!")
         print(f"Total unique posts: {len(unique_posts)}")
         return unique_posts
+    
+    def format_reddit_post(self, post_data):
+        """Format Reddit post data into our standard format"""
+        return {
+            'title': post_data.get('title', ''),
+            'selftext': post_data.get('selftext', ''),
+            'score': post_data.get('score', 0),
+            'num_comments': post_data.get('num_comments', 0),
+            'subreddit': post_data.get('subreddit', ''),
+            'url': f"https://reddit.com{post_data.get('permalink', '')}",
+            'created_utc': post_data.get('created_utc', 0),
+            'competitors_mentioned': self.extract_competitor_mentions(
+                f"{post_data.get('title', '')} {post_data.get('selftext', '')}"
+            )
+        }
+    
+    def search_reddit_globally(self, query, limit=10):
+        """
+        Search Reddit globally for a query across all subreddits
+        Workaround for r/hellofresh 403 error
+        """
+        posts = []
+        try:
+            # Use Reddit's search API
+            url = f"https://www.reddit.com/search.json"
+            params = {
+                'q': query,
+                'sort': 'new',
+                't': 'week',
+                'limit': limit
+            }
+            
+            response = self.session.get(url, params=params)
+            if response.status_code == 200:
+                data = response.json()
+                for post_data in data.get('data', {}).get('children', []):
+                    post = post_data.get('data', {})
+                    if post:
+                        posts.append(self.format_reddit_post(post))
+            
+        except Exception as e:
+            print(f"Global search error for '{query}': {e}")
+        
+        return posts
     
     def get_comprehensive_summary(self):
         """Generate detailed summary for Brian"""
