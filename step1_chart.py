@@ -1,44 +1,94 @@
 """
-Brian's Step 1 Chart - FIXED VERSION
-Purpose: Single sentiment analysis, accurate results
+Brian's Step 1 Chart - UPDATED WITH FRESH DATA
+Purpose: Use fresh Reddit data (77 posts) for accurate Step 1 chart
 """
 
+import json
 import matplotlib.pyplot as plt
 import numpy as np
-from scraper import ComprehensiveRedditScraper
+from collections import defaultdict
 from ai_sentiment import AdvancedSentimentAnalyzer
 import os
 
+def load_fresh_data():
+    """Load fresh Reddit data from working scraper"""
+    try:
+        with open('reports/working_reddit_data.json', 'r') as f:
+            data = json.load(f)
+        return data['posts']
+    except FileNotFoundError:
+        print("❌ Fresh data not found. Run working_scraper.py first.")
+        return []
+
 def generate_step1_chart():
-    """Generate Step 1 chart with ONE sentiment analysis"""
+    """Generate Step 1 chart with fresh Reddit data"""
     
     print("STEP 1: REDDIT POST BREAKDOWN BY COMPETITOR")
     print("=" * 70)
     
-    # Step 1: Scrape data
-    print("\n[1/4] Scraping Reddit data...")
-    scraper = ComprehensiveRedditScraper()
-    posts = scraper.scrape_all_competitors()
+    # Step 1: Load fresh data
+    print("\n[1/4] Loading fresh Reddit data...")
+    posts = load_fresh_data()
     
-    print(f"✅ Found {len(posts)} posts")
+    if not posts:
+        print("❌ No data found. Please run working_scraper.py first.")
+        return None, None
     
-    # Step 2: Run sentiment analysis ONCE
-    print("\n[2/4] Running AI sentiment analysis...")
-    analyzer = AdvancedSentimentAnalyzer()
-    sentiment_data = analyzer.analyze_all_posts(posts)
+    print(f"✅ Loaded {len(posts)} fresh posts")
     
-    # Verify post count (some posts mention multiple competitors)
-    total_mentions = sum(data['total'] for data in sentiment_data.values())
-    print(f"✅ Analyzed {len(posts)} unique posts")
-    print(f"   → {total_mentions} competitor mentions across {len(sentiment_data)} competitors")
-    print(f"   (Some posts mention multiple brands)")
+    # Step 2: Organize data by competitor
+    print("\n[2/4] Organizing data by competitor...")
+    
+    competitor_data = defaultdict(lambda: {'positive': 0, 'negative': 0, 'neutral': 0, 'total': 0})
+    
+    for post in posts:
+        sentiment = post.get('sentiment', 'neutral')
+        competitors = post.get('competitors_mentioned', [])
+        
+        for competitor in competitors:
+            # Normalize competitor names
+            if competitor.lower() in ['hello fresh', 'hello-fresh']:
+                competitor = 'HelloFresh'
+            elif competitor.lower() in ['factor meals', 'factor75']:
+                competitor = 'Factor'
+            elif competitor.lower() in ['every plate', 'every-plate']:
+                competitor = 'EveryPlate'
+            elif competitor.lower() in ['green chef', 'green-chef']:
+                competitor = 'Green Chef'
+            elif competitor.lower() in ['chefs plate', 'chefs-plate']:
+                competitor = "Chef's Plate"
+            elif competitor.lower() in ['butcher box', 'butcherbox']:
+                competitor = 'ButcherBox'
+            elif competitor.lower() in ['hungry root', 'hungryroot']:
+                competitor = 'HungryRoot'
+            elif competitor.lower() in ['blue apron', 'blueapron']:
+                competitor = 'Blue Apron'
+            elif competitor.lower() in ['home chef', 'homechef']:
+                competitor = 'Home Chef'
+            elif competitor.lower() in ['marley spoon', 'marleyspoon']:
+                competitor = 'Marley Spoon'
+            elif competitor.lower() in ['sunbasket']:
+                competitor = 'Sunbasket'
+            elif competitor.lower() in ['gobble']:
+                competitor = 'Gobble'
+            elif competitor.lower() in ['cook unity', 'cookunity']:
+                competitor = 'CookUnity'
+            elif competitor.lower() in ['the farmers dog', 'farmers dog']:
+                competitor = "The Farmer's Dog"
+            elif competitor.lower() in ['ollie']:
+                competitor = 'Ollie'
+            elif competitor.lower() in ['nom nom', 'nomnom']:
+                competitor = 'Nom Nom'
+            
+            competitor_data[competitor][sentiment] += 1
+            competitor_data[competitor]['total'] += 1
     
     # Step 3: Prepare chart data
-    print("\n[3/4] Preparing chart...")
+    print("\n[3/4] Preparing chart data...")
     
     # Sort by total posts (volume)
     sorted_competitors = sorted(
-        sentiment_data.items(), 
+        competitor_data.items(), 
         key=lambda x: x[1]['total'], 
         reverse=True
     )
@@ -133,7 +183,7 @@ def generate_step1_chart():
     print("=" * 70)
     
     print(f"\nTotal Posts: {len(posts)}")
-    print(f"Competitors Tracked: {len(sentiment_data)}")
+    print(f"Competitors Tracked: {len(competitor_data)}")
     
     print(f"\n{'Competitor':<20} {'Posts':<8} {'Positive':<10} {'Negative':<10} {'Neutral':<10} {'Rating':<10}")
     print("-" * 70)
@@ -163,7 +213,7 @@ def generate_step1_chart():
     print("=" * 70)
     
     # HelloFresh performance
-    hf_data = sentiment_data.get('HelloFresh', {})
+    hf_data = competitor_data.get('HelloFresh', {})
     if hf_data:
         hf_total = hf_data['total']
         hf_pos = hf_data['positive']
@@ -175,13 +225,11 @@ def generate_step1_chart():
         print(f"   • Total mentions: {hf_total} posts")
         print(f"   • Positive: {hf_pos} ({hf_pos_pct:.1f}%)")
         print(f"   • Negative: {hf_neg} ({hf_neg_pct:.1f}%)")
-        if hf_data.get('critical_alerts', 0) > 0:
-            print(f"   • Critical Alerts: {hf_data['critical_alerts']}")
     
     # Top performing competitors
     print(f"\nTop Performing Competitors:")
     top_positive = sorted(
-        [(comp, data) for comp, data in sentiment_data.items() if data['total'] >= 3],
+        [(comp, data) for comp, data in competitor_data.items() if data['total'] >= 3],
         key=lambda x: (x[1]['positive'] / x[1]['total']) if x[1]['total'] > 0 else 0,
         reverse=True
     )[:3]
@@ -193,7 +241,7 @@ def generate_step1_chart():
     # Competitors with issues
     print(f"\nCompetitors with Negative Sentiment:")
     negative_comps = [
-        (comp, data) for comp, data in sentiment_data.items() 
+        (comp, data) for comp, data in competitor_data.items() 
         if data['negative'] > 0
     ]
     
@@ -201,8 +249,6 @@ def generate_step1_chart():
         for comp, data in sorted(negative_comps, key=lambda x: x[1]['negative'], reverse=True):
             neg_pct = (data['negative'] / data['total']) * 100 if data['total'] > 0 else 0
             print(f"   • {comp}: {data['negative']}/{data['total']} posts ({neg_pct:.1f}% negative)")
-            if data.get('critical_alerts', 0) > 0:
-                print(f"     Critical Alerts: {data['critical_alerts']}")
     else:
         print(f"   None detected")
     
@@ -210,7 +256,7 @@ def generate_step1_chart():
     print("STEP 1 COMPLETE - Ready for Brian's review")
     print("=" * 70)
     
-    return chart_path, sentiment_data
+    return chart_path, competitor_data
 
 if __name__ == "__main__":
     chart_path, data = generate_step1_chart()

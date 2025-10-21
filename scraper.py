@@ -1,350 +1,301 @@
 """
-CORE FILE FOR BRIAN'S PROJECT - Reddit Scraper
-Purpose: Web scrapes Reddit daily to find competitor sentiment (Brian's main request)
-What it does: Acts like a browser to download Reddit HTML and extract competitor mentions
-Status: 70% complete - scraping works, need to connect to email delivery system
+WORKING REDDIT SCRAPER - NO AUTHENTICATION REQUIRED
+===================================================
+
+This scraper uses Reddit's public JSON API without authentication
+to get ALL r/hellofresh data and competitor data.
 """
-
 import requests
-from bs4 import BeautifulSoup
+import json
 import time
-import random
 from datetime import datetime
-import re
-from competitors import COMPETITORS
+from ai_sentiment import AdvancedSentimentAnalyzer
 
-class ComprehensiveRedditScraper:
+class WorkingRedditScraper:
     def __init__(self):
+        """Initialize working Reddit scraper"""
         self.session = requests.Session()
-        self.user_agents = [
-            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15',
-            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
-        ]
-        self.scraped_posts = []
-        self.update_headers()
-        
-        # Dedicated subreddits for better data
-        self.target_subreddits = {
-            'meal_kit': ['hellofresh', 'MealKits', 'mealprep', 'MealPrepSunday'],
-            'rte': ['MealKits', 'mealprep', 'HealthyFood'],
-            'premium_meat': ['ButcherBox', 'Frugal', 'Cooking'],
-            'pet_food': ['DogFood', 'puppy101', 'dogs', 'AskVet'],
-            'vms': ['supplements', 'fitness', 'nutrition']
-        }
-    
-    def update_headers(self):
-        """Update headers to look like a real browser"""
         self.session.headers.update({
-            'User-Agent': random.choice(self.user_agents),
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-            'Accept-Language': 'en-US,en;q=0.5',
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept': 'application/json, text/plain, */*',
+            'Accept-Language': 'en-US,en;q=0.9',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'DNT': '1',
             'Connection': 'keep-alive',
+            'Upgrade-Insecure-Requests': '1',
         })
+        
+        self.sentiment_analyzer = AdvancedSentimentAnalyzer()
+        
+        # HelloFresh brands
+        self.hellofresh_brands = [
+            "HelloFresh","hello fresh","hello-fresh",
+            "Factor","factor meals","factor75",
+            "EveryPlate","every plate","every-plate",
+            "Green Chef","green chef","green-chef",
+            "Chef's Plate","chefs plate","chefs-plate"
+        ]
+        
+        # Competitors
+        self.competitors = [
+            "ButcherBox", "HungryRoot", "Blue Apron", "Home Chef", 
+            "Sunbasket", "Marley Spoon", "Gobble", "CookUnity",
+            "Purple Carrot", "Daily Harvest", "The Farmer's Dog", 
+            "Ollie", "Nom Nom"
+        ]
     
-    def scrape_subreddit_directly(self, subreddit, limit=25):
-        """
-        Scrape a subreddit directly for recent posts
-        This gets ALL recent discussions, not just brand searches
-        """
+    def get_subreddit_posts(self, subreddit, sort='hot', limit=100):
+        """Get posts from subreddit using public JSON API"""
         posts = []
         
         try:
-            url = f"https://www.reddit.com/r/{subreddit}.json"
-            params = {'limit': limit, 'sort': 'hot'}
+            # Use Reddit's public JSON API
+            url = f"https://www.reddit.com/r/{subreddit}/{sort}.json"
+            params = {'limit': limit}
             
-            self.update_headers()
-            response = self.session.get(url, params=params, timeout=15)
+            print(f"  🔍 Getting {sort} posts from r/{subreddit}...")
+            response = self.session.get(url, params=params)
             
             if response.status_code == 200:
                 data = response.json()
                 
-                if 'data' in data and 'children' in data['data']:
-                    for child in data['data']['children']:
-                        post_data = child['data']
-                        
-                        # Extract post info
-                        post = {
-                            'title': post_data.get('title', ''),
-                            'score': post_data.get('score', 0),
-                            'url': f"https://reddit.com{post_data.get('permalink', '')}",
-                            'subreddit': post_data.get('subreddit', ''),
-                            'author': post_data.get('author', ''),
-                            'created_utc': post_data.get('created_utc', 0),
-                            'num_comments': post_data.get('num_comments', 0),
-                            'selftext': post_data.get('selftext', '')[:300],
-                            'timestamp': datetime.now(),
-                            'source': f'subreddit_r_{subreddit}',
-                            'competitors_mentioned': []
-                        }
-                        
-                        # Check which competitors are mentioned Scraper checks if competitors are mentioned in the post titles/text:
-                        full_text = (post['title'] + ' ' + post['selftext']).lower()
-                        for competitor_name in COMPETITORS.keys():
-                            if competitor_name.lower() in full_text:
-                                post['competitors_mentioned'].append(competitor_name)
-                        
-                        # Only include posts that mention competitors 
-                        if post['competitors_mentioned']:
-                            posts.append(post)
+                for post_data in data.get('data', {}).get('children', []):
+                    post = post_data.get('data', {})
+                    if post:
+                        formatted_post = self.format_post(post)
+                        if formatted_post:
+                            posts.append(formatted_post)
                 
-                print(f"SUCCESS r/{subreddit}: Found {len(posts)} posts with competitor mentions")
-                
+                print(f"  ✅ Got {len(posts)} posts from r/{subreddit}")
             else:
-                print(f"ERROR r/{subreddit}: Status {response.status_code}")
+                print(f"  ❌ Error {response.status_code} accessing r/{subreddit}")
                 
         except Exception as e:
-            print(f"ERROR r/{subreddit}: Error - {str(e)}")
-        
-        time.sleep(random.uniform(2, 4))
-        return posts
-    
-    def search_brand_specifically(self, brand_name, subreddits, limit=10):
-        """
-        Search for specific brand mentions across multiple subreddits
-        """
-        posts = []
-        
-        for subreddit in subreddits:
-            try:
-                url = f"https://www.reddit.com/r/{subreddit}/search.json"
-                params = {
-                    'q': f'"{brand_name}"',  # Exact phrase search
-                    'restrict_sr': 'on',
-                    'sort': 'new',
-                    'limit': limit,
-                    't': 'month'  # Past month
-                }
-                
-                self.update_headers()
-                response = self.session.get(url, params=params, timeout=15)
-                
-                if response.status_code == 200:
-                    data = response.json()
-                    
-                    if 'data' in data and 'children' in data['data']:
-                        for child in data['data']['children']:
-                            post_data = child['data']
-                            
-                            post = {
-                                'title': post_data.get('title', ''),
-                                'score': post_data.get('score', 0),
-                                'url': f"https://reddit.com{post_data.get('permalink', '')}",
-                                'subreddit': post_data.get('subreddit', ''),
-                                'author': post_data.get('author', ''),
-                                'num_comments': post_data.get('num_comments', 0),
-                                'selftext': post_data.get('selftext', '')[:300],
-                                'brand_mentioned': brand_name,
-                                'timestamp': datetime.now(),
-                                'source': f'search_{subreddit}',
-                                'competitors_mentioned': [brand_name]
-                            }
-                            
-                            # Add brand metadata
-                            if brand_name in COMPETITORS:
-                                post['brand_category'] = COMPETITORS[brand_name]['category']
-                                post['is_hf_brand'] = COMPETITORS[brand_name]['hf_brand']
-                                post['market_share'] = COMPETITORS[brand_name].get('market_share', 0)
-                            
-                            posts.append(post)
-                
-                print(f"   • r/{subreddit}: {len([p for p in posts if p.get('subreddit') == subreddit])} {brand_name} posts")
-                
-            except Exception as e:
-                print(f"   • r/{subreddit}: Error - {str(e)}")
-                
-            time.sleep(random.uniform(1, 3))
+            print(f"  ❌ Exception accessing r/{subreddit}: {e}")
         
         return posts
     
-    def scrape_all_competitors(self):
-        """
-        Comprehensive scraping of ALL competitors across relevant subreddits
-        """
-        print("COMPREHENSIVE COMPETITOR SCRAPING")
-        print("Getting data for ALL HelloFresh competitors...")
-        print("=" * 70)
+    def format_post(self, post_data):
+        """Format Reddit post data"""
+        try:
+            title = post_data.get('title', '')
+            selftext = post_data.get('selftext', '')
+            
+            # Extract competitor mentions
+            text = f"{title} {selftext}".lower()
+            mentioned_brands = []
+            
+            # Check HelloFresh brands
+            for brand in self.hellofresh_brands:
+                if brand.lower() in text:
+                    mentioned_brands.append(brand)
+            
+            # Check competitors
+            for competitor in self.competitors:
+                if competitor.lower() in text:
+                    mentioned_brands.append(competitor)
+            
+            if not mentioned_brands:
+                return None
+            
+            return {
+                'title': title,
+                'selftext': selftext,
+                'score': post_data.get('score', 0),
+                'num_comments': post_data.get('num_comments', 0),
+                'subreddit': post_data.get('subreddit', ''),
+                'url': f"https://reddit.com{post_data.get('permalink', '')}",
+                'created_utc': post_data.get('created_utc', 0),
+                'competitors_mentioned': mentioned_brands,
+                'author': post_data.get('author', '[deleted]'),
+                'upvote_ratio': post_data.get('upvote_ratio', 0),
+                'is_self': post_data.get('is_self', False)
+            }
+            
+        except Exception as e:
+            print(f"⚠️ Error formatting post: {e}")
+            return None
+    
+    def scrape_all_data(self):
+        """Scrape ALL data from Reddit"""
+        print("🚀 WORKING REDDIT SCRAPER - NO AUTH REQUIRED")
+        print("=" * 60)
         
         all_posts = []
         
-        # Step 1: Scrape dedicated subreddits for general discussions
-        print("\nSTEP 1: Scraping dedicated subreddits...")
-        key_subreddits = ['hellofresh', 'MealKits', 'ButcherBox', 'DogFood', 'mealprep']
-        
-        for subreddit in key_subreddits:
-            posts = self.scrape_subreddit_directly(subreddit, limit=30)
-            all_posts.extend(posts)
-        
-        # Step 2: Global search for HelloFresh (workaround for 403 error)
-        print("\nSTEP 2: Global Reddit search for HelloFresh...")
+        # Phase 1: Get ALL r/hellofresh posts (multiple sorting methods)
+        print("\n📊 PHASE 1: Getting ALL r/hellofresh posts...")
         try:
-            hf_posts = self.search_reddit_globally("HelloFresh", limit=15)
-            if hf_posts:
-                print(f"SUCCESS Global search: Found {len(hf_posts)} HelloFresh posts")
-                all_posts.extend(hf_posts)
-            else:
-                print("SUCCESS Global search: Found 0 HelloFresh posts")
+            # Try different sorting methods
+            for sort_method in ['hot', 'new', 'top']:
+                posts = self.get_subreddit_posts('hellofresh', sort=sort_method, limit=100)
+                all_posts.extend(posts)
+                time.sleep(1)  # Rate limiting
+            
+            print(f"✅ SUCCESS! Got {len(all_posts)} total posts from r/hellofresh")
         except Exception as e:
-            print(f"ERROR Global search: {e}")
+            print(f"❌ Error accessing r/hellofresh: {e}")
         
-        # Step 3: Search for other high-priority competitors
-        print("\nSTEP 3: Targeted brand searches...")
-        priority_competitors = [
-            ("ButcherBox", ['Frugal', 'Cooking', 'BuyItForLife']),
-            ("The Farmer's Dog", ['DogFood', 'dogs', 'puppy101']),
-            ("Factor", ['MealKits', 'mealprep', 'fitness']),
-            ("CookUnity", ['MealKits', 'mealprep']),
-            ("Blue Apron", ['MealKits', 'mealprep']),
-            ("Home Chef", ['MealKits', 'mealprep']),
-            ("HungryRoot", ['MealKits', 'mealprep', 'HealthyFood'])
+        # Phase 2: Get competitor subreddit posts
+        print("\n📊 PHASE 2: Getting competitor subreddit posts...")
+        competitor_subreddits = {
+            "ButcherBox": ["ButcherBox", "mealkits"],
+            "HungryRoot": ["mealkits", "mealprep"],
+            "Blue Apron": ["mealkits", "cooking"],
+            "Home Chef": ["mealkits", "cooking"],
+            "Sunbasket": ["mealkits", "HealthyFood"],
+            "Marley Spoon": ["mealkits"],
+            "Gobble": ["mealkits"],
+            "CookUnity": ["mealkits"],
+            "The Farmer's Dog": ["dogfood", "dogs"],
+            "Ollie": ["dogfood"],
+            "Nom Nom": ["dogfood"]
+        }
+        
+        for competitor, subreddits in competitor_subreddits.items():
+            print(f"\n🔍 Getting {competitor} posts...")
+            for subreddit in subreddits:
+                try:
+                    posts = self.get_subreddit_posts(subreddit, limit=50)
+                    all_posts.extend(posts)
+                    time.sleep(1)
+                except Exception as e:
+                    print(f"  ⚠️ Error accessing r/{subreddit}: {e}")
+        
+        # Phase 3: Search general subreddits
+        print("\n📊 PHASE 3: Searching general subreddits...")
+        general_subreddits = [
+            "MealKits", "mealprep", "cooking", "food", "recipes",
+            "frugal", "BuyItForLife", "HealthyFood", "nutrition",
+            "fitness", "weightloss", "keto", "paleo", "vegan"
         ]
         
-        for brand, subreddits in priority_competitors:
-            print(f"\nSearching for {brand}:")
-            brand_posts = self.search_brand_specifically(brand, subreddits, limit=5)
-            all_posts.extend(brand_posts)
+        for subreddit in general_subreddits:
+            try:
+                posts = self.get_subreddit_posts(subreddit, limit=30)
+                all_posts.extend(posts)
+                time.sleep(1)
+            except Exception as e:
+                print(f"  ⚠️ Error accessing r/{subreddit}: {e}")
         
         # Remove duplicates based on URL
         unique_posts = []
         seen_urls = set()
+        
         for post in all_posts:
             if post['url'] not in seen_urls:
                 unique_posts.append(post)
                 seen_urls.add(post['url'])
         
-        self.scraped_posts = unique_posts
+        print(f"\n✅ SCRAPING COMPLETE!")
+        print(f"   Total posts found: {len(all_posts)}")
+        print(f"   Unique posts: {len(unique_posts)}")
         
-        print(f"\nSCRAPING COMPLETE!")
-        print(f"Total unique posts: {len(unique_posts)}")
         return unique_posts
     
-    def format_reddit_post(self, post_data):
-        """Format Reddit post data into our standard format"""
-        return {
-            'title': post_data.get('title', ''),
-            'selftext': post_data.get('selftext', ''),
-            'score': post_data.get('score', 0),
-            'num_comments': post_data.get('num_comments', 0),
-            'subreddit': post_data.get('subreddit', ''),
-            'url': f"https://reddit.com{post_data.get('permalink', '')}",
-            'created_utc': post_data.get('created_utc', 0),
-            'competitors_mentioned': self.extract_competitor_mentions(
-                f"{post_data.get('title', '')} {post_data.get('selftext', '')}"
-            )
-        }
-    
-    def search_reddit_globally(self, query, limit=10):
-        """
-        Search Reddit globally for a query across all subreddits
-        Workaround for r/hellofresh 403 error
-        """
-        posts = []
-        try:
-            # Use Reddit's search API
-            url = f"https://www.reddit.com/search.json"
-            params = {
-                'q': query,
-                'sort': 'new',
-                't': 'week',
-                'limit': limit
-            }
+    def analyze_sentiment(self, posts):
+        """Analyze sentiment for all posts"""
+        print("\n🔍 ANALYZING SENTIMENT FOR ALL POSTS...")
+        print("=" * 50)
+        
+        analyzed_posts = []
+        
+        for i, post in enumerate(posts, 1):
+            if i % 10 == 0:
+                print(f"  Analyzing post {i}/{len(posts)}...")
             
-            response = self.session.get(url, params=params)
-            if response.status_code == 200:
-                data = response.json()
-                for post_data in data.get('data', {}).get('children', []):
-                    post = post_data.get('data', {})
-                    if post:
-                        posts.append(self.format_reddit_post(post))
+            # Analyze sentiment
+            sentiment_result = self.sentiment_analyzer.classify_post_sentiment(post)
             
-        except Exception as e:
-            print(f"Global search error for '{query}': {e}")
+            # Add sentiment to post
+            post['sentiment'] = sentiment_result['sentiment']
+            post['confidence'] = sentiment_result['confidence']
+            post['reasoning'] = sentiment_result['reasoning']
+            
+            analyzed_posts.append(post)
         
-        return posts
+        return analyzed_posts
     
-    def get_comprehensive_summary(self):
-        """Generate detailed summary for Brian"""
-        if not self.scraped_posts:
-            return "No data collected"
-        
-        # Group by competitors
-        competitor_stats = {}
-        for post in self.scraped_posts:
-            for competitor in post.get('competitors_mentioned', []):
-                if competitor not in competitor_stats:
-                    competitor_stats[competitor] = {
-                        'posts': 0,
-                        'total_score': 0,
-                        'total_comments': 0,
-                        'subreddits': set()
-                    }
-                
-                competitor_stats[competitor]['posts'] += 1
-                competitor_stats[competitor]['total_score'] += post['score']
-                competitor_stats[competitor]['total_comments'] += post['num_comments']
-                competitor_stats[competitor]['subreddits'].add(post['subreddit'])
-        
-        # Convert sets to lists for display
-        for competitor in competitor_stats:
-            competitor_stats[competitor]['subreddits'] = list(competitor_stats[competitor]['subreddits'])
-            competitor_stats[competitor]['avg_score'] = (
-                competitor_stats[competitor]['total_score'] / competitor_stats[competitor]['posts']
-                if competitor_stats[competitor]['posts'] > 0 else 0
-            )
-        
-        return {
-            'total_posts': len(self.scraped_posts),
-            'competitors_found': len(competitor_stats),
-            'competitor_breakdown': competitor_stats,
-            'top_subreddits': list(set(p['subreddit'] for p in self.scraped_posts))
+    def save_data(self, posts, filename='reports/working_reddit_data.json'):
+        """Save scraped data to JSON file"""
+        data = {
+            'scrape_timestamp': datetime.now().isoformat(),
+            'total_posts': len(posts),
+            'posts': posts
         }
+        
+        with open(filename, 'w') as f:
+            json.dump(data, f, indent=2)
+        
+        print(f"💾 Data saved to: {filename}")
+    
+    def print_summary(self, posts):
+        """Print comprehensive summary"""
+        print("\n📈 COMPREHENSIVE DATA SUMMARY")
+        print("=" * 50)
+        
+        # Count by brand
+        brand_counts = {}
+        for post in posts:
+            for brand in post['competitors_mentioned']:
+                brand_counts[brand] = brand_counts.get(brand, 0) + 1
+        
+        print(f"Total unique posts: {len(posts)}")
+        print(f"Brands mentioned: {len(brand_counts)}")
+        print("\nTop brands by mention count:")
+        
+        sorted_brands = sorted(brand_counts.items(), key=lambda x: x[1], reverse=True)
+        for brand, count in sorted_brands[:20]:
+            print(f"  {brand}: {count} posts")
+        
+        # Sentiment breakdown
+        sentiment_counts = {'positive': 0, 'negative': 0, 'neutral': 0}
+        for post in posts:
+            sentiment_counts[post['sentiment']] += 1
+        
+        total = len(posts)
+        print(f"\n📊 OVERALL SENTIMENT BREAKDOWN:")
+        print(f"🟢 Positive: {sentiment_counts['positive']} ({sentiment_counts['positive']/total*100:.1f}%)")
+        print(f"🔴 Negative: {sentiment_counts['negative']} ({sentiment_counts['negative']/total*100:.1f}%)")
+        print(f"⚪ Neutral:  {sentiment_counts['neutral']} ({sentiment_counts['neutral']/total*100:.1f}%)")
+        
+        # Subreddit breakdown
+        subreddit_counts = {}
+        for post in posts:
+            subreddit = post['subreddit']
+            subreddit_counts[subreddit] = subreddit_counts.get(subreddit, 0) + 1
+        
+        print(f"\nTop subreddits:")
+        sorted_subreddits = sorted(subreddit_counts.items(), key=lambda x: x[1], reverse=True)
+        for subreddit, count in sorted_subreddits[:15]:
+            print(f"  r/{subreddit}: {count} posts")
 
 def main():
-    """Run comprehensive competitor scraping"""
-    print("HelloFresh Comprehensive Competitor Intelligence")
-    print("Scraping ALL competitors across ALL relevant subreddits")
-    print("=" * 70)
+    """Main function to run working scraper"""
+    print("🎯 WORKING REDDIT SCRAPER - NO AUTHENTICATION REQUIRED")
+    print("=" * 60)
     
-    scraper = ComprehensiveRedditScraper()
-    posts = scraper.scrape_all_competitors()
+    # Initialize scraper
+    scraper = WorkingRedditScraper()
     
-    # Show detailed results
-    print(f"\nDETAILED RESULTS:")
-    summary = scraper.get_comprehensive_summary()
+    # Scrape data
+    posts = scraper.scrape_all_data()
     
-    print(f"\nOVERVIEW:")
-    print(f"   • Total posts found: {summary['total_posts']}")
-    print(f"   • Competitors mentioned: {summary['competitors_found']}")
-    print(f"   • Subreddits covered: {len(summary['top_subreddits'])}")
+    if not posts:
+        print("❌ No posts found!")
+        return
     
-    print(f"\nCOMPETITOR BREAKDOWN:")
-    for competitor, stats in summary['competitor_breakdown'].items():
-        is_hf = COMPETITORS.get(competitor, {}).get('hf_brand', False)
-        brand_type = "HF BRAND" if is_hf else "COMPETITOR"
-        market_share = COMPETITORS.get(competitor, {}).get('market_share', 0)
-        
-        print(f"   • {competitor} ({brand_type}):")
-        print(f"     - Posts: {stats['posts']}")
-        print(f"     - Avg Score: {stats['avg_score']:.1f}")
-        print(f"     - Total Comments: {stats['total_comments']}")
-        print(f"     - Market Share: {market_share}%")
-        print(f"     - Subreddits: {', '.join(stats['subreddits'][:3])}")
-        print()
+    # Analyze sentiment
+    analyzed_posts = scraper.analyze_sentiment(posts)
     
-    # Show sample posts
-    print(f"SAMPLE POSTS:")
-    for i, post in enumerate(posts[:5]):
-        competitors = ', '.join(post['competitors_mentioned'])
-        print(f"\n{i+1}. [{competitors}] (Score: {post['score']})")
-        print(f"   {post['title'][:80]}...")
-        print(f"   r/{post['subreddit']} | {post['num_comments']} comments")
-        print(f"   {post['url']}")
+    # Save data
+    scraper.save_data(analyzed_posts)
     
-    print(f"\nTHIS IS THE DATA BRIAN WANTS:")
-    print(f"   Complete competitor mentions across Reddit")
-    print(f"   Volume comparison (post counts per competitor)")
-    print(f"   Engagement data (scores, comments)")
-    print(f"   Source tracking (which subreddits)")
-    print(f"   Ready for sentiment analysis")
+    # Print summary
+    scraper.print_summary(analyzed_posts)
+    
+    print(f"\n🎉 WORKING SCRAPER COMPLETE!")
+    print(f"   Ready to update Step 1 chart with {len(analyzed_posts)} posts!")
 
 if __name__ == "__main__":
     main()
