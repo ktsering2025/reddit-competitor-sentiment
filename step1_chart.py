@@ -17,7 +17,7 @@ def load_fresh_data():
             data = json.load(f)
         return data['posts']
     except FileNotFoundError:
-        print("❌ Fresh data not found. Run working_scraper.py first.")
+        print("#  Fresh data not found. Run working_scraper.py first.")
         return []
 
 def generate_step1_chart():
@@ -31,10 +31,10 @@ def generate_step1_chart():
     posts = load_fresh_data()
     
     if not posts:
-        print("❌ No data found. Please run working_scraper.py first.")
+        print("#  No data found. Please run working_scraper.py first.")
         return None, None
     
-    print(f"✅ Loaded {len(posts)} fresh posts")
+    print(f"#  Loaded {len(posts)} fresh posts")
     
     # Step 2: Organize data by competitor
     print("\n[2/4] Organizing data by competitor...")

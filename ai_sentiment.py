@@ -352,7 +352,7 @@ class AdvancedSentimentAnalyzer:
                 print(f"    Confidence: {post['confidence']:.2f}")
                 print(f"    Reasoning: {post['reasoning']}")
                 if post['critical_alert']:
-                    print(f"    ⚠️  CRITICAL ALERT")
+                    print(f"# #   CRITICAL ALERT")
 
 def test_advanced_sentiment():
     """Test the advanced AI sentiment analyzer"""

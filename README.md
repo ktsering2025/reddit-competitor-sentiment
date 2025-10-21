@@ -6,7 +6,7 @@ A system that tracks what people are saying about HelloFresh and competitors on 
 
 ![Reddit Post Breakdown](reports/step1_chart.png)
 
-## Step 1: Complete ✅
+## Step 1: Complete
 
 **What it does:**
 - Scrapes Reddit posts about meal kit companies

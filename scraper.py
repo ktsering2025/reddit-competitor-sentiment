@@ -53,7 +53,7 @@ class WorkingRedditScraper:
             url = f"https://www.reddit.com/r/{subreddit}/{sort}.json"
             params = {'limit': limit}
             
-            print(f"  🔍 Getting {sort} posts from r/{subreddit}...")
+            print(f"#  Getting {sort} posts from r/{subreddit}...")
             response = self.session.get(url, params=params)
             
             if response.status_code == 200:
@@ -66,12 +66,12 @@ class WorkingRedditScraper:
                         if formatted_post:
                             posts.append(formatted_post)
                 
-                print(f"  ✅ Got {len(posts)} posts from r/{subreddit}")
+                print(f"#  Got {len(posts)} posts from r/{subreddit}")
             else:
-                print(f"  ❌ Error {response.status_code} accessing r/{subreddit}")
+                print(f"#  Error {response.status_code} accessing r/{subreddit}")
                 
         except Exception as e:
-            print(f"  ❌ Exception accessing r/{subreddit}: {e}")
+            print(f"#  Exception accessing r/{subreddit}: {e}")
         
         return posts
     
@@ -113,18 +113,18 @@ class WorkingRedditScraper:
             }
             
         except Exception as e:
-            print(f"⚠️ Error formatting post: {e}")
+            print(f"# #  Error formatting post: {e}")
             return None
     
     def scrape_all_data(self):
         """Scrape ALL data from Reddit"""
-        print("🚀 WORKING REDDIT SCRAPER - NO AUTH REQUIRED")
+        print("#  WORKING REDDIT SCRAPER - NO AUTH REQUIRED")
         print("=" * 60)
         
         all_posts = []
         
         # Phase 1: Get ALL r/hellofresh posts (multiple sorting methods)
-        print("\n📊 PHASE 1: Getting ALL r/hellofresh posts...")
+        print("\n#  PHASE 1: Getting ALL r/hellofresh posts...")
         try:
             # Try different sorting methods
             for sort_method in ['hot', 'new', 'top']:
@@ -132,12 +132,12 @@ class WorkingRedditScraper:
                 all_posts.extend(posts)
                 time.sleep(1)  # Rate limiting
             
-            print(f"✅ SUCCESS! Got {len(all_posts)} total posts from r/hellofresh")
+            print(f"#  SUCCESS! Got {len(all_posts)} total posts from r/hellofresh")
         except Exception as e:
-            print(f"❌ Error accessing r/hellofresh: {e}")
+            print(f"#  Error accessing r/hellofresh: {e}")
         
         # Phase 2: Get competitor subreddit posts
-        print("\n📊 PHASE 2: Getting competitor subreddit posts...")
+        print("\n#  PHASE 2: Getting competitor subreddit posts...")
         competitor_subreddits = {
             "ButcherBox": ["ButcherBox", "mealkits"],
             "HungryRoot": ["mealkits", "mealprep"],
@@ -153,17 +153,17 @@ class WorkingRedditScraper:
         }
         
         for competitor, subreddits in competitor_subreddits.items():
-            print(f"\n🔍 Getting {competitor} posts...")
+            print(f"\n#  Getting {competitor} posts...")
             for subreddit in subreddits:
                 try:
                     posts = self.get_subreddit_posts(subreddit, limit=50)
                     all_posts.extend(posts)
                     time.sleep(1)
                 except Exception as e:
-                    print(f"  ⚠️ Error accessing r/{subreddit}: {e}")
+                    print(f"# #  Error accessing r/{subreddit}: {e}")
         
         # Phase 3: Search general subreddits
-        print("\n📊 PHASE 3: Searching general subreddits...")
+        print("\n#  PHASE 3: Searching general subreddits...")
         general_subreddits = [
             "MealKits", "mealprep", "cooking", "food", "recipes",
             "frugal", "BuyItForLife", "HealthyFood", "nutrition",
@@ -176,7 +176,7 @@ class WorkingRedditScraper:
                 all_posts.extend(posts)
                 time.sleep(1)
             except Exception as e:
-                print(f"  ⚠️ Error accessing r/{subreddit}: {e}")
+                print(f"# #  Error accessing r/{subreddit}: {e}")
         
         # Remove duplicates based on URL
         unique_posts = []
@@ -187,7 +187,7 @@ class WorkingRedditScraper:
                 unique_posts.append(post)
                 seen_urls.add(post['url'])
         
-        print(f"\n✅ SCRAPING COMPLETE!")
+        print(f"\n#  SCRAPING COMPLETE!")
         print(f"   Total posts found: {len(all_posts)}")
         print(f"   Unique posts: {len(unique_posts)}")
         
@@ -195,7 +195,7 @@ class WorkingRedditScraper:
     
     def analyze_sentiment(self, posts):
         """Analyze sentiment for all posts"""
-        print("\n🔍 ANALYZING SENTIMENT FOR ALL POSTS...")
+        print("\n#  ANALYZING SENTIMENT FOR ALL POSTS...")
         print("=" * 50)
         
         analyzed_posts = []
@@ -231,7 +231,7 @@ class WorkingRedditScraper:
     
     def print_summary(self, posts):
         """Print comprehensive summary"""
-        print("\n📈 COMPREHENSIVE DATA SUMMARY")
+        print("\n#  COMPREHENSIVE DATA SUMMARY")
         print("=" * 50)
         
         # Count by brand
@@ -254,7 +254,7 @@ class WorkingRedditScraper:
             sentiment_counts[post['sentiment']] += 1
         
         total = len(posts)
-        print(f"\n📊 OVERALL SENTIMENT BREAKDOWN:")
+        print(f"\n#  OVERALL SENTIMENT BREAKDOWN:")
         print(f"🟢 Positive: {sentiment_counts['positive']} ({sentiment_counts['positive']/total*100:.1f}%)")
         print(f"🔴 Negative: {sentiment_counts['negative']} ({sentiment_counts['negative']/total*100:.1f}%)")
         print(f"⚪ Neutral:  {sentiment_counts['neutral']} ({sentiment_counts['neutral']/total*100:.1f}%)")
@@ -272,7 +272,7 @@ class WorkingRedditScraper:
 
 def main():
     """Main function to run working scraper"""
-    print("🎯 WORKING REDDIT SCRAPER - NO AUTHENTICATION REQUIRED")
+    print("#  WORKING REDDIT SCRAPER - NO AUTHENTICATION REQUIRED")
     print("=" * 60)
     
     # Initialize scraper
@@ -282,7 +282,7 @@ def main():
     posts = scraper.scrape_all_data()
     
     if not posts:
-        print("❌ No posts found!")
+        print("#  No posts found!")
         return
     
     # Analyze sentiment
@@ -294,7 +294,7 @@ def main():
     # Print summary
     scraper.print_summary(analyzed_posts)
     
-    print(f"\n🎉 WORKING SCRAPER COMPLETE!")
+    print(f"\n#  WORKING SCRAPER COMPLETE!")
     print(f"   Ready to update Step 1 chart with {len(analyzed_posts)} posts!")
 
 if __name__ == "__main__":
