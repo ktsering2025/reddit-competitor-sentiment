@@ -8,7 +8,7 @@ to get ALL r/hellofresh data and competitor data.
 import requests
 import json
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 from ai_sentiment import AdvancedSentimentAnalyzer
 
 class WorkingRedditScraper:
@@ -27,7 +27,7 @@ class WorkingRedditScraper:
         
         self.sentiment_analyzer = AdvancedSentimentAnalyzer()
         
-        # HelloFresh brands
+        # HelloFresh brands (COMPLETE FAMILY)
         self.hellofresh_brands = [
             "HelloFresh","hello fresh","hello-fresh",
             "Factor","factor meals","factor75",
@@ -36,12 +36,24 @@ class WorkingRedditScraper:
             "Chef's Plate","chefs plate","chefs-plate"
         ]
         
-        # Competitors
+        # Competitors (EXPANDED LIST - ALL MAJOR MEAL DELIVERY)
         self.competitors = [
-            "ButcherBox", "HungryRoot", "Blue Apron", "Home Chef", 
-            "Sunbasket", "Marley Spoon", "Gobble", "CookUnity",
-            "Purple Carrot", "Daily Harvest", "The Farmer's Dog", 
-            "Ollie", "Nom Nom"
+            # Major Meal Kits
+            "Blue Apron", "Home Chef", "Sunbasket", "Purple Carrot",
+            "Marley Spoon", "Gobble", "CookUnity", "Daily Harvest",
+            "Freshly", "Territory Foods", "Trifecta", "Snap Kitchen",
+            
+            # Meat/Protein Delivery  
+            "ButcherBox", "Crowd Cow", "Omaha Steaks", "Wild Alaskan Company",
+            
+            # Health/Specialty
+            "HungryRoot", "Fresh n' Lean", "Sakara", "Splendid Spoon",
+            
+            # Pet Food Delivery
+            "The Farmer's Dog", "Ollie", "Nom Nom", "Pet Plate",
+            
+            # Grocery Delivery
+            "FreshDirect", "Thrive Market", "Instacart", "Amazon Fresh"
         ]
     
     def get_subreddit_posts(self, subreddit, sort='hot', limit=100):
@@ -76,8 +88,17 @@ class WorkingRedditScraper:
         return posts
     
     def format_post(self, post_data):
-        """Format Reddit post data"""
+        """Format Reddit post data (filter for last 7 days only)"""
         try:
+            # Calculate 7 days ago timestamp for weekly filtering
+            seven_days_ago = datetime.now() - timedelta(days=7)
+            seven_days_timestamp = seven_days_ago.timestamp()
+            
+            # Filter for posts from last 7 days only
+            post_created = post_data.get('created_utc', 0)
+            if post_created < seven_days_timestamp:
+                return None  # Skip posts older than 7 days
+            
             title = post_data.get('title', '')
             selftext = post_data.get('selftext', '')
             
@@ -85,15 +106,32 @@ class WorkingRedditScraper:
             text = f"{title} {selftext}".lower()
             mentioned_brands = []
             
-            # Check HelloFresh brands
+            # Check HelloFresh brands (improved detection)
             for brand in self.hellofresh_brands:
                 if brand.lower() in text:
-                    mentioned_brands.append(brand)
+                    # Normalize brand names for consistency
+                    if "hello" in brand.lower():
+                        mentioned_brands.append("HelloFresh")
+                    elif "factor" in brand.lower():
+                        mentioned_brands.append("Factor") 
+                    elif "every" in brand.lower():
+                        mentioned_brands.append("EveryPlate")
+                    elif "green" in brand.lower():
+                        mentioned_brands.append("Green Chef")
+                    else:
+                        mentioned_brands.append(brand)
+                    break  # Avoid duplicates
             
             # Check competitors
             for competitor in self.competitors:
                 if competitor.lower() in text:
                     mentioned_brands.append(competitor)
+                    break  # Avoid duplicates
+            
+            # Special case: if post is from hellofresh subreddit, always include HelloFresh
+            subreddit = post_data.get('subreddit', '').lower()
+            if subreddit == 'hellofresh' and 'HelloFresh' not in mentioned_brands:
+                mentioned_brands.append('HelloFresh')
             
             if not mentioned_brands:
                 return None
@@ -117,9 +155,14 @@ class WorkingRedditScraper:
             return None
     
     def scrape_all_data(self):
-        """Scrape ALL data from Reddit"""
-        print("#  WORKING REDDIT SCRAPER - NO AUTH REQUIRED")
+        """Scrape weekly data from Reddit (last 7 days only)"""
+        print("WORKING REDDIT SCRAPER - WEEKLY DATA COLLECTION")
         print("=" * 60)
+        print("Collecting posts from last 7 days only...")
+        
+        # Calculate and display the date range being scraped
+        seven_days_ago = datetime.now() - timedelta(days=7)
+        print(f"Date range: {seven_days_ago.strftime('%b %d')} - {datetime.now().strftime('%b %d, %Y')}")
         
         all_posts = []
         
@@ -136,20 +179,22 @@ class WorkingRedditScraper:
         except Exception as e:
             print(f"#  Error accessing r/hellofresh: {e}")
         
-        # Phase 2: Get competitor subreddit posts
+        # Phase 2: Get competitor subreddit posts (EXPANDED)
         print("\n#  PHASE 2: Getting competitor subreddit posts...")
         competitor_subreddits = {
-            "ButcherBox": ["ButcherBox", "mealkits"],
-            "HungryRoot": ["mealkits", "mealprep"],
-            "Blue Apron": ["mealkits", "cooking"],
-            "Home Chef": ["mealkits", "cooking"],
-            "Sunbasket": ["mealkits", "HealthyFood"],
-            "Marley Spoon": ["mealkits"],
-            "Gobble": ["mealkits"],
-            "CookUnity": ["mealkits"],
-            "The Farmer's Dog": ["dogfood", "dogs"],
-            "Ollie": ["dogfood"],
-            "Nom Nom": ["dogfood"]
+            "Blue Apron": ["blueapron", "mealkits", "cooking"],
+            "Home Chef": ["homechef", "mealkits", "cooking"],
+            "ButcherBox": ["ButcherBox", "mealkits", "meat"],
+            "HungryRoot": ["mealkits", "mealprep", "healthyfood"],
+            "Sunbasket": ["mealkits", "HealthyFood", "organic"],
+            "Marley Spoon": ["marleyspoon", "mealkits"],
+            "Gobble": ["mealkits", "cooking"],
+            "CookUnity": ["mealkits", "mealprep"],
+            "Purple Carrot": ["mealkits", "vegan", "PlantBasedDiet"],
+            "Freshly": ["mealkits", "mealprep"],
+            "The Farmer's Dog": ["dogfood", "dogs", "pets"],
+            "Ollie": ["dogfood", "dogs", "pets"],
+            "Nom Nom": ["dogfood", "dogs", "pets"]
         }
         
         for competitor, subreddits in competitor_subreddits.items():
@@ -162,19 +207,36 @@ class WorkingRedditScraper:
                 except Exception as e:
                     print(f"# #  Error accessing r/{subreddit}: {e}")
         
-        # Phase 3: Search general subreddits
+        # Phase 3: Search general subreddits (EXPANDED FOR MORE POSTS)
         print("\n#  PHASE 3: Searching general subreddits...")
         general_subreddits = [
-            "MealKits", "mealprep", "cooking", "food", "recipes",
-            "frugal", "BuyItForLife", "HealthyFood", "nutrition",
-            "fitness", "weightloss", "keto", "paleo", "vegan"
+            # Food/Cooking subreddits
+            "MealKits", "mealprep", "cooking", "food", "recipes", "FoodPorn",
+            "HealthyFood", "nutrition", "EatCheapAndHealthy", "1200isplenty",
+            
+            # Diet/Lifestyle subreddits  
+            "keto", "paleo", "vegan", "vegetarian", "PlantBasedDiet",
+            "intermittentfasting", "fitness", "weightloss", "loseit",
+            
+            # Money/Shopping subreddits
+            "frugal", "BuyItForLife", "Frugal_Jerk", "personalfinance",
+            "coupon", "deals", "DealsReddit",
+            
+            # Review/Discussion subreddits
+            "ProductPorn", "reviewthis", "BuyItForLife", "antiMLM",
+            "mildlyinteresting", "foodhacks", "lifehacks",
+            
+            # Pet subreddits (for pet food brands)
+            "dogs", "dogfood", "pets", "puppy", "DogCare"
         ]
         
         for subreddit in general_subreddits:
             try:
-                posts = self.get_subreddit_posts(subreddit, limit=30)
-                all_posts.extend(posts)
-                time.sleep(1)
+                # Get more posts from each subreddit to find more brand mentions
+                for sort_method in ['hot', 'new']:
+                    posts = self.get_subreddit_posts(subreddit, sort=sort_method, limit=50)
+                    all_posts.extend(posts)
+                    time.sleep(1)
             except Exception as e:
                 print(f"# #  Error accessing r/{subreddit}: {e}")
         

@@ -1,262 +1,138 @@
+#!/usr/bin/env python3
 """
-Brian's Step 1 Chart - UPDATED WITH FRESH DATA
-Purpose: Use fresh Reddit data (77 posts) for accurate Step 1 chart
+Generate Step 1 chart with Brian's specific feedback implemented
 """
 
-import json
 import matplotlib.pyplot as plt
 import numpy as np
-from collections import defaultdict
-from ai_sentiment import AdvancedSentimentAnalyzer
+from datetime import datetime, timedelta
+import json
 import os
 
-def load_fresh_data():
-    """Load fresh Reddit data from working scraper"""
+def load_weekly_data():
+    """Load actual weekly data from scraper results"""
     try:
-        with open('reports/working_reddit_data.json', 'r') as f:
-            data = json.load(f)
-        return data['posts']
-    except FileNotFoundError:
-        print("#  Fresh data not found. Run working_scraper.py first.")
-        return []
-
-def generate_step1_chart():
-    """Generate Step 1 chart with fresh Reddit data"""
-    
-    print("STEP 1: REDDIT POST BREAKDOWN BY COMPETITOR")
-    print("=" * 70)
-    
-    # Step 1: Load fresh data
-    print("\n[1/4] Loading fresh Reddit data...")
-    posts = load_fresh_data()
-    
-    if not posts:
-        print("#  No data found. Please run working_scraper.py first.")
-        return None, None
-    
-    print(f"#  Loaded {len(posts)} fresh posts")
-    
-    # Step 2: Organize data by competitor
-    print("\n[2/4] Organizing data by competitor...")
-    
-    competitor_data = defaultdict(lambda: {'positive': 0, 'negative': 0, 'neutral': 0, 'total': 0})
-    
-    for post in posts:
-        sentiment = post.get('sentiment', 'neutral')
-        competitors = post.get('competitors_mentioned', [])
-        
-        for competitor in competitors:
-            # Normalize competitor names
-            if competitor.lower() in ['hello fresh', 'hello-fresh']:
-                competitor = 'HelloFresh'
-            elif competitor.lower() in ['factor meals', 'factor75']:
-                competitor = 'Factor'
-            elif competitor.lower() in ['every plate', 'every-plate']:
-                competitor = 'EveryPlate'
-            elif competitor.lower() in ['green chef', 'green-chef']:
-                competitor = 'Green Chef'
-            elif competitor.lower() in ['chefs plate', 'chefs-plate']:
-                competitor = "Chef's Plate"
-            elif competitor.lower() in ['butcher box', 'butcherbox']:
-                competitor = 'ButcherBox'
-            elif competitor.lower() in ['hungry root', 'hungryroot']:
-                competitor = 'HungryRoot'
-            elif competitor.lower() in ['blue apron', 'blueapron']:
-                competitor = 'Blue Apron'
-            elif competitor.lower() in ['home chef', 'homechef']:
-                competitor = 'Home Chef'
-            elif competitor.lower() in ['marley spoon', 'marleyspoon']:
-                competitor = 'Marley Spoon'
-            elif competitor.lower() in ['sunbasket']:
-                competitor = 'Sunbasket'
-            elif competitor.lower() in ['gobble']:
-                competitor = 'Gobble'
-            elif competitor.lower() in ['cook unity', 'cookunity']:
-                competitor = 'CookUnity'
-            elif competitor.lower() in ['the farmers dog', 'farmers dog']:
-                competitor = "The Farmer's Dog"
-            elif competitor.lower() in ['ollie']:
-                competitor = 'Ollie'
-            elif competitor.lower() in ['nom nom', 'nomnom']:
-                competitor = 'Nom Nom'
+        if os.path.exists('reports/working_reddit_data.json'):
+            with open('reports/working_reddit_data.json', 'r') as f:
+                data = json.load(f)
             
-            competitor_data[competitor][sentiment] += 1
-            competitor_data[competitor]['total'] += 1
+            # Process actual scraped data from last 7 days
+            brand_stats = {}
+            posts = data.get('posts', [])
+            seven_days_ago = datetime.now() - timedelta(days=7)
+            seven_days_timestamp = seven_days_ago.timestamp()
+            
+            weekly_posts = 0
+            for post in posts:
+                # Only count posts from last 7 days
+                created = post.get('created_utc', 0)
+                if created >= seven_days_timestamp:
+                    weekly_posts += 1
+                    mentioned_brands = post.get('competitors_mentioned', [])
+                    sentiment = post.get('sentiment', 'neutral')
+                    
+                    for brand in mentioned_brands:
+                        if brand not in brand_stats:
+                            brand_stats[brand] = {'positive': 0, 'negative': 0, 'neutral': 0}
+                        
+                        brand_stats[brand][sentiment] += 1
+            
+            print(f"Processing {weekly_posts} posts from last 7 days...")
+            
+            # Convert to chart format (same as original)
+            chart_data = []
+            for brand, stats in brand_stats.items():
+                total = stats['positive'] + stats['negative'] + stats['neutral']
+                if total > 0:  # Only include brands with data
+                    # Add (HF) designation for HelloFresh family brands
+                    if brand in ['HelloFresh', 'Factor', 'EveryPlate', 'Green Chef']:
+                        brand_name = f"{brand} (HF)"
+                    else:
+                        brand_name = brand
+                    
+                    chart_data.append((brand_name, {
+                        'total_posts': total,
+                        'positive': stats['positive'],
+                        'negative': stats['negative'], 
+                        'neutral': stats['neutral']
+                    }))
+            
+            # Sort by total posts (volume) - same as original
+            chart_data.sort(key=lambda x: x[1]['total_posts'], reverse=True)
+            print(f"Processed {len(chart_data)} brands with weekly data")
+            return chart_data
+            
+    except Exception as e:
+        print(f"Could not load weekly data: {e}")
     
-    # Step 3: Prepare chart data
-    print("\n[3/4] Preparing chart data...")
+    # Fallback - this shouldn't happen now
+    return []
+
+def create_chart_with_brian_feedback():
+    """Create chart implementing Brian's weekly feedback"""
     
-    # Sort by total posts (volume)
-    sorted_competitors = sorted(
-        competitor_data.items(), 
-        key=lambda x: x[1]['total'], 
-        reverse=True
-    )
-    
-    competitors = []
-    positive_counts = []
-    negative_counts = []
-    neutral_counts = []
-    
-    for competitor, data in sorted_competitors:
-        competitors.append(competitor)
-        positive_counts.append(data['positive'])
-        negative_counts.append(data['negative'])
-        neutral_counts.append(data['neutral'])
-    
-    # Step 4: Create optimized stacked bar chart
-    print("\n[4/4] Creating visualization...")
-    
-    # Optimized figure size for presentations
+    # Load actual weekly data from scraper
+    chart_data = load_weekly_data()
+
+    competitors = [name for name, data in chart_data]
+    positive = [data['positive'] for name, data in chart_data]
+    negative = [data['negative'] for name, data in chart_data]
+    neutral = [data['neutral'] for name, data in chart_data]
+
+    # Create chart
     fig, ax = plt.subplots(figsize=(16, 9))
+
+    x = np.arange(len(competitors))
+    width = 0.65
+
+    # Original colors
+    bars1 = ax.bar(x, positive, width, label='Positive', color='#2E8B57', alpha=0.8)
+    bars2 = ax.bar(x, negative, width, bottom=positive, label='Negative', color='#DC143C', alpha=0.8)
+    bars3 = ax.bar(x, neutral, width, bottom=np.array(positive) + np.array(negative), 
+                   label='Neutral', color='#708090', alpha=0.8)
+
+    # BRIAN'S FEEDBACK #1: Clear timeframe in title (WEEKLY DATA)
+    from datetime import datetime, timedelta
+    end_date = datetime.now()
+    start_date = end_date - timedelta(days=7)
+    date_range = f"{start_date.strftime('%b %d')} – {end_date.strftime('%b %d, %Y')}"
     
-    # Professional color scheme
-    colors = {
-        'positive': '#2E8B57',  # Sea green
-        'negative': '#DC143C',  # Crimson  
-        'neutral': '#808080'    # Gray
-    }
-    
-    x_positions = np.arange(len(competitors))
-    bar_width = 0.8
-    
-    # Create stacked bars with thicker borders
-    p1 = ax.bar(x_positions, positive_counts, bar_width, 
-                label='Positive', color=colors['positive'], 
-                edgecolor='white', linewidth=1.0)
-    
-    p2 = ax.bar(x_positions, negative_counts, bar_width,
-                bottom=positive_counts, label='Negative', 
-                color=colors['negative'], 
-                edgecolor='white', linewidth=1.0)
-    
-    p3 = ax.bar(x_positions, neutral_counts, bar_width,
-                bottom=np.array(positive_counts) + np.array(negative_counts),
-                label='Suggestion (Neutral)', color=colors['neutral'], 
-                edgecolor='white', linewidth=1.0)
-    
-    # Professional chart formatting
-    ax.set_title("Step 1: Reddit Post Breakdown by Competitor\n(Sentiment Analysis - HelloFresh vs Competitors)", 
-                 fontsize=18, fontweight='bold', pad=25)
-    ax.set_xlabel('Competitor / Brand Name', fontsize=14, fontweight='bold')
-    ax.set_ylabel('Number of Posts', fontsize=14, fontweight='bold')
-    
-    # Better x-axis formatting
-    ax.set_xticks(x_positions)
-    ax.set_xticklabels(competitors, rotation=45, ha='right', fontsize=12)
-    
-    # Professional legend
-    ax.legend(loc='upper right', frameon=True, fancybox=True, 
-              shadow=True, fontsize=12, framealpha=0.95)
-    
-    # Cleaner grid
-    ax.grid(axis='y', alpha=0.25, linestyle='--', linewidth=0.7)
-    ax.set_axisbelow(True)  # Grid behind bars
-    
-    # Calculate max height for proper y-axis limits
-    max_height = max(positive_counts[i] + negative_counts[i] + neutral_counts[i] 
-                    for i in range(len(competitors)))
-    
-    # Set y-axis limit with extra space for labels
-    ax.set_ylim(0, max_height * 1.15)
-    
-    # Enhanced total count labels
-    for i, (pos, neg, neu) in enumerate(zip(positive_counts, negative_counts, neutral_counts)):
-        total = pos + neg + neu
-        ax.text(x_positions[i], total + (max_height * 0.02), str(total), 
-                ha='center', va='bottom', fontweight='bold', fontsize=12)
-    
-    # Better spacing
+    ax.set_title(f'Reddit Post Volume by Competitor — {date_range} (Weekly Sentiment Analysis - HelloFresh vs Competitors)', 
+                 fontsize=15, fontweight='bold', pad=25)
+
+    # BRIAN'S FEEDBACK #2: Clarify post count meaning (WEEKLY DATA)
+    ax.set_ylabel('# of Posts (Weekly)', fontsize=13, fontweight='bold')
+    ax.set_xlabel('Competitor Brand Name - Reddit posts from last 7 days (not comments or reposts)', 
+                  fontsize=12, fontweight='bold')
+
+    ax.set_xticks(x)
+    ax.set_xticklabels(competitors, rotation=45, ha='right', fontsize=11)
+    ax.legend(loc='upper right', fontsize=12)
+
+    # Add totals on bars
+    totals = [data['total_posts'] for name, data in chart_data]
+    for i, total in enumerate(totals):
+        ax.text(i, total + max(totals) * 0.02, str(total), ha='center', va='bottom', fontweight='bold', fontsize=10)
+
     plt.tight_layout()
+    plt.grid(axis='y', alpha=0.3)
     
+    # Force Y-axis to show whole numbers only (no 1.5, 2.5, etc.)
+    import matplotlib.ticker as ticker
+    ax.yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
+
     # Save chart
-    os.makedirs('reports', exist_ok=True)
-    chart_path = "reports/step1_chart.png"
-    plt.savefig(chart_path, dpi=300, bbox_inches='tight', facecolor='white')
+    plt.savefig('reports/step1_chart.png', dpi=300, bbox_inches='tight', facecolor='white')
     plt.close()
+
+    end_date = datetime.now()
+    start_date = end_date - timedelta(days=7)
+    date_range = f"{start_date.strftime('%b %d')} – {end_date.strftime('%b %d, %Y')}"
     
-    print(f"Chart saved: {chart_path}")
-    
-    # Step 5: Print detailed results for Brian
-    print("\n" + "=" * 70)
-    print("STEP 1 RESULTS SUMMARY")
-    print("=" * 70)
-    
-    print(f"\nTotal Posts: {len(posts)}")
-    print(f"Competitors Tracked: {len(competitor_data)}")
-    
-    print(f"\n{'Competitor':<20} {'Posts':<8} {'Positive':<10} {'Negative':<10} {'Neutral':<10} {'Rating':<10}")
-    print("-" * 70)
-    
-    for competitor, data in sorted_competitors:
-        total = data['total']
-        pos = data['positive']
-        neg = data['negative']
-        neu = data['neutral']
-        
-        pos_pct = (pos / total) * 100 if total > 0 else 0
-        neg_pct = (neg / total) * 100 if total > 0 else 0
-        
-        # Performance rating
-        if pos_pct >= 60:
-            rating = "STRONG"
-        elif neg_pct >= 50:
-            rating = "WEAK"
-        else:
-            rating = "MIXED"
-        
-        print(f"{competitor:<20} {total:<8} {pos} ({pos_pct:.0f}%){'':<3} {neg} ({neg_pct:.0f}%){'':<3} {neu} ({(neu/total)*100:.0f}%){'':<3} {rating}")
-    
-    # Key insights for Brian
-    print("\n" + "=" * 70)
-    print("KEY INSIGHTS FOR BRIAN")
-    print("=" * 70)
-    
-    # HelloFresh performance
-    hf_data = competitor_data.get('HelloFresh', {})
-    if hf_data:
-        hf_total = hf_data['total']
-        hf_pos = hf_data['positive']
-        hf_neg = hf_data['negative']
-        hf_pos_pct = (hf_pos / hf_total) * 100 if hf_total > 0 else 0
-        hf_neg_pct = (hf_neg / hf_total) * 100 if hf_total > 0 else 0
-        
-        print(f"\nHelloFresh Performance:")
-        print(f"   • Total mentions: {hf_total} posts")
-        print(f"   • Positive: {hf_pos} ({hf_pos_pct:.1f}%)")
-        print(f"   • Negative: {hf_neg} ({hf_neg_pct:.1f}%)")
-    
-    # Top performing competitors
-    print(f"\nTop Performing Competitors:")
-    top_positive = sorted(
-        [(comp, data) for comp, data in competitor_data.items() if data['total'] >= 3],
-        key=lambda x: (x[1]['positive'] / x[1]['total']) if x[1]['total'] > 0 else 0,
-        reverse=True
-    )[:3]
-    
-    for i, (comp, data) in enumerate(top_positive, 1):
-        pos_pct = (data['positive'] / data['total']) * 100 if data['total'] > 0 else 0
-        print(f"   {i}. {comp}: {data['positive']}/{data['total']} posts ({pos_pct:.1f}% positive)")
-    
-    # Competitors with issues
-    print(f"\nCompetitors with Negative Sentiment:")
-    negative_comps = [
-        (comp, data) for comp, data in competitor_data.items() 
-        if data['negative'] > 0
-    ]
-    
-    if negative_comps:
-        for comp, data in sorted(negative_comps, key=lambda x: x[1]['negative'], reverse=True):
-            neg_pct = (data['negative'] / data['total']) * 100 if data['total'] > 0 else 0
-            print(f"   • {comp}: {data['negative']}/{data['total']} posts ({neg_pct:.1f}% negative)")
-    else:
-        print(f"   None detected")
-    
-    print("\n" + "=" * 70)
-    print("STEP 1 COMPLETE - Ready for Brian's review")
-    print("=" * 70)
-    
-    return chart_path, competitor_data
+    print("Chart updated with Brian's weekly feedback:")
+    print(f"1. Weekly timeframe: {date_range}")
+    print("2. Post count clarification: Each count = unique Reddit post from last 7 days")
+    print("3. Data source: Actual weekly Reddit scraper results")
 
 if __name__ == "__main__":
-    chart_path, data = generate_step1_chart()
+    create_chart_with_brian_feedback()
