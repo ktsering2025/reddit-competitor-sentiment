@@ -105,13 +105,13 @@ end tell
         result = subprocess.run(['osascript', '/tmp/send_email.scpt'], capture_output=True, text=True)
         
         if result.returncode == 0:
-            print("✅ Mail app opened with email and chart attached!")
-            print("📧 Review the email and click Send")
-            print("📎 Chart should be automatically attached")
+            print("Mail app opened with email and chart attached!")
+            print("Review the email and click Send")
+            print("Chart should be automatically attached")
             return True
         else:
-            print(f"⚠️  AppleScript error: {result.stderr}")
-            print("📎 Falling back to manual attachment...")
+            print(f"AppleScript error: {result.stderr}")
+            print("Falling back to manual attachment...")
             
             # Fallback to original method
             import urllib.parse
@@ -121,11 +121,11 @@ end tell
             
             subprocess.run(['open', mailto_url])
             subprocess.run(['open', 'reports/step1_chart.png'])
-            print("✅ Mail client opened - manually drag chart to attach")
+            print("Mail client opened - manually drag chart to attach")
             return True
         
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"Error: {e}")
         return False
 
 def send_via_web_service(recipient_email):
@@ -146,8 +146,8 @@ Chart available at: reports/step1_chart.png
 Sent from Reddit Sentiment Analysis System"""
     
     # Try EmailJS or similar service (requires setup)
-    print("⚠️  Web services require API keys")
-    print("💡 Using mailto instead for reliability...")
+    print("Web services require API keys")
+    print("Using mailto instead for reliability...")
     
     return send_via_mailto(recipient_email)
 
@@ -167,12 +167,12 @@ def main():
     success = send_via_web_service(recipient)
     
     if success:
-        print("\n✅ EMAIL PROCESS STARTED!")
-        print(f"📧 Check your Gmail: {recipient}")
-        print("📱 You should see a notification soon")
+        print("\nEMAIL PROCESS STARTED!")
+        print(f"Check your Gmail: {recipient}")
+        print("You should see a notification soon")
     else:
-        print("\n❌ Email sending failed")
-        print("💡 Try the manual copy/paste method instead")
+        print("\nEmail sending failed")
+        print("Try the manual copy/paste method instead")
 
 if __name__ == "__main__":
     main()
