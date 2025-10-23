@@ -1,117 +1,71 @@
-# Reddit Competitor Sentiment Analysis - Weekly Automation System
+# Reddit Competitor Sentiment Analysis
 
-A comprehensive weekly automation tool for analyzing Reddit sentiment data about HelloFresh family brands vs competitors. Built for Brian's weekly business review.
+## Brian's Project: Steps 1 & 2 Complete
 
-![Weekly Reddit Post Breakdown](reports/step1_chart.png)
+A professional system that tracks HelloFresh competitor sentiment on Reddit with actionable business intelligence.
 
-## 🚀 Weekly Automation Features
+### 📊 Step 1: Post Breakdown (Stack Bar Chart)
+**Purpose:** Visual overview of competitor sentiment
+- **Y-axis:** # of posts
+- **X-axis:** Competitor/Brand names  
+- **Categories:** Positive, Negative, Neutral sentiment
+- **File:** `step1_chart.py` → `reports/step1_chart.png`
 
-- **7-Day Data Collection** - Automatically filters Reddit posts from last 7 days only
-- **Professional Weekly Charts** - Clean stacked bar charts with accurate sentiment breakdown
-- **Comprehensive Competitor Tracking** - Monitors 33+ food delivery brands
-- **Accurate Sentiment Analysis** - Manually verified positive/negative/neutral classification
-- **Email Automation Ready** - Automated weekly delivery system for stakeholders
-- **Market Share Analysis** - HelloFresh family vs competitor performance metrics
+### 🎯 Step 2: HelloFresh Deep Dive (60% Revenue Focus)
+**Purpose:** Actionable intelligence on HelloFresh & Factor
+- **Top 3 posts** by engagement (comments + upvotes)
+- **Synthesis logic** for < 3 or > 3 posts scenarios
+- **Actionable insights** by theme (pricing, quality, delivery)
+- **Real Reddit URLs** that work
+- **File:** `step2_hellofresh_deep_dive.py` → HTML report
 
-## 📊 Current Weekly Results (Oct 15-22, 2025)
+## 📈 Current Data (Oct 16-23, 2025)
+**Total:** 87 verified Reddit posts from 6 brands
 
-**Total: 90 verified posts from 6 brands - 100% Accurate**
+**HelloFresh Family:**
+- **HelloFresh:** 55 posts (63% of total volume)
+- **Factor:** 4 posts (5% of total volume)
 
-### HelloFresh Family (68% market dominance):
-- **HelloFresh (HF)**: 58 posts (24% positive) - 14 positive, 15 negative, 29 neutral
-- **Factor (HF)**: 4 posts (100% positive) - 4 positive, 0 negative, 0 neutral
+**Competitors:**
+- **Blue Apron:** 16 posts (18% of total volume)
+- **Home Chef:** 8 posts (9% of total volume) 
+- **Marley Spoon:** 3 posts (3% of total volume)
+- **HungryRoot:** 1 post (1% of total volume)
 
-### Competitors (32% market share):
-- **Blue Apron**: 16 posts (18% positive) - 3 positive, 7 negative, 6 neutral
-- **Home Chef**: 8 posts (37% positive) - 3 positive, 2 negative, 3 neutral
-- **Marley Spoon**: 3 posts (0% positive) - 0 positive, 2 negative, 1 neutral
-- **HungryRoot**: 1 post (0% positive) - 0 positive, 1 negative, 0 neutral
+## 🚀 Quick Start
 
-## 🔄 Weekly Update Schedule
+1. **Generate Step 1 Chart:**
+   ```bash
+   python3 step1_chart.py
+   ```
+   Creates: `reports/step1_chart.png`
 
-**Recommended: Sunday 11 PM**
-- Captures complete Monday-Sunday week of Reddit activity
-- Fresh data ready for Monday morning business review
-- Includes weekend posts (people often post food reviews on weekends)
-- Brian gets updated data to start his week
+2. **Generate Step 2 Deep Dive:**
+   ```bash
+   python3 step2_hellofresh_deep_dive.py
+   ```
+   Creates: `reports/step2_hellofresh_deep_dive_YYYYMMDD_HHMMSS.html`
 
-## 🛠️ Quick Start
+## 📁 Key Files
 
-1. **Install dependencies:**
-```bash
-pip install -r requirements.txt
-```
+- **`step1_chart.py`** - Generates weekly competitor sentiment chart
+- **`step2_hellofresh_deep_dive.py`** - HelloFresh & Factor deep analysis
+- **`scraper.py`** - Reddit data collection
+- **`ai_sentiment.py`** - Sentiment analysis engine
+- **`competitors.py`** - Brand configuration
+- **`reports/working_reddit_data.json`** - Raw data source
 
-2. **Configure email (for automation):**
-```bash
-cp .env.example .env
-# Edit .env with email credentials
-```
+## 📊 Data Quality
+- ✅ **Real Reddit posts** with working URLs
+- ✅ **7-day data filtering** for weekly analysis  
+- ✅ **Consistent dataset** between Step 1 and Step 2
+- ✅ **Accurate sentiment analysis** 
+- ✅ **HelloFresh family vs competitors** tracking
 
-3. **Run weekly analysis:**
-```bash
-python scraper.py      # Collect last 7 days Reddit data
-python step1_chart.py  # Generate weekly chart
-python send_report.py  # Send weekly email report
-```
+## 🎯 Business Value
+- **Weekly sentiment tracking** for HelloFresh family brands
+- **Competitive intelligence** on key rivals
+- **Actionable insights** for business decisions
+- **Revenue-focused analysis** (HelloFresh + Factor = 60% business)
 
-## 📁 Key Components
-
-- `scraper.py` - **Weekly Reddit data collection** (7-day filtering)
-- `step1_chart.py` - **Professional chart generation** (whole numbers, clean formatting)
-- `send_report.py` - **Weekly email automation** for Brian
-- `ai_sentiment.py` - **Accurate sentiment analysis** (manually verified)
-- `competitors.py` - **Brand configuration** (HelloFresh family + 28 competitors)
-
-## 📈 Output
-
-### Weekly Stacked Bar Chart Features:
-- **Clean formatting** - No unwanted \n or / characters
-- **Whole numbers only** on Y-axis (no decimals)
-- **HelloFresh family marked with (HF)**
-- **Weekly date range** in title (e.g., "Oct 15 – Oct 22, 2025")
-- **Accurate sentiment breakdown** - Positive/Negative/Neutral stacks
-- **Professional appearance** suitable for business review
-
-### Data Quality Assurance:
-- **Individual posts manually verified** for sentiment accuracy
-- **7-day data filtering** ensures weekly-only results
-- **Comprehensive competitor coverage** (all major food delivery brands)
-- **Real Reddit posts only** (not comments or reposts)
-- **Market share analysis** with accurate percentages
-
-## 🤖 Automation Setup
-
-### Weekly Email Automation:
-```bash
-# Test weekly report
-python send_report.py
-
-# Schedule with cron (Sunday 11 PM)
-0 23 * * 0 cd /path/to/reddit-competitor-sentiment && python send_report.py
-```
-
-### Email Configuration (.env):
-```
-EMAIL_USER=youremail@hellofresh.com
-EMAIL_PASSWORD=your_app_password
-EMAIL_RECIPIENTS=brian.leung@hellofresh.com,kunsang.tsering@hellofresh.com
-```
-
-## 📊 Business Value
-
-- **Weekly Market Visibility** - HelloFresh family performance vs competitors
-- **Sentiment Trends** - Track positive/negative feedback patterns
-- **Competitive Intelligence** - Monitor competitor Reddit activity
-- **Data-Driven Decisions** - Real Reddit user sentiment analysis
-- **Automated Reporting** - No manual work, consistent weekly delivery
-
-## 🔍 Verified Accuracy
-
-- ✅ Sentiment analysis manually verified (17 negative HelloFresh posts checked)
-- ✅ All major competitors monitored (Sunbasket, Purple Carrot, etc.)
-- ✅ 7-day data filtering confirmed accurate
-- ✅ Chart formatting professional and clean
-- ✅ Market share calculations verified (76% HelloFresh family dominance)
-
-Built for Brian's weekly business review - delivering accurate, actionable Reddit sentiment intelligence every Monday morning.
+Built for Brian's weekly competitive intelligence and strategic planning.
