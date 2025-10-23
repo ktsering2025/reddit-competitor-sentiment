@@ -67,8 +67,10 @@ class Step2ComprehensiveAnalysis:
             
             # Check if post explicitly mentions Factor brand
             factor_indicators = [
-                'factor', 'factor75', 'factor 75', 'factor meals', 'factor delivery',
-                'factor subscription', 'factor service', 'factor quality'
+                'factor75', 'factor 75', 'factor meals', 'factor delivery',
+                'factor subscription', 'factor service', 'factor quality',
+                'factor meal kit', 'factor ready meals', 'factor box',
+                'factor meal delivery', 'factor ready-made', 'factor?', 'factor but', 'factor i'
             ]
             
             if any(indicator in full_text for indicator in factor_indicators):
