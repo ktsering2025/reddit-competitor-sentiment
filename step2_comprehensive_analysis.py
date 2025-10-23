@@ -45,17 +45,33 @@ class Step2ComprehensiveAnalysis:
             return []
     
     def filter_hellofresh_factor_posts(self, posts):
-        """Filter posts for HelloFresh and Factor (Brian's 60% revenue focus)"""
+        """Filter posts for HelloFresh and Factor (Brian's 60% revenue focus) - BRAND-SPECIFIC ONLY"""
         hf_posts = []
         factor_posts = []
         
         for post in posts:
-            mentioned_brands = post.get('competitors_mentioned', [])
+            title = post.get('title', '').lower()
+            content = post.get('selftext', '').lower()
+            full_text = f'{title} {content}'
             
-            if 'HelloFresh' in mentioned_brands:
+            # Check if post is about HelloFresh brand (not just from r/hellofresh)
+            hellofresh_indicators = [
+                'hellofresh', 'hello fresh', 'hf meal', 'hf box', 'hf delivery',
+                'hellofresh meal', 'hellofresh box', 'hellofresh delivery',
+                'hellofresh subscription', 'hellofresh service', 'hellofresh quality',
+                'hellofresh price', 'hellofresh cost', 'hellofresh customer service'
+            ]
+            
+            if any(indicator in full_text for indicator in hellofresh_indicators):
                 hf_posts.append(post)
             
-            if 'Factor' in mentioned_brands:
+            # Check if post is about Factor brand
+            factor_indicators = [
+                'factor', 'factor75', 'factor 75', 'factor meals', 'factor delivery',
+                'factor subscription', 'factor service', 'factor quality'
+            ]
+            
+            if any(indicator in full_text for indicator in factor_indicators):
                 factor_posts.append(post)
         
         return hf_posts, factor_posts
