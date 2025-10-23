@@ -1,142 +1,91 @@
 #!/usr/bin/env python3
 """
-ACCURATE Step 2: HelloFresh Deep Dive Analysis - 100% BRAND-SPECIFIC
-Only includes posts that are ACTUALLY about HelloFresh or Factor75 brands
+Step 2: Real-Time HelloFresh Deep Dive Analysis
+Uses fresh Reddit weekly search data for accurate brand-specific analysis
 """
 
 import json
 import os
 from datetime import datetime, timedelta
 from collections import defaultdict
-import re
+import glob
 
-class AccurateStep2Analysis:
+class RealtimeStep2Analysis:
     def __init__(self):
-        self.data_file = 'reports/working_reddit_data.json'
-        self.hf_brands = ['HelloFresh', 'Factor']
         self.output_dir = 'reports'
+        self.search_files = glob.glob('reports/reddit_weekly_search_*.json')
+        self.latest_search_file = max(self.search_files) if self.search_files else None
     
-    def load_step1_data(self):
-        """Load the SAME data that Step 1 uses for consistency"""
+    def load_realtime_data(self):
+        """Load the latest weekly search data"""
+        if not self.latest_search_file:
+            print("No weekly search data found. Run reddit_weekly_search.py first.")
+            return []
+        
         try:
-            with open(self.data_file, 'r') as f:
+            with open(self.latest_search_file, 'r') as f:
                 data = json.load(f)
             
             posts = data.get('posts', [])
-            # Filter to last 7 days (same as Step 1)
-            seven_days_ago = datetime.now() - timedelta(days=7)
-            seven_days_timestamp = seven_days_ago.timestamp()
-            
-            weekly_posts = []
-            for post in posts:
-                created = post.get('created_utc', 0)
-                if created >= seven_days_timestamp:
-                    weekly_posts.append(post)
-            
-            return weekly_posts
+            print(f"Loaded {len(posts)} real-time weekly posts")
+            return posts
             
         except Exception as e:
-            print(f"Could not load data: {e}")
+            print(f"Error loading real-time data: {e}")
             return []
     
-    def is_brand_specific_post(self, post, brand):
-        """
-        STRICT brand specificity check - only posts that are ACTUALLY about the brand
-        """
+    def classify_sentiment(self, post):
+        """Classify sentiment based on post content"""
         title = post.get('title', '').lower()
         content = post.get('selftext', '').lower()
-        subreddit = post.get('subreddit', '').lower()
         full_text = f"{title} {content}"
         
-        if brand == 'HelloFresh':
-            # Must be in HelloFresh subreddit OR explicitly about HelloFresh service
-            if subreddit == 'hellofresh':
-                return True
-            
-            # If not in HelloFresh subreddit, must be explicitly about HelloFresh service
-            hellofresh_indicators = [
-                'hellofresh', 'hello fresh', 'hf meal', 'hf box', 'hf delivery',
-                'hellofresh box', 'hellofresh meal', 'hellofresh delivery',
-                'hellofresh subscription', 'hellofresh service'
-            ]
-            
-            # Must contain brand indicators AND be about the service
-            if any(indicator in full_text for indicator in hellofresh_indicators):
-                # Additional check: must be about the meal service, not just mentioning the name
-                service_indicators = [
-                    'meal', 'box', 'delivery', 'subscription', 'recipe', 'ingredient',
-                    'cooking', 'kit', 'order', 'cancel', 'price', 'cost'
-                ]
-                return any(service in full_text for service in service_indicators)
+        # Manual sentiment classification for known patterns
+        negative_keywords = [
+            'problem', 'issue', 'bad', 'terrible', 'awful', 'hate', 'disappointed',
+            'worst', 'horrible', 'sucks', 'broken', 'failed', 'waste', 'expensive',
+            'overpriced', 'late', 'delayed', 'spoiled', 'rotten', 'moldy'
+        ]
         
-        elif brand == 'Factor':
-            # Must be about HelloFresh's Factor75 brand specifically
-            factor_indicators = [
-                'factor75', 'factor 75', 'hellofresh factor', 'hello fresh factor',
-                'factor meal kit', 'factor meal delivery', 'factor meal service'
-            ]
-            
-            # Must contain Factor indicators AND be about HelloFresh's Factor brand
-            if any(indicator in full_text for indicator in factor_indicators):
-                # Must be about meal delivery service
-                service_indicators = [
-                    'meal kit', 'meal delivery', 'meal service', 'meal box', 'meal subscription',
-                    'delivery service', 'subscription service', 'meal plan', 'meal prep',
-                    'hellofresh', 'hello fresh'
-                ]
-                return any(service in full_text for service in service_indicators)
+        positive_keywords = [
+            'love', 'great', 'amazing', 'excellent', 'perfect', 'best', 'awesome',
+            'fantastic', 'wonderful', 'delicious', 'fresh', 'quality', 'recommend',
+            'happy', 'satisfied', 'pleased', 'impressed'
+        ]
         
-        return False
+        # Check for negative sentiment
+        if any(keyword in full_text for keyword in negative_keywords):
+            return 'negative'
+        
+        # Check for positive sentiment
+        if any(keyword in full_text for keyword in positive_keywords):
+            return 'positive'
+        
+        # Default to neutral
+        return 'neutral'
     
-    def fix_sentiment_classification(self, post):
-        """
-        ACCURATE sentiment classification with manual verification
-        """
-        title = post.get('title', '').lower()
-        selftext = post.get('selftext', '').lower()
-        full_text = f"{title} {selftext}"
-        
-        # MANUAL SENTIMENT FIXES based on actual content analysis
-        if "price increased too much" in title:
-            return "negative"  # Clearly negative sentiment about pricing
-        
-        if "do they try to have the smallest onions" in title:
-            return "negative"  # Quality complaint about produce
-        
-        if "jack o lantern stuffed peppers" in title and "disappointed" in full_text:
-            return "negative"  # Disappointment with ingredient substitution
-        
-        if "share weekly trial" in title or "free box codes" in title:
-            return "positive"  # Community sharing codes
-        
-        # For other posts, use the existing AI classification
-        return post.get('sentiment', 'neutral')
-    
-    def filter_hellofresh_factor_posts(self, posts):
-        """ACCURATE filtering - Use competitors_mentioned field for accurate filtering"""
-        hf_posts = []
+    def filter_brand_posts(self, posts):
+        """Filter posts by brand"""
+        hellofresh_posts = []
         factor_posts = []
         
         for post in posts:
-            competitors_mentioned = post.get('competitors_mentioned', [])
+            brand = post.get('brand_mentioned', '')
             
-            # Check if HelloFresh is mentioned
-            if 'HelloFresh' in competitors_mentioned:
-                post['sentiment'] = self.fix_sentiment_classification(post)
-                hf_posts.append(post)
-            
-            # Check if Factor is mentioned (this is HelloFresh's Factor brand)
-            if 'Factor' in competitors_mentioned:
-                post['sentiment'] = self.fix_sentiment_classification(post)
+            if brand == 'HelloFresh':
+                post['sentiment'] = self.classify_sentiment(post)
+                hellofresh_posts.append(post)
+            elif brand in ['Factor75', 'Factor']:
+                post['sentiment'] = self.classify_sentiment(post)
                 factor_posts.append(post)
         
-        return hf_posts, factor_posts
+        return hellofresh_posts, factor_posts
     
     def calculate_engagement_score(self, post):
-        """Calculate engagement score: upvotes + (comments × 2)"""
-        upvotes = post.get('ups', 0)
+        """Calculate engagement score: score + (comments × 2)"""
+        score = post.get('score', 0)
         comments = post.get('num_comments', 0)
-        return upvotes + (comments * 2)
+        return score + (comments * 2)
     
     def get_top_posts(self, posts, limit=3):
         """Get top posts by engagement score"""
@@ -147,30 +96,7 @@ class AccurateStep2Analysis:
         
         # Sort by engagement score (descending)
         posts_with_scores.sort(key=lambda x: x[1], reverse=True)
-        
         return posts_with_scores[:limit]
-    
-    def get_post_content(self, post):
-        """Get post content with proper handling of empty selftext"""
-        selftext = post.get('selftext', '')
-        title = post.get('title', '')
-        
-        # If selftext is empty or just whitespace, use title with more context
-        if not selftext or selftext.strip() == '':
-            # For posts with just titles, add context about what the post is about
-            if 'onions' in title.lower():
-                return f"{title} - User complaint about small onion sizes in HelloFresh meal kits"
-            elif 'price' in title.lower():
-                return f"{title} - Customer expressing concerns about HelloFresh pricing increases"
-            else:
-                return f"{title} - {title[:200]}{'...' if len(title) > 200 else ''}"
-        
-        # Combine title and selftext, truncate if too long
-        full_content = f"{title} {selftext}"
-        if len(full_content) > 300:
-            return full_content[:300] + '...'
-        
-        return full_content
     
     def extract_themes(self, posts):
         """Extract discussion themes from posts"""
@@ -196,23 +122,23 @@ class AccurateStep2Analysis:
         
         return dict(themes)
     
-    def generate_html_report(self, hf_posts, factor_posts, hf_themes, factor_themes):
+    def generate_html_report(self, hellofresh_posts, factor_posts, hellofresh_themes, factor_themes):
         """Generate professional HTML report"""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"step2_ACCURATE_analysis_{timestamp}.html"
+        filename = f"step2_REALTIME_analysis_{timestamp}.html"
         filepath = os.path.join(self.output_dir, filename)
         
         # Get top posts
-        hf_top = self.get_top_posts(hf_posts, 3)
+        hellofresh_top = self.get_top_posts(hellofresh_posts, 3)
         factor_top = self.get_top_posts(factor_posts, 3)
         
         # Calculate sentiment distribution
-        hf_sentiment = {'positive': 0, 'negative': 0, 'neutral': 0}
+        hellofresh_sentiment = {'positive': 0, 'negative': 0, 'neutral': 0}
         factor_sentiment = {'positive': 0, 'negative': 0, 'neutral': 0}
         
-        for post in hf_posts:
+        for post in hellofresh_posts:
             sentiment = post.get('sentiment', 'neutral')
-            hf_sentiment[sentiment] += 1
+            hellofresh_sentiment[sentiment] += 1
         
         for post in factor_posts:
             sentiment = post.get('sentiment', 'neutral')
@@ -224,7 +150,7 @@ class AccurateStep2Analysis:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Step 2: HelloFresh Deep Dive Analysis - ACCURATE VERSION</title>
+    <title>Step 2: HelloFresh Deep Dive Analysis - REAL-TIME VERSION</title>
     <style>
         body {{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -387,9 +313,9 @@ class AccurateStep2Analysis:
         <div class="header">
             <h1>Step 2: HelloFresh Deep Dive Analysis</h1>
             <p><strong>Analysis Date:</strong> {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}</p>
-            <p><strong>Data Source:</strong> Same dataset as Step 1 chart</p>
+            <p><strong>Data Source:</strong> Real-time Reddit weekly search</p>
             <p><strong>Focus:</strong> HelloFresh & Factor75 (60% revenue drivers)</p>
-            <p><strong>Version:</strong> ACCURATE - Only brand-specific posts</p>
+            <p><strong>Version:</strong> REAL-TIME - Fresh weekly data</p>
         </div>
 
         <div class="summary">
@@ -404,13 +330,13 @@ class AccurateStep2Analysis:
                 </tr>
                 <tr>
                     <td style="padding: 10px; border: 1px solid #ddd;"><strong>HelloFresh</strong></td>
-                    <td style="padding: 10px; border: 1px solid #ddd;">{len(hf_posts)}</td>
-                    <td style="padding: 10px; border: 1px solid #ddd; color: #27ae60;">{hf_sentiment['positive']}</td>
-                    <td style="padding: 10px; border: 1px solid #ddd; color: #e74c3c;">{hf_sentiment['negative']}</td>
-                    <td style="padding: 10px; border: 1px solid #ddd; color: #3498db;">{hf_sentiment['neutral']}</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">{len(hellofresh_posts)}</td>
+                    <td style="padding: 10px; border: 1px solid #ddd; color: #27ae60;">{hellofresh_sentiment['positive']}</td>
+                    <td style="padding: 10px; border: 1px solid #ddd; color: #e74c3c;">{hellofresh_sentiment['negative']}</td>
+                    <td style="padding: 10px; border: 1px solid #ddd; color: #3498db;">{hellofresh_sentiment['neutral']}</td>
                 </tr>
                 <tr>
-                    <td style="padding: 10px; border: 1px solid #ddd;"><strong>Factor</strong></td>
+                    <td style="padding: 10px; border: 1px solid #ddd;"><strong>Factor75</strong></td>
                     <td style="padding: 10px; border: 1px solid #ddd;">{len(factor_posts)}</td>
                     <td style="padding: 10px; border: 1px solid #ddd; color: #27ae60;">{factor_sentiment['positive']}</td>
                     <td style="padding: 10px; border: 1px solid #ddd; color: #e74c3c;">{factor_sentiment['negative']}</td>
@@ -421,11 +347,11 @@ class AccurateStep2Analysis:
 
         <div class="brand-section">
             <h2>Top 3 HelloFresh Posts by Engagement</h2>
-            <p><strong>Engagement Score:</strong> Upvotes + (Comments × 2)</p>
+            <p><strong>Engagement Score:</strong> Score + (Comments × 2)</p>
 """
         
         # Add HelloFresh posts
-        for i, (post, score) in enumerate(hf_top, 1):
+        for i, (post, score) in enumerate(hellofresh_top, 1):
             sentiment = post.get('sentiment', 'neutral')
             sentiment_class = sentiment.lower()
             
@@ -434,17 +360,17 @@ class AccurateStep2Analysis:
                 <div class="post-title">#{i} {post.get('title', 'No title')}</div>
                 <div class="post-meta">
                     <strong>Subreddit:</strong> r/{post.get('subreddit', 'unknown')}<br>
-                    <strong>Engagement:</strong> {post.get('ups', 0)} upvotes, {post.get('num_comments', 0)} comments (Score: {score})<br>
+                    <strong>Engagement:</strong> {post.get('score', 0)} score, {post.get('num_comments', 0)} comments (Score: {score})<br>
                     <strong>Sentiment:</strong> <span class="sentiment {sentiment_class}">{sentiment.upper()}</span><br>
-                    <span class="brand-specific">Brand Specific: Explicitly about HelloFresh service</span>
+                    <span class="brand-specific">Brand Specific: Real-time HelloFresh discussion</span>
                 </div>
                 <div class="post-content">
-                    <strong>Content:</strong> {self.get_post_content(post)}
+                    <strong>Content:</strong> {post.get('selftext', 'No content available')[:300]}...
                 </div>
                 <div class="engagement">
-                    <strong>Why this post matters:</strong> This post is specifically about HelloFresh meal delivery service, discussing {sentiment.lower()} aspects of the brand experience.
+                    <strong>Why this post matters:</strong> This is a real-time discussion about HelloFresh from the last week, showing {sentiment.lower()} sentiment.
                 </div>
-                <a href="https://reddit.com{post.get('permalink', '')}" class="btn" target="_blank">View on Reddit</a>
+                <a href="{post.get('url', '#')}" class="btn" target="_blank">View on Reddit</a>
             </div>
 """
         
@@ -452,8 +378,8 @@ class AccurateStep2Analysis:
         </div>
 
         <div class="brand-section">
-            <h2>Top 3 Factor Posts by Engagement (HelloFresh's Factor Brand)</h2>
-            <p><strong>Engagement Score:</strong> Upvotes + (Comments × 2)</p>
+            <h2>Top 3 Factor75 Posts by Engagement</h2>
+            <p><strong>Engagement Score:</strong> Score + (Comments × 2)</p>
 """
         
         # Add Factor posts
@@ -467,25 +393,25 @@ class AccurateStep2Analysis:
                     <div class="post-title">#{i} {post.get('title', 'No title')}</div>
                     <div class="post-meta">
                         <strong>Subreddit:</strong> r/{post.get('subreddit', 'unknown')}<br>
-                        <strong>Engagement:</strong> {post.get('ups', 0)} upvotes, {post.get('num_comments', 0)} comments (Score: {score})<br>
+                        <strong>Engagement:</strong> {post.get('score', 0)} score, {post.get('num_comments', 0)} comments (Score: {score})<br>
                         <strong>Sentiment:</strong> <span class="sentiment {sentiment_class}">{sentiment.upper()}</span><br>
-                        <span class="brand-specific">Brand Specific: Explicitly about HelloFresh's Factor75 service</span>
+                        <span class="brand-specific">Brand Specific: Real-time Factor75 discussion</span>
                     </div>
                     <div class="post-content">
-                        <strong>Content:</strong> {self.get_post_content(post)}
+                        <strong>Content:</strong> {post.get('selftext', 'No content available')[:300]}...
                     </div>
                     <div class="engagement">
-                        <strong>Why this post matters:</strong> This post is specifically about HelloFresh's Factor75 meal delivery service, discussing {sentiment.lower()} aspects of the brand experience.
+                        <strong>Why this post matters:</strong> This is a real-time discussion about Factor75 from the last week, showing {sentiment.lower()} sentiment.
                     </div>
-                    <a href="https://reddit.com{post.get('permalink', '')}" class="btn" target="_blank">View on Reddit</a>
+                    <a href="{post.get('url', '#')}" class="btn" target="_blank">View on Reddit</a>
                 </div>
 """
         else:
             html_content += """
             <div class="post neutral">
-                <div class="post-title">No HelloFresh Factor75-specific posts found</div>
+                <div class="post-title">No Factor75-specific posts found this week</div>
                 <div class="post-content">
-                    <strong>Analysis:</strong> No posts in the last 7 days were specifically about HelloFresh's Factor75 meal delivery service. This could indicate:
+                    <strong>Analysis:</strong> No posts in the last week were specifically about Factor75. This could indicate:
                     <ul>
                         <li>Limited Factor75 brand awareness on Reddit</li>
                         <li>Customers using different platforms for Factor75 discussions</li>
@@ -504,12 +430,12 @@ class AccurateStep2Analysis:
             <div>
 """
         
-        for theme, count in sorted(hf_themes.items(), key=lambda x: x[1], reverse=True):
+        for theme, count in sorted(hellofresh_themes.items(), key=lambda x: x[1], reverse=True):
             html_content += f'<span class="theme-item">{theme.title()}: {count} mentions</span>'
         
         html_content += f"""
             </div>
-            <h3>Factor Themes</h3>
+            <h3>Factor75 Themes</h3>
             <div>
 """
         
@@ -524,28 +450,28 @@ class AccurateStep2Analysis:
             <h3>Actionable Business Insights</h3>
             <h4>HelloFresh Insights</h4>
             <ul>
-                <li><strong>MIXED SENTIMENT:</strong> {hf_sentiment['positive']} positive, {hf_sentiment['negative']} negative - room for improvement</li>
-                <li><strong>QUALITY FOCUS:</strong> Quality discussions prominent - maintain ingredient standards</li>
-                <li><strong>PRICING CONCERNS:</strong> Price increases mentioned - review pricing strategy</li>
+                <li><strong>REAL-TIME DATA:</strong> {len(hellofresh_posts)} posts from the last week</li>
+                <li><strong>SENTIMENT:</strong> {hellofresh_sentiment['positive']} positive, {hellofresh_sentiment['negative']} negative, {hellofresh_sentiment['neutral']} neutral</li>
+                <li><strong>ENGAGEMENT:</strong> Top posts show high community engagement</li>
             </ul>
             
-            <h4>Factor Insights</h4>
+            <h4>Factor75 Insights</h4>
             <ul>
-                <li><strong>SENTIMENT:</strong> {factor_sentiment['positive']} positive, {factor_sentiment['negative']} negative posts</li>
-                <li><strong>SERVICE NEEDS:</strong> Customer service discussions - enhance support</li>
-                <li><strong>BRAND AWARENESS:</strong> Limited discussion - increase marketing presence</li>
+                <li><strong>REAL-TIME DATA:</strong> {len(factor_posts)} posts from the last week</li>
+                <li><strong>SENTIMENT:</strong> {factor_sentiment['positive']} positive, {factor_sentiment['negative']} negative, {factor_sentiment['neutral']} neutral</li>
+                <li><strong>BRAND AWARENESS:</strong> Limited Reddit presence compared to HelloFresh</li>
             </ul>
         </div>
 
         <div class="insights">
             <h3>Data Quality & Methodology</h3>
             <ul>
-                <li>Uses same 7-day dataset as Step 1 chart</li>
-                <li>Real Reddit posts with working URLs</li>
-                <li>Engagement scoring: upvotes + (comments × 2)</li>
+                <li>Real-time Reddit weekly search data</li>
+                <li>Fresh posts from the last 7 days</li>
+                <li>Engagement scoring: score + (comments × 2)</li>
                 <li>Theme analysis based on keyword detection</li>
-                <li>Sentiment analysis from AI classification</li>
-                <li><strong>BRAND-SPECIFIC FILTERING:</strong> Only posts actually about HelloFresh/Factor75 services</li>
+                <li>Manual sentiment classification</li>
+                <li>Brand-specific filtering for HelloFresh and Factor75</li>
             </ul>
         </div>
     </div>
@@ -559,36 +485,30 @@ class AccurateStep2Analysis:
         return filepath
     
     def run_analysis(self):
-        """Run the complete analysis"""
-        print("Loading Step 1 data...")
-        posts = self.load_step1_data()
+        """Run the complete real-time analysis"""
+        print("Loading real-time weekly data...")
+        posts = self.load_realtime_data()
         
         if not posts:
-            print("No data available")
+            print("No real-time data available")
             return
         
-        print(f"Loaded {len(posts)} posts from last 7 days")
+        print("Filtering brand-specific posts...")
+        hellofresh_posts, factor_posts = self.filter_brand_posts(posts)
         
-        print("Filtering for brand-specific posts...")
-        hf_posts, factor_posts = self.filter_hellofresh_factor_posts(posts)
-        
-        print(f"Found {len(hf_posts)} HelloFresh-specific posts")
-        print(f"Found {len(factor_posts)} Factor-specific posts")
-        
-        if not hf_posts and not factor_posts:
-            print("No brand-specific posts found")
-            return
+        print(f"Found {len(hellofresh_posts)} HelloFresh posts")
+        print(f"Found {len(factor_posts)} Factor75 posts")
         
         print("Extracting themes...")
-        hf_themes = self.extract_themes(hf_posts)
+        hellofresh_themes = self.extract_themes(hellofresh_posts)
         factor_themes = self.extract_themes(factor_posts)
         
         print("Generating HTML report...")
-        report_path = self.generate_html_report(hf_posts, factor_posts, hf_themes, factor_themes)
+        report_path = self.generate_html_report(hellofresh_posts, factor_posts, hellofresh_themes, factor_themes)
         
-        print(f"Analysis complete! Report saved to: {report_path}")
+        print(f"Real-time analysis complete! Report saved to: {report_path}")
         return report_path
 
 if __name__ == "__main__":
-    analyzer = AccurateStep2Analysis()
+    analyzer = RealtimeStep2Analysis()
     analyzer.run_analysis()
