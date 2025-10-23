@@ -70,10 +70,10 @@ class AccurateStep2Analysis:
                 return any(service in full_text for service in service_indicators)
         
         elif brand == 'Factor':
-            # Must be about Factor75 meal service specifically
+            # Must be about Factor meal service specifically
             factor_indicators = [
                 'factor75', 'factor 75', 'factor meal', 'factor box', 'factor delivery',
-                'factor subscription', 'factor service'
+                'factor subscription', 'factor service', 'factor'
             ]
             
             # Must contain Factor indicators AND be about the meal service
@@ -81,7 +81,7 @@ class AccurateStep2Analysis:
                 # Additional check: must be about the meal service
                 service_indicators = [
                     'meal', 'box', 'delivery', 'subscription', 'recipe', 'ingredient',
-                    'cooking', 'kit', 'order', 'cancel', 'price', 'cost'
+                    'cooking', 'kit', 'order', 'cancel', 'price', 'cost', 'service'
                 ]
                 return any(service in full_text for service in service_indicators)
         
@@ -146,6 +146,22 @@ class AccurateStep2Analysis:
         posts_with_scores.sort(key=lambda x: x[1], reverse=True)
         
         return posts_with_scores[:limit]
+    
+    def get_post_content(self, post):
+        """Get post content with proper handling of empty selftext"""
+        selftext = post.get('selftext', '')
+        title = post.get('title', '')
+        
+        # If selftext is empty or just whitespace, use title
+        if not selftext or selftext.strip() == '':
+            return title[:300] + ('...' if len(title) > 300 else '')
+        
+        # Combine title and selftext, truncate if too long
+        full_content = f"{title} {selftext}"
+        if len(full_content) > 300:
+            return full_content[:300] + '...'
+        
+        return full_content
     
     def extract_themes(self, posts):
         """Extract discussion themes from posts"""
@@ -414,7 +430,7 @@ class AccurateStep2Analysis:
                     <span class="brand-specific">Brand Specific: Explicitly about HelloFresh service</span>
                 </div>
                 <div class="post-content">
-                    <strong>Content:</strong> {post.get('selftext', 'No content available')[:200]}...
+                    <strong>Content:</strong> {self.get_post_content(post)}
                 </div>
                 <div class="engagement">
                     <strong>Why this post matters:</strong> This post is specifically about HelloFresh meal delivery service, discussing {sentiment.lower()} aspects of the brand experience.
@@ -432,26 +448,41 @@ class AccurateStep2Analysis:
 """
         
         # Add Factor posts
-        for i, (post, score) in enumerate(factor_top, 1):
-            sentiment = post.get('sentiment', 'neutral')
-            sentiment_class = sentiment.lower()
-            
-            html_content += f"""
-            <div class="post {sentiment_class}">
-                <div class="post-title">#{i} {post.get('title', 'No title')}</div>
-                <div class="post-meta">
-                    <strong>Subreddit:</strong> r/{post.get('subreddit', 'unknown')}<br>
-                    <strong>Engagement:</strong> {post.get('ups', 0)} upvotes, {post.get('num_comments', 0)} comments (Score: {score})<br>
-                    <strong>Sentiment:</strong> <span class="sentiment {sentiment_class}">{sentiment.upper()}</span><br>
-                    <span class="brand-specific">Brand Specific: Explicitly about Factor75 service</span>
+        if factor_top:
+            for i, (post, score) in enumerate(factor_top, 1):
+                sentiment = post.get('sentiment', 'neutral')
+                sentiment_class = sentiment.lower()
+                
+                html_content += f"""
+                <div class="post {sentiment_class}">
+                    <div class="post-title">#{i} {post.get('title', 'No title')}</div>
+                    <div class="post-meta">
+                        <strong>Subreddit:</strong> r/{post.get('subreddit', 'unknown')}<br>
+                        <strong>Engagement:</strong> {post.get('ups', 0)} upvotes, {post.get('num_comments', 0)} comments (Score: {score})<br>
+                        <strong>Sentiment:</strong> <span class="sentiment {sentiment_class}">{sentiment.upper()}</span><br>
+                        <span class="brand-specific">Brand Specific: Explicitly about Factor75 service</span>
+                    </div>
+                    <div class="post-content">
+                        <strong>Content:</strong> {self.get_post_content(post)}
+                    </div>
+                    <div class="engagement">
+                        <strong>Why this post matters:</strong> This post is specifically about Factor75 meal delivery service, discussing {sentiment.lower()} aspects of the brand experience.
+                    </div>
+                    <a href="https://reddit.com{post.get('permalink', '')}" class="btn" target="_blank">View on Reddit</a>
                 </div>
+"""
+        else:
+            html_content += """
+            <div class="post neutral">
+                <div class="post-title">No Factor75-specific posts found</div>
                 <div class="post-content">
-                    <strong>Content:</strong> {post.get('selftext', 'No content available')[:200]}...
+                    <strong>Analysis:</strong> No posts in the last 7 days were specifically about Factor75 meal delivery service. This could indicate:
+                    <ul>
+                        <li>Limited brand awareness on Reddit</li>
+                        <li>Customers using different platforms for Factor75 discussions</li>
+                        <li>Opportunity to increase Reddit presence</li>
+                    </ul>
                 </div>
-                <div class="engagement">
-                    <strong>Why this post matters:</strong> This post is specifically about Factor75 meal delivery service, discussing {sentiment.lower()} aspects of the brand experience.
-                </div>
-                <a href="https://reddit.com{post.get('permalink', '')}" class="btn" target="_blank">View on Reddit</a>
             </div>
 """
         
