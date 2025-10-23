@@ -52,11 +52,9 @@ class Step2ComprehensiveAnalysis:
         for post in posts:
             title = post.get('title', '').lower()
             content = post.get('selftext', '').lower()
-            subreddit = post.get('subreddit', '').lower()
             full_text = f'{title} {content}'
             
-            # Check if post is about HelloFresh brand
-            # Either from r/hellofresh OR explicitly mentions HelloFresh from other subreddits
+            # Check if post explicitly mentions HelloFresh brand (not just from r/hellofresh)
             hellofresh_indicators = [
                 'hellofresh', 'hello fresh', 'hf meal', 'hf box', 'hf delivery',
                 'hellofresh meal', 'hellofresh box', 'hellofresh delivery',
@@ -64,27 +62,16 @@ class Step2ComprehensiveAnalysis:
                 'hellofresh price', 'hellofresh cost', 'hellofresh customer service'
             ]
             
-            is_hellofresh_post = (
-                subreddit == 'hellofresh' or  # From HelloFresh subreddit
-                any(indicator in full_text for indicator in hellofresh_indicators)  # Explicitly mentions HelloFresh
-            )
-            
-            if is_hellofresh_post:
+            if any(indicator in full_text for indicator in hellofresh_indicators):
                 hf_posts.append(post)
             
-            # Check if post is about Factor brand
-            # Either from r/factor OR explicitly mentions Factor from other subreddits
+            # Check if post explicitly mentions Factor brand
             factor_indicators = [
                 'factor', 'factor75', 'factor 75', 'factor meals', 'factor delivery',
                 'factor subscription', 'factor service', 'factor quality'
             ]
             
-            is_factor_post = (
-                subreddit == 'factor' or  # From Factor subreddit
-                any(indicator in full_text for indicator in factor_indicators)  # Explicitly mentions Factor
-            )
-            
-            if is_factor_post:
+            if any(indicator in full_text for indicator in factor_indicators):
                 factor_posts.append(post)
         
         return hf_posts, factor_posts
