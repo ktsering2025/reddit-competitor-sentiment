@@ -8,6 +8,7 @@ import requests
 import json
 import base64
 import subprocess
+import os
 from datetime import datetime, timedelta
 
 def get_weekly_summary():
@@ -63,6 +64,11 @@ def send_via_mailto(recipient_email):
     date_range, summary_lines, total_posts = get_weekly_summary()
     subject = f"Weekly Reddit Competitor Sentiment Report — {date_range}"
     
+    # Get latest Step 2 analysis file
+    reports_dir = 'reports'
+    step2_files = [f for f in os.listdir(reports_dir) if f.startswith('step2_comprehensive_analysis_') and f.endswith('.html')]
+    latest_step2 = sorted(step2_files)[-1] if step2_files else None
+    
     body = f"""Hi there,
 
 Here's the weekly Reddit sentiment snapshot ({date_range}).
@@ -73,7 +79,9 @@ Each count = unique Reddit post from the last 7 days (not comments or reposts)
 
 Weekly data includes all HelloFresh family brands and key competitors.
 
-Chart attached: step1_chart.png
+📊 Step 1: Competitor sentiment chart (attached)
+🎯 Step 2: HelloFresh & Factor deep dive analysis
+{f'🔗 Deep dive link: https://ktsering2025.github.io/reddit-competitor-sentiment/reports/{latest_step2}' if latest_step2 else '🔗 Deep dive: Run step2_comprehensive_analysis.py to generate'}
 
 Best regards,
 Reddit Sentiment Analysis System
