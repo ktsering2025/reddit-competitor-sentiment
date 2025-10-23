@@ -66,29 +66,75 @@ def send_via_mailto(recipient_email):
     
     # Get latest Step 2 analysis file
     reports_dir = 'reports'
-    step2_files = [f for f in os.listdir(reports_dir) if f.startswith('step2_comprehensive_analysis_') and f.endswith('.html')]
+    step2_files = [f for f in os.listdir(reports_dir) if f.startswith('step2_ACTIONABLE_analysis_') and f.endswith('.html')]
     latest_step2 = sorted(step2_files)[-1] if step2_files else None
+    
+    # Get HelloFresh and Factor75 specific data
+    hf_posts = 0
+    factor_posts = 0
+    hf_positive = 0
+    factor_positive = 0
+    
+    seven_days_ago = datetime.now() - timedelta(days=7)
+    seven_days_timestamp = seven_days_ago.timestamp()
+    
+    # Load posts data
+    with open('reports/working_reddit_data.json', 'r') as f:
+        data = json.load(f)
+    posts = data.get('posts', [])
+    
+    for post in posts:
+        created = post.get('created_utc', 0)
+        if created >= seven_days_timestamp:
+            brands = post.get('competitors_mentioned', [])
+            sentiment = post.get('sentiment', 'neutral')
+            
+            if 'HelloFresh' in brands:
+                hf_posts += 1
+                if sentiment == 'positive':
+                    hf_positive += 1
+            if 'Factor' in brands:
+                factor_posts += 1
+                if sentiment == 'positive':
+                    factor_positive += 1
+    
+    hf_sentiment_pct = int((hf_positive / hf_posts) * 100) if hf_posts > 0 else 0
+    factor_sentiment_pct = int((factor_positive / factor_posts) * 100) if factor_posts > 0 else 0
     
     body = f"""Hi there,
 
-Here's the weekly Reddit sentiment snapshot ({date_range}).
+Here's your weekly Reddit sentiment analysis ({date_range}).
 
-Each count = unique Reddit post from the last 7 days (not comments or reposts)
+QUICK SUMMARY:
+• HelloFresh: {hf_posts} posts ({hf_sentiment_pct}% positive) - {'Excellent brand health' if hf_sentiment_pct >= 70 else 'Good performance' if hf_sentiment_pct >= 50 else 'Needs attention'}
+• Factor75: {factor_posts} posts ({factor_sentiment_pct}% positive) - {'Strong performance' if factor_sentiment_pct >= 70 else 'Good performance' if factor_sentiment_pct >= 50 else 'Needs immediate attention'}
 
+COMPLETE COMPETITOR BREAKDOWN:
 {chr(10).join(summary_lines)}
 
-Weekly data includes all HelloFresh family brands and key competitors.
+LIVE DASHBOARD ACCESS:
+🔗 Main Dashboard: https://ktsering2025.github.io/reddit-competitor-sentiment/
+📊 Step 1 Chart: https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step1_chart.png
+🎯 Step 2 Analysis: https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_ACTIONABLE_analysis_LATEST.html
 
-📊 Step 1: Competitor sentiment chart (attached)
-🎯 Step 2: HelloFresh & Factor deep dive analysis
-{f'🔗 Deep dive link: https://ktsering2025.github.io/reddit-competitor-sentiment/reports/{latest_step2}' if latest_step2 else '🔗 Deep dive: Run step2_comprehensive_analysis.py to generate'}
+KEY INSIGHTS:
+• Real-time Reddit weekly search data (last 7 days)
+• Brand-specific filtering for HelloFresh and Factor75 only
+• Engagement scoring prioritizes comments for discussion value
+• Manual sentiment classification for business accuracy
+
+IMMEDIATE ACTIONS:
+• Review live dashboard using links above
+• Focus on {'Factor75' if factor_sentiment_pct < 50 else 'HelloFresh'} - {'immediate attention needed' if factor_sentiment_pct < 50 else 'maintain current strategy'}
+• Monitor competitive landscape weekly
 
 Best regards,
 Reddit Sentiment Analysis System
 
 ---
 Total posts analyzed: {total_posts}
-Next report: {(datetime.now() + timedelta(days=7)).strftime('%B %d, %Y')}"""
+Next report: {(datetime.now() + timedelta(days=7)).strftime('%B %d, %Y')}
+All links work on mobile, tablet, and desktop"""
     
     try:
         # Create AppleScript to send email with attachment via Mail app
