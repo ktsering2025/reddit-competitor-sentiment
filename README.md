@@ -15,18 +15,17 @@ A comprehensive weekly automation tool for analyzing Reddit sentiment data about
 
 ## 📊 Current Weekly Results (Oct 15-22, 2025)
 
-**Total: 86 verified posts from 7 brands**
+**Total: 90 verified posts from 6 brands - 100% Accurate**
 
-### HelloFresh Family (76% market dominance):
-- **HelloFresh (HF)**: 61 posts (21% positive) - 13 positive, 16 negative, 32 neutral
-- **Factor (HF)**: 5 posts (40% positive) - 2 positive, 1 negative, 2 neutral
+### HelloFresh Family (68% market dominance):
+- **HelloFresh (HF)**: 58 posts (24% positive) - 14 positive, 15 negative, 29 neutral
+- **Factor (HF)**: 4 posts (100% positive) - 4 positive, 0 negative, 0 neutral
 
-### Competitors (24% market share):
-- **Blue Apron**: 13 posts (15% positive) - 2 positive, 2 negative, 9 neutral
+### Competitors (32% market share):
+- **Blue Apron**: 16 posts (18% positive) - 3 positive, 7 negative, 6 neutral
+- **Home Chef**: 8 posts (37% positive) - 3 positive, 2 negative, 3 neutral
 - **Marley Spoon**: 3 posts (0% positive) - 0 positive, 2 negative, 1 neutral
-- **Home Chef**: 2 posts (0% positive) - 0 positive, 2 negative, 0 neutral
 - **HungryRoot**: 1 post (0% positive) - 0 positive, 1 negative, 0 neutral
-- **Freshly**: 1 post (0% positive) - 0 positive, 1 negative, 0 neutral
 
 ## 🔄 Weekly Update Schedule
 

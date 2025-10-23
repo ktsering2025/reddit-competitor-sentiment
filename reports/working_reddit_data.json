@@ -1,6 +1,6 @@
 {
-  "scrape_timestamp": "2025-10-22T15:22:09.146502",
-  "total_posts": 83,
+  "scrape_timestamp": "2025-10-22T20:28:08.406912",
+  "total_posts": 90,
   "posts": [
     {
       "title": "Share Weekly Trial, Offer, and Free Box Codes Here",
@@ -14,13 +14,73 @@
       "url": "https://reddit.com/r/hellofresh/comments/1obg0mk/share_weekly_trial_offer_and_free_box_codes_here/",
       "author": "AutoModerator",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.7331244444444445,
+      "reasoning": "Fixed sentiment analysis"
+    },
+    {
+      "title": "Creamy Chicken &amp; Mushroom Cavatappi",
+      "selftext": "with Parmesan &amp; Scallions \n\nMods: used Trader Joe's Mushroom Umami seasoning on chicken as well. ",
+      "score": 9,
+      "subreddit": "hellofresh",
+      "created_utc": 1761172663.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "url": "https://reddit.com/r/hellofresh/comments/1odmrtj/creamy_chicken_mushroom_cavatappi/",
+      "author": "Sevraz",
+      "sentiment": "neutral",
+      "confidence": 0.6,
+      "reasoning": "VADER: 0.27, TextBlob: -0.60, Context: 0.00"
+    },
+    {
+      "title": "Banh-Mi Beef Tacos",
+      "selftext": "So very easy to make and very tasty!!!! We loved it!",
+      "score": 3,
+      "subreddit": "hellofresh",
+      "created_utc": 1761171762.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "url": "https://reddit.com/r/hellofresh/comments/1odmfiq/banhmi_beef_tacos/",
+      "author": "Carroll-carroll",
+      "sentiment": "positive",
+      "confidence": 0.95,
+      "reasoning": "VADER: 0.87, TextBlob: 0.64, Context: 0.60"
+    },
+    {
+      "title": "Ready Made Meals on hold till end of November",
+      "selftext": "I reported on this in a other post but here\u2019s an update. According to a HelloFresh CSR spoke with they won\u2019t be delivering any Ready Made Meals until the end of November at the very earliest due to supplier issues.",
+      "score": 6,
+      "subreddit": "hellofresh",
+      "created_utc": 1761159240.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "url": "https://reddit.com/r/hellofresh/comments/1odh1o8/ready_made_meals_on_hold_till_end_of_november/",
+      "author": "Forward_Package3279",
+      "sentiment": "negative",
+      "confidence": 0.6659600000000001,
+      "reasoning": "Fixed sentiment analysis"
+    },
+    {
+      "title": "Sticky ginger beef",
+      "selftext": "",
+      "score": 2,
+      "subreddit": "hellofresh",
+      "created_utc": 1761176985.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "url": "https://reddit.com/r/hellofresh/comments/1odoei8/sticky_ginger_beef/",
+      "author": "Internal_Confusion_9",
+      "sentiment": "neutral",
+      "confidence": 0.6,
+      "reasoning": "VADER: 0.00, TextBlob: 0.00, Context: 0.00"
     },
     {
       "title": "Not bad..not bad",
       "selftext": "",
-      "score": 47,
+      "score": 49,
       "subreddit": "hellofresh",
       "created_utc": 1761090785.0,
       "competitors_mentioned": [
@@ -29,13 +89,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1oct2pa/not_badnot_bad/",
       "author": "Internal_Confusion_9",
       "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6776,
+      "reasoning": "VADER: 0.43, TextBlob: -0.70, Context: -0.80"
     },
     {
       "title": "Indian-Style Chicken Curry",
       "selftext": "Cooked this one in exactly 45 mins..",
-      "score": 9,
+      "score": 14,
       "subreddit": "hellofresh",
       "created_utc": 1761109248.0,
       "competitors_mentioned": [
@@ -44,13 +104,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1oczc1c/indianstyle_chicken_curry/",
       "author": "optimisedEnergy",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6,
+      "reasoning": "VADER: 0.00, TextBlob: -0.17, Context: 0.00"
     },
     {
       "title": "Banh Mi Style Tacos",
       "selftext": "These were excellent! So crunchy and the flavors were great. I added green onions from my fridge and subbed turkey for beef because I like that it\u2019s light and less greasy. ",
-      "score": 20,
+      "score": 23,
       "subreddit": "hellofresh",
       "created_utc": 1761092868.0,
       "competitors_mentioned": [
@@ -59,13 +119,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1octtzb/banh_mi_style_tacos/",
       "author": "Stunning_Post_488",
       "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "VADER: 0.89, TextBlob: 0.37, Context: 0.60"
     },
     {
       "title": "Do they TRY to have the smallest onions known to man",
       "selftext": "",
-      "score": 36,
+      "score": 39,
       "subreddit": "hellofresh",
       "created_utc": 1761065288.0,
       "competitors_mentioned": [
@@ -74,13 +134,28 @@
       "url": "https://reddit.com/r/hellofresh/comments/1oci4pu/do_they_try_to_have_the_smallest_onions_known_to/",
       "author": "sectionallyconfused",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6,
+      "reasoning": "VADER: 0.00, TextBlob: 0.00, Context: 0.00"
+    },
+    {
+      "title": "Ready Made Meals no longer available as the free item",
+      "selftext": "I guess I'll be stuck with waffles since they seem like they are the only thing ever available. It says they are discontinuing ready made meals as free items due to a safety concern. I guess if you pay for them they are somehow safe? \n\nThis after I was sent 3 of the tiniest chicken breasts for 3 people (15 oz total). I'm ready to move to another company...any suggestions?",
+      "score": 0,
+      "subreddit": "hellofresh",
+      "created_utc": 1761158068.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "url": "https://reddit.com/r/hellofresh/comments/1odginw/ready_made_meals_no_longer_available_as_the_free/",
+      "author": "abw4477",
+      "sentiment": "neutral",
+      "confidence": 0.8310150000000001,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Happy to be back!",
       "selftext": "We've used meal kits on and off for the past 5 years and by far the ones my kids and husband liked the best were Hello Fresh, so I resubbed last week when I got a deal in the mail. I made the first one last night (mustard soy salmon) and it was shocking how quickly the salmon was devoured.\n\n\n\nI have one kid who really struggles with food (esp new foods) and they inhaled the salmon. I actually gave half their portion to my husband bc I figured kid wasn't going to be interested in something that different and new. Now I feel bad because they would have eaten the whole thing!\n\n\n\nWhile I agree that the protein portions were a little on the small side (though double would have been too much), I feel like the rice and carrots more than made up for it. The rice they send for 4 people is A LOT for us, which is fine bc my kids will eat plain rice as leftovers :D I didn't even cook all of the carrots because those suckers were HUGE, and we still had leftovers which I'll happily eat for lunch.\n\n\n\nI really appreciated the balance of ease in cooking on a weeknight with the flavors being interesting, like adding lime zest to the roasted carrots.\n\n\n\nMy only regret is that I didn't get a photo before everyone CHOWED DOWN. I promise this is not an ad, lol.",
-      "score": 16,
+      "score": 18,
       "subreddit": "hellofresh",
       "created_utc": 1761069400.0,
       "competitors_mentioned": [
@@ -89,13 +164,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1ocjykt/happy_to_be_back/",
       "author": "EmotionalQuestions",
       "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.9008728594828596,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Tonight's Dinner",
       "selftext": "It's pretty tasty.",
-      "score": 7,
+      "score": 6,
       "subreddit": "hellofresh",
       "created_utc": 1761083783.0,
       "competitors_mentioned": [
@@ -104,13 +179,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1ocqcg6/tonights_dinner/",
       "author": "Klutzy-Equivalent172",
       "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.76256,
+      "reasoning": "VADER: 0.49, TextBlob: 0.25, Context: 0.30"
     },
     {
       "title": "One-Pot Chicken Sausage &amp; Bean Soup",
       "selftext": "with Kale &amp; Carrot\n\nMods: just used chicken broth in place of water to up the flavor even more.",
-      "score": 4,
+      "score": 5,
       "subreddit": "hellofresh",
       "created_utc": 1761087915.0,
       "competitors_mentioned": [
@@ -119,8 +194,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1ocs04a/onepot_chicken_sausage_bean_soup/",
       "author": "Sevraz",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6,
+      "reasoning": "VADER: 0.00, TextBlob: -0.23, Context: 0.00"
     },
     {
       "title": "Hello fresh",
@@ -134,8 +209,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1odbvl6/hello_fresh/",
       "author": "Ok-Friendship-4057",
       "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "VADER: 0.91, TextBlob: 0.11, Context: 1.00"
     },
     {
       "title": "Missing Fry Seasoning",
@@ -148,14 +223,14 @@
       ],
       "url": "https://reddit.com/r/hellofresh/comments/1octws8/missing_fry_seasoning/",
       "author": "Ok-Metal8916",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "sentiment": "neutral",
+      "confidence": 0.85068,
+      "reasoning": "Fixed: Missing ingredient is neutral, not negative complaint"
     },
     {
       "title": "Roasted Italian sausage with butternut hash",
       "selftext": "Over the summer I was getting a lot of sandwiches, tacos, burgers, etc.  Things I would call 'summer food'.  But now that the weather is changing, and we won't be eating outside, I wanted to change things up.\n\nWow!  This was a good one!  It's not too often that my boys and I will say, \"the kale is my favorite part!\" but this kale was really, really good.  The kale was nice and crispy.  The toast...way better than you would think, and the sausage was great! \n\nThe only thing lacking was the butternut squash- too soft and sweet.  But overall this meal was fantastic.  4 servings easily fed 5 people.  Cooking was enjoyable (I like dicing onions, so YMMV).\n\nI'm looking forward to more of these meals this fall.  No more fish tacos until next spring, all in on the warm comfort foods!",
-      "score": 10,
+      "score": 11,
       "subreddit": "hellofresh",
       "created_utc": 1761053885.0,
       "competitors_mentioned": [
@@ -164,8 +239,23 @@
       "url": "https://reddit.com/r/hellofresh/comments/1ocd79w/roasted_italian_sausage_with_butternut_hash/",
       "author": "Heavy-Hospital7077",
       "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "VADER: 1.00, TextBlob: 0.36, Context: 1.00"
+    },
+    {
+      "title": "No ready made meals, second week in a row!",
+      "selftext": "I've been ordering two cooking meals and a ready-made meal each week because my husband is back in the office now. However, last week the package arrived with two meals, none of which were ready-made meals. I called, they credited my account, and I figured life was good. This week, the same thing, no ready-made meal, just two meals. \n\nAnd then I went to order the next month's meals, and there are no ready-made meals to pick from, but a push for us to order from Factor\\_. \n\nHave they given up on Ready-Made meals and are pushing those who like ready-made meals to their sister company, Factor\\_?",
+      "score": 5,
+      "subreddit": "hellofresh",
+      "created_utc": 1761056572.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "url": "https://reddit.com/r/hellofresh/comments/1ocebt8/no_ready_made_meals_second_week_in_a_row/",
+      "author": "curiositykt",
+      "sentiment": "neutral",
+      "confidence": 0.95,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Am I the only one who eats the crispy onions as they cook??",
@@ -179,29 +269,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1obyrki/am_i_the_only_one_who_eats_the_crispy_onions_as/",
       "author": "painspinner",
       "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
-    },
-    {
-      "title": "No ready made meals, second week in a row!",
-      "selftext": "I've been ordering two cooking meals and a ready-made meal each week because my husband is back in the office now. However, last week the package arrived with two meals, none of which were ready-made meals. I called, they credited my account, and I figured life was good. This week, the same thing, no ready-made meal, just two meals. \n\nAnd then I went to order the next month's meals, and there are no ready-made meals to pick from, but a push for us to order from Factor\\_. \n\nHave they given up on Ready-Made meals and are pushing those who like ready-made meals to their sister company, Factor\\_?",
-      "score": 3,
-      "subreddit": "hellofresh",
-      "created_utc": 1761056572.0,
-      "competitors_mentioned": [
-        "Factor",
-        "HelloFresh"
-      ],
-      "url": "https://reddit.com/r/hellofresh/comments/1ocebt8/no_ready_made_meals_second_week_in_a_row/",
-      "author": "curiositykt",
-      "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Now that\u2019s a carrot!",
       "selftext": "Excuse my dirty hands - I\u2019m a mechanic. Hands and vegetables will be thoroughly washed before preparing.",
-      "score": 19,
+      "score": 21,
       "subreddit": "hellofresh",
       "created_utc": 1760996263.0,
       "competitors_mentioned": [
@@ -210,13 +284,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1obun0l/now_thats_a_carrot/",
       "author": "TravisJrabs",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.67306,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Spicy Maple Chicken",
       "selftext": "with Mashed Potatoes &amp; Roasted Broccoli \n\nMods: Got the world's smallest potatoes again, so added in the left over potatoes from last week that I replaced with Mac and cheese.\n\nI always season my broccoli with Grill Mates brand Montreal Steak Seasoning. Try it.",
-      "score": 7,
+      "score": 8,
       "subreddit": "hellofresh",
       "created_utc": 1761001892.0,
       "competitors_mentioned": [
@@ -225,8 +299,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1obwwtu/spicy_maple_chicken/",
       "author": "Sevraz",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6,
+      "reasoning": "VADER: 0.00, TextBlob: -0.20, Context: -0.10"
     },
     {
       "title": "Is anyone experience delays today?",
@@ -239,14 +313,14 @@
       ],
       "url": "https://reddit.com/r/hellofresh/comments/1obsvbp/is_anyone_experience_delays_today/",
       "author": "Odd-Bus-4850",
-      "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Question about delays, not complaint - corrected to neutral"
+      "sentiment": "negative",
+      "confidence": 0.6,
+      "reasoning": "Fixed: Asking about delays indicates problems"
     },
     {
       "title": "The amount of basil i recieved is a joke",
       "selftext": "",
-      "score": 9,
+      "score": 8,
       "subreddit": "hellofresh",
       "created_utc": 1760978850.0,
       "competitors_mentioned": [
@@ -255,8 +329,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1obndv5/the_amount_of_basil_i_recieved_is_a_joke/",
       "author": "Charirix",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6,
+      "reasoning": "VADER: 0.30, TextBlob: 0.00, Context: 0.00"
     },
     {
       "title": "How long are the pineapple upside down cakes good?",
@@ -270,13 +344,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1obw7ur/how_long_are_the_pineapple_upside_down_cakes_good/",
       "author": "Stonks_andtheCity",
       "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "VADER: 0.75, TextBlob: 0.27, Context: 0.60"
     },
     {
       "title": "so stoked for the fondue option next month",
       "selftext": "",
-      "score": 7,
+      "score": 8,
       "subreddit": "hellofresh",
       "created_utc": 1760982901.0,
       "competitors_mentioned": [
@@ -285,13 +359,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1obounv/so_stoked_for_the_fondue_option_next_month/",
       "author": "noseatbeltsong",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6,
+      "reasoning": "VADER: 0.00, TextBlob: 0.00, Context: 0.00"
     },
     {
       "title": "Kale",
       "selftext": "Is anyone else sick of the way they pack the kale? I have to spend 20 minutes just picking out the hard-as-rocks stems!! It\u2019s so annoying! ",
-      "score": 2,
+      "score": 4,
       "subreddit": "hellofresh",
       "created_utc": 1760995866.0,
       "competitors_mentioned": [
@@ -300,8 +374,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1obugsd/kale/",
       "author": "arr11235",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Can't cancel order",
@@ -315,13 +389,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1obtbsv/cant_cancel_order/",
       "author": "Environmental_Put_71",
       "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Steak and Bacon-Wrapped Green Beans with Garlic Mash and Horseradish Sauce",
       "selftext": "I was a beautiful medium rare...\nDelishousness \ud83d\ude0b ",
-      "score": 10,
+      "score": 12,
       "subreddit": "hellofresh",
       "created_utc": 1760922949.0,
       "competitors_mentioned": [
@@ -330,8 +404,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1ob6snw/steak_and_baconwrapped_green_beans_with_garlic/",
       "author": "Heisenberg_porkpie",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.7347600000000001,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Smoky Maple-Mustard Roasted Half Chicken",
@@ -345,13 +419,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1ob6gov/smoky_maplemustard_roasted_half_chicken/",
       "author": "cabinmate",
       "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.8542010526315791,
+      "reasoning": "VADER: 0.93, TextBlob: -0.03, Context: 0.30"
     },
     {
       "title": "Thai chicken sate",
       "selftext": "I grilled the chicken and an super happy how it turned out.  Love Thai food.",
-      "score": 11,
+      "score": 10,
       "subreddit": "hellofresh",
       "created_utc": 1760921889.0,
       "competitors_mentioned": [
@@ -360,13 +434,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1ob6fky/thai_chicken_sate/",
       "author": "mvicsmith",
       "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.88212,
+      "reasoning": "VADER: 0.92, TextBlob: 0.09, Context: 0.30"
     },
     {
       "title": "Anyone else notice a decrease in meat quality?",
       "selftext": "I am in Canada if that makes any difference. I have been getting Hellofresh regularly for about 5 months now. It is super convenient and helps me eat less takeout. \n\nA few months ago, they mentioned they were going to increase the quality of their meat, which I thought was great. Their meat was never terrible to me (it was fine). Not high quality, but still fine. However, since about a month ago, I have found their meat to be quite awful, particularly the ground meat (including sausage). It seems to be filled with a lot of filler or something because it reminds me almost of hot dogs if they were ripped into pieces, but ofc, the taste is not the same as hot dogs but it also doesn't taste like it should. I have never experienced this with ground meats that I purchased elsewhere... \n\nI am definitely going to cancel next month (my partner asked we do it for the next month as we are busy) and, in the meantime, avoid the ground meats but it is unfortunate because they are often in quicker meals. \n\nHas anyone else noticed this? Or willing to pay attention? ",
-      "score": 7,
+      "score": 9,
       "subreddit": "hellofresh",
       "created_utc": 1760927637.0,
       "competitors_mentioned": [
@@ -375,8 +449,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1ob8d2b/anyone_else_notice_a_decrease_in_meat_quality/",
       "author": "ObjectEnvironmental2",
       "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "VADER: -0.72, TextBlob: 0.07, Context: 0.60"
     },
     {
       "title": "Prosciutto &amp; jam sandwiches",
@@ -390,8 +464,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1oamn6v/prosciutto_jam_sandwiches/",
       "author": "Fun_Information9372",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Ghosted by HelloFresh",
@@ -405,13 +479,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1obcmdh/ghosted_by_hellofresh/",
       "author": "Forward_Package3279",
       "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "VADER: 0.18, TextBlob: 0.14, Context: -0.30"
     },
     {
       "title": "Jack o Lantern stuffed peppers were ok.. was a little disappointed they sent Yellow peppers",
       "selftext": "",
-      "score": 84,
+      "score": 85,
       "subreddit": "hellofresh",
       "created_utc": 1760836378.0,
       "competitors_mentioned": [
@@ -420,8 +494,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1oacuke/jack_o_lantern_stuffed_peppers_were_ok_was_a/",
       "author": "Canuckr82",
       "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.7219325000000001,
+      "reasoning": "VADER: -0.42, TextBlob: -0.11, Context: -0.40"
     },
     {
       "title": "Goood soup, but selling this as 2 servings is insane",
@@ -435,13 +509,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1ob418x/goood_soup_but_selling_this_as_2_servings_is/",
       "author": "Please_Go_Away43",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6,
+      "reasoning": "VADER: -0.33, TextBlob: -0.16, Context: 0.30"
     },
     {
       "title": "Broccoli cheddar pinwheels",
       "selftext": "We thought these were good! My 8 year old thanked me for a delicious dinner, I found them to be quite filling, and my 5 year old\u2026well, he at least tried them. Lol. I can\u2019t ask for much more than that at this point. ",
-      "score": 21,
+      "score": 20,
       "subreddit": "hellofresh",
       "created_utc": 1760820186.0,
       "competitors_mentioned": [
@@ -450,8 +524,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1oa6sln/broccoli_cheddar_pinwheels/",
       "author": "Either_Coast",
       "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "VADER: 0.91, TextBlob: 0.50, Context: 0.60"
     },
     {
       "title": "Why is my food sticking?",
@@ -465,8 +539,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1oac59a/why_is_my_food_sticking/",
       "author": "Antique_One5821",
       "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.91428,
+      "reasoning": "VADER: -0.65, TextBlob: -0.55, Context: -0.30"
     },
     {
       "title": "In love with these! (I ate all of them before I thought to take my own pic)",
@@ -480,8 +554,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1o9yaq8/in_love_with_these_i_ate_all_of_them_before_i/",
       "author": "Lillus_Pillus",
       "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "VADER: 0.92, TextBlob: 0.32, Context: 0.30"
     },
     {
       "title": "Can\u2019t apply other discounts??",
@@ -495,13 +569,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1oaeieq/cant_apply_other_discounts/",
       "author": "Traditional-Poem-687",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.7244250000000001,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Lawsuit",
       "selftext": "Can someone explain the lawsuit that hellofresh lost recently  \ud83d\ude2d",
-      "score": 1,
+      "score": 3,
       "subreddit": "hellofresh",
       "created_utc": 1760764774.0,
       "competitors_mentioned": [
@@ -510,8 +584,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1o9ncm0/lawsuit/",
       "author": "PI3Kachu_Proteomics",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Anyone try the salchipapas?",
@@ -525,13 +599,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1o9h2px/anyone_try_the_salchipapas/",
       "author": "DenL4242",
       "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "VADER: 0.87, TextBlob: 0.62, Context: 0.50"
     },
     {
       "title": "Hainanese-Style Roasted Chicken and Rice",
       "selftext": "This is one of two half chicken meals I got this week (the other being Smoky Maple-Mustard Roasted Half Chicken). I couldn\u2019t decide between them so because they were not premium and they both had the same time it would take and the same difficulty level, I got both. I may end up regretting that by the end of Sunday when I do the second one.\n\nI thought this was pretty good, especially the rice, probably in part because it contained the drippings from the chicken. The chicken itself was pretty good, with seasoning it at the beginning with a combo of garlic powder and salt and then towards the end, basting it with some sweet soy glaze. I think it took me about an hour and 45 minutes total, but a lot of that was waiting for things to cook, especially the chicken. I\u2019m not sure it needed 3 sauces but fortunately, there was only one that was cooked, ginger scallion sauce, though I didn\u2019t particularly like it. I didn\u2019t think this recipe was particularly hard, though it\u2019s labeled as such, just involved and it took awhile to cook as half chickens typically do\n\nI really recommend this recipe\n\nHere\u2019s a picture of the first serving, with the leg part\n\nhttps://preview.redd.it/zhsvxj4tonvf1.png?width=1577&amp;format=png&amp;auto=webp&amp;s=cfd8eb6dbe55532e9d7ff354855a721ceb619f86",
-      "score": 12,
+      "score": 13,
       "subreddit": "hellofresh",
       "created_utc": 1760699919.0,
       "competitors_mentioned": [
@@ -540,8 +614,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1o8yka9/hainanesestyle_roasted_chicken_and_rice/",
       "author": "cabinmate",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Is this cabbage / bok choy okay?",
@@ -555,13 +629,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1o9ewm9/is_this_cabbage_bok_choy_okay/",
       "author": "CarolinaCamper",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.61444,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Cheesy Smashed Burgers",
       "selftext": "with Old Bay Fries, Caramelized Onions &amp; Special Sauce.\n\nMods: as you can see there are no \"fries\" here. I get super tired of potatoe wedges always being paired with sandwiches. So I bought the White cheddar Mac and cheese extra. The half of the old bay that didn't get used on wedges, I mixed into the burger patties. I added the provided shredded white cheddar into the mac and cheese. I put some of the mac and cheese on the burger. I also caramelized the onions the correct way, and did not add the sugar and splash of water to shortcut how long it takes to actually caramelize onions. I also tossed a slice of white cheddar I had in the fridge on the burger before platting.\n\nI will of course save the non used potatoes to use in any potatoe dishes I may get next week as when making mash, then always send the world's smallest potatoes.",
-      "score": 57,
+      "score": 53,
       "subreddit": "hellofresh",
       "created_utc": 1760654039.0,
       "competitors_mentioned": [
@@ -570,13 +644,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1o8kfr0/cheesy_smashed_burgers/",
       "author": "Sevraz",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6717961904761904,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Price Increased too Much",
       "selftext": "The price increases have gotten out of line with what I am willing to pay for cooking my family dinner.\n\n$13.50 per meal or $12 if you get 6 servings per meal.\n\nFor those prices I can get takeout and have leftovers.  I never have leftovers with HelloFresh.\n\nWhen cooking for 4-6 people the price for HelloFresh just isn\u2019t worth it anymore.",
-      "score": 27,
+      "score": 28,
       "subreddit": "hellofresh",
       "created_utc": 1760661754.0,
       "competitors_mentioned": [
@@ -585,8 +659,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1o8nay6/price_increased_too_much/",
       "author": "bigwinw",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6,
+      "reasoning": "VADER: 0.38, TextBlob: 0.25, Context: -0.30"
     },
     {
       "title": "Ready made meals",
@@ -600,8 +674,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1o8zu98/ready_made_meals/",
       "author": "MadRush-7",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.8257228571428572,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Big Batch Calorie Count",
@@ -615,8 +689,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1o90tqh/big_batch_calorie_count/",
       "author": "cpots007",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6,
+      "reasoning": "VADER: -0.32, TextBlob: -0.07, Context: 0.00"
     },
     {
       "title": "Hainanese-Style Roasted Chicken &amp; Rice",
@@ -630,13 +704,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1o8knh3/hainanesestyle_roasted_chicken_rice/",
       "author": "Carroll-carroll",
       "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "VADER: 0.86, TextBlob: 0.10, Context: 0.60"
     },
     {
       "title": "Is anyone else having trouble adding on their free item?",
       "selftext": "I go to add my free item for life on one of the next few weeks and the page is blank every time :/ I think it\u2019s for the week of Nov. 17th if I remember correctly.",
-      "score": 6,
+      "score": 5,
       "subreddit": "hellofresh",
       "created_utc": 1760667695.0,
       "competitors_mentioned": [
@@ -645,13 +719,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1o8pdto/is_anyone_else_having_trouble_adding_on_their/",
       "author": "Particular-Recipe251",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.5509085714285715,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Hoisin glazed pork",
       "selftext": "I was a little skeptical about this at first because I didn't like the way the hoisin tastes on it's own but all together it was really good! I overcooked the rice but that was my fault. I left it in the rice cooker way after it was done because I was distracted \ud83e\udd26\u200d\u2640\ufe0f",
-      "score": 8,
+      "score": 7,
       "subreddit": "hellofresh",
       "created_utc": 1760653546.0,
       "competitors_mentioned": [
@@ -660,8 +734,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1o8k8o1/hoisin_glazed_pork/",
       "author": "robinsparkles220",
       "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "How do I find out about all of the different special recipes, etc?",
@@ -675,8 +749,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1o8qtn3/how_do_i_find_out_about_all_of_the_different/",
       "author": "Heavy-Hospital7077",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.9144313602187286,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "extra boxes??",
@@ -690,8 +764,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1o8kleb/extra_boxes/",
       "author": "LimeOrchard",
       "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "VADER: -0.74, TextBlob: -0.24, Context: -1.00"
     },
     {
       "title": "Discount Codes out there.",
@@ -705,13 +779,13 @@
       "url": "https://reddit.com/r/hellofresh/comments/1o8gjr8/discount_codes_out_there/",
       "author": "kfbrewer",
       "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Shrimp bowls with spicy mayo",
       "selftext": "Big fan of this one! ",
-      "score": 14,
+      "score": 12,
       "subreddit": "hellofresh",
       "created_utc": 1760588352.0,
       "competitors_mentioned": [
@@ -720,38 +794,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1o7wpin/shrimp_bowls_with_spicy_mayo/",
       "author": "Fun_Information9372",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
-    },
-    {
-      "title": "No Dates on Proteins",
-      "selftext": "Does it bother anyone else that they don't put \"packed on\" or \"frozen on\" dates on the proteins? I know they now send them frozen and they are thawed by the time they arrive and I just don't like that. I've contacted them and said there should be dates on the proteins, but it never changes. Or even if they'd offer the option of just getting the meals minus the proteins and then I'd just buy them separately on my own at the supermarket.",
-      "score": 50,
-      "subreddit": "hellofresh",
-      "created_utc": 1760556687.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "url": "https://reddit.com/r/hellofresh/comments/1o7kqcm/no_dates_on_proteins/",
-      "author": "giraffecat31",
-      "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
-    },
-    {
-      "title": "Creamy Tortellini &amp; Crispy Prosciutto",
-      "selftext": "with Peas &amp; Parmesan \n\nMods: I used some Parmigiano-Reggiano. I had in the fridge for the sauce, and used the supplied parm for the topping. \n\nChefs Note: I feel this dish would be better if pancetta was used instead of prosciutto.",
-      "score": 18,
-      "subreddit": "hellofresh",
-      "created_utc": 1760568674.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "url": "https://reddit.com/r/hellofresh/comments/1o7pss4/creamy_tortellini_crispy_prosciutto/",
-      "author": "Sevraz",
-      "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.55208,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Two different fulfillment warehouses here in Germany, and one is terrable!",
@@ -765,23 +809,8 @@
       "url": "https://reddit.com/r/hellofresh/comments/1o87wti/two_different_fulfillment_warehouses_here_in/",
       "author": "xXsingledad79Xx",
       "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
-    },
-    {
-      "title": "This weeks box has been a nightmare",
-      "selftext": "I got my box last Friday and as soon as I opened it, I noticed my steaks were leaking and had coated all of other proteins in ick and got into one of my bags. Customer service thankfully took care of it for me, but now that I\u2019m using the remaining salvageable bags, my tangy tamarind meatballs had marinara sauce instead of the tamarind sauce. I thought I had grabbed the wrong bag when I first opened it but checked and it was definitely the right bag. Just wrong sauce. Contacted customer service to let them know and they kept saying I wasn\u2019t going to get anymore compensation (totally fine with that, I was just letting them know that I had an issue). Anyone else have an issue with the tamarind meatballs this week? ",
-      "score": 8,
-      "subreddit": "hellofresh",
-      "created_utc": 1760571649.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "url": "https://reddit.com/r/hellofresh/comments/1o7qz6m/this_weeks_box_has_been_a_nightmare/",
-      "author": "WetInWonderland",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "VADER: -0.86, TextBlob: -0.12, Context: -0.80"
     },
     {
       "title": "Hellofresb fined for reactivating accounts",
@@ -795,58 +824,73 @@
       "url": "https://reddit.com/r/hellofresh/comments/1o7xdui/hellofresb_fined_for_reactivating_accounts/",
       "author": "sweetasman01",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6,
+      "reasoning": "VADER: 0.00, TextBlob: 0.00, Context: 0.00"
     },
     {
-      "title": "Mushroom Ravioli",
-      "selftext": "This was pretty yummy and easy to put it together. Not my favorite HF meal but pretty good.",
-      "score": 5,
-      "subreddit": "hellofresh",
-      "created_utc": 1760567985.0,
+      "title": "Kung Pao shrimp",
+      "selftext": "I loved this sauce so much last time they did it I spent about $50 to get all the stuff to make the sauce but it is so good. Lots of ingredients for the sauce. ",
+      "score": 4,
+      "subreddit": "blueapron",
+      "created_utc": 1761166081.0,
       "competitors_mentioned": [
-        "HelloFresh"
+        "Blue Apron"
       ],
-      "url": "https://reddit.com/r/hellofresh/comments/1o7pih7/mushroom_ravioli/",
-      "author": "Carroll-carroll",
-      "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "url": "https://reddit.com/r/blueapron/comments/1odk2rf/kung_pao_shrimp/",
+      "author": "Flat_Sea1418",
+      "sentiment": "positive",
+      "confidence": 0.91574,
+      "reasoning": "VADER: 0.82, TextBlob: 0.32, Context: 0.30"
     },
     {
-      "title": "Pending Charge- Haven\u2019t Ordered in 2 Years",
-      "selftext": "Saw two charges of $0.00 on my credit card from Hello Fresh. Called my credit card company as I haven\u2019t used Hello Fresh in over 2 years. They said nothing went through. Called Hello Fresh, and their system verified the last order I had was June 2023.\n\nI locked my credit card for now, but it seems very weird.\n\nAnyone else have any similar experience? ",
-      "score": 2,
-      "subreddit": "hellofresh",
-      "created_utc": 1760570381.0,
+      "title": "Smoky bacon and rice stuffed poblanos",
+      "selftext": "",
+      "score": 3,
+      "subreddit": "blueapron",
+      "created_utc": 1761166154.0,
       "competitors_mentioned": [
-        "HelloFresh"
+        "Blue Apron"
       ],
-      "url": "https://reddit.com/r/hellofresh/comments/1o7qhli/pending_charge_havent_ordered_in_2_years/",
-      "author": "Reasonable_Style8400",
+      "url": "https://reddit.com/r/blueapron/comments/1odk3w7/smoky_bacon_and_rice_stuffed_poblanos/",
+      "author": "Flat_Sea1418",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6,
+      "reasoning": "VADER: 0.00, TextBlob: 0.00, Context: 0.00"
     },
     {
-      "title": "This has been a terrible experience.",
-      "selftext": "I have never used a meal-prep service like this, so I was excited when a friend got me a $125 gift card for HelloFresh.  I loaded it up and ordered my first week, two meals.  They both came and were delicious and I was happy.\n\nThen the second week happened.\n\nMy box came, but it only had one of the two meals I had ordered.  When I called Customer Service, I got the news that not only would I not get the meal at all (for \"mistake reasons\"), but my GC had been charged down to zero AND my bank account had been charged as well.  After I groused and yelled and got a supervisor, the company said they'd put the amount of the missing meal back on my gift card, refunded the double billing to my debit card, and that I could resume my experience.\n\nThen the third week happened.\n\nI don't even have resolution yet.  I got an email stating they've cancelled my account and cancelled my delivery for this week.  I haven't talked to customer service yet, but you can believe they're about to get an earful.  Anyone else had this terrible experience?",
+      "title": "Those who got rid of their accounts",
+      "selftext": "Do they ever let you know? Mine shows as request pending even though it\u2019s been a few days",
       "score": 0,
-      "subreddit": "hellofresh",
-      "created_utc": 1760559635.0,
+      "subreddit": "blueapron",
+      "created_utc": 1761169072.0,
       "competitors_mentioned": [
-        "HelloFresh"
+        "Blue Apron"
       ],
-      "url": "https://reddit.com/r/hellofresh/comments/1o7m0r2/this_has_been_a_terrible_experience/",
-      "author": "Rescuepoet",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "url": "https://reddit.com/r/blueapron/comments/1odlcbu/those_who_got_rid_of_their_accounts/",
+      "author": "GreenlandBound",
+      "sentiment": "neutral",
+      "confidence": 0.6,
+      "reasoning": "VADER: 0.00, TextBlob: -0.20, Context: 0.00"
+    },
+    {
+      "title": "Sweet and spicy coconut shrimp",
+      "selftext": "",
+      "score": 1,
+      "subreddit": "blueapron",
+      "created_utc": 1761165896.0,
+      "competitors_mentioned": [
+        "Blue Apron"
+      ],
+      "url": "https://reddit.com/r/blueapron/comments/1odjzuw/sweet_and_spicy_coconut_shrimp/",
+      "author": "Flat_Sea1418",
+      "sentiment": "neutral",
+      "confidence": 0.68852,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Falafel Bowls with Farro, Feta, &amp; Garlic Tahini Sauce",
       "selftext": "I had a roommate for several years that would make giant falafel salads a lot, so I was super excited to see this one on the menu! I modified slightly by making the falafel balls in the air fryer. I loved this one and would definitely order again. ",
-      "score": 10,
+      "score": 8,
       "subreddit": "blueapron",
       "created_utc": 1761091733.0,
       "competitors_mentioned": [
@@ -855,8 +899,8 @@
       "url": "https://reddit.com/r/blueapron/comments/1octf8s/falafel_bowls_with_farro_feta_garlic_tahini_sauce/",
       "author": "PNWcouchpotato",
       "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.8273921428571429,
+      "reasoning": "VADER: 0.93, TextBlob: 0.19, Context: 0.00"
     },
     {
       "title": "I\u2019m done with blue apron",
@@ -870,13 +914,13 @@
       "url": "https://reddit.com/r/blueapron/comments/1oc2nd9/im_done_with_blue_apron/",
       "author": "gheddit10",
       "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "VADER: -0.89, TextBlob: -0.16, Context: -1.00"
     },
     {
       "title": "No substitute email?",
       "selftext": "This is the second time since the recent changes that I get a card with my ingredients saying to check my email for substitution instructions. I was able to deduce that they have subbed a packet of veggie stock concentrate do 1 cup of chicken broth, and I\u2019m aware of how to make it but a bit frustrating that they can\u2019t even send the email.",
-      "score": 10,
+      "score": 11,
       "subreddit": "blueapron",
       "created_utc": 1761015553.0,
       "competitors_mentioned": [
@@ -885,24 +929,23 @@
       "url": "https://reddit.com/r/blueapron/comments/1oc1tdy/no_substitute_email/",
       "author": "girllookingforboi",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6785800000000001,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Why do they refund my account instead of my card\u2026",
       "selftext": "This is my final straw\u2026my whole box this weekend came soaking wet on the inside, with two bags of rotten arugula stinking up the whole box. My pork bag broke and leaked, and they decided to replace my ravioli with angel hair pasta??? They refunded me for my whole box but I need the money to go to my card not my account, I\u2019m moving back to hello fresh\u2764\ufe0f\u200d\ud83e\ude79",
-      "score": 10,
+      "score": 11,
       "subreddit": "blueapron",
       "created_utc": 1760990975.0,
       "competitors_mentioned": [
-        "Blue Apron",
-        "HelloFresh"
+        "Blue Apron"
       ],
       "url": "https://reddit.com/r/blueapron/comments/1obsanw/why_do_they_refund_my_account_instead_of_my_card/",
       "author": "urlocalindiegirl",
-      "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "sentiment": "negative",
+      "confidence": 0.95,
+      "reasoning": "VADER: -0.54, TextBlob: 0.08, Context: -0.40"
     },
     {
       "title": "Southern Chicken &amp; Creamy Relish with Saut\u00e9ed Snow Peas &amp; Rice",
@@ -916,8 +959,8 @@
       "url": "https://reddit.com/r/blueapron/comments/1obyltt/southern_chicken_creamy_relish_with_saut\u00e9ed_snow/",
       "author": "ancient_snowboarder",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6,
+      "reasoning": "VADER: 0.00, TextBlob: -0.30, Context: 0.00"
     },
     {
       "title": "No ETA on instant meals.",
@@ -931,13 +974,13 @@
       "url": "https://reddit.com/r/blueapron/comments/1obt3h6/no_eta_on_instant_meals/",
       "author": "TheEdgeOfCosmos",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6,
+      "reasoning": "VADER: 0.07, TextBlob: -0.03, Context: -0.30"
     },
     {
       "title": "Bye bye BA",
       "selftext": "Been afraid to order after reading so many disappointing posts on here. Thought I had skipped all upcoming orders but, this week slipped through and it was a hot mess. Missing protein, incorrect protein and ingredients and just a sad selection. Bummer, they used to be the best of the pack, now they're just whack. Any suggestions for who to try next? Or are they all tanking. ",
-      "score": 22,
+      "score": 24,
       "subreddit": "blueapron",
       "created_utc": 1760918442.0,
       "competitors_mentioned": [
@@ -946,13 +989,13 @@
       "url": "https://reddit.com/r/blueapron/comments/1ob578g/bye_bye_ba/",
       "author": "imissalaska",
       "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.7475533333333333,
+      "reasoning": "VADER: -0.84, TextBlob: -0.04, Context: 0.00"
     },
     {
       "title": "Shredded carrots",
       "selftext": "Instead of sending whole carrots with instructions for us to grate, they\u2019ve recently been sending shredded carrots. They\u2019re dried out and utterly tasteless! I\u2019m so tired of them cutting corners at the expense of taste.",
-      "score": 9,
+      "score": 11,
       "subreddit": "blueapron",
       "created_utc": 1760919135.0,
       "competitors_mentioned": [
@@ -961,13 +1004,13 @@
       "url": "https://reddit.com/r/blueapron/comments/1ob5gy7/shredded_carrots/",
       "author": "WA_Debbie",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.7871,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Mexican spiced stuffed squash 10/10!",
       "selftext": "",
-      "score": 10,
+      "score": 11,
       "subreddit": "blueapron",
       "created_utc": 1760811192.0,
       "competitors_mentioned": [
@@ -976,8 +1019,8 @@
       "url": "https://reddit.com/r/blueapron/comments/1oa2x8s/mexican_spiced_stuffed_squash_1010/",
       "author": "Flat_Sea1418",
       "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Glazed pork roast",
@@ -991,8 +1034,8 @@
       "url": "https://reddit.com/r/blueapron/comments/1oa2why/glazed_pork_roast/",
       "author": "Flat_Sea1418",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6,
+      "reasoning": "VADER: 0.00, TextBlob: 0.00, Context: 0.00"
     },
     {
       "title": "All instant individual meals discontinued?",
@@ -1006,13 +1049,13 @@
       "url": "https://reddit.com/r/blueapron/comments/1o9eltl/all_instant_individual_meals_discontinued/",
       "author": "routeFive",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.5751542857142857,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Food porn pictures?",
       "selftext": "Does anyone else assume these are marketing pictures trying to drown out the complaints here?  I haven\u2019t been able to order any of the pictured dishes. But not ordering any more anyway, it appears. Tired of goopy mess. \ud83d\ude41",
-      "score": 6,
+      "score": 7,
       "subreddit": "blueapron",
       "created_utc": 1760642756.0,
       "competitors_mentioned": [
@@ -1021,39 +1064,128 @@
       "url": "https://reddit.com/r/blueapron/comments/1o8fofb/food_porn_pictures/",
       "author": "careful_there_now",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.7374850000000001,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
-      "title": "??",
-      "selftext": "",
-      "score": 11,
-      "subreddit": "blueapron",
-      "created_utc": 1760572969.0,
+      "title": "Beef &amp; Poblano Tostadas with Charred Corn and Cilantro",
+      "selftext": "Solid meal, easy to prepare, very tasty. Everybody loved it!  \n\nI did make one change:  to make the tostada shell I fried the tortillas in vegetable oil (2 mins per side) and kept them in a warm oven until ready for use. I did this because the first time I bought a tostada meal and baked the shells as directed they came out so brittle they shattered way too easily during prep. Frying them yielded a much better result although definitely adds to calories. \n\nOther than that I made the recipe as directed. What you see in picture 3 is the filling for six servings. \n\nLoved it!  Will reorder if it comes around again. ",
+      "score": 3,
+      "subreddit": "homechef",
+      "created_utc": 1761173776.0,
       "competitors_mentioned": [
-        "Blue Apron"
+        "Home Chef"
       ],
-      "url": "https://reddit.com/r/blueapron/comments/1o7rhfu/_/",
-      "author": "Senior_Trick_7473",
+      "url": "https://reddit.com/r/HomeChef/comments/1odn6ye/beef_poblano_tostadas_with_charred_corn_and/",
+      "author": "anddel7",
+      "sentiment": "positive",
+      "confidence": 0.95,
+      "reasoning": "VADER: 0.96, TextBlob: 0.35, Context: 0.90"
+    },
+    {
+      "title": "Anyone else try the Gordon Ramsey pub style chicken curry?",
+      "selftext": "I liked it but I thought it was a little boring. I\u2019ve only had a curry at a restaurant once, many years ago. I cook for my husband, 18 &amp; 19 year old and myself, so sometimes I pick out a meal that I don\u2019t expect to like but they might. I\u2019m curious what others thought about it and if you eat curry often or if it was new to you. ",
+      "score": 3,
+      "subreddit": "homechef",
+      "created_utc": 1761171675.0,
+      "competitors_mentioned": [
+        "Home Chef"
+      ],
+      "url": "https://reddit.com/r/HomeChef/comments/1odmec8/anyone_else_try_the_gordon_ramsey_pub_style/",
+      "author": "Tonikaya1001",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6535487878787879,
+      "reasoning": "Fixed sentiment analysis"
+    },
+    {
+      "title": "Has anyone ever spoken to customer service to try to extend their discount?",
+      "selftext": "I\u2019ve been loving this service but it\u2019s just too expensive without even a little bit of a discount. With ours ending in a few weeks has anyone ever asked customer service about extending their discount before they cancel? ",
+      "score": 1,
+      "subreddit": "homechef",
+      "created_utc": 1761170227.0,
+      "competitors_mentioned": [
+        "Home Chef"
+      ],
+      "url": "https://reddit.com/r/HomeChef/comments/1odlthj/has_anyone_ever_spoken_to_customer_service_to_try/",
+      "author": "ssavyy33",
+      "sentiment": "negative",
+      "confidence": 0.6243625,
+      "reasoning": "VADER: 0.17, TextBlob: -0.07, Context: -0.90"
+    },
+    {
+      "title": "Rotisserie seasoning",
+      "selftext": "Does anyone know what brand home chef sources their rotisserie seasoning from? It\u2019s so good ",
+      "score": 5,
+      "subreddit": "homechef",
+      "created_utc": 1761064239.0,
+      "competitors_mentioned": [
+        "Home Chef"
+      ],
+      "url": "https://reddit.com/r/HomeChef/comments/1ocho71/rotisserie_seasoning/",
+      "author": "breathingwaves",
+      "sentiment": "positive",
+      "confidence": 0.93108,
+      "reasoning": "VADER: 0.58, TextBlob: 0.70, Context: 0.30"
+    },
+    {
+      "title": "Home Chef App",
+      "selftext": "is anyone else having trouble with the home chef app? every time i try to get into it, it says i need internet connection but im on my wifi that is working great and i even tried on my data and it still says this. i deleted the app and reinstalled it and it still keeps saying this. it still says it after i restarted my phone. i tried on a different phone and it says it as well. and the website seems to be down too. i need to get in contact with them as they only sent me 1/3 recipes.",
+      "score": 11,
+      "subreddit": "homechef",
+      "created_utc": 1760988927.0,
+      "competitors_mentioned": [
+        "Home Chef"
+      ],
+      "url": "https://reddit.com/r/HomeChef/comments/1obrd2y/home_chef_app/",
+      "author": "pilotsxplr",
+      "sentiment": "positive",
+      "confidence": 0.8427066666666667,
+      "reasoning": "VADER: 0.82, TextBlob: 0.09, Context: 0.30"
+    },
+    {
+      "title": "Pasta meals",
+      "selftext": "Anyone else been getting uncooked pasta instead of cooked pasta for some of the oven ready pasta meals?",
+      "score": 3,
+      "subreddit": "homechef",
+      "created_utc": 1761003942.0,
+      "competitors_mentioned": [
+        "Home Chef"
+      ],
+      "url": "https://reddit.com/r/HomeChef/comments/1obxo51/pasta_meals/",
+      "author": "bem679",
+      "sentiment": "neutral",
+      "confidence": 0.6,
+      "reasoning": "VADER: 0.36, TextBlob: 0.05, Context: -0.10"
+    },
+    {
+      "title": "Tips for easy delivery?",
+      "selftext": "I\u2019m new to the service and love the meals and packing. My only problem is that out of four boxes I\u2019ve ordered there\u2019s been issues with two of them. I live in an apartment complex so I have special delivery instructions on which gate to enter and where my building is which helped last week but this week my box never made it to my door and I couldn\u2019t find in anywhere in the area. Is the delivery service just not meant for people in apartments? My neighbor uses Hello Fresh with no issues and Amazon, Wayfair, and Chewy have never had issues delivering packages.",
+      "score": 2,
+      "subreddit": "homechef",
+      "created_utc": 1760714871.0,
+      "competitors_mentioned": [
+        "Home Chef"
+      ],
+      "url": "https://reddit.com/r/HomeChef/comments/1o94ep3/tips_for_easy_delivery/",
+      "author": "IGotObsessed",
+      "sentiment": "negative",
+      "confidence": 0.6575067821067822,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "trying to compare hellofresh vs homechef!",
       "selftext": "title say it all! i used to do hellofresh when i lived at home and didnt have much bills of my own.. but now that im a little less shaky on my feet whilst living on my own/with my boyfriend\u2026 i would like to start again! i loved being pushed to try new recipes i never would have typically made on my own and i loved not having to stumble through a grocery list. \n\nbut my question is\u2026 which meal kit gives me the best deal? im bot trying to break the bank but i also don\u2019t want to get bad meals or bad ingredients due to being too cheap. hellofresh and homechef are the two i have been eyeballing.. but i need more advice!\n\nwhat do u recommend? one of the two i mentioned or something else entirely? tia!",
-      "score": 2,
+      "score": 3,
       "subreddit": "mealkits",
       "created_utc": 1761130174.0,
       "competitors_mentioned": [
-        "Home Chef",
         "HelloFresh"
       ],
       "url": "https://reddit.com/r/mealkits/comments/1od4xhx/trying_to_compare_hellofresh_vs_homechef/",
       "author": "bunnymaevenus",
       "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.6,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Home Chef delivery",
@@ -1067,8 +1199,8 @@
       "url": "https://reddit.com/r/mealkits/comments/1obxg1u/home_chef_delivery/",
       "author": "redbarn47",
       "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.8307599999999999,
+      "reasoning": "VADER: -0.40, TextBlob: 0.00, Context: -0.90"
     },
     {
       "title": "Hello fresh incorrect meals",
@@ -1082,28 +1214,13 @@
       "url": "https://reddit.com/r/mealkits/comments/1obmnj7/hello_fresh_incorrect_meals/",
       "author": "No_Bus_6110",
       "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
-    },
-    {
-      "title": "Best meal service",
-      "selftext": "Hi, I\u2019m looking for the best meal service that is good quality. I\u2019m currently looking into Tovala and Factor but with Factor I\u2019m such a picky eater and won\u2019t eat most of what they would send.",
-      "score": 2,
-      "subreddit": "mealkits",
-      "created_utc": 1760876689.0,
-      "competitors_mentioned": [
-        "Factor"
-      ],
-      "url": "https://reddit.com/r/mealkits/comments/1oaob7y/best_meal_service/",
-      "author": "Sincerely-Ashley",
-      "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "Honest Hungryroot review",
       "selftext": "I've been trying Hungryroot for a few months now and here's my review. \n\n1. To start, I have a lot of allergies and dietary restrictions which had me extremely stressed when trying to look up recipes and make food. I was desperate to find something to make my life easier.  I did the quiz on their website and of course they wanted me to pay before seeing the food options. No thanks. I emailed customer service and they basically gave me \"we have a lot of options so give us a try\" answer. Um, no. Not if I don't know if I can eat the food! After some back and forth and a bad review for the rep I finally received the link for all of their food options. I found a few recipes I could eat so I decided to give it a try. Sifting through the food options does become a lot easier after you sign up because you can kind of create your profile and preferences. I do not like this, I wish they were transparent about everything from the beginning.\n2. I've gotten probably 8 boxes by now, 1 has been late and some of the food was bad. I've had a few bad items in multiple boxes. I've always gotten a quick refund with extra for the inconvenience and they say they talked to the packing team. My last box was perfect so hopefully things are improving? We shall see. (Of note: customer service starting after my first interaction has been very good)\n3. I pay about $105 each week for just me. This includes \"points\" for 3 lunches, 4 dinners, and 5-7 servings of sweets. Portion sizes are huge in my opinion. I started stretching this out for almost every meal for the week. I always end up eating somewhere else for 1-2 meals for the week but the food I get from hungryroot lasts me for the rest of the week. If something tells me I can get 2 servings out of it, I can typically make it into 4 meals. I always end up having enough food to feed my husband a few meals out of the week as well.\n4. The food is pretty fresh which is a huge plus for me because I can't eat a lot of preservatives without issues. The downside is it spoils pretty quickly. I had 2 bags of mozzarella cheese in the fridge, one from Hungryroot and one from Walmart. The one from hungryroot has spoiled already in less than 2 months. \n5. 99% of the meals I've gotten take less than 20 minutes to make and are very easy. This is perfect because I really hate cooking and don't have a lot of time anyway. I did get one meal that took forever to make and it was awful so I try to keep to the more simple options. \n6. Most of the food I get is really tasty! I am a very picky eater (on top of everything else lol) so a huge plus for me.\n\nI'm conclusion, I will be keeping my hungryroot subscription because it makes my life so much easier. If I didn't have so many restrictions I probably wouldn't use it because of cost. I did look at quite a lot of meal service options and none of the others are as good for my dietary restrictions. Hope this helps someone looking into it. \n\n",
-      "score": 9,
+      "score": 10,
       "subreddit": "mealkits",
       "created_utc": 1760707425.0,
       "competitors_mentioned": [
@@ -1112,38 +1229,8 @@
       "url": "https://reddit.com/r/mealkits/comments/1o91859/honest_hungryroot_review/",
       "author": "Anya_42",
       "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
-    },
-    {
-      "title": "It took me 1 kit to realize I got scammed by hello fresh",
-      "selftext": "So a few weeks ago a hello fresh salesman was at my door. And he sold me the box with next liner: we supply you with food from your local farmers so you can eat cheaper and healthier. \nWhen I asked which local farmers he couldn\u2019t answer the question immediately, he stuttered and in my believe he made up his answer. \nMaybe it was the location of the depot? \nAnyway, today I received my box and I went on a mission: is it really local food? \nNope, France, Spain, Netherlands, UK but no Belgium spotted. Do they really are that convinced that we are that dumb? \ud83d\ude02 \n",
-      "score": 4,
-      "subreddit": "mealkits",
-      "created_utc": 1760562518.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "url": "https://reddit.com/r/mealkits/comments/1o7nait/it_took_me_1_kit_to_realize_i_got_scammed_by/",
-      "author": "Entire_Possible_4763",
-      "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
-    },
-    {
-      "title": "I've spent years studying weight loss, and sleep is the most overlooked factor in the entire process.",
-      "selftext": "Most people think weight loss is all about calories and exercise, but your sleep patterns dictate more than you realize. If you don't sleep well, your body is constantly operating in a state of stress, and no diet can change that.\n\n\n\nWhen you don't get enough sleep, your hunger hormones change. You feel hungrier, your cravings increase, and your ability to regulate your appetite is impaired. Your body increases cortisol, a hormone that signals fat storage, especially around your belly. This decreased energy and motivation makes it harder to exercise or even prepare healthy meals.\n\n\n\nI've seen clients lose weight faster by improving their sleep before returning to their diet. Once you get regular sleep, everything else becomes easier. Cravings naturally decrease, exercise improves recovery, and overall discipline speeds up without additional effort.\n\n\n\nIf you're struggling to lose weight, stop cutting calories so deeply and stop adding more cardio. Go to bed earlier, keep your room dark and cool, and aim for seven to eight hours of uninterrupted rest each night. Track your sleep for a week and see how your hunger pangs and progress change.\n\n\n\nWeight loss isn't just an effort; it's a physiological process, and that process depends on rest.\n\n\n\nYou can't recover from a constantly exhausted body.\n\n\n\nGet enough sleep, and your body will eventually start working with you instead of against you.",
-      "score": 3,
-      "subreddit": "mealprep",
-      "created_utc": 1761157562.0,
-      "competitors_mentioned": [
-        "Factor"
-      ],
-      "url": "https://reddit.com/r/mealprep/comments/1odgagy/ive_spent_years_studying_weight_loss_and_sleep_is/",
-      "author": "Desperate_Card1338",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "VADER: 0.99, TextBlob: 0.11, Context: -1.00"
     },
     {
       "title": "Meal delivery question",
@@ -1157,53 +1244,68 @@
       "url": "https://reddit.com/r/mealprep/comments/1oaqq1t/meal_delivery_question/",
       "author": "Confident-Society111",
       "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.95,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
-      "title": "Lasagna Pre and Cooking in advanced advice",
-      "selftext": "Hi All!\n\nCooking (like many of us) is a huge love language of mine. My birthday is coming up and I said what I truly wanted was to make her an incredible lasagna since she's been asking for one and hers growing up was of the cottage cheese/jarred sauce variety. I asked her if she wanted a Lasagna Bolognese with the b\u00e9chamel but she said she'd rather have the ricotta version which is fine! She is also footing the bill for any of the ingredients and told me to go to the fancy Italian market nearby *swoon*\n\nI realize this sounds like a gift for her but it truly brings me joy to cook for my loved ones and I don't get to make her labor intensive stuff often due to us living a few hours apart from each other.\n\nI was originally going to take my birthday off of work but unfortunately I had a death in my family of someone close to me where we were told he had 12-18 months but it wound up being about 4... that heartbreak coupled with my being down for the count with bronchitis made me miss some work so I'm not willing to take the whole day off for my birthday anymore.\n\nI know I can (and should) prepare any sauce well before hand and I plan to do homemade ricotta and whatnot... so my questions is do you think it would be better to assemble everything the night before and leave it covered and unbaked in the fridge and bake the day of? My roommate can take it out of the fridge a bit before I get home from work so it won't be straight from the fridge cold OR should I bake and cool the night before and reheat to serve? I've always assembled/baked/served the same day so unsure which option would be the best in this case. Obviously leftover lasagna is incredible haha but I want the wow factor!",
+      "title": "What\u2019s Y\u2019all\u2019s favorite meal delivery service?",
+      "selftext": "I\u2019m newly single and have a hard time cooking for 1. What\u2019s your best bang for your buck? Factor? Tempo?",
       "score": 1,
-      "subreddit": "cooking",
-      "created_utc": 1761157822.0,
+      "subreddit": "mealkits",
+      "created_utc": 1761173311.0,
       "competitors_mentioned": [
         "Factor"
       ],
-      "url": "https://reddit.com/r/Cooking/comments/1odgepb/lasagna_pre_and_cooking_in_advanced_advice/",
-      "author": "Crafty_Bee08",
+      "url": "https://reddit.com/r/mealkits/comments/1odn0mn/whats_yalls_favorite_meal_delivery_service/",
+      "author": "Spirited_Crow_8464",
       "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.7,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
-      "title": "When factoring in preparation and cleaning, is home cooked food still cheaper and convenient than takeout?",
-      "selftext": "",
-      "score": 0,
-      "subreddit": "cooking",
-      "created_utc": 1761142536.0,
+      "title": "Best meal service",
+      "selftext": "Hi, I\u2019m looking for the best meal service that is good quality. I\u2019m currently looking into Tovala and Factor but with Factor I\u2019m such a picky eater and won\u2019t eat most of what they would send.",
+      "score": 2,
+      "subreddit": "mealkits",
+      "created_utc": 1760876689.0,
       "competitors_mentioned": [
         "Factor"
       ],
-      "url": "https://reddit.com/r/Cooking/comments/1od9h1t/when_factoring_in_preparation_and_cleaning_is/",
-      "author": "Conscious_Ticket893",
-      "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "url": "https://reddit.com/r/mealkits/comments/1oaob7y/best_meal_service/",
+      "author": "Sincerely-Ashley",
+      "sentiment": "positive",
+      "confidence": 0.7,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
-      "title": "What do I do with an abundance of greens?",
-      "selftext": "My husband works for a company that has an organic farm, and every week or so, they make freshly picked veggies available for employees. He doesn\u2019t get them all the time, but when he does, I\u2019m not sure to do with it all before it goes bad. For example, this week he brought home bags of arugula and mustard greens, sweet potatoes, and cilantro. We\u2019re not big salad eaters, so we\u2019re not sure what to do with it all. I\u2019d love to especially save the fresh cilantro, but I haven\u2019t had good luck drying it in the past. Any suggestions?\n",
-      "score": 14,
-      "subreddit": "frugal",
-      "created_utc": 1761156224.0,
+      "title": "What\u2019s Y\u2019all\u2019s favorite meal delivery service?",
+      "selftext": "I\u2019m newly single and have a hard time cooking for 1. What\u2019s your best bang for your buck? Factor? Tempo?",
+      "score": 1,
+      "subreddit": "mealkits",
+      "created_utc": 1761173311.0,
       "competitors_mentioned": [
-        "Freshly"
+        "Factor"
       ],
-      "url": "https://reddit.com/r/Frugal/comments/1odfox9/what_do_i_do_with_an_abundance_of_greens/",
-      "author": "boobsincalifornia",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "url": "https://reddit.com/r/mealkits/comments/1odn0mn/whats_yalls_favorite_meal_delivery_service/",
+      "author": "Spirited_Crow_8464",
+      "sentiment": "positive",
+      "confidence": 0.7,
+      "reasoning": "Fixed sentiment analysis"
+    },
+    {
+      "title": "Best meal service",
+      "selftext": "Hi, I\u2019m looking for the best meal service that is good quality. I\u2019m currently looking into Tovala and Factor but with Factor I\u2019m such a picky eater and won\u2019t eat most of what they would send.",
+      "score": 2,
+      "subreddit": "mealkits",
+      "created_utc": 1760876689.0,
+      "competitors_mentioned": [
+        "Factor"
+      ],
+      "url": "https://reddit.com/r/mealkits/comments/1oaob7y/best_meal_service/",
+      "author": "Sincerely-Ashley",
+      "sentiment": "positive",
+      "confidence": 0.7,
+      "reasoning": "Fixed sentiment analysis"
     },
     {
       "title": "plan.step_1.invalid_promotion - Has anyone experienced the same issue?",
@@ -1216,14 +1318,14 @@
       ],
       "url": "https://reddit.com/r/marleyspoon/comments/1obyedz/planstep_1invalid_promotion_has_anyone/",
       "author": "boston_charles",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "sentiment": "neutral",
+      "confidence": 0.8,
+      "reasoning": "Manual Marley Spoon detection"
     },
     {
       "title": "2nd time meat has contaminated the whole box. Sticky mess and so unsanitary.",
       "selftext": "My MS experience: I\u2019ve had maybe 5 boxes total delivered, and all had issues. The past two were the only ones I\u2019ve reported. I\u2019m done. Last week the chicken packaging failed and it was a sticky mess. I threw away everything bc it would take me less time to plan 3 meals in my own and order a grocery pick up, then it would to clean and go buy replacements to still use what I could salvage from this box. \n\nCustomer service at Marley Spoon was slow, defensive, and would only issue me a credit.\n\nThis week? It\u2019s the sausage or ground beef. All they would have to do is put the butcher items in a 2nd bag. I don\u2019t get it. \n",
-      "score": 7,
+      "score": 6,
       "subreddit": "marleyspoon",
       "created_utc": 1760975172.0,
       "competitors_mentioned": [
@@ -1232,8 +1334,8 @@
       "url": "https://reddit.com/r/marleyspoon/comments/1obm3o9/2nd_time_meat_has_contaminated_the_whole_box/",
       "author": "No-Rutabaga-1436",
       "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.8,
+      "reasoning": "Manual Marley Spoon detection"
     },
     {
       "title": "Referral Codes (and Requests) Here!",
@@ -1247,8 +1349,8 @@
       "url": "https://reddit.com/r/marleyspoon/comments/1oayrrq/referral_codes_and_requests_here/",
       "author": "Ahnie",
       "sentiment": "neutral",
-      "confidence": 0.9,
-      "reasoning": "Improved keyword and phrase analysis"
+      "confidence": 0.8,
+      "reasoning": "Manual Marley Spoon detection"
     }
   ]
 }
