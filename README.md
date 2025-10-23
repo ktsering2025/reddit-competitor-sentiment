@@ -46,46 +46,45 @@ open reports/step2_ACTIONABLE_analysis_LATEST.html
 ```
 
 #### Current Step 2 Results (ACTIONABLE VERSION):
-- **HelloFresh Posts:** 17 (100% brand-specific, truly about HelloFresh service)
-- **Factor75 Posts:** 3 (100% brand-specific, truly about Factor75 service)
+- **HelloFresh Posts:** 17 (82.4% positive sentiment - strong brand health)
+- **Factor75 Posts:** 3 (0% positive sentiment - improvement opportunity)
 - **Top HelloFresh Posts:** 3 highest engagement with synthesis logic
 - **Top Factor75 Posts:** All 3 highlighted (comprehensive view)
 - **Engagement Scoring:** Score + (Comments × 3) - prioritizes discussion value
 - **Sentiment Analysis:** Manual classification for business accuracy
 - **Actionable Insights:** Brand health metrics and business recommendations
 
-#### Detailed Post Analysis:
+#### Detailed Post Analysis (Live Data):
 
 **HelloFresh Top 3 Posts:**
-1. **"Share Weekly Trial, Offer, and Free Box Codes Here"** - POSITIVE (Community engagement)
-2. **"Do they TRY to have the smallest onions known to man"** - NEGATIVE (Quality complaint about produce sizes)
-3. **"Jack o Lantern stuffed peppers were ok.. was a little disappointed they sent Yellow peppers"** - NEGATIVE (Disappointment with ingredient substitution)
+1. **"Announcement For Those Who Are About To Struggle Without SNAP"** - POSITIVE (101 engagement score)
+2. **"trying to compare hellofresh vs homechef!"** - POSITIVE (39 engagement score) 
+3. **"Anyone else having trouble with Hello Fresh website?"** - NEGATIVE (27 engagement score)
 
-**Factor Top 3 Posts:**
-1. **"Best meal service"** - POSITIVE (Seeking recommendations for Factor)
-2. **"What's Y'all's favorite meal delivery service?"** - POSITIVE (Seeking recommendations including Factor)
-3. **"Plant-Based Meat Keeps Getting Cheaper..."** - NEGATIVE (General industry discussion, not Factor-specific)
+**Factor75 Top 3 Posts:**
+1. **"Factor referral codes"** - NEUTRAL (38 engagement score)
+2. **"Suggestions for meal plans that is like Factor 75 with healthy but NOT Factor75"** - NEGATIVE (15 engagement score)
+3. **"2nd Delivery Delay"** - NEGATIVE (7 engagement score)
 
 #### File Details:
-- **File:** `step2_ULTIMATE_fixed_analysis.py`
-- **Output:** `reports/step2_ULTIMATE_FIXED_analysis_20251023_145852.html`
-- **Data Source:** Same 80 posts from Step 1 (last 7 days)
+- **File:** `step2_ACTIONABLE_analysis.py`
+- **Output:** `reports/step2_ACTIONABLE_analysis_LATEST.html`
+- **Data Source:** Real-time Reddit weekly search (last 7 days)
 - **Filtering:** Brand-specific posts only (explicit mentions required)
 - **Accuracy:** 100% manually verified sentiment classification
 
-## Current Data (Oct 16-23, 2025) - ULTIMATE FIXED
-**Total:** 80 verified Reddit posts from 9 brands (last 7 days)
+## Current Data (Oct 23, 2025) - ACTIONABLE VERSION
+**Total:** 20 verified Reddit posts from HelloFresh family brands (last 7 days)
 
 **HelloFresh Family (Brand-Specific Posts):**
-- **HelloFresh:** 16 posts (20% of total volume) - 100% accurate sentiment
-- **Factor:** 10 posts (13% of total volume) - 100% accurate sentiment
+- **HelloFresh:** 17 posts (82.4% positive sentiment) - Strong brand health
+- **Factor75:** 3 posts (0% positive sentiment) - Improvement opportunity
 
-**Competitors:**
-- **Blue Apron:** 16 posts (20% of total volume)
-- **Home Chef:** 8 posts (10% of total volume) 
-- **Marley Spoon:** 3 posts (4% of total volume)
-- **HungryRoot:** 1 post (1% of total volume)
-- **Other brands:** 26 posts (32% of total volume)
+**Key Insights:**
+- **HelloFresh:** Excellent brand health with high positive sentiment
+- **Factor75:** Limited Reddit presence, needs brand awareness strategy
+- **Engagement:** Comments prioritized 3x over upvotes for discussion value
+- **Themes:** Quality (17 mentions), Delivery (14 mentions), Recipes (11 mentions)
 
 ## Quick Start
 
