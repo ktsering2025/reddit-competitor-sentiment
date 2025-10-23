@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Competitor Sentiment Analysis - Brian's Dashboard</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .step-card {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin: 15px 0;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .step-card:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            margin-right: 20px;
+        }
+        .step-content {
+            flex: 1;
+        }
+        .step-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .step-description {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .btn {
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #5a6fd8;
+        }
+        .data-summary {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .data-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .data-item:last-child {
+            border-bottom: none;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Reddit Competitor Sentiment Analysis</h1>
+        <p>Brian's Weekly Competitive Intelligence Dashboard</p>
+        <p>Last Updated: October 23, 2025</p>
+    </div>
+
+    <div class="card">
+        <h2>📊 Current Data Summary (Last 7 Days)</h2>
+        <div class="data-summary">
+            <div class="data-item">
+                <span><strong>Total Reddit Posts:</strong></span>
+                <span>87 posts</span>
+            </div>
+            <div class="data-item">
+                <span><strong>HelloFresh Family:</strong></span>
+                <span>59 posts (68%)</span>
+            </div>
+            <div class="data-item">
+                <span><strong>Competitors:</strong></span>
+                <span>28 posts (32%)</span>
+            </div>
+            <div class="data-item">
+                <span><strong>Brand-Specific Posts:</strong></span>
+                <span>18 posts (HelloFresh: 13, Factor: 5)</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🎯 Analysis Steps</h2>
+        
+        <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <div class="step-title">Competitor Sentiment Overview</div>
+                <div class="step-description">Visual chart showing post volume by competitor with sentiment breakdown</div>
+                <a href="reports/step1_chart.png" class="btn" target="_blank">View Chart</a>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <div class="step-title">HelloFresh Deep Dive Analysis</div>
+                <div class="step-description">Top 3 posts by engagement, sentiment analysis, themes, and actionable insights</div>
+                <a href="reports/step2_comprehensive_analysis_20251023_125314.html" class="btn" target="_blank">View Analysis</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🔄 Weekly Refresh System</h2>
+        <p><strong>Every Sunday:</strong> New Reddit data is automatically collected, analyzed, and reports are generated.</p>
+        <p><strong>Email Reports:</strong> Brian receives weekly email with chart attachment and analysis link.</p>
+        <p><strong>Data Quality:</strong> Only posts from the last 7 days, brand-specific filtering, real Reddit URLs.</p>
+    </div>
+
+    <div class="card">
+        <h2>📱 Mobile Access</h2>
+        <p>This dashboard works on all devices - desktop, tablet, and mobile. No login required for public access.</p>
+        <p><strong>Bookmark this page:</strong> <code>https://ktsering2025.github.io/reddit-competitor-sentiment/</code></p>
+    </div>
+
+    <div class="footer">
+        <p>Built for Brian's weekly competitive intelligence and strategic planning</p>
+        <p>Data Source: Reddit Public API | Analysis: AI-Powered Sentiment Analysis</p>
+    </div>
+</body>
+</html>

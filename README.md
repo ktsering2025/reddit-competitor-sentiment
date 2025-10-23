@@ -16,12 +16,37 @@ A professional system that tracks HelloFresh competitor sentiment on Reddit with
 
 ### Step 2: HelloFresh Deep Dive (60% Revenue Focus)
 **Purpose:** Actionable intelligence on HelloFresh brand
-- **Top 3 posts** by engagement (comments + upvotes)
-- **Synthesis logic** for < 3 or > 3 posts scenarios
-- **Actionable insights** by theme and sentiment
-- **Real Reddit URLs** that work
+
+#### What Step 2 Does:
+1. **Filters brand-specific posts** - Only posts explicitly mentioning HelloFresh or Factor
+2. **Calculates engagement scores** - Upvotes + (Comments × 2) for discussion value
+3. **Identifies top 3 posts** - Highest engagement for each brand
+4. **Analyzes sentiment** - Positive, negative, neutral classification
+5. **Extracts themes** - Pricing, quality, delivery, service, recipes, switching
+6. **Generates actionable insights** - Business recommendations
+
+#### Step 2 Process:
+```bash
+# Step 1: Run the analysis
+python3 step2_comprehensive_analysis.py
+
+# Step 2: View results
+open reports/step2_comprehensive_analysis_YYYYMMDD_HHMMSS.html
+```
+
+#### Current Step 2 Results:
+- **HelloFresh Posts:** 13 (brand-specific only)
+- **Factor Posts:** 5 (brand-specific only)
+- **Top HelloFresh Posts:** 3 highest engagement
+- **Top Factor Posts:** 3 highest engagement
+- **Sentiment Analysis:** AI-powered classification
+- **Themes Identified:** 6 key discussion areas
+
+#### File Details:
 - **File:** `step2_comprehensive_analysis.py`
-- **Link:** [View Step 2 Analysis](reports/step2_comprehensive_analysis_20251023_125314.html)
+- **Output:** `reports/step2_comprehensive_analysis_YYYYMMDD_HHMMSS.html`
+- **Data Source:** Same 87 posts from Step 1 (last 7 days)
+- **Filtering:** Brand-specific posts only (not just subreddit posts)
 
 ## Current Data (Oct 16-23, 2025)
 **Total:** 87 verified Reddit posts from 6 brands
@@ -59,12 +84,27 @@ python3 step2_comprehensive_analysis.py
 - **`competitors.py`** - Brand configuration
 - **`reports/working_reddit_data.json`** - Raw data source
 
-## Direct Links for Brian
+## Public Browser Access for Brian
 
-| Step | Purpose | Link |
-|------|---------|------|
-| **Step 1** | Competitor sentiment overview chart | [View Chart](reports/step1_chart.png) |
-| **Step 2** | HelloFresh deep dive analysis | [View Analysis](reports/step2_comprehensive_analysis_20251023_125314.html) |
+### 🌐 Live Reports (GitHub Pages)
+**Main Dashboard:** https://ktsering2025.github.io/reddit-competitor-sentiment/
+
+| Step | Purpose | Public Link |
+|------|---------|-------------|
+| **Step 1** | Competitor sentiment overview chart | [View Chart](https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step1_chart.png) |
+| **Step 2** | HelloFresh deep dive analysis | [View Analysis](https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_comprehensive_analysis_20251023_125314.html) |
+
+### 📱 Mobile-Friendly Access
+- **Works on all devices** - Desktop, tablet, mobile
+- **No login required** - Public access
+- **Always up-to-date** - Auto-refreshes with new data
+- **Direct sharing** - Send links to team members
+
+### 🔄 Weekly Refresh
+- **Every Sunday** - New data automatically collected
+- **Fresh analysis** - Updated Step 1 chart and Step 2 insights
+- **Email notification** - Brian receives weekly report
+- **Same links** - URLs stay consistent for bookmarking
 
 ## Data Quality
 - **Real Reddit posts** with working URLs
