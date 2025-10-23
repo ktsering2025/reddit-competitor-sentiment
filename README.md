@@ -15,17 +15,17 @@ A professional system that tracks HelloFresh competitor sentiment on Reddit with
 - **Link:** [View Step 1 Chart](reports/step1_chart.png)
 
 ### Step 2: HelloFresh Deep Dive (60% Revenue Focus) - ACCURATE VERSION
-**Purpose:** Actionable intelligence on HelloFresh family brands (HelloFresh + Factor75)
+**Purpose:** Actionable intelligence on HelloFresh family brands (HelloFresh + HelloFresh's Factor75 brand)
 
 #### ACCURATE ANALYSIS FEATURES:
 - **100% Accurate Sentiment:** Manual verification of every post
-- **Brand-Specific Only:** Posts must explicitly mention HelloFresh/Factor75 services
+- **Brand-Specific Only:** Posts must explicitly mention HelloFresh or HelloFresh's Factor75 brand
 - **Complete Content Display:** Shows full post content with context
 - **Real-Time Factor Posts:** Now includes Factor75-specific discussions
 - **Fixed Sentiments:** "Do they TRY to have the smallest onions" (NEGATIVE), "Price Increased too Much" (NEGATIVE)
 
 #### What Step 2 Does:
-1. **Filters brand-specific posts** - Only posts explicitly mentioning HelloFresh or Factor75 brands
+1. **Filters brand-specific posts** - Only posts explicitly mentioning HelloFresh or HelloFresh's Factor75 brand
 2. **Calculates engagement scores** - Upvotes + (Comments × 2) for discussion value
 3. **Identifies top 3 posts** - Highest engagement for each brand
 4. **Analyzes sentiment** - Positive, negative, neutral classification (100% manually verified)

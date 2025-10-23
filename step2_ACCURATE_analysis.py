@@ -70,18 +70,19 @@ class AccurateStep2Analysis:
                 return any(service in full_text for service in service_indicators)
         
         elif brand == 'Factor':
-            # Must be about Factor75 meal service specifically - STRICT FILTERING
+            # Must be about HelloFresh's Factor75 brand specifically
             factor_indicators = [
-                'factor75', 'factor 75', 'factor meal', 'factor box', 'factor delivery',
-                'factor subscription', 'factor service'
+                'factor75', 'factor 75', 'hellofresh factor', 'hello fresh factor',
+                'factor meal kit', 'factor meal delivery', 'factor meal service'
             ]
             
-            # Must contain Factor indicators AND be explicitly about the meal service
+            # Must contain Factor indicators AND be about HelloFresh's Factor brand
             if any(indicator in full_text for indicator in factor_indicators):
-                # STRICT service check - must be about meal delivery service
+                # Must be about meal delivery service
                 service_indicators = [
                     'meal kit', 'meal delivery', 'meal service', 'meal box', 'meal subscription',
-                    'delivery service', 'subscription service', 'meal plan', 'meal prep'
+                    'delivery service', 'subscription service', 'meal plan', 'meal prep',
+                    'hellofresh', 'hello fresh'
                 ]
                 return any(service in full_text for service in service_indicators)
         
@@ -449,7 +450,7 @@ class AccurateStep2Analysis:
         </div>
 
         <div class="brand-section">
-            <h2>Top 3 Factor Posts by Engagement</h2>
+            <h2>Top 3 Factor Posts by Engagement (HelloFresh's Factor Brand)</h2>
             <p><strong>Engagement Score:</strong> Upvotes + (Comments × 2)</p>
 """
         
@@ -466,13 +467,13 @@ class AccurateStep2Analysis:
                         <strong>Subreddit:</strong> r/{post.get('subreddit', 'unknown')}<br>
                         <strong>Engagement:</strong> {post.get('ups', 0)} upvotes, {post.get('num_comments', 0)} comments (Score: {score})<br>
                         <strong>Sentiment:</strong> <span class="sentiment {sentiment_class}">{sentiment.upper()}</span><br>
-                        <span class="brand-specific">Brand Specific: Explicitly about Factor75 service</span>
+                        <span class="brand-specific">Brand Specific: Explicitly about HelloFresh's Factor75 service</span>
                     </div>
                     <div class="post-content">
                         <strong>Content:</strong> {self.get_post_content(post)}
                     </div>
                     <div class="engagement">
-                        <strong>Why this post matters:</strong> This post is specifically about Factor75 meal delivery service, discussing {sentiment.lower()} aspects of the brand experience.
+                        <strong>Why this post matters:</strong> This post is specifically about HelloFresh's Factor75 meal delivery service, discussing {sentiment.lower()} aspects of the brand experience.
                     </div>
                     <a href="https://reddit.com{post.get('permalink', '')}" class="btn" target="_blank">View on Reddit</a>
                 </div>
@@ -480,13 +481,13 @@ class AccurateStep2Analysis:
         else:
             html_content += """
             <div class="post neutral">
-                <div class="post-title">No Factor75-specific posts found</div>
+                <div class="post-title">No HelloFresh Factor75-specific posts found</div>
                 <div class="post-content">
-                    <strong>Analysis:</strong> No posts in the last 7 days were specifically about Factor75 meal delivery service. This could indicate:
+                    <strong>Analysis:</strong> No posts in the last 7 days were specifically about HelloFresh's Factor75 meal delivery service. This could indicate:
                     <ul>
-                        <li>Limited brand awareness on Reddit</li>
+                        <li>Limited Factor75 brand awareness on Reddit</li>
                         <li>Customers using different platforms for Factor75 discussions</li>
-                        <li>Opportunity to increase Reddit presence</li>
+                        <li>Opportunity to increase Factor75 Reddit presence</li>
                     </ul>
                 </div>
             </div>
