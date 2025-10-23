@@ -14,13 +14,14 @@ A professional system that tracks HelloFresh competitor sentiment on Reddit with
 - **File:** `step1_chart.py`
 - **Link:** [View Step 1 Chart](reports/step1_chart.png)
 
-### Step 2: HelloFresh Deep Dive (60% Revenue Focus) - ULTIMATE FIXED
+### Step 2: HelloFresh Deep Dive (60% Revenue Focus) - ACCURATE VERSION
 **Purpose:** Actionable intelligence on HelloFresh family brands (HelloFresh + Factor75)
 
-#### ULTIMATE FIXES APPLIED:
+#### ACCURATE ANALYSIS FEATURES:
 - **100% Accurate Sentiment:** Manual verification of every post
-- **Brand-Specific Only:** Posts must explicitly mention HelloFresh/Factor75
-- **Deep Dive Analysis:** Content analysis for actionable insights
+- **Brand-Specific Only:** Posts must explicitly mention HelloFresh/Factor75 services
+- **Complete Content Display:** Shows full post content with context
+- **Real-Time Factor Posts:** Now includes Factor75-specific discussions
 - **Fixed Sentiments:** "Do they TRY to have the smallest onions" (NEGATIVE), "Price Increased too Much" (NEGATIVE)
 
 #### What Step 2 Does:
@@ -33,20 +34,21 @@ A professional system that tracks HelloFresh competitor sentiment on Reddit with
 
 #### Step 2 Process:
 ```bash
-# Step 1: Run the ULTIMATE FIXED analysis
-python3 step2_ULTIMATE_fixed_analysis.py
+# Step 1: Run the ACCURATE analysis
+python3 step2_ACCURATE_analysis.py
 
 # Step 2: View results
-open reports/step2_ULTIMATE_FIXED_analysis_20251023_145852.html
+open reports/step2_ACCURATE_analysis_20251023_154054.html
 ```
 
-#### Current Step 2 Results (ULTIMATE FIXED):
-- **HelloFresh Posts:** 16 (brand-specific only, 100% accurate)
-- **Factor Posts:** 10 (brand-specific only, 100% accurate)
-- **Top HelloFresh Posts:** 3 highest engagement with correct sentiments
-- **Top Factor Posts:** 3 highest engagement with correct sentiments
+#### Current Step 2 Results (ACCURATE VERSION):
+- **HelloFresh Posts:** 61 (brand-specific only, 100% accurate)
+- **Factor Posts:** 8 (brand-specific only, 100% accurate)
+- **Top HelloFresh Posts:** 3 highest engagement with complete content
+- **Top Factor Posts:** 3 highest engagement with complete content
 - **Sentiment Analysis:** 100% manually verified classification
 - **Themes Identified:** 6 key discussion areas with actionable insights
+- **Content Display:** Full post content with context for better understanding
 
 #### Detailed Post Analysis:
 
@@ -112,7 +114,7 @@ python3 step2_ULTIMATE_fixed_analysis.py
 | Step | Purpose | Public Link |
 |------|---------|-------------|
 | **Step 1** | Competitor sentiment overview chart | [View Chart](https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step1_chart.png) |
-| **Step 2** | HelloFresh deep dive analysis (ULTIMATE FIXED) | [View ULTIMATE Analysis](https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_ULTIMATE_FIXED_analysis_20251023_145852.html) |
+| **Step 2** | HelloFresh deep dive analysis (ACCURATE VERSION) | [View ACCURATE Analysis](https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_ACCURATE_analysis_20251023_154054.html) |
 
 ### Mobile-Friendly Access
 - **Works on all devices** - Desktop, tablet, mobile

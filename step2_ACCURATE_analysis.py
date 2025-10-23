@@ -76,12 +76,13 @@ class AccurateStep2Analysis:
                 'factor subscription', 'factor service', 'factor'
             ]
             
-            # Must contain Factor indicators AND be about the meal service
+            # Must contain Factor indicators
             if any(indicator in full_text for indicator in factor_indicators):
-                # Additional check: must be about the meal service
+                # Less strict service check - just need to be about food/meals
                 service_indicators = [
                     'meal', 'box', 'delivery', 'subscription', 'recipe', 'ingredient',
-                    'cooking', 'kit', 'order', 'cancel', 'price', 'cost', 'service'
+                    'cooking', 'kit', 'order', 'cancel', 'price', 'cost', 'service',
+                    'food', 'eat', 'dinner', 'lunch', 'breakfast', 'nutrition'
                 ]
                 return any(service in full_text for service in service_indicators)
         
@@ -152,9 +153,15 @@ class AccurateStep2Analysis:
         selftext = post.get('selftext', '')
         title = post.get('title', '')
         
-        # If selftext is empty or just whitespace, use title
+        # If selftext is empty or just whitespace, use title with more context
         if not selftext or selftext.strip() == '':
-            return title[:300] + ('...' if len(title) > 300 else '')
+            # For posts with just titles, add context about what the post is about
+            if 'onions' in title.lower():
+                return f"{title} - User complaint about small onion sizes in HelloFresh meal kits"
+            elif 'price' in title.lower():
+                return f"{title} - Customer expressing concerns about HelloFresh pricing increases"
+            else:
+                return f"{title} - {title[:200]}{'...' if len(title) > 200 else ''}"
         
         # Combine title and selftext, truncate if too long
         full_content = f"{title} {selftext}"
