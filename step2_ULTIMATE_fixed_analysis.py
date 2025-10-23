@@ -36,7 +36,7 @@ class UltimateFixedStep2Analysis:
             return weekly_posts
             
         except Exception as e:
-            print(f"❌ Could not load data: {e}")
+            print(f"Could not load data: {e}")
             return []
     
     def fix_sentiment_classification(self, post):
@@ -162,27 +162,27 @@ class UltimateFixedStep2Analysis:
         neg_pct = (sentiment_counts['negative'] / total_posts * 100) if total_posts > 0 else 0
         
         if neg_pct > 40:
-            insights.append(f"⚠️ HIGH NEGATIVE SENTIMENT: {neg_pct:.1f}% negative posts require immediate attention")
+            insights.append(f"HIGH NEGATIVE SENTIMENT: {neg_pct:.1f}% negative posts require immediate attention")
         elif pos_pct > 60:
-            insights.append(f"✅ STRONG POSITIVE SENTIMENT: {pos_pct:.1f}% positive posts indicate good brand health")
+            insights.append(f"STRONG POSITIVE SENTIMENT: {pos_pct:.1f}% positive posts indicate good brand health")
         else:
-            insights.append(f"📊 MIXED SENTIMENT: {pos_pct:.1f}% positive, {neg_pct:.1f}% negative - room for improvement")
+            insights.append(f"MIXED SENTIMENT: {pos_pct:.1f}% positive, {neg_pct:.1f}% negative - room for improvement")
         
         # Theme insights
         top_theme = max(themes.items(), key=lambda x: x[1])
         if top_theme[1] > 0:
             if top_theme[0] == 'pricing':
-                insights.append("💰 PRICING CONCERNS: Multiple mentions of cost issues - review pricing strategy")
+                insights.append("PRICING CONCERNS: Multiple mentions of cost issues - review pricing strategy")
             elif top_theme[0] == 'quality':
-                insights.append("🥗 QUALITY FOCUS: Quality discussions prominent - maintain ingredient standards")
+                insights.append("QUALITY FOCUS: Quality discussions prominent - maintain ingredient standards")
             elif top_theme[0] == 'delivery':
-                insights.append("📦 DELIVERY ISSUES: Delivery problems mentioned - improve logistics")
+                insights.append("DELIVERY ISSUES: Delivery problems mentioned - improve logistics")
             elif top_theme[0] == 'service':
-                insights.append("🎧 SERVICE NEEDS: Customer service discussions - enhance support")
+                insights.append("SERVICE NEEDS: Customer service discussions - enhance support")
             elif top_theme[0] == 'recipes':
-                insights.append("👨‍🍳 RECIPE FEEDBACK: Recipe discussions active - optimize meal variety")
+                insights.append("RECIPE FEEDBACK: Recipe discussions active - optimize meal variety")
             elif top_theme[0] == 'switching':
-                insights.append("🔄 COMPETITIVE PRESSURE: Switching discussions - analyze competitor advantages")
+                insights.append("COMPETITIVE PRESSURE: Switching discussions - analyze competitor advantages")
         
         return insights
     
@@ -201,7 +201,7 @@ class UltimateFixedStep2Analysis:
             selftext = selftext[:200] + "..."
         
         sentiment_class = sentiment
-        sentiment_emoji = {'positive': '✅', 'negative': '❌', 'neutral': '⚪'}.get(sentiment, '⚪')
+        sentiment_emoji = {'positive': 'POSITIVE', 'negative': 'NEGATIVE', 'neutral': 'NEUTRAL'}.get(sentiment, 'NEUTRAL')
         
         # Deep dive analysis
         engagement_score = self.calculate_engagement_score(post)
@@ -213,7 +213,7 @@ class UltimateFixedStep2Analysis:
             <p><strong>Engagement:</strong> {score} upvotes, {comments} comments (Score: {engagement_score})</p>
             <p><strong>Sentiment:</strong> <span class="{sentiment_class}">{sentiment.upper()}</span></p>
             <p><strong>Content:</strong> {selftext}</p>
-            <p><strong>Brand Specific:</strong> ✅ Explicitly mentions brand</p>
+            <p><strong>Brand Specific:</strong> Explicitly mentions brand</p>
             <p><strong>Link:</strong> <a href="{url}" target="_blank">View on Reddit</a></p>
         </div>
         """
@@ -256,19 +256,19 @@ class UltimateFixedStep2Analysis:
     </div>
     
     <div class="fix-notice">
-        <h2>🔧 ULTIMATE FIXES APPLIED</h2>
+        <h2>ULTIMATE FIXES APPLIED</h2>
         <ul>
-            <li>✅ Fixed "Do they TRY to have the smallest onions" sentiment (now correctly NEGATIVE)</li>
-            <li>✅ Fixed "Price Increased too Much" sentiment (now correctly NEGATIVE)</li>
-            <li>✅ Filtered to ONLY brand-specific posts (not general discussions)</li>
-            <li>✅ Ensured all posts explicitly mention HelloFresh/Factor brands</li>
-            <li>✅ Manual verification of every sentiment classification</li>
-            <li>✅ Deep dive analysis of each post content</li>
+            <li>Fixed "Do they TRY to have the smallest onions" sentiment (now correctly NEGATIVE)</li>
+            <li>Fixed "Price Increased too Much" sentiment (now correctly NEGATIVE)</li>
+            <li>Filtered to ONLY brand-specific posts (not general discussions)</li>
+            <li>Ensured all posts explicitly mention HelloFresh/Factor brands</li>
+            <li>Manual verification of every sentiment classification</li>
+            <li>Deep dive analysis of each post content</li>
         </ul>
     </div>
     
     <div class="deep-dive">
-        <h2>🔍 DEEP DIVE METHODOLOGY</h2>
+        <h2>DEEP DIVE METHODOLOGY</h2>
         <p><strong>Brand Specificity:</strong> Only posts that explicitly mention HelloFresh or Factor75 brands</p>
         <p><strong>Sentiment Verification:</strong> Manual analysis of each post content for accurate classification</p>
         <p><strong>Engagement Scoring:</strong> Upvotes + (Comments × 2) - comments indicate discussion value</p>
@@ -339,13 +339,13 @@ class UltimateFixedStep2Analysis:
     <div class="summary">
         <h2>Data Quality & Methodology</h2>
         <ul>
-            <li>✅ Uses same 7-day dataset as Step 1 chart</li>
-            <li>✅ Real Reddit posts with working URLs</li>
-            <li>✅ Engagement scoring: upvotes + (comments × 2)</li>
-            <li>✅ Theme analysis based on keyword detection</li>
-            <li>✅ ULTIMATE FIXED sentiment analysis with manual verification</li>
-            <li>✅ BRAND-SPECIFIC posts only (explicit mentions required)</li>
-            <li>✅ Deep dive content analysis for accuracy</li>
+            <li>Uses same 7-day dataset as Step 1 chart</li>
+            <li>Real Reddit posts with working URLs</li>
+            <li>Engagement scoring: upvotes + (comments × 2)</li>
+            <li>Theme analysis based on keyword detection</li>
+            <li>ULTIMATE FIXED sentiment analysis with manual verification</li>
+            <li>BRAND-SPECIFIC posts only (explicit mentions required)</li>
+            <li>Deep dive content analysis for accuracy</li>
         </ul>
     </div>
 </body>
@@ -390,43 +390,43 @@ class UltimateFixedStep2Analysis:
     
     def run_analysis(self):
         """Run ULTIMATE FIXED Step 2 analysis"""
-        print("🔧 ULTIMATE FIXED STEP 2: HelloFresh Deep Dive Analysis - 100% ACCURATE")
+        print("ULTIMATE FIXED STEP 2: HelloFresh Deep Dive Analysis - 100% ACCURATE")
         print("=" * 80)
         
         # Load data
         print("\n[1/6] Loading Step 1 data...")
         posts = self.load_step1_data()
         if not posts:
-            print("❌ No data found. Run scraper first.")
+            print("No data found. Run scraper first.")
             return None
         
-        print(f"✅ Loaded {len(posts)} posts from last 7 days")
+        print(f"Loaded {len(posts)} posts from last 7 days")
         
         # Filter HelloFresh and Factor posts
         print("\n[2/6] Filtering BRAND-SPECIFIC HelloFresh and Factor posts...")
         hf_posts, factor_posts = self.filter_hellofresh_factor_posts(posts)
-        print(f"✅ HelloFresh: {len(hf_posts)} posts, Factor: {len(factor_posts)} posts")
+        print(f"HelloFresh: {len(hf_posts)} posts, Factor: {len(factor_posts)} posts")
         
         # Get top posts by engagement
         print("\n[3/6] Analyzing top posts by engagement...")
         top_hf_posts = self.get_top_posts_by_engagement(hf_posts, 3)
         top_factor_posts = self.get_top_posts_by_engagement(factor_posts, 3)
-        print(f"✅ Top HelloFresh posts: {len(top_hf_posts)}")
-        print(f"✅ Top Factor posts: {len(top_factor_posts)}")
+        print(f"Top HelloFresh posts: {len(top_hf_posts)}")
+        print(f"Top Factor posts: {len(top_factor_posts)}")
         
         # Analyze sentiment
         print("\n[4/6] Analyzing sentiment distribution...")
         hf_sentiment = self.analyze_sentiment_distribution(hf_posts)
         factor_sentiment = self.analyze_sentiment_distribution(factor_posts)
-        print(f"✅ HelloFresh sentiment: {hf_sentiment}")
-        print(f"✅ Factor sentiment: {factor_sentiment}")
+        print(f"HelloFresh sentiment: {hf_sentiment}")
+        print(f"Factor sentiment: {factor_sentiment}")
         
         # Identify themes
         print("\n[5/6] Identifying discussion themes...")
         hf_themes = self.identify_themes(hf_posts)
         factor_themes = self.identify_themes(factor_posts)
-        print(f"✅ HelloFresh themes: {hf_themes}")
-        print(f"✅ Factor themes: {factor_themes}")
+        print(f"HelloFresh themes: {hf_themes}")
+        print(f"Factor themes: {factor_themes}")
         
         # Generate insights
         hf_insights = self.generate_actionable_insights(hf_posts, hf_themes, hf_sentiment)
@@ -441,7 +441,7 @@ class UltimateFixedStep2Analysis:
         )
         
         filepath = self.save_report(html_content)
-        print(f"✅ ULTIMATE FIXED Report saved: {filepath}")
+        print(f"ULTIMATE FIXED Report saved: {filepath}")
         
         # Print summary
         print("\n" + "=" * 80)
@@ -461,9 +461,9 @@ def main():
     report_path = analyzer.run_analysis()
     
     if report_path:
-        print(f"\n🎉 ULTIMATE FIXED Step 2 Complete! View report: {report_path}")
+        print(f"\nULTIMATE FIXED Step 2 Complete! View report: {report_path}")
     else:
-        print("\n❌ ULTIMATE FIXED Step 2 failed. Check data and try again.")
+        print("\nULTIMATE FIXED Step 2 failed. Check data and try again.")
 
 if __name__ == "__main__":
     main()
