@@ -92,7 +92,7 @@ python3 step2_comprehensive_analysis.py
 | Step | Purpose | Public Link |
 |------|---------|-------------|
 | **Step 1** | Competitor sentiment overview chart | [View Chart](https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step1_chart.png) |
-| **Step 2** | HelloFresh deep dive analysis | [View Analysis](https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_comprehensive_analysis_20251023_130248.html) |
+| **Step 2** | HelloFresh deep dive analysis | [View Analysis](https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_comprehensive_analysis_20251023_131300.html) |
 
 ### 📱 Mobile-Friendly Access
 - **Works on all devices** - Desktop, tablet, mobile
@@ -129,4 +129,4 @@ To enable public HTML viewing:
 2. Scroll to Pages section
 3. Enable from main branch
 4. Brian can then view at:
-   `https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_comprehensive_analysis_20251023_130248.html`
+   `https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_comprehensive_analysis_20251023_131300.html`
