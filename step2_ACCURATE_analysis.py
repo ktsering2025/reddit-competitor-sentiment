@@ -70,19 +70,18 @@ class AccurateStep2Analysis:
                 return any(service in full_text for service in service_indicators)
         
         elif brand == 'Factor':
-            # Must be about Factor meal service specifically
+            # Must be about Factor75 meal service specifically - STRICT FILTERING
             factor_indicators = [
                 'factor75', 'factor 75', 'factor meal', 'factor box', 'factor delivery',
-                'factor subscription', 'factor service', 'factor'
+                'factor subscription', 'factor service'
             ]
             
-            # Must contain Factor indicators
+            # Must contain Factor indicators AND be explicitly about the meal service
             if any(indicator in full_text for indicator in factor_indicators):
-                # Less strict service check - just need to be about food/meals
+                # STRICT service check - must be about meal delivery service
                 service_indicators = [
-                    'meal', 'box', 'delivery', 'subscription', 'recipe', 'ingredient',
-                    'cooking', 'kit', 'order', 'cancel', 'price', 'cost', 'service',
-                    'food', 'eat', 'dinner', 'lunch', 'breakfast', 'nutrition'
+                    'meal kit', 'meal delivery', 'meal service', 'meal box', 'meal subscription',
+                    'delivery service', 'subscription service', 'meal plan', 'meal prep'
                 ]
                 return any(service in full_text for service in service_indicators)
         
