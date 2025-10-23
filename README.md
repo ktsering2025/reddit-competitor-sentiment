@@ -21,7 +21,7 @@ A professional system that tracks HelloFresh competitor sentiment on Reddit with
 - **Actionable insights** by theme and sentiment
 - **Real Reddit URLs** that work
 - **File:** `step2_comprehensive_analysis.py`
-- **Link:** [View Step 2 Analysis](reports/step2_comprehensive_analysis_20251023_115542.html)
+- **Link:** [View Step 2 Analysis](reports/step2_comprehensive_analysis_20251023_122634.html)
 
 ## Current Data (Oct 16-23, 2025)
 **Total:** 87 verified Reddit posts from 6 brands
@@ -64,7 +64,7 @@ python3 step2_comprehensive_analysis.py
 | Step | Purpose | Link |
 |------|---------|------|
 | **Step 1** | Competitor sentiment overview chart | [View Chart](reports/step1_chart.png) |
-| **Step 2** | HelloFresh deep dive analysis | [View Analysis](reports/step2_comprehensive_analysis_20251023_115542.html) |
+| **Step 2** | HelloFresh deep dive analysis | [View Analysis](reports/step2_comprehensive_analysis_20251023_122634.html) |
 
 ## Data Quality
 - **Real Reddit posts** with working URLs
@@ -89,4 +89,4 @@ To enable public HTML viewing:
 2. Scroll to Pages section
 3. Enable from main branch
 4. Brian can then view at:
-   `https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_comprehensive_analysis_20251023_115542.html`
+   `https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_comprehensive_analysis_20251023_122634.html`
