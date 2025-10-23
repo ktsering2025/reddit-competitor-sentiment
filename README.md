@@ -4,20 +4,24 @@
 
 A professional system that tracks HelloFresh competitor sentiment on Reddit with actionable business intelligence.
 
+![Step 1 Chart](reports/step1_chart.png)
+
 ### 📊 Step 1: Post Breakdown (Stack Bar Chart)
 **Purpose:** Visual overview of competitor sentiment
 - **Y-axis:** # of posts
 - **X-axis:** Competitor/Brand names  
 - **Categories:** Positive, Negative, Neutral sentiment
-- **File:** `step1_chart.py` → `reports/step1_chart.png`
+- **File:** `step1_chart.py`
+- **🔗 [View Step 1 Chart](reports/step1_chart.png)**
 
 ### 🎯 Step 2: HelloFresh Deep Dive (60% Revenue Focus)
-**Purpose:** Actionable intelligence on HelloFresh & Factor
+**Purpose:** Actionable intelligence on HelloFresh brand
 - **Top 3 posts** by engagement (comments + upvotes)
 - **Synthesis logic** for < 3 or > 3 posts scenarios
-- **Actionable insights** by theme (pricing, quality, delivery)
+- **Actionable insights** by theme and sentiment
 - **Real Reddit URLs** that work
-- **File:** `step2_hellofresh_deep_dive.py` → HTML report
+- **File:** `step2_simple_analysis.py`
+- **🔗 [View Step 2 Analysis](reports/step2_hellofresh_analysis_20251023_112951.html)**
 
 ## 📈 Current Data (Oct 16-23, 2025)
 **Total:** 87 verified Reddit posts from 6 brands
@@ -34,26 +38,33 @@ A professional system that tracks HelloFresh competitor sentiment on Reddit with
 
 ## 🚀 Quick Start
 
-1. **Generate Step 1 Chart:**
-   ```bash
-   python3 step1_chart.py
-   ```
-   Creates: `reports/step1_chart.png`
+### Generate Step 1 Chart:
+```bash
+python3 step1_chart.py
+```
+**Output:** `reports/step1_chart.png`
 
-2. **Generate Step 2 Deep Dive:**
-   ```bash
-   python3 step2_hellofresh_deep_dive.py
-   ```
-   Creates: `reports/step2_hellofresh_deep_dive_YYYYMMDD_HHMMSS.html`
+### Generate Step 2 Deep Dive:
+```bash
+python3 step2_simple_analysis.py
+```
+**Output:** `reports/step2_hellofresh_analysis_YYYYMMDD_HHMMSS.html`
 
 ## 📁 Key Files
 
 - **`step1_chart.py`** - Generates weekly competitor sentiment chart
-- **`step2_hellofresh_deep_dive.py`** - HelloFresh & Factor deep analysis
+- **`step2_simple_analysis.py`** - HelloFresh deep analysis (clean, no emojis)
 - **`scraper.py`** - Reddit data collection
 - **`ai_sentiment.py`** - Sentiment analysis engine
 - **`competitors.py`** - Brand configuration
 - **`reports/working_reddit_data.json`** - Raw data source
+
+## 🔗 Direct Links for Brian
+
+| Step | Purpose | Link |
+|------|---------|------|
+| **Step 1** | Competitor sentiment overview chart | [View Chart](reports/step1_chart.png) |
+| **Step 2** | HelloFresh deep dive analysis | [View Analysis](reports/step2_hellofresh_analysis_20251023_112951.html) |
 
 ## 📊 Data Quality
 - ✅ **Real Reddit posts** with working URLs
@@ -66,6 +77,6 @@ A professional system that tracks HelloFresh competitor sentiment on Reddit with
 - **Weekly sentiment tracking** for HelloFresh family brands
 - **Competitive intelligence** on key rivals
 - **Actionable insights** for business decisions
-- **Revenue-focused analysis** (HelloFresh + Factor = 60% business)
+- **Revenue-focused analysis** (HelloFresh = 63% of discussion volume)
 
 Built for Brian's weekly competitive intelligence and strategic planning.
