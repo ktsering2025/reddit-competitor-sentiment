@@ -1,15 +1,15 @@
-SUBJECT: Weekly Reddit Competitor Sentiment Report — Oct 15–22, 2025
+SUBJECT: Weekly Reddit Competitor Sentiment Report — Oct 16–23, 2025
 
 Hi Brian,
 
-Here's the weekly Reddit sentiment snapshot (Oct 15–22, 2025).
+Here's the weekly Reddit sentiment snapshot (Oct 16–23, 2025).
 
 Each count = unique Reddit post from the last 7 days (not comments or reposts)
 
-• HelloFresh (HF) — 58 posts (24% positive)
+• HelloFresh (HF) — 56 posts (25% positive)
 • Blue Apron — 16 posts (18% positive)
 • Home Chef — 8 posts (37% positive)
-• Factor (HF) — 6 posts (66% positive)
+• Factor (HF) — 4 posts (100% positive)
 • Marley Spoon — 3 posts (0% positive)
 • HungryRoot — 1 posts (0% positive)
 
@@ -21,6 +21,6 @@ Best regards,
 Reddit Sentiment Analysis System
 
 ---
-Total posts analyzed: 92
+Total posts analyzed: 88
 Data source: Public Reddit posts from r/hellofresh, r/mealkits, r/mealprep, r/food, r/cooking
-Next report: October 29, 2025
+Next report: October 30, 2025
