@@ -42,7 +42,7 @@ python3 reddit_weekly_search.py
 python3 step2_ACTIONABLE_analysis.py
 
 # Step 3: View results
-open reports/step2_ACTIONABLE_analysis_20251023_160046.html
+open reports/step2_ACTIONABLE_analysis_LATEST.html
 ```
 
 #### Current Step 2 Results (ACTIONABLE VERSION):
@@ -95,16 +95,16 @@ python3 step1_chart.py
 ```
 **Output:** `reports/step1_chart.png`
 
-### Generate Step 2 Deep Dive (ULTIMATE FIXED):
+### Generate Step 2 Deep Dive (ACTIONABLE VERSION):
 ```bash
-python3 step2_ULTIMATE_fixed_analysis.py
+python3 step2_ACTIONABLE_analysis.py
 ```
-**Output:** `reports/step2_ULTIMATE_FIXED_analysis_20251023_145852.html`
+**Output:** `reports/step2_ACTIONABLE_analysis_LATEST.html`
 
 ## Key Files
 
 - **`step1_chart.py`** - Generates weekly competitor sentiment chart
-- **`step2_ULTIMATE_fixed_analysis.py`** - HelloFresh deep analysis (100% accurate)
+- **`step2_ACTIONABLE_analysis.py`** - HelloFresh deep analysis (actionable insights)
 - **`scraper.py`** - Reddit data collection
 - **`ai_sentiment.py`** - Sentiment analysis engine
 - **`competitors.py`** - Brand configuration
@@ -118,7 +118,7 @@ python3 step2_ULTIMATE_fixed_analysis.py
 | Step | Purpose | Public Link |
 |------|---------|-------------|
 | **Step 1** | Competitor sentiment overview chart | [View Chart](https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step1_chart.png) |
-| **Step 2** | HelloFresh deep dive analysis (ACCURATE VERSION) | [View ACCURATE Analysis](https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_ACCURATE_analysis_20251023_154054.html) |
+| **Step 2** | HelloFresh deep dive analysis (ACTIONABLE VERSION) | [View ACTIONABLE Analysis](https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_ACTIONABLE_analysis_LATEST.html) |
 
 ### Mobile-Friendly Access
 - **Works on all devices** - Desktop, tablet, mobile
