@@ -14,16 +14,16 @@ A professional system that tracks HelloFresh competitor sentiment on Reddit with
 - **File:** `step1_chart.py`
 - **Link:** [View Step 1 Chart](reports/step1_chart.png)
 
-### Step 2: HelloFresh Deep Dive (60% Revenue Focus) - REAL-TIME VERSION
-**Purpose:** Actionable intelligence on HelloFresh family brands using real-time Reddit weekly search
+### Step 2: HelloFresh Deep Dive (60% Revenue Focus) - ACTIONABLE VERSION
+**Purpose:** Actionable intelligence on HelloFresh family brands (60% of revenue) with business-focused insights
 
-#### REAL-TIME ANALYSIS FEATURES:
-- **Fresh Weekly Data:** Searches Reddit directly for posts from the last 7 days
-- **Brand-Specific Only:** Posts must explicitly mention HelloFresh or Factor75 brands
-- **Real-Time Search:** Uses Reddit's public search API for current discussions
-- **Complete Content Display:** Shows full post content with context
-- **Accurate Sentiment:** Manual classification based on post content
-- **Live Engagement:** Real-time upvotes, comments, and engagement scores
+#### ACTIONABLE ANALYSIS FEATURES:
+- **100% Brand-Specific:** Only posts truly about HelloFresh or Factor75 brands (not just mentions)
+- **Engagement Prioritizes Comments:** Score + (Comments × 3) - discussion value matters most
+- **Synthesis Logic:** Highlight all if ≤3 posts, synthesize top 3 if >3 posts
+- **Actionable Insights:** Business-focused recommendations and brand health metrics
+- **Real-Time Data:** Fresh weekly Reddit search for current discussions
+- **Complete Content:** Full post content with business impact analysis
 
 #### What Step 2 Does:
 1. **Filters brand-specific posts** - Only posts explicitly mentioning HelloFresh or HelloFresh's Factor75 brand
@@ -38,21 +38,21 @@ A professional system that tracks HelloFresh competitor sentiment on Reddit with
 # Step 1: Search Reddit for weekly posts
 python3 reddit_weekly_search.py
 
-# Step 2: Run the real-time analysis
-python3 step2_realtime_analysis.py
+# Step 2: Run the actionable analysis
+python3 step2_ACTIONABLE_analysis.py
 
 # Step 3: View results
-open reports/step2_REALTIME_analysis_20251023_155317.html
+open reports/step2_ACTIONABLE_analysis_20251023_160046.html
 ```
 
-#### Current Step 2 Results (REAL-TIME VERSION):
-- **HelloFresh Posts:** 22 (real-time weekly posts, 100% accurate)
-- **Factor75 Posts:** 33 (real-time weekly posts, 100% accurate)
-- **Top HelloFresh Posts:** 3 highest engagement with complete content
-- **Top Factor75 Posts:** 3 highest engagement with complete content
-- **Sentiment Analysis:** Manual classification based on post content
-- **Themes Identified:** 6 key discussion areas with actionable insights
-- **Data Source:** Fresh Reddit weekly search (last 7 days)
+#### Current Step 2 Results (ACTIONABLE VERSION):
+- **HelloFresh Posts:** 17 (100% brand-specific, truly about HelloFresh service)
+- **Factor75 Posts:** 3 (100% brand-specific, truly about Factor75 service)
+- **Top HelloFresh Posts:** 3 highest engagement with synthesis logic
+- **Top Factor75 Posts:** All 3 highlighted (comprehensive view)
+- **Engagement Scoring:** Score + (Comments × 3) - prioritizes discussion value
+- **Sentiment Analysis:** Manual classification for business accuracy
+- **Actionable Insights:** Brand health metrics and business recommendations
 
 #### Detailed Post Analysis:
 
