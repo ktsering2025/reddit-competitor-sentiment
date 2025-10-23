@@ -17,11 +17,11 @@ A professional system that tracks HelloFresh competitor sentiment on Reddit with
 ### Step 2: HelloFresh Deep Dive (60% Revenue Focus) - ULTIMATE FIXED
 **Purpose:** Actionable intelligence on HelloFresh family brands (HelloFresh + Factor75)
 
-#### 🔧 ULTIMATE FIXES APPLIED:
-- **✅ 100% Accurate Sentiment:** Manual verification of every post
-- **✅ Brand-Specific Only:** Posts must explicitly mention HelloFresh/Factor75
-- **✅ Deep Dive Analysis:** Content analysis for actionable insights
-- **✅ Fixed Sentiments:** "Do they TRY to have the smallest onions" (NEGATIVE), "Price Increased too Much" (NEGATIVE)
+#### ULTIMATE FIXES APPLIED:
+- **100% Accurate Sentiment:** Manual verification of every post
+- **Brand-Specific Only:** Posts must explicitly mention HelloFresh/Factor75
+- **Deep Dive Analysis:** Content analysis for actionable insights
+- **Fixed Sentiments:** "Do they TRY to have the smallest onions" (NEGATIVE), "Price Increased too Much" (NEGATIVE)
 
 #### What Step 2 Does:
 1. **Filters brand-specific posts** - Only posts explicitly mentioning HelloFresh or Factor75 brands
@@ -153,51 +153,51 @@ To enable public HTML viewing:
 
 ## Step 2 Deep Dive Analysis - Detailed Explanation
 
-### 🎯 Purpose
+### Purpose
 Step 2 provides actionable business intelligence specifically for HelloFresh family brands (HelloFresh + Factor75), which represent 60% of revenue.
 
-### 📊 Methodology
+### Methodology
 1. **Data Source:** Same 80 posts from Step 1 (last 7 days)
 2. **Filtering:** Only posts explicitly mentioning HelloFresh or Factor75 brands
 3. **Engagement Scoring:** Upvotes + (Comments × 2) - comments indicate discussion value
 4. **Sentiment Analysis:** 100% manually verified classification
 5. **Theme Extraction:** 6 key discussion areas (pricing, quality, delivery, service, recipes, switching)
 
-### 🔍 Detailed Post Analysis
+### Detailed Post Analysis
 
 #### HelloFresh Top 3 Posts (by engagement):
 1. **"Share Weekly Trial, Offer, and Free Box Codes Here"**
-   - **Sentiment:** POSITIVE ✅
+   - **Sentiment:** POSITIVE
    - **Engagement:** 5 upvotes, 104 comments (Score: 213)
    - **Analysis:** Community engagement, helpful for trials
 
 2. **"Do they TRY to have the smallest onions known to man"**
-   - **Sentiment:** NEGATIVE ❌ (FIXED from NEUTRAL)
+   - **Sentiment:** NEGATIVE (FIXED from NEUTRAL)
    - **Engagement:** 37 upvotes, 36 comments (Score: 109)
    - **Analysis:** Quality complaint about produce sizes
 
 3. **"Jack o Lantern stuffed peppers were ok.. was a little disappointed they sent Yellow peppers"**
-   - **Sentiment:** NEGATIVE ❌
+   - **Sentiment:** NEGATIVE
    - **Engagement:** 89 upvotes, 5 comments (Score: 99)
    - **Analysis:** Disappointment with ingredient substitution
 
 #### Factor Top 3 Posts (by engagement):
 1. **"Best meal service"**
-   - **Sentiment:** POSITIVE ✅
+   - **Sentiment:** POSITIVE
    - **Engagement:** 2 upvotes, 6 comments (Score: 14)
    - **Analysis:** Seeking recommendations for Factor
 
 2. **"What's Y'all's favorite meal delivery service?"**
-   - **Sentiment:** POSITIVE ✅
+   - **Sentiment:** POSITIVE
    - **Engagement:** 3 upvotes, 4 comments (Score: 11)
    - **Analysis:** Seeking recommendations including Factor
 
 3. **"Plant-Based Meat Keeps Getting Cheaper..."**
-   - **Sentiment:** NEGATIVE ❌
+   - **Sentiment:** NEGATIVE
    - **Engagement:** 595 upvotes, 100 comments (Score: 795)
    - **Analysis:** General industry discussion, not Factor-specific
 
-### 📈 Business Insights
+### Business Insights
 - **HelloFresh:** Mixed sentiment (7 positive, 7 negative, 2 neutral)
 - **Factor:** Balanced sentiment (5 positive, 5 negative, 0 neutral)
 - **Key Themes:** Quality (15 mentions), Recipes (9 mentions), Service (5 mentions)
