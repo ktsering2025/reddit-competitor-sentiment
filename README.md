@@ -51,14 +51,14 @@ open reports/step2_ULTIMATE_FIXED_analysis_20251023_145852.html
 #### Detailed Post Analysis:
 
 **HelloFresh Top 3 Posts:**
-1. **"Share Weekly Trial, Offer, and Free Box Codes Here"** - POSITIVE ✅ (Community engagement)
-2. **"Do they TRY to have the smallest onions known to man"** - NEGATIVE ❌ (Quality complaint about produce sizes)
-3. **"Jack o Lantern stuffed peppers were ok.. was a little disappointed they sent Yellow peppers"** - NEGATIVE ❌ (Disappointment with ingredient substitution)
+1. **"Share Weekly Trial, Offer, and Free Box Codes Here"** - POSITIVE (Community engagement)
+2. **"Do they TRY to have the smallest onions known to man"** - NEGATIVE (Quality complaint about produce sizes)
+3. **"Jack o Lantern stuffed peppers were ok.. was a little disappointed they sent Yellow peppers"** - NEGATIVE (Disappointment with ingredient substitution)
 
 **Factor Top 3 Posts:**
-1. **"Best meal service"** - POSITIVE ✅ (Seeking recommendations for Factor)
-2. **"What's Y'all's favorite meal delivery service?"** - POSITIVE ✅ (Seeking recommendations including Factor)
-3. **"Plant-Based Meat Keeps Getting Cheaper..."** - NEGATIVE ❌ (General industry discussion, not Factor-specific)
+1. **"Best meal service"** - POSITIVE (Seeking recommendations for Factor)
+2. **"What's Y'all's favorite meal delivery service?"** - POSITIVE (Seeking recommendations including Factor)
+3. **"Plant-Based Meat Keeps Getting Cheaper..."** - NEGATIVE (General industry discussion, not Factor-specific)
 
 #### File Details:
 - **File:** `step2_ULTIMATE_fixed_analysis.py`
@@ -106,7 +106,7 @@ python3 step2_ULTIMATE_fixed_analysis.py
 
 ## Public Browser Access for Brian
 
-### 🌐 Live Reports (GitHub Pages)
+### Live Reports (GitHub Pages)
 **Main Dashboard:** https://ktsering2025.github.io/reddit-competitor-sentiment/
 
 | Step | Purpose | Public Link |
@@ -114,13 +114,13 @@ python3 step2_ULTIMATE_fixed_analysis.py
 | **Step 1** | Competitor sentiment overview chart | [View Chart](https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step1_chart.png) |
 | **Step 2** | HelloFresh deep dive analysis (ULTIMATE FIXED) | [View ULTIMATE Analysis](https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_ULTIMATE_FIXED_analysis_20251023_145852.html) |
 
-### 📱 Mobile-Friendly Access
+### Mobile-Friendly Access
 - **Works on all devices** - Desktop, tablet, mobile
 - **No login required** - Public access
 - **Always up-to-date** - Auto-refreshes with new data
 - **Direct sharing** - Send links to team members
 
-### 🔄 Weekly Refresh
+### Weekly Refresh
 - **Every Sunday** - New data automatically collected
 - **Fresh analysis** - Updated Step 1 chart and Step 2 insights
 - **Email notification** - Brian receives weekly report
