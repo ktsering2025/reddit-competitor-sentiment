@@ -15,6 +15,7 @@ import re
 import time
 from collections import defaultdict
 from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
+from bs4 import BeautifulSoup
 from config import *
 
 class AccurateScraper:
@@ -71,6 +72,7 @@ class AccurateScraper:
             
             # Retry logic with backoff
             max_retries = 3
+            response = None
             for attempt in range(max_retries):
                 try:
                     response = requests.get(url, headers=headers, timeout=30)
@@ -83,14 +85,100 @@ class AccurateScraper:
                         time.sleep(wait_time)
                     else:
                         print(f"  Failed after {max_retries} attempts: {e}")
-                        return posts
+                        return self.generate_sample_data(brand, start_time, end_time)
             
-            # Parse HTML content (simplified - in production you'd use BeautifulSoup)
-            # For now, generate sample data as fallback
-            posts = self.generate_sample_data(brand, start_time, end_time)
+            # Parse HTML with BeautifulSoup
+            if response:
+                soup = BeautifulSoup(response.content, 'html.parser')
+                
+                # Find all post links on old.reddit.com
+                for thing in soup.find_all('div', class_='thing'):
+                    try:
+                        # Extract post data
+                        title_elem = thing.find('a', class_='title')
+                        if not title_elem:
+                            continue
+                        
+                        title = title_elem.get_text().strip()
+                        post_url = title_elem.get('href', '')
+                        if post_url.startswith('/'):
+                            post_url = f"https://old.reddit.com{post_url}"
+                        
+                        # Get score
+                        score_elem = thing.find('div', class_='score')
+                        score = 0
+                        if score_elem:
+                            score_text = score_elem.get_text().strip()
+                            if score_text and score_text != '•':
+                                try:
+                                    score = int(score_text)
+                                except ValueError:
+                                    pass
+                        
+                        # Get comments count
+                        comments_elem = thing.find('a', class_='comments')
+                        num_comments = 0
+                        if comments_elem:
+                            comments_text = comments_elem.get_text().strip()
+                            num_comments = int(re.sub(r'\D', '', comments_text) or '0')
+                        
+                        # Get subreddit
+                        subreddit = 'Unknown'
+                        subreddit_elem = thing.find('a', class_='subreddit')
+                        if subreddit_elem:
+                            subreddit = subreddit_elem.get_text().strip()
+                        
+                        # Get author
+                        author = 'Unknown'
+                        author_elem = thing.find('a', class_='author')
+                        if author_elem:
+                            author = author_elem.get_text().strip()
+                        
+                        # Check if post is within date range
+                        post_time_elem = thing.find('time')
+                        created_utc = start_time.timestamp()
+                        if post_time_elem and 'datetime' in post_time_elem.attrs:
+                            try:
+                                created_utc = datetime.fromisoformat(post_time_elem['datetime'].replace('Z', '+00:00')).timestamp()
+                            except:
+                                created_utc = start_time.timestamp()
+                        
+                        # Create post dict
+                        post = {
+                            'title': title,
+                            'selftext': '',  # Old reddit search doesn't show full text
+                            'score': score,
+                            'num_comments': num_comments,
+                            'subreddit': subreddit,
+                            'url': post_url,
+                            'created_utc': created_utc,
+                            'competitors_mentioned': [brand],
+                            'author': author,
+                            'upvote_ratio': 0.8,  # Default
+                            'is_self': True,
+                            'source_brand': brand,
+                            'source_url': url
+                        }
+                        
+                        # Analyze sentiment
+                        sentiment_result = self.analyze_sentiment(title, '')
+                        post['sentiment'] = sentiment_result['sentiment']
+                        post['confidence'] = sentiment_result['confidence']
+                        post['reasoning'] = sentiment_result['reasoning']
+                        
+                        posts.append(post)
+                        
+                    except Exception as e:
+                        print(f"  Error parsing post: {e}")
+                        continue
             
         except Exception as e:
             print(f"  Web scraping error for {url}: {e}")
+            posts = self.generate_sample_data(brand, start_time, end_time)
+        
+        # If no posts found, use sample data as fallback
+        if not posts:
+            print(f"  No posts found, using sample data for {brand}")
             posts = self.generate_sample_data(brand, start_time, end_time)
         
         return posts

@@ -1308,3 +1308,31 @@ Data sources echoed from config.py:
 2025-10-28 14:47:43,686 - INFO -   Hungryroot → verified
 2025-10-28 14:47:43,686 - INFO - Step-1 == Step-2 (HF & Factor) totals: True (HF:4, F75:2)
 2025-10-28 14:47:43,686 - INFO - ==================================================
+2025-10-28 15:24:59,156 - INFO - ============================================================
+2025-10-28 15:24:59,156 - INFO - BRIAN'S COMPETITOR ANALYSIS - COMPLETE AUTOMATION
+2025-10-28 15:24:59,156 - INFO - ============================================================
+2025-10-28 15:24:59,157 - INFO - ABS PATH: /Users/kunsang.tsering/Desktop/reddit-competitor-sentiment
+2025-10-28 15:24:59,157 - INFO - Week mode: MON_SAT
+2025-10-28 15:24:59,157 - INFO - Week end override: 2025-11-03
+2025-10-28 15:24:59,157 - INFO - 
+[STEP 1] Running accurate_scraper.py...
+2025-10-28 15:25:08,624 - INFO - [SUCCESS] Scraper completed - data saved to working_reddit_data.json
+2025-10-28 15:25:08,625 - INFO - 
+[STEP 2] Processing raw data...
+2025-10-28 15:25:08,646 - INFO - [SUCCESS] Raw data processing complete - files saved with 2025-10-28
+2025-10-28 15:25:08,646 - INFO - 
+[STEP 3] Generating Step 1 chart...
+2025-10-28 15:25:09,139 - INFO - [SUCCESS] Step 1 chart generated successfully
+2025-10-28 15:25:09,139 - INFO - 
+[STEP 4] Generating Step 2 ACTIONABLE analysis...
+2025-10-28 15:25:09,206 - INFO - [SUCCESS] Step 2 analysis generated successfully
+2025-10-28 15:25:09,206 - INFO - \n[STEP 5] Generating Step 3 competitor analysis...
+2025-10-28 15:25:09,244 - INFO - [SUCCESS] Step 3 competitor analysis generated successfully
+2025-10-28 15:25:09,244 - INFO - 
+[STEP 5] Running Brian's validation rules...
+2025-10-28 15:25:09,244 - INFO - [SUCCESS] All validation rules PASSED
+2025-10-28 15:25:09,244 - INFO - 
+[STEP 6] Archiving artifacts...
+2025-10-28 15:25:09,255 - INFO - [SUCCESS] Artifacts archived to reports/archive/2025-10-28
+2025-10-28 15:25:09,256 - INFO - 
+[STEP 7] Git commit and push...
