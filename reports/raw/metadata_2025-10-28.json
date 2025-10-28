@@ -1,9 +1,9 @@
 {
-  "processing_timestamp": "2025-10-28T18:46:54.434082+00:00",
-  "total_posts": 18,
+  "processing_timestamp": "2025-10-28T18:47:42.395502+00:00",
+  "total_posts": 16,
   "date_range": {
-    "start": "2025-10-20T00:00:00+00:00",
-    "end": "2025-10-25T23:59:59+00:00"
+    "start": "2025-10-27T00:00:00+00:00",
+    "end": "2025-11-01T23:59:59+00:00"
   },
   "brands_analyzed": [
     "HelloFresh",
@@ -22,23 +22,23 @@
     "Hungryroot": "https://old.reddit.com/search/?q=hungryroot&type=posts&t=week&sort=new"
   },
   "validation_status": "passed",
-  "commit_hash": "8d9de5b9",
+  "commit_hash": "ad2c5fdc",
   "filter_stats": {
     "HelloFresh": {
       "pre_filter": 0,
-      "post_filter": 1
+      "post_filter": 4
     },
     "Factor75": {
       "pre_filter": 0,
-      "post_filter": 5
+      "post_filter": 2
     },
     "Home Chef": {
       "pre_filter": 0,
-      "post_filter": 2
+      "post_filter": 3
     },
     "Blue Apron": {
       "pre_filter": 0,
-      "post_filter": 1
+      "post_filter": 0
     },
     "Marley Spoon": {
       "pre_filter": 0,
@@ -46,7 +46,7 @@
     },
     "Hungryroot": {
       "pre_filter": 0,
-      "post_filter": 5
+      "post_filter": 3
     }
   }
 }

@@ -303,6 +303,16 @@ def run_pipeline(send_email=False, email_recipients=None):
             
             # Create HEALTH.json for site freshness check
             try:
+                # Load date_range from the latest metadata
+                metadata_files = [f for f in os.listdir('reports/raw') if f.startswith('metadata_')]
+                if metadata_files:
+                    latest_metadata = max(metadata_files)
+                    with open(f'reports/raw/{latest_metadata}', 'r') as f:
+                        metadata = json.load(f)
+                        date_range = metadata.get('date_range', {})
+                else:
+                    date_range = {}
+                
                 health_data = {
                     "status": "valid",
                     "date_window_utc": {
