@@ -124,9 +124,9 @@ COMPLETE COMPETITOR BREAKDOWN:
 {chr(10).join(summary_lines)}
 
 LIVE DASHBOARD ACCESS:
-🔗 Main Dashboard: https://ktsering2025.github.io/reddit-competitor-sentiment/
-📊 Step 1 Chart: https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step1_chart.png
-🎯 Step 2 Analysis: https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_ACTIONABLE_analysis_LATEST.html
+Main Dashboard: https://ktsering2025.github.io/reddit-competitor-sentiment/
+Step 1 Chart: https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step1_chart.png
+Step 2 Analysis: https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_ACTIONABLE_analysis_LATEST.html
 
 KEY INSIGHTS:
 • Real-time Reddit weekly search data (last 7 days)
@@ -241,9 +241,9 @@ def main():
         success = send_via_web_service(recipient)
         
         if success:
-            print(f"\n✅ EMAIL SENT to {recipient}")
+            print(f"\n[SUCCESS] EMAIL SENT to {recipient}")
         else:
-            print(f"\n❌ Email failed for {recipient}")
+            print(f"\n[ERROR] Email failed for {recipient}")
 
 if __name__ == "__main__":
     main()

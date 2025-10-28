@@ -156,7 +156,7 @@ def create_html_report(posts_by_brand, brand_totals, data):
         </div>
         
         <div class="validation-box">
-            <h4>✅ Validation Sync with Step 1</h4>
+            <h4>[VALIDATION] Sync with Step 1</h4>
             <p><strong>HelloFresh:</strong> {brand_totals.get('HelloFresh', {}).get('positive', 0)}/{brand_totals.get('HelloFresh', {}).get('negative', 0)}/{brand_totals.get('HelloFresh', {}).get('neutral', 0)} = {hf_total} posts ({brand_totals.get('HelloFresh', {}).get('pct_positive', 0)}% positive)</p>
             <p><strong>Factor75:</strong> {brand_totals.get('Factor75', {}).get('positive', 0)}/{brand_totals.get('Factor75', {}).get('negative', 0)}/{brand_totals.get('Factor75', {}).get('neutral', 0)} = {f75_total} posts ({brand_totals.get('Factor75', {}).get('pct_positive', 0)}% positive)</p>
         </div>
@@ -177,7 +177,7 @@ def create_html_report(posts_by_brand, brand_totals, data):
         <h2>{brand} Deep Dive</h2>
         <p><strong>Total Posts:</strong> {len(brand_posts)} | <strong>Engagement Ranking:</strong> Score + 3×Comments</p>
         
-        <h3>🎯 Top 3 Positive Posts</h3>"""
+        <h3>Top 3 Positive Posts</h3>"""
         
         if top_positive:
             for i, post in enumerate(top_positive, 1):
@@ -196,7 +196,7 @@ def create_html_report(posts_by_brand, brand_totals, data):
             html += "<p>No positive posts found for this period.</p>"
         
         html += f"""
-        <h3>🚨 Top 3 Negative Posts</h3>"""
+        <h3>Top 3 Negative Posts</h3>"""
         
         if top_negative:
             for i, post in enumerate(top_negative, 1):
@@ -216,7 +216,7 @@ def create_html_report(posts_by_brand, brand_totals, data):
         
         # All Posts - Full View
         html += f"""
-        <h3>📊 All Posts – Full View</h3>
+        <h3>All Posts - Full View</h3>
         <table>
             <thead>
                 <tr>
@@ -251,7 +251,7 @@ def create_html_report(posts_by_brand, brand_totals, data):
     # Live Weekly Searches section
     html += f"""
     <div class="section">
-        <h2>🔗 Live Weekly Searches</h2>
+        <h2>Live Weekly Searches</h2>
         <div class="live-links">
             <h4>Direct Reddit Links (Brian's Data Sources)</h4>
             <p><strong>HelloFresh:</strong> <a href="{WEEKLY_LINKS['HelloFresh']}" target="_blank">Weekly Search Results</a></p>
@@ -263,7 +263,7 @@ def create_html_report(posts_by_brand, brand_totals, data):
     today = datetime.now().strftime('%Y-%m-%d')
     html += f"""
     <div class="section">
-        <h2>📁 Data Files (Transparency)</h2>
+        <h2>Data Files (Transparency)</h2>
         <div class="data-files">
             <h4>Raw Data Access</h4>
             <p><strong>Raw Data:</strong> <code>reports/raw/raw_{today}.json</code></p>
@@ -302,7 +302,7 @@ def main():
         with open(STEP2_OUTPUT, 'w', encoding='utf-8') as f:
             f.write(html_content)
         
-        print(f"✅ Step 2 ACTIONABLE analysis saved to {STEP2_OUTPUT}")
+        print(f"[SUCCESS] Step 2 ACTIONABLE analysis saved to {STEP2_OUTPUT}")
         
         # Create archive copy
         timestamp = datetime.now().strftime('%Y-%m-%d')
@@ -311,10 +311,10 @@ def main():
         with open(archive_path, 'w', encoding='utf-8') as f:
             f.write(html_content)
         
-        print(f"✅ Archive copy saved to {archive_path}")
+        print(f"[SUCCESS] Archive copy saved to {archive_path}")
         
         # Print validation info
-        print(f"\n📊 Brand Totals (for Step 1 validation):")
+        print(f"\nBrand Totals (for Step 1 validation):")
         for brand in ['HelloFresh', 'Factor75']:
             totals = brand_totals.get(brand, {})
             pos = totals.get('positive', 0)
@@ -326,7 +326,7 @@ def main():
         return STEP2_OUTPUT
         
     except Exception as e:
-        print(f"✗ Error generating Step 2 analysis: {e}")
+        print(f"[ERROR] Error generating Step 2 analysis: {e}")
         return None
 
 if __name__ == "__main__":

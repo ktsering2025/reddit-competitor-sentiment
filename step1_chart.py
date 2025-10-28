@@ -134,7 +134,7 @@ def create_chart(brand_sentiment, data):
     # Save chart (stable name as per Brian's spec)
     os.makedirs('reports', exist_ok=True)
     plt.savefig(CHART_OUTPUT, dpi=300, bbox_inches='tight')
-    print(f"✅ Step 1 chart saved to {CHART_OUTPUT}")
+    print(f"[SUCCESS] Step 1 chart saved to {CHART_OUTPUT}")
     
     return CHART_OUTPUT
 
@@ -166,7 +166,7 @@ def main():
         return chart_path
         
     except Exception as e:
-        print(f"✗ Error generating Step 1 chart: {e}")
+        print(f"[ERROR] Error generating Step 1 chart: {e}")
         return None
 
 if __name__ == "__main__":

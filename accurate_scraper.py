@@ -144,7 +144,7 @@ class AccurateScraper:
                     brand_post_filter[brand] += 1
         
         # Print filter impact table
-        print(f"\n📊 FILTER IMPACT TABLE")
+        print(f"\nFILTER IMPACT TABLE")
         print(f"{'Brand':<12} | {'Pre-Filter':<10} | {'Post-Filter':<11} | {'Removed':<7}")
         print("-" * 50)
         for brand in COMPETITORS:
@@ -379,9 +379,9 @@ def main():
     with open(WORKING_DATA_FILE, 'w') as f:
         json.dump(data, f, indent=2)
     
-    print(f"\n✅ Scraped {data['total_posts']} posts using Brian's data sources")
-    print(f"✅ Data saved to {raw_file}")
-    print(f"✅ Working data saved to {WORKING_DATA_FILE}")
+    print(f"\n[SUCCESS] Scraped {data['total_posts']} posts using Brian's data sources")
+    print(f"[SUCCESS] Data saved to {raw_file}")
+    print(f"[SUCCESS] Working data saved to {WORKING_DATA_FILE}")
     
     # Print brand breakdown
     brand_counts = {}

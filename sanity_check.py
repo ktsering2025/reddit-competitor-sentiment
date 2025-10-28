@@ -14,7 +14,7 @@ from config import *
 def check_file_exists(filepath, description):
     """Check if a file exists and report"""
     exists = os.path.exists(filepath)
-    status = "✓" if exists else "✗"
+    status = "[OK]" if exists else "[ERROR]"
     print(f"{status} {description}: {filepath}")
     return exists
 
@@ -26,20 +26,20 @@ def check_git_status():
         if result.returncode == 0:
             changes = result.stdout.strip()
             if changes:
-                print("⚠ Git: Uncommitted changes detected")
+                print("[WARNING] Git: Uncommitted changes detected")
                 for line in changes.split('\n')[:5]:  # Show first 5 changes
                     print(f"  {line}")
             else:
-                print("✓ Git: Repository is clean")
+                print("[OK] Git: Repository is clean")
         else:
-            print("✗ Git: Error checking status")
+            print("[ERROR] Git: Error checking status")
     except:
-        print("✗ Git: Command not available")
+        print("[ERROR] Git: Command not available")
 
 def check_recent_data():
     """Check if recent data exists and is valid"""
     if not os.path.exists(WORKING_DATA_FILE):
-        print("✗ No working data found")
+        print("[ERROR] No working data found")
         return False
     
     try:
@@ -53,13 +53,13 @@ def check_recent_data():
             age_hours = (datetime.now().astimezone() - scrape_date).total_seconds() / 3600
             
             if age_hours < 24:
-                print(f"✓ Data is recent ({age_hours:.1f} hours old)")
+                print(f"[OK] Data is recent ({age_hours:.1f} hours old)")
             else:
-                print(f"⚠ Data is {age_hours:.1f} hours old (consider refresh)")
+                print(f"[WARNING] Data is {age_hours:.1f} hours old (consider refresh)")
         
         # Check post count
         posts = data.get('posts', [])
-        print(f"✓ Data contains {len(posts)} posts")
+        print(f"[OK] Data contains {len(posts)} posts")
         
         # Check brand coverage per Brian's spec
         brand_mentions = {brand: 0 for brand in COMPETITORS}
@@ -85,7 +85,7 @@ def check_recent_data():
         return True
         
     except Exception as e:
-        print(f"✗ Error reading data: {e}")
+        print(f"[ERROR] Error reading data: {e}")
         return False
 
 def check_data_sources():
@@ -117,23 +117,23 @@ def check_environment():
     all_required = True
     for var in required_vars:
         if os.getenv(var):
-            print(f"  ✓ {var}: configured")
+            print(f"  [OK] {var}: configured")
         else:
-            print(f"  ✗ {var}: missing (required)")
+            print(f"  [ERROR] {var}: missing (required)")
             all_required = False
     
     for var in optional_vars:
         if os.getenv(var):
-            print(f"  ✓ {var}: configured")
+            print(f"  [OK] {var}: configured")
         else:
-            print(f"  ⚠ {var}: not set (email features disabled)")
+            print(f"  [WARNING] {var}: not set (email features disabled)")
     
     return all_required
 
 def check_validation_rules():
     """Check Brian's validation rules"""
     if not os.path.exists(WORKING_DATA_FILE):
-        print("⚠ No data to validate")
+        print("[WARNING] No data to validate")
         return False
     
     try:
@@ -151,13 +151,13 @@ def check_validation_rules():
             
             if days_diff in [4, 5, 7]:
                 if days_diff == 4:
-                    print("✓ Date window: Monday-Friday (4 days)")
+                    print("[OK] Date window: Monday-Friday (4 days)")
                 elif days_diff == 5:
-                    print("✓ Date window: Monday-Saturday (5 days)")
+                    print("[OK] Date window: Monday-Saturday (5 days)")
                 else:
-                    print("✓ Date window: Full week (7 days)")
+                    print("[OK] Date window: Full week (7 days)")
             else:
-                print(f"✗ Date window: {days_diff} days (should be 4-5 or 7)")
+                print(f"[ERROR] Date window: {days_diff} days (should be 4-5 or 7)")
                 return False
         
         # Check sentiment math for each brand
@@ -178,21 +178,21 @@ def check_validation_rules():
             brand_totals[brand] = {'pos': pos, 'neg': neg, 'neu': neu, 'total': total}
             
             if pos + neg + neu == total:
-                print(f"✓ {brand}: sentiment math checks out ({pos}+{neg}+{neu}={total})")
+                print(f"[OK] {brand}: sentiment math checks out ({pos}+{neg}+{neu}={total})")
             else:
-                print(f"✗ {brand}: sentiment math error ({pos}+{neg}+{neu}≠{total})")
+                print(f"[ERROR] {brand}: sentiment math error ({pos}+{neg}+{neu}≠{total})")
                 return False
         
         return True
         
     except Exception as e:
-        print(f"✗ Validation error: {e}")
+        print(f"[ERROR] Validation error: {e}")
         return False
 
 def check_step2_top3_excludes_neutral():
     """Assert that Step 2 top-3 lists exclude neutral sentiment"""
     if not os.path.exists(WORKING_DATA_FILE):
-        print("⚠ No data to validate")
+        print("[WARNING] No data to validate")
         return False
     
     try:
@@ -216,19 +216,19 @@ def check_step2_top3_excludes_neutral():
             # Assert no neutral in top-3
             for post in positive_posts:
                 if post.get('sentiment') == 'neutral':
-                    print(f"✗ {brand}: Top-3 positive contains neutral post")
+                    print(f"[ERROR] {brand}: Top-3 positive contains neutral post")
                     return False
             
             for post in negative_posts:
                 if post.get('sentiment') == 'neutral':
-                    print(f"✗ {brand}: Top-3 negative contains neutral post")
+                    print(f"[ERROR] {brand}: Top-3 negative contains neutral post")
                     return False
         
-        print("✓ Step 2 top-3 lists exclude neutral (as expected)")
+        print("[OK] Step 2 top-3 lists exclude neutral (as expected)")
         return True
         
     except Exception as e:
-        print(f"✗ Step 2 validation error: {e}")
+        print(f"[ERROR] Step 2 validation error: {e}")
         return False
 
 def check_filter_impact():
@@ -238,7 +238,7 @@ def check_filter_impact():
     metadata_files = glob.glob('reports/raw/metadata_*.json')
     
     if not metadata_files:
-        print("⚠ No metadata files found")
+        print("[WARNING] No metadata files found")
         return
     
     latest_metadata = sorted(metadata_files)[-1]
@@ -260,10 +260,10 @@ def check_filter_impact():
                 print(f"{brand:<12} | {pre:<10} | {post:<11} | {removed:<7}")
             print("-" * 50)
         else:
-            print("⚠ No filter stats in metadata (may need to re-run scraper)")
+            print("[WARNING] No filter stats in metadata (may need to re-run scraper)")
             
     except Exception as e:
-        print(f"✗ Error reading metadata: {e}")
+        print(f"[ERROR] Error reading metadata: {e}")
 
 def main():
     """Main sanity check function"""
@@ -343,9 +343,9 @@ def main():
     
     # Final status
     if all_core_exist and data_ok and validation_ok and step2_ok:
-        print("✅ System ready for Brian's automation")
+        print("[SUCCESS] System ready for Brian's automation")
     else:
-        print("⚠ Issues detected - review above")
+        print("[WARNING] Issues detected - review above")
     
     print()
     print("QUICK SELF-CHECK (Brian's spec):")

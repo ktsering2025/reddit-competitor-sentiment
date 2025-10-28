@@ -93,7 +93,7 @@ def run_what_i_did_summary():
     log_and_print("WHAT I DID")
     log_and_print("="*50)
     
-    log_and_print("✓ Links Updated (Brian's data sources):")
+    log_and_print("[OK] Links Updated (Brian's data sources):")
     for brand, link in WEEKLY_LINKS.items():
         if isinstance(link, list):
             log_and_print(f"  {brand} → {len(link)} sources")
@@ -102,7 +102,7 @@ def run_what_i_did_summary():
         else:
             log_and_print(f"  {brand} → {link}")
     
-    log_and_print("\n✓ Files Kept (canonical only):")
+    log_and_print("\n[OK] Files Kept (canonical only):")
     canonical_files = [
         'accurate_scraper.py', 'step1_chart.py', 'step2_ACTIONABLE_analysis.py',
         'complete_automation.py', 'send_to_gmail.py', 'sanity_check.py', 'config.py',
@@ -110,9 +110,9 @@ def run_what_i_did_summary():
     ]
     for file in canonical_files:
         if os.path.exists(file):
-            log_and_print(f"  ✓ {file}")
+            log_and_print(f"  [OK] {file}")
     
-    log_and_print("\n✓ Artifacts Generated:")
+    log_and_print("\n[OK] Artifacts Generated:")
     artifacts = [
         'reports/step1_chart.png',
         'reports/step2_ACTIONABLE_analysis_LATEST.html',
@@ -120,7 +120,7 @@ def run_what_i_did_summary():
     ]
     for artifact in artifacts:
         if os.path.exists(artifact):
-            log_and_print(f"  ✓ {artifact}")
+            log_and_print(f"  [OK] {artifact}")
 
 def run_pipeline(send_email=False, email_recipients=None):
     """Run the complete automation pipeline per Brian's spec"""
@@ -139,7 +139,7 @@ def run_pipeline(send_email=False, email_recipients=None):
     
     try:
         # Step 1: Run accurate scraper
-        log_and_print("\n🔄 Step 1: Running accurate_scraper.py...")
+        log_and_print("\n[STEP 1] Running accurate_scraper.py...")
         
         # Ensure environment variables are set for subprocess
         env = os.environ.copy()
@@ -151,14 +151,14 @@ def run_pipeline(send_email=False, email_recipients=None):
                               capture_output=True, text=True, env=env)
         if result.returncode != 0:
             raise Exception(f"Scraper failed: {result.stderr}")
-        log_and_print("✅ Scraper completed - data saved to working_reddit_data.json")
+        log_and_print("[SUCCESS] Scraper completed - data saved to working_reddit_data.json")
         
         # Load data for validation
         with open(WORKING_DATA_FILE, 'r') as f:
             data = json.load(f)
         
         # Step 2: Generate filtered, metadata files
-        log_and_print("\n🔄 Step 2: Processing raw data...")
+        log_and_print("\n[STEP 2] Processing raw data...")
         timestamp = datetime.now().strftime('%Y-%m-%d')
         
         # Create filtered dataset (same as raw for now)
@@ -200,26 +200,26 @@ def run_pipeline(send_email=False, email_recipients=None):
         with open(raw_file, 'w') as f:
             json.dump(data, f, indent=2)
         
-        log_and_print(f"✅ Raw data processing complete - files saved with {timestamp}")
+        log_and_print(f"[SUCCESS] Raw data processing complete - files saved with {timestamp}")
         
         # Step 3: Generate Step 1 chart
-        log_and_print("\n🔄 Step 3: Generating Step 1 chart...")
+        log_and_print("\n[STEP 3] Generating Step 1 chart...")
         result = subprocess.run([sys.executable, 'step1_chart.py'], 
                               capture_output=True, text=True)
         if result.returncode != 0:
             raise Exception(f"Step 1 chart failed: {result.stderr}")
-        log_and_print("✅ Step 1 chart generated successfully")
+        log_and_print("[SUCCESS] Step 1 chart generated successfully")
         
         # Step 4: Generate Step 2 analysis
-        log_and_print("\n🔄 Step 4: Generating Step 2 ACTIONABLE analysis...")
+        log_and_print("\n[STEP 4] Generating Step 2 ACTIONABLE analysis...")
         result = subprocess.run([sys.executable, 'step2_ACTIONABLE_analysis.py'], 
                               capture_output=True, text=True)
         if result.returncode != 0:
             raise Exception(f"Step 2 analysis failed: {result.stderr}")
-        log_and_print("✅ Step 2 analysis generated successfully")
+        log_and_print("[SUCCESS] Step 2 analysis generated successfully")
         
         # Step 5: Brian's strict validation
-        log_and_print("\n🔄 Step 5: Running Brian's validation rules...")
+        log_and_print("\n[STEP 5] Running Brian's validation rules...")
         validation_errors, brand_counts = validate_data_integrity(data)
         
         if validation_errors:
@@ -234,7 +234,7 @@ def run_pipeline(send_email=False, email_recipients=None):
             
             return False
         
-        log_and_print("✅ All validation rules PASSED")
+        log_and_print("[SUCCESS] All validation rules PASSED")
         
         # Update metadata with success
         metadata['validation_status'] = 'passed'
@@ -242,7 +242,7 @@ def run_pipeline(send_email=False, email_recipients=None):
             json.dump(metadata, f, indent=2)
         
         # Step 6: Archive artifacts
-        log_and_print("\n🔄 Step 6: Archiving artifacts...")
+        log_and_print("\n[STEP 6] Archiving artifacts...")
         archive_dir = f'{ARCHIVE_DIR}/{timestamp}'
         os.makedirs(archive_dir, exist_ok=True)
         
@@ -252,10 +252,10 @@ def run_pipeline(send_email=False, email_recipients=None):
         if os.path.exists(STEP2_OUTPUT):
             subprocess.run(['cp', STEP2_OUTPUT, f'{archive_dir}/step2_ACTIONABLE_analysis.html'])
         
-        log_and_print(f"✅ Artifacts archived to {archive_dir}")
+        log_and_print(f"[SUCCESS] Artifacts archived to {archive_dir}")
         
         # Step 7: Git commit and push
-        log_and_print("\n🔄 Step 7: Git commit and push...")
+        log_and_print("\n[STEP 7] Git commit and push...")
         try:
             subprocess.run(['git', 'add', '.'], check=True)
             commit_msg = f"Brian's automation update {datetime.now().strftime('%Y-%m-%d %H:%M')}"
@@ -279,26 +279,26 @@ def run_pipeline(send_email=False, email_recipients=None):
                 subprocess.run(['git', 'commit', '--amend', '--no-edit'], check=True)
             
             subprocess.run(['git', 'push'], check=True)
-            log_and_print("✅ GitHub Pages updated successfully")
+            log_and_print("[SUCCESS] GitHub Pages updated successfully")
         except subprocess.CalledProcessError as e:
-            log_and_print(f"⚠ Git operation failed: {e}", "WARNING")
+            log_and_print(f"[WARNING] Git operation failed: {e}", "WARNING")
         
         # Step 8: Email (optional)
         if send_email and email_recipients:
-            log_and_print("\n🔄 Step 8: Sending email report...")
+            log_and_print("\n[STEP 8] Sending email report...")
             try:
                 # Set environment variable for recipients
                 os.environ['EMAIL_RECIPIENTS'] = ','.join(email_recipients)
                 result = subprocess.run([sys.executable, 'send_to_gmail.py'], 
                                       capture_output=True, text=True)
                 if result.returncode == 0:
-                    log_and_print(f"✅ Email sent to {', '.join(email_recipients)}")
+                    log_and_print(f"[SUCCESS] Email sent to {', '.join(email_recipients)}")
                 else:
-                    log_and_print(f"⚠ Email failed: {result.stderr}", "WARNING")
+                    log_and_print(f"[WARNING] Email failed: {result.stderr}", "WARNING")
             except Exception as e:
-                log_and_print(f"⚠ Email error: {e}", "WARNING")
+                log_and_print(f"[WARNING] Email error: {e}", "WARNING")
         else:
-            log_and_print("\n📧 Email: SKIPPED")
+            log_and_print("\n[EMAIL] SKIPPED")
         
         # Print summaries per Brian's spec
         run_what_i_did_summary()
@@ -388,7 +388,7 @@ def main():
         if EMAIL_RECIPIENTS and EMAIL_RECIPIENTS[0]:  # Check if env var is set
             email_recipients = EMAIL_RECIPIENTS
         else:
-            print("⚠ --send-email specified but EMAIL_RECIPIENTS not configured")
+            print("[WARNING] --send-email specified but EMAIL_RECIPIENTS not configured")
             send_email = False
     
     success = run_pipeline(send_email=send_email, email_recipients=email_recipients)
