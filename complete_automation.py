@@ -64,7 +64,7 @@ def validate_data_integrity(data):
     
     # Validation Rule 2: For each brand: pos + neg + neutral == total
     brand_counts = {}
-    for brand in COMPETITORS:
+    for brand in ALL_COMPETITORS:
         pos = neg = neu = 0
         for post in posts:
             if brand in post.get('competitors_mentioned', []):
@@ -170,7 +170,7 @@ def run_pipeline(send_email=False, email_recipients=None):
         
         # Extract filter stats from the data (if available)
         filter_stats = {}
-        for brand in COMPETITORS:
+        for brand in ALL_COMPETITORS:
             filter_stats[brand] = {
                 'pre_filter': 0,
                 'post_filter': 0
@@ -184,7 +184,7 @@ def run_pipeline(send_email=False, email_recipients=None):
             'processing_timestamp': datetime.now(timezone.utc).isoformat(),
             'total_posts': len(filtered_data.get('posts', [])),
             'date_range': filtered_data.get('date_range', {}),
-            'brands_analyzed': COMPETITORS,
+            'brands_analyzed': ALL_COMPETITORS,
             'data_sources': WEEKLY_LINKS,
             'validation_status': 'pending',
             'commit_hash': get_git_commit_hash(),
@@ -218,7 +218,15 @@ def run_pipeline(send_email=False, email_recipients=None):
             raise Exception(f"Step 2 analysis failed: {result.stderr}")
         log_and_print("[SUCCESS] Step 2 analysis generated successfully")
         
-        # Step 5: Brian's strict validation
+        # Step 5: Generate Step 3 competitor analysis
+        log_and_print("\\n[STEP 5] Generating Step 3 competitor analysis...")
+        result = subprocess.run([sys.executable, 'step3_competitor_analysis.py'], 
+                              capture_output=True, text=True)
+        if result.returncode != 0:
+            raise Exception(f"Step 3 analysis failed: {result.stderr}")
+        log_and_print("[SUCCESS] Step 3 competitor analysis generated successfully")
+        
+        # Step 6: Brian's strict validation
         log_and_print("\n[STEP 5] Running Brian's validation rules...")
         validation_errors, brand_counts = validate_data_integrity(data)
         
@@ -326,7 +334,7 @@ def run_pipeline(send_email=False, email_recipients=None):
         
         log_and_print(f"Date window (UTC): {start_date} to {end_date}")
         
-        for brand in COMPETITORS:
+        for brand in ALL_COMPETITORS:
             pos = brand_counts[brand]['pos']
             neg = brand_counts[brand]['neg']
             neu = brand_counts[brand]['neu']

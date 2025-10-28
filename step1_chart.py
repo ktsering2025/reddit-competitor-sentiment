@@ -31,8 +31,8 @@ def load_data():
         raise FileNotFoundError("No working data found. Run accurate_scraper.py first.")
 
 def analyze_brand_sentiment(data):
-    """Analyze sentiment breakdown by brand (Brian's 6 competitors)"""
-    brand_sentiment = {brand: {'positive': 0, 'negative': 0, 'neutral': 0} for brand in COMPETITORS}
+    """Analyze sentiment breakdown by brand (all competitors for Step 1)"""
+    brand_sentiment = {brand: {'positive': 0, 'negative': 0, 'neutral': 0} for brand in ALL_COMPETITORS}
     
     posts = data.get('posts', [])
     
@@ -50,15 +50,15 @@ def create_chart(brand_sentiment, data):
     """Create Step 1 chart per Brian's exact specifications"""
     
     # Prepare data for stacking
-    positive_counts = [brand_sentiment[brand]['positive'] for brand in COMPETITORS]
-    negative_counts = [brand_sentiment[brand]['negative'] for brand in COMPETITORS]
-    neutral_counts = [brand_sentiment[brand]['neutral'] for brand in COMPETITORS]
+    positive_counts = [brand_sentiment[brand]['positive'] for brand in ALL_COMPETITORS]
+    negative_counts = [brand_sentiment[brand]['negative'] for brand in ALL_COMPETITORS]
+    neutral_counts = [brand_sentiment[brand]['neutral'] for brand in ALL_COMPETITORS]
     
     # Create figure with Brian's specified size
     fig, ax = plt.subplots(figsize=CHART_FIGSIZE)
     
     # Create stacked bars (Positive/Negative/Neutral as per spec)
-    x = np.arange(len(COMPETITORS))
+    x = np.arange(len(ALL_COMPETITORS))
     width = 0.6
     
     # Stack: Positive (bottom), Negative (middle), Neutral (top)
@@ -66,7 +66,7 @@ def create_chart(brand_sentiment, data):
     p2 = ax.bar(x, negative_counts, width, bottom=positive_counts, label='Negative', color='#DC143C', alpha=0.8)
     
     # Calculate bottom for neutral (positive + negative)
-    neutral_bottom = [positive_counts[i] + negative_counts[i] for i in range(len(COMPETITORS))]
+    neutral_bottom = [positive_counts[i] + negative_counts[i] for i in range(len(ALL_COMPETITORS))]
     p3 = ax.bar(x, neutral_counts, width, bottom=neutral_bottom, label='Neutral', color='#808080', alpha=0.8)
     
     # Title (2 lines as per Brian's spec)
@@ -95,10 +95,10 @@ def create_chart(brand_sentiment, data):
     # X-axis label (Brian's exact text)
     ax.set_xlabel('Counts are unique posts (no comments/reposts)', fontsize=12, fontweight='bold')
     ax.set_xticks(x)
-    ax.set_xticklabels(COMPETITORS, rotation=35, ha='right')  # 30-40° rotation for legibility
+    ax.set_xticklabels(ALL_COMPETITORS, rotation=35, ha='right')  # 30-40° rotation for legibility
     
     # Y-axis - integer ticks only
-    max_y = max([sum([positive_counts[i], negative_counts[i], neutral_counts[i]]) for i in range(len(COMPETITORS))])
+    max_y = max([sum([positive_counts[i], negative_counts[i], neutral_counts[i]]) for i in range(len(ALL_COMPETITORS))])
     if max_y > 0:
         ax.set_yticks(range(0, max_y + 2))
     else:

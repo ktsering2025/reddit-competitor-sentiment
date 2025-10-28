@@ -14,14 +14,23 @@ GMAIL_EMAIL = os.getenv('GMAIL_EMAIL')
 GMAIL_APP_PASSWORD = os.getenv('GMAIL_APP_PASSWORD')
 EMAIL_RECIPIENTS = os.getenv('EMAIL_RECIPIENTS', 'brian.leung@hellofresh.com,asaf@hellofresh.com').split(',')
 
-# DATA SOURCES - Weekly Reddit Search Links (locked as per Brian's spec)
+# DATA SOURCES - Weekly Reddit Search Links (all competitors for Step 1)
 WEEKLY_LINKS = {
-    "HelloFresh": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week&cId=08353dc8-9146-4af0-8a43-b88c1acb9c9f&iId=bf5bf57d-392e-4933-ae90-6285e2717618",
-    "Factor75": "https://www.reddit.com/search/?q=factor75&type=posts&t=week&cId=44d92750-2572-487c-91c0-2aed826ec3ab&iId=4441f666-996b-4434-b057-3999a14b44d7"
+    "HelloFresh": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
+    "Factor75": "https://old.reddit.com/search/?q=factor75&type=posts&t=week&sort=new",
+    "Blue Apron": "https://old.reddit.com/search/?q=blue+apron&type=posts&t=week&sort=new",
+    "Home Chef": "https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new",
+    "Marley Spoon": "https://old.reddit.com/search/?q=marley+spoon&type=posts&t=week&sort=new",
+    "Hungryroot": "https://old.reddit.com/search/?q=hungryroot&type=posts&t=week&sort=new",
+    "EveryPlate": "https://old.reddit.com/search/?q=everyplate&type=posts&t=week&sort=new",
+    "Green Chef": "https://old.reddit.com/search/?q=green+chef&type=posts&t=week&sort=new"
 }
 
-# Brand List (2 focus brands as specified)
-COMPETITORS = ["HelloFresh", "Factor75"]
+# All competitors for Step 1 chart
+ALL_COMPETITORS = ["HelloFresh", "Factor75", "Blue Apron", "Home Chef", "Marley Spoon", "Hungryroot", "EveryPlate", "Green Chef"]
+
+# Focus brands for Step 2 deep dive (60% of HF revenue)
+FOCUS_BRANDS = ["HelloFresh", "Factor75"]
 
 # Filtering Configuration
 EXCLUDE_KEYWORDS = [

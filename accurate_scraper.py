@@ -221,7 +221,7 @@ class AccurateScraper:
         print(f"\nFILTER IMPACT TABLE")
         print(f"{'Brand':<12} | {'Pre-Filter':<10} | {'Post-Filter':<11} | {'Removed':<7}")
         print("-" * 50)
-        for brand in COMPETITORS:
+        for brand in ALL_COMPETITORS:
             pre = brand_pre_filter[brand]
             post = brand_post_filter[brand]
             removed = pre - post
@@ -230,7 +230,7 @@ class AccurateScraper:
         
         # Calculate filter stats
         filter_stats = {}
-        for brand in COMPETITORS:
+        for brand in ALL_COMPETITORS:
             pre = brand_pre_filter[brand]
             post = brand_post_filter[brand]
             removed = pre - post
@@ -489,7 +489,7 @@ def main():
             brand_counts[brand] = brand_counts.get(brand, 0) + 1
     
     print(f"\nBrand breakdown:")
-    for brand in COMPETITORS:
+    for brand in ALL_COMPETITORS:
         count = brand_counts.get(brand, 0)
         print(f"  {brand}: {count} posts")
     

@@ -35,8 +35,11 @@ def calculate_engagement_score(post):
     comments = post.get('num_comments', 0)
     return score + (3 * comments)
 
-def get_posts_by_brand(data, target_brands=['HelloFresh', 'Factor75']):
-    """Get posts for HelloFresh and Factor75 (Brian's focus brands)"""
+def get_posts_by_brand(data, target_brands=None):
+    """Get posts for focus brands (HelloFresh and Factor75 by default)"""
+    if target_brands is None:
+        target_brands = FOCUS_BRANDS
+    
     posts_by_brand = defaultdict(list)
     
     for post in data.get('posts', []):
@@ -58,11 +61,31 @@ def get_top_posts_by_sentiment(posts, sentiment, limit=3):
     sorted_posts = sorted(filtered_posts, key=lambda x: x['engagement_score'], reverse=True)
     return sorted_posts[:limit]
 
+def categorize_post_themes(posts):
+    """Categorize posts into themes (Quality, Delivery, Service, Price)"""
+    theme_keywords = {
+        'Quality': ['taste', 'flavor', 'fresh', 'quality', 'ingredients', 'cooking', 'recipe', 'delicious', 'bland', 'tasteless'],
+        'Delivery': ['delivery', 'shipping', 'late', 'on time', 'packaging', 'arrived', 'damaged', 'cold', 'frozen'],
+        'Service': ['customer service', 'support', 'refund', 'cancel', 'subscription', 'billing', 'help', 'complaint'],
+        'Price': ['price', 'cost', 'expensive', 'cheap', 'value', 'money', 'worth', 'affordable', 'overpriced']
+    }
+    
+    theme_counts = {'Quality': 0, 'Delivery': 0, 'Service': 0, 'Price': 0}
+    
+    for post in posts:
+        text = (post.get('title', '') + ' ' + post.get('selftext', '')).lower()
+        for theme, keywords in theme_keywords.items():
+            if any(keyword in text for keyword in keywords):
+                theme_counts[theme] += 1
+                break
+    
+    return theme_counts
+
 def analyze_brand_totals(data):
     """Calculate brand totals for validation with Step 1"""
     brand_totals = {}
     
-    for brand in ['HelloFresh', 'Factor75']:
+    for brand in FOCUS_BRANDS:
         pos = neg = neu = 0
         for post in data.get('posts', []):
             if brand in post.get('competitors_mentioned', []):
