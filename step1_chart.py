@@ -32,10 +32,12 @@ def load_data():
 
 def analyze_brand_sentiment(data):
     """Analyze sentiment breakdown by brand (all competitors for Step 1)"""
+    # Initialize all 6 brands with zeros
     brand_sentiment = {brand: {'positive': 0, 'negative': 0, 'neutral': 0} for brand in ALL_COMPETITORS}
     
     posts = data.get('posts', [])
     
+    # Count sentiment for each brand
     for post in posts:
         mentioned_brands = post.get('competitors_mentioned', [])
         sentiment = post.get('sentiment', 'neutral')

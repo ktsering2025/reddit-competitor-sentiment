@@ -300,6 +300,25 @@ def run_pipeline(send_email=False, email_recipients=None):
             
             subprocess.run(['git', 'push'], check=True)
             log_and_print("[SUCCESS] GitHub Pages updated successfully")
+            
+            # Create HEALTH.json for site freshness check
+            try:
+                health_data = {
+                    "status": "valid",
+                    "date_window_utc": {
+                        "start": date_range.get('start', 'unknown').split('T')[0],
+                        "end": date_range.get('end', 'unknown').split('T')[0]
+                    },
+                    "commit": get_git_commit_hash(),
+                    "generated_utc": datetime.now(timezone.utc).isoformat(),
+                    "brands": ALL_COMPETITORS
+                }
+                with open('reports/HEALTH.json', 'w') as f:
+                    json.dump(health_data, f, indent=2)
+                log_and_print("[SUCCESS] HEALTH.json created for site freshness check")
+            except Exception as e:
+                log_and_print(f"[WARNING] Failed to create HEALTH.json: {e}", "WARNING")
+                
         except subprocess.CalledProcessError as e:
             log_and_print(f"[WARNING] Git operation failed: {e}", "WARNING")
         

@@ -153,6 +153,9 @@
             <h1>Reddit Sentiment Dashboard</h1>
             <p>Weekly Competitive Intelligence for HelloFresh & Factor75</p>
             <p><strong>Last Updated:</strong> October 27, 2025 | <strong>Next Update:</strong> Every Sunday</p>
+            <div id="health-status" style="margin-top: 10px; font-size: 0.9em; opacity: 0.9;">
+                <span id="health-text">Loading status...</span>
+            </div>
         </div>
         
         <div class="update-info">
@@ -225,5 +228,22 @@
             <p>Automated weekly updates every Sunday | Email reports sent Monday morning</p>
         </div>
     </div>
+    
+    <script>
+        // Load health status
+        fetch('reports/HEALTH.json')
+            .then(response => response.json())
+            .then(data => {
+                const healthText = document.getElementById('health-text');
+                if (data.status === 'valid') {
+                    healthText.innerHTML = `Last Run: Valid ✓ | ${data.date_window_utc.start} to ${data.date_window_utc.end} | Commit ${data.commit}`;
+                } else {
+                    healthText.innerHTML = 'Last Run: Error ✗ | Check system status';
+                }
+            })
+            .catch(error => {
+                document.getElementById('health-text').innerHTML = 'Last Run: Unknown | System offline';
+            });
+    </script>
 </body>
 </html>

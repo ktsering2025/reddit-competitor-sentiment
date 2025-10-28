@@ -50,8 +50,6 @@ Uses canonical weekly Reddit searches from old.reddit.com for all competitors:
 - **Home Chef**: https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new
 - **Marley Spoon**: https://old.reddit.com/search/?q=marley+spoon&type=posts&t=week&sort=new
 - **Hungryroot**: https://old.reddit.com/search/?q=hungryroot&type=posts&t=week&sort=new
-- **EveryPlate**: https://old.reddit.com/search/?q=everyplate&type=posts&t=week&sort=new
-- **Green Chef**: https://old.reddit.com/search/?q=green+chef&type=posts&t=week&sort=new
 
 ## Files
 

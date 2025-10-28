@@ -465,13 +465,30 @@ def main():
     with open(WORKING_DATA_FILE, 'w') as f:
         json.dump(data, f, indent=2)
     
-    # Save metadata
+    # Calculate brand counts for all 6 brands (including zeros)
+    brand_counts = {brand: 0 for brand in ALL_COMPETITORS}
+    for post in data['posts']:
+        for brand in post['competitors_mentioned']:
+            if brand in brand_counts:
+                brand_counts[brand] += 1
+    
+    # Ensure filter_stats includes all 6 brands
+    complete_filter_stats = {}
+    for brand in ALL_COMPETITORS:
+        complete_filter_stats[brand] = data['filter_stats'].get(brand, {
+            'pre_filter': 0,
+            'post_filter': 0
+        })
+    
+    # Save metadata with all 6 brands
     metadata_file = f'reports/raw/metadata_{timestamp}.json'
     metadata = {
         'processing_timestamp': data['processing_timestamp'],
         'date_range': data['date_range'],
         'data_sources': data['data_sources'],
-        'filter_stats': data['filter_stats'],
+        'filter_stats': complete_filter_stats,
+        'brand_counts': brand_counts,
+        'brands_analyzed': ALL_COMPETITORS,
         'total_posts': data['total_posts']
     }
     with open(metadata_file, 'w') as f:
@@ -481,16 +498,6 @@ def main():
     print(f"[SUCCESS] Data saved to {raw_file}")
     print(f"[SUCCESS] Working data saved to {WORKING_DATA_FILE}")
     print(f"[SUCCESS] Metadata saved to {metadata_file}")
-    
-    # Calculate brand counts for all 6 brands (including zeros)
-    brand_counts = {brand: 0 for brand in ALL_COMPETITORS}
-    for post in data['posts']:
-        for brand in post['competitors_mentioned']:
-            if brand in brand_counts:
-                brand_counts[brand] += 1
-    
-    # Add brand_counts to metadata
-    metadata['brand_counts'] = brand_counts
     
     print(f"\nBrand breakdown:")
     for brand in ALL_COMPETITORS:
