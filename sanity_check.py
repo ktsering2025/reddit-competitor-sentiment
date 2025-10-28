@@ -189,6 +189,82 @@ def check_validation_rules():
         print(f"✗ Validation error: {e}")
         return False
 
+def check_step2_top3_excludes_neutral():
+    """Assert that Step 2 top-3 lists exclude neutral sentiment"""
+    if not os.path.exists(WORKING_DATA_FILE):
+        print("⚠ No data to validate")
+        return False
+    
+    try:
+        with open(WORKING_DATA_FILE, 'r') as f:
+            data = json.load(f)
+        
+        posts = data.get('posts', [])
+        
+        # Check top-3 positive and negative for HelloFresh and Factor75
+        for brand in ['HelloFresh', 'Factor75']:
+            brand_posts = [p for p in posts if brand in p.get('competitors_mentioned', [])]
+            
+            # Get top 3 positive
+            positive_posts = [p for p in brand_posts if p.get('sentiment') == 'positive']
+            positive_posts = sorted(positive_posts, key=lambda x: x.get('score', 0) + 3 * x.get('num_comments', 0), reverse=True)[:3]
+            
+            # Get top 3 negative
+            negative_posts = [p for p in brand_posts if p.get('sentiment') == 'negative']
+            negative_posts = sorted(negative_posts, key=lambda x: x.get('score', 0) + 3 * x.get('num_comments', 0), reverse=True)[:3]
+            
+            # Assert no neutral in top-3
+            for post in positive_posts:
+                if post.get('sentiment') == 'neutral':
+                    print(f"✗ {brand}: Top-3 positive contains neutral post")
+                    return False
+            
+            for post in negative_posts:
+                if post.get('sentiment') == 'neutral':
+                    print(f"✗ {brand}: Top-3 negative contains neutral post")
+                    return False
+        
+        print("✓ Step 2 top-3 lists exclude neutral (as expected)")
+        return True
+        
+    except Exception as e:
+        print(f"✗ Step 2 validation error: {e}")
+        return False
+
+def check_filter_impact():
+    """Print pre_filter/post_filter/removed table from latest metadata"""
+    # Find latest metadata file
+    import glob
+    metadata_files = glob.glob('reports/raw/metadata_*.json')
+    
+    if not metadata_files:
+        print("⚠ No metadata files found")
+        return
+    
+    latest_metadata = sorted(metadata_files)[-1]
+    
+    try:
+        with open(latest_metadata, 'r') as f:
+            metadata = json.load(f)
+        
+        filter_stats = metadata.get('filter_stats', {})
+        
+        if filter_stats:
+            print(f"\nFilter Impact Table (from {os.path.basename(latest_metadata)}):")
+            print(f"{'Brand':<12} | {'Pre-Filter':<10} | {'Post-Filter':<11} | {'Removed':<7}")
+            print("-" * 50)
+            for brand in COMPETITORS:
+                pre = filter_stats.get(brand, {}).get('pre_filter', 0)
+                post = filter_stats.get(brand, {}).get('post_filter', 0)
+                removed = pre - post
+                print(f"{brand:<12} | {pre:<10} | {post:<11} | {removed:<7}")
+            print("-" * 50)
+        else:
+            print("⚠ No filter stats in metadata (may need to re-run scraper)")
+            
+    except Exception as e:
+        print(f"✗ Error reading metadata: {e}")
+
 def main():
     """Main sanity check function"""
     print("=" * 60)
@@ -250,13 +326,23 @@ def main():
     validation_ok = check_validation_rules()
     print()
     
+    # Check Step 2 top-3 excludes neutral
+    print("Step 2 Top-3 Guardrails:")
+    step2_ok = check_step2_top3_excludes_neutral()
+    print()
+    
+    # Check filter impact
+    print("Filter Impact:")
+    check_filter_impact()
+    print()
+    
     # Check git
     print("Git Status:")
     check_git_status()
     print()
     
     # Final status
-    if all_core_exist and data_ok and validation_ok:
+    if all_core_exist and data_ok and validation_ok and step2_ok:
         print("✅ System ready for Brian's automation")
     else:
         print("⚠ Issues detected - review above")

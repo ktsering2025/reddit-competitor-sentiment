@@ -41,8 +41,9 @@ SENTIMENT_THRESHOLD = 0.1
 POSITIVE_THRESHOLD = 0.05
 NEGATIVE_THRESHOLD = -0.05
 
-# Week Window Strategy (Monday-Friday focus per your refinement)
-WEEK_WINDOW_STRATEGY = "Mon-Fri"  # Use Monday-Friday, include Saturday if >5 total posts
+# Week Window Strategy (A) Week-window & data sources per your spec
+WEEK_MODE = "MON_SAT"   # allowed: MON_FRI | MON_SAT | FULL_7
+WEEK_END_OVERRIDE = None  # or "2025-10-25" when WEEK_END env is set
 INCLUDE_SATURDAY_THRESHOLD = 5
 
 # File Paths

@@ -129,11 +129,26 @@ def run_pipeline(send_email=False, email_recipients=None):
     log_and_print("=" * 60)
     log_and_print(f"ABS PATH: {os.getcwd()}")
     
+    # Preserve WEEK_MODE and WEEK_END environment variables
+    week_mode = os.getenv('WEEK_MODE', WEEK_MODE)
+    week_end = os.getenv('WEEK_END', WEEK_END_OVERRIDE)
+    
+    log_and_print(f"Week mode: {week_mode}")
+    if week_end:
+        log_and_print(f"Week end override: {week_end}")
+    
     try:
         # Step 1: Run accurate scraper
         log_and_print("\n🔄 Step 1: Running accurate_scraper.py...")
+        
+        # Ensure environment variables are set for subprocess
+        env = os.environ.copy()
+        env['WEEK_MODE'] = week_mode
+        if week_end:
+            env['WEEK_END'] = week_end
+        
         result = subprocess.run([sys.executable, 'accurate_scraper.py'], 
-                              capture_output=True, text=True)
+                              capture_output=True, text=True, env=env)
         if result.returncode != 0:
             raise Exception(f"Scraper failed: {result.stderr}")
         log_and_print("✅ Scraper completed - data saved to working_reddit_data.json")
@@ -153,6 +168,17 @@ def run_pipeline(send_email=False, email_recipients=None):
         with open(filtered_file, 'w') as f:
             json.dump(filtered_data, f, indent=2)
         
+        # Extract filter stats from the data (if available)
+        filter_stats = {}
+        for brand in COMPETITORS:
+            filter_stats[brand] = {
+                'pre_filter': 0,
+                'post_filter': 0
+            }
+            for post in filtered_data.get('posts', []):
+                if brand in post.get('competitors_mentioned', []):
+                    filter_stats[brand]['post_filter'] += 1
+        
         # Create metadata
         metadata = {
             'processing_timestamp': datetime.now(timezone.utc).isoformat(),
@@ -161,7 +187,8 @@ def run_pipeline(send_email=False, email_recipients=None):
             'brands_analyzed': COMPETITORS,
             'data_sources': WEEKLY_LINKS,
             'validation_status': 'pending',
-            'commit_hash': get_git_commit_hash()
+            'commit_hash': get_git_commit_hash(),
+            'filter_stats': filter_stats
         }
         
         metadata_file = f'{RAW_DATA_DIR}/metadata_{timestamp}.json'
@@ -233,6 +260,24 @@ def run_pipeline(send_email=False, email_recipients=None):
             subprocess.run(['git', 'add', '.'], check=True)
             commit_msg = f"Brian's automation update {datetime.now().strftime('%Y-%m-%d %H:%M')}"
             subprocess.run(['git', 'commit', '-m', commit_msg], check=True)
+            
+            # Update index.html with new commit hash for cache busting
+            new_commit_hash = get_git_commit_hash()
+            
+            if os.path.exists('index.html'):
+                with open('index.html', 'r') as f:
+                    html_content = f.read()
+                
+                # Replace {{COMMIT}} placeholder with actual commit hash
+                html_content = html_content.replace('{{COMMIT}}', new_commit_hash)
+                
+                with open('index.html', 'w') as f:
+                    f.write(html_content)
+                
+                # Add updated index.html and amend commit
+                subprocess.run(['git', 'add', 'index.html'], check=True)
+                subprocess.run(['git', 'commit', '--amend', '--no-edit'], check=True)
+            
             subprocess.run(['git', 'push'], check=True)
             log_and_print("✅ GitHub Pages updated successfully")
         except subprocess.CalledProcessError as e:
@@ -324,6 +369,8 @@ def main():
                        help='Send email to specified recipients (e.g., --send brian.leung@hellofresh.com asaf@hellofresh.com)')
     parser.add_argument('--send-email', action='store_true',
                        help='Send email using EMAIL_RECIPIENTS from environment')
+    parser.add_argument('--no-send', action='store_true',
+                       help='Run pipeline without sending email (for testing)')
     
     args = parser.parse_args()
     
@@ -331,7 +378,9 @@ def main():
     send_email = False
     email_recipients = []
     
-    if args.send:
+    if args.no_send:
+        send_email = False
+    elif args.send:
         send_email = True
         email_recipients = args.send
     elif args.send_email:

@@ -13,6 +13,7 @@ from textblob import TextBlob
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import re
 import time
+from collections import defaultdict
 from config import *
 
 class AccurateScraper:
@@ -32,31 +33,57 @@ class AccurateScraper:
         self.analyzer = SentimentIntensityAnalyzer()
         
     def scrape_weekly_data(self, days_back=7):
-        """Scrape data using Brian's specified Reddit links with Mon-Fri window"""
-        # Calculate Monday-Friday window for most recent week
+        """Scrape data using your exact week window and data sources"""
+        # Get week mode and end override from environment or config
+        week_mode = os.getenv('WEEK_MODE', WEEK_MODE)
+        week_end_override = os.getenv('WEEK_END', WEEK_END_OVERRIDE)
+        
         now = datetime.now(timezone.utc)
         
-        # If it's Sunday, use the week that just ended
-        # Otherwise, use the current week so far
-        if now.weekday() == 6:  # Sunday = 6
-            # Get Monday of last week
-            days_since_monday = 7 + now.weekday()  # 7 + 6 = 13 days back to last Monday
-            start_time = now - timedelta(days=days_since_monday)
+        if week_end_override:
+            # Use specific week end date
+            try:
+                end_date = datetime.fromisoformat(week_end_override).replace(tzinfo=timezone.utc)
+                # Find the Monday of that week
+                days_since_monday = end_date.weekday()
+                start_time = end_date - timedelta(days=days_since_monday)
+            except:
+                print(f"Invalid WEEK_END format: {week_end_override}, using current week")
+                start_time = now - timedelta(days=now.weekday())
         else:
-            # Get Monday of current week
-            days_since_monday = now.weekday()  # 0=Monday, 1=Tuesday, etc.
-            start_time = now - timedelta(days=days_since_monday)
+            # Calculate based on current time
+            if now.weekday() == 6:  # Sunday = 6, use previous week
+                days_since_monday = 7 + now.weekday()
+                start_time = now - timedelta(days=days_since_monday)
+            else:
+                # Use current week
+                days_since_monday = now.weekday()
+                start_time = now - timedelta(days=days_since_monday)
         
         # Set to Monday 00:00 UTC
         start_time = start_time.replace(hour=0, minute=0, second=0, microsecond=0)
         
-        # Default to Friday 23:59 UTC (Monday + 4 days)
-        end_time = start_time + timedelta(days=4, hours=23, minutes=59, seconds=59)
+        # Calculate end time based on week mode
+        if week_mode == "MON_FRI":
+            end_time = start_time + timedelta(days=4, hours=23, minutes=59, seconds=59)  # Friday
+        elif week_mode == "MON_SAT":
+            end_time = start_time + timedelta(days=5, hours=23, minutes=59, seconds=59)  # Saturday
+        elif week_mode == "FULL_7":
+            end_time = start_time + timedelta(days=6, hours=23, minutes=59, seconds=59)  # Sunday
+        else:
+            end_time = start_time + timedelta(days=5, hours=23, minutes=59, seconds=59)  # Default: Saturday
+        
+        print(f"Using week mode: {week_mode}")
+        print(f"Date window: {start_time.strftime('%Y-%m-%d')} to {end_time.strftime('%Y-%m-%d')}")
         
         all_posts = []
         saturday_posts = []
         
-        print("Starting weekly Reddit scrape using Brian's specified links...")
+        print("Starting weekly Reddit scrape using your exact data sources...")
+        
+        # Track pre/post filter counts per brand
+        brand_pre_filter = defaultdict(int)
+        brand_post_filter = defaultdict(int)
         
         for brand, links in WEEKLY_LINKS.items():
             print(f"\nScraping {brand}...")
@@ -75,11 +102,14 @@ class AccurateScraper:
                 except Exception as e:
                     print(f"  Error scraping {link}: {e}")
         
-        # Remove duplicates based on URL
+        # Remove duplicates based on URL and count pre-filter
         unique_posts = {}
         for post in all_posts:
             if post['url'] not in unique_posts:
                 unique_posts[post['url']] = post
+                # Count pre-filter by brand
+                for brand in post.get('competitors_mentioned', []):
+                    brand_pre_filter[brand] += 1
         
         # Check if we should include Saturday posts (>5 total posts threshold)
         if len(unique_posts) <= INCLUDE_SATURDAY_THRESHOLD:
@@ -104,11 +134,25 @@ class AccurateScraper:
             # Update end_time to include Saturday
             end_time = saturday_end
         
-        # Filter out excluded content
+        # Filter out excluded content and count post-filter
         filtered_posts = []
         for post in unique_posts.values():
             if not self.should_exclude_post(post):
                 filtered_posts.append(post)
+                # Count post-filter by brand
+                for brand in post.get('competitors_mentioned', []):
+                    brand_post_filter[brand] += 1
+        
+        # Print filter impact table
+        print(f"\n📊 FILTER IMPACT TABLE")
+        print(f"{'Brand':<12} | {'Pre-Filter':<10} | {'Post-Filter':<11} | {'Removed':<7}")
+        print("-" * 50)
+        for brand in COMPETITORS:
+            pre = brand_pre_filter[brand]
+            post = brand_post_filter[brand]
+            removed = pre - post
+            print(f"{brand:<12} | {pre:<10} | {post:<11} | {removed:<7}")
+        print("-" * 50)
         
         final_data = {
             'scrape_timestamp': datetime.now(timezone.utc).isoformat(),

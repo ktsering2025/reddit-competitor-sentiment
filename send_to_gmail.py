@@ -17,13 +17,25 @@ def get_weekly_summary():
         data = json.load(f)
     
     posts = data.get('posts', [])
-    seven_days_ago = datetime.now() - timedelta(days=7)
-    seven_days_timestamp = seven_days_ago.timestamp()
+    date_range = data.get('date_range', {})
+    
+    # Use actual date window from scraped data
+    if date_range and 'start' in date_range and 'end' in date_range:
+        start_date = datetime.fromisoformat(date_range['start'].replace('Z', '+00:00'))
+        end_date = datetime.fromisoformat(date_range['end'].replace('Z', '+00:00'))
+    else:
+        # Fallback to 7 days ago
+        end_date = datetime.now()
+        start_date = end_date - timedelta(days=7)
+    
+    # Filter posts within the actual date window
+    start_timestamp = start_date.timestamp()
+    end_timestamp = end_date.timestamp()
     
     brand_stats = {}
     for post in posts:
         created = post.get('created_utc', 0)
-        if created >= seven_days_timestamp:
+        if start_timestamp <= created <= end_timestamp:
             brands = post.get('competitors_mentioned', [])
             sentiment = post.get('sentiment', 'neutral')
             
@@ -46,11 +58,10 @@ def get_weekly_summary():
         
         summary_lines.append(f"• {brand_name} — {total} posts ({pos_pct}% positive)")
     
-    end_date = datetime.now()
-    start_date = end_date - timedelta(days=7)
-    date_range = f"{start_date.strftime('%b %d')}–{end_date.strftime('%d, %Y')}"
+    # Format date range for email (UTC)
+    date_range_str = f"{start_date.strftime('%Y-%m-%d')} to {end_date.strftime('%Y-%m-%d')} UTC"
     
-    return date_range, summary_lines, sum(sum(stats.values()) for stats in brand_stats.values())
+    return date_range_str, summary_lines, sum(sum(stats.values()) for stats in brand_stats.values())
 
 def send_via_mailto(recipient_email):
     """Send email using system mail client with automatic chart attachment"""
@@ -209,24 +220,30 @@ def main():
     """Main function"""
     import sys
     
-    recipient = "kunsang.tsering@hellofresh.com"
+    # Use command line args or environment variable for recipients
+    recipients = []
     if len(sys.argv) > 1:
-        recipient = sys.argv[1]
+        recipients = sys.argv[1:]
+    else:
+        # Default recipients per Brian's spec
+        recipients_env = os.getenv('EMAIL_RECIPIENTS', '')
+        if recipients_env:
+            recipients = [r.strip() for r in recipients_env.split(',')]
+        else:
+            recipients = ['brian.leung@hellofresh.com', 'asaf@hellofresh.com']
     
     print("=== REDDIT SENTIMENT EMAIL SENDER ===")
-    print("Sending actual email to your Gmail inbox...")
+    print(f"Recipients: {', '.join(recipients)}")
     print()
     
-    # Try web service first, fallback to mailto
-    success = send_via_web_service(recipient)
-    
-    if success:
-        print("\nEMAIL PROCESS STARTED!")
-        print(f"Check your Gmail: {recipient}")
-        print("You should see a notification soon")
-    else:
-        print("\nEmail sending failed")
-        print("Try the manual copy/paste method instead")
+    # Send to each recipient
+    for recipient in recipients:
+        success = send_via_web_service(recipient)
+        
+        if success:
+            print(f"\n✅ EMAIL SENT to {recipient}")
+        else:
+            print(f"\n❌ Email failed for {recipient}")
 
 if __name__ == "__main__":
     main()
