@@ -1,6 +1,6 @@
 {
-  "processing_timestamp": "2025-10-28T18:00:09.921984+00:00",
-  "total_posts": 24,
+  "processing_timestamp": "2025-10-28T18:02:04.653775+00:00",
+  "total_posts": 19,
   "date_range": {
     "start": "2025-10-27T00:00:00+00:00",
     "end": "2025-11-01T23:59:59+00:00"
@@ -26,11 +26,11 @@
     "Green Chef": "https://old.reddit.com/search/?q=green+chef&type=posts&t=week&sort=new"
   },
   "validation_status": "passed",
-  "commit_hash": "12b58073",
+  "commit_hash": "bebb6f08",
   "filter_stats": {
     "HelloFresh": {
       "pre_filter": 0,
-      "post_filter": 2
+      "post_filter": 4
     },
     "Factor75": {
       "pre_filter": 0,
@@ -42,19 +42,19 @@
     },
     "Home Chef": {
       "pre_filter": 0,
-      "post_filter": 3
+      "post_filter": 5
     },
     "Marley Spoon": {
       "pre_filter": 0,
-      "post_filter": 5
+      "post_filter": 2
     },
     "Hungryroot": {
       "pre_filter": 0,
-      "post_filter": 4
+      "post_filter": 2
     },
     "EveryPlate": {
       "pre_filter": 0,
-      "post_filter": 4
+      "post_filter": 0
     },
     "Green Chef": {
       "pre_filter": 0,
