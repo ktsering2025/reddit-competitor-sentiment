@@ -1,9 +1,56 @@
 {
-  "processing_timestamp": "2025-10-28T18:47:42.395502+00:00",
-  "total_posts": 16,
+  "processing_timestamp": "2025-10-28T18:48:34.055280+00:00",
   "date_range": {
     "start": "2025-10-27T00:00:00+00:00",
     "end": "2025-11-01T23:59:59+00:00"
+  },
+  "data_sources": {
+    "HelloFresh": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
+    "Factor75": "https://old.reddit.com/search/?q=factor75&type=posts&t=week&sort=new",
+    "Home Chef": "https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new",
+    "Blue Apron": "https://old.reddit.com/search/?q=blue+apron&type=posts&t=week&sort=new",
+    "Marley Spoon": "https://old.reddit.com/search/?q=marley+spoon&type=posts&t=week&sort=new",
+    "Hungryroot": "https://old.reddit.com/search/?q=hungryroot&type=posts&t=week&sort=new"
+  },
+  "filter_stats": {
+    "HelloFresh": {
+      "pre": 3,
+      "post": 3,
+      "removed": 0
+    },
+    "Factor75": {
+      "pre": 4,
+      "post": 4,
+      "removed": 0
+    },
+    "Home Chef": {
+      "pre": 2,
+      "post": 2,
+      "removed": 0
+    },
+    "Blue Apron": {
+      "pre": 0,
+      "post": 0,
+      "removed": 0
+    },
+    "Marley Spoon": {
+      "pre": 5,
+      "post": 5,
+      "removed": 0
+    },
+    "Hungryroot": {
+      "pre": 3,
+      "post": 3,
+      "removed": 0
+    }
+  },
+  "brand_counts": {
+    "HelloFresh": 3,
+    "Factor75": 4,
+    "Home Chef": 2,
+    "Blue Apron": 0,
+    "Marley Spoon": 5,
+    "Hungryroot": 3
   },
   "brands_analyzed": [
     "HelloFresh",
@@ -13,40 +60,5 @@
     "Marley Spoon",
     "Hungryroot"
   ],
-  "data_sources": {
-    "HelloFresh": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-    "Factor75": "https://old.reddit.com/search/?q=factor75&type=posts&t=week&sort=new",
-    "Home Chef": "https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new",
-    "Blue Apron": "https://old.reddit.com/search/?q=blue+apron&type=posts&t=week&sort=new",
-    "Marley Spoon": "https://old.reddit.com/search/?q=marley+spoon&type=posts&t=week&sort=new",
-    "Hungryroot": "https://old.reddit.com/search/?q=hungryroot&type=posts&t=week&sort=new"
-  },
-  "validation_status": "passed",
-  "commit_hash": "ad2c5fdc",
-  "filter_stats": {
-    "HelloFresh": {
-      "pre_filter": 0,
-      "post_filter": 4
-    },
-    "Factor75": {
-      "pre_filter": 0,
-      "post_filter": 2
-    },
-    "Home Chef": {
-      "pre_filter": 0,
-      "post_filter": 3
-    },
-    "Blue Apron": {
-      "pre_filter": 0,
-      "post_filter": 0
-    },
-    "Marley Spoon": {
-      "pre_filter": 0,
-      "post_filter": 4
-    },
-    "Hungryroot": {
-      "pre_filter": 0,
-      "post_filter": 3
-    }
-  }
+  "total_posts": 17
 }

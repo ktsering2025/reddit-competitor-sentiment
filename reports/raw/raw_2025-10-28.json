@@ -1,11 +1,11 @@
 {
-  "scrape_timestamp": "2025-10-28T18:47:42.357691+00:00",
-  "processing_timestamp": "2025-10-28T18:47:42.357722+00:00",
+  "scrape_timestamp": "2025-10-28T18:48:34.055248+00:00",
+  "processing_timestamp": "2025-10-28T18:48:34.055280+00:00",
   "date_range": {
     "start": "2025-10-27T00:00:00+00:00",
     "end": "2025-11-01T23:59:59+00:00"
   },
-  "total_posts": 16,
+  "total_posts": 17,
   "data_sources": {
     "HelloFresh": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
     "Factor75": "https://old.reddit.com/search/?q=factor75&type=posts&t=week&sort=new",
@@ -16,18 +16,18 @@
   },
   "filter_stats": {
     "HelloFresh": {
+      "pre": 3,
+      "post": 3,
+      "removed": 0
+    },
+    "Factor75": {
       "pre": 4,
       "post": 4,
       "removed": 0
     },
-    "Factor75": {
+    "Home Chef": {
       "pre": 2,
       "post": 2,
-      "removed": 0
-    },
-    "Home Chef": {
-      "pre": 3,
-      "post": 3,
       "removed": 0
     },
     "Blue Apron": {
@@ -36,8 +36,8 @@
       "removed": 0
     },
     "Marley Spoon": {
-      "pre": 4,
-      "post": 4,
+      "pre": 5,
+      "post": 5,
       "removed": 0
     },
     "Hungryroot": {
@@ -50,48 +50,48 @@
     {
       "title": "Sample HelloFresh discussion 1",
       "selftext": "Sample content about HelloFresh",
-      "score": 13,
-      "num_comments": 1,
+      "score": 30,
+      "num_comments": 10,
       "subreddit": "meal_kits",
       "url": "https://reddit.com/sample/hellofresh_0",
-      "created_utc": 1761868800.0,
+      "created_utc": 1761955200.0,
       "competitors_mentioned": [
         "HelloFresh"
       ],
       "author": "user_0",
-      "upvote_ratio": 0.6348620987155769,
+      "upvote_ratio": 0.9001368885260546,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "neutral",
-      "confidence": 0.7675368882505973,
-      "reasoning": "Sample neutral sentiment"
+      "sentiment": "positive",
+      "confidence": 0.736860526283021,
+      "reasoning": "Sample positive sentiment"
     },
     {
       "title": "Sample HelloFresh discussion 2",
       "selftext": "Sample content about HelloFresh",
-      "score": 22,
-      "num_comments": 15,
+      "score": 26,
+      "num_comments": 3,
       "subreddit": "meal_kits",
       "url": "https://reddit.com/sample/hellofresh_1",
-      "created_utc": 1761523200.0,
+      "created_utc": 1761782400.0,
       "competitors_mentioned": [
         "HelloFresh"
       ],
       "author": "user_1",
-      "upvote_ratio": 0.7604622104637084,
+      "upvote_ratio": 0.9003915970330247,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "neutral",
-      "confidence": 0.7421159987485122,
-      "reasoning": "Sample neutral sentiment"
+      "sentiment": "negative",
+      "confidence": 0.7830725169127524,
+      "reasoning": "Sample negative sentiment"
     },
     {
       "title": "Sample HelloFresh discussion 3",
       "selftext": "Sample content about HelloFresh",
-      "score": 4,
-      "num_comments": 7,
+      "score": 12,
+      "num_comments": 1,
       "subreddit": "meal_kits",
       "url": "https://reddit.com/sample/hellofresh_2",
       "created_utc": 1762041600.0,
@@ -99,273 +99,293 @@
         "HelloFresh"
       ],
       "author": "user_2",
-      "upvote_ratio": 0.7559526487068847,
+      "upvote_ratio": 0.6747404617222342,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 0.6311943263472403,
-      "reasoning": "Sample positive sentiment"
-    },
-    {
-      "title": "Sample HelloFresh discussion 4",
-      "selftext": "Sample content about HelloFresh",
-      "score": 41,
-      "num_comments": 2,
-      "subreddit": "meal_kits",
-      "url": "https://reddit.com/sample/hellofresh_3",
-      "created_utc": 1761868800.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "user_3",
-      "upvote_ratio": 0.8846805018915245,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "neutral",
-      "confidence": 0.6654414405202187,
-      "reasoning": "Sample neutral sentiment"
+      "sentiment": "negative",
+      "confidence": 0.6091506746765198,
+      "reasoning": "Sample negative sentiment"
     },
     {
       "title": "Sample Factor75 discussion 1",
       "selftext": "Sample content about Factor75",
-      "score": 38,
-      "num_comments": 4,
+      "score": 27,
+      "num_comments": 1,
       "subreddit": "meal_kits",
       "url": "https://reddit.com/sample/factor75_0",
-      "created_utc": 1762041600.0,
+      "created_utc": 1761696000.0,
       "competitors_mentioned": [
         "Factor75"
       ],
       "author": "user_0",
-      "upvote_ratio": 0.7016460218204709,
+      "upvote_ratio": 0.6232787410542587,
       "is_self": true,
       "source_brand": "Factor75",
       "source_url": "https://old.reddit.com/search/?q=factor75&type=posts&t=week&sort=new",
       "sentiment": "neutral",
-      "confidence": 0.6999585504641372,
+      "confidence": 0.7106827151591619,
       "reasoning": "Sample neutral sentiment"
     },
     {
       "title": "Sample Factor75 discussion 2",
       "selftext": "Sample content about Factor75",
-      "score": 26,
-      "num_comments": 10,
+      "score": 31,
+      "num_comments": 2,
       "subreddit": "meal_kits",
       "url": "https://reddit.com/sample/factor75_1",
-      "created_utc": 1761523200.0,
+      "created_utc": 1761609600.0,
       "competitors_mentioned": [
         "Factor75"
       ],
       "author": "user_1",
-      "upvote_ratio": 0.924433048642786,
+      "upvote_ratio": 0.739575676376792,
+      "is_self": true,
+      "source_brand": "Factor75",
+      "source_url": "https://old.reddit.com/search/?q=factor75&type=posts&t=week&sort=new",
+      "sentiment": "negative",
+      "confidence": 0.7366515099100095,
+      "reasoning": "Sample negative sentiment"
+    },
+    {
+      "title": "Sample Factor75 discussion 3",
+      "selftext": "Sample content about Factor75",
+      "score": 3,
+      "num_comments": 4,
+      "subreddit": "meal_kits",
+      "url": "https://reddit.com/sample/factor75_2",
+      "created_utc": 1761782400.0,
+      "competitors_mentioned": [
+        "Factor75"
+      ],
+      "author": "user_2",
+      "upvote_ratio": 0.8288990594398948,
       "is_self": true,
       "source_brand": "Factor75",
       "source_url": "https://old.reddit.com/search/?q=factor75&type=posts&t=week&sort=new",
       "sentiment": "neutral",
-      "confidence": 0.6660177137087764,
+      "confidence": 0.7074774811151764,
+      "reasoning": "Sample neutral sentiment"
+    },
+    {
+      "title": "Sample Factor75 discussion 4",
+      "selftext": "Sample content about Factor75",
+      "score": 42,
+      "num_comments": 20,
+      "subreddit": "meal_kits",
+      "url": "https://reddit.com/sample/factor75_3",
+      "created_utc": 1761955200.0,
+      "competitors_mentioned": [
+        "Factor75"
+      ],
+      "author": "user_3",
+      "upvote_ratio": 0.7578418959082388,
+      "is_self": true,
+      "source_brand": "Factor75",
+      "source_url": "https://old.reddit.com/search/?q=factor75&type=posts&t=week&sort=new",
+      "sentiment": "neutral",
+      "confidence": 0.7386627851861731,
       "reasoning": "Sample neutral sentiment"
     },
     {
       "title": "Sample Home Chef discussion 1",
       "selftext": "Sample content about Home Chef",
-      "score": 33,
-      "num_comments": 17,
+      "score": 49,
+      "num_comments": 9,
       "subreddit": "meal_kits",
       "url": "https://reddit.com/sample/home chef_0",
-      "created_utc": 1761696000.0,
+      "created_utc": 1761782400.0,
       "competitors_mentioned": [
         "Home Chef"
       ],
       "author": "user_0",
-      "upvote_ratio": 0.6951224517716359,
+      "upvote_ratio": 0.8041784556378646,
       "is_self": true,
       "source_brand": "Home Chef",
       "source_url": "https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new",
-      "sentiment": "neutral",
-      "confidence": 0.8357593934068779,
-      "reasoning": "Sample neutral sentiment"
+      "sentiment": "positive",
+      "confidence": 0.6153452646777593,
+      "reasoning": "Sample positive sentiment"
     },
     {
       "title": "Sample Home Chef discussion 2",
       "selftext": "Sample content about Home Chef",
-      "score": 19,
+      "score": 18,
       "num_comments": 10,
       "subreddit": "meal_kits",
       "url": "https://reddit.com/sample/home chef_1",
-      "created_utc": 1761868800.0,
+      "created_utc": 1761955200.0,
       "competitors_mentioned": [
         "Home Chef"
       ],
       "author": "user_1",
-      "upvote_ratio": 0.6046089295256434,
+      "upvote_ratio": 0.621314229986977,
       "is_self": true,
       "source_brand": "Home Chef",
       "source_url": "https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new",
-      "sentiment": "negative",
-      "confidence": 0.6101080982974622,
-      "reasoning": "Sample negative sentiment"
-    },
-    {
-      "title": "Sample Home Chef discussion 3",
-      "selftext": "Sample content about Home Chef",
-      "score": 19,
-      "num_comments": 5,
-      "subreddit": "meal_kits",
-      "url": "https://reddit.com/sample/home chef_2",
-      "created_utc": 1762041600.0,
-      "competitors_mentioned": [
-        "Home Chef"
-      ],
-      "author": "user_2",
-      "upvote_ratio": 0.6530448676046121,
-      "is_self": true,
-      "source_brand": "Home Chef",
-      "source_url": "https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 0.645580905787686,
-      "reasoning": "Sample positive sentiment"
+      "sentiment": "neutral",
+      "confidence": 0.7932243313877987,
+      "reasoning": "Sample neutral sentiment"
     },
     {
       "title": "Sample Marley Spoon discussion 1",
       "selftext": "Sample content about Marley Spoon",
-      "score": 19,
-      "num_comments": 1,
+      "score": 25,
+      "num_comments": 10,
       "subreddit": "meal_kits",
       "url": "https://reddit.com/sample/marley spoon_0",
-      "created_utc": 1761868800.0,
+      "created_utc": 1761782400.0,
       "competitors_mentioned": [
         "Marley Spoon"
       ],
       "author": "user_0",
-      "upvote_ratio": 0.8345464338531282,
+      "upvote_ratio": 0.6117416363973113,
       "is_self": true,
       "source_brand": "Marley Spoon",
       "source_url": "https://old.reddit.com/search/?q=marley+spoon&type=posts&t=week&sort=new",
-      "sentiment": "negative",
-      "confidence": 0.7402482853565105,
-      "reasoning": "Sample negative sentiment"
+      "sentiment": "positive",
+      "confidence": 0.7588481077612947,
+      "reasoning": "Sample positive sentiment"
     },
     {
       "title": "Sample Marley Spoon discussion 2",
       "selftext": "Sample content about Marley Spoon",
-      "score": 47,
-      "num_comments": 20,
+      "score": 15,
+      "num_comments": 11,
       "subreddit": "meal_kits",
       "url": "https://reddit.com/sample/marley spoon_1",
-      "created_utc": 1761868800.0,
+      "created_utc": 1761955200.0,
       "competitors_mentioned": [
         "Marley Spoon"
       ],
       "author": "user_1",
-      "upvote_ratio": 0.9147111055406565,
+      "upvote_ratio": 0.9327715302581248,
       "is_self": true,
       "source_brand": "Marley Spoon",
       "source_url": "https://old.reddit.com/search/?q=marley+spoon&type=posts&t=week&sort=new",
-      "sentiment": "negative",
-      "confidence": 0.8972742189920153,
-      "reasoning": "Sample negative sentiment"
+      "sentiment": "positive",
+      "confidence": 0.8940332299356258,
+      "reasoning": "Sample positive sentiment"
     },
     {
       "title": "Sample Marley Spoon discussion 3",
       "selftext": "Sample content about Marley Spoon",
-      "score": 26,
-      "num_comments": 3,
+      "score": 30,
+      "num_comments": 14,
       "subreddit": "meal_kits",
       "url": "https://reddit.com/sample/marley spoon_2",
-      "created_utc": 1761523200.0,
+      "created_utc": 1761868800.0,
       "competitors_mentioned": [
         "Marley Spoon"
       ],
       "author": "user_2",
-      "upvote_ratio": 0.946821197989621,
+      "upvote_ratio": 0.7000955249600106,
       "is_self": true,
       "source_brand": "Marley Spoon",
       "source_url": "https://old.reddit.com/search/?q=marley+spoon&type=posts&t=week&sort=new",
-      "sentiment": "neutral",
-      "confidence": 0.6273497038745022,
-      "reasoning": "Sample neutral sentiment"
+      "sentiment": "positive",
+      "confidence": 0.730178211947727,
+      "reasoning": "Sample positive sentiment"
     },
     {
       "title": "Sample Marley Spoon discussion 4",
       "selftext": "Sample content about Marley Spoon",
-      "score": 14,
-      "num_comments": 12,
+      "score": 24,
+      "num_comments": 13,
       "subreddit": "meal_kits",
       "url": "https://reddit.com/sample/marley spoon_3",
-      "created_utc": 1761523200.0,
+      "created_utc": 1761782400.0,
       "competitors_mentioned": [
         "Marley Spoon"
       ],
       "author": "user_3",
-      "upvote_ratio": 0.7388235284606113,
+      "upvote_ratio": 0.6517485271874867,
       "is_self": true,
       "source_brand": "Marley Spoon",
       "source_url": "https://old.reddit.com/search/?q=marley+spoon&type=posts&t=week&sort=new",
-      "sentiment": "negative",
-      "confidence": 0.8463310250321379,
-      "reasoning": "Sample negative sentiment"
+      "sentiment": "neutral",
+      "confidence": 0.707421635307365,
+      "reasoning": "Sample neutral sentiment"
+    },
+    {
+      "title": "Sample Marley Spoon discussion 5",
+      "selftext": "Sample content about Marley Spoon",
+      "score": 16,
+      "num_comments": 15,
+      "subreddit": "meal_kits",
+      "url": "https://reddit.com/sample/marley spoon_4",
+      "created_utc": 1761696000.0,
+      "competitors_mentioned": [
+        "Marley Spoon"
+      ],
+      "author": "user_4",
+      "upvote_ratio": 0.7194101309021104,
+      "is_self": true,
+      "source_brand": "Marley Spoon",
+      "source_url": "https://old.reddit.com/search/?q=marley+spoon&type=posts&t=week&sort=new",
+      "sentiment": "neutral",
+      "confidence": 0.608931650435375,
+      "reasoning": "Sample neutral sentiment"
     },
     {
       "title": "Sample Hungryroot discussion 1",
       "selftext": "Sample content about Hungryroot",
-      "score": 22,
-      "num_comments": 4,
+      "score": 50,
+      "num_comments": 6,
       "subreddit": "meal_kits",
       "url": "https://reddit.com/sample/hungryroot_0",
-      "created_utc": 1762041600.0,
+      "created_utc": 1761523200.0,
       "competitors_mentioned": [
         "Hungryroot"
       ],
       "author": "user_0",
-      "upvote_ratio": 0.6841162602889675,
-      "is_self": true,
-      "source_brand": "Hungryroot",
-      "source_url": "https://old.reddit.com/search/?q=hungryroot&type=posts&t=week&sort=new",
-      "sentiment": "negative",
-      "confidence": 0.8111309223994523,
-      "reasoning": "Sample negative sentiment"
-    },
-    {
-      "title": "Sample Hungryroot discussion 2",
-      "selftext": "Sample content about Hungryroot",
-      "score": 1,
-      "num_comments": 19,
-      "subreddit": "meal_kits",
-      "url": "https://reddit.com/sample/hungryroot_1",
-      "created_utc": 1761955200.0,
-      "competitors_mentioned": [
-        "Hungryroot"
-      ],
-      "author": "user_1",
-      "upvote_ratio": 0.7106312622541208,
+      "upvote_ratio": 0.7407829158717432,
       "is_self": true,
       "source_brand": "Hungryroot",
       "source_url": "https://old.reddit.com/search/?q=hungryroot&type=posts&t=week&sort=new",
       "sentiment": "positive",
-      "confidence": 0.8460549095033616,
+      "confidence": 0.6606499570586104,
       "reasoning": "Sample positive sentiment"
     },
     {
-      "title": "Sample Hungryroot discussion 3",
+      "title": "Sample Hungryroot discussion 2",
       "selftext": "Sample content about Hungryroot",
-      "score": 37,
-      "num_comments": 1,
+      "score": 21,
+      "num_comments": 8,
       "subreddit": "meal_kits",
-      "url": "https://reddit.com/sample/hungryroot_2",
-      "created_utc": 1761868800.0,
+      "url": "https://reddit.com/sample/hungryroot_1",
+      "created_utc": 1761523200.0,
       "competitors_mentioned": [
         "Hungryroot"
       ],
-      "author": "user_2",
-      "upvote_ratio": 0.8351542885640761,
+      "author": "user_1",
+      "upvote_ratio": 0.8413343443298811,
       "is_self": true,
       "source_brand": "Hungryroot",
       "source_url": "https://old.reddit.com/search/?q=hungryroot&type=posts&t=week&sort=new",
       "sentiment": "negative",
-      "confidence": 0.8780118849623575,
+      "confidence": 0.7122762467949482,
       "reasoning": "Sample negative sentiment"
+    },
+    {
+      "title": "Sample Hungryroot discussion 3",
+      "selftext": "Sample content about Hungryroot",
+      "score": 32,
+      "num_comments": 10,
+      "subreddit": "meal_kits",
+      "url": "https://reddit.com/sample/hungryroot_2",
+      "created_utc": 1761523200.0,
+      "competitors_mentioned": [
+        "Hungryroot"
+      ],
+      "author": "user_2",
+      "upvote_ratio": 0.7374138488552624,
+      "is_self": true,
+      "source_brand": "Hungryroot",
+      "source_url": "https://old.reddit.com/search/?q=hungryroot&type=posts&t=week&sort=new",
+      "sentiment": "neutral",
+      "confidence": 0.8167521589338289,
+      "reasoning": "Sample neutral sentiment"
     }
   ]
 }

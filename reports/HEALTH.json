@@ -1,0 +1,17 @@
+{
+  "status": "valid",
+  "date_window_utc": {
+    "start": "2025-10-27",
+    "end": "2025-11-01"
+  },
+  "commit": "bc00eb32",
+  "generated_utc": "2025-10-28T18:47:43.673631+00:00",
+  "brands": [
+    "HelloFresh",
+    "Factor75",
+    "Home Chef",
+    "Blue Apron",
+    "Marley Spoon",
+    "Hungryroot"
+  ]
+}
