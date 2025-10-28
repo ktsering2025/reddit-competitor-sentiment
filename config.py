@@ -12,7 +12,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 GMAIL_EMAIL = os.getenv('GMAIL_EMAIL')
 GMAIL_APP_PASSWORD = os.getenv('GMAIL_APP_PASSWORD')
-EMAIL_RECIPIENTS = os.getenv('EMAIL_RECIPIENTS', '').split(',')
+EMAIL_RECIPIENTS = os.getenv('EMAIL_RECIPIENTS', 'brian.leung@hellofresh.com,asaf@hellofresh.com').split(',')
 
 # DATA SOURCES - Weekly Reddit Search Links (locked as per Brian's spec)
 WEEKLY_LINKS = {

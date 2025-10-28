@@ -261,22 +261,34 @@ def run_pipeline(send_email=False, email_recipients=None):
             commit_msg = f"Brian's automation update {datetime.now().strftime('%Y-%m-%d %H:%M')}"
             subprocess.run(['git', 'commit', '-m', commit_msg], check=True)
             
-            # Update index.html with new commit hash for cache busting
-            new_commit_hash = get_git_commit_hash()
-            
-            if os.path.exists('index.html'):
-                with open('index.html', 'r') as f:
-                    html_content = f.read()
+            # Update index.html with BUILD_TOKEN for cache busting
+            # Load metadata to get processing timestamp
+            metadata_file = f'reports/raw/metadata_{datetime.now().strftime("%Y-%m-%d")}.json'
+            if os.path.exists(metadata_file):
+                with open(metadata_file, 'r') as f:
+                    metadata = json.load(f)
                 
-                # Replace {{COMMIT}} placeholder with actual commit hash
-                html_content = html_content.replace('{{COMMIT}}', new_commit_hash)
+                # Generate BUILD_TOKEN from processing timestamp
+                processing_timestamp = metadata.get('processing_timestamp', datetime.now(timezone.utc).isoformat())
+                build_token = processing_timestamp.replace("-", "").replace(":", "").replace("T", "")[:14]
                 
-                with open('index.html', 'w') as f:
-                    f.write(html_content)
-                
-                # Add updated index.html and amend commit
-                subprocess.run(['git', 'add', 'index.html'], check=True)
-                subprocess.run(['git', 'commit', '--amend', '--no-edit'], check=True)
+                if os.path.exists('index.html'):
+                    with open('index.html', 'r') as f:
+                        html_content = f.read()
+                    
+                    # Replace {{BUILD_TOKEN}} placeholder with actual build token
+                    html_content = html_content.replace('{{BUILD_TOKEN}}', build_token)
+                    
+                    with open('index.html', 'w') as f:
+                        f.write(html_content)
+                    
+                    # Add updated index.html and amend commit
+                    subprocess.run(['git', 'add', 'index.html'], check=True)
+                    subprocess.run(['git', 'commit', '--amend', '--no-edit'], check=True)
+                    
+                    log_and_print(f"[SUCCESS] Updated index.html with BUILD_TOKEN: {build_token}")
+            else:
+                log_and_print("[WARNING] No metadata file found for BUILD_TOKEN generation")
             
             subprocess.run(['git', 'push'], check=True)
             log_and_print("[SUCCESS] GitHub Pages updated successfully")
