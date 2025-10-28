@@ -52,11 +52,27 @@ def analyze_competitor_themes(data):
     
     return competitor_themes
 
-def generate_strengths_weaknesses(competitor_themes):
-    """Generate strengths and weaknesses for each competitor"""
+def generate_strengths_weaknesses(competitor_themes, data):
+    """Generate strengths and weaknesses for each competitor with fallback narratives"""
     results = {}
     
-    for brand, themes in competitor_themes.items():
+    # Get brand counts from metadata for total posts per brand
+    brand_counts = {}
+    if 'brand_counts' in data:
+        brand_counts = data['brand_counts']
+    
+    for brand in ALL_COMPETITORS:
+        total_posts = brand_counts.get(brand, 0)
+        
+        if total_posts == 0:
+            # No posts recorded this week
+            results[brand] = {
+                'strengths': "No posts recorded this week.",
+                'weaknesses': "No posts recorded this week."
+            }
+            continue
+            
+        themes = competitor_themes.get(brand, {})
         strengths = []
         weaknesses = []
         
@@ -71,9 +87,20 @@ def generate_strengths_weaknesses(competitor_themes):
                 elif negative_pct >= 60:  # 60%+ negative
                     weaknesses.append(f"{theme} ({negative_pct:.0f}% negative)")
         
+        # Fallback narratives if no themes meet thresholds
+        if not strengths:
+            strengths_text = "Low volume this week; no theme reached 60% positive."
+        else:
+            strengths_text = "; ".join(strengths)
+            
+        if not weaknesses:
+            weaknesses_text = "Sentiment is balanced; no theme reached 60% negative."
+        else:
+            weaknesses_text = "; ".join(weaknesses)
+        
         results[brand] = {
-            'strengths': strengths,
-            'weaknesses': weaknesses
+            'strengths': strengths_text,
+            'weaknesses': weaknesses_text
         }
     
     return results
@@ -162,7 +189,7 @@ def main():
     competitor_themes = analyze_competitor_themes(data)
     
     # Generate strengths/weaknesses
-    competitor_analysis = generate_strengths_weaknesses(competitor_themes)
+    competitor_analysis = generate_strengths_weaknesses(competitor_themes, data)
     
     # Create HTML report
     html_content = create_competitor_table_html(competitor_analysis, data)

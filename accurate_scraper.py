@@ -371,9 +371,11 @@ class AccurateScraper:
                 if 'q=' in url:
                     query = url.split('q=')[1].split('&')[0]
                     query = query.replace('%20', ' ').replace('+', ' ')
+                    print(f"  Using PRAW API search for query: {query}")
                     
-                    search_results = self.reddit.subreddit('all').search(query, sort='new', time_filter='week', limit=50)
+                    search_results = self.reddit.subreddit('all').search(query, sort='new', time_filter='week', limit=100)
                     
+                    found_count = 0
                     for post in search_results:
                         post_time = datetime.fromtimestamp(post.created_utc, tz=timezone.utc)
                         
@@ -381,13 +383,51 @@ class AccurateScraper:
                             post_data = self.extract_post_data(post, brand, url)
                             if post_data:
                                 posts.append(post_data)
+                                found_count += 1
+                    
+                    print(f"  Found {found_count} posts via PRAW API")
                                 
             except Exception as e:
                 print(f"PRAW search error for {url}: {e}")
         
         else:
+            # Try Reddit API first if credentials available
+            if self.reddit and 'reddit.com/search' in url:
+                try:
+                    # Extract search query from URL
+                    if 'q=' in url:
+                        query = url.split('q=')[1].split('&')[0]
+                        query = query.replace('%20', ' ').replace('+', ' ')
+                        print(f"  Using PRAW API search for query: {query}")
+                        
+                        search_results = self.reddit.subreddit('all').search(query, sort='new', time_filter='week', limit=100)
+                        
+                        found_count = 0
+                        for post in search_results:
+                            post_time = datetime.fromtimestamp(post.created_utc, tz=timezone.utc)
+                            
+                            if start_time <= post_time <= end_time:
+                                post_data = self.extract_post_data(post, brand, url)
+                                if post_data:
+                                    posts.append(post_data)
+                                    found_count += 1
+                        
+                        print(f"  Found {found_count} posts via PRAW API")
+                        if found_count > 0:
+                            return posts
+                                    
+                except Exception as e:
+                    print(f"PRAW search error for {url}: {e}")
+            
+            # Fallback to web scraping with new.reddit.com if old.reddit.com fails
             print(f"Using web scraping for {url}")
             posts = self.scrape_reddit_web(url, brand, start_time, end_time)
+            
+            # If no posts found, try new.reddit.com as fallback
+            if not posts and 'old.reddit.com' in url:
+                new_url = url.replace('old.reddit.com', 'www.reddit.com')
+                print(f"  Trying fallback URL: {new_url}")
+                posts = self.scrape_reddit_web(new_url, brand, start_time, end_time)
         
         return posts
     
