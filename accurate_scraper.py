@@ -482,15 +482,19 @@ def main():
     print(f"[SUCCESS] Working data saved to {WORKING_DATA_FILE}")
     print(f"[SUCCESS] Metadata saved to {metadata_file}")
     
-    # Print brand breakdown
-    brand_counts = {}
+    # Calculate brand counts for all 6 brands (including zeros)
+    brand_counts = {brand: 0 for brand in ALL_COMPETITORS}
     for post in data['posts']:
         for brand in post['competitors_mentioned']:
-            brand_counts[brand] = brand_counts.get(brand, 0) + 1
+            if brand in brand_counts:
+                brand_counts[brand] += 1
+    
+    # Add brand_counts to metadata
+    metadata['brand_counts'] = brand_counts
     
     print(f"\nBrand breakdown:")
     for brand in ALL_COMPETITORS:
-        count = brand_counts.get(brand, 0)
+        count = brand_counts[brand]
         print(f"  {brand}: {count} posts")
     
     return data

@@ -18,19 +18,17 @@ EMAIL_RECIPIENTS = os.getenv('EMAIL_RECIPIENTS', 'brian.leung@hellofresh.com,asa
 WEEKLY_LINKS = {
     "HelloFresh": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
     "Factor75": "https://old.reddit.com/search/?q=factor75&type=posts&t=week&sort=new",
-    "Blue Apron": "https://old.reddit.com/search/?q=blue+apron&type=posts&t=week&sort=new",
     "Home Chef": "https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new",
+    "Blue Apron": "https://old.reddit.com/search/?q=blue+apron&type=posts&t=week&sort=new",
     "Marley Spoon": "https://old.reddit.com/search/?q=marley+spoon&type=posts&t=week&sort=new",
-    "Hungryroot": "https://old.reddit.com/search/?q=hungryroot&type=posts&t=week&sort=new",
-    "EveryPlate": "https://old.reddit.com/search/?q=everyplate&type=posts&t=week&sort=new",
-    "Green Chef": "https://old.reddit.com/search/?q=green+chef&type=posts&t=week&sort=new"
+    "Hungryroot": "https://old.reddit.com/search/?q=hungryroot&type=posts&t=week&sort=new"
 }
 
-# All competitors for Step 1 chart
-ALL_COMPETITORS = ["HelloFresh", "Factor75", "Blue Apron", "Home Chef", "Marley Spoon", "Hungryroot", "EveryPlate", "Green Chef"]
+# All competitors for Step 1 chart (exactly 6 brands)
+ALL_COMPETITORS = ["HelloFresh", "Factor75", "Home Chef", "Blue Apron", "Marley Spoon", "Hungryroot"]
 
-# Focus brands for Step 2 deep dive (60% of HF revenue)
-FOCUS_BRANDS = ["HelloFresh", "Factor75"]
+# Primary brands for Step 2 deep dive (60% of HF revenue)
+PRIMARY_DEEPDIVE = ["HelloFresh", "Factor75"]
 
 # Filtering Configuration
 EXCLUDE_KEYWORDS = [

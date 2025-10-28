@@ -8,6 +8,7 @@ Uses same dataset as Step 1 for validation sync
 import json
 import os
 from datetime import datetime
+from config import PRIMARY_DEEPDIVE
 from collections import defaultdict
 import subprocess
 from config import *
@@ -38,7 +39,7 @@ def calculate_engagement_score(post):
 def get_posts_by_brand(data, target_brands=None):
     """Get posts for focus brands (HelloFresh and Factor75 by default)"""
     if target_brands is None:
-        target_brands = FOCUS_BRANDS
+        target_brands = PRIMARY_DEEPDIVE
     
     posts_by_brand = defaultdict(list)
     
@@ -85,7 +86,7 @@ def analyze_brand_totals(data):
     """Calculate brand totals for validation with Step 1"""
     brand_totals = {}
     
-    for brand in FOCUS_BRANDS:
+    for brand in PRIMARY_DEEPDIVE:
         pos = neg = neu = 0
         for post in data.get('posts', []):
             if brand in post.get('competitors_mentioned', []):

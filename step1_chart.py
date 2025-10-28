@@ -146,7 +146,7 @@ def print_run_summary(brand_sentiment, data):
     
     print(f"\nDate window (UTC): {start_date} to {end_date}")
     
-    for brand in COMPETITORS:
+    for brand in ALL_COMPETITORS:
         pos = brand_sentiment[brand]['positive']
         neg = brand_sentiment[brand]['negative']
         neu = brand_sentiment[brand]['neutral']
