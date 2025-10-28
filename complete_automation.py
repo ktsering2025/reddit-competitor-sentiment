@@ -49,15 +49,16 @@ def validate_data_integrity(data):
     posts = data.get('posts', [])
     date_range = data.get('date_range', {})
     
-    # Validation Rule 1: Date window = exact last 7 days (UTC)
+    # Validation Rule 1: Date window = Monday-Friday (4-5 days) or full week (7 days)
     if date_range:
         try:
             start_date = datetime.fromisoformat(date_range['start'].replace('Z', '+00:00'))
             end_date = datetime.fromisoformat(date_range['end'].replace('Z', '+00:00'))
             days_diff = (end_date - start_date).days
             
-            if days_diff != 7:
-                errors.append(f"Date window is {days_diff} days, expected exactly 7 days")
+            # Accept Monday-Friday (4 days), Monday-Saturday (5 days), or full week (7 days)
+            if days_diff not in [4, 5, 7]:
+                errors.append(f"Date window is {days_diff} days, expected 4-5 days (Mon-Fri/Sat) or 7 days")
         except Exception as e:
             errors.append(f"Date validation error: {e}")
     

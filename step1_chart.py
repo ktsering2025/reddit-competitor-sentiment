@@ -74,11 +74,18 @@ def create_chart(brand_sentiment, data):
     start_date = date_range.get('start', '2025-10-20').split('T')[0]
     end_date = date_range.get('end', '2025-10-27').split('T')[0]
     
-    # Format dates properly for title
+    # Format dates properly for title (Mon-Fri format)
     try:
         start_dt = datetime.fromisoformat(start_date)
         end_dt = datetime.fromisoformat(end_date)
-        date_str = f"{start_dt.strftime('%b %d')} – {end_dt.strftime('%b %d, %Y')}"
+        # Check if it's Mon-Fri (5 days) or Mon-Sat (6 days)
+        days_diff = (end_dt - start_dt).days
+        if days_diff == 4:  # Mon-Fri
+            date_str = f"{start_dt.strftime('%b %d')} – {end_dt.strftime('%b %d, %Y')}"
+        elif days_diff == 5:  # Mon-Sat
+            date_str = f"{start_dt.strftime('%b %d')} – {end_dt.strftime('%b %d, %Y')} (incl. Sat)"
+        else:
+            date_str = f"{start_dt.strftime('%b %d')} – {end_dt.strftime('%b %d, %Y')}"
     except:
         date_str = f"{start_date} – {end_date}"
     

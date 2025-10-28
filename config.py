@@ -41,6 +41,10 @@ SENTIMENT_THRESHOLD = 0.1
 POSITIVE_THRESHOLD = 0.05
 NEGATIVE_THRESHOLD = -0.05
 
+# Week Window Strategy (Monday-Friday focus per your refinement)
+WEEK_WINDOW_STRATEGY = "Mon-Fri"  # Use Monday-Friday, include Saturday if >5 total posts
+INCLUDE_SATURDAY_THRESHOLD = 5
+
 # File Paths
 WORKING_DATA_FILE = "reports/working_reddit_data.json"
 AUTOMATION_LOG = "automation.log"

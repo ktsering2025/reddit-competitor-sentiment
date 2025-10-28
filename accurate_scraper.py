@@ -32,11 +32,29 @@ class AccurateScraper:
         self.analyzer = SentimentIntensityAnalyzer()
         
     def scrape_weekly_data(self, days_back=7):
-        """Scrape data using Brian's specified Reddit links"""
-        end_time = datetime.now(timezone.utc)
-        start_time = end_time - timedelta(days=days_back)
+        """Scrape data using Brian's specified Reddit links with Mon-Fri window"""
+        # Calculate Monday-Friday window for most recent week
+        now = datetime.now(timezone.utc)
+        
+        # If it's Sunday, use the week that just ended
+        # Otherwise, use the current week so far
+        if now.weekday() == 6:  # Sunday = 6
+            # Get Monday of last week
+            days_since_monday = 7 + now.weekday()  # 7 + 6 = 13 days back to last Monday
+            start_time = now - timedelta(days=days_since_monday)
+        else:
+            # Get Monday of current week
+            days_since_monday = now.weekday()  # 0=Monday, 1=Tuesday, etc.
+            start_time = now - timedelta(days=days_since_monday)
+        
+        # Set to Monday 00:00 UTC
+        start_time = start_time.replace(hour=0, minute=0, second=0, microsecond=0)
+        
+        # Default to Friday 23:59 UTC (Monday + 4 days)
+        end_time = start_time + timedelta(days=4, hours=23, minutes=59, seconds=59)
         
         all_posts = []
+        saturday_posts = []
         
         print("Starting weekly Reddit scrape using Brian's specified links...")
         
@@ -62,6 +80,29 @@ class AccurateScraper:
         for post in all_posts:
             if post['url'] not in unique_posts:
                 unique_posts[post['url']] = post
+        
+        # Check if we should include Saturday posts (>5 total posts threshold)
+        if len(unique_posts) <= INCLUDE_SATURDAY_THRESHOLD:
+            # Extend to include Saturday
+            saturday_end = end_time + timedelta(days=1, hours=23, minutes=59, seconds=59)
+            print(f"Only {len(unique_posts)} posts Mon-Fri, extending to include Saturday...")
+            
+            for brand, links in WEEKLY_LINKS.items():
+                if isinstance(links, str):
+                    links = [links]
+                
+                for link in links:
+                    try:
+                        saturday_posts_brand = self.scrape_reddit_link(link, brand, end_time + timedelta(seconds=1), saturday_end)
+                        for post in saturday_posts_brand:
+                            if post['url'] not in unique_posts:
+                                unique_posts[post['url']] = post
+                        time.sleep(1)
+                    except Exception as e:
+                        print(f"  Error scraping Saturday for {brand}: {e}")
+            
+            # Update end_time to include Saturday
+            end_time = saturday_end
         
         # Filter out excluded content
         filtered_posts = []

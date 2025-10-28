@@ -142,17 +142,22 @@ def check_validation_rules():
         
         posts = data.get('posts', [])
         
-        # Check date window (exact last 7 days)
+        # Check date window (Monday-Friday or full week)
         date_range = data.get('date_range', {})
         if date_range:
             start_date = datetime.fromisoformat(date_range['start'].replace('Z', '+00:00'))
             end_date = datetime.fromisoformat(date_range['end'].replace('Z', '+00:00'))
             days_diff = (end_date - start_date).days
             
-            if days_diff == 7:
-                print("✓ Date window: exactly 7 days")
+            if days_diff in [4, 5, 7]:
+                if days_diff == 4:
+                    print("✓ Date window: Monday-Friday (4 days)")
+                elif days_diff == 5:
+                    print("✓ Date window: Monday-Saturday (5 days)")
+                else:
+                    print("✓ Date window: Full week (7 days)")
             else:
-                print(f"✗ Date window: {days_diff} days (should be 7)")
+                print(f"✗ Date window: {days_diff} days (should be 4-5 or 7)")
                 return False
         
         # Check sentiment math for each brand
