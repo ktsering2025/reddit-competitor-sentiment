@@ -1,107 +1,207 @@
 {
-  "scrape_timestamp": "2025-10-28T17:16:14.404327+00:00",
-  "processing_timestamp": "2025-10-28T17:16:14.404356+00:00",
+  "scrape_timestamp": "2025-10-28T17:17:53.510151+00:00",
+  "processing_timestamp": "2025-10-28T17:17:53.510178+00:00",
   "date_range": {
     "start": "2025-10-27T00:00:00+00:00",
     "end": "2025-11-03T23:59:58+00:00"
   },
-  "total_posts": 4,
+  "total_posts": 9,
   "data_sources": {
     "HelloFresh": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&cId=08353dc8-9146-4af0-8a43-b88c1acb9c9f&iId=bf5bf57d-392e-4933-ae90-6285e2717618&sort=new",
     "Factor75": "https://old.reddit.com/search/?q=factor75&type=posts&t=week&cId=44d92750-2572-487c-91c0-2aed826ec3ab&iId=4441f666-996b-4434-b057-3999a14b44d7&sort=new"
   },
   "filter_stats": {
     "HelloFresh": {
-      "pre": 0,
-      "post": 0,
-      "removed": 0
+      "pre": 3,
+      "post": 5,
+      "removed": -2
     },
     "Factor75": {
-      "pre": 1,
+      "pre": 0,
       "post": 4,
-      "removed": -3
+      "removed": -4
     }
   },
   "posts": [
     {
-      "title": "Sample Factor75 discussion 1",
-      "selftext": "Sample content about Factor75",
-      "score": 39,
+      "title": "Sample HelloFresh discussion 1",
+      "selftext": "Sample content about HelloFresh",
+      "score": 21,
+      "num_comments": 3,
+      "subreddit": "meal_kits",
+      "url": "https://reddit.com/sample/hellofresh_0",
+      "created_utc": 1761782400.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "user_0",
+      "upvote_ratio": 0.6225747133421113,
+      "is_self": true,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week&cId=08353dc8-9146-4af0-8a43-b88c1acb9c9f&iId=bf5bf57d-392e-4933-ae90-6285e2717618",
+      "sentiment": "positive",
+      "confidence": 0.8751982782049184,
+      "reasoning": "Sample positive sentiment"
+    },
+    {
+      "title": "Sample HelloFresh discussion 2",
+      "selftext": "Sample content about HelloFresh",
+      "score": 44,
       "num_comments": 5,
       "subreddit": "meal_kits",
+      "url": "https://reddit.com/sample/hellofresh_1",
+      "created_utc": 1761868800.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "user_1",
+      "upvote_ratio": 0.7542959687259939,
+      "is_self": true,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week&cId=08353dc8-9146-4af0-8a43-b88c1acb9c9f&iId=bf5bf57d-392e-4933-ae90-6285e2717618",
+      "sentiment": "neutral",
+      "confidence": 0.7490662992725645,
+      "reasoning": "Sample neutral sentiment"
+    },
+    {
+      "title": "Sample HelloFresh discussion 3",
+      "selftext": "Sample content about HelloFresh",
+      "score": 37,
+      "num_comments": 8,
+      "subreddit": "meal_kits",
+      "url": "https://reddit.com/sample/hellofresh_2",
+      "created_utc": 1761523200.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "user_2",
+      "upvote_ratio": 0.9350414340230317,
+      "is_self": true,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week&cId=08353dc8-9146-4af0-8a43-b88c1acb9c9f&iId=bf5bf57d-392e-4933-ae90-6285e2717618",
+      "sentiment": "neutral",
+      "confidence": 0.6051383506369702,
+      "reasoning": "Sample neutral sentiment"
+    },
+    {
+      "title": "Sample HelloFresh discussion 4",
+      "selftext": "Sample content about HelloFresh",
+      "score": 25,
+      "num_comments": 1,
+      "subreddit": "meal_kits",
+      "url": "https://reddit.com/sample/hellofresh_3",
+      "created_utc": 1762473600.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "user_3",
+      "upvote_ratio": 0.6161109411655162,
+      "is_self": true,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week&cId=08353dc8-9146-4af0-8a43-b88c1acb9c9f&iId=bf5bf57d-392e-4933-ae90-6285e2717618",
+      "sentiment": "neutral",
+      "confidence": 0.6074065518245668,
+      "reasoning": "Sample neutral sentiment"
+    },
+    {
+      "title": "Sample HelloFresh discussion 5",
+      "selftext": "Sample content about HelloFresh",
+      "score": 37,
+      "num_comments": 18,
+      "subreddit": "meal_kits",
+      "url": "https://reddit.com/sample/hellofresh_4",
+      "created_utc": 1762128000.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "user_4",
+      "upvote_ratio": 0.796570965511361,
+      "is_self": true,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week&cId=08353dc8-9146-4af0-8a43-b88c1acb9c9f&iId=bf5bf57d-392e-4933-ae90-6285e2717618",
+      "sentiment": "negative",
+      "confidence": 0.6253317900363912,
+      "reasoning": "Sample negative sentiment"
+    },
+    {
+      "title": "Sample Factor75 discussion 1",
+      "selftext": "Sample content about Factor75",
+      "score": 47,
+      "num_comments": 16,
+      "subreddit": "meal_kits",
       "url": "https://reddit.com/sample/factor75_0",
-      "created_utc": 1762041600.0,
+      "created_utc": 1762473600.0,
       "competitors_mentioned": [
         "Factor75"
       ],
       "author": "user_0",
-      "upvote_ratio": 0.8339374576139104,
-      "is_self": true,
-      "source_brand": "Factor75",
-      "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week&cId=44d92750-2572-487c-91c0-2aed826ec3ab&iId=4441f666-996b-4434-b057-3999a14b44d7",
-      "sentiment": "negative",
-      "confidence": 0.6474040976414933,
-      "reasoning": "Sample negative sentiment"
-    },
-    {
-      "title": "Sample Factor75 discussion 2",
-      "selftext": "Sample content about Factor75",
-      "score": 50,
-      "num_comments": 4,
-      "subreddit": "meal_kits",
-      "url": "https://reddit.com/sample/factor75_1",
-      "created_utc": 1762560000.0,
-      "competitors_mentioned": [
-        "Factor75"
-      ],
-      "author": "user_1",
-      "upvote_ratio": 0.7250641054171102,
-      "is_self": true,
-      "source_brand": "Factor75",
-      "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week&cId=44d92750-2572-487c-91c0-2aed826ec3ab&iId=4441f666-996b-4434-b057-3999a14b44d7",
-      "sentiment": "neutral",
-      "confidence": 0.8760650570118458,
-      "reasoning": "Sample neutral sentiment"
-    },
-    {
-      "title": "Sample Factor75 discussion 3",
-      "selftext": "Sample content about Factor75",
-      "score": 36,
-      "num_comments": 13,
-      "subreddit": "meal_kits",
-      "url": "https://reddit.com/sample/factor75_2",
-      "created_utc": 1762387200.0,
-      "competitors_mentioned": [
-        "Factor75"
-      ],
-      "author": "user_2",
-      "upvote_ratio": 0.9493922098810463,
+      "upvote_ratio": 0.6269266190389063,
       "is_self": true,
       "source_brand": "Factor75",
       "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week&cId=44d92750-2572-487c-91c0-2aed826ec3ab&iId=4441f666-996b-4434-b057-3999a14b44d7",
       "sentiment": "positive",
-      "confidence": 0.8903846256733359,
+      "confidence": 0.6637580990659278,
+      "reasoning": "Sample positive sentiment"
+    },
+    {
+      "title": "Sample Factor75 discussion 2",
+      "selftext": "Sample content about Factor75",
+      "score": 48,
+      "num_comments": 19,
+      "subreddit": "meal_kits",
+      "url": "https://reddit.com/sample/factor75_1",
+      "created_utc": 1762473600.0,
+      "competitors_mentioned": [
+        "Factor75"
+      ],
+      "author": "user_1",
+      "upvote_ratio": 0.8573452052697672,
+      "is_self": true,
+      "source_brand": "Factor75",
+      "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week&cId=44d92750-2572-487c-91c0-2aed826ec3ab&iId=4441f666-996b-4434-b057-3999a14b44d7",
+      "sentiment": "negative",
+      "confidence": 0.7105681522676175,
+      "reasoning": "Sample negative sentiment"
+    },
+    {
+      "title": "Sample Factor75 discussion 3",
+      "selftext": "Sample content about Factor75",
+      "score": 12,
+      "num_comments": 16,
+      "subreddit": "meal_kits",
+      "url": "https://reddit.com/sample/factor75_2",
+      "created_utc": 1762300800.0,
+      "competitors_mentioned": [
+        "Factor75"
+      ],
+      "author": "user_2",
+      "upvote_ratio": 0.9192186287613928,
+      "is_self": true,
+      "source_brand": "Factor75",
+      "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week&cId=44d92750-2572-487c-91c0-2aed826ec3ab&iId=4441f666-996b-4434-b057-3999a14b44d7",
+      "sentiment": "positive",
+      "confidence": 0.7409767396343585,
       "reasoning": "Sample positive sentiment"
     },
     {
       "title": "Sample Factor75 discussion 4",
       "selftext": "Sample content about Factor75",
-      "score": 16,
-      "num_comments": 11,
+      "score": 44,
+      "num_comments": 5,
       "subreddit": "meal_kits",
       "url": "https://reddit.com/sample/factor75_3",
-      "created_utc": 1762041600.0,
+      "created_utc": 1762300800.0,
       "competitors_mentioned": [
         "Factor75"
       ],
       "author": "user_3",
-      "upvote_ratio": 0.9122773984879117,
+      "upvote_ratio": 0.7505620147638866,
       "is_self": true,
       "source_brand": "Factor75",
       "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week&cId=44d92750-2572-487c-91c0-2aed826ec3ab&iId=4441f666-996b-4434-b057-3999a14b44d7",
-      "sentiment": "neutral",
-      "confidence": 0.7886093560350093,
-      "reasoning": "Sample neutral sentiment"
+      "sentiment": "negative",
+      "confidence": 0.6337379374812772,
+      "reasoning": "Sample negative sentiment"
     }
   ]
 }
