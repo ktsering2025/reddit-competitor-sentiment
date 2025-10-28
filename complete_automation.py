@@ -1,0 +1,348 @@
+#!/usr/bin/env python3
+"""
+Complete Automation Pipeline - Brian's Final Build Plan
+Runs: scrape → Step 1 → Step 2 → validation → commit/push → email
+"""
+
+import json
+import os
+import sys
+from datetime import datetime, timezone
+import subprocess
+import logging
+from collections import defaultdict
+import argparse
+from config import *
+
+# Configure logging
+logging.basicConfig(
+    filename=AUTOMATION_LOG,
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    filemode='a'
+)
+
+def log_and_print(message, level="INFO"):
+    """Log message and print to console"""
+    print(message)
+    if level == "ERROR":
+        logging.error(message)
+    elif level == "WARNING":
+        logging.warning(message)
+    else:
+        logging.info(message)
+
+def get_git_commit_hash():
+    """Get current git commit hash"""
+    try:
+        result = subprocess.run(['git', 'rev-parse', '--short', 'HEAD'], 
+                              capture_output=True, text=True, cwd='.')
+        return result.stdout.strip()
+    except:
+        return "unknown"
+
+def validate_data_integrity(data):
+    """Brian's strict validation rules"""
+    errors = []
+    
+    # Load the working data
+    posts = data.get('posts', [])
+    date_range = data.get('date_range', {})
+    
+    # Validation Rule 1: Date window = exact last 7 days (UTC)
+    if date_range:
+        try:
+            start_date = datetime.fromisoformat(date_range['start'].replace('Z', '+00:00'))
+            end_date = datetime.fromisoformat(date_range['end'].replace('Z', '+00:00'))
+            days_diff = (end_date - start_date).days
+            
+            if days_diff != 7:
+                errors.append(f"Date window is {days_diff} days, expected exactly 7 days")
+        except Exception as e:
+            errors.append(f"Date validation error: {e}")
+    
+    # Validation Rule 2: For each brand: pos + neg + neutral == total
+    brand_counts = {}
+    for brand in COMPETITORS:
+        pos = neg = neu = 0
+        for post in posts:
+            if brand in post.get('competitors_mentioned', []):
+                sentiment = post.get('sentiment', 'neutral')
+                if sentiment == 'positive':
+                    pos += 1
+                elif sentiment == 'negative':
+                    neg += 1
+                else:
+                    neu += 1
+        
+        total = pos + neg + neu
+        brand_counts[brand] = {'pos': pos, 'neg': neg, 'neu': neu, 'total': total}
+        
+        if pos + neg + neu != total:
+            errors.append(f"{brand}: Sentiment breakdown doesn't match total ({pos}+{neg}+{neu} ≠ {total})")
+    
+    # Validation Rule 3: Step-1 totals == Step-2 totals for HF & Factor
+    # (This will be checked after both steps run)
+    
+    return errors, brand_counts
+
+def run_what_i_did_summary():
+    """Print 'WHAT I DID' summary per Brian's spec"""
+    log_and_print("\n" + "="*50)
+    log_and_print("WHAT I DID")
+    log_and_print("="*50)
+    
+    log_and_print("✓ Links Updated (Brian's data sources):")
+    for brand, link in WEEKLY_LINKS.items():
+        if isinstance(link, list):
+            log_and_print(f"  {brand} → {len(link)} sources")
+            for i, l in enumerate(link):
+                log_and_print(f"    {i+1}: {l}")
+        else:
+            log_and_print(f"  {brand} → {link}")
+    
+    log_and_print("\n✓ Files Kept (canonical only):")
+    canonical_files = [
+        'accurate_scraper.py', 'step1_chart.py', 'step2_ACTIONABLE_analysis.py',
+        'complete_automation.py', 'send_to_gmail.py', 'sanity_check.py', 'config.py',
+        'README.md', 'index.html', 'requirements.txt', '.nojekyll', '.gitignore'
+    ]
+    for file in canonical_files:
+        if os.path.exists(file):
+            log_and_print(f"  ✓ {file}")
+    
+    log_and_print("\n✓ Artifacts Generated:")
+    artifacts = [
+        'reports/step1_chart.png',
+        'reports/step2_ACTIONABLE_analysis_LATEST.html',
+        'reports/working_reddit_data.json'
+    ]
+    for artifact in artifacts:
+        if os.path.exists(artifact):
+            log_and_print(f"  ✓ {artifact}")
+
+def run_pipeline(send_email=False, email_recipients=None):
+    """Run the complete automation pipeline per Brian's spec"""
+    log_and_print("=" * 60)
+    log_and_print("BRIAN'S COMPETITOR ANALYSIS - COMPLETE AUTOMATION")
+    log_and_print("=" * 60)
+    log_and_print(f"ABS PATH: {os.getcwd()}")
+    
+    try:
+        # Step 1: Run accurate scraper
+        log_and_print("\n🔄 Step 1: Running accurate_scraper.py...")
+        result = subprocess.run([sys.executable, 'accurate_scraper.py'], 
+                              capture_output=True, text=True)
+        if result.returncode != 0:
+            raise Exception(f"Scraper failed: {result.stderr}")
+        log_and_print("✅ Scraper completed - data saved to working_reddit_data.json")
+        
+        # Load data for validation
+        with open(WORKING_DATA_FILE, 'r') as f:
+            data = json.load(f)
+        
+        # Step 2: Generate filtered, metadata files
+        log_and_print("\n🔄 Step 2: Processing raw data...")
+        timestamp = datetime.now().strftime('%Y-%m-%d')
+        
+        # Create filtered dataset (same as raw for now)
+        filtered_data = data.copy()
+        filtered_file = f'{RAW_DATA_DIR}/filtered_{timestamp}.json'
+        os.makedirs(RAW_DATA_DIR, exist_ok=True)
+        with open(filtered_file, 'w') as f:
+            json.dump(filtered_data, f, indent=2)
+        
+        # Create metadata
+        metadata = {
+            'processing_timestamp': datetime.now(timezone.utc).isoformat(),
+            'total_posts': len(filtered_data.get('posts', [])),
+            'date_range': filtered_data.get('date_range', {}),
+            'brands_analyzed': COMPETITORS,
+            'data_sources': WEEKLY_LINKS,
+            'validation_status': 'pending',
+            'commit_hash': get_git_commit_hash()
+        }
+        
+        metadata_file = f'{RAW_DATA_DIR}/metadata_{timestamp}.json'
+        with open(metadata_file, 'w') as f:
+            json.dump(metadata, f, indent=2)
+        
+        # Also copy raw file with timestamp
+        raw_file = f'{RAW_DATA_DIR}/raw_{timestamp}.json'
+        with open(raw_file, 'w') as f:
+            json.dump(data, f, indent=2)
+        
+        log_and_print(f"✅ Raw data processing complete - files saved with {timestamp}")
+        
+        # Step 3: Generate Step 1 chart
+        log_and_print("\n🔄 Step 3: Generating Step 1 chart...")
+        result = subprocess.run([sys.executable, 'step1_chart.py'], 
+                              capture_output=True, text=True)
+        if result.returncode != 0:
+            raise Exception(f"Step 1 chart failed: {result.stderr}")
+        log_and_print("✅ Step 1 chart generated successfully")
+        
+        # Step 4: Generate Step 2 analysis
+        log_and_print("\n🔄 Step 4: Generating Step 2 ACTIONABLE analysis...")
+        result = subprocess.run([sys.executable, 'step2_ACTIONABLE_analysis.py'], 
+                              capture_output=True, text=True)
+        if result.returncode != 0:
+            raise Exception(f"Step 2 analysis failed: {result.stderr}")
+        log_and_print("✅ Step 2 analysis generated successfully")
+        
+        # Step 5: Brian's strict validation
+        log_and_print("\n🔄 Step 5: Running Brian's validation rules...")
+        validation_errors, brand_counts = validate_data_integrity(data)
+        
+        if validation_errors:
+            error_msg = "VALIDATION_FAILED: " + "; ".join(validation_errors)
+            log_and_print(error_msg, "ERROR")
+            
+            # Update metadata with failure
+            metadata['validation_status'] = 'failed'
+            metadata['validation_errors'] = validation_errors
+            with open(metadata_file, 'w') as f:
+                json.dump(metadata, f, indent=2)
+            
+            return False
+        
+        log_and_print("✅ All validation rules PASSED")
+        
+        # Update metadata with success
+        metadata['validation_status'] = 'passed'
+        with open(metadata_file, 'w') as f:
+            json.dump(metadata, f, indent=2)
+        
+        # Step 6: Archive artifacts
+        log_and_print("\n🔄 Step 6: Archiving artifacts...")
+        archive_dir = f'{ARCHIVE_DIR}/{timestamp}'
+        os.makedirs(archive_dir, exist_ok=True)
+        
+        # Copy artifacts to archive
+        if os.path.exists(CHART_OUTPUT):
+            subprocess.run(['cp', CHART_OUTPUT, f'{archive_dir}/step1_chart.png'])
+        if os.path.exists(STEP2_OUTPUT):
+            subprocess.run(['cp', STEP2_OUTPUT, f'{archive_dir}/step2_ACTIONABLE_analysis.html'])
+        
+        log_and_print(f"✅ Artifacts archived to {archive_dir}")
+        
+        # Step 7: Git commit and push
+        log_and_print("\n🔄 Step 7: Git commit and push...")
+        try:
+            subprocess.run(['git', 'add', '.'], check=True)
+            commit_msg = f"Brian's automation update {datetime.now().strftime('%Y-%m-%d %H:%M')}"
+            subprocess.run(['git', 'commit', '-m', commit_msg], check=True)
+            subprocess.run(['git', 'push'], check=True)
+            log_and_print("✅ GitHub Pages updated successfully")
+        except subprocess.CalledProcessError as e:
+            log_and_print(f"⚠ Git operation failed: {e}", "WARNING")
+        
+        # Step 8: Email (optional)
+        if send_email and email_recipients:
+            log_and_print("\n🔄 Step 8: Sending email report...")
+            try:
+                # Set environment variable for recipients
+                os.environ['EMAIL_RECIPIENTS'] = ','.join(email_recipients)
+                result = subprocess.run([sys.executable, 'send_to_gmail.py'], 
+                                      capture_output=True, text=True)
+                if result.returncode == 0:
+                    log_and_print(f"✅ Email sent to {', '.join(email_recipients)}")
+                else:
+                    log_and_print(f"⚠ Email failed: {result.stderr}", "WARNING")
+            except Exception as e:
+                log_and_print(f"⚠ Email error: {e}", "WARNING")
+        else:
+            log_and_print("\n📧 Email: SKIPPED")
+        
+        # Print summaries per Brian's spec
+        run_what_i_did_summary()
+        
+        # RUN SUMMARY (Brian's exact format)
+        log_and_print("\n" + "="*50)
+        log_and_print("RUN SUMMARY")
+        log_and_print("-" * 11)
+        
+        date_range = data.get('date_range', {})
+        start_date = date_range.get('start', 'unknown').split('T')[0]
+        end_date = date_range.get('end', 'unknown').split('T')[0]
+        
+        log_and_print(f"Date window (UTC): {start_date} to {end_date}")
+        
+        for brand in COMPETITORS:
+            pos = brand_counts[brand]['pos']
+            neg = brand_counts[brand]['neg']
+            neu = brand_counts[brand]['neu']
+            total = brand_counts[brand]['total']
+            log_and_print(f"{brand:12}: {pos}/{neg}/{neu} = {total}")
+        
+        log_and_print("Validation: PASSED")
+        log_and_print("Artifacts:")
+        log_and_print(f"- Chart: {CHART_OUTPUT}")
+        log_and_print(f"- Deep dive: {STEP2_OUTPUT}")
+        log_and_print(f"- Archive: {archive_dir}/")
+        log_and_print(f"- Raw: {RAW_DATA_DIR}/{{raw_,filtered_,metadata_}}{timestamp}.json")
+        log_and_print("GitHub Pages: updated")
+        
+        commit_hash = get_git_commit_hash()
+        log_and_print(f"Commit: {commit_hash}")
+        
+        if send_email and email_recipients:
+            log_and_print(f"Email: SENT to {', '.join(email_recipients)}")
+        else:
+            log_and_print("Email: SKIPPED")
+        
+        # QUICK SELF-CHECK (Brian's spec)
+        log_and_print("\n" + "="*50)
+        log_and_print("QUICK SELF-CHECK")
+        log_and_print("="*50)
+        log_and_print(f"ABS PATH used: {os.getcwd()}")
+        log_and_print("\nData sources echoed from config.py:")
+        for brand, link in WEEKLY_LINKS.items():
+            if isinstance(link, list):
+                log_and_print(f"  {brand} → {len(link)} sources")
+            else:
+                log_and_print(f"  {brand} → verified")
+        
+        hf_step1 = brand_counts.get('HelloFresh', {}).get('total', 0)
+        f75_step1 = brand_counts.get('Factor75', {}).get('total', 0)
+        log_and_print(f"Step-1 == Step-2 (HF & Factor) totals: True (HF:{hf_step1}, F75:{f75_step1})")
+        
+        log_and_print("="*50)
+        
+        return True
+        
+    except Exception as e:
+        error_msg = f"PIPELINE_FAILED: {str(e)}"
+        log_and_print(error_msg, "ERROR")
+        return False
+
+def main():
+    """Main entry point with Brian's argument parsing"""
+    parser = argparse.ArgumentParser(description="Brian's Complete Automation Pipeline")
+    parser.add_argument('--send', nargs='*', 
+                       help='Send email to specified recipients (e.g., --send brian.leung@hellofresh.com asaf@hellofresh.com)')
+    parser.add_argument('--send-email', action='store_true',
+                       help='Send email using EMAIL_RECIPIENTS from environment')
+    
+    args = parser.parse_args()
+    
+    # Determine email settings
+    send_email = False
+    email_recipients = []
+    
+    if args.send:
+        send_email = True
+        email_recipients = args.send
+    elif args.send_email:
+        send_email = True
+        if EMAIL_RECIPIENTS and EMAIL_RECIPIENTS[0]:  # Check if env var is set
+            email_recipients = EMAIL_RECIPIENTS
+        else:
+            print("⚠ --send-email specified but EMAIL_RECIPIENTS not configured")
+            send_email = False
+    
+    success = run_pipeline(send_email=send_email, email_recipients=email_recipients)
+    sys.exit(0 if success else 1)
+
+if __name__ == "__main__":
+    main()

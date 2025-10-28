@@ -1,0 +1,29 @@
+{
+  "processing_timestamp": "2025-10-28T00:17:24.181543+00:00",
+  "total_posts": 25,
+  "date_range": {
+    "start": "2025-10-21T00:17:17.153728+00:00",
+    "end": "2025-10-28T00:17:17.153728+00:00"
+  },
+  "brands_analyzed": [
+    "HelloFresh",
+    "Factor75",
+    "Home Chef",
+    "Blue Apron",
+    "Marley Spoon",
+    "Hungryroot"
+  ],
+  "data_sources": {
+    "HelloFresh": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week&cId=769414f9-964b-4ebe-a1ff-f90cbd6b0908&iId=59059aa8-e8c2-4d42-b520-99edad80893d",
+    "Factor75": "https://www.reddit.com/search/?q=factor75&type=posts&t=week&cId=44d92750-2572-487c-91c0-2aed826ec3ab&iId=4441f666-996b-4434-b057-3999a14b44d7",
+    "Home Chef": "https://www.reddit.com/search/?q=Home+Chef&type=posts&t=week&cId=8c9ccbfc-1914-4a26-a5c9-b0d23339a024&iId=563a6653-9627-4d76-98be-f30396295389",
+    "Blue Apron": "https://www.reddit.com/search/?q=Blue+Apron&type=posts&t=week&cId=d3d63097-c67a-4dfa-a725-8db03e904c7b&iId=48d2ba6c-0d4b-476d-852f-11d8437e4c91",
+    "Marley Spoon": [
+      "https://www.reddit.com/search/?q=Marley+Spoon&type=posts&t=week&cId=76ab259d-b1ad-4bb7-ab56-a010eda6e781&iId=6f707832-8cbf-47d4-b57d-b434c9aa5598",
+      "https://www.reddit.com/r/marleyspoon/new/"
+    ],
+    "Hungryroot": "https://www.reddit.com/search/?q=hungryroot&type=posts&t=week"
+  },
+  "validation_status": "passed",
+  "commit_hash": "42aba48c"
+}
