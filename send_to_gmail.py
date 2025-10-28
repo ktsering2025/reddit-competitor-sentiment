@@ -63,51 +63,114 @@ def get_weekly_summary():
     
     return date_range_str, summary_lines, sum(sum(stats.values()) for stats in brand_stats.values())
 
+def get_top_posts_for_email():
+    """Get Top 3 Positive and Negative posts for HelloFresh and Factor75"""
+    with open('reports/working_reddit_data.json', 'r') as f:
+        data = json.load(f)
+    
+    posts = data.get('posts', [])
+    hf_posts = [p for p in posts if 'HelloFresh' in p.get('competitors_mentioned', [])]
+    f75_posts = [p for p in posts if 'Factor75' in p.get('competitors_mentioned', [])]
+    
+    def calculate_engagement(post):
+        return post.get('score', 0) + 3 * post.get('num_comments', 0)
+    
+    # Get top 3 positive and negative for each brand
+    hf_positive = sorted([p for p in hf_posts if p.get('sentiment') == 'positive'], 
+                        key=calculate_engagement, reverse=True)[:3]
+    hf_negative = sorted([p for p in hf_posts if p.get('sentiment') == 'negative'], 
+                        key=calculate_engagement, reverse=True)[:3]
+    f75_positive = sorted([p for p in f75_posts if p.get('sentiment') == 'positive'], 
+                         key=calculate_engagement, reverse=True)[:3]
+    f75_negative = sorted([p for p in f75_posts if p.get('sentiment') == 'negative'], 
+                         key=calculate_engagement, reverse=True)[:3]
+    
+    return hf_positive, hf_negative, f75_positive, f75_negative
+
 def send_via_mailto(recipient_email):
     """Send email using system mail client with automatic chart attachment"""
     print(f"=== SENDING TO: {recipient_email} ===")
     
-    # Update data first
-    print("Updating weekly data...")
-    subprocess.run(['python3', 'step1_chart.py'], capture_output=True)
-    
-    # Get summary
-    date_range, summary_lines, total_posts = get_weekly_summary()
-    subject = f"Weekly Reddit Competitor Sentiment Report — {date_range}"
-    
-    # Get latest Step 2 analysis file
-    reports_dir = 'reports'
-    step2_files = [f for f in os.listdir(reports_dir) if f.startswith('step2_ACTIONABLE_analysis_') and f.endswith('.html')]
-    latest_step2 = sorted(step2_files)[-1] if step2_files else None
-    
-    # Get HelloFresh and Factor75 specific data
-    hf_posts = 0
-    factor_posts = 0
-    hf_positive = 0
-    factor_positive = 0
-    
-    seven_days_ago = datetime.now() - timedelta(days=7)
-    seven_days_timestamp = seven_days_ago.timestamp()
-    
-    # Load posts data
+    # Get date range from data
     with open('reports/working_reddit_data.json', 'r') as f:
         data = json.load(f)
-    posts = data.get('posts', [])
     
-    for post in posts:
-        created = post.get('created_utc', 0)
-        if created >= seven_days_timestamp:
-            brands = post.get('competitors_mentioned', [])
-            sentiment = post.get('sentiment', 'neutral')
+    date_range = data.get('date_range', {})
+    start_date = date_range.get('start', '2025-10-20').split('T')[0]
+    end_date = date_range.get('end', '2025-10-25').split('T')[0]
+    
+    subject = f"Weekly Reddit Competitor Sentiment Report — {start_date} to {end_date}"
+    
+    # Get top posts
+    hf_positive, hf_negative, f75_positive, f75_negative = get_top_posts_for_email()
+    
+    # Build email body
+    body_lines = []
+    body_lines.append("Weekly Reddit Competitor Sentiment Report")
+    body_lines.append("=" * 50)
+    body_lines.append("")
+    
+    # HelloFresh section
+    body_lines.append("HelloFresh:")
+    body_lines.append("Top 3 Positive:")
+    for i, post in enumerate(hf_positive, 1):
+        title = post.get('title', 'No title')[:80] + "..." if len(post.get('title', '')) > 80 else post.get('title', 'No title')
+        url = post.get('url', '#')
+        body_lines.append(f"  {i}. {title}")
+        body_lines.append(f"     Link: {url}")
+    
+    body_lines.append("Top 3 Negative:")
+    for i, post in enumerate(hf_negative, 1):
+        title = post.get('title', 'No title')[:80] + "..." if len(post.get('title', '')) > 80 else post.get('title', 'No title')
+        url = post.get('url', '#')
+        body_lines.append(f"  {i}. {title}")
+        body_lines.append(f"     Link: {url}")
+    
+    body_lines.append("")
+    
+    # Factor75 section
+    body_lines.append("Factor75:")
+    body_lines.append("Top 3 Positive:")
+    for i, post in enumerate(f75_positive, 1):
+        title = post.get('title', 'No title')[:80] + "..." if len(post.get('title', '')) > 80 else post.get('title', 'No title')
+        url = post.get('url', '#')
+        body_lines.append(f"  {i}. {title}")
+        body_lines.append(f"     Link: {url}")
+    
+    body_lines.append("Top 3 Negative:")
+    for i, post in enumerate(f75_negative, 1):
+        title = post.get('title', 'No title')[:80] + "..." if len(post.get('title', '')) > 80 else post.get('title', 'No title')
+        url = post.get('url', '#')
+        body_lines.append(f"  {i}. {title}")
+        body_lines.append(f"     Link: {url}")
+    
+    body_lines.append("")
+    body_lines.append("Complete Analysis:")
+    body_lines.append("https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_ACTIONABLE_analysis_LATEST.html")
+    
+    body = "\n".join(body_lines)
+    
+    # Create AppleScript to send email with attachment
+    applescript = f'''
+    tell application "Mail"
+        set newMessage to make new outgoing message with properties {{subject:"{subject}", content:"{body}"}}
+        tell newMessage
+            make new to recipient with properties {{address:"{recipient_email}"}}
             
-            if 'HelloFresh' in brands:
-                hf_posts += 1
-                if sentiment == 'positive':
-                    hf_positive += 1
-            if 'Factor' in brands:
-                factor_posts += 1
-                if sentiment == 'positive':
-                    factor_positive += 1
+            -- Attach the chart
+            set chartPath to POSIX file "{os.path.abspath('reports/step1_chart.png')}"
+            make new attachment with properties {{file name:chartPath}} at after the last paragraph
+        end tell
+        send newMessage
+    end tell
+    '''
+    
+    # Execute AppleScript
+    try:
+        subprocess.run(['osascript', '-e', applescript], check=True)
+        print(f"[SUCCESS] Email sent to {recipient_email}")
+    except subprocess.CalledProcessError as e:
+        print(f"[ERROR] Failed to send email: {e}")
     
     hf_sentiment_pct = int((hf_positive / hf_posts) * 100) if hf_posts > 0 else 0
     factor_sentiment_pct = int((factor_positive / factor_posts) * 100) if factor_posts > 0 else 0
