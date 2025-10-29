@@ -1,6 +1,6 @@
 {
-  "scrape_timestamp": "2025-10-29T15:10:23.194681+00:00",
-  "processing_timestamp": "2025-10-29T15:10:23.194709+00:00",
+  "scrape_timestamp": "2025-10-29T15:23:41.737340+00:00",
+  "processing_timestamp": "2025-10-29T15:23:41.737379+00:00",
   "date_range": {
     "start": "2025-10-27T00:00:00+00:00",
     "end": "2025-11-01T23:59:59+00:00"
@@ -75,7 +75,7 @@
     {
       "title": "This didn\u2019t used to have an upcharge!",
       "selftext": "This is a longtime favorite of ours and now there\u2019s an upcharge for it! It used to have the \u201cbest seller\u201d ID on it, before HF got obsessed with protein ",
-      "score": 42,
+      "score": 45,
       "num_comments": 19,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oish8t/this_didnt_used_to_have_an_upcharge/",
@@ -84,7 +84,7 @@
         "HelloFresh"
       ],
       "author": "Reasonable-Employee6",
-      "upvote_ratio": 0.91,
+      "upvote_ratio": 0.94,
       "is_self": false,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -96,7 +96,7 @@
     {
       "title": "Nightly dinner pic of spicy maple chicken and weekly meal list this week \ud83d\ude04",
       "selftext": "These are my recipes that got delivered this week let me know if any of you have made these/how they are! \n\n- spicy maple chicken\n- cheesy smash burgers (ive gotten this one more than once because it\u2019s easy and I love making the fries) \n- silky Sicilian chicken penne \n- steak au poivre with maple sage sweet potatoes and lemony asparagus \n- cheesy chicken enchiladas \n\n\nPic is the maple chicken. I just want to say that I feel bad for people that blindly follow some of these recipes for the first time that contain pepper flakes and trust hello fresh enough to EVER put the entire pack of red pepper flakes. I literally never use the whole pack of pepper flakes or seasoning in general. For this recipe i literally used barely any, only used a pinch and tossed out the rest and it was still a tad too spicy for us, imagine if I\u2019d put in the whole packet! \ud83e\udd75\ud83e\udd75\n\n",
-      "score": 10,
+      "score": 9,
       "num_comments": 2,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oiposn/nightly_dinner_pic_of_spicy_maple_chicken_and/",
@@ -105,7 +105,7 @@
         "HelloFresh"
       ],
       "author": "Fit-Elderberry7120",
-      "upvote_ratio": 1.0,
+      "upvote_ratio": 0.92,
       "is_self": false,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -117,7 +117,7 @@
     {
       "title": "A Word of Caution - DO NOT Redeem Gift Cards/Vouchers",
       "selftext": "I've been subscribed to HelloFresh for over 2 years now, I originally subscribed when they offered the free add-on item for life with any active subscription. Loved all the fresh and delicious meals I've cooked over the years. \n\nLast Christmas, I was gifted a voucher for one free box from a family member (as an aside, it didn't even cover the full box price, only $80 but whatever). I finally redeemed it two weeks ago, and last week I received an email saying my subscription had been cancelled. I immediately logged in and re-activated the subscription, and confirmed there was an active card on file still. My assumption is their system tried redeeming the gift card a second time, saw zero balance, and cancelled the account... But honestly I am unsure how this happened. Their support team offered no answers. I also noticed I no longer get the free add-on item with my weekly box and so I called customer service to report this issue.\n\nAfter multiple calls with their customer service, their best solution for me was offering me 40% off for one box, stating that they no longer offer the free item for life voucher and as such cannot re-activate it on my account. \n\nI am writing this post after a half hour long frustrating call with them where I cancelled my subscription and will be looking elsewhere since they refused to honor their own mistake. \n\nIf you plan on redeeming any sort of gift voucher code, please double check your account the following week or share the same situation I find myself in.",
-      "score": 9,
+      "score": 10,
       "num_comments": 3,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oic9jq/a_word_of_caution_do_not_redeem_gift_cardsvouchers/",
@@ -126,7 +126,7 @@
         "HelloFresh"
       ],
       "author": "oldaccsuspndedwhy",
-      "upvote_ratio": 0.8,
+      "upvote_ratio": 0.81,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -238,7 +238,7 @@
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/r/mealkits/search/?q=hellofresh&type=posts&t=week&restrict_sr=1",
-      "primary_brand": null,
+      "primary_brand": "HelloFresh",
       "sentiment": "positive",
       "confidence": 0.9,
       "reasoning": "VADER: 0.77, TextBlob: 0.23"
@@ -267,7 +267,7 @@
     {
       "title": "Stay away from Marley Spoon and Dinnerly",
       "selftext": "I subscribed to see what they had to offer. I browsed for a bit but didn\u2019t like the options so I canceled my subscription 10 mins after signing up. Didn\u2019t think anything of it. Today I get home to a big delivery from both. I check my credit card and I was charged for both. But I canceled, basically right away. Why would they send random food to someone who isn\u2019t subscribed. Such a shady business practice. I called them but of course they are experiencing high call volumes. I used there chatbot on their site and they just end the convo. I disputed it with my credit card company too. This is ridiculous. ",
-      "score": 15,
+      "score": 14,
       "num_comments": 27,
       "subreddit": "mealkits",
       "url": "https://reddit.com/r/mealkits/comments/1ohpgd4/stay_away_from_marley_spoon_and_dinnerly/",
@@ -276,7 +276,7 @@
         "Marley Spoon"
       ],
       "author": "ProblematicSchematic",
-      "upvote_ratio": 0.72,
+      "upvote_ratio": 0.7,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/r/mealkits/search/?q=hellofresh&type=posts&t=week&restrict_sr=1",
@@ -330,7 +330,7 @@
     {
       "title": "Horrible Experience With Factor Meals",
       "selftext": "Do not sign up for Factor Meals unless you\u2019re prepared to be locked in, or spend many excruciating hours trying to cancel.\n\nLearn from my mistake and save\u00a0yourself money, time, and frustration. \n\nLured by a discount offer and intrigued by the possibility of portion controlled, healthy, pre-prepared meals, I made the mistake of visiting the Factor Meals website, only to get sucked in to what feels very much like a scam, with blatantly deceptive (and likely illegal) high-pressure marketing tactics.\u00a0\n\nSelecting an initial delivery date and inputting a credit card is required just to view the meals, which should\u2019ve been a huge red flag\u2026however, the sign-up page clearly states in bold that you can \u201cchange, skip, or cancel weekly deliveries anytime.\u201d\u00a0\n\nThere are no disclaimers, asterisks, or restrictions attached to that statement.\u00a0\n\nAll that is shown is a badge underneath stating \u201cSatisfaction Guaranteed.\u201d\u00a0\n\nUnfortunately, none of these statements are true in practice. \n\nAfter signing up and selecting an initial delivery date (which, again, is required just to view the meals they offer), I found out that you cannot change, pause or cancel your first delivery at all.\u00a0\n\nWhen I immediately tried to simply adjust my delivery date (literally 42 seconds after selecting it), I got a message saying changes weren\u2019t allowed for the first box. I then immediately cancelled my entire account, only to find that Factor still planned to charge me for the first order.\n\nIt took several hours and multiple frustrating attempts to contact customer support, by both phone and in-app chat, to finally get that first delivery canceled.\u00a0\n\nBoth the in-app chat and phone line had extreme wait times and would randomly (or deliberately?) disconnect.\u00a0\n\nWhen I finally got through, the customer service team was clearly following a system that makes it as hard as possible for customers to resolve issues, including he agent asking multiple times to verify information that I had already provided (such as my phone number and account name), and waiting 5+ minutes to reply between each response.\u00a0\n\nThe process was stressful, confusing, and felt intentionally designed to make it extremely difficult to opt out.\u00a0\n\nIf Factor\u2019s food is as good as they claim, they shouldn\u2019t need to trap new customers through not just misleading, but blatantly inaccurate \u201ccancel anytime\u201d promises and huge barriers to cancellation.\n\nThis experience completely ruined my trust in the company.\u00a0\n\nGiven the many negative reviews about the weird taste and texture of their food, and the misleadingly high fat and sodium content of their sauces, it seems like I dodged a bullet, but I wanted to warn anyone else thinking about inputting their information just to view the meals.\n\nTransparency and honesty go a long way. I hope Factor rethinks their misleading and shady practices, and hope everyone else thinks twice before signing up and getting locked in.\n\n_____\n\nTLDR: be warned that Factor Meals\nhas deliberately misleading marketing practices, blatant misstatements, and an extremely frustrating (and near impossible) cancellation experience.\n\n",
-      "score": 44,
+      "score": 46,
       "num_comments": 39,
       "subreddit": "ReadyMeals",
       "url": "https://reddit.com/r/ReadyMeals/comments/1oiciat/horrible_experience_with_factor_meals/",
@@ -351,7 +351,7 @@
     {
       "title": "Made homemade pepperoni & mushroom pizzas from scratch tonight the smell alone could turn anyone into a home chef \ud83c\udf55\ud83d\udd25",
       "selftext": "",
-      "score": 104,
+      "score": 107,
       "num_comments": 8,
       "subreddit": "homecooking",
       "url": "https://reddit.com/r/homecooking/comments/1oijx00/made_homemade_pepperoni_mushroom_pizzas_from/",
@@ -393,7 +393,7 @@
     {
       "title": "Terrible. Terrible. Terrible.",
       "selftext": "For anyone on the fence, do not waste your money.\n\nThis was hands down the worst meal service I have ever tried. I enjoy Blue Apron, HelloFresh, and Daily Harvest. They have their ups and downs but are overall good. \n\nPurple carrot was literally trash. Very old and rotten vegetables wrapped in way too much plastic. The meals were inedible. My husband actually took the pot (mushroom stroganoff) outside because the smell was rancid. \n\nI tried to cancel immediately the day after delivery but of course there was no human to talk to. Just a useless AI chatbot that kept me trapped in a fruitless loop. A few days later a rep finally emailed me, not to fix anything, but to say they could not stop the next shipment and would refund me five dollars for the spoiled ingredients. \n\nI did not sign up for this service to argue over pocket change. I wanted healthy, easy plant-based meals. What I got was rotten trash in absurd amounts of plastic packaging.\n\nSave yourself the headache and avoid this service like the plague.\n\n",
-      "score": 1,
+      "score": 0,
       "num_comments": 8,
       "subreddit": "purplecarrot",
       "url": "https://reddit.com/r/purplecarrot/comments/1oimb9a/terrible_terrible_terrible/",
@@ -403,7 +403,7 @@
         "Blue Apron"
       ],
       "author": "Excellent_Weather583",
-      "upvote_ratio": 0.54,
+      "upvote_ratio": 0.5,
       "is_self": true,
       "source_brand": "Blue Apron",
       "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
@@ -425,7 +425,7 @@
         "Blue Apron"
       ],
       "author": "matchagrl",
-      "upvote_ratio": 0.67,
+      "upvote_ratio": 0.68,
       "is_self": true,
       "source_brand": "Blue Apron",
       "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",

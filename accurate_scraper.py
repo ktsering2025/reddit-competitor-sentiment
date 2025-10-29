@@ -510,12 +510,23 @@ class AccurateScraper:
         return mentioned
     
     def get_primary_brand(self, post):
-        """Determine the PRIMARY brand this post is about (not just mentioned)"""
+        """Determine the PRIMARY brand this post is about (substantive discussion)"""
         title = post.get('title', '').lower()
         text = post.get('selftext', '').lower()
         subreddit = post.get('subreddit', '').lower()
+        full_text = title + ' ' + text
         
-        # Priority 1: Subreddit name (if post is in brand's subreddit, it's about that brand)
+        brand_patterns = {
+            'HelloFresh': ['hellofresh', 'hello fresh'],
+            'Factor75': ['factor75', 'factor 75', 'factor meal'],
+            'Blue Apron': ['blue apron', 'blueapron'],
+            'Home Chef': ['home chef', 'homechef'],
+            'Marley Spoon': ['marley spoon', 'marleyspoon'],
+            'Hungryroot': ['hungryroot', 'hungry root'],
+            'Purple Carrot': ['purple carrot', 'purplecarrot']
+        }
+        
+        # Priority 1: Brand-specific subreddits (posts in r/hellofresh are about HelloFresh)
         subreddit_brands = {
             'hellofresh': 'HelloFresh',
             'factor75': 'Factor75',
@@ -527,46 +538,72 @@ class AccurateScraper:
         }
         
         for sub_name, brand in subreddit_brands.items():
-            if sub_name in subreddit:
+            if sub_name == subreddit:  # Exact match
                 return brand
         
-        # Priority 2: Brand in title (title indicates main topic)
-        brand_patterns = {
-            'HelloFresh': ['hellofresh', 'hello fresh'],
-            'Factor75': ['factor75', 'factor 75', 'factor meal'],
-            'Blue Apron': ['blue apron', 'blueapron'],
-            'Home Chef': ['home chef', 'homechef'],
-            'Marley Spoon': ['marley spoon', 'marleyspoon'],
-            'Hungryroot': ['hungryroot', 'hungry root'],
-            'Purple Carrot': ['purple carrot', 'purplecarrot']
-        }
+        # Priority 2: Strong opinion/experience phrases about a specific brand
+        # These indicate deep discussion about the brand
+        experience_phrases = [
+            'experience with', 'tried', 'using', 'switched to', 'switched from',
+            'love', 'hate', 'recommend', 'avoid', 'stay away from',
+            'horrible', 'terrible', 'amazing', 'excellent', 'best', 'worst',
+            'quality', 'delivery', 'customer service', 'cancelled', 'subscription',
+            'meal from', 'box from', 'order from', 'delivered by'
+        ]
+        
+        brand_discussion_scores = {}
         
         for brand, patterns in brand_patterns.items():
+            score = 0
+            brand_mentioned = False
+            
             for pattern in patterns:
-                if pattern in title:
-                    return brand
+                if pattern in full_text:
+                    brand_mentioned = True
+                    
+                    # Check for experience/opinion phrases near the brand name
+                    for phrase in experience_phrases:
+                        # Check if phrase appears within 50 characters of brand name
+                        brand_positions = [i for i in range(len(full_text)) if full_text.startswith(pattern, i)]
+                        for pos in brand_positions:
+                            # Check before and after brand mention
+                            context_before = full_text[max(0, pos-50):pos]
+                            context_after = full_text[pos:min(len(full_text), pos+50)]
+                            
+                            if phrase in context_before or phrase in context_after:
+                                score += 2
+                    
+                    # Brand in title is stronger signal
+                    if pattern in title:
+                        score += 3
+                    
+                    # Check for substantive discussion (longer text about the brand)
+                    if len(text) > 100 and pattern in text:
+                        score += 1
+            
+            if brand_mentioned:
+                brand_discussion_scores[brand] = score
         
-        # Priority 3: Negative sentiment keywords about a specific brand
-        # e.g., "stay away from X", "horrible experience with X", "X is terrible"
-        for brand, patterns in brand_patterns.items():
-            for pattern in patterns:
-                if f'stay away from {pattern}' in text or \
-                   f'horrible experience with {pattern}' in text or \
-                   f'{pattern} is terrible' in text or \
-                   f'do not use {pattern}' in text or \
-                   f'avoid {pattern}' in text:
-                    return brand
+        # Return brand with highest discussion score
+        if brand_discussion_scores:
+            max_score = max(brand_discussion_scores.values())
+            if max_score >= 2:  # Minimum threshold for substantive discussion
+                for brand, score in brand_discussion_scores.items():
+                    if score == max_score:
+                        return brand
         
-        # Priority 4: If only ONE brand is mentioned, it's probably the primary
-        mentioned = self.detect_brands(title + ' ' + text)
-        if len(mentioned) == 1:
+        # Priority 3: If only ONE brand mentioned with any text, assume it's about that brand
+        mentioned = self.detect_brands(full_text)
+        if len(mentioned) == 1 and len(text) > 50:  # At least 50 chars of discussion
             return mentioned[0]
         
-        # If multiple brands mentioned, return None (unclear primary brand)
+        # If multiple brands or no clear primary, return None
         return None
     
     def analyze_sentiment(self, text, title_only=''):
         """Analyze sentiment using dual-method approach with keyword overrides"""
+        # Normalize text: replace curly quotes/apostrophes with straight ones
+        text = text.replace(''', "'").replace(''', "'").replace('"', '"').replace('"', '"')
         text_lower = text.lower()
         title_lower = title_only.lower() if title_only else text_lower
         
@@ -578,7 +615,10 @@ class AccurateScraper:
             'never again', 'waste of money', 'do not recommend', 'not recommend',
             'caution', 'warning', 'beware', 'upcharge', 'overpriced', 'rip off',
             'complaint', 'unhappy', 'dissatisfied', 'poor quality', 'bad experience',
-            'missing', 'wrong', 'incorrect', 'damaged', 'late delivery'
+            'missing', 'wrong', 'incorrect', 'damaged', 'late delivery',
+            'not available', 'isn\'t available', 'isnt available', 'doesn\'t offer', 
+            'doesnt offer', 'don\'t offer', 'dont offer', 'can\'t do', 'cant do',
+            'cannot', 'won\'t', 'wont', 'will not', 'no longer', 'stopped'
         ]
         
         # Strong positive keywords
