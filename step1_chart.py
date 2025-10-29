@@ -118,7 +118,7 @@ def create_chart(brand_sentiment, data):
     ax.grid(True, alpha=0.3, axis='y')
     
     # Check for zero posts and add footnote (Brian's spec)
-    zero_brands = [brand for brand in COMPETITORS if sum(brand_sentiment[brand].values()) == 0]
+    zero_brands = [brand for brand in ALL_COMPETITORS if sum(brand_sentiment[brand].values()) == 0]
     if zero_brands:
         plt.figtext(0.02, 0.02, '* No posts this week', fontsize=8, style='italic')
     

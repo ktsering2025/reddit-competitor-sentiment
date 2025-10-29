@@ -1843,3 +1843,73 @@ UnboundLocalError: local variable 'brand_counts' referenced before assignment
 2025-10-28 20:49:57,997 - INFO - [SUCCESS] Artifacts archived to reports/archive/2025-10-28
 2025-10-28 20:49:57,997 - INFO - 
 [STEP 7] Git commit and push...
+2025-10-28 20:49:58,082 - INFO - [SUCCESS] Updated index.html with BUILD_TOKEN: 20251029004957
+2025-10-28 20:49:58,724 - INFO - [SUCCESS] GitHub Pages updated successfully
+2025-10-28 20:49:58,748 - INFO - [SUCCESS] HEALTH.json created for site freshness check
+2025-10-28 20:49:58,748 - INFO - 
+[EMAIL] SKIPPED
+2025-10-28 20:49:58,748 - INFO - 
+==================================================
+2025-10-28 20:49:58,748 - INFO - WHAT I DID
+2025-10-28 20:49:58,748 - INFO - ==================================================
+2025-10-28 20:49:58,748 - INFO - [OK] Links Updated (Brian's data sources):
+2025-10-28 20:49:58,748 - INFO -   HelloFresh → https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new
+2025-10-28 20:49:58,748 - INFO -   Factor75 → https://old.reddit.com/search/?q=factor75&type=posts&t=week&sort=new
+2025-10-28 20:49:58,748 - INFO -   Home Chef → https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new
+2025-10-28 20:49:58,748 - INFO -   Blue Apron → https://old.reddit.com/search/?q=blue+apron&type=posts&t=week&sort=new
+2025-10-28 20:49:58,749 - INFO -   Marley Spoon → https://old.reddit.com/search/?q=marley+spoon&type=posts&t=week&sort=new
+2025-10-28 20:49:58,749 - INFO -   Hungryroot → https://old.reddit.com/search/?q=hungryroot&type=posts&t=week&sort=new
+2025-10-28 20:49:58,749 - INFO - 
+[OK] Files Kept (canonical only):
+2025-10-28 20:49:58,749 - INFO -   [OK] accurate_scraper.py
+2025-10-28 20:49:58,749 - INFO -   [OK] step1_chart.py
+2025-10-28 20:49:58,749 - INFO -   [OK] step2_ACTIONABLE_analysis.py
+2025-10-28 20:49:58,749 - INFO -   [OK] complete_automation.py
+2025-10-28 20:49:58,749 - INFO -   [OK] send_to_gmail.py
+2025-10-28 20:49:58,749 - INFO -   [OK] sanity_check.py
+2025-10-28 20:49:58,749 - INFO -   [OK] config.py
+2025-10-28 20:49:58,749 - INFO -   [OK] README.md
+2025-10-28 20:49:58,749 - INFO -   [OK] index.html
+2025-10-28 20:49:58,749 - INFO -   [OK] requirements.txt
+2025-10-28 20:49:58,749 - INFO -   [OK] .nojekyll
+2025-10-28 20:49:58,749 - INFO -   [OK] .gitignore
+2025-10-28 20:49:58,749 - INFO - 
+[OK] Artifacts Generated:
+2025-10-28 20:49:58,749 - INFO -   [OK] reports/step1_chart.png
+2025-10-28 20:49:58,749 - INFO -   [OK] reports/step2_ACTIONABLE_analysis_LATEST.html
+2025-10-28 20:49:58,749 - INFO -   [OK] reports/working_reddit_data.json
+2025-10-28 20:49:58,749 - INFO - 
+==================================================
+2025-10-28 20:49:58,749 - INFO - RUN SUMMARY
+2025-10-28 20:49:58,749 - INFO - -----------
+2025-10-28 20:49:58,749 - INFO - Date window (UTC): 2025-10-27 to 2025-11-01
+2025-10-28 20:49:58,749 - INFO - HelloFresh  : 60/1/2 = 63
+2025-10-28 20:49:58,749 - INFO - Factor75    : 4/0/4 = 8
+2025-10-28 20:49:58,749 - INFO - Home Chef   : 9/0/3 = 12
+2025-10-28 20:49:58,749 - INFO - Blue Apron  : 5/1/1 = 7
+2025-10-28 20:49:58,749 - INFO - Marley Spoon: 0/0/1 = 1
+2025-10-28 20:49:58,749 - INFO - Hungryroot  : 0/0/1 = 1
+2025-10-28 20:49:58,749 - INFO - Validation: PASSED
+2025-10-28 20:49:58,749 - INFO - Artifacts:
+2025-10-28 20:49:58,749 - INFO - - Chart: reports/step1_chart.png
+2025-10-28 20:49:58,749 - INFO - - Deep dive: reports/step2_ACTIONABLE_analysis_LATEST.html
+2025-10-28 20:49:58,749 - INFO - - Archive: reports/archive/2025-10-28/
+2025-10-28 20:49:58,749 - INFO - - Raw: reports/raw/{raw_,filtered_,metadata_}2025-10-28.json
+2025-10-28 20:49:58,749 - INFO - GitHub Pages: updated
+2025-10-28 20:49:58,766 - INFO - Commit: 2b3af2a6
+2025-10-28 20:49:58,766 - INFO - Email: SKIPPED
+2025-10-28 20:49:58,766 - INFO - 
+==================================================
+2025-10-28 20:49:58,766 - INFO - QUICK SELF-CHECK
+2025-10-28 20:49:58,766 - INFO - ==================================================
+2025-10-28 20:49:58,766 - INFO - ABS PATH used: /Users/kunsang.tsering/Desktop/reddit-competitor-sentiment
+2025-10-28 20:49:58,766 - INFO - 
+Data sources echoed from config.py:
+2025-10-28 20:49:58,766 - INFO -   HelloFresh → verified
+2025-10-28 20:49:58,766 - INFO -   Factor75 → verified
+2025-10-28 20:49:58,766 - INFO -   Home Chef → verified
+2025-10-28 20:49:58,766 - INFO -   Blue Apron → verified
+2025-10-28 20:49:58,766 - INFO -   Marley Spoon → verified
+2025-10-28 20:49:58,766 - INFO -   Hungryroot → verified
+2025-10-28 20:49:58,766 - INFO - Step-1 == Step-2 (HF & Factor) totals: True (HF:63, F75:8)
+2025-10-28 20:49:58,766 - INFO - ==================================================
