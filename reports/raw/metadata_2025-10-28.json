@@ -1,5 +1,5 @@
 {
-  "processing_timestamp": "2025-10-29T02:17:33.391919+00:00",
+  "processing_timestamp": "2025-10-29T02:28:20.064256+00:00",
   "total_posts": 4,
   "date_range": {
     "start": "2025-10-20T00:00:00+00:00",
@@ -14,15 +14,33 @@
     "Hungryroot"
   ],
   "data_sources": {
-    "HelloFresh": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-    "Factor75": "https://old.reddit.com/search/?q=factor75&type=posts&t=week&sort=new",
-    "Home Chef": "https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new",
-    "Blue Apron": "https://old.reddit.com/search/?q=blue+apron&type=posts&t=week&sort=new",
-    "Marley Spoon": "https://old.reddit.com/search/?q=marley+spoon&type=posts&t=week&sort=new",
-    "Hungryroot": "https://old.reddit.com/search/?q=hungryroot&type=posts&t=week&sort=new"
+    "HelloFresh": [
+      "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+      "https://www.reddit.com/search/?q=hellofresh+mealkit+brand&type=posts&t=week",
+      "https://www.reddit.com/search/?q=hellofresh+food+brand&type=posts&t=week"
+    ],
+    "Factor75": [
+      "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
+      "https://www.reddit.com/search/?q=factor+mealkit+brand&type=posts&t=week",
+      "https://www.reddit.com/search/?q=factor+food+brand&type=posts&t=week"
+    ],
+    "Home Chef": [
+      "https://www.reddit.com/search/?q=homechef+mealkit+brand&type=posts&t=week"
+    ],
+    "Blue Apron": [
+      "https://www.reddit.com/search/?q=blue+apron+mealkit+brand&type=posts&t=week",
+      "https://www.reddit.com/search/?q=blue+apron+food+brand&type=posts&t=week"
+    ],
+    "Marley Spoon": [
+      "https://www.reddit.com/search/?q=marley+spoon+food+brand&type=posts&t=week",
+      "https://www.reddit.com/search/?q=marley+spoon+mealkit+brand&type=posts&t=week"
+    ],
+    "Hungryroot": [
+      "https://www.reddit.com/search/?q=Hungryroot+food+brand&type=posts&t=week"
+    ]
   },
   "validation_status": "passed",
-  "commit_hash": "d409d414",
+  "commit_hash": "e818f290",
   "filter_stats": {
     "HelloFresh": {
       "pre_filter": 0,
@@ -30,7 +48,7 @@
     },
     "Factor75": {
       "pre_filter": 0,
-      "post_filter": 0
+      "post_filter": 3
     },
     "Home Chef": {
       "pre_filter": 0,
@@ -38,7 +56,7 @@
     },
     "Blue Apron": {
       "pre_filter": 0,
-      "post_filter": 3
+      "post_filter": 0
     },
     "Marley Spoon": {
       "pre_filter": 0,

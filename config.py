@@ -15,13 +15,32 @@ GMAIL_APP_PASSWORD = os.getenv('GMAIL_APP_PASSWORD')
 EMAIL_RECIPIENTS = os.getenv('EMAIL_RECIPIENTS', 'brian.leung@hellofresh.com,asaf@hellofresh.com').split(',')
 
 # DATA SOURCES - Weekly Reddit Search Links (all competitors for Step 1)
+# Multiple links per brand for comprehensive data collection
 WEEKLY_LINKS = {
-    "HelloFresh": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-    "Factor75": "https://old.reddit.com/search/?q=factor75&type=posts&t=week&sort=new",
-    "Home Chef": "https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new",
-    "Blue Apron": "https://old.reddit.com/search/?q=blue+apron&type=posts&t=week&sort=new",
-    "Marley Spoon": "https://old.reddit.com/search/?q=marley+spoon&type=posts&t=week&sort=new",
-    "Hungryroot": "https://old.reddit.com/search/?q=hungryroot&type=posts&t=week&sort=new"
+    "HelloFresh": [
+        "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+        "https://www.reddit.com/search/?q=hellofresh+mealkit+brand&type=posts&t=week",
+        "https://www.reddit.com/search/?q=hellofresh+food+brand&type=posts&t=week"
+    ],
+    "Factor75": [
+        "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
+        "https://www.reddit.com/search/?q=factor+mealkit+brand&type=posts&t=week",
+        "https://www.reddit.com/search/?q=factor+food+brand&type=posts&t=week"
+    ],
+    "Home Chef": [
+        "https://www.reddit.com/search/?q=homechef+mealkit+brand&type=posts&t=week"
+    ],
+    "Blue Apron": [
+        "https://www.reddit.com/search/?q=blue+apron+mealkit+brand&type=posts&t=week",
+        "https://www.reddit.com/search/?q=blue+apron+food+brand&type=posts&t=week"
+    ],
+    "Marley Spoon": [
+        "https://www.reddit.com/search/?q=marley+spoon+food+brand&type=posts&t=week",
+        "https://www.reddit.com/search/?q=marley+spoon+mealkit+brand&type=posts&t=week"
+    ],
+    "Hungryroot": [
+        "https://www.reddit.com/search/?q=Hungryroot+food+brand&type=posts&t=week"
+    ]
 }
 
 # All competitors for Step 1 chart (exactly 6 brands)

@@ -1,29 +1,43 @@
 {
-  "scrape_timestamp": "2025-10-29T02:17:33.350214+00:00",
-  "processing_timestamp": "2025-10-29T02:17:33.350237+00:00",
+  "scrape_timestamp": "2025-10-29T02:28:20.011752+00:00",
+  "processing_timestamp": "2025-10-29T02:28:20.011775+00:00",
   "date_range": {
     "start": "2025-10-20T00:00:00+00:00",
     "end": "2025-10-25T23:59:59+00:00"
   },
   "total_posts": 4,
   "data_sources": {
-    "HelloFresh": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-    "Factor75": "https://old.reddit.com/search/?q=factor75&type=posts&t=week&sort=new",
-    "Home Chef": "https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new",
-    "Blue Apron": "https://old.reddit.com/search/?q=blue+apron&type=posts&t=week&sort=new",
-    "Marley Spoon": "https://old.reddit.com/search/?q=marley+spoon&type=posts&t=week&sort=new",
-    "Hungryroot": "https://old.reddit.com/search/?q=hungryroot&type=posts&t=week&sort=new"
+    "HelloFresh": [
+      "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+      "https://www.reddit.com/search/?q=hellofresh+mealkit+brand&type=posts&t=week",
+      "https://www.reddit.com/search/?q=hellofresh+food+brand&type=posts&t=week"
+    ],
+    "Factor75": [
+      "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
+      "https://www.reddit.com/search/?q=factor+mealkit+brand&type=posts&t=week",
+      "https://www.reddit.com/search/?q=factor+food+brand&type=posts&t=week"
+    ],
+    "Home Chef": "https://www.reddit.com/search/?q=homechef+mealkit+brand&type=posts&t=week",
+    "Blue Apron": [
+      "https://www.reddit.com/search/?q=blue+apron+mealkit+brand&type=posts&t=week",
+      "https://www.reddit.com/search/?q=blue+apron+food+brand&type=posts&t=week"
+    ],
+    "Marley Spoon": [
+      "https://www.reddit.com/search/?q=marley+spoon+food+brand&type=posts&t=week",
+      "https://www.reddit.com/search/?q=marley+spoon+mealkit+brand&type=posts&t=week"
+    ],
+    "Hungryroot": "https://www.reddit.com/search/?q=Hungryroot+food+brand&type=posts&t=week"
   },
   "filter_stats": {
     "HelloFresh": {
-      "pre": 3,
+      "pre": 2,
       "post": 0,
-      "removed": 3
+      "removed": 2
     },
     "Factor75": {
-      "pre": 3,
-      "post": 0,
-      "removed": 3
+      "pre": 4,
+      "post": 3,
+      "removed": 1
     },
     "Home Chef": {
       "pre": 0,
@@ -31,9 +45,9 @@
       "removed": 0
     },
     "Blue Apron": {
-      "pre": 9,
-      "post": 3,
-      "removed": 6
+      "pre": 0,
+      "post": 0,
+      "removed": 0
     },
     "Marley Spoon": {
       "pre": 2,
@@ -48,69 +62,49 @@
   },
   "posts": [
     {
-      "title": "No more premade Dishes?",
-      "selftext": "Are you guys able to order premade Dishes in the app anymore? I no longer see the section to order them, and it's not a menu option like before. Did they get rid of this option or what?  Is it temporarily on hold or something? Premade Dishes was my whole reason for using Blue Apron. Is anyone else having this issue?",
-      "score": 1,
-      "num_comments": 3,
-      "subreddit": "blueapron",
-      "url": "https://reddit.com/r/blueapron/comments/1oevoic/no_more_premade_dishes/",
-      "created_utc": 1761306855.0,
+      "title": "The Machine",
+      "selftext": "They call her a legend. But I \u2014 I call her the Disney of music.\n\nAll sparkle, no soul. A castle made of choruses \u2014 sequels and singalongs, stories we\u2019ve all been spoon-fed before.\n\nThe machine knows your ache. You call it wholesome. I call it formula. You crave the comfort, the choreography of nostalgia. You crave the kind of magic that distracts you until you forget you were ever searching for something real.\n\nAnd oh \u2014 you call it art. You call it timeless. You call it inspiration. But it\u2019s intellectual property, baby \u2014 a factory of feelings, focus-grouped emotions, safe dreams, sold wholesale with a copyright.\n\nShe doesn\u2019t challenge the frame \u2014 she polishes it. She doesn\u2019t question the myth \u2014 she markets it. Can\u2019t go too dark, the money lives in daylight. Can\u2019t go too deep, the brand might drown. Too big to fail, too beloved to question.\n\nAnd you \u2014 you consume her like childhood itself. Every lyric, a lullaby. Every album, a bedtime story for those raised on princess mythology and brand nostalgia.\n\nBut dare you break the spell \u2014 dare you whisper that maybe the magic feels manufactured \u2014 they\u2019ll call you bitter, say you hate joy, say you can\u2019t stand a woman shining.\n\nIt\u2019s a theme park, no exit signs, just wonder and merch. Save me the empowerment slogans, the faux-feminist branding, the glossy girlboss gospel sold as revolution.\n\nBecause her lyrics? Sweet as syrup, light as air. Depth of a cartoon pretending to feel. Recycled tropes, repackaged pain, wrapped in glitter for maximum replay value.\n\nAnd yet \u2014 we built this kingdom. We minted nostalgia into currency, confused polish for prestige. We chose comforting over confronting, the magical over the messy. We crowned the safe and called it sacred.\n\nSo yes \u2014 the lights still dazzle, the crowds still cheer, the numbers still climb. But let\u2019s not lie to ourselves about the trade:\n\nwe\u2019re not buying art that wounds or wakes us \u2014 we\u2019re buying mirrors that flatter. We\u2019re buying dreams that never risk being real. We\u2019re buying escape, and calling it enlightenment.\n\nBecause that\u2019s the show, isn\u2019t it? The spectacle. The kingdom. The music. And the magic \u2014 still beautifully, painfully, manufactured.\n\nLillianpoe_",
+      "score": 2,
+      "num_comments": 0,
+      "subreddit": "Poems",
+      "url": "https://reddit.com/r/Poems/comments/1offchi/the_machine/",
+      "created_utc": 1761356451.0,
       "competitors_mentioned": [
-        "Blue Apron"
+        "Factor75"
       ],
-      "author": "Content-Strategy-512",
-      "upvote_ratio": 0.57,
+      "author": "Due-Breakfast-3157",
+      "upvote_ratio": 0.6,
       "is_self": true,
-      "source_brand": "Blue Apron",
-      "source_url": "https://old.reddit.com/search/?q=blue+apron&type=posts&t=week&sort=new",
-      "sentiment": "neutral",
-      "confidence": 0.45,
-      "reasoning": "VADER: -0.43, TextBlob: 0.11"
+      "source_brand": "Marley Spoon",
+      "source_url": "https://www.reddit.com/search/?q=marley+spoon+mealkit+brand&type=posts&t=week",
+      "sentiment": "positive",
+      "confidence": 1.0,
+      "reasoning": "VADER: 0.99, TextBlob: 0.16"
     },
     {
-      "title": "Blue Apron Black Friday 2025 deals vs just learning to meal prep cause these prices are just",
-      "selftext": "Honestly feels like meal kits are for people who can't plan meals or don't know how to cook. But we're both busy with work and tired of eating the same 5 things on rotation or ordering expensive takeout. Is Blue Apron actually good quality and interesting recipes or is it mediocre food at premium prices?\n\nHas anyone used Blue Apron long term and think it's worth it? Do they even do Black Friday deals or is it just the constant new customer promotions? And for people who quit meal kits, did you find a better solution or just go back to regular grocery shopping?",
-      "score": 2,
-      "num_comments": 17,
-      "subreddit": "blueapron",
-      "url": "https://reddit.com/r/blueapron/comments/1oemwm8/blue_apron_black_friday_2025_deals_vs_just/",
-      "created_utc": 1761275042.0,
+      "title": "The Machine (Spoken Word)",
+      "selftext": "They call her a legend.\nBut I \u2014 I call her the Disney of music.\n\nAll sparkle, no soul.\nA castle made of choruses \u2014 sequels and singalongs,\nstories we\u2019ve all been spoon-fed before.\n\nThe machine knows your ache.\nYou call it wholesome.\nI call it formula.\nYou crave the comfort,\nthe choreography of nostalgia.\nYou crave the kind of magic\nthat distracts you\nuntil you forget\nyou were ever searching for something real.\n\nAnd oh \u2014 you call it art.\nYou call it timeless.\nYou call it inspiration.\nBut it\u2019s intellectual property, baby \u2014\na factory of feelings,\nfocus-grouped emotions,\nsafe dreams,\nsold wholesale with a copyright.\n\nShe doesn\u2019t challenge the frame \u2014\nshe polishes it.\nShe doesn\u2019t question the myth \u2014\nshe markets it.\nCan\u2019t go too dark,\nthe money lives in daylight.\nCan\u2019t go too deep,\nthe brand might drown.\nToo big to fail,\ntoo beloved to question.\n\nAnd you \u2014\nyou consume her like childhood itself.\nEvery lyric, a lullaby.\nEvery album, a bedtime story\nfor those raised on princess mythology\nand brand nostalgia.\n\nBut dare you break the spell \u2014\ndare you whisper\nthat maybe the magic feels manufactured \u2014\nthey\u2019ll call you bitter,\nsay you hate joy,\nsay you can\u2019t stand a woman shining.\n\nIt\u2019s a theme park,\nno exit signs,\njust wonder and merch.\nSave me the empowerment slogans,\nthe faux-feminist branding,\nthe glossy girlboss gospel\nsold as revolution.\n\nBecause her lyrics?\nSweet as syrup,\nlight as air.\nDepth of a cartoon \npretending to feel.\nRecycled tropes,\nrepackaged pain,\nwrapped in glitter\nfor maximum replay value.\n\nAnd yet \u2014\nwe built this kingdom.\nWe minted nostalgia into currency,\nconfused polish for prestige.\nWe chose comforting over confronting,\nthe magical over the messy.\nWe crowned the safe and called it sacred.\n\nSo yes \u2014\nthe lights still dazzle,\nthe crowds still cheer,\nthe numbers still climb.\nBut let\u2019s not lie to ourselves about the trade:\n\nwe\u2019re not buying art that wounds or wakes us \u2014\nwe\u2019re buying mirrors that flatter.\nWe\u2019re buying dreams that never risk being real.\nWe\u2019re buying escape,\nand calling it enlightenment.\n\nBecause that\u2019s the show, isn\u2019t it?\nThe spectacle.\nThe kingdom.\nThe music.\nAnd the magic \u2014\nstill beautifully,\npainfully,\nmanufactured.\n\n\n\n\nhttps://www.reddit.com/r/OCPoetry/comments/1of2q4y/comment/nl624yu/?utm_source=share&utm_medium=mweb3x&utm_name=mweb3xcss&utm_term=1&utm_content=share_button\n\nhttps://www.reddit.com/r/OCPoetry/comments/1odwndr/comment/nl631dx/?utm_source=share&utm_medium=mweb3x&utm_name=mweb3xcss&utm_term=1&utm_content=share_button\n",
+      "score": 10,
+      "num_comments": 11,
+      "subreddit": "OCPoetry",
+      "url": "https://reddit.com/r/OCPoetry/comments/1of6m2u/the_machine_spoken_word/",
+      "created_utc": 1761333131.0,
       "competitors_mentioned": [
-        "Blue Apron"
+        "Factor75"
       ],
-      "author": "Psychological_Way_4",
-      "upvote_ratio": 0.54,
+      "author": "Due-Breakfast-3157",
+      "upvote_ratio": 0.92,
       "is_self": true,
-      "source_brand": "Blue Apron",
-      "source_url": "https://old.reddit.com/search/?q=blue+apron&type=posts&t=week&sort=new",
-      "sentiment": "neutral",
-      "confidence": 0.11,
-      "reasoning": "VADER: 0.95, TextBlob: 0.05"
-    },
-    {
-      "title": "Blue apron swapping protein and upcharging - anyone else?",
-      "selftext": "Has this been happening for anyone else? Recently we have chosen recipes and had the protein swapped out for something more expensive. This has happened twice now with burgers - we select burgers and choose ground beef, but what arrives is the black bean patty and we are charged extra for that. No communication about why that change was made.",
-      "score": 2,
-      "num_comments": 4,
-      "subreddit": "blueapron",
-      "url": "https://reddit.com/r/blueapron/comments/1oel8o7/blue_apron_swapping_protein_and_upcharging_anyone/",
-      "created_utc": 1761270042.0,
-      "competitors_mentioned": [
-        "Blue Apron"
-      ],
-      "author": "ElkEquivalent6848",
-      "upvote_ratio": 0.63,
-      "is_self": true,
-      "source_brand": "Blue Apron",
-      "source_url": "https://old.reddit.com/search/?q=blue+apron&type=posts&t=week&sort=new",
-      "sentiment": "neutral",
-      "confidence": 0.37,
-      "reasoning": "VADER: -0.66, TextBlob: -0.03"
+      "source_brand": "Marley Spoon",
+      "source_url": "https://www.reddit.com/search/?q=marley+spoon+mealkit+brand&type=posts&t=week",
+      "sentiment": "positive",
+      "confidence": 1.0,
+      "reasoning": "VADER: 0.99, TextBlob: 0.16"
     },
     {
       "title": "Miniature vegetables?",
       "selftext": "I am a vegetarian, really really enjoy Marley spoon overall but the veg have been getting smaller and smaller last few months. Anyone else experiencing this?\n\nI don\u2019t want to cancel, I like the recipes and the cooking is kinda at my level, I don\u2019t have time to shop and meal plan much, but I\u2019m getting hungry.",
-      "score": 6,
+      "score": 5,
       "num_comments": 8,
       "subreddit": "marleyspoon",
       "url": "https://reddit.com/r/marleyspoon/comments/1oekb6b/miniature_vegetables/",
@@ -119,20 +113,40 @@
         "Marley Spoon"
       ],
       "author": "Quiet-Arm-641",
-      "upvote_ratio": 1.0,
+      "upvote_ratio": 0.86,
       "is_self": false,
       "source_brand": "Marley Spoon",
-      "source_url": "https://old.reddit.com/search/?q=marley+spoon&type=posts&t=week&sort=new",
+      "source_url": "https://www.reddit.com/search/?q=marley+spoon+mealkit+brand&type=posts&t=week",
       "sentiment": "neutral",
       "confidence": 0.45,
       "reasoning": "VADER: 0.61, TextBlob: 0.06"
+    },
+    {
+      "title": "[Recap of the Years 2019\u20132025] Daniel, Faeces King \u2014 How to Ruin Your Life on Camera",
+      "selftext": "### Pre-Streaming Era\n**1989**\n*   [ **Mar** ] Daniel Jason Lord born (Maidstone Hospital, Kent, UK).\n\n**1999**\n*   [ **Sep** ] Grandfather Philip Lord dies. Daniel later pins lifelong social anxiety and shut-in habits to this specific shock.\n\n**2008\u20132016 (The Setup Years)**\n*   **2008\u20132009:** Long online relationship with Sayaka (Japan); marks early fixation on Japan/Asian partners.\n*   **2010:** First Osaka run \u2192 rebound with Sayuri \u2192 switches to a Korean girlfriend.\n*   **2011:** JF Plaza guest-house stint (Japan) \u2192 dates a French woman.\n*   **2014:** Relationship with Misaki. Later cited as the origin of chlamydia infection leading to reactive arthritis and persistent fertility anxiety.\n*   **2016:** Budget guest-house life; brief relationship with a Japanese single mother; lives rough to stay in the Japan orbit.\n\n---\n\n### The Chihiro Era & Fallout\n**2017**\n*   [ **Oct 2** ] First dated stream with Chihiro (\u201cRainy Day in Japan\u201d).\n*   [ **Oct** ] Meets Chihiro on Tinder (Osaka): Starbucks \u2192 kushikatsu \u2192 Hub \u2192 moves in within weeks.\n*   *Concurrent Activity:* Starts buying sex in Tobita Shinchi (brothel \u201ctea houses\u201d) and J\u016bs\u014d Chinese parlors; frames it as horniness/convenience/content rather than loneliness.\n\n**2018**\n*   [ **Mar** ] Paperwork wedding with Chihiro at Osaka ward office followed by McDonald\u2019s. Stated motive: spouse visa/residency.\n*   [ **Apr\u2013Dec** ] serial infidelity and prostitution (20\u201345 min tiers). Describes paid sex as robotic / unsexy / \u201cshit sex.\u201d Uses marital fights and cheating as content fuel.\n\n**2019**\n*   [ **Feb 6** ] Father Robert Lord dies (flu \u2192 sepsis \u2192 coma \u2192 ICU infection). Becomes Daniel\u2019s go-to trauma rationalization.\n*   [ **Jul\u2013Sep** ] Chihiro finds infidelity receipts on devices \u2192 kicks him to an Airbnb. Begins \"sex-doll isolation era\" on camera (masturbation grind, degenerate brand).\n*   [ **Sep 28** ] \u00a31,000 PayPal blackmail over a Swedish street photo \u2192 he self-leaks/confesses to nuke leverage.\n*   [ **Oct** ] Police question domestic blowups; Daniel recounts slaps, headlocks, and glasses being knocked off. Marriage pronounced dead (on stream, in spirit).\n\n---\n\n### The European Interlude\n**2020**\n*   [ **Jan** ] Divorce finalized (Chihiro handles most admin).\n*   [ **Mar** ] Mila (Dutch, ~26) flies to London. Maximalist first date: trampoline park \u2192 Korean BBQ \u2192 karaoke \u2192 hotel. He calls her the most beautiful he\u2019s dated; claims he never cheated on her.\n*   [ **May\u2013Jun** ] \u201cHoneymoon\u201d phase; Mila bans \u201ctoxic\u201d YouTube; he sanitizes content for her (later claims this killed the channel).\n*   [ **Oct** ] Moves to Rotterdam with Mila. Assault incident: gets collar-grabbed, choked, kicked; pays \u20ac20 to make the guy stop. Neighbor battering-ram raid by police; no heat/hot water; hates the area.\n*   [ **Dec** ] Mila dumps him near Christmas \u2192 weeks of crying/screaming and burning money trading (BNGO, NIO).\n    *   *Mila Sex Logs:* Described as \u201cboring/vanilla,\u201d rarely initiated. Unprotected for 9 months (\u201ccream pie\u201d dozens/hundreds of times) with no pregnancy, fueling infertility fears.\n\n**2021**\n*   [ **Jan\u2013Feb** ] Moves to Manchester; broke and lonely. Hires two escorts (~\u00a3100\u2013\u00a3150 each) described as \u201cgrim/transactional.\u201d\n    *   *Lowlights:* English MILF with fake spray tan that rubbed off; Russian escort who rushed him (only doggy allowed).\n*   [ **Oct\u2013Nov** ] Chest pain after Pfizer; recalls reactive-arthritis flares (knees/hips).\n*   [ **Dec** ] Cat Mimo dies (hypertension \u2192 detached retina). New Year\u2019s: sirens and police chaos near building.\n\n---\n\n### The Thailand & Whale Era\n**2022**\n*   [ **Feb** ] Dog-poo step incident \u2192 admits compulsive sniff/clean routine; milks the gross factor on stream.\n*   [ **May** ] Swallows a fly on stream \u2192 riffs about \u201cpoo dust\u201d and everything being part of a fecal cycle.\n*   [ **Jun 5** ] First logged Super Chat from Bloodbucket (Mizuki): \u00a52,400 \u2014 \u201cgo pee.\u201d\n*   [ **Jun\u2013Dec** ] Mizuki becomes biggest whale: \u00a510k / \u00a55k almost every stream; cumulative \u2248US$3,000. Alongside Rosetta Stone, she \u201cbasically keeps the show going,\u201d pre-funding Japan trip costs.\n*   [ **Oct** ] Moves to Thailand. Meets Fasta/Faster \u2192 dating within days.\n    *   *Ex-boyfriend showdown:* Guy threatens Daniel; Daniel hides behind cars, calls tourist police. Live hotel-hopping for ~1 month \u2192 cohabitation.\n*   [ **Nov** ] Weeks-long illness + dyshidrotic eczema. Fasta becomes logistics brain: super-fast internet (downloads 100GB in ~20 min), road-trip planner, house setup.\n\n**2023**\n*   [ **Jan** ] HMRC compliance check opens (covering 2019\u20132021) \u2192 penalties and dread cloud his future.\n*   [ **Jun** ] Claims he cleared cards/overdraft (HMRC stress remains).\n*   [ **Mid-Jun** ] Breakup with Fasta \u2192 he says he flipped a table/smashed the room; leaves to pursue Sunny.\n*   [ **Jul** ] GI meltdown: \u201cfluffy/floaty poo\u201d \u2192 disperses into \u201cbrown cloud\u201d with undigested greens; Jul 29 vomits on stream. Keeps streaming through pain for content.\n*   [ **Aug\u2013Dec** ] Kick + YouTube grind; long sessions; provocative thumbnails; relationship bait arcs.\n\n---\n\n### The Collapse\n**2024**\n*   [ **Apr** ] *Kansai Arc:* Mizuki FWB arc goes live (See *Cast of Characters* for full details).\n*   [ **Jul** ] *Online:* Viewers connect Chihiro with a younger Osaka YouTuber via overlapping trips (Laos/Thailand/Ishigaki); the posts vanish (privated/deleted). Daniel commentates it heavily.\n*   [ **Sep\u2013Nov** ] Amazon Flex permaban (filmed deliveries; had his mum help on camera).\n*   [ **Aug\u2013Dec** ] Mizuki goes awkward/ice-cold \u2192 final \u201cwhatever, lol\u201d \u2192 ghosts his chats; he believes she is annoyed, lost interest, or thinks Kick is a scam.\n\n**2025**\n*   [ **Jan\u2013Mar** ] *Devon/Sunny Pressure Cooker:*\n    *   Calls it the best sex of his life; multiple breakups; she demands he quit streaming for a \u201cnormal job.\u201d\n    *   Fights include him kicking/cracking his bedroom door.\n    *   Pregnancy scare: one bleed while on birth control leads to testing.\n    *   *Artifacts:* Straighteners, makeup, cotton pads, pillows, silver sugar spoon left behind.\n*   [ **Apr 2** ] Sunny gets **non-molestation order**: no contact, stay away from her street/venues, do not contact her friends. Remote court hearing scheduled for late Sep.\n*   [ **Apr\u2013May** ] Evri terminates him (\u201cthat\u2019s you done, mate\u201d). Reasons: filming while working, irregular delivery times.\n*   [ **May** ] *OnlyFans Confession:* Anal dildo \u2192 fellatio on same toy \u2192 ingests fecal residue \u2192 \u201cweirdest thing I\u2019ve eaten.\u201d\n*   [ **May\u2013Jun** ] OnlyFans warnings/takedowns for scat-adjacent content + unsafe objects (sausage, yogurt pouch, spatula). Yogurt enema leads to leakage and stained bedding.\n*   [ **Aug 23** ] Devon & Cornwall Police open harassment case after trolls book escorts to his address; he is told he\u2019s \u201con a list now.\u201d\n*   [ **Sep 15** ] Thai Elite Visa approved pending payment (deadline 30 days). Framed as an escape hatch from UK legal/financial/personal mess.\n\n***\n\n# Cast of Characters\n\n### Daniel (Daniel Jason Lord)\n*   **Operating System:** Turns sex, deceit, bodily fluids, and fights into content/money.\n*   **Jobs/Ops:** Lives on YouTube/Kick/OnlyFans + whales. Recently lost Amazon Flex (filming/mum helping) and Evri (\u201cthat\u2019s you done\u201d). HMRC investigation ongoing since Jan 2023.\n*   **Health:** History of chlamydia leading to reactive arthritis; chronic skin rashes; recurrent candida (\u201cdick cheese\u201d); sperm test showed \u201cmiddle\u201d motility (ongoing infertility fear).\n*   **Kinks:** Receiving anal; smelling/tasting (dirty underwear sniff tests; armpit sniff with an Iranian girl); humiliation tones.\n*   **Public Fluids:** Plane-toilet masturbation; communal showers; ejaculating into hotel toilets; once urinated on an Airbnb sofa (claimed smell dissipated); rubbed semen on a Taiwanese friend\u2019s laundry.\n\n### Bloodbucket (Mizuki / \u201cCheyenne\u201d)\n*   **Coordinates:** Japanese, mid-50s, lives north of Osaka. Slight build, scoliosis. Shaved head (hates hair) but very hairy otherwise (per Daniel). Identifies as lesbian but FWB with Daniel; quips \u201ceveryone\u2019s a little gay.\u201d\n*   **Financial Power:** First logged donation 2022-06-05 (\u00a52,400 \u201cgo pee\u201d). Total \u2248US$3k. Refuses Kick; oils on YouTube to keep him \u201cat their mercy.\u201d\n*   **Relationship Dynamics:**\n    *   *Sex/BDSM:* \u201cBanged\u2026 three times\u201d (he called it top-five sex, \u201cnutted so hard\u201d). Plays \u201cMommy Blood Bucket\u201d role at BDSM bars; offered whip/charging cable spanking for $200 goal.\n    *   *On-Stream:* Doubles live viewers (~200) when on cam; she reads chat while he deadpans.\n    *   *Overshare Push:* Shaved off all her hair with a shaver she bought him; wanted him to spill private details (e.g., \u201cwe had cereal mixed with blood\u201d) and got angry when he refused.\n*   **Fallout:** Online crowd labeled her \u201cweird old hag,\u201d \u201ccreepy,\u201d \u201csociopath.\u201d Attributed tweet called him \u201cisoro\u201d (freeloader). Ended with her DMing \u201cwhatever, lol\u201d and ghosting.\n\n### Chihiro (\u201cChi-Chi\u201d)\n*   **Arc:** Met Oct 2017 \u2192 Married Mar 2018 \u2192 Split Jan 2020.\n*   **Dynamics:** 50/50 on everything. Daniel praised the free AC/Wi-Fi/phone plan she let him piggyback for early streaming.\n*   **Sex:** Started \u201cboring/vanilla\u201d; later synced. noted she did the \u201cfinger in the bum thing really well.\u201d\n*   **Conflict:** Daniel recounts her hitting/slapping/head-locking him. Police called toward the end.\n*   **Endgame:** He cheated serially for content/drama; detonation triggered when she dined with Casey (\u201cHong Kong Guy\u201d) behind his back.\n\n### Mila (Netherlands)\n*   **Arc:** Mar\u2013Dec 2020.\n*   **Profile:** Tall, slim, no makeup, \u201cvampy\u201d straight teeth. Daniel called her the most attractive he\u2019s had.\n*   **Sex Life:** \u201cVanilla,\u201d minimal initiation. Unprotected for 9 months with no pregnancy \u2192 fueled Daniel's infertility spiral.\n*   **Lifestyle:** Past drug/party life (e.g., coke addiction, LA lesbian orgy) turned \u201cspiritual awakening.\u201d\n*   **Split:** Occurred near Christmas in Rotterdam after an assault incident and police raid on neighbors.\n\n### Fasta / Faster (Thailand)\n*   **Arc:** Late 2022 \u2192 Mid-2023.\n*   **Personality:** Sweet, patient, organized. Expected traditional provider role (he pays petrol \u2192 \u201cOh, I\u2019m not princess anymore\u201d).\n*   **Logistics:** Drives Yaris near redline (asked for 200 km/h on Autobahn); super-fast internet setup.\n*   **Split:** He dumped her for Sunny after a violent table-flip fight; guilt persists.\n\n### Sunny (UK / \u201cEssex girl\u201d)\n*   **Arc:** ~2024 \u2192 Apr 2, 2025 (Non-molestation order).\n*   **Profile:** Ginger (thin, wispy hair), freckles. Daniel sometimes compared her look to Matt Lucas.\n*   **Dynamics:** High volatility. Ultimatums (quit YouTube), rage/silent treatment, \u201cshit tests,\u201d toxic texts.\n*   **Legal:** Issued non-molestation order against Daniel in April 2025. Police threat over a \"horse clip\" (police visited her mum\u2019s house).\n\n### Supporting Players\n*   **Rosetta Stone:** Whale donor tandem with Mizuki; kept Daniel solvent and pre-funded Japan plans.\n*   **Cammy (Mum):** \"Bank of Mum\" for tax/car loans. Appeared in the Amazon Flex footage that got him banned.\n*   **Robert Lord (Dad):** Died Feb 2019. His formal emails warning about Daniel\u2019s path became Daniel\u2019s permanent emotional anchor/excuse.\n*   **Casey (\u201cHong Kong Guy\u201d):** Viewer/YouTuber friend of Chihiro; his dinners with her triggered the marriage detonation.\n\n***\n\n# The Extra Dirty Ledger\n\n**Prostitution Loglines**\n*   *Locations:* Japan (Tobita/J\u016bs\u014d), Korea, Thailand, UK.\n*   *Rates cited:* ~$120/20 min (Tobita), ~$200/45 min (\u201creally cute, really degenerate\u201d); sometimes \u00a58k\u2013\u00a510k bands.\n*   *Review:* mostly called \u201cshit sex\u201d: robotic, dead-eyed, no romance.\n*   *Performance Notes:* Smelly pussy or lost erection \u2192 opts for manual finish. Claims condoms kill sensation.\n*   *The \"BJ Menu\" Bit:* Trolling donation gag for viewers (\u00a55,000 BJ / \u00a510,000 swallow) to fund staying in Japan.\n\n**OnlyFans De-platforming Risks**\n*   Fellating a dildo post-anal (ingesting feces).\n*   Yogurt enema resulting in leakage on stream.\n*   Use of unsafe objects (sausage, yogurt pouch, spatula) leading to content removal.\n*   *Self-Harm Risk:* Rode a dildo until the metal rod was exposed, risking rectal rupture; continued discussing it for money.\n\n**Sexual & Bodily Miscellany**\n*   *Gay/Bi:* Accepted a BJ from an older Japanese man in a park during a depressive patch; jokes about rates for gay sex, fears AIDS.\n*   *Cheating:* Brags about serial cheating on Chihiro (even while angling for a spouse visa); maintains he did *not* cheat on Mila or Sunny.",
+      "score": 8,
+      "num_comments": 5,
+      "subreddit": "HIMRFAM",
+      "url": "https://reddit.com/r/HIMRFAM/comments/1oeixfi/recap_of_the_years_20192025_daniel_faeces_king/",
+      "created_utc": 1761263239.0,
+      "competitors_mentioned": [
+        "Factor75"
+      ],
+      "author": "Altruistic-Citron515",
+      "upvote_ratio": 0.9,
+      "is_self": true,
+      "source_brand": "Marley Spoon",
+      "source_url": "https://www.reddit.com/search/?q=marley+spoon+mealkit+brand&type=posts&t=week",
+      "sentiment": "neutral",
+      "confidence": -0.04,
+      "reasoning": "VADER: -1.00, TextBlob: 0.04"
     }
   ],
   "brand_counts": {
     "HelloFresh": 0,
-    "Factor75": 0,
+    "Factor75": 3,
     "Home Chef": 0,
-    "Blue Apron": 3,
+    "Blue Apron": 0,
     "Marley Spoon": 1,
     "Hungryroot": 0
   }

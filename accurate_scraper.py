@@ -46,13 +46,18 @@ class AccurateScraper:
         self.analyzer = SentimentIntensityAnalyzer()
         
     def normalize_reddit_url(self, url):
-        """Normalize Reddit URLs to old.reddit.com and ensure proper query params"""
+        """Normalize Reddit URLs and ensure proper query params"""
         # Parse the URL
         parsed = urlparse(url)
         
-        # Convert to old.reddit.com
-        if parsed.netloc in ['www.reddit.com', 'reddit.com']:
-            parsed = parsed._replace(netloc='old.reddit.com')
+        # Ensure www.reddit.com for consistency
+        if parsed.netloc == 'reddit.com':
+            parsed = parsed._replace(netloc='www.reddit.com')
+        
+        # For web scraping fallback, convert to old.reddit.com (better for scraping)
+        if parsed.netloc == 'www.reddit.com':
+            # Keep original for API, but we'll convert when scraping
+            pass
         
         # For search URLs, ensure t=week and sort=new
         if '/search' in parsed.path:
@@ -61,10 +66,6 @@ class AccurateScraper:
             # Ensure t=week
             if 't' not in query_params:
                 query_params['t'] = ['week']
-            
-            # Ensure sort=new
-            if 'sort' not in query_params:
-                query_params['sort'] = ['new']
             
             # Rebuild query string
             new_query = urlencode(query_params, doseq=True)
@@ -75,6 +76,10 @@ class AccurateScraper:
     def scrape_reddit_web(self, url, brand, start_time, end_time):
         """Scrape Reddit using web requests to old.reddit.com"""
         posts = []
+        
+        # Convert www.reddit.com to old.reddit.com for better web scraping
+        if 'www.reddit.com' in url:
+            url = url.replace('www.reddit.com', 'old.reddit.com')
         
         try:
             headers = {
