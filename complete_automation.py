@@ -262,8 +262,16 @@ def run_pipeline(send_email=False, email_recipients=None):
         
         log_and_print(f"[SUCCESS] Artifacts archived to {archive_dir}")
         
-        # Step 7: Git commit and push
-        log_and_print("\n[STEP 7] Git commit and push...")
+        # Step 7: Update homepage with current data
+        log_and_print("\n[STEP 7] Updating homepage with current data...")
+        try:
+            subprocess.run(['python3', 'update_homepage.py'], check=True)
+            log_and_print("[SUCCESS] Homepage updated with current actionable data")
+        except subprocess.CalledProcessError as e:
+            log_and_print(f"[WARNING] Homepage update failed: {e}", "WARNING")
+        
+        # Step 8: Git commit and push
+        log_and_print("\n[STEP 8] Git commit and push...")
         try:
             subprocess.run(['git', 'add', '.'], check=True)
             commit_msg = f"Brian's automation update {datetime.now().strftime('%Y-%m-%d %H:%M')}"
@@ -332,9 +340,9 @@ def run_pipeline(send_email=False, email_recipients=None):
         except subprocess.CalledProcessError as e:
             log_and_print(f"[WARNING] Git operation failed: {e}", "WARNING")
         
-        # Step 8: Email (optional)
+        # Step 9: Email (optional)
         if send_email and email_recipients:
-            log_and_print("\n[STEP 8] Sending email report...")
+            log_and_print("\n[STEP 9] Sending email report...")
             try:
                 # Set environment variable for recipients
                 os.environ['EMAIL_RECIPIENTS'] = ','.join(email_recipients)
