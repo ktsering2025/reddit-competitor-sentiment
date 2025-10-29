@@ -37,14 +37,13 @@ def analyze_brand_sentiment(data):
     
     posts = data.get('posts', [])
     
-    # Count sentiment for each brand
+    # Count sentiment for each brand (using primary_brand to ensure accuracy)
     for post in posts:
-        mentioned_brands = post.get('competitors_mentioned', [])
+        primary_brand = post.get('primary_brand')
         sentiment = post.get('sentiment', 'neutral')
         
-        for brand in mentioned_brands:
-            if brand in brand_sentiment:
-                brand_sentiment[brand][sentiment] += 1
+        if primary_brand and primary_brand in brand_sentiment:
+            brand_sentiment[primary_brand][sentiment] += 1
     
     return brand_sentiment
 

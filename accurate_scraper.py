@@ -473,6 +473,10 @@ class AccurateScraper:
                 'source_url': source_url
             }
             
+            # Determine PRIMARY brand (what the post is actually about)
+            primary_brand = self.get_primary_brand(post_data)
+            post_data['primary_brand'] = primary_brand
+            
             # Add sentiment analysis
             sentiment_data = self.analyze_sentiment(text)
             post_data.update(sentiment_data)
@@ -504,6 +508,62 @@ class AccurateScraper:
                     break
         
         return mentioned
+    
+    def get_primary_brand(self, post):
+        """Determine the PRIMARY brand this post is about (not just mentioned)"""
+        title = post.get('title', '').lower()
+        text = post.get('selftext', '').lower()
+        subreddit = post.get('subreddit', '').lower()
+        
+        # Priority 1: Subreddit name (if post is in brand's subreddit, it's about that brand)
+        subreddit_brands = {
+            'hellofresh': 'HelloFresh',
+            'factor75': 'Factor75',
+            'blueapron': 'Blue Apron',
+            'homechef': 'Home Chef',
+            'marleyspoon': 'Marley Spoon',
+            'hungryroot': 'Hungryroot',
+            'purplecarrot': 'Purple Carrot'
+        }
+        
+        for sub_name, brand in subreddit_brands.items():
+            if sub_name in subreddit:
+                return brand
+        
+        # Priority 2: Brand in title (title indicates main topic)
+        brand_patterns = {
+            'HelloFresh': ['hellofresh', 'hello fresh'],
+            'Factor75': ['factor75', 'factor 75', 'factor meal'],
+            'Blue Apron': ['blue apron', 'blueapron'],
+            'Home Chef': ['home chef', 'homechef'],
+            'Marley Spoon': ['marley spoon', 'marleyspoon'],
+            'Hungryroot': ['hungryroot', 'hungry root'],
+            'Purple Carrot': ['purple carrot', 'purplecarrot']
+        }
+        
+        for brand, patterns in brand_patterns.items():
+            for pattern in patterns:
+                if pattern in title:
+                    return brand
+        
+        # Priority 3: Negative sentiment keywords about a specific brand
+        # e.g., "stay away from X", "horrible experience with X", "X is terrible"
+        for brand, patterns in brand_patterns.items():
+            for pattern in patterns:
+                if f'stay away from {pattern}' in text or \
+                   f'horrible experience with {pattern}' in text or \
+                   f'{pattern} is terrible' in text or \
+                   f'do not use {pattern}' in text or \
+                   f'avoid {pattern}' in text:
+                    return brand
+        
+        # Priority 4: If only ONE brand is mentioned, it's probably the primary
+        mentioned = self.detect_brands(title + ' ' + text)
+        if len(mentioned) == 1:
+            return mentioned[0]
+        
+        # If multiple brands mentioned, return None (unclear primary brand)
+        return None
     
     def analyze_sentiment(self, text, title_only=''):
         """Analyze sentiment using dual-method approach with keyword overrides"""

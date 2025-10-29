@@ -476,13 +476,5 @@
       "confidence": 0.9,
       "reasoning": "VADER: -0.86, TextBlob: 0.01"
     }
-  ],
-  "brand_counts": {
-    "HelloFresh": 8,
-    "Factor75": 7,
-    "Home Chef": 4,
-    "Blue Apron": 3,
-    "Marley Spoon": 1,
-    "Hungryroot": 1
-  }
+  ]
 }

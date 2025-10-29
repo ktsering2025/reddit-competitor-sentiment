@@ -45,7 +45,7 @@ def analyze_competitor_themes(data):
     competitor_themes = {}
     
     for brand in ALL_COMPETITORS:
-        brand_posts = [post for post in data.get('posts', []) if brand in post.get('competitors_mentioned', [])]
+        brand_posts = [post for post in data.get('posts', []) if post.get('primary_brand') == brand]
         if brand_posts:
             theme_sentiment = categorize_post_themes(brand_posts)
             competitor_themes[brand] = theme_sentiment
@@ -167,7 +167,7 @@ def create_competitor_table_html(competitor_analysis, data):
     other_competitors = [b for b in ALL_COMPETITORS if b not in PRIMARY_DEEPDIVE]
     
     for brand in other_competitors:
-        brand_posts = [post for post in data.get('posts', []) if brand in post.get('competitors_mentioned', [])]
+        brand_posts = [post for post in data.get('posts', []) if post.get('primary_brand') == brand]
         if not brand_posts:
             continue
             

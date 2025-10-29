@@ -44,15 +44,14 @@ def get_posts_by_brand(data, target_brands=None):
     posts_by_brand = defaultdict(list)
     
     for post in data.get('posts', []):
-        mentioned_brands = post.get('competitors_mentioned', [])
-        engagement = calculate_engagement_score(post)
+        # Use primary_brand to ensure post is ABOUT this brand, not just mentioning it
+        primary_brand = post.get('primary_brand')
         
-        post_with_engagement = post.copy()
-        post_with_engagement['engagement_score'] = engagement
-        
-        for brand in mentioned_brands:
-            if brand in target_brands:
-                posts_by_brand[brand].append(post_with_engagement)
+        if primary_brand and primary_brand in target_brands:
+            engagement = calculate_engagement_score(post)
+            post_with_engagement = post.copy()
+            post_with_engagement['engagement_score'] = engagement
+            posts_by_brand[primary_brand].append(post_with_engagement)
     
     return posts_by_brand
 
@@ -89,7 +88,8 @@ def analyze_brand_totals(data):
     for brand in PRIMARY_DEEPDIVE:
         pos = neg = neu = 0
         for post in data.get('posts', []):
-            if brand in post.get('competitors_mentioned', []):
+            # Use primary_brand to ensure post is ABOUT this brand, not just mentioning it
+            if post.get('primary_brand') == brand:
                 sentiment = post.get('sentiment', 'neutral')
                 if sentiment == 'positive':
                     pos += 1
