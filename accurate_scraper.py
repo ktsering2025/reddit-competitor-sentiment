@@ -16,12 +16,19 @@ import time
 from collections import defaultdict
 from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+
+# Load environment variables first
+load_dotenv()
+
 from config import *
 
 class AccurateScraper:
     def __init__(self):
         # Initialize Reddit API if credentials available
         self.reddit = None
+        print(f"Reddit API credentials check: ID={bool(REDDIT_CLIENT_ID)}, SECRET={bool(REDDIT_CLIENT_SECRET)}")
+        
         if REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET:
             try:
                 self.reddit = praw.Reddit(
@@ -29,8 +36,12 @@ class AccurateScraper:
                     client_secret=REDDIT_CLIENT_SECRET,
                     user_agent=REDDIT_USER_AGENT
                 )
+                # Test the connection
+                print(f"Reddit API initialized successfully. User: {self.reddit.user.me()}")
             except Exception as e:
                 print(f"Reddit API initialization failed: {e}")
+        else:
+            print("Reddit API credentials not found - will use web scraping fallback")
         
         self.analyzer = SentimentIntensityAnalyzer()
         
