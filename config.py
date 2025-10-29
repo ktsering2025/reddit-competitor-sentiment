@@ -19,27 +19,34 @@ EMAIL_RECIPIENTS = os.getenv('EMAIL_RECIPIENTS', 'brian.leung@hellofresh.com,asa
 WEEKLY_LINKS = {
     "HelloFresh": [
         "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
-        "https://www.reddit.com/search/?q=hellofresh+mealkit+brand&type=posts&t=week",
-        "https://www.reddit.com/search/?q=hellofresh+food+brand&type=posts&t=week"
+        "https://www.reddit.com/search/?q=hello+fresh&type=posts&t=week",
+        "https://www.reddit.com/r/hellofresh/search/?q=&type=posts&t=week&restrict_sr=1",
+        "https://www.reddit.com/r/mealkits/search/?q=hellofresh&type=posts&t=week&restrict_sr=1"
     ],
     "Factor75": [
         "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
-        "https://www.reddit.com/search/?q=factor+mealkit+brand&type=posts&t=week",
-        "https://www.reddit.com/search/?q=factor+food+brand&type=posts&t=week"
+        "https://www.reddit.com/search/?q=factor+75&type=posts&t=week",
+        "https://www.reddit.com/search/?q=factor+meals&type=posts&t=week",
+        "https://www.reddit.com/r/ReadyMeals/search/?q=factor&type=posts&t=week&restrict_sr=1",
+        "https://www.reddit.com/r/mealkits/search/?q=factor&type=posts&t=week&restrict_sr=1"
     ],
     "Home Chef": [
-        "https://www.reddit.com/search/?q=homechef+mealkit+brand&type=posts&t=week"
+        "https://www.reddit.com/search/?q=home+chef&type=posts&t=week",
+        "https://www.reddit.com/r/mealkits/search/?q=home+chef&type=posts&t=week&restrict_sr=1"
     ],
     "Blue Apron": [
-        "https://www.reddit.com/search/?q=blue+apron+mealkit+brand&type=posts&t=week",
-        "https://www.reddit.com/search/?q=blue+apron+food+brand&type=posts&t=week"
+        "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
+        "https://www.reddit.com/r/blueapron/search/?q=&type=posts&t=week&restrict_sr=1",
+        "https://www.reddit.com/r/mealkits/search/?q=blue+apron&type=posts&t=week&restrict_sr=1"
     ],
     "Marley Spoon": [
-        "https://www.reddit.com/search/?q=marley+spoon+food+brand&type=posts&t=week",
-        "https://www.reddit.com/search/?q=marley+spoon+mealkit+brand&type=posts&t=week"
+        "https://www.reddit.com/search/?q=marley+spoon&type=posts&t=week",
+        "https://www.reddit.com/r/mealkits/search/?q=marley+spoon&type=posts&t=week&restrict_sr=1"
     ],
     "Hungryroot": [
-        "https://www.reddit.com/search/?q=Hungryroot+food+brand&type=posts&t=week"
+        "https://www.reddit.com/search/?q=hungryroot&type=posts&t=week",
+        "https://www.reddit.com/r/hungryroot/search/?q=&type=posts&t=week&restrict_sr=1",
+        "https://www.reddit.com/r/mealkits/search/?q=hungryroot&type=posts&t=week&restrict_sr=1"
     ]
 }
 

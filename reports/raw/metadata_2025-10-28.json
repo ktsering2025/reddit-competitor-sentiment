@@ -1,6 +1,6 @@
 {
-  "processing_timestamp": "2025-10-29T03:18:17.165521+00:00",
-  "total_posts": 11,
+  "processing_timestamp": "2025-10-29T03:25:35.182476+00:00",
+  "total_posts": 19,
   "date_range": {
     "start": "2025-10-27T00:00:00+00:00",
     "end": "2025-11-01T23:59:59+00:00"
@@ -16,47 +16,54 @@
   "data_sources": {
     "HelloFresh": [
       "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
-      "https://www.reddit.com/search/?q=hellofresh+mealkit+brand&type=posts&t=week",
-      "https://www.reddit.com/search/?q=hellofresh+food+brand&type=posts&t=week"
+      "https://www.reddit.com/search/?q=hello+fresh&type=posts&t=week",
+      "https://www.reddit.com/r/hellofresh/search/?q=&type=posts&t=week&restrict_sr=1",
+      "https://www.reddit.com/r/mealkits/search/?q=hellofresh&type=posts&t=week&restrict_sr=1"
     ],
     "Factor75": [
       "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
-      "https://www.reddit.com/search/?q=factor+mealkit+brand&type=posts&t=week",
-      "https://www.reddit.com/search/?q=factor+food+brand&type=posts&t=week"
+      "https://www.reddit.com/search/?q=factor+75&type=posts&t=week",
+      "https://www.reddit.com/search/?q=factor+meals&type=posts&t=week",
+      "https://www.reddit.com/r/ReadyMeals/search/?q=factor&type=posts&t=week&restrict_sr=1",
+      "https://www.reddit.com/r/mealkits/search/?q=factor&type=posts&t=week&restrict_sr=1"
     ],
     "Home Chef": [
-      "https://www.reddit.com/search/?q=homechef+mealkit+brand&type=posts&t=week"
+      "https://www.reddit.com/search/?q=home+chef&type=posts&t=week",
+      "https://www.reddit.com/r/mealkits/search/?q=home+chef&type=posts&t=week&restrict_sr=1"
     ],
     "Blue Apron": [
-      "https://www.reddit.com/search/?q=blue+apron+mealkit+brand&type=posts&t=week",
-      "https://www.reddit.com/search/?q=blue+apron+food+brand&type=posts&t=week"
+      "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
+      "https://www.reddit.com/r/blueapron/search/?q=&type=posts&t=week&restrict_sr=1",
+      "https://www.reddit.com/r/mealkits/search/?q=blue+apron&type=posts&t=week&restrict_sr=1"
     ],
     "Marley Spoon": [
-      "https://www.reddit.com/search/?q=marley+spoon+food+brand&type=posts&t=week",
-      "https://www.reddit.com/search/?q=marley+spoon+mealkit+brand&type=posts&t=week"
+      "https://www.reddit.com/search/?q=marley+spoon&type=posts&t=week",
+      "https://www.reddit.com/r/mealkits/search/?q=marley+spoon&type=posts&t=week&restrict_sr=1"
     ],
     "Hungryroot": [
-      "https://www.reddit.com/search/?q=Hungryroot+food+brand&type=posts&t=week"
+      "https://www.reddit.com/search/?q=hungryroot&type=posts&t=week",
+      "https://www.reddit.com/r/hungryroot/search/?q=&type=posts&t=week&restrict_sr=1",
+      "https://www.reddit.com/r/mealkits/search/?q=hungryroot&type=posts&t=week&restrict_sr=1"
     ]
   },
   "validation_status": "passed",
-  "commit_hash": "123df447",
+  "commit_hash": "3eb4466c",
   "filter_stats": {
     "HelloFresh": {
       "pre_filter": 0,
-      "post_filter": 6
+      "post_filter": 8
     },
     "Factor75": {
       "pre_filter": 0,
-      "post_filter": 4
+      "post_filter": 7
     },
     "Home Chef": {
       "pre_filter": 0,
-      "post_filter": 0
+      "post_filter": 4
     },
     "Blue Apron": {
       "pre_filter": 0,
-      "post_filter": 2
+      "post_filter": 3
     },
     "Marley Spoon": {
       "pre_filter": 0,
