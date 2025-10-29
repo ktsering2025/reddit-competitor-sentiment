@@ -149,8 +149,8 @@ def create_competitor_table_html(competitor_analysis, data):
             <tbody>"""
     
     for brand, analysis in competitor_analysis.items():
-        strengths_text = ", ".join(analysis['strengths']) if analysis['strengths'] else "No clear strengths identified"
-        weaknesses_text = ", ".join(analysis['weaknesses']) if analysis['weaknesses'] else "No major weaknesses identified"
+        strengths_text = analysis['strengths'] if isinstance(analysis['strengths'], str) else ", ".join(analysis['strengths'])
+        weaknesses_text = analysis['weaknesses'] if isinstance(analysis['weaknesses'], str) else ", ".join(analysis['weaknesses'])
         
         html += f"""
                 <tr>
@@ -205,8 +205,10 @@ def main():
     print("\nCompetitor Analysis Summary:")
     for brand, analysis in competitor_analysis.items():
         print(f"\n{brand}:")
-        print(f"  Strengths: {', '.join(analysis['strengths']) if analysis['strengths'] else 'None identified'}")
-        print(f"  Weaknesses: {', '.join(analysis['weaknesses']) if analysis['weaknesses'] else 'None identified'}")
+        strengths_display = analysis['strengths'] if isinstance(analysis['strengths'], str) else ', '.join(analysis['strengths']) if analysis['strengths'] else 'None identified'
+        weaknesses_display = analysis['weaknesses'] if isinstance(analysis['weaknesses'], str) else ', '.join(analysis['weaknesses']) if analysis['weaknesses'] else 'None identified'
+        print(f"  Strengths: {strengths_display}")
+        print(f"  Weaknesses: {weaknesses_display}")
 
 if __name__ == "__main__":
     main()
