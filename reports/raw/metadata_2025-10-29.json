@@ -1,5 +1,5 @@
 {
-  "processing_timestamp": "2025-10-29T15:55:51.958109+00:00",
+  "processing_timestamp": "2025-10-29T16:01:39.991693+00:00",
   "total_posts": 19,
   "date_range": {
     "start": "2025-10-27T00:00:00+00:00",
@@ -47,7 +47,7 @@
     ]
   },
   "validation_status": "failed",
-  "commit_hash": "bf2bcc50",
+  "commit_hash": "c9874da9",
   "filter_stats": {
     "HelloFresh": {
       "pre_filter": 0,
