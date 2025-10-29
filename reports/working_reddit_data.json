@@ -1,11 +1,11 @@
 {
-  "scrape_timestamp": "2025-10-29T03:15:42.110430+00:00",
-  "processing_timestamp": "2025-10-29T03:15:42.110459+00:00",
+  "scrape_timestamp": "2025-10-29T03:18:17.112543+00:00",
+  "processing_timestamp": "2025-10-29T03:18:17.112571+00:00",
   "date_range": {
     "start": "2025-10-27T00:00:00+00:00",
     "end": "2025-11-01T23:59:59+00:00"
   },
-  "total_posts": 17,
+  "total_posts": 11,
   "data_sources": {
     "HelloFresh": [
       "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -31,13 +31,13 @@
   "filter_stats": {
     "HelloFresh": {
       "pre": 68,
-      "post": 9,
-      "removed": 59
+      "post": 6,
+      "removed": 62
     },
     "Factor75": {
       "pre": 130,
-      "post": 5,
-      "removed": 125
+      "post": 4,
+      "removed": 126
     },
     "Home Chef": {
       "pre": 0,
@@ -46,8 +46,8 @@
     },
     "Blue Apron": {
       "pre": 5,
-      "post": 5,
-      "removed": 0
+      "post": 2,
+      "removed": 3
     },
     "Marley Spoon": {
       "pre": 1,
@@ -64,7 +64,7 @@
     {
       "title": "This didn\u2019t used to have an upcharge!",
       "selftext": "This is a longtime favorite of ours and now there\u2019s an upcharge for it! It used to have the \u201cbest seller\u201d ID on it, before HF got obsessed with protein ",
-      "score": 11,
+      "score": 10,
       "num_comments": 9,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oish8t/this_didnt_used_to_have_an_upcharge/",
@@ -73,7 +73,7 @@
         "HelloFresh"
       ],
       "author": "Reasonable-Employee6",
-      "upvote_ratio": 0.93,
+      "upvote_ratio": 0.86,
       "is_self": false,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -84,7 +84,7 @@
     {
       "title": "Nightly dinner pic of spicy maple chicken and weekly meal list this week \ud83d\ude04",
       "selftext": "These are my recipes that got delivered this week let me know if any of you have made these/how they are! \n\n- spicy maple chicken\n- cheesy smash burgers (ive gotten this one more than once because it\u2019s easy and I love making the fries) \n- silky Sicilian chicken penne \n- steak au poivre with maple sage sweet potatoes and lemony asparagus \n- cheesy chicken enchiladas \n\n\nPic is the maple chicken. I just want to say that I feel bad for people that blindly follow some of these recipes for the first time that contain pepper flakes and trust hello fresh enough to EVER put the entire pack of red pepper flakes. I literally never use the whole pack of pepper flakes or seasoning in general. For this recipe i literally used barely any, only used a pinch and tossed out the rest and it was still a tad too spicy for us, imagine if I\u2019d put in the whole packet! \ud83e\udd75\ud83e\udd75\n\n",
-      "score": 5,
+      "score": 4,
       "num_comments": 1,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oiposn/nightly_dinner_pic_of_spicy_maple_chicken_and/",
@@ -102,29 +102,9 @@
       "reasoning": "VADER: 0.96, TextBlob: -0.11"
     },
     {
-      "title": "Some of my cheap go-to Aldi meals for two!",
-      "selftext": "Some other recipes I make but they need a few more ingredients than Aldi usually has:\n\n\\- [Turkish pasta](https://www.reddit.com/r/tonightsdinner/comments/1j3zzq5/i_can_not_and_will_not_stop_eating_this_damn/)\n\n\\- [Pork schnitzel](https://www.hellofresh.com/recipes/pork-schnitzel-5dc042bdabd5bb5e5c129538)\n\n\\- [Firecracker meatballs](https://www.hellofresh.com/recipes/firecracker-meatballs-5ea70fe14c4efb3fb12140f1)",
-      "score": 478,
-      "num_comments": 36,
-      "subreddit": "aldi",
-      "url": "https://reddit.com/r/aldi/comments/1oiju6o/some_of_my_cheap_goto_aldi_meals_for_two/",
-      "created_utc": 1761681841.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "mmmmmmbeans",
-      "upvote_ratio": 0.99,
-      "is_self": false,
-      "source_brand": "HelloFresh",
-      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
-      "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "VADER: 0.00, TextBlob: 0.09"
-    },
-    {
       "title": "A Word of Caution - DO NOT Redeem Gift Cards/Vouchers",
       "selftext": "I've been subscribed to HelloFresh for over 2 years now, I originally subscribed when they offered the free add-on item for life with any active subscription. Loved all the fresh and delicious meals I've cooked over the years. \n\nLast Christmas, I was gifted a voucher for one free box from a family member (as an aside, it didn't even cover the full box price, only $80 but whatever). I finally redeemed it two weeks ago, and last week I received an email saying my subscription had been cancelled. I immediately logged in and re-activated the subscription, and confirmed there was an active card on file still. My assumption is their system tried redeeming the gift card a second time, saw zero balance, and cancelled the account... But honestly I am unsure how this happened. Their support team offered no answers. I also noticed I no longer get the free add-on item with my weekly box and so I called customer service to report this issue.\n\nAfter multiple calls with their customer service, their best solution for me was offering me 40% off for one box, stating that they no longer offer the free item for life voucher and as such cannot re-activate it on my account. \n\nI am writing this post after a half hour long frustrating call with them where I cancelled my subscription and will be looking elsewhere since they refused to honor their own mistake. \n\nIf you plan on redeeming any sort of gift voucher code, please double check your account the following week or share the same situation I find myself in.",
-      "score": 9,
+      "score": 11,
       "num_comments": 2,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oic9jq/a_word_of_caution_do_not_redeem_gift_cardsvouchers/",
@@ -133,33 +113,13 @@
         "HelloFresh"
       ],
       "author": "oldaccsuspndedwhy",
-      "upvote_ratio": 0.85,
+      "upvote_ratio": 0.92,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
       "sentiment": "negative",
       "confidence": 0.9,
       "reasoning": "VADER: 0.99, TextBlob: 0.24"
-    },
-    {
-      "title": "We were testing how to turn FAQ-style content into scroll-stoppers.",
-      "selftext": "So we looked at HelloFresh\u2019s \u201cWhat is HelloFresh?\u201d video, the kind of explainer that usually flops on TikTok. But this one held view rate longer than we expected.   \n  \nWhy?\n\nThe structure was clean: direct voiceover, fast cuts, and visual proof of value (fresh ingredients, cooking, plating). Basically, they explained but didn\u2019t bore. It felt like \u201ctalking to a friend who cooks more than you.\u201d\n\nWe tried something similar for a food client.\n\nVersion A: classic FAQ script, lots of brand lines.  \nVersion B: same info but rephrased like a comment reply (\u201ceveryone keeps asking what this is, so here\u2019s the deal\u2026\u201d).\n\nB pulled +23% higher watch time and +12% CTR.\n\nThe comment-style hook gave it that native feel, while the explainer stayed tight enough to educate.\n\nOur takeaway: FAQ content doesn\u2019t need to be brand talking to camera.   \nIt works when it sounds like an answer inside the feed, not an ad dropped into it.\n\nAnyone else tested FAQ or \u201canswer format\u201d creatives lately? Curious if it performs across non-food categories too.\n\n",
-      "score": 2,
-      "num_comments": 0,
-      "subreddit": "shook",
-      "url": "https://reddit.com/r/shook/comments/1ois5x1/we_were_testing_how_to_turn_faqstyle_content_into/",
-      "created_utc": 1761702595.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Shama_lala",
-      "upvote_ratio": 1.0,
-      "is_self": false,
-      "source_brand": "HelloFresh",
-      "source_url": "https://www.reddit.com/search/?q=hellofresh+food+brand&type=posts&t=week",
-      "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "VADER: 0.97, TextBlob: 0.12"
     },
     {
       "title": "Factor75 ingredient lists",
@@ -204,7 +164,7 @@
     {
       "title": "Mmmm! Mystery \"Poultry\" FACTOR meal!",
       "selftext": "",
-      "score": 8,
+      "score": 9,
       "num_comments": 7,
       "subreddit": "factor75",
       "url": "https://reddit.com/r/factor75/comments/1ohnxa6/mmmm_mystery_poultry_factor_meal/",
@@ -213,7 +173,7 @@
         "Factor75"
       ],
       "author": "PurpleCatBlues",
-      "upvote_ratio": 0.91,
+      "upvote_ratio": 1.0,
       "is_self": false,
       "source_brand": "Factor75",
       "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
@@ -243,49 +203,9 @@
       "reasoning": "VADER: 0.97, TextBlob: 0.19"
     },
     {
-      "title": "ModifyHealth or Factor",
-      "selftext": "Has anyone tried ModifyHealth or Factor meal delivery plans? Would you recommend either of them? Is there a different one you like? I know cooking from scratch would be ideal but I\u2019m not in that place at the moment. Thank you for your input. \n\nEdit: I can\u2019t eat garlic, onion, dairy or chili peppers and then have issues with the other fodmap foods. ",
-      "score": 1,
-      "num_comments": 5,
-      "subreddit": "lowfodmap",
-      "url": "https://reddit.com/r/lowfodmap/comments/1oiiqy6/modifyhealth_or_factor/",
-      "created_utc": 1761679368.0,
-      "competitors_mentioned": [
-        "Factor75"
-      ],
-      "author": "Tight-Formal-5220",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "Factor75",
-      "source_url": "https://www.reddit.com/search/?q=factor+food+brand&type=posts&t=week",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "VADER: 0.82, TextBlob: 0.26"
-    },
-    {
-      "title": "Does Citi Strata view Blue Apron as a grocery store?",
-      "selftext": "Got an offer for Citi Strata card with no annual fee. I\u2019m mainly interested in it for 3x on grocery stores. I know when Chase offers a quarterly 5x for grocery, they view BA as a grocery store. \n\nSince we spend $100 a week with BA, I was wondering if Citi Strata also views them as grocery. \n\nThanks in advance. \n",
-      "score": 2,
-      "num_comments": 2,
-      "subreddit": "CreditCards",
-      "url": "https://reddit.com/r/CreditCards/comments/1oime1e/does_citi_strata_view_blue_apron_as_a_grocery/",
-      "created_utc": 1761687724.0,
-      "competitors_mentioned": [
-        "Blue Apron"
-      ],
-      "author": "qtrim",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "Blue Apron",
-      "source_url": "https://www.reddit.com/search/?q=blue+apron+mealkit+brand&type=posts&t=week",
-      "sentiment": "positive",
-      "confidence": 0.66,
-      "reasoning": "VADER: 0.53, TextBlob: 0.14"
-    },
-    {
       "title": "Terrible. Terrible. Terrible.",
       "selftext": "For anyone on the fence, do not waste your money.\n\nThis was hands down the worst meal service I have ever tried. I enjoy Blue Apron, HelloFresh, and Daily Harvest. They have their ups and downs but are overall good. \n\nPurple carrot was literally trash. Very old and rotten vegetables wrapped in way too much plastic. The meals were inedible. My husband actually took the pot (mushroom stroganoff) outside because the smell was rancid. \n\nI tried to cancel immediately the day after delivery but of course there was no human to talk to. Just a useless AI chatbot that kept me trapped in a fruitless loop. A few days later a rep finally emailed me, not to fix anything, but to say they could not stop the next shipment and would refund me five dollars for the spoiled ingredients. \n\nI did not sign up for this service to argue over pocket change. I wanted healthy, easy plant-based meals. What I got was rotten trash in absurd amounts of plastic packaging.\n\nSave yourself the headache and avoid this service like the plague.\n\n",
-      "score": 0,
+      "score": 1,
       "num_comments": 7,
       "subreddit": "purplecarrot",
       "url": "https://reddit.com/r/purplecarrot/comments/1oimb9a/terrible_terrible_terrible/",
@@ -295,34 +215,13 @@
         "Blue Apron"
       ],
       "author": "Excellent_Weather583",
-      "upvote_ratio": 0.5,
+      "upvote_ratio": 0.56,
       "is_self": true,
       "source_brand": "Blue Apron",
       "source_url": "https://www.reddit.com/search/?q=blue+apron+mealkit+brand&type=posts&t=week",
       "sentiment": "negative",
       "confidence": 0.9,
       "reasoning": "VADER: -0.95, TextBlob: -0.12"
-    },
-    {
-      "title": "Toddler lunch / dinner cookbook or super easy meal suggestions",
-      "selftext": "Anyone have  cookbook suggestion for toddler lunches and/or super fast family dinners? Or meal services you liked? Hello fresh or blue apron? I\u2019m running out of lunch and dinner ideas and I have no mental energy to even think of what to make.",
-      "score": 1,
-      "num_comments": 2,
-      "subreddit": "2under2",
-      "url": "https://reddit.com/r/2under2/comments/1oiks27/toddler_lunch_dinner_cookbook_or_super_easy_meal/",
-      "created_utc": 1761683974.0,
-      "competitors_mentioned": [
-        "HelloFresh",
-        "Blue Apron"
-      ],
-      "author": "MENTION_it_all1",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "Blue Apron",
-      "source_url": "https://www.reddit.com/search/?q=blue+apron+mealkit+brand&type=posts&t=week",
-      "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "VADER: 0.92, TextBlob: 0.28"
     },
     {
       "title": "So what service is everybody switching to?",
@@ -346,29 +245,9 @@
       "reasoning": "VADER: 0.82, TextBlob: 0.13"
     },
     {
-      "title": "Spare Blue Apron plzplzplzplzplzplzplzplzplzplzplz",
-      "selftext": "Anybody got a blue apron for a Halloween the bear chef Carmy fit I could borrow? Heading out to a mates house in Kitchener. It would be great help if anyone could lend me a blue apron.\ud83d\udd25\u2764\ufe0f",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "UofT",
-      "url": "https://reddit.com/r/UofT/comments/1oid0xb/spare_blue_apron_plzplzplzplzplzplzplzplzplzplzplz/",
-      "created_utc": 1761666598.0,
-      "competitors_mentioned": [
-        "Blue Apron"
-      ],
-      "author": "Charming-Foot5668",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "Blue Apron",
-      "source_url": "https://www.reddit.com/search/?q=blue+apron+mealkit+brand&type=posts&t=week",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.78, TextBlob: 0.24"
-    },
-    {
       "title": "Stay away from Marley Spoon and Dinnerly",
       "selftext": "I subscribed to see what they had to offer. I browsed for a bit but didn\u2019t like the options so I canceled my subscription 10 mins after signing up. Didn\u2019t think anything of it. Today I get home to a big delivery from both. I check my credit card and I was charged for both. But I canceled, basically right away. Why would they send random food to someone who isn\u2019t subscribed. Such a shady business practice. I called them but of course they are experiencing high call volumes. I used there chatbot on their site and they just end the convo. I disputed it with my credit card company too. This is ridiculous. ",
-      "score": 8,
+      "score": 10,
       "num_comments": 27,
       "subreddit": "mealkits",
       "url": "https://reddit.com/r/mealkits/comments/1ohpgd4/stay_away_from_marley_spoon_and_dinnerly/",
@@ -377,7 +256,7 @@
         "Marley Spoon"
       ],
       "author": "ProblematicSchematic",
-      "upvote_ratio": 0.64,
+      "upvote_ratio": 0.66,
       "is_self": true,
       "source_brand": "Marley Spoon",
       "source_url": "https://www.reddit.com/search/?q=marley+spoon+mealkit+brand&type=posts&t=week",
@@ -407,10 +286,10 @@
     }
   ],
   "brand_counts": {
-    "HelloFresh": 9,
-    "Factor75": 5,
+    "HelloFresh": 6,
+    "Factor75": 4,
     "Home Chef": 0,
-    "Blue Apron": 5,
+    "Blue Apron": 2,
     "Marley Spoon": 1,
     "Hungryroot": 1
   }

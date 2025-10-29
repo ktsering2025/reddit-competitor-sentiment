@@ -576,32 +576,37 @@ class AccurateScraper:
             if keyword.lower() in text:
                 return True
         
-        # WHITELIST APPROACH: Only keep posts from meal-kit related subreddits
-        # OR posts that explicitly mention meal kits/meal delivery/meal service
-        meal_kit_subreddits = [
-            'hellofresh', 'factor75', 'blueapron', 'homechef', 'marleyspoon',
-            'hungryroot', 'mealkits', 'mealkit', 'readymeals', 'mealprep',
-            'mealplanning', 'eatcheapandhealthy', 'cooking', 'recipes',
-            'foodhacks', 'budgetfood', 'easyrecipes', 'quickmeals'
-        ]
+        # STRICT WHITELIST: Only keep posts that are genuinely about meal kit services
         
-        # Check if post is from a meal-kit subreddit
-        is_meal_kit_sub = any(mk_sub in subreddit for mk_sub in meal_kit_subreddits)
+        # Tier 1: Brand-specific subreddits (always keep)
+        brand_subreddits = ['hellofresh', 'factor75', 'blueapron', 'homechef', 'marleyspoon', 
+                           'hungryroot', 'purplecarrot', 'dinnerly', 'everyplate']
+        is_brand_sub = any(brand_sub == subreddit for brand_sub in brand_subreddits)
         
-        # Check if post explicitly discusses meal kits/services
-        meal_service_keywords = [
-            'meal kit', 'meal service', 'meal delivery', 'meal plan',
-            'food delivery', 'prepared meals', 'ready meals', 'meal subscription',
-            'hellofresh', 'factor75', 'factor 75', 'blue apron', 'home chef',
-            'marley spoon', 'hungryroot', 'purple carrot', 'dinnerly',
-            'everyplate', 'gobble', 'sunbasket', 'freshly', 'cookunity'
-        ]
+        # Tier 2: Meal kit discussion subreddits (keep if title mentions brands)
+        meal_kit_subs = ['mealkits', 'mealkit', 'readymeals', 'mealprep']
+        is_meal_kit_sub = any(mk_sub in subreddit for mk_sub in meal_kit_subs)
         
-        discusses_meal_service = any(keyword in text for keyword in meal_service_keywords)
+        # Tier 3: General food subreddits (only keep if brand is in TITLE)
+        general_food_subs = ['cooking', 'recipes', 'eatcheapandhealthy', 'budgetfood', 
+                            'mealplanning', '2under2', 'lowfodmap']
+        is_general_food_sub = any(food_sub in subreddit for food_sub in general_food_subs)
         
-        # KEEP post if it's from a meal-kit subreddit OR discusses meal services
-        if not (is_meal_kit_sub or discusses_meal_service):
-            return True  # Exclude if neither condition is met
+        # Check if brand names are in the title (main topic)
+        brand_names = ['hellofresh', 'factor75', 'factor 75', 'blue apron', 'home chef',
+                      'marley spoon', 'hungryroot', 'purple carrot', 'meal kit', 'meal service']
+        brand_in_title = any(brand in title for brand in brand_names)
+        
+        # DECISION LOGIC:
+        # Keep if: Brand subreddit OR (meal kit sub) OR (general food sub AND brand in title)
+        if is_brand_sub:
+            return False  # Keep - from brand subreddit
+        elif is_meal_kit_sub:
+            return False  # Keep - from meal kit discussion sub
+        elif is_general_food_sub and brand_in_title:
+            return False  # Keep - general food sub but brand is main topic
+        else:
+            return True  # Exclude - not relevant enough
         
         # ACTIONABLE FILTER: Remove referral/promo spam
         spam_keywords = ['referral', 'promo code', 'free box', 'discount', 'coupon', 'voucher', 'gift card']
