@@ -310,8 +310,28 @@ def create_html_report(posts_by_brand, brand_totals, data):
         <h2>Live Weekly Searches</h2>
         <div class="live-links">
             <h4>Direct Reddit Links (Brian's Data Sources)</h4>
-            <p><strong>HelloFresh:</strong> <a href="{WEEKLY_LINKS['HelloFresh']}" target="_blank">Weekly Search Results</a></p>
-            <p><strong>Factor75:</strong> <a href="{WEEKLY_LINKS['Factor75']}" target="_blank">Weekly Search Results</a></p>
+            <p><strong>HelloFresh:</strong> """
+    
+    # Handle list of links for HelloFresh
+    hf_links = WEEKLY_LINKS['HelloFresh']
+    if isinstance(hf_links, list):
+        for i, link in enumerate(hf_links, 1):
+            html += f'<a href="{link}" target="_blank">Search #{i}</a> '
+    else:
+        html += f'<a href="{hf_links}" target="_blank">Weekly Search Results</a>'
+    
+    html += """</p>
+            <p><strong>Factor75:</strong> """
+    
+    # Handle list of links for Factor75
+    f75_links = WEEKLY_LINKS['Factor75']
+    if isinstance(f75_links, list):
+        for i, link in enumerate(f75_links, 1):
+            html += f'<a href="{link}" target="_blank">Search #{i}</a> '
+    else:
+        html += f'<a href="{f75_links}" target="_blank">Weekly Search Results</a>'
+    
+    html += """</p>
         </div>
     </div>"""
     

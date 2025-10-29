@@ -1,6 +1,6 @@
 {
-  "scrape_timestamp": "2025-10-29T03:05:46.598797+00:00",
-  "processing_timestamp": "2025-10-29T03:05:46.598832+00:00",
+  "scrape_timestamp": "2025-10-29T03:10:30.789962+00:00",
+  "processing_timestamp": "2025-10-29T03:10:30.789993+00:00",
   "date_range": {
     "start": "2025-10-27T00:00:00+00:00",
     "end": "2025-11-01T23:59:59+00:00"
@@ -64,7 +64,7 @@
     {
       "title": "This didn\u2019t used to have an upcharge!",
       "selftext": "This is a longtime favorite of ours and now there\u2019s an upcharge for it! It used to have the \u201cbest seller\u201d ID on it, before HF got obsessed with protein ",
-      "score": 8,
+      "score": 10,
       "num_comments": 9,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oish8t/this_didnt_used_to_have_an_upcharge/",
@@ -73,7 +73,7 @@
         "HelloFresh"
       ],
       "author": "Reasonable-Employee6",
-      "upvote_ratio": 0.91,
+      "upvote_ratio": 1.0,
       "is_self": false,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -84,7 +84,7 @@
     {
       "title": "Nightly dinner pic of spicy maple chicken and weekly meal list this week \ud83d\ude04",
       "selftext": "These are my recipes that got delivered this week let me know if any of you have made these/how they are! \n\n- spicy maple chicken\n- cheesy smash burgers (ive gotten this one more than once because it\u2019s easy and I love making the fries) \n- silky Sicilian chicken penne \n- steak au poivre with maple sage sweet potatoes and lemony asparagus \n- cheesy chicken enchiladas \n\n\nPic is the maple chicken. I just want to say that I feel bad for people that blindly follow some of these recipes for the first time that contain pepper flakes and trust hello fresh enough to EVER put the entire pack of red pepper flakes. I literally never use the whole pack of pepper flakes or seasoning in general. For this recipe i literally used barely any, only used a pinch and tossed out the rest and it was still a tad too spicy for us, imagine if I\u2019d put in the whole packet! \ud83e\udd75\ud83e\udd75\n\n",
-      "score": 3,
+      "score": 4,
       "num_comments": 1,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oiposn/nightly_dinner_pic_of_spicy_maple_chicken_and/",
@@ -93,7 +93,7 @@
         "HelloFresh"
       ],
       "author": "Fit-Elderberry7120",
-      "upvote_ratio": 0.81,
+      "upvote_ratio": 1.0,
       "is_self": false,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -104,7 +104,7 @@
     {
       "title": "Some of my cheap go-to Aldi meals for two!",
       "selftext": "Some other recipes I make but they need a few more ingredients than Aldi usually has:\n\n\\- [Turkish pasta](https://www.reddit.com/r/tonightsdinner/comments/1j3zzq5/i_can_not_and_will_not_stop_eating_this_damn/)\n\n\\- [Pork schnitzel](https://www.hellofresh.com/recipes/pork-schnitzel-5dc042bdabd5bb5e5c129538)\n\n\\- [Firecracker meatballs](https://www.hellofresh.com/recipes/firecracker-meatballs-5ea70fe14c4efb3fb12140f1)",
-      "score": 468,
+      "score": 475,
       "num_comments": 36,
       "subreddit": "aldi",
       "url": "https://reddit.com/r/aldi/comments/1oiju6o/some_of_my_cheap_goto_aldi_meals_for_two/",
@@ -124,7 +124,7 @@
     {
       "title": "A Word of Caution - DO NOT Redeem Gift Cards/Vouchers",
       "selftext": "I've been subscribed to HelloFresh for over 2 years now, I originally subscribed when they offered the free add-on item for life with any active subscription. Loved all the fresh and delicious meals I've cooked over the years. \n\nLast Christmas, I was gifted a voucher for one free box from a family member (as an aside, it didn't even cover the full box price, only $80 but whatever). I finally redeemed it two weeks ago, and last week I received an email saying my subscription had been cancelled. I immediately logged in and re-activated the subscription, and confirmed there was an active card on file still. My assumption is their system tried redeeming the gift card a second time, saw zero balance, and cancelled the account... But honestly I am unsure how this happened. Their support team offered no answers. I also noticed I no longer get the free add-on item with my weekly box and so I called customer service to report this issue.\n\nAfter multiple calls with their customer service, their best solution for me was offering me 40% off for one box, stating that they no longer offer the free item for life voucher and as such cannot re-activate it on my account. \n\nI am writing this post after a half hour long frustrating call with them where I cancelled my subscription and will be looking elsewhere since they refused to honor their own mistake. \n\nIf you plan on redeeming any sort of gift voucher code, please double check your account the following week or share the same situation I find myself in.",
-      "score": 11,
+      "score": 10,
       "num_comments": 2,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oic9jq/a_word_of_caution_do_not_redeem_gift_cardsvouchers/",
@@ -204,7 +204,7 @@
     {
       "title": "Mmmm! Mystery \"Poultry\" FACTOR meal!",
       "selftext": "",
-      "score": 9,
+      "score": 8,
       "num_comments": 7,
       "subreddit": "factor75",
       "url": "https://reddit.com/r/factor75/comments/1ohnxa6/mmmm_mystery_poultry_factor_meal/",
@@ -213,7 +213,7 @@
         "Factor75"
       ],
       "author": "PurpleCatBlues",
-      "upvote_ratio": 0.92,
+      "upvote_ratio": 0.91,
       "is_self": false,
       "source_brand": "Factor75",
       "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
@@ -285,7 +285,7 @@
     {
       "title": "Terrible. Terrible. Terrible.",
       "selftext": "For anyone on the fence, do not waste your money.\n\nThis was hands down the worst meal service I have ever tried. I enjoy Blue Apron, HelloFresh, and Daily Harvest. They have their ups and downs but are overall good. \n\nPurple carrot was literally trash. Very old and rotten vegetables wrapped in way too much plastic. The meals were inedible. My husband actually took the pot (mushroom stroganoff) outside because the smell was rancid. \n\nI tried to cancel immediately the day after delivery but of course there was no human to talk to. Just a useless AI chatbot that kept me trapped in a fruitless loop. A few days later a rep finally emailed me, not to fix anything, but to say they could not stop the next shipment and would refund me five dollars for the spoiled ingredients. \n\nI did not sign up for this service to argue over pocket change. I wanted healthy, easy plant-based meals. What I got was rotten trash in absurd amounts of plastic packaging.\n\nSave yourself the headache and avoid this service like the plague.\n\n",
-      "score": 0,
+      "score": 1,
       "num_comments": 7,
       "subreddit": "purplecarrot",
       "url": "https://reddit.com/r/purplecarrot/comments/1oimb9a/terrible_terrible_terrible/",
@@ -295,7 +295,7 @@
         "Blue Apron"
       ],
       "author": "Excellent_Weather583",
-      "upvote_ratio": 0.44,
+      "upvote_ratio": 0.56,
       "is_self": true,
       "source_brand": "Blue Apron",
       "source_url": "https://www.reddit.com/search/?q=blue+apron+mealkit+brand&type=posts&t=week",
@@ -327,7 +327,7 @@
     {
       "title": "So what service is everybody switching to?",
       "selftext": "I see the official consensus on here is that BA service as a whole has completely tanked ever since the recent rebrand. I\u2019ve been a customer since 2020 and it used to be very unusual to have any problems other than an occasional ingredient substitution or more rarely something that came spoiled. Now, there is some kind of significant issue every single week\u2014 meals entirely missing or incorrect, spoiled food, important ingredients replaced with something completely different (pomegranate syrup replaced with VEGETABLE CONCENTRATE\u2026..) without so much as an explanatory email, and once a box was just skipped entirely without any notice for the first time in 5 years\u2026 of course I report these things every time, but in the past I\u2019d get a response right away, and now it takes several days before I get a partial refund! Like many (or all?) of you, I also got a physical letter in the mail with a coupon code for 50% off the next 2 boxes as a sort of apology for these repeated fuckups, which I guess was effective in terms of making me say \u201cokay I won\u2019t cancel for a couple of weeks,\u201d so I loaded up those boxes with extra stuff so I could get more bang for my buck, and then half of that stuff didn\u2019t even show up\u2026 so I get more credits on my account every week, and the cycle continues \ud83d\ude2d. (Plus, there seem to be more of the same meal options available every week\u2026) \n\nAll of this seems to point to a business that is dying anyway\u2026 I mean handing out 50% off coupons to make up for bad service and then doing nothing to change that service\u2026 it smacks of desperation. I feel like they\u2019ll shutter within a year at this rate. \n\nMeanwhile, I want to use a service like this to meal prep on weekends because I just started a 9-5 office job with a commute. So for me, quick, healthy and nutritious meals (or specifically things geared towards meal prep) would be a priority. (And of course, deliveries that are on time, fresh, and consist of the things that I actually ordered\u2026 but that *should* be a given.) I don\u2019t know much about any other meal kits so I\u2019m kind of lost when it comes to choice here. I tried Hello Fresh for a trial run back in 2020 and my perception was that the meals seemed a bit unhealthy (probably colored by the fact that they were sending random candy bars as freebies lol) but this could be inaccurate/ things could have changed since then.  \n\ntl;dr **If you\u2019re leaving Blue Apron for a different meal kit service, which one are you choosing and why?** Any prior experience you\u2019ve had with these services would be appreciated\u2014 although as we all know, it\u2019s not necessarily applicable to the present, as these things can easily go to shit. ",
-      "score": 7,
+      "score": 8,
       "num_comments": 18,
       "subreddit": "blueapron",
       "url": "https://reddit.com/r/blueapron/comments/1oikj44/so_what_service_is_everybody_switching_to/",
@@ -337,7 +337,7 @@
         "Blue Apron"
       ],
       "author": "matchagrl",
-      "upvote_ratio": 0.68,
+      "upvote_ratio": 0.7,
       "is_self": true,
       "source_brand": "Blue Apron",
       "source_url": "https://www.reddit.com/search/?q=blue+apron+mealkit+brand&type=posts&t=week",
@@ -368,7 +368,7 @@
     {
       "title": "Stay away from Marley Spoon and Dinnerly",
       "selftext": "I subscribed to see what they had to offer. I browsed for a bit but didn\u2019t like the options so I canceled my subscription 10 mins after signing up. Didn\u2019t think anything of it. Today I get home to a big delivery from both. I check my credit card and I was charged for both. But I canceled, basically right away. Why would they send random food to someone who isn\u2019t subscribed. Such a shady business practice. I called them but of course they are experiencing high call volumes. I used there chatbot on their site and they just end the convo. I disputed it with my credit card company too. This is ridiculous. ",
-      "score": 11,
+      "score": 9,
       "num_comments": 27,
       "subreddit": "mealkits",
       "url": "https://reddit.com/r/mealkits/comments/1ohpgd4/stay_away_from_marley_spoon_and_dinnerly/",
@@ -377,7 +377,7 @@
         "Marley Spoon"
       ],
       "author": "ProblematicSchematic",
-      "upvote_ratio": 0.67,
+      "upvote_ratio": 0.66,
       "is_self": true,
       "source_brand": "Marley Spoon",
       "source_url": "https://www.reddit.com/search/?q=marley+spoon+mealkit+brand&type=posts&t=week",
