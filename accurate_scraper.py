@@ -600,16 +600,19 @@ def main():
     with open(raw_file, 'w') as f:
         json.dump(data, f, indent=2)
     
-    # Also save as working data
-    with open(WORKING_DATA_FILE, 'w') as f:
-        json.dump(data, f, indent=2)
-    
     # Calculate brand counts for all 6 brands (including zeros)
     brand_counts = {brand: 0 for brand in ALL_COMPETITORS}
     for post in data['posts']:
         for brand in post['competitors_mentioned']:
             if brand in brand_counts:
                 brand_counts[brand] += 1
+    
+    # Add brand_counts to data before saving as working data
+    data['brand_counts'] = brand_counts
+    
+    # Also save as working data
+    with open(WORKING_DATA_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
     
     # Ensure filter_stats includes all 6 brands
     complete_filter_stats = {}

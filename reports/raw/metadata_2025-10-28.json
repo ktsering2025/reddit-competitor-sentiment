@@ -1,5 +1,5 @@
 {
-  "processing_timestamp": "2025-10-29T00:47:43.812531+00:00",
+  "processing_timestamp": "2025-10-29T00:49:57.382068+00:00",
   "total_posts": 87,
   "date_range": {
     "start": "2025-10-27T00:00:00+00:00",
@@ -22,7 +22,7 @@
     "Hungryroot": "https://old.reddit.com/search/?q=hungryroot&type=posts&t=week&sort=new"
   },
   "validation_status": "passed",
-  "commit_hash": "1290431e",
+  "commit_hash": "b2349839",
   "filter_stats": {
     "HelloFresh": {
       "pre_filter": 0,
