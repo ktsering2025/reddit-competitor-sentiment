@@ -152,7 +152,7 @@
         <div class="header">
             <h1>Reddit Sentiment Dashboard</h1>
             <p>Weekly Competitive Intelligence for HelloFresh & Factor75</p>
-            <p><strong>Last Updated:</strong> October 27, 2025 | <strong>Next Update:</strong> Every Sunday</p>
+            <p><strong>Data Period:</strong> <span id="data-period">Loading...</span> | <strong>Updates:</strong> Every Sunday</p>
             <div id="health-status" style="margin-top: 10px; font-size: 0.9em; opacity: 0.9;">
                 <span id="health-text">Loading status...</span>
             </div>
@@ -231,17 +231,29 @@
     
     <script>
         // Load health status
-        fetch('reports/HEALTH.json')
+            fetch('reports/HEALTH.json')
             .then(response => response.json())
             .then(data => {
                 const healthText = document.getElementById('health-text');
+                const dataPeriod = document.getElementById('data-period');
+                
                 if (data.status === 'valid') {
-                    healthText.innerHTML = `Last Run: Valid ✓ | ${data.date_window_utc.start} to ${data.date_window_utc.end} | Commit ${data.commit}`;
+                    // Format dates nicely
+                    const startDate = new Date(data.date_window_utc.start + 'T00:00:00Z');
+                    const endDate = new Date(data.date_window_utc.end + 'T00:00:00Z');
+                    const options = { month: 'short', day: 'numeric', year: 'numeric' };
+                    const formattedStart = startDate.toLocaleDateString('en-US', options);
+                    const formattedEnd = endDate.toLocaleDateString('en-US', options);
+                    
+                    dataPeriod.textContent = `${formattedStart} - ${formattedEnd}`;
+                    healthText.innerHTML = `Last Run: Valid ✓ | Commit ${data.commit}`;
                 } else {
+                    dataPeriod.textContent = 'Unknown';
                     healthText.innerHTML = 'Last Run: Error ✗ | Check system status';
                 }
             })
             .catch(error => {
+                document.getElementById('data-period').textContent = 'Unknown';
                 document.getElementById('health-text').innerHTML = 'Last Run: Unknown | System offline';
             });
     </script>
