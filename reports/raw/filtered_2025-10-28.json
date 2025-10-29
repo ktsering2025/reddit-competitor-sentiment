@@ -1,6 +1,6 @@
 {
-  "scrape_timestamp": "2025-10-29T02:56:08.566354+00:00",
-  "processing_timestamp": "2025-10-29T02:56:08.566380+00:00",
+  "scrape_timestamp": "2025-10-29T03:05:46.598797+00:00",
+  "processing_timestamp": "2025-10-29T03:05:46.598832+00:00",
   "date_range": {
     "start": "2025-10-27T00:00:00+00:00",
     "end": "2025-11-01T23:59:59+00:00"
@@ -64,8 +64,8 @@
     {
       "title": "This didn\u2019t used to have an upcharge!",
       "selftext": "This is a longtime favorite of ours and now there\u2019s an upcharge for it! It used to have the \u201cbest seller\u201d ID on it, before HF got obsessed with protein ",
-      "score": 9,
-      "num_comments": 7,
+      "score": 8,
+      "num_comments": 9,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oish8t/this_didnt_used_to_have_an_upcharge/",
       "created_utc": 1761703480.0,
@@ -73,7 +73,7 @@
         "HelloFresh"
       ],
       "author": "Reasonable-Employee6",
-      "upvote_ratio": 1.0,
+      "upvote_ratio": 0.91,
       "is_self": false,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -104,7 +104,7 @@
     {
       "title": "Some of my cheap go-to Aldi meals for two!",
       "selftext": "Some other recipes I make but they need a few more ingredients than Aldi usually has:\n\n\\- [Turkish pasta](https://www.reddit.com/r/tonightsdinner/comments/1j3zzq5/i_can_not_and_will_not_stop_eating_this_damn/)\n\n\\- [Pork schnitzel](https://www.hellofresh.com/recipes/pork-schnitzel-5dc042bdabd5bb5e5c129538)\n\n\\- [Firecracker meatballs](https://www.hellofresh.com/recipes/firecracker-meatballs-5ea70fe14c4efb3fb12140f1)",
-      "score": 462,
+      "score": 468,
       "num_comments": 36,
       "subreddit": "aldi",
       "url": "https://reddit.com/r/aldi/comments/1oiju6o/some_of_my_cheap_goto_aldi_meals_for_two/",
@@ -124,7 +124,7 @@
     {
       "title": "A Word of Caution - DO NOT Redeem Gift Cards/Vouchers",
       "selftext": "I've been subscribed to HelloFresh for over 2 years now, I originally subscribed when they offered the free add-on item for life with any active subscription. Loved all the fresh and delicious meals I've cooked over the years. \n\nLast Christmas, I was gifted a voucher for one free box from a family member (as an aside, it didn't even cover the full box price, only $80 but whatever). I finally redeemed it two weeks ago, and last week I received an email saying my subscription had been cancelled. I immediately logged in and re-activated the subscription, and confirmed there was an active card on file still. My assumption is their system tried redeeming the gift card a second time, saw zero balance, and cancelled the account... But honestly I am unsure how this happened. Their support team offered no answers. I also noticed I no longer get the free add-on item with my weekly box and so I called customer service to report this issue.\n\nAfter multiple calls with their customer service, their best solution for me was offering me 40% off for one box, stating that they no longer offer the free item for life voucher and as such cannot re-activate it on my account. \n\nI am writing this post after a half hour long frustrating call with them where I cancelled my subscription and will be looking elsewhere since they refused to honor their own mistake. \n\nIf you plan on redeeming any sort of gift voucher code, please double check your account the following week or share the same situation I find myself in.",
-      "score": 10,
+      "score": 11,
       "num_comments": 2,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oic9jq/a_word_of_caution_do_not_redeem_gift_cardsvouchers/",
@@ -204,7 +204,7 @@
     {
       "title": "Mmmm! Mystery \"Poultry\" FACTOR meal!",
       "selftext": "",
-      "score": 10,
+      "score": 9,
       "num_comments": 7,
       "subreddit": "factor75",
       "url": "https://reddit.com/r/factor75/comments/1ohnxa6/mmmm_mystery_poultry_factor_meal/",
@@ -213,7 +213,7 @@
         "Factor75"
       ],
       "author": "PurpleCatBlues",
-      "upvote_ratio": 1.0,
+      "upvote_ratio": 0.92,
       "is_self": false,
       "source_brand": "Factor75",
       "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
@@ -368,7 +368,7 @@
     {
       "title": "Stay away from Marley Spoon and Dinnerly",
       "selftext": "I subscribed to see what they had to offer. I browsed for a bit but didn\u2019t like the options so I canceled my subscription 10 mins after signing up. Didn\u2019t think anything of it. Today I get home to a big delivery from both. I check my credit card and I was charged for both. But I canceled, basically right away. Why would they send random food to someone who isn\u2019t subscribed. Such a shady business practice. I called them but of course they are experiencing high call volumes. I used there chatbot on their site and they just end the convo. I disputed it with my credit card company too. This is ridiculous. ",
-      "score": 8,
+      "score": 11,
       "num_comments": 27,
       "subreddit": "mealkits",
       "url": "https://reddit.com/r/mealkits/comments/1ohpgd4/stay_away_from_marley_spoon_and_dinnerly/",
@@ -377,7 +377,7 @@
         "Marley Spoon"
       ],
       "author": "ProblematicSchematic",
-      "upvote_ratio": 0.64,
+      "upvote_ratio": 0.67,
       "is_self": true,
       "source_brand": "Marley Spoon",
       "source_url": "https://www.reddit.com/search/?q=marley+spoon+mealkit+brand&type=posts&t=week",

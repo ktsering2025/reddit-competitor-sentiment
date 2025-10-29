@@ -161,8 +161,60 @@ def create_competitor_table_html(competitor_analysis, data):
     
     html += """
             </tbody>
-        </table>
+        </table>"""
+    
+    # Add Top 3 Posts for each competitor (excluding HelloFresh and Factor75 which are in Step 2)
+    other_competitors = [b for b in ALL_COMPETITORS if b not in PRIMARY_DEEPDIVE]
+    
+    for brand in other_competitors:
+        brand_posts = [post for post in data.get('posts', []) if brand in post.get('competitors_mentioned', [])]
+        if not brand_posts:
+            continue
+            
+        # Calculate engagement scores
+        for post in brand_posts:
+            post['engagement_score'] = post.get('score', 0) + (3 * post.get('num_comments', 0))
         
+        # Get top 3 positive and negative
+        top_positive = sorted([p for p in brand_posts if p.get('sentiment') == 'positive'], 
+                             key=lambda x: x['engagement_score'], reverse=True)[:3]
+        top_negative = sorted([p for p in brand_posts if p.get('sentiment') == 'negative'], 
+                             key=lambda x: x['engagement_score'], reverse=True)[:3]
+        
+        html += f"""
+        <h2 style="margin-top: 40px;">{brand} - Top Reddit Posts</h2>
+        <h3 style="color: #27ae60;">Top Positive Posts</h3>"""
+        
+        if top_positive:
+            for i, post in enumerate(top_positive, 1):
+                preview = post.get('selftext', '')[:300] + ('...' if len(post.get('selftext', '')) > 300 else '')
+                html += f"""
+        <div style="border-left: 4px solid #27ae60; padding: 15px; margin: 15px 0; background-color: #f8f9fa;">
+            <h4>#{i}: <a href="{post['url']}" target="_blank">{post['title']}</a></h4>
+            <p><strong>Engagement:</strong> {post['engagement_score']:.0f} | <strong>Subreddit:</strong> r/{post['subreddit']}</p>
+            <p>{preview}</p>
+            <p><small>Score: {post.get('score', 0)} | Comments: {post.get('num_comments', 0)}</small></p>
+        </div>"""
+        else:
+            html += "<p>No positive posts found.</p>"
+        
+        html += f"""
+        <h3 style="color: #e74c3c;">Top Negative Posts</h3>"""
+        
+        if top_negative:
+            for i, post in enumerate(top_negative, 1):
+                preview = post.get('selftext', '')[:300] + ('...' if len(post.get('selftext', '')) > 300 else '')
+                html += f"""
+        <div style="border-left: 4px solid #e74c3c; padding: 15px; margin: 15px 0; background-color: #f8f9fa;">
+            <h4>#{i}: <a href="{post['url']}" target="_blank">{post['title']}</a></h4>
+            <p><strong>Engagement:</strong> {post['engagement_score']:.0f} | <strong>Subreddit:</strong> r/{post['subreddit']}</p>
+            <p>{preview}</p>
+            <p><small>Score: {post.get('score', 0)} | Comments: {post.get('num_comments', 0)}</small></p>
+        </div>"""
+        else:
+            html += "<p>No negative posts found.</p>"
+    
+    html += """
         <div class="summary">
             <h3>Key Insights</h3>
             <ul>
@@ -170,6 +222,7 @@ def create_competitor_table_html(competitor_analysis, data):
                 <li>Strengths: Areas with 60%+ positive sentiment</li>
                 <li>Weaknesses: Areas with 60%+ negative sentiment</li>
                 <li>Data categorized by Quality, Delivery, Service, and Price themes</li>
+                <li>Top posts ranked by engagement (Score + 3×Comments)</li>
             </ul>
         </div>
     </div>

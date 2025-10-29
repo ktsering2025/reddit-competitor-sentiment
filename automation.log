@@ -3154,3 +3154,33 @@ Data sources echoed from config.py:
 2025-10-28 22:56:10,265 - INFO -   Hungryroot → 1 sources
 2025-10-28 22:56:10,265 - INFO - Step-1 == Step-2 (HF & Factor) totals: True (HF:9, F75:5)
 2025-10-28 22:56:10,265 - INFO - ==================================================
+2025-10-28 23:05:15,848 - INFO - ============================================================
+2025-10-28 23:05:15,849 - INFO - BRIAN'S COMPETITOR ANALYSIS - COMPLETE AUTOMATION
+2025-10-28 23:05:15,849 - INFO - ============================================================
+2025-10-28 23:05:15,849 - INFO - ABS PATH: /Users/kunsang.tsering/Desktop/reddit-competitor-sentiment
+2025-10-28 23:05:15,849 - INFO - Week mode: MON_SAT
+2025-10-28 23:05:15,849 - INFO - 
+[STEP 1] Running accurate_scraper.py...
+2025-10-28 23:05:46,664 - INFO - [SUCCESS] Scraper completed - data saved to working_reddit_data.json
+2025-10-28 23:05:46,664 - INFO - 
+[STEP 2] Processing raw data...
+2025-10-28 23:05:46,685 - INFO - [SUCCESS] Raw data processing complete - files saved with 2025-10-28
+2025-10-28 23:05:46,685 - INFO - 
+[STEP 3] Generating Step 1 chart...
+2025-10-28 23:05:47,352 - INFO - [SUCCESS] Step 1 chart generated successfully
+2025-10-28 23:05:47,352 - INFO - 
+[STEP 4] Generating Step 2 ACTIONABLE analysis...
+2025-10-28 23:05:47,405 - INFO - [SUCCESS] Step 2 analysis generated successfully
+2025-10-28 23:05:47,405 - INFO - \n[STEP 5] Generating Step 3 competitor analysis...
+2025-10-28 23:05:47,437 - INFO - [SUCCESS] Step 3 competitor analysis generated successfully
+2025-10-28 23:05:47,437 - INFO - 
+[STEP 5] Running Brian's validation rules...
+2025-10-28 23:05:47,437 - INFO - [SUCCESS] All validation rules PASSED
+2025-10-28 23:05:47,438 - INFO - 
+[STEP 6] Archiving artifacts...
+2025-10-28 23:05:47,450 - INFO - [SUCCESS] Artifacts archived to reports/archive/2025-10-28
+2025-10-28 23:05:47,451 - INFO - 
+[STEP 7] Updating homepage with current data...
+2025-10-28 23:05:47,489 - INFO - [SUCCESS] Homepage updated with current actionable data
+2025-10-28 23:05:47,489 - INFO - 
+[STEP 8] Git commit and push...

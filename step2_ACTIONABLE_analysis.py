@@ -205,11 +205,26 @@ def create_html_report(posts_by_brand, brand_totals, data):
         
         if top_positive:
             for i, post in enumerate(top_positive, 1):
+                # Get full text or first 600 chars
+                full_text = post.get('selftext', '')
+                preview_text = full_text[:600] + ('...' if len(full_text) > 600 else '')
+                
+                # Add context about why it's positive
+                context = f"<p><strong>Why This Matters:</strong> This post from r/{post['subreddit']} discusses {brand} "
+                if 'recommend' in full_text.lower() or 'love' in full_text.lower():
+                    context += "with positive recommendations and customer satisfaction."
+                elif 'switch' in full_text.lower() or 'trying' in full_text.lower():
+                    context += "as a potential alternative, indicating brand consideration."
+                else:
+                    context += "in the context of meal kit services."
+                context += "</p>"
+                
                 html += f"""
         <div class="post-card sentiment-positive">
             <h4>#{i}: <a href="{post['url']}" target="_blank">{post['title']}</a></h4>
             <p><strong>Engagement:</strong> {post['engagement_score']:.0f} | <strong>Subreddit:</strong> r/{post['subreddit']}</p>
-            <p>{post.get('selftext', '')[:200]}{'...' if len(post.get('selftext', '')) > 200 else ''}</p>
+            {context}
+            <p><strong>Post Content:</strong> {preview_text}</p>
             <div>
                 <span class="metric">Score: {post.get('score', 0)}</span>
                 <span class="metric">Comments: {post.get('num_comments', 0)}</span>
@@ -224,11 +239,28 @@ def create_html_report(posts_by_brand, brand_totals, data):
         
         if top_negative:
             for i, post in enumerate(top_negative, 1):
+                # Get full text or first 600 chars
+                full_text = post.get('selftext', '')
+                preview_text = full_text[:600] + ('...' if len(full_text) > 600 else '')
+                
+                # Add context about why it's negative
+                context = f"<p><strong>Why This Matters:</strong> This post from r/{post['subreddit']} expresses concerns about {brand} "
+                if 'cancel' in full_text.lower() or 'quit' in full_text.lower():
+                    context += "with customers considering cancellation."
+                elif 'terrible' in full_text.lower() or 'worst' in full_text.lower():
+                    context += "with strong negative feedback about service quality."
+                elif 'problem' in full_text.lower() or 'issue' in full_text.lower():
+                    context += "highlighting operational or quality issues."
+                else:
+                    context += "with customer dissatisfaction."
+                context += "</p>"
+                
                 html += f"""
         <div class="post-card sentiment-negative">
             <h4>#{i}: <a href="{post['url']}" target="_blank">{post['title']}</a></h4>
             <p><strong>Engagement:</strong> {post['engagement_score']:.0f} | <strong>Subreddit:</strong> r/{post['subreddit']}</p>
-            <p>{post.get('selftext', '')[:200]}{'...' if len(post.get('selftext', '')) > 200 else ''}</p>
+            {context}
+            <p><strong>Post Content:</strong> {preview_text}</p>
             <div>
                 <span class="metric">Score: {post.get('score', 0)}</span>
                 <span class="metric">Comments: {post.get('num_comments', 0)}</span>
