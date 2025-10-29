@@ -541,18 +541,59 @@ class AccurateScraper:
             if keyword.lower() in text:
                 return True
         
-        # MINIMAL BLACKLIST: Block obviously irrelevant subreddits
-        # Only block subreddits that are clearly not about food/meal kits
+        # AGGRESSIVE BLACKLIST: Block all non-food/meal-kit subreddits
+        # Based on actual false positives found in Factor75 data
         subreddit = post.get('subreddit', '').lower()
-        obvious_irrelevant = [
-            'poems', 'ocpoetry', 'poetry',  # Poetry
-            'dyadbuilders', 'programming', 'coding',  # Tech/Dev
-            'domains', 'domainsales',  # Domain sales
-            'himrfam', 'gossip',  # Gossip/Drama
+        irrelevant_subreddits = [
+            # Crypto/Finance
+            'vechain', 'auxlycannabis', 'nepalstock', 'ffie', 'blockdaginvestors',
+            'letsexchange', 'secwatch', 'secfilingsai', 'flankinvesting',
+            # Shopping/Frugal (non-food)
+            'frugal_ind', 'gamecollecting', 'buyitforlife', 'dailygolfsteals',
+            # Tech/Gaming
+            'callofdutymobile', 'virtualreality', 'pcbuild', 'gaminglaptops',
+            'suggestalaptop', 'hardwareswap', 'flashlight', 'smartwatch',
+            # Hobbies/Lifestyle
+            'fountainpens', 'acousticguitar', 'mtg', 'watches', 'iems',
+            'cookware', 'tools', 'detailing', 'broncosport', 'forddiesels',
+            # Health/Medical (non-food)
+            'fasting', 'epilepsy', 'askvet', 'varicocele', 'bevelhealth',
+            # Other
+            'letstalkmusic', 'funk', 'dangelo', 'boruto', 'amandaknox',
+            'divorce_men', 'aita_wibta_public', 'apprenticeuk', 'velo',
+            'giftcardexchange', 'cozumel', 'heatpumps', 'capitalismvsocialism',
+            # User profiles (spam)
+            'u_upper-bit4889', 'u_guilty-age5580', 'u_uncommonwebdesign',
+            'u_rahulsingh1991', 'u_junioroffice2289', 'u_atlantarecordingus',
+            'u_nittotireusa', 'u_intelligent-field812', 'u_party-pension8925',
+            'u_funfamous274', 'u_one_scallion_6415', 'u_webtrills7',
+            'u_significant-war-7247',
+            # Poetry/Creative
+            'poems', 'ocpoetry', 'poetry',
+            # Tech/Dev
+            'dyadbuilders', 'programming', 'coding',
+            # Domain sales
+            'domains', 'domainsales',
+            # Gossip/Drama
+            'himrfam', 'gossip', 'ahneet2', 'snarkingonselena',
+            # Marketing/SEO spam
+            'instagrammarketing', 'socialmediamarketing', 'seojobs',
+            'mktgsupermarket', 'digitalmarketinghelp', 'joshmaraney',
+            'marketingsecrets101', 'jobhuntify',
+            # Job/Career
+            'stock_trading_india', 'cpa',
+            # Random
+            'labubuswap', 'leopardgeckos', 'skincareaddicts', 'skincareaddictionuk',
+            'canadianrepladies', 'r4r30plus', 'keepthisinmind', 'recording',
+            'cocktails', 'privatehealthcoveruk', 'ped_asthma_rsv', 'animation',
+            'facebookads', 'allbasescoveredstocks', 'udemyfreeebies',
+            'psychology_india', 'hotshotstartup', 'thecowboybunkhouse',
+            'bestlaptopdeals', 'whatcarshouldiby',
+            'golf', '2under2', 'shook'
         ]
         
-        for irrelevant in obvious_irrelevant:
-            if irrelevant == subreddit:  # Exact match only
+        for irrelevant in irrelevant_subreddits:
+            if irrelevant in subreddit:  # Partial match to catch variations
                 return True
         
         # ACTIONABLE FILTER: Remove referral/promo spam
