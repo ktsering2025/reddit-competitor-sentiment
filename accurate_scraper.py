@@ -536,6 +536,24 @@ class AccurateScraper:
             if keyword.lower() in text:
                 return True
         
+        # ACTIONABLE FILTER: Remove referral/promo spam
+        spam_keywords = ['referral', 'promo code', 'free box', 'discount', 'coupon', 'voucher', 'gift card']
+        engagement_score = post.get('score', 0) + 3 * post.get('num_comments', 0)
+        
+        # Filter out low-engagement spam posts
+        for keyword in spam_keywords:
+            if keyword in text and engagement_score < 10:
+                return True
+        
+        # Filter out posts from dedicated promo/referral subreddits
+        subreddit = post.get('subreddit', '').lower()
+        promo_subreddits = ['referral', 'promocode', 'hellofreshdeutschland', 'referralaffiliatecode', 
+                           'referralnotreferal', 'referrallinks', 'referralcodes', 'promocodeshare']
+        
+        for promo_sub in promo_subreddits:
+            if promo_sub in subreddit:
+                return True
+        
         # Check for "prefer X to HelloFresh" patterns (negative for HF)
         if 'hellofresh' in post.get('competitors_mentioned', []):
             prefer_patterns = ['prefer', 'better than', 'instead of', 'rather than']

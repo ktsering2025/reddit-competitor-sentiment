@@ -99,10 +99,19 @@ def create_chart(brand_sentiment, data):
     ax.set_xticks(x)
     ax.set_xticklabels(ALL_COMPETITORS, rotation=35, ha='right')  # 30-40° rotation for legibility
     
-    # Y-axis - integer ticks only
+    # Y-axis - better tick intervals for readability
     max_y = max([sum([positive_counts[i], negative_counts[i], neutral_counts[i]]) for i in range(len(ALL_COMPETITORS))])
     if max_y > 0:
-        ax.set_yticks(range(0, max_y + 2))
+        # Use better tick intervals based on max value
+        if max_y <= 10:
+            step = 1
+        elif max_y <= 50:
+            step = 5
+        else:
+            step = 10
+        
+        y_ticks = list(range(0, max_y + step, step))
+        ax.set_yticks(y_ticks)
     else:
         ax.set_yticks([0, 1, 2, 3, 4, 5])
     

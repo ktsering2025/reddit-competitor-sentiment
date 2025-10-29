@@ -1,11 +1,11 @@
 {
-  "scrape_timestamp": "2025-10-29T00:49:57.331369+00:00",
-  "processing_timestamp": "2025-10-29T00:49:57.331384+00:00",
+  "scrape_timestamp": "2025-10-29T01:08:07.585547+00:00",
+  "processing_timestamp": "2025-10-29T01:08:07.585579+00:00",
   "date_range": {
     "start": "2025-10-27T00:00:00+00:00",
     "end": "2025-11-01T23:59:59+00:00"
   },
-  "total_posts": 87,
+  "total_posts": 32,
   "data_sources": {
     "HelloFresh": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
     "Factor75": "https://old.reddit.com/search/?q=factor75&type=posts&t=week&sort=new",
@@ -17,8 +17,8 @@
   "filter_stats": {
     "HelloFresh": {
       "pre": 63,
-      "post": 63,
-      "removed": 0
+      "post": 7,
+      "removed": 56
     },
     "Factor75": {
       "pre": 12,
@@ -26,8 +26,8 @@
       "removed": 4
     },
     "Home Chef": {
-      "pre": 12,
-      "post": 12,
+      "pre": 13,
+      "post": 13,
       "removed": 0
     },
     "Blue Apron": {
@@ -50,7 +50,7 @@
     {
       "title": "Nightly dinner pic of spicy maple chicken and weekly meal list this week \ud83d\ude04",
       "selftext": "These are my recipes that got delivered this week let me know if any of you have made these/how they are! \n\n- spicy maple chicken\n- cheesy smash burgers (ive gotten this one more than once because it\u2019s easy and I love making the fries) \n- silky Sicilian chicken penne \n- steak au poivre with maple sage sweet potatoes and lemony asparagus \n- cheesy chicken enchiladas \n\n\nPic is the maple chicken. I just want to say that I feel bad for people that blindly follow some of these recipes for the first time that contain pepper flakes and trust hello fresh enough to EVER put the entire pack of red pepper flakes. I literally never use the whole pack of pepper flakes or seasoning in general. For this recipe i literally used barely any, only used a pinch and tossed out the rest and it was still a tad too spicy for us, imagine if I\u2019d put in the whole packet! \ud83e\udd75\ud83e\udd75\n\n",
-      "score": 2,
+      "score": 3,
       "num_comments": 0,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oiposn/nightly_dinner_pic_of_spicy_maple_chicken_and/",
@@ -70,7 +70,7 @@
     {
       "title": "Some of my cheap go-to Aldi meals for two!",
       "selftext": "Some other recipes I make but they need a few more ingredients than Aldi usually has:\n\n\\- [Turkish pasta](https://www.reddit.com/r/tonightsdinner/comments/1j3zzq5/i_can_not_and_will_not_stop_eating_this_damn/)\n\n\\- [Pork schnitzel](https://www.hellofresh.com/recipes/pork-schnitzel-5dc042bdabd5bb5e5c129538)\n\n\\- [Firecracker meatballs](https://www.hellofresh.com/recipes/firecracker-meatballs-5ea70fe14c4efb3fb12140f1)",
-      "score": 338,
+      "score": 361,
       "num_comments": 35,
       "subreddit": "aldi",
       "url": "https://reddit.com/r/aldi/comments/1oiju6o/some_of_my_cheap_goto_aldi_meals_for_two/",
@@ -106,1126 +106,6 @@
       "sentiment": "positive",
       "confidence": 1.0,
       "reasoning": "VADER: 0.99, TextBlob: 0.24"
-    },
-    {
-      "title": "Hello fresh free box for new customers",
-      "selftext": "\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi8fz3/hello_fresh_free_box_for_new_customers/",
-      "created_utc": 1761655684.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.83, TextBlob: 0.26"
-    },
-    {
-      "title": "Free box",
-      "selftext": "Free box- only cover the delivery cost\n\n\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi5oup/free_box/",
-      "created_utc": 1761647229.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.90, TextBlob: 0.24"
-    },
-    {
-      "title": "HelloFresh FREE full week of dinners (up to a $120 order for free) Referral Promo Code",
-      "selftext": "Free box from HelloFresh (select a plan that is up to $120 in food) (United States Only)\n\nYou can even select a 7th meal if you're doing the 2 person plan, and it'll come out to about $8 total shipped!\n\nOver 10 Boxes available at my referral link:\n\n[https://www.hellofresh.com/freebox/MzE1OTM4NDU1LTAtNC0xNi1VUw](https://www.hellofresh.com/freebox/MzE1OTM4NDU1LTAtNC0xNi1VUw)",
-      "score": 1,
-      "num_comments": 1,
-      "subreddit": "PromoCodeShare",
-      "url": "https://reddit.com/r/PromoCodeShare/comments/1oi331w/hellofresh_free_full_week_of_dinners_up_to_a_120/",
-      "created_utc": 1761636651.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Upper-Water-2119",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.93, TextBlob: 0.28"
-    },
-    {
-      "title": "HelloFresh FREE full week of dinners (up to a $120 order for free) Referral Promo Code",
-      "selftext": "Free box from HelloFresh (select a plan that is up to $120 in food) (United States Only)\n\nYou can even select a 7th meal if you're doing the 2 person plan, and it'll come out to about $8 total shipped!\n\nOver 10 Boxes available at my referral link:\n\n[https://www.hellofresh.com/freebox/MzE1OTM4NDU1LTAtNC0xNi1VUw](https://www.hellofresh.com/freebox/MzE1OTM4NDU1LTAtNC0xNi1VUw)",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Referrals",
-      "url": "https://reddit.com/r/Referrals/comments/1oi330v/hellofresh_free_full_week_of_dinners_up_to_a_120/",
-      "created_utc": 1761636648.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Upper-Water-2119",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.93, TextBlob: 0.28"
-    },
-    {
-      "title": "HelloFresh FREE full week of dinners (up to a $120 order for free) Referral Promo Code",
-      "selftext": "Free box from HelloFresh (select a plan that is up to $120 in food) (United States Only)\n\nYou can even select a 7th meal if you're doing the 2 person plan, and it'll come out to about $8 total shipped!\n\nOver 10 Boxes available at my referral link:\n\n[https://www.hellofresh.com/freebox/MzE1OTM4NDU1LTAtNC0xNi1VUw](https://www.hellofresh.com/freebox/MzE1OTM4NDU1LTAtNC0xNi1VUw)",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "referralcodes",
-      "url": "https://reddit.com/r/referralcodes/comments/1oi32zx/hellofresh_free_full_week_of_dinners_up_to_a_120/",
-      "created_utc": 1761636645.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Upper-Water-2119",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.93, TextBlob: 0.28"
-    },
-    {
-      "title": "HelloFresh FREE full week of dinners (up to a $120 order for free) Referral Promo Code",
-      "selftext": "Free box from HelloFresh (select a plan that is up to $120 in food) (United States Only)\n\nYou can even select a 7th meal if you're doing the 2 person plan, and it'll come out to about $8 total shipped!\n\nOver 10 Boxes available at my referral link:\n\n[https://www.hellofresh.com/freebox/MzE1OTM4NDU1LTAtNC0xNi1VUw](https://www.hellofresh.com/freebox/MzE1OTM4NDU1LTAtNC0xNi1VUw)",
-      "score": 1,
-      "num_comments": 2,
-      "subreddit": "promocode",
-      "url": "https://reddit.com/r/promocode/comments/1oi32z7/hellofresh_free_full_week_of_dinners_up_to_a_120/",
-      "created_utc": 1761636643.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Upper-Water-2119",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.93, TextBlob: 0.28"
-    },
-    {
-      "title": "Free box- only cover the delivery cost",
-      "selftext": "\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi2ida/free_box_only_cover_the_delivery_cost/",
-      "created_utc": 1761634276.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.83, TextBlob: 0.22"
-    },
-    {
-      "title": "10+ free hello fresh boxes up for grabs",
-      "selftext": "\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi2f47/10_free_hello_fresh_boxes_up_for_grabs/",
-      "created_utc": 1761633906.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.87, TextBlob: 0.27"
-    },
-    {
-      "title": "Free box! Vegan, veggie, gluten free options\u2026.",
-      "selftext": "\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi2ebf/free_box_vegan_veggie_gluten_free_options/",
-      "created_utc": 1761633811.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.91, TextBlob: 0.30"
-    },
-    {
-      "title": "Free food! Germany \ud83c\udde9\ud83c\uddea",
-      "selftext": "\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi2df4/free_food_germany/",
-      "created_utc": 1761633707.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.84, TextBlob: 0.28"
-    },
-    {
-      "title": "Hello fresh free box",
-      "selftext": "\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi2c5j/hello_fresh_free_box/",
-      "created_utc": 1761633568.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.87, TextBlob: 0.27"
-    },
-    {
-      "title": "Hello fresh box",
-      "selftext": "\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi2bkb/hello_fresh_box/",
-      "created_utc": 1761633500.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.77, TextBlob: 0.24"
-    },
-    {
-      "title": "Hello fresh box",
-      "selftext": "\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi2azt/hello_fresh_box/",
-      "created_utc": 1761633437.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.77, TextBlob: 0.24"
-    },
-    {
-      "title": "Free box",
-      "selftext": "\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi2ath/free_box/",
-      "created_utc": 1761633418.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.83, TextBlob: 0.26"
-    },
-    {
-      "title": "Free box",
-      "selftext": "\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi2aqs/free_box/",
-      "created_utc": 1761633409.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.83, TextBlob: 0.26"
-    },
-    {
-      "title": "Hello fresh box",
-      "selftext": "\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi2akl/hello_fresh_box/",
-      "created_utc": 1761633389.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 0.85,
-      "reasoning": "VADER: 0.48, TextBlob: 0.38"
-    },
-    {
-      "title": "Hello fresh free box",
-      "selftext": "\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi2a86/hello_fresh_free_box/",
-      "created_utc": 1761633354.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.87, TextBlob: 0.27"
-    },
-    {
-      "title": "Free box Germany",
-      "selftext": "\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi29xq/free_box_germany/",
-      "created_utc": 1761633323.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.62, TextBlob: 0.50"
-    },
-    {
-      "title": "Free box",
-      "selftext": "\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi29oo/free_box/",
-      "created_utc": 1761633296.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.83, TextBlob: 0.26"
-    },
-    {
-      "title": "Free hello fresh box Germany new customers",
-      "selftext": "\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi28kb/free_hello_fresh_box_germany_new_customers/",
-      "created_utc": 1761633176.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.87, TextBlob: 0.25"
-    },
-    {
-      "title": "Free box",
-      "selftext": "\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi289y/free_box/",
-      "created_utc": 1761633146.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.83, TextBlob: 0.26"
-    },
-    {
-      "title": "Free box",
-      "selftext": "\n\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi27y4/free_box/",
-      "created_utc": 1761633110.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.83, TextBlob: 0.26"
-    },
-    {
-      "title": "Free box hello fresh",
-      "selftext": "\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi27s7/free_box_hello_fresh/",
-      "created_utc": 1761633092.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.87, TextBlob: 0.27"
-    },
-    {
-      "title": "Free box",
-      "selftext": "\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi27k8/free_box/",
-      "created_utc": 1761633067.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.83, TextBlob: 0.26"
-    },
-    {
-      "title": "Free box",
-      "selftext": "\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi27e1/free_box/",
-      "created_utc": 1761633049.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.83, TextBlob: 0.26"
-    },
-    {
-      "title": "Free box",
-      "selftext": "\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi278j/free_box/",
-      "created_utc": 1761633034.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.83, TextBlob: 0.26"
-    },
-    {
-      "title": "Free hello fresh box",
-      "selftext": "\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi2705/free_hello_fresh_box/",
-      "created_utc": 1761633008.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.87, TextBlob: 0.27"
-    },
-    {
-      "title": "Free box",
-      "selftext": "\nHello Fresh discount new customers\n\nHello Fresh Germany discount for new customers\n\nBring mehr Abwechslung in Deine K\u00fcche mit HelloFresh! Klick den Link & hol Dir Deine Gratis-Gerichte \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.de/freebox/MzM2NTg1MjEwLTEtMC0yLURF",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Hellofreshdeutschland",
-      "url": "https://reddit.com/r/Hellofreshdeutschland/comments/1oi220m/free_box/",
-      "created_utc": 1761632439.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Tasty_Worry7514",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.83, TextBlob: 0.26"
-    },
-    {
-      "title": "Hello fresh 5 free meals for 2",
-      "selftext": "I\u2019ve been loving the new expanded HelloFresh menu: bigger portions and 100+ weekly recipes. Try FREE meals with my personal discount \ud83e\udd58 >> https://www.hellofresh.com/pages/raf_lp11?c=FIH-1D5ELIPPLUNZ&utm_campaign=referralinvite&utm_medium=nativeshare&utm_source=freebies&utm_invitername=Kameron&utm_term=ios_app&discount_comm_id=40032159-5408-45c8-af58-5b31928f9697",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Referrallinks",
-      "url": "https://reddit.com/r/Referrallinks/comments/1ohqyhg/hello_fresh_5_free_meals_for_2/",
-      "created_utc": 1761600108.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "greeneggsaandkam",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.93, TextBlob: 0.26"
-    },
-    {
-      "title": "Hello fresh 5 free meals for 2",
-      "selftext": "I\u2019ve been loving the new expanded HelloFresh menu: bigger portions and 100+ weekly recipes. Try FREE meals with my personal discount \ud83e\udd58 >> https://www.hellofresh.com/pages/raf_lp11?c=FIH-1D5ELIPPLUNZ&utm_campaign=referralinvite&utm_medium=nativeshare&utm_source=freebies&utm_invitername=Kameron&utm_term=ios_app&discount_comm_id=40032159-5408-45c8-af58-5b31928f9697",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "referralcodes",
-      "url": "https://reddit.com/r/referralcodes/comments/1ohqy9l/hello_fresh_5_free_meals_for_2/",
-      "created_utc": 1761600093.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "greeneggsaandkam",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.93, TextBlob: 0.26"
-    },
-    {
-      "title": "HelloFresh free box code referral",
-      "selftext": "Hello fresh free food box referral\n\nIf you want a free food box with a weeks worth of meals from HelloFresh for free use my code :), you can cancel after your free box there\u2019s no commitment\n\nSpice up your meals with HelloFresh! Tap the link to claim your discounted meals now \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.co.uk/freebox/MzM3MDk1MzIwLTEtMC0xMS1HQg",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "ReferalCodes",
-      "url": "https://reddit.com/r/ReferalCodes/comments/1ohl2nl/hellofresh_free_box_code_referral/",
-      "created_utc": 1761586876.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Bend-Difficult",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.96, TextBlob: 0.40"
-    },
-    {
-      "title": "HelloFresh free food box code",
-      "selftext": "Hello fresh free food box referral\n\nIf you want a free food box with a weeks worth of meals from HelloFresh for free use my code :), you can cancel after your free box there\u2019s no commitment\n\nSpice up your meals with HelloFresh! Tap the link to claim your discounted meals now \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.co.uk/freebox/MzM3MDk1MzIwLTEtMC0xMS1HQg",
-      "score": 1,
-      "num_comments": 1,
-      "subreddit": "ReferralAffiliateCode",
-      "url": "https://reddit.com/r/ReferralAffiliateCode/comments/1ohl20z/hellofresh_free_food_box_code/",
-      "created_utc": 1761586837.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Bend-Difficult",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.96, TextBlob: 0.40"
-    },
-    {
-      "title": "HelloFresh free food box code",
-      "selftext": "Hello fresh free food box referral\n\nIf you want a free food box with a weeks worth of meals from HelloFresh for free use my code :), you can cancel after your free box there\u2019s no commitment\n\nSpice up your meals with HelloFresh! Tap the link to claim your discounted meals now \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.co.uk/freebox/MzM3MDk1MzIwLTEtMC0xMS1HQg",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "ReferralTrains",
-      "url": "https://reddit.com/r/ReferralTrains/comments/1ohl1aw/hellofresh_free_food_box_code/",
-      "created_utc": 1761586792.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Bend-Difficult",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.96, TextBlob: 0.40"
-    },
-    {
-      "title": "HelloFresh free food box code",
-      "selftext": "Hello fresh free food box referral\n\nIf you want a free food box with a weeks worth of meals from HelloFresh for free use my code :), you can cancel after your free box there\u2019s no commitment\n\nSpice up your meals with HelloFresh! Tap the link to claim your discounted meals now \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.co.uk/freebox/MzM3MDk1MzIwLTEtMC0xMS1HQg",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "ReferralLinksNation",
-      "url": "https://reddit.com/r/ReferralLinksNation/comments/1ohl0k1/hellofresh_free_food_box_code/",
-      "created_utc": 1761586747.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Bend-Difficult",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.96, TextBlob: 0.40"
-    },
-    {
-      "title": "HelloFresh free box code",
-      "selftext": "Hello fresh free food box referral\n\nIf you want a free food box with a weeks worth of meals from HelloFresh for free use my code :), you can cancel after your free box there\u2019s no commitment\n\nSpice up your meals with HelloFresh! Tap the link to claim your discounted meals now \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.co.uk/freebox/MzM3MDk1MzIwLTEtMC0xMS1HQg",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "ReferralLink",
-      "url": "https://reddit.com/r/ReferralLink/comments/1ohkyvx/hellofresh_free_box_code/",
-      "created_utc": 1761586643.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Bend-Difficult",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.96, TextBlob: 0.40"
-    },
-    {
-      "title": "HelloFresh free box code",
-      "selftext": "Hello fresh free food box referral\n\nIf you want a free food box with a weeks worth of meals from HelloFresh for free use my code :), you can cancel after your free box there\u2019s no commitment\n\nSpice up your meals with HelloFresh! Tap the link to claim your discounted meals now \ud83c\udf81 \u23f0  \ud83c\udf7d\ufe0f \ud83d\ude0b >> https://www.hellofresh.co.uk/freebox/MzM3MDk1MzIwLTEtMC0xMS1HQg",
-      "score": 1,
-      "num_comments": 1,
-      "subreddit": "ReferralNotReferal",
-      "url": "https://reddit.com/r/ReferralNotReferal/comments/1ohkyi3/hellofresh_free_box_code/",
-      "created_utc": 1761586618.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Bend-Difficult",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.96, TextBlob: 0.40"
-    },
-    {
-      "title": "HelloFresh FREE full week of dinners (up to a $120 order for free) Referral Promo Code",
-      "selftext": "Free box from HelloFresh (select a plan that is up to $120 in food) (United States Only)\n\nYou can even select a 7th meal if you're doing the 2 person plan, and it'll come out to about $8 total shipped!\n\nOver 10 Boxes available at my referral link:\n\n[https://www.hellofresh.com/freebox/MzE1OTM4NDU1LTAtNC0xNi1VUw](https://www.hellofresh.com/freebox/MzE1OTM4NDU1LTAtNC0xNi1VUw)",
-      "score": 1,
-      "num_comments": 2,
-      "subreddit": "promocode",
-      "url": "https://reddit.com/r/promocode/comments/1oh3h1s/hellofresh_free_full_week_of_dinners_up_to_a_120/",
-      "created_utc": 1761533403.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Upper-Water-2119",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.93, TextBlob: 0.28"
-    },
-    {
-      "title": "HelloFresh FREE full week of dinners (up to a $120 order for free) Referral Promo Code",
-      "selftext": "Free box from HelloFresh (select a plan that is up to $120 in food) (United States Only)\n\nYou can even select a 7th meal if you're doing the 2 person plan, and it'll come out to about $8 total shipped!\n\nOver 10 Boxes available at my referral link:\n\n[https://www.hellofresh.com/freebox/MzE1OTM4NDU1LTAtNC0xNi1VUw](https://www.hellofresh.com/freebox/MzE1OTM4NDU1LTAtNC0xNi1VUw)",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "referralcodes",
-      "url": "https://reddit.com/r/referralcodes/comments/1oh3h0p/hellofresh_free_full_week_of_dinners_up_to_a_120/",
-      "created_utc": 1761533401.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Upper-Water-2119",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.93, TextBlob: 0.28"
-    },
-    {
-      "title": "HelloFresh FREE full week of dinners (up to a $120 order for free) Referral Promo Code",
-      "selftext": "Free box from HelloFresh (select a plan that is up to $120 in food) (United States Only)\n\nYou can even select a 7th meal if you're doing the 2 person plan, and it'll come out to about $8 total shipped!\n\nOver 10 Boxes available at my referral link:\n\n[https://www.hellofresh.com/freebox/MzE1OTM4NDU1LTAtNC0xNi1VUw](https://www.hellofresh.com/freebox/MzE1OTM4NDU1LTAtNC0xNi1VUw)",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Referrals",
-      "url": "https://reddit.com/r/Referrals/comments/1oh3gzf/hellofresh_free_full_week_of_dinners_up_to_a_120/",
-      "created_utc": 1761533399.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Upper-Water-2119",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.93, TextBlob: 0.28"
-    },
-    {
-      "title": "HelloFresh FREE full week of dinners (up to a $120 order for free) Referral Promo Code",
-      "selftext": "Free box from HelloFresh (select a plan that is up to $120 in food) (United States Only)\n\nYou can even select a 7th meal if you're doing the 2 person plan, and it'll come out to about $8 total shipped!\n\nOver 10 Boxes available at my referral link:\n\n[https://www.hellofresh.com/freebox/MzE1OTM4NDU1LTAtNC0xNi1VUw](https://www.hellofresh.com/freebox/MzE1OTM4NDU1LTAtNC0xNi1VUw)",
-      "score": 1,
-      "num_comments": 1,
-      "subreddit": "PromoCodeShare",
-      "url": "https://reddit.com/r/PromoCodeShare/comments/1oh3gyf/hellofresh_free_full_week_of_dinners_up_to_a_120/",
-      "created_utc": 1761533396.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Upper-Water-2119",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.93, TextBlob: 0.28"
-    },
-    {
-      "title": "Get $120 Worth of HelloFresh Meals FREE. Grab a box of 12 meals",
-      "selftext": "Get $120 Worth of HelloFresh Meals FREE.  Grab a box of 12 meals - you pick the recipes and only pay $10.99 for delivery.  Some boxes even get a free breakfast item. \nNo obligation,  just cancel after you receive your first box and owe nothing more.\n\nTry FREE meals with my personal discount \ud83e\udd58 >>\n https://www.hellofresh.com/freebox/MzM5MjEyNjQ3LTItMC0xNi1VUw\n\nOr \n https://www.hellofresh.com/freebox/MzM3OTMzMjAxLTItMC0xNi1VUw",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "ReferralTrains",
-      "url": "https://reddit.com/r/ReferralTrains/comments/1oh27ca/get_120_worth_of_hellofresh_meals_free_grab_a_box/",
-      "created_utc": 1761529652.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "MobileFun2467",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.80, TextBlob: 0.29"
-    },
-    {
-      "title": "Get $120 Worth of HelloFresh Meals FREE. Grab a box of 12 meals",
-      "selftext": "Get $120 Worth of HelloFresh Meals FREE.  Grab a box of 12 meals - you pick the recipes and only pay $10.99 for delivery.  Some boxes even get a free breakfast item. \nNo obligation,  just cancel after you receive your first box and owe nothing more.\n\nTry FREE meals with my personal discount \ud83e\udd58 >>\n https://www.hellofresh.com/freebox/MzM5MjEyNjQ3LTItMC0xNi1VUw\n\nOr \n https://www.hellofresh.com/freebox/MzM3OTMzMjAxLTItMC0xNi1VUw",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "referralspay",
-      "url": "https://reddit.com/r/referralspay/comments/1oh26yi/get_120_worth_of_hellofresh_meals_free_grab_a_box/",
-      "created_utc": 1761529622.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "MobileFun2467",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.80, TextBlob: 0.29"
-    },
-    {
-      "title": "Get $120 Worth of HelloFresh Meals FREE. Grab a box of 12 meals",
-      "selftext": "Get $120 Worth of HelloFresh Meals FREE.  Grab a box of 12 meals - you pick the recipes and only pay $10.99 for delivery.  Some boxes even get a free breakfast item. \nNo obligation,  just cancel after you receive your first box and owe nothing more.\n\nTry FREE meals with my personal discount \ud83e\udd58 >>\n https://www.hellofresh.com/freebox/MzM5MjEyNjQ3LTItMC0xNi1VUw\n\nOr \n https://www.hellofresh.com/freebox/MzM3OTMzMjAxLTItMC0xNi1VUw",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Referrals",
-      "url": "https://reddit.com/r/Referrals/comments/1oh26jw/get_120_worth_of_hellofresh_meals_free_grab_a_box/",
-      "created_utc": 1761529590.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "MobileFun2467",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.80, TextBlob: 0.29"
-    },
-    {
-      "title": "Get $120 Worth of HelloFresh Meals FREE. Grab a box of 12 meals",
-      "selftext": "Get $120 Worth of HelloFresh Meals FREE.  Grab a box of 12 meals - you pick the recipes and only pay $10.99 for delivery.  Some boxes even get a free breakfast item. \nNo obligation,  just cancel after you receive your first box and owe nothing more.\n\nTry FREE meals with my personal discount \ud83e\udd58 >>\n https://www.hellofresh.com/freebox/MzM5MjEyNjQ3LTItMC0xNi1VUw\n\nOr \n https://www.hellofresh.com/freebox/MzM3OTMzMjAxLTItMC0xNi1VUw",
-      "score": 1,
-      "num_comments": 1,
-      "subreddit": "ReferralNotReferal",
-      "url": "https://reddit.com/r/ReferralNotReferal/comments/1oh26d2/get_120_worth_of_hellofresh_meals_free_grab_a_box/",
-      "created_utc": 1761529573.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "MobileFun2467",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.80, TextBlob: 0.29"
-    },
-    {
-      "title": "Get $120 Worth of HelloFresh Meals FREE. Grab a box of 12 meals",
-      "selftext": "Get $120 Worth of HelloFresh Meals FREE.  Grab a box of 12 meals - you pick the recipes and only pay $10.99 for delivery.  Some boxes even get a free breakfast item. \nNo obligation,  just cancel after you receive your first box and owe nothing more.\n\nTry FREE meals with my personal discount \ud83e\udd58 >>\n https://www.hellofresh.com/freebox/MzM5MjEyNjQ3LTItMC0xNi1VUw\n\nOr \n https://www.hellofresh.com/freebox/MzM3OTMzMjAxLTItMC0xNi1VUw",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "ReferralLinksShare",
-      "url": "https://reddit.com/r/ReferralLinksShare/comments/1oh2594/get_120_worth_of_hellofresh_meals_free_grab_a_box/",
-      "created_utc": 1761529483.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "MobileFun2467",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.80, TextBlob: 0.29"
-    },
-    {
-      "title": "Get $120 Worth of HelloFresh Meals FREE. Grab a box of 12 meals",
-      "selftext": "Get $120 Worth of HelloFresh Meals FREE.  Grab a box of 12 meals - you pick the recipes and only pay $10.99 for delivery.  Some boxes even get a free breakfast item. \nNo obligation,  just cancel after you receive your first box and owe nothing more.\n\nTry FREE meals with my personal discount \ud83e\udd58 >>\n https://www.hellofresh.com/freebox/MzM5MjEyNjQ3LTItMC0xNi1VUw\n\nOr \n https://www.hellofresh.com/freebox/MzM3OTMzMjAxLTItMC0xNi1VUw",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "ReferralLinksNation",
-      "url": "https://reddit.com/r/ReferralLinksNation/comments/1oh251l/get_120_worth_of_hellofresh_meals_free_grab_a_box/",
-      "created_utc": 1761529466.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "MobileFun2467",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.80, TextBlob: 0.29"
-    },
-    {
-      "title": "Get $120 Worth of HelloFresh Meals FREE. Grab a box of 12 meals",
-      "selftext": "Get $120 Worth of HelloFresh Meals FREE.  Grab a box of 12 meals - you pick the recipes and only pay $10.99 for delivery.  Some boxes even get a free breakfast item. \nNo obligation,  just cancel after you receive your first box and owe nothing more.\n\nTry FREE meals with my personal discount \ud83e\udd58 >>\n https://www.hellofresh.com/freebox/MzM5MjEyNjQ3LTItMC0xNi1VUw\n\nOr \n https://www.hellofresh.com/freebox/MzM3OTMzMjAxLTItMC0xNi1VUw",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Referrallinks",
-      "url": "https://reddit.com/r/Referrallinks/comments/1oh24uu/get_120_worth_of_hellofresh_meals_free_grab_a_box/",
-      "created_utc": 1761529450.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "MobileFun2467",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.80, TextBlob: 0.29"
-    },
-    {
-      "title": "Get $120 Worth of HelloFresh Meals FREE. Grab a box of 12 meals",
-      "selftext": "Get $120 Worth of HelloFresh Meals FREE.  Grab a box of 12 meals - you pick the recipes and only pay $10.99 for delivery.  Some boxes even get a free breakfast item. \nNo obligation,  just cancel after you receive your first box and owe nothing more.\n\nTry FREE meals with my personal discount \ud83e\udd58 >>\n https://www.hellofresh.com/freebox/MzM5MjEyNjQ3LTItMC0xNi1VUw\n\nOr \n https://www.hellofresh.com/freebox/MzM3OTMzMjAxLTItMC0xNi1VUw",
-      "score": 0,
-      "num_comments": 1,
-      "subreddit": "ReferralLink",
-      "url": "https://reddit.com/r/ReferralLink/comments/1oh24ht/get_120_worth_of_hellofresh_meals_free_grab_a_box/",
-      "created_utc": 1761529420.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "MobileFun2467",
-      "upvote_ratio": 0.5,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.80, TextBlob: 0.29"
-    },
-    {
-      "title": "Get $120 Worth of HelloFresh Meals FREE. Grab a box of 12 meals",
-      "selftext": "Get $120 Worth of HelloFresh Meals FREE.  Grab a box of 12 meals - you pick the recipes and only pay $10.99 for delivery.  Some boxes even get a free breakfast item. \nNo obligation,  just cancel after you receive your first box and owe nothing more.\n\nTry FREE meals with my personal discount \ud83e\udd58 >>\n https://www.hellofresh.com/freebox/MzM5MjEyNjQ3LTItMC0xNi1VUw\n\nOr \n https://www.hellofresh.com/freebox/MzM3OTMzMjAxLTItMC0xNi1VUw",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "referralcodes",
-      "url": "https://reddit.com/r/referralcodes/comments/1oh2463/get_120_worth_of_hellofresh_meals_free_grab_a_box/",
-      "created_utc": 1761529393.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "MobileFun2467",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.80, TextBlob: 0.29"
-    },
-    {
-      "title": "Get $120 Worth of HelloFresh Meals FREE. Grab a box of 12 meals",
-      "selftext": "Get $120 Worth of HelloFresh Meals FREE.  Grab a box of 12 meals - you pick the recipes and only pay $10.99 for delivery.  Some boxes even get a free breakfast item. \nNo obligation,  just cancel after you receive your first box and owe nothing more.\n\nTry FREE meals with my personal discount \ud83e\udd58 >>\n https://www.hellofresh.com/freebox/MzM5MjEyNjQ3LTItMC0xNi1VUw\n\nOr \n https://www.hellofresh.com/freebox/MzM3OTMzMjAxLTItMC0xNi1VUw",
-      "score": 1,
-      "num_comments": 1,
-      "subreddit": "ReferralAffiliateCode",
-      "url": "https://reddit.com/r/ReferralAffiliateCode/comments/1oh1z4b/get_120_worth_of_hellofresh_meals_free_grab_a_box/",
-      "created_utc": 1761528984.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "MobileFun2467",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.80, TextBlob: 0.29"
-    },
-    {
-      "title": "Get $120 Worth of HelloFresh Meals FREE. Grab a box of 12 meals",
-      "selftext": "Get $120 Worth of HelloFresh Meals FREE.  Grab a box of 12 meals - you pick the recipes and only pay $10.99 for delivery.  Some boxes even get a free breakfast item. \nNo obligation,  just cancel after you receive your first box and owe nothing more.\n\nTry FREE meals with my personal discount \ud83e\udd58 >>\n https://www.hellofresh.com/freebox/MzM5MjEyNjQ3LTItMC0xNi1VUw\n\nOr \n https://www.hellofresh.com/freebox/MzM3OTMzMjAxLTItMC0xNi1VUw",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "Referral",
-      "url": "https://reddit.com/r/Referral/comments/1oh1y1b/get_120_worth_of_hellofresh_meals_free_grab_a_box/",
-      "created_utc": 1761528898.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "MobileFun2467",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.80, TextBlob: 0.29"
-    },
-    {
-      "title": "Get $120 Worth of HelloFresh Meals FREE. Grab a box of 12 meals",
-      "selftext": "Get $120 Worth of HelloFresh Meals FREE.  Grab a box of 12 meals - you pick the recipes and only pay $10.99 for delivery.  Some boxes even get a free breakfast item. \nNo obligation,  just cancel after you receive your first box and owe nothing more.\n\nTry FREE meals with my personal discount \ud83e\udd58 >>\n https://www.hellofresh.com/freebox/MzM5MjEyNjQ3LTItMC0xNi1VUw\n\nOr \n https://www.hellofresh.com/freebox/MzM3OTMzMjAxLTItMC0xNi1VUw",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "ReferalCodes",
-      "url": "https://reddit.com/r/ReferalCodes/comments/1oh1sba/get_120_worth_of_hellofresh_meals_free_grab_a_box/",
-      "created_utc": 1761528442.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "MobileFun2467",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.80, TextBlob: 0.29"
-    },
-    {
-      "title": "Get $120 Worth of HelloFresh Meals FREE. Grab a box of 12 meals",
-      "selftext": "Get $120 Worth of HelloFresh Meals FREE.  Grab a box of 12 meals - you pick the recipes and only pay $10.99 for delivery.  Some boxes even get a free breakfast item. \nNo obligation,  just cancel after you receive your first box and owe nothing more.\n\nTry FREE meals with my personal discount \ud83e\udd58 >>\n https://www.hellofresh.com/freebox/MzM5MjEyNjQ3LTItMC0xNi1VUw\n\nOr \n https://www.hellofresh.com/freebox/MzM3OTMzMjAxLTItMC0xNi1VUw",
-      "score": 1,
-      "num_comments": 1,
-      "subreddit": "PromoCodeShare",
-      "url": "https://reddit.com/r/PromoCodeShare/comments/1oh1piu/get_120_worth_of_hellofresh_meals_free_grab_a_box/",
-      "created_utc": 1761528209.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "MobileFun2467",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.80, TextBlob: 0.29"
-    },
-    {
-      "title": "Get $120 Worth of HelloFresh Meals FREE. Grab a box of 12 meals",
-      "selftext": "Get $120 Worth of HelloFresh Meals FREE.  Grab a box of 12 meals - you pick the recipes and only pay $10.99 for delivery.  Some boxes even get a free breakfast item. \nNo obligation,  just cancel after you receive your first box and owe nothing more.\n\nTry FREE meals with my personal discount \ud83e\udd58 >>\n https://www.hellofresh.com/freebox/MzM5MjEyNjQ3LTItMC0xNi1VUw\n\nOr \n https://www.hellofresh.com/freebox/MzM3OTMzMjAxLTItMC0xNi1VUw",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "promocodes",
-      "url": "https://reddit.com/r/promocodes/comments/1oh1p1a/get_120_worth_of_hellofresh_meals_free_grab_a_box/",
-      "created_utc": 1761528169.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "MobileFun2467",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.80, TextBlob: 0.29"
-    },
-    {
-      "title": "Get $120 Worth of HelloFresh Meals FREE. Grab a box of 12 meals",
-      "selftext": "Get $120 Worth of HelloFresh Meals FREE.  Grab a box of 12 meals - you pick the recipes and only pay $10.99 for delivery.  Some boxes even get a free breakfast item. \nNo obligation,  just cancel after you receive your first box and owe nothing more.\n\nTry FREE meals with my personal discount \ud83e\udd58 >>\n https://www.hellofresh.com/freebox/MzM5MjEyNjQ3LTItMC0xNi1VUw\n\nOr \n https://www.hellofresh.com/freebox/MzM3OTMzMjAxLTItMC0xNi1VUw",
-      "score": 1,
-      "num_comments": 2,
-      "subreddit": "promocode",
-      "url": "https://reddit.com/r/promocode/comments/1oh1olr/get_120_worth_of_hellofresh_meals_free_grab_a_box/",
-      "created_utc": 1761528135.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "MobileFun2467",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.80, TextBlob: 0.29"
-    },
-    {
-      "title": "Get $120 Worth of HelloFresh Meals FREE. Grab a box of 12 meals",
-      "selftext": "Get $120 Worth of HelloFresh Meals FREE.  Grab a box of 12 meals - you pick the recipes and only pay $10.99 for delivery.  Some boxes even get a free breakfast item. \nNo obligation,  just cancel after you receive your first box and owe nothing more.\n\nTry FREE meals with my personal discount \ud83e\udd58 >>\n https://www.hellofresh.com/freebox/MzM5MjEyNjQ3LTItMC0xNi1VUw\n\nOr \n https://www.hellofresh.com/freebox/MzM3OTMzMjAxLTItMC0xNi1VUw",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "MakeEasyMoney",
-      "url": "https://reddit.com/r/MakeEasyMoney/comments/1oh1l6q/get_120_worth_of_hellofresh_meals_free_grab_a_box/",
-      "created_utc": 1761527851.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "MobileFun2467",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.80, TextBlob: 0.29"
     },
     {
       "title": "Factor75 ingredient lists",
@@ -1270,7 +150,7 @@
     {
       "title": "Mmmm! Mystery \"Poultry\" FACTOR meal!",
       "selftext": "",
-      "score": 9,
+      "score": 8,
       "num_comments": 7,
       "subreddit": "factor75",
       "url": "https://reddit.com/r/factor75/comments/1ohnxa6/mmmm_mystery_poultry_factor_meal/",
@@ -1279,10 +159,30 @@
         "Factor75"
       ],
       "author": "PurpleCatBlues",
-      "upvote_ratio": 1.0,
+      "upvote_ratio": 0.91,
       "is_self": false,
       "source_brand": "Factor75",
       "source_url": "https://old.reddit.com/search/?q=factor75&type=posts&t=week&sort=new",
+      "sentiment": "neutral",
+      "confidence": 1.0,
+      "reasoning": "VADER: 0.00, TextBlob: 0.00"
+    },
+    {
+      "title": "Home Chef- Blackened Shrimp with Asiago Asparagus Risotto",
+      "selftext": "",
+      "score": 1,
+      "num_comments": 1,
+      "subreddit": "mealkits",
+      "url": "https://reddit.com/r/mealkits/comments/1oir5fl/home_chef_blackened_shrimp_with_asiago_asparagus/",
+      "created_utc": 1761699774.0,
+      "competitors_mentioned": [
+        "Home Chef"
+      ],
+      "author": "cera84",
+      "upvote_ratio": 1.0,
+      "is_self": false,
+      "source_brand": "Home Chef",
+      "source_url": "https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new",
       "sentiment": "neutral",
       "confidence": 1.0,
       "reasoning": "VADER: 0.00, TextBlob: 0.00"
@@ -1310,7 +210,7 @@
     {
       "title": "Made homemade pepperoni & mushroom pizzas from scratch tonight the smell alone could turn anyone into a home chef \ud83c\udf55\ud83d\udd25",
       "selftext": "",
-      "score": 36,
+      "score": 40,
       "num_comments": 4,
       "subreddit": "homecooking",
       "url": "https://reddit.com/r/homecooking/comments/1oijx00/made_homemade_pepperoni_mushroom_pizzas_from/",
@@ -1319,7 +219,7 @@
         "Home Chef"
       ],
       "author": "Plastic-Fig4710",
-      "upvote_ratio": 0.97,
+      "upvote_ratio": 1.0,
       "is_self": false,
       "source_brand": "Home Chef",
       "source_url": "https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new",
@@ -1420,7 +320,7 @@
         "Factor75"
       ],
       "author": "Brewsplorer",
-      "upvote_ratio": 1.0,
+      "upvote_ratio": 0.97,
       "is_self": true,
       "source_brand": "Home Chef",
       "source_url": "https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new",
@@ -1451,7 +351,7 @@
     {
       "title": "Remote Job Leads 10-27-25 | Work From Home Jobs Up to $40+/hr!",
       "selftext": "Hello everyone! I post legit remote job leads that don\u2019t require a degree and typically need under 3 years of experience. Most pay $20/hr or more and are U.S. based.\n\n**Note**: Some employers close applications early once they hit their applicant limit, so apply fast if you see something you like!\n\n1. [Villa Travel Agent - World Travel Holdings](https://careers-wth.icims.com/jobs/2479/job?utm_source=www.wfhalert.com&utm_medium=newsletter&utm_campaign=fresh-new-remote-jobs&_bhlid=e9eda853d5b3390546c14a50d2545e32fdb703ee&mobile=true&width=414&height=714&bga=true&needsRedirect=false&jan1offset=480&jun1offset=480)\n\n2. [Escalation Specialist - Amazon](https://www.amazon.jobs/en/jobs/3106300/escalation-specialist-na-amoc?utm_source=www.wfhalert.com&utm_medium=newsletter&utm_campaign=fresh-new-remote-jobs&_bhlid=695bdd9f712249abc1976d67144412a0d3137467%0A)\n\n3. [Billing Representative - Optum (UnitedHealth Group)](https://careers.unitedhealthgroup.com/job/22574320/billing-representative-dallas-tx/?utm_source=www.wfhalert.com&utm_medium=newsletter&utm_campaign=fresh-new-remote-jobs&_bhlid=0acc176644b4b8af999e15c70720bafb90c2a894%0A)\n\n4. [Customer Experience Associate - Home Chef](https://job-boards.greenhouse.io/homechef/jobs/4960398008?utm_source=www.wfhalert.com&utm_medium=newsletter&utm_campaign=fresh-new-remote-jobs&_bhlid=8a495175e67f35358e968f089737bc7f42c41aa8)\n\n\ud83d\udca1Tips:\n\n\\- Apply early, many of these fill fast!\n\n\\- Always double-check job pages for the most current info.\n\n\\- Save this post if you plan to apply later today.\n\n***If you\u2019d like daily remote job updates, follow my account.***",
-      "score": 12,
+      "score": 11,
       "num_comments": 3,
       "subreddit": "remoteworks",
       "url": "https://reddit.com/r/remoteworks/comments/1ohwxnu/remote_job_leads_102725_work_from_home_jobs_up_to/",
@@ -1460,7 +360,7 @@
         "Home Chef"
       ],
       "author": "WifiandPotatoes",
-      "upvote_ratio": 0.94,
+      "upvote_ratio": 1.0,
       "is_self": true,
       "source_brand": "Home Chef",
       "source_url": "https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new",
@@ -1471,7 +371,7 @@
     {
       "title": "At Home Chef with Wine Knowledge",
       "selftext": "Looking for recommendations for an in-home chef who is great in terms of food but also has wine knowledge. Specifically hoping to host a small group of close friends for a holiday dinner where the food menu is geared towards pairings with wine we have in our cellar. ",
-      "score": 6,
+      "score": 7,
       "num_comments": 2,
       "subreddit": "denverfood",
       "url": "https://reddit.com/r/denverfood/comments/1ohrfx9/at_home_chef_with_wine_knowledge/",
@@ -1480,7 +380,7 @@
         "Home Chef"
       ],
       "author": "Living_Cover",
-      "upvote_ratio": 0.81,
+      "upvote_ratio": 0.82,
       "is_self": true,
       "source_brand": "Home Chef",
       "source_url": "https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new",
@@ -1531,7 +431,7 @@
     {
       "title": "Laundry List for November 4th Update",
       "selftext": "[https://www.ea.com/games/the-sims/the-sims-4/news/laundry-list-october-27th-2025](https://www.ea.com/games/the-sims/the-sims-4/news/laundry-list-october-27th-2025)\n\nIssues that will be resolved in our November 4th update, in order of most voted by Simmers:\n\nTop 5 Most Voted Fixes:\n\n* Identified and resolved some cases of photos turning black in inventory when taken with the camera. Applies to new saves only.\n* Sabotage interaction is no longer available on objects without completing Deviance aspiration.\n* When the Mixologist is in conversation with NPCs, they'll break out of it if a drink order is queued up and be more responsive.\n* Children should now more clearly inherit some features from their parents. There may still be some variation (a child's nose may be slightly wider than their parent's, for example, but you should be able to see distinct features passed down between generations; if both parents have large ears, the child probably will too.\n* Relationship decay after having a baby was too fast and was destroying relationships. It has been slowed.\n\n**Base Game Fixes:**\n\n* \u2018Sit Up' Milestone now properly unlocks and displays after travelling.\n* Sims won't use their phone when in the water or jogging.\n* \"Take Vacation Day\" is only given to the sim if their next shift is within the next 24 hours. This means that some careers often have 1-3 days free so sims must wait until the last day in order to request that Vacation day. When the option is not available it is now greyed out with a tooltip explaining it's only available 24hrs before the next shift.\n* Sim put books, foods and drinks into their intended inventories (bookshelf, fridge respectively) instead of more random inventories like the ICYA Chest/Sticker storage box.\n* Random Sims will no longer enter the home without knocking when using sliding doors.\n* Aspirations no longer default to the first one when looking at or switching to another.\n* Fixed issue where infants were being placed near a crib or playmat instead of remaining in it if the player travels to a different lot with a Sim and returns.\n* Excessive 'Wants' are no longer generated from music when there are other categories of preferences.\n* Mischief interactions between Sims who both like mischief can now properly succeed. This was happening only with Get Famous installed and that has now been fixed.\n* \"Dance to stereo music\" wants are now fulfilled when Sims dance using earbuds.\n* Sim will no longer autonomously perform 'Grab a Drink' interaction with 'Tea Magic Personal Brewer'.\n* Resolved an Exception that triggered while putting the baby in the crib leading to Infant resetting and laying on the floor outside of crib.\n* Infants can now acquire the Little Babbler trait.\n* \"Energized\" interactions will appear for Energized Sims on all showers; including locker room showers.\n* Fixing CAS applied makeup color swatch selection to be consistent on swapping items with the one that is highlighted. Tattoos are still being worked on to provide the same functionality.\n* Toddlers with 4 or 5 Movement Skill will no longer walk as if they have lower Movement Skill while in certain moods.\n* Sims will stop wearing hats while in their nude outfit.\n* When Sim goes to work, all the newborn/infant/toddler will be sent to daycare. Adoption events and pregnancy events were blocking this and now be resolved.\n* Nannies and Butlers will perform their duties more often and regularly. They will check if they need to perform duties every 30 minutes instead of every 4 hours.\n* Fire Fighters can fit into unroutable errors to better fight fires.\n* Soulmate is now added when the friendship/romantic track is full. The bug was caused when the friendship value was not updated in the romance relationship and assigned the wrong relationship bit. In existing saves, Sim now can be soulmates if they lower their friendship/romantic value and raise it again to achieve the soulmate status.\n* Aspiration goals will no longer reset when Sim travels to another lot, you switch to another Sim at home, and then perform \"Bring Here\" interaction on the first Sim.\n* Excessive Townies will no longer generate every time the computer is used. We adjusted a filter for style influencers that was generating new sims if you had not met a style influencer.\n* Moodlets related to fear will not trigger after the Fear of Dark trait is removed.\n* Fixed cases where NPC sims wear random weather outfits which they don't own.\n* Trash from all inside trash cans will now be emptied and dumped to the outdoor trash can.\n* Maid Sim with neat trait will no longer get stuck in grill cleaning loop.\n* \\[CAS categories (excluding tattoos & pets) will again show all content from their subcategories. A previous update was made to the CAS Menu to support the new tattoo arcs. The change also caught several other categories, causing them to only show one subcategory at a time unlike their usual behavior of showing all categories at once.\n* \u2018Listen to <genre specific> Music' wants are now fulfilled when Sim listens to music through Earbuds.\n* Sims can only Woohoo in steam rooms that are indoors and not broken. They will stop unsuccessfully attempting outdoors.\n* Trash will be present in the world and on Community lots and trashcans can be properly rummaged.\n* Sim's needs should now gain more consistently while they are low at Work/School while you're playing on a different lot.\n* [Bug Archive] \"Complete an aspiration with the Child Sim\" goal now completes properly in 'Aliens Stole my Parents' Scenario.\n\n**Affecting Multiple Packs**\n\n* Added glass wall pattern styles for Greenhouse Haven Kit and Life & Death glass roofs.\n* Patients and Ranch Hands will no longer arrive in random hats.\n* Reduced the size of the footprints of the following Radios (stereoTable): The Grimophone, GrammyFone Old-Fashioned Music Player, Kitty Tunes Radio, HiFive High Fidelity Radio, Life's a Ball Speaker, Vintique Record Player.\n* Nannies/Gardners/Ranch Hand will no longer return immediately after dismissing or firing them.\n* Cafeteria workers will now show up as expected.\n* Cafeteria workers will not leave as soon as the game loads from save.\n\n# Expansion Packs\n\n**Adventure Awaits**\n\n* Adding curtain rod for modular curtains in Adventure Awaits pack.\n* Skills from Adventure Awaits can no longer be increased in University \"Sit in on Skill Class\" interaction without the pack installed.\n* Firewatch tower structure pillars in the Wander Woods Wilds will no longer disappear when zooming out using sims 3 camera.\n* Child Sim's Legs will no longer show a wrinkled texture when wearing \"cfBottom\\_EP20FlutterSkirt\".\n* Fixes to Getaway Outfit selection on Controller: Scheduler UI should display correctly after setting Custom Role's outfit multiple times and Game should remain responsive.\n* Getaway Sims will keep performing activities and interactions when running in 3x speed\n* Fixing an issue where Sims were teleporting and exiting the pool after performing Woohoo in Water.\n* Camera shake will time properly with the Geyser blow.\n* Drowning, meteorite, lightning, cowplant or freezing deaths will now occur during Getaways.\n* \"Examine\" interaction will not route fails if butterflies are placed in one of the center slots of Butterfly & Moth habitat.\n* Can now gift a Friendship Bracelet to Imaginary Friends.\n\n**Enchanted By Nature**\n\n* When the \"Limit Fairies to Innisgreen\" option is enabled, Fairy Sims should not autonomously appear in their fairy form in any world outside of Innisgreen.\n* Most Fairy eye colors are now available for Infant, Toddler or child sims. 10 of the 18 overall Fairy eyes are now allowed.\n* \"Connect to Power Grid\" interaction is now available on lightning root when the plant has bloomed.\n* If Sims is on cooldown from a cured ailment, pixies won't be able to immediately add it back.\n\n**Business & Hobbies**\n\n* Sims will no longer reset and trigger a Last Exception when performing grab food interactions after using Secret Spice perk.\n* Customer Sims more consistently complete their laundry tasks before leaving the lot.\n* Sticky Fingers Aspiration: A Sim with an owned business can now swipe properly at Mischief level 10.\n\n**Life & Death**\n\n* \"Return to office\" interaction is now available on the Reaper when on assignments in Reaper career.\n* Random NPC Sim will no longer replace Edith.\n* Fixed cases when Funeral Guests would wear random outfits or work outfits (whichever they had last worn) to the Funeral event when no outfit was selected. Sims should now wear more appropriate outfits.\n* \"Death by Pufferfish\", \"Death by Overheating\" & \"Death by Freezing\" death types are now available for child Sim in CAS.\n* Woohoo with Grim will no longer get cancelled. This is happening because of an incompatibility with grimReaper\\_CarryScythe.\n* Ghost Essence notification now fires properly and players will only see the TNS if essence is actually being added (and no essence is already in inventory).\n* [Bug Archive] Fixed cases where NPC Waylon and NPC Lady Ravendancer were being selected for the 'Walkby' Situation and pulled from their duties.\n* [Bug Archive] All grave and urn options should appear now under 'Display as' interaction on urn/tombstone.\n\n**Lovestruck**\n\n* Preventing Neighborhood Stories romance actions from happening between incompatible Sims. Previously, it was not taking Sim's Romantic Preferences into account with \"Romance Changes\". This now verifies that Sims are still romantically interested in each other's genders before considering the action to be successful.\n\n**For Rent**\n\n* Rent in bills section will no longer show 0 and Tenants will now be able to pay rent.\n* Changing a Penthouse lot type to Residential Rental will not result in white screen asserts or an infinite loading screen.\n* Tenant agreement 'Remaining lease' duration will no longer revert and freeze when Sim travels somewhere and then returns to home lot.\n* The Kettle & Pressure Cooker will not cause excessive cases of \"Unpleasant Surroundings\" moodlet and Sims' reactions to smelly food. The pressure cooker now won't automatically decay into the spoiled state, but instead will only start decaying after anything is prepared there, and will reset after the object is emptied or cleaned out.\n* Tenant revolt event will not trigger when Rental Unit Events are disabled in game options.\n* Now able to convert Residential Rental lot to Residential lot when active sim not living in the main unit of the Residential Rental.\n* Tenants on Residential Rentals can send items on Plopsy/Trendi.\n* Aspiration goal \"Handle a Maintenance event\" now ticks off after completing the goal.\n* Resolved issues where Property Owners would fail to inspect or repair broken objects.\n* The \"Garden Blight\" event of Maintenance Troubles Lot Challenge will now progress as intended.\n* Stoves and Ovens can be replaced during the explosive malfunction event on a Non-Residential Rental.\n\n**Horse Ranch**\n\n* Sims will not receive Fizzy buffs from drinking crafted Nectar drinks.\n* Ranch Hand will no longer stay past 7pm.\n* Mini goats and sheep will no longer be able to use the gate when it is locked.\n\n**Growing Together**\n\n* Sim will no longer stand idle when a child asks for help with bike riding indoors.\n* Sims will no longer receive random milestone moodlets without achieving the milestone.\n* Daycare milestone will now unlock for toddler & infant Sims away from the lot when they return.\n* Child Sim will not be forced to sit on the edge of the pool when 'pull out loose tooth' or 'wiggle loose tooth' interaction is performed.\n* Child Sim's Confidence no longer stuck on Neutral and will change as expected.\n* Winning the marble game will now add new marbles to the child Sim's inventory.\n* Temporary Stay Guests will now sleep; even in sleeping bags.\n\n**Cottage Living**\n\n* Added message to help players understand that Gnomes have a reason for dropping gifts outside of holidays after Agatha Crumplebottom interacts with them.\n* Egg will no longer spoil while incubating it to hatch.\n\n**Snowy Escape**\n\n* Sim no longer gets a bored moodlet from an outdoorsy lifestyle for being inside when they are actually outside.\n\n**High School Years**\n\n* A high school official will always be present to give out the diplomas to graduating students.\n* Teens graduating early will no longer get 'Resentful About No Prom Invite' Sentiment when the Sim attends or skips the Prom. Both Sims need to have not graduated early for the sentiment to show up now.\n* Fixing immortal homeless high school students. Homeless teens in high school weren't aging up. This was particularly noticeable in multi-generational gameplay (e.g. classmate of parents is now classmate of child). We've added code to check for these Sims and appropriately age them up as you would expect compared to their classmates.\n* \"Copperdale Llama Sports Mascot\" object now appears in Build/Buy mode.\n* Drama Club/Scouts will now complete Afterschool tasks in the Goal-Oriented Aspiration.\n* When going to school on a Holiday, the proper High School UI shows by default instead of the Holiday UI.\n* Fixed cases where there would be no pop up option to Join school or Send Alone when Teen should be going to the Highschool.\n* The Science Fair Judge shows up when expected and stays for the duration of the Science fair Festival event.\n\n**Eco Lifestyle**\n\n* Sim can travel to a Community Space that has been updated to a Maker Space without experiencing crashes or error codes.\n* Vendors will now be consistently available at stalls or selling tables at the marketplace in Evergreen Harbor.Vendors were not appearing at market tables after the community lot type changed.\n* Sims will make more than just White Cakes when Food NAP is active.\n* In new saves, Sim can now sell/own the Full wood jacket bike which was discovered from the dumpster.\n* Households that receive a bill with an owed value that's positive (a refund) can now pay bills, allowing the refund to be processed and the bills to be marked as paid.\n* NAPs no longer show TNSes with the option turned off.\n* Moving the recycler/fabricator in build buy mode from Manage worlds screen will no longer cause a Last Exception.\n* Incoming phone calls will no longer drop due to \"Off Grid\" when Sim isn't actually \"Off Grid\".\n\n**Discover University**\n\n* Added benefits to the Dream Home Decorator career if you have graduated from the Fine Arts or Art History programs.\n\n**Island Living**\n\n* Adjusted event timing to avoid overlaps which will allow the Turtle Hatching event to occur.\n\n**Get Famous**\n\n* Bouncers will arrive as expected to staff VIP Exclusivity doors on Studio PBP Lounge in Del Sol Valley.\n* Celebrities can now be interacted in a Retail store.\n* Actor career now properly displays as an Active Career in the \"Select A Career\" UI.\n\n**Seasons**\n\n* Admiring ghost and occult Sims will count for a Holiday's spooky spirit.\n* Funny interactions on Teen/YA Sims will now fulfill the Good Deed badge.\n* Removed \"in season\" tests from the Research and Evolve interactions so they can be interacted with out of season.\n* Father Winter now gives toddlers a gift even if they've not officially met.\n\n**Cats & Dogs**\n\n* Vet clinic will no longer get stuck on 3 star rating.\n* \\[Console\\] Now able to enter dog/cat breed names for the pets adopted from neighborhood stories.\n* Fixed Dogs excessively exploring bush and triggering the Skunk encounter outcome and becoming dirty as a result.\n* Pets adopted by households from neighborhood stories will not properly show their breed.\n* Decreased the time duration range of taking dogs on Long and Medium Walks.\n* Sim and Dog will now autonomously exit the 'Go on Walk' interaction before reaching Motive failure.\n\n**Get Together**\n\n* \"Dance\" interaction is now present again on DJ booth objects when a DJ is playing.\n\n**Get to Work**\n\n* Sims will now buy things which are \"set for sale\" on display shelves from retail stores.\n* Alien Sims will no longer repeatedly wipe out the memory of their spouse autonomously.\n\n# Game Packs\n\n**Home Chef Hustles**\n\n* Sims with glutton trait will no longer autonomously eat prepped ingredients when other foods are available.\n\n**Werewolves**\n\n* Werewolves will not use their phone when rampaging.\n* \"Lunar Expert's Studio\" and \"Surreptitiously Studious Stationery Pile\" objects can now be cloned with the Eye Dropper tool.\n* NPC Sims who are not werewolves will no longer be seen as Werewolf pack members. Please note that this only applies to new Saves.\n* Werewolves can no longer break upgraded objects; which caused Sims to continuously try to repair them.\n* When overmaxing the Werewolf's XP bar will now properly resets and the Sim will receive the expected ability points.\n\n**My Wedding Stories**\n\n* Fixed cases when Wedding Guests would wear random outfits or work outfits (whichever they had last worn) to the wedding event when no outfit was selected. Sims should now wear more appropriate outfits.\n\n**Dream Home Decorator**\n\n* Client Sims will stop being unhappy even though Decorator does the gig according to their preferences.\n* [Bug Archive] Retro Dinette Stretch Booth now counts as \"dining chairs\" when performing Bar Renovation gig during the Interior Decorator career.\n\n**Realm of Magic**\n\n* Players will now receive the right notification stating for their Sims to become higher ranked Spellcasters if they want to learn additional spells from Practical & Mischief Sages.\n* [Bug Archive] Sims can now purchase or win all wand recolours.\n\n**Parenthood**\n\n* \"Play with Emotion\" interaction for child Sim will no longer be greyed out with tooltip asking to Repair or Replace Piano when it's not broken.\n\n**Journey to Batuu**\n\n* NPCs will board the X-Wing as needed for quests like \"A Daring Rescue\" Resistance mission including tasks like \"Fly Rescue Mission in X-wing\".\n* Arresting Someone (First Order) will no longer get stuck or fail.\n\n**Dine Out**\n\n* Sims can now check off restaurant related goals on a date.\n* Batuu 'Cantina Booth' will now count towards dining spots.\n* Fixed some drinks that were appearing as water in the restaurant Menu.\n\n**Outdoor Retreat**\n\n* Sim prepares the herbal potion and places it in their inventory without any T-pose or animation issues.\n\n# Stuff Packs\n\n**Nifty Knitting**\n\n* Fixing CAS unlock display to remove locked thumbnails in \"Knit Clothing\" even though the items are unlocked.\n\n**Kids Room Stuff**\n\n* Monster will no longer be spotted under the bed when monster spray is used.\n\n**Vintage Glamor**\n\n* Butler stays on the lot (and remains in their work outfit) when you travel with your sim to another lot.\n\n**Spooky Stuff**\n\n* Sims can now perform 'resume' interaction on a pumpkin carving station.",
-      "score": 174,
+      "score": 175,
       "num_comments": 84,
       "subreddit": "LowSodiumSimmers",
       "url": "https://reddit.com/r/LowSodiumSimmers/comments/1ohkrtu/laundry_list_for_november_4th_update/",
@@ -1551,7 +451,7 @@
     {
       "title": "Need feedback \u2014 would you use a site to find home chefs near you in Pune?",
       "selftext": "I\u2019m thinking about a small idea and wanted your honest feedback.\n\nWhat if there was a simple website that showed home chefs around you who make party food like cakes, biryani, sandwiches, and snacks?\nYou could see nearby cooks, check what they make, and call or WhatsApp them directly \u2014 no delivery app or middleman.\n\nIt could help not just for birthdays or get-togethers, but also for small office or corporate parties where people want good homemade food at better prices.\n\nDo you think people in Pune would actually use something like this for birthdays or small get-togethers?\nWould love to know your thoughts \u2014 any pros, cons, or suggestions ",
-      "score": 9,
+      "score": 8,
       "num_comments": 6,
       "subreddit": "pune",
       "url": "https://reddit.com/r/pune/comments/1ohfpnd/need_feedback_would_you_use_a_site_to_find_home/",
@@ -1560,7 +460,7 @@
         "Home Chef"
       ],
       "author": "9anesh",
-      "upvote_ratio": 1.0,
+      "upvote_ratio": 0.91,
       "is_self": true,
       "source_brand": "Home Chef",
       "source_url": "https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new",
@@ -1580,7 +480,7 @@
         "Home Chef"
       ],
       "author": "SultanXTG",
-      "upvote_ratio": 0.25,
+      "upvote_ratio": 0.18,
       "is_self": true,
       "source_brand": "Home Chef",
       "source_url": "https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new",
@@ -1591,7 +491,7 @@
     {
       "title": "Things to Do / Events This Week (10/27/25 - 11/2/25)",
       "selftext": "Please, feel free to add any events below! Check out the [**Visitor's Guide**](https://old.reddit.com/r/StLouis/wiki/visitorguide) for more things to do around town!\n\nLooking to meet up with people? Check out [**Meetup St. Louis**](https://www.meetup.com/cities/us/mo/saint_louis/).\n\n***Keep scrolling to see Trivia Nights, Live Theater, Live Music, Sporting Events, Local Comedy, Farmers Markets and more!***\n\n\n\n[**Adoption Day at the Bierhall (Urban Chestnut in the Grove)**](https://do314.com/events/2025/11/1/adoption-day-at-the-bierhall-tickets)\n\n**Saturdays in November**\n\nCome visit with adoptable dogs on the front patio of the Grove Brewery & Bierhall each Saturday in November! Shelters who are part of the St. Louis Coalition for Pet Progress will be on site with adoptable dogs for you to love on, give treats to, and/or take home forever! Join us on the front patio each Saturday in November from 12pm-2pm. Different shelters will be featured each weekend, all part of the St. Louis Coalition for Pet Progress.\n\n[**Beginners Night at St. Louis Chess Club**](https://saintlouischessclub.org/event/beginners-knight/)\n\n**Mondays**\n\nLooking to try out chess in a welcoming, judgment-free environment? Come to the Saint Louis Chess Club to learn and play with other beginners! Led by our friendly and experienced instructors, Beginners Night offers an engaging and social setting to both learn the rules and practice against other casual players.\n\nFree for members, first visit is free!\n\n[**Big Muddy Adventures \u2013 STL Riverfront Adventure**](https://www.2muddy.com/trips)\n\n**Recurring (Check Calendar)**\n\nBig Muddy Adventures was established in 2002. They are the first professional outfitter/guiding company providing access to the wild wonders of the Middle Mississippi and Lower Missouri Rivers.\n\n[**Chess at the Brewery**](https://www.instagram.com/chessatthebrewery/)\n\n**Every Wednesday**\n\nLocal meetup group of chess players that meet at breweries on Wednesday nights. They rotate locations each week. See their Instagram ([https://www.instagram.com/chessatthebrewery/](https://www.instagram.com/chessatthebrewery/)) for the location this week.\n\n[**Ladies Knight at Saint Louis Chess Club**](https://saintlouischessclub.org/event/ladies-knight/)\n\n**Wednesdays**\n\nA class by women, for women! Ladies\u2019 Knight is open to women of all ages and all skill levels. Whether it\u2019s your first time playing chess, or you\u2019re an experienced player looking for a challenge, enjoy engaging with a community of like-minded women who are passionate about the game of chess.\n\n[**Landmarks Downtown Walking Tours**](https://landmarkstours-stl.org/)\n\n**Saturdays**\n\nLandmarks Downtown St. Louis Walking Tours: History, Culture, Architecture, and Exercise: What could be better on a Saturday morning.\n\n[**Lunchtime Live at Old Post Office Plaza**](https://www.downtownstl.org/lunchtime-live)\n\n**Wednesdays (April - October)**\n\nLooking for a good lunch spot? Want to track down your favorite food truck? Check out the lineup for Lunchtime Live in Old Post Office Plaza in downtown St. Louis.\n\nThe outdoor dining event, which includes live music, takes place every Wednesday from 11:30 a.m. to 1:30 p.m. from April through October.\n\n# Autumn Events\n\n[**Boo-lesque: Halloween Burlesque Show**](https://theboomboomroomstl.com/st-louis-the-boom-boom-room-events)\n\n**October 31, 2025**\n\nBack by\u00a0*bewitching demand*\u00a0\u2014 and a\u00a0crowd favorite for over 10 years\u00a0\u2014\u00a0*Boo-lesque* is the ultimate Halloween night out in St. Louis! Step into the decadent cabaret, where every flicker of candlelight, every shimmer of sequin, and every sultry glance pulls you deeper into a world of spine-tingling seduction and glitter-drenched glamour.\n\nMake the night complete with the two-course dinner menu\u00a0and\u00a0spooktacular themed cocktails\u00a0\u2014 available for purchase to enjoy alongside the show.\n\n[**Brookdale Farms Fall Festival**](https://www.brookdalefarms.com/events-1/fall-festival-2025-2025-10-03-09-00)\n\n**Fridays - Sundays until November 2, 2025**\n\nNestled among the rolling hills of Eureka, Brookdale Farms has everything you need to satisfy your fall cravings.\n\nDuring its fall festival, pick the perfect pumpkins for classic jack-o\u2019-lanterns, navigate the largest corn maze in St. Louis and take a hayride or board the cow train.\n\nIn between bites of kettle corn, you can also pet furry farm animals, embark on low-ropes courses, play life-size board games and test your skills on a mechanical bull. Yee-haw!\n\n[**Creepy World Haunted House**](https://www.creepyworld.com/)\n\n**September 27 - November 1, 2025 (Select Dates)**\n\nAmerica's Biggest and Longest Haunted Screampark is back bigger and scarier than ever before with THREE new attractions including:\u00a0 Monster Mansion - Horror Selfie Museum and Updated Hayride.\n\n[**The Darkness Haunted House**](https://www.thedarkness.com/)\n\n**September 19 - November 1, 2025 (Select Dates)**\n\nJourneying into the depths of The Darkness, you never know when your next step will be your last.\n\nLocated in Soulard, the two-story haunted house was completely renovated last year. Featuring Hollywood set designs, alarming animated effects and formidable live actors, America\u2019s scariest attraction is now longer and more terrifying.\n\nThe Darkness also encompasses St. Louis\u2019 one and only horror retail store!\n\n[**Dia de los Muertos Festival on the Delmar Loop**](https://do314.com/events/2025/11/1/dia-de-los-muertos-festival-tickets)\n\n**November 1, 2025 4:00 PM \u2013 10:30 PM** \n\n**Location:** 6045 Delmar Blvd, St. Louis, MO\n\nThe East Loop CID proudly presents the annual Dia de los Muertos Festival in the heart of the Delmar Loop\u2014an evening filled with tradition, community, and vibrant cultural celebration. This free, family-friendly event brings together food, art, music, and heritage to honor the memories of our loved ones and celebrate Hispanic culture. Highlights include performances by a traditional Mexican mariachi band, regional Mexican folk dance, high-energy Banda music, and Latin EDM!\n\n[**Eat Crow - Nightmare On 12 Street**](https://do314.com/events/2025/9/20/eat-crow-nightmare-on-12-street-tickets)\n\n**September 20 - October 31, 2025**\n\nNightmare On 12 Street: The Halloween pop-up RETURNS THIS SATURDAY! Eat Crow will be transformed September 20th through October 31st - SCARY decor, CREEPY food, SPOOKY drinks, & EERIE events!\n\n[**Fall History Tours at Bellefontaine Cemetery and Arboretum**](https://explorestlouis.com/event/fall-history-tours/2025-09-05/)\n\n**Select Dates in September, October & November**\n\nOn select dates in September, October and November, Bellefontaine Cemetery and Arboretum will host two-hour walking tours of the grounds against a backdrop of stunning fall foliage.\n\nLed by master guides, the tours will cover two miles, spotlighting beautiful features of the Level III Arboretum as well as intriguing historical figures buried among the trees.\n\n[**Fright at the Museum at City Museum**](https://citymuseum.org/event/fright-at-the-museum/)\n\n**October 1 - 30, 2025**\n\nFor those who revel in the extraordinary, Fright at the Museum promises a month of entertainment that will send shivers down your spine.\n\nThe one-of-a-kind Halloween festival at City Museum features heart-pounding performances that push the boundaries of possibility, alongside carefully curated exhibits with artifacts that defy explanation and specimens that challenge imagination.\n\nWhen you need a break, step into the shadows of the Vampire Bar, where darkness and decadence intertwine. Here, you can sip crimson elixirs that transport imbibers to another realm of intoxicating ambiance and tantalizing flavors.\n\n[**Fright Fest at Six Flags**](https://www.sixflags.com/stlouis/events/fright-fest-2025)\n\n**September 13 - November 2, 2025**\n\nThe time has come to face your deepest fears and venture into the darkness. Fright Fest returns for another season, bringing a nightmarish world of terror and thrill to the park! Prepare yourself for spine-chilling scare zones, haunted attractions and heart-stopping rides that will leave you screaming for more! Get ready for a season full of fright-if you dare to enter! Fright Fest is intended for mature audiences and is not recommended for children under 13. Open Select Nights!\n\n[**Halloween Costume Cruise at The Arch**](https://do314.com/events/2025/10/25/halloween-costume-cruise-tickets)\n\n**October 31, 2025**\n\nScare up some fun on our Halloween Costume Party Cruise! Dance to a DJ, enjoy the cash bar, and compete in our costume contest. The winner will receive a special prize!\n\nCRUISE DATES & TIME  \nSaturday, October 25, 8:30 \u2013 10:30 pm  \nFriday, October 31, 8:30 \u2013 10:30 pm\n\n[**Halloween Nights at Grant\u2019s Farm**](https://orders.grantsfarm.com/event/halloween-nights-at-grants-farm-2025-8sp8tm)\n\n**Thursdays - Sundays in October until October 30, 2025**\n\nGlowing trails, ghoulish displays, gentle surprises \u2013 this is Halloween Nights, a spellbinding after-dark experience at Grant\u2019s Farm.\n\nA fall tradition for all ages, the experience begins with a haunted tram ride and ends in the tiergarten, where you can enjoy themed shows, scare zones, seasonal snacks, Insta-worthy photo ops and a monster mash!\n\n[**Haunted at The Disco at Hidden Gem**](https://do314.com/events/2025/10/2/haunted-at-the-disco-tickets)\n\n**October 2 - November 1, 2025**\n\nCalling all creatures of the night! Haunted at the Disco is coming to STL! Starting October 2nd Hidden Gem\u2019s back room transforms into a neon-soaked, spooky-chic discotheque with cobwebbed disco balls, sparkling skeletons, and frightfully good cocktails. Reservations are open now thru [this link](https://www.exploretock.com/hidden-gem-stl/event/570599/haunted-at-the-disco). $5 cover gets you in, so grab your ghoul gang and boogie with the undead!\n\n[**Hayrides at St. Louis County Parks**](https://mo-stlouiscounty.civicrec.com/MO/st-louis-county-mo/catalog/index/b8507a411ecc01c6b798f3d3a8234ebb?filter=c2VhcmNoPWhheXJpZGVz)\n\n**Select Dates until November 9, 2025**\n\nCatch a hayride this fall!\n\nHop on a hayride at Lone Elk Park or Jefferson Barracks Park \u2014 or book a group hayride at Queeny Park on Friday & Saturday nights.\n\n[**Jack\u2019s Lighted Trail at Eckert\u2019s Country Store & Farms**](https://www.jackslightedtrail.com/)\n\n**September 13 - November 1, 2025**\n\nWith glowing pumpkin sculptures, thematic photo opportunities and festive surprises around every corner, Jack\u2019s Lighted Trail at Eckert\u2019s Farm gives you one more reason to love fall in St. Louis.\n\n[**Kids Boo Fest at  Six Flags**](https://www.sixflags.com/stlouis/events/kids-boo-fest)\n\n**September 13 - November 2, 2025**\n\nBring your little goblins, witches, and superheroes for a frightfully good time at Boo Fest! The spookiest, silliest, and most fun-filled event of the season is back! Boo Fest is here and it\u2019s packed with family-friendly fun for all ages! Explore magical mazes, dance with your favorite Looney Tunes characters, delight in your favorite sweet treats and enjoy your favorite th\n\nrilling rides and shows. Come for the fun, stay for the memories-Boo Fest is waiting for you every Saturday and Sunday!\n\n[**Michael Jackson\u2019s Thriller Live: A Halloween Special Tribute at City Winery**](https://citywinery.com/st-louis/events/michael-jacksons-thriller-live-a-halloween-speci-vesmif)\n\n**October 31, 2025**\n\nThis Halloween, join City Winery for a spine-tingling, thrilling event. Our all-star band will bring Michael Jackson\u2019s legendary Thriller album to life \u2014 performing it in its entirety, from the infectious groove of \u201cWanna Be Startin\u2019 Somethin\u2019\u201d to the iconic, goosebump-inducing title track. Sip mimosas, savor a chef-crafted brunch menu, and dance in your seat (or in the aisles) to hits like \u201cBeat It,\u201d \u201cBillie Jean,\u201d \u201cP.Y.T.,\u201d and more. Costumes are encouraged \u2014 after all, it\u2019s the one day of the year you can moonwalk as a zombie and still be on-theme.\n\n[**The Nightmare Bar (The Attic Music Bar)**](https://do314.com/events/2025/10/8/the-nightmare-bar-tickets)\n\n**Wednesdays - Sundays through Oct 31st**\n\nThe Nightmare Bar comes to St. Louis! Step into the shadows, sip on something sinister, and prepare to have a scary good time.\n\nYour ticket includes:\u00a0\n\n* 90 mins in a themed atmosphere inspired by Halloween movies\n* Spooky menus for cocktails and snacks\n* Games like trivia, hosted by on-site ghosts and ghouls\n* Costume contests\n\n[**Pirates and Pumpkins at St. Louis Aquarium**](https://www.stlouisaquarium.com/pirates-and-pumpkins)\n\n**September 19 \u2013 November 2, 2025**\n\nGet ready for a swashbuckling adventure at the St. Louis Aquarium at Union Station! We\u2019re thrilled to announce the return of Pirates and Pumpkins\u2014a fun-filled event where buccaneers of all ages can explore pirate adventures, pose with creatively carved pumpkins, and dive into interactive activities. Click here to learn more!\n\n[**Pumpkin Throw Down at City Museum**](https://citymuseum.org/event/pumpkin-throw-down/)\n\n**November 2, 2025**\n\nGet out your gourds \u2014 Halloween is over, and it\u2019s time to throw out those old pumpkins!  \n  \nPumpkin spice? Too basic. Pumpkin pie? Delicious, but no. Pumpkin chuckin? That\u2019s right, this City Museum fall tradition is back! Gather up all of your pumpkins, gourds, squash, and any other vegetables you\u2019ve carved a face onto and throw them off the side of our building!  \n  \n10th Floor Patio from 12pm\u20133pm\n\n[**Trick or Treating at City Foundry** ](https://do314.com/events/2025/10/22/trick-or-treating-at-city-foundry-tickets)\n\n**Every Wednesday from Oct. 8 through Oct. 29, 2025**\n\nEvery Wednesday from Oct. 8 through Oct. 29, pedestrian-only Foundry Way will transform into an open-air market from 5:30 to 8:30 p.m. Perennial will lead guests through make-and-take crafts using only secondhand materials with a new craft that matches that night's theme. Illusionist Christian the Magician, presented by Museum of Illusions, will perform while live music echoes through the district from the EXPATio Rooftop. A fire pit lounge and photo opp awaits guests, with sweet and savory s\u2019mores kits available from Steve\u2019s Meltdown in the Food Hall.\n\n# Bar/Food Weekly Events\n\n[**Drag Brunch at Hidden Gem**](https://www.drinkhiddengem.com/pages/events)\n\n**Saturdays**\n\nWhere else would you be on a Saturday?! Drag Brunch is a weekly event at Hidden Gem and FREE to attend. Bring your own brunch, grab a hot dog from the bar, or DoorDash your fave snack.\n\n[**Karaoke Tuesdays at Hidden Gem**](https://www.drinkhiddengem.com/pages/events)\n\n**Tuesdays**\n\nCome sing your hearts out at Hidden Gem's weekly karaoke. Hosted every Tuesday from 8pm-12am. Free to attend. 21+.\n\n[**Karaoke Wednesdays at HandleBar**](https://do314.com/events/weekly/wed/karaoke-wednesdays-tickets)\n\n**Wednesdays**\n\nBrowse the catalog and find your favorite songs to sing! [Songbookslive.com/stlredcarpet](https://songbookslive.com/stlredcarpet)\n\n[**Karaoke Wednesdays at Mack's Bar & Grill**](https://macksbarandgrill.com/)\n\n**Wednesdays**\n\nBring your best vocals, DJ Brainstorm and Mack's will handle the rest\n\n[**Sunday Bingo at Tim's Chrome Bar**](https://timschromebar.com/calendar-1)\n\n**Every Sunday**\n\nGet in the mood for some fun with an afternoon of BINGO at Tim\u2019s. They'll supply the cards and daubers. Just bring yourself and your BINGO loving friends. Play for some good laughs and a variety prizes. Bar opens at 12 p.m., they'll start BINGO at 3 p.m. Cheers!\n\n[**Sunday Brunch Cruise on Riverboats at the Gateway Arch**](https://tickets.gatewayarch.com/webstore/shop/viewItems.aspx?cg=cat&c=SBC)\n\n**Sundays**\n\nThe perfect Sunday starts with brunch aboard the Riverboats at the Gateway Arch.\n\nDuring the two-hour cruise, you can enjoy spectacular views, live entertainment and chef-inspired cuisine. The floating brunch menu features strawberry pancakes, scrambled eggs, buttermilk biscuits, sausage gravy, cinnamon rolls, fresh fruit, stuffed chicken breast, maple ham, garlic green beans and more.\n\n[**Thirs-Tea Thursday Happy Hour at Tim's Chrome Bar**](https://timschromebar.com/)\n\n**Thursdays**\n\nThirs-Tea? They've got you covered...this is their weekly happy hour for you groovy party people. Grab something refreshing like $3 4Hands Yes Tea, $6 Turn the Beat Around & $6 Tea Collins, and $2 off all food from 5\u20138:30 p.m. every Thursday!\n\n[**Wayback Wednesdayz at Puttshack**](https://www.puttshack.com/blog/happenings/wayback-wednesdayz)\n\n**Wednesdays**\n\nSt. Louis\u2019s favorite mini golf spot is cranking up the heat at City Foundry. Known for rewriting the rules of traditional mini golf, Puttshack is also rewriting the typical Wednesday, having launched \"Wayback Wednesdayz,\" taking place every Wednesday from 7 pm until closing time. This weekly programming offers guests an opportunity to relive the nostalgia of yesteryears with classic tunes and music videos from the likes of legendary artists such as Missy Elliot and Madonna to Michael Jackson and Prince playing throughout the venue.\n\n# Comedy Clubs / Open Mic\n\n[**Funny Bone Comedy Club**](https://www.stlouisfunnybone.com/)\n\nComedians come to the Funny Bone from all over the country. On Tuesdays at 7:30 PM, local pros and amateurs take the stage to polish their material in front of a live audience.\n\n[**Helium Comedy Club**](https://st-louis.heliumcomedy.com/)\n\nHelium Comedy Club - St. Louis is a contemporary entertainment venue that bring stadium-sized talent to an intimate theater on a weekly basis.\n\n[**Open Mic Comedy Night at Steve\u2019s Hot Dogs \u2013 Grand**](https://explorestlouis.com/event/open-mic-comedy-night-3/2025-10-16/)\n\n**Thursdays**\n\nJoin Steve's Hot Dogs every Thursday night for Open Mic Comedy Night on South Grand! Sign up if you're feeling funny - or just come to catch these talented folks before they're too cool to play our stage!\n\n[**The Improv Shop**](https://theimprovshop.com/show-calendar/?tribe_paged=1&tribe_event_display=list&tribe_venues=233)\n\nThe Improv Shop is an improv comedy venue and training center supporting fans, students and performers in St. Louis.\n\n# Farmers Markets\n\n[**Soulard Farmers Market**](http://www.soulardmarket.com/)\n\n**Wednesdays - Saturdays**\n\nSoulard Farmers Market is located at 730 Carroll Street in St. Louis, Missouri, a half mile north of the Anheuser-Busch Brewery. The market is open Wednesday through Saturday, year round. They feature locally grown and shipped in goods, including: produce, meats, cheeses, spices, gourmet kettle corn, flowers, baked goods, and general merchandise. There are also several different eateries that have many food options, which allows customers the convenience to grab a quick bite to eat and a drink while shopping.\n\n[**Tower Grove Farmers Market**](https://tgfarmersmarket.com/)\n\n**Tuesdays & Saturdays**\n\nLocated just west of Center Cross Drive in the heart of Tower Grove park at 4256 Magnolia Ave, St. Louis, MO 63110\n\n[**U City Farmers Market**](https://do314.com/events/2025/5/8/u-city-farmers-market-in-the-park-1744914806)\n\n**Thursdays & Saturdays**\n\nOutdoors at Heman Park; 7210 Olive Blvd, St Louis, MO 63130\n\nNear the Centennial Commons Rec-Plex and U City Swimming Pool\n\n# Festivals & Special Events\n\n[**Live Art Market at City Foundry**](https://www.cityfoundrystl.com/cf-events)\n\n**October 8, 15, 22, 29, 2025**\n\nLive Art Market returns this October with family fun, fall crafts, and Halloween programming for all ages. Shop from dozens of local St. Louis makers and artists, grab food and drinks from the City Foundry Food Hall, and cozy up with sweet and savory s\u2019mores kits from Steve\u2019s Meltdown by the fire. Enjoy live music from the EXPATio rooftop and be amazed by the mind-bending tricks of Christian the Magician.\n\n# Live Music\n\n[**Grateful Mondays at Schlafly Tap Room**](https://www.schlafly.com/events/grateful-mondays)\n\n**Mondays**\n\nStart the week on the right note! On Monday nights, Schlafly Tap Room in downtown St. Louis hosts acoustic Dead jams featuring Nick Elwood and Tracy Gladden of The Stone Sugar Shakedown as well as a rotating cast of St. Louis\u2019 most talented acoustic guitarists.\n\n[**La La Land in Concert at The Fabulous Fox Theatre**](https://fabulousfox.evenue.net/events/FOX01NOV25)\n\n**November 1, 2025**\n\nRevisit the 2016 Academy Award\u00ae winning Lionsgate film, La La Land, starring Ryan Gosling and Emma Stone, written and directed by Damien Chazelle, in a swoon-worthy live concert experience.  \n  \nLa La Land showcases the captivating story of a promising pianist and aspiring actress who cross paths and fall in love, while attempting to harmonize their career journeys in the city of stars.  \n  \nThe show features a full orchestra and jazz band performing the soundtrack, along with the movie. Experience the vivid musical moments central to the film, including the unbelievable piano solos, live!\n\n[**Mondays at The Music Stand in Tower Grove Park**](https://www.towergrovepark.org/mondays-at-the-music-stand)\n\n**Mondays**\n\nThe Music Stand has long been a cherished gathering place where melodies meet memories, and we are thrilled to welcome back the tradition of free community concerts. Bring your family and friends, and let the music uplift your spirit and foster a sense of community, as we celebrate the universal language of music together.\n\n[**Open Mic Night at Schlafly Bottleworks (Maplewood)**](https://www.schlafly.com/event-directory/)\n\n**Every Wednesday**\n\nJoin others every Wednesday evening and showcase your talents with our Open Mic Night! Open sign up begins at 6:30PM with music starting at 7:00PM. They welcome original material, covers and spoken word! Grab a beer, then play and listen every Wednesday! There are no cover charges and no drink minimums to attend.\n\n|*Music Venues*|*Bars with Live Music*|\n|:-|:-|\n|[Blanche M. Touhill Performing Arts Center](https://www.umsl.edu/touhill/live/index.html)|[1860 Saloon](https://1860saloon.com/events-music/)|\n|[Blueberry Hill Duck Room](https://www.thepageant.com/?_sfm_venue=21911)|[BB's Jazz, Blues & Soups](http://bbsjazzbluessoups.com/music.htm)|\n|[Chesterfield Amphitheater](https://www.chesterfieldamphitheater.com/events.html)|[Broadway Oyster Bar](http://www.broadwayoysterbar.com/musicsched.html)|\n|[Delmar Hall](https://www.thepageant.com/?_sfm_venue=233)|[City Foundry](https://www.cityfoundrystl.com/news/saturday-live-music-the-food-hall)|\n|[Enterprise Center](http://www.enterprisecenter.com/events)|[Gallery Pub](http://gallerypubstl.com/calendar/)|\n|[The Fabulous Fox Theatre](https://www.fabulousfox.com/events)|[Gaslight Lounge](https://www.gaslightstl.com/)|\n|[The Factory](https://www.livenation.com/venue/KovZpZAEAnaA/hollywood-casino-amphitheatre-st-louis-mo-events)|[The Heavy Anchor](https://www.theheavyanchor.com/#QyOBie)|\n|[Hollywood Casino Amphitheatre](https://www.livenation.com/venue/KovZpZAEAnaA/hollywood-casino-amphitheatre-st-louis-mo-events)|[The Honky Tonk STL](https://www.thehonkytonkstl.com/live-music)|\n|[J. Scheidegger Center for the Arts](https://www.lindenwood.edu/j-scheidegger-center-for-the-arts/upcoming-events/)|[Jazz St. Louis](https://my.jazzstl.org/events?view=calendar&startDate=2021-09-01)|\n|[Off Broadway](https://www.offbroadwaystl.com/calendar/)|[Joe's Cafe](https://do314.com/venues/joe-s-cafe-gallery)|\n|[Old Rock House](http://oldrockhouse.com/concert-calendar/)|[The Lot on the Landing](https://www.jamopresents.com/THELOT/#EVENTS)|\n|[The Pageant](https://www.thepageant.com/?_sfm_venue=232)|[Tim's Chrome Bar](https://timschromebar.com/calendar-1)|\n|[Red Flag](https://redflagstl.com/events/)|[McGurk's](https://www.mcgurks.com/live-music/)|\n|[The Sheldon](https://www.thesheldon.org/events/)|[Rigazzi's](https://explorestlouis.com/event/live-music-at-rigazzis/2025-05-18/) (Wednesdays & Sundays)|\n|[St. Louis Music Park](https://www.centenecommunityicecenter.com/events/venue/saint-louis-music-park)|[SoFar St. Louis](https://www.sofarsounds.com/st-louis) *Secret performances around town*|\n|[St. Louis Symphony Concert Calendar](https://www.slso.org/en/tickets/performance-listing/)|[Venice Cafe](http://www.thevenicecafe.com/)|\n|[Stifel Theatre](http://www.stifeltheatre.com/events)|[Yaquis on Cherokee](https://www.facebook.com/YaquisOnCherokee/events/)|\n\n# Museums & Exhibits\n\n[**Free Fridays at Saint Louis Art Museum**](https://www.slam.org/events/)\n\n**Fridays**\n\nOn Fridays, ticketed exhibitions are free and the Museum is open late, with the last entry into the exhibition at 8 pm.\n\n**Museums Around Town:**\n\n[**Contemporary Art Museum St. Louis**](https://camstl.org/)\n\nThe Contemporary Art Museum St. Louis (CAM) is one of the preeminent non-collecting institutions of contemporary art in the U.S. Its mission is to create meaningful engagement with the most relevant and innovative art being made today. Here, you\u2019ll find a site for discovery, a welcoming space, and it\u2019s free for all.\n\n[**Missouri History Museum**](https://mohistory.org/society)\n\nOne of the most visited history museums in the nation, the Missouri History Museum looks at the history of the St. Louis region from the Mississippian people up to the present day.\n\n[**National Blues Museum**](https://www.nationalbluesmuseum.org/)\n\nAt the National Blues Museum, we dive into the Blues, the foundation of all modern American music. We're about learning with a beat, mixing fun with interactive features and exhibits full of unforgettable artifacts. Our public events give this place its rhythm. We're more than a museum - Blues Lives Here.\n\n[**Soldiers Memorial Military Museum**](https://mohistory.org/memorial/visit-soldiers-memorial/)\n\nSoldiers Memorial Military Museum is a state-of-the-art museum facility in downtown St. Louis that honors military service, veterans and their families. Soldiers Memorial shares American military history through the lens of St. Louis. Following a multi-million dollar revitalization, this St. Louis landmark reopened on November 3, 2018 under the operational leadership of the Missouri Historical Society.\n\n[**St. Louis Art Museum**](https://www.slam.org/events/)\n\nDedicated to Art and Free to All. Located in beautiful, historic Forest Park, the Saint Louis Art Museum hosts a world-class and varied collection of original works of art and artifacts, spanning five millennia and six continents, in one of the most impressive buildings in the city. Admission to the Museum is free every day, and admission to special exhibitions is free on Fridays.\n\n[**St. Louis Science Center**](https://www.slsc.org/)\n\nWith the mission \"to ignite and sustain lifelong science and technology learning\", the Saint Louis Science Center is one of the top five science centers in the United States.\n\nThe complex includes over 96,000 sq-ft of interactive science-technology exhibits that are part of the Science Center's free general admission.\n\n# Theater & Performing Arts\n\n**\\*\\*** [**Click here**](https://explorestlouis.com/see-and-do/arts-and-culture/theater-and-performing-arts/) to see theaters around town.\n\n# Sporting Events This Week\n\n[**Family Night with Fredbird**](https://www.mlb.com/cardinals/cardinals-nation/restaurant-and-bar/family-night)\n\n**Wednesdays**\n\nJoin others at Cardinals Nation Restaurant & Bar for Family Night with Fredbird on select Wednesday evenings this off-season! Bring your family down for games, prizes, and meet Fredbird from 6:30-7:30pm.\n\n[**St. Louis CITY SC Street Party at Schafly Tap Room**](https://www.schlafly.com/events/louligan-street-party)\n\n**Every Home Game (Check Schedule)**\n\nIn celebration of all CITY SC home soccer games, we close down Louligan Street and support our St. Louis team the only way we know how: great food, drinks, and fun. There are beer/food tents, a draft van, food trucks, and more.\n\n**Local Team Schedules:**\n\n[**St. Louis Cardinals schedule**](https://www.mlb.com/cardinals/schedule/)\n\n[**St. Louis Blues schedule**](https://www.nhl.com/blues/schedule)\n\n[**St. Louis City SC schedule**](https://www.stlcitysc.com/schedule)\n\n[**St. Louis Battlehawks schedule**](https://www.theufl.com/teams/st-louis/schedule)\n\n[**St. Louis Billikens schedule**](https://slubillikens.com/sports/mens-basketball)\n\n# Trivia Nights\n\n|Location|Date/Time|More Information|\n|:-|:-|:-|\n|[Crack Fox](https://www.thecrackfox.com/)|**Mondays 6:00 pm - 10:00 pm**|They host a weekly free tournament and game night. Emphasis on Non Alcoholic refreshments and camaraderie.|\n|[Joey B's on the Hill](https://www.joeybshill.com/)|**Mondays 8:30 pm - 10:30 pm**|[Trivia Details](https://do314.com/events/weekly/mon/trivia-guy-stl-monday-night-trivia)|\n|[Nick's Pub](https://www.nicksirishpub.com/)|**Mondays**||\n|[Urban Chestnut (The Grove)](https://www.urbanchestnut.com/events)|**Mondays 7:00 pm - 9:30 pm**||\n||||\n|[Bar K](https://barkdogbar.com/)|**Tuesdays at 7:00 pm**||\n|Blueberry Hill|**Tuesdays at 7:00pm**|Trivia nights in the Dart Room. [Trivia Details](https://www.facebook.com/p/Missouri-Trivia-League-100092170994810/)|\n|[Felix's Pizza Pub](https://www.felixspizzapub.com/)|**Tuesdays at 8:00 pm**|[Trivia Details](https://do314.com/events/weekly/tue/tenacious-trivia-fpwzzmrc)|\n|ITAP (Soulard)|**Tuesdays at 7:00 pm**||\n|[Schlafly Brewpubs (Any Location)](https://www.schlafly.com/events-calendar/)|**Tuesdays 7:00 pm - 9:00 pm**|[Trivia Details](https://do314.com/events/weekly/tue/tuesday-trivia-at-schlafly-tickets)|\n|[Rockwell Beer Co](https://www.rockwellbeer.com/)|**Tuesdays**|[Trivia Details](https://www.rockwellbeer.com/upcoming-events/trivia-tuedays) (Reservations required)|\n|[The Mack](http://mackbarandgrill.com/)|**Tuesdays at 8:00 pm**|[Trivia Details](https://do314.com/events/weekly/tue/tuesday-night-trivia-mxjupeuk)|\n|[Steve's Hot Dogs](https://www.steveshotdogsstl.com/)|**Tuesdays 7:30 pm - 9:30 pm**|[Trivia Details](https://www.steveshotdogsstl.com/event-details/trivia-night-every-tuesday-at-steves-hot-dogs-2022-08-09-19-30)|\n||||\n|[Anheuser-Busch Biergarten](https://www.budweisertours.com/stlbiergarten)|**Wednesdays 5:30 pm - 7:30 pm**|During the events, players can enjoy drink specials, including $3 aluminum cans, $13 pitchers and $20 NUTRL buckets. We\u2019ll cheers to that!|\n|[Hidden Gem](https://www.drinkhiddengem.com/)|**Wednesdays**||\n|ITAP (Delmar Loop)|**Wednesdays at 7:00 pm**||\n|[Pieces Board Game Bar & Cafe](https://www.stlpieces.com/)|**Wednesdays**|[Trivia Details](https://www.geekswhodrink.com/venues/599510345/)|\n|[The Post](https://thepostsportsbar.com/)|**Wednesdays 8:00 pm - 10:00 pm**|[Trivia Details](https://thepostsportsbar.com/trivia/)|\n||||\n|[City Foundry](https://www.cityfoundrystl.com/)|**Thursdays 7:00 pm - 9:00 pm**||\n|[City Park Grille](https://www.city-park-grill.com/)|**Thursdays at 8:00 pm**|[Trivia Details](https://www.geekswhodrink.com/venues/1314869233/)|\n|[The Pat Connolly Tavern](https://www.patconnollytavern.com/)|**Thursdays at 7:30 pm**||\n|[HandleBar](http://handlebarstl.com/)|**Thursdays at 7:00 pm - 9:00 pm**|[Trivia Details](https://do314.com/events/weekly/thu/trivia-tickets)|\n|[Urban Chestnut (Midtown)](https://www.urbanchestnut.com/)|**Thursdays at 7:00 pm**|[Trivia Details](https://www.urbanchestnut.com/events)|\n|[Wellspent Brewing](https://www.wellspentbeer.com/)|**Thursdays at 7:00 pm**||\n\n# Attractions Around Town\n\n[**Anheuser-Busch Brewery**](https://www.budweisertours.com/stl)\n\nExplore the campus, visit the Clydesdales, and even taste beer straight from the finishing cellars. Choose from a variety of experiences, customized to fit your interests\u00a0and\u00a0timeframe.\n\n[**Cahokia Mounds State Historic Park**](https://cahokiamounds.org/)\n\nA sophisticated Native American society of about 20,000 people that operated via a sun calendar and disappeared by 1400.\n\n[**Cathedral Basilica**](https://cathedralstl.org)\n\nThe Mother Church of the Archdiocese of Saint Louis, the superstructure of the Cathedral was built between 1907 and 1914. It is known for its' beautiful interior mosaics, which took nearly 80 years to create using more than 41 million pieces of glass tesserae.\n\n[**Central Public Library**](https://www.tripadvisor.com/Attraction_Review-g44881-d559014-Reviews-Central_Public_Library-Saint_Louis_Missouri.html)\n\nBuilt in 1912, the St. Louis Public Library's flagship, Central Library, is a monument to the past and a cultural beacon for the future. Spanning an entire city block just west of the Convention Center, Central Library is one of St. Louis' grandest works of art.\n\n[**City Museum**](https://citymuseum.org/)\n\nDon't take the name so literally. They're about fun. Not your white walls, walk around, and be quiet museum. If you want to climb around, get active with your kids or are a big kid at heart, they're the place.\n\n[**Forest Park**](https://www.forestparkforever.org)\n\nThe site of the 1904 World's Fair, America's second largest urban park is a prime St. Louis recreation spot.\n\n[**Gateway Arch**](https://www.gatewayarch.com)\n\nFrom the thrilling views to the amazing stories, a visit to the Gateway Arch is an experience that never fails to inspire.\n\n[**Grant's Farm**](https://grantsfarm.com/)\n\nA visit to Grant\u2019s Farm begins with a tram ride through Deer Park, where you can see a variety of our bovine and other four-legged friends. Then, you\u2019ll be dropped off at the Tier Garten where you can enjoy the petting zoo area \u2013 featuring the famous baby goat bottle-feeding \u2013 carousel rides, food and vending in the Bauernhof Courtyard, and of course, free beer tasting.\n\n[**Missouri Botanical Garden**](https://www.missouribotanicalgarden.org/)\n\nThe Missouri Botanical Garden in St. Louis was founded in 1859 by Henry Shaw. Today, the Garden is a National Historic Landmark and a center for science, conservation, education and horticultural display - widely considered one of the top three botanical gardens in the world.\n\n[**Old Courthouse**](https://www.archpark.org/visit/points-of-interest/old-courthouse)\n\nThe Old Courthouse in Downtown St. Louis, part of Gateway Arch National Park, was built between 1839 and 1862. Some of the most pivotal court cases in American history were heard inside its courtrooms. It is where Dred and Harriet Scott sued for freedom, Virginia Minor fought for her right as a woman to vote, and more than 300 enslaved African Americans filed suit for their freedom.\n\n[**St. Louis Union Station**](https://www.stlouisunionstation.com/)\n\nSt. Louis Union Station combines historic elegance with modern and stunning detail. Union Station is and will be a future top tier family friendly destination boasting a one of a kind aquarium, a 200 foot Ferris wheel and many other unforgettable family attractions.\n\n[**St. Louis Zoo**](https://stlzoo.org/)\n\nVisitors are wowed by this zoo that has 6,600 animals and 15 major exhibit areas.\n\n[**Tower Grove Park**](https://www.towergrovepark.org/)\n\nOfficially opened to the public in 1872, Tower Grove has been characterized as the largest and best preserved 19th-century Gardenesque style city park in the United States. This formal landscape architecture style features winding paths, symmetrical features, intense planting and the use of architecturally elaborate gates, pavilions, and houses\n\n[**World Chess Hall of Fame**](https://worldchesshof.org/)\n\nThe World Chess Hall of Fame (WCHOF) celebrates one of the world\u2019s oldest and best-loved games through vibrant, engaging exhibitions and creative programming. A not-for-profit, collecting institution situated in the heart of Saint Louis, the WCHOF houses both the US and World Chess Halls of Fame, which honor the accomplishments of the game\u2019s finest players.",
-      "score": 4,
+      "score": 3,
       "num_comments": 0,
       "subreddit": "StLouis",
       "url": "https://reddit.com/r/StLouis/comments/1ohdt99/things_to_do_events_this_week_102725_11225/",
@@ -1600,7 +500,7 @@
         "Factor75"
       ],
       "author": "STLhistoryBuff",
-      "upvote_ratio": 1.0,
+      "upvote_ratio": 0.81,
       "is_self": true,
       "source_brand": "Home Chef",
       "source_url": "https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new",
@@ -1631,8 +531,8 @@
     {
       "title": "Terrible. Terrible. Terrible.",
       "selftext": "For anyone on the fence, do not waste your money.\n\nThis was hands down the worst meal service I have ever tried. I enjoy Blue Apron, HelloFresh, and Daily Harvest. They have their ups and downs but are overall good. \n\nPurple carrot was literally trash. Very old and rotten vegetables wrapped in way too much plastic. The meals were inedible. My husband actually took the pot (mushroom stroganoff) outside because the smell was rancid. \n\nI tried to cancel immediately the day after delivery but of course there was no human to talk to. Just a useless AI chatbot that kept me trapped in a fruitless loop. A few days later a rep finally emailed me, not to fix anything, but to say they could not stop the next shipment and would refund me five dollars for the spoiled ingredients. \n\nI did not sign up for this service to argue over pocket change. I wanted healthy, easy plant-based meals. What I got was rotten trash in absurd amounts of plastic packaging.\n\nSave yourself the headache and avoid this service like the plague.\n\n",
-      "score": 1,
-      "num_comments": 3,
+      "score": 0,
+      "num_comments": 5,
       "subreddit": "purplecarrot",
       "url": "https://reddit.com/r/purplecarrot/comments/1oimb9a/terrible_terrible_terrible/",
       "created_utc": 1761687543.0,
@@ -1641,7 +541,7 @@
         "Blue Apron"
       ],
       "author": "Excellent_Weather583",
-      "upvote_ratio": 0.6,
+      "upvote_ratio": 0.5,
       "is_self": true,
       "source_brand": "Blue Apron",
       "source_url": "https://old.reddit.com/search/?q=blue+apron&type=posts&t=week&sort=new",
@@ -1674,7 +574,7 @@
       "title": "So what service is everybody switching to?",
       "selftext": "I see the official consensus on here is that BA service as a whole has completely tanked ever since the recent rebrand. I\u2019ve been a customer since 2020 and it used to be very unusual to have any problems other than an occasional ingredient substitution or more rarely something that came spoiled. Now, there is some kind of significant issue every single week\u2014 meals entirely missing or incorrect, spoiled food, important ingredients replaced with something completely different (pomegranate syrup replaced with VEGETABLE CONCENTRATE\u2026..) without so much as an explanatory email, and once a box was just skipped entirely without any notice for the first time in 5 years\u2026 of course I report these things every time, but in the past I\u2019d get a response right away, and now it takes several days before I get a partial refund! Like many (or all?) of you, I also got a physical letter in the mail with a coupon code for 50% off the next 2 boxes as a sort of apology for these repeated fuckups, which I guess was effective in terms of making me say \u201cokay I won\u2019t cancel for a couple of weeks,\u201d so I loaded up those boxes with extra stuff so I could get more bang for my buck, and then half of that stuff didn\u2019t even show up\u2026 so I get more credits on my account every week, and the cycle continues \ud83d\ude2d. (Plus, there seem to be more of the same meal options available every week\u2026) \n\nAll of this seems to point to a business that is dying anyway\u2026 I mean handing out 50% off coupons to make up for bad service and then doing nothing to change that service\u2026 it smacks of desperation. I feel like they\u2019ll shutter within a year at this rate. \n\nMeanwhile, I want to use a service like this to meal prep on weekends because I just started a 9-5 office job with a commute. So for me, quick, healthy and nutritious meals (or specifically things geared towards meal prep) would be a priority. (And of course, deliveries that are on time, fresh, and consist of the things that I actually ordered\u2026 but that *should* be a given.) I don\u2019t know much about any other meal kits so I\u2019m kind of lost when it comes to choice here. I tried Hello Fresh for a trial run back in 2020 and my perception was that the meals seemed a bit unhealthy (probably colored by the fact that they were sending random candy bars as freebies lol) but this could be inaccurate/ things could have changed since then.  \n\ntl;dr **If you\u2019re leaving Blue Apron for a different meal kit service, which one are you choosing and why?** Any prior experience you\u2019ve had with these services would be appreciated\u2014 although as we all know, it\u2019s not necessarily applicable to the present, as these things can easily go to shit. ",
       "score": 8,
-      "num_comments": 11,
+      "num_comments": 13,
       "subreddit": "blueapron",
       "url": "https://reddit.com/r/blueapron/comments/1oikj44/so_what_service_is_everybody_switching_to/",
       "created_utc": 1761683413.0,
@@ -1755,7 +655,7 @@
     {
       "title": "Stay away from Marley Spoon and Dinnerly",
       "selftext": "I subscribed to see what they had to offer. I browsed for a bit but didn\u2019t like the options so I canceled my subscription 10 mins after signing up. Didn\u2019t think anything of it. Today I get home to a big delivery from both. I check my credit card and I was charged for both. But I canceled, basically right away. Why would they send random food to someone who isn\u2019t subscribed. Such a shady business practice. I called them but of course they are experiencing high call volumes. I used there chatbot on their site and they just end the convo. I disputed it with my credit card company too. This is ridiculous. ",
-      "score": 9,
+      "score": 10,
       "num_comments": 27,
       "subreddit": "mealkits",
       "url": "https://reddit.com/r/mealkits/comments/1ohpgd4/stay_away_from_marley_spoon_and_dinnerly/",
@@ -1764,7 +664,7 @@
         "Marley Spoon"
       ],
       "author": "ProblematicSchematic",
-      "upvote_ratio": 0.65,
+      "upvote_ratio": 0.67,
       "is_self": true,
       "source_brand": "Marley Spoon",
       "source_url": "https://old.reddit.com/search/?q=marley+spoon&type=posts&t=week&sort=new",
@@ -1794,9 +694,9 @@
     }
   ],
   "brand_counts": {
-    "HelloFresh": 63,
+    "HelloFresh": 7,
     "Factor75": 8,
-    "Home Chef": 12,
+    "Home Chef": 13,
     "Blue Apron": 7,
     "Marley Spoon": 1,
     "Hungryroot": 1
