@@ -510,21 +510,63 @@ class AccurateScraper:
         return mentioned
     
     def get_primary_brand(self, post):
-        """Determine the PRIMARY brand this post is about (substantive discussion)"""
+        """Determine if post is CUSTOMER DISCUSSION about a brand's meal service"""
         title = post.get('title', '').lower()
         text = post.get('selftext', '').lower()
         subreddit = post.get('subreddit', '').lower()
         full_text = title + ' ' + text
         
         brand_patterns = {
-            'HelloFresh': ['hellofresh', 'hello fresh'],
-            'Factor75': ['factor75', 'factor 75', 'factor meal'],
+            'HelloFresh': ['hellofresh', 'hello fresh', 'hf'],
+            'Factor75': ['factor75', 'factor 75', 'factor meal', 'factor'],
             'Blue Apron': ['blue apron', 'blueapron'],
             'Home Chef': ['home chef', 'homechef'],
             'Marley Spoon': ['marley spoon', 'marleyspoon'],
             'Hungryroot': ['hungryroot', 'hungry root'],
             'Purple Carrot': ['purple carrot', 'purplecarrot']
         }
+        
+        # CUSTOMER DISCUSSION INDICATORS - these show people are talking about using the service
+        customer_discussion_phrases = [
+            # Questions/Recommendations
+            'has anyone', 'anyone tried', 'anyone use', 'anyone done', 'recommendations',
+            'recommend', 'which is better', 'best meal', 'good meal service',
+            'meal service', 'meal kit', 'meal delivery', 'food delivery',
+            
+            # Personal Experience (first person)
+            'i did', 'i tried', 'i use', 'i used', 'i\'m using', 'i have', 'i had',
+            'i was', 'i am', 'i\'ve', 'i got', 'i received', 'i ordered',
+            'my box', 'my order', 'my meal', 'my experience', 'my subscription',
+            
+            # Personal Experience (plural/possessive)
+            'we did', 'we tried', 'we use', 'we used', 'we have', 'we had',
+            'our box', 'our order', 'our meal', 'our subscription', 'ours',
+            'been using', 'been with', 'subscriber', 'subscription',
+            
+            # Opinions/Reviews
+            'love', 'hate', 'like', 'dislike', 'disappointed', 'happy with',
+            'quality', 'fresh', 'taste', 'flavor', 'portion', 'recipe',
+            'delivery', 'arrived', 'shipping', 'packaging', 'box',
+            
+            # Service Issues/Feedback
+            'customer service', 'cancel', 'cancelled', 'refund', 'complaint',
+            'issue', 'problem', 'missing', 'wrong', 'damaged', 'spoiled',
+            'upcharge', 'price', 'cost', 'expensive', 'cheap',
+            
+            # Comparisons
+            'better than', 'worse than', 'compared to', 'vs', 'versus',
+            'switch', 'switched', 'alternative',
+            
+            # Meal/Recipe specific
+            'recipe', 'meal', 'dish', 'cooked', 'cooking', 'made this'
+        ]
+        
+        # Check if this is a customer discussion post
+        has_customer_discussion = any(phrase in full_text for phrase in customer_discussion_phrases)
+        
+        if not has_customer_discussion:
+            # Not a customer discussion - skip this post
+            return None
         
         # Priority 1: Brand-specific subreddits (posts in r/hellofresh are about HelloFresh)
         subreddit_brands = {
@@ -538,66 +580,60 @@ class AccurateScraper:
         }
         
         for sub_name, brand in subreddit_brands.items():
-            if sub_name == subreddit:  # Exact match
+            if sub_name == subreddit:
                 return brand
         
-        # Priority 2: Strong opinion/experience phrases about a specific brand
-        # These indicate deep discussion about the brand
-        experience_phrases = [
-            'experience with', 'tried', 'using', 'switched to', 'switched from',
-            'love', 'hate', 'recommend', 'avoid', 'stay away from',
-            'horrible', 'terrible', 'amazing', 'excellent', 'best', 'worst',
-            'quality', 'delivery', 'customer service', 'cancelled', 'subscription',
-            'meal from', 'box from', 'order from', 'delivered by'
-        ]
-        
-        brand_discussion_scores = {}
+        # Priority 2: Count how many times each brand is discussed
+        brand_mention_counts = {}
+        brand_context_scores = {}
         
         for brand, patterns in brand_patterns.items():
-            score = 0
-            brand_mentioned = False
+            mention_count = 0
+            context_score = 0
             
             for pattern in patterns:
-                if pattern in full_text:
-                    brand_mentioned = True
+                # Count mentions
+                mention_count += full_text.count(pattern)
+                
+                # Check context around each mention
+                positions = [i for i in range(len(full_text)) if full_text[i:i+len(pattern)] == pattern]
+                for pos in positions:
+                    # Get 100 chars before and after
+                    context = full_text[max(0, pos-100):min(len(full_text), pos+len(pattern)+100)]
                     
-                    # Check for experience/opinion phrases near the brand name
-                    for phrase in experience_phrases:
-                        # Check if phrase appears within 50 characters of brand name
-                        brand_positions = [i for i in range(len(full_text)) if full_text.startswith(pattern, i)]
-                        for pos in brand_positions:
-                            # Check before and after brand mention
-                            context_before = full_text[max(0, pos-50):pos]
-                            context_after = full_text[pos:min(len(full_text), pos+50)]
-                            
-                            if phrase in context_before or phrase in context_after:
-                                score += 2
-                    
-                    # Brand in title is stronger signal
-                    if pattern in title:
-                        score += 3
-                    
-                    # Check for substantive discussion (longer text about the brand)
-                    if len(text) > 100 and pattern in text:
-                        score += 1
+                    # Score based on customer discussion phrases in context
+                    for phrase in customer_discussion_phrases:
+                        if phrase in context:
+                            context_score += 1
             
-            if brand_mentioned:
-                brand_discussion_scores[brand] = score
+            if mention_count > 0:
+                brand_mention_counts[brand] = mention_count
+                brand_context_scores[brand] = context_score
         
-        # Return brand with highest discussion score
-        if brand_discussion_scores:
-            max_score = max(brand_discussion_scores.values())
-            if max_score >= 2:  # Minimum threshold for substantive discussion
-                for brand, score in brand_discussion_scores.items():
+        # If no brands mentioned, return None
+        if not brand_mention_counts:
+            return None
+        
+        # Priority 3: Brand in title gets priority
+        for brand, patterns in brand_patterns.items():
+            for pattern in patterns:
+                if pattern in title and brand in brand_mention_counts:
+                    return brand
+        
+        # Priority 4: Brand with highest context score (most discussed)
+        if brand_context_scores:
+            max_score = max(brand_context_scores.values())
+            if max_score > 0:
+                for brand, score in brand_context_scores.items():
                     if score == max_score:
                         return brand
         
-        # Priority 3: If only ONE brand mentioned with any text, assume it's about that brand
-        mentioned = self.detect_brands(full_text)
-        if len(mentioned) == 1 and len(text) > 50:  # At least 50 chars of discussion
-            return mentioned[0]
+        # Priority 5: Most mentioned brand
+        max_mentions = max(brand_mention_counts.values())
+        for brand, count in brand_mention_counts.items():
+            if count == max_mentions:
+                return brand
         
-        # If multiple brands or no clear primary, return None
         return None
     
     def analyze_sentiment(self, text, title_only=''):
