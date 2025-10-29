@@ -506,7 +506,23 @@ class AccurateScraper:
         return mentioned
     
     def analyze_sentiment(self, text):
-        """Analyze sentiment using dual-method approach"""
+        """Analyze sentiment using dual-method approach with keyword overrides"""
+        text_lower = text.lower()
+        
+        # Strong negative keywords that override sentiment analysis
+        strong_negative = ['stay away', 'avoid', 'terrible', 'worst', 'horrible', 'awful', 
+                          'disgusting', 'rotten', 'spoiled', 'cancelled', 'cancel', 'refund',
+                          'scam', 'fraud', 'disappointed', 'issues with', 'problem with',
+                          'never again', 'waste of money', 'do not recommend']
+        
+        # Strong positive keywords
+        strong_positive = ['love', 'amazing', 'excellent', 'best', 'highly recommend',
+                          'fantastic', 'perfect', 'delicious', 'fresh', 'great quality']
+        
+        # Check for strong keywords first
+        has_strong_negative = any(keyword in text_lower for keyword in strong_negative)
+        has_strong_positive = any(keyword in text_lower for keyword in strong_positive)
+        
         # VADER sentiment
         vader_scores = self.analyzer.polarity_scores(text)
         vader_compound = vader_scores['compound']
@@ -515,8 +531,15 @@ class AccurateScraper:
         blob = TextBlob(text)
         textblob_polarity = blob.sentiment.polarity
         
+        # Override with strong keywords
+        if has_strong_negative:
+            sentiment = 'negative'
+            confidence = 0.9
+        elif has_strong_positive:
+            sentiment = 'positive'
+            confidence = 0.9
         # Combined sentiment decision (Brian's spec: Positive/Negative/Suggestion(Neutral))
-        if vader_compound >= POSITIVE_THRESHOLD and textblob_polarity >= 0.1:
+        elif vader_compound >= POSITIVE_THRESHOLD and textblob_polarity >= 0.1:
             sentiment = 'positive'
             confidence = min(abs(vader_compound) + abs(textblob_polarity), 1.0)
         elif vader_compound <= NEGATIVE_THRESHOLD and textblob_polarity <= -0.1:
