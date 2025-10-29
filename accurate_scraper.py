@@ -505,19 +505,29 @@ class AccurateScraper:
         
         return mentioned
     
-    def analyze_sentiment(self, text):
+    def analyze_sentiment(self, text, title_only=''):
         """Analyze sentiment using dual-method approach with keyword overrides"""
         text_lower = text.lower()
+        title_lower = title_only.lower() if title_only else text_lower
         
-        # Strong negative keywords that override sentiment analysis
-        strong_negative = ['stay away', 'avoid', 'terrible', 'worst', 'horrible', 'awful', 
-                          'disgusting', 'rotten', 'spoiled', 'cancelled', 'cancel', 'refund',
-                          'scam', 'fraud', 'disappointed', 'issues with', 'problem with',
-                          'never again', 'waste of money', 'do not recommend']
+        # Strong negative keywords/phrases that override sentiment analysis
+        strong_negative = [
+            'stay away', 'avoid', 'terrible', 'worst', 'horrible', 'awful', 
+            'disgusting', 'rotten', 'spoiled', 'cancelled', 'cancel', 'refund',
+            'scam', 'fraud', 'disappointed', 'issues with', 'problem with',
+            'never again', 'waste of money', 'do not recommend', 'not recommend',
+            'caution', 'warning', 'beware', 'upcharge', 'overpriced', 'rip off',
+            'complaint', 'unhappy', 'dissatisfied', 'poor quality', 'bad experience',
+            'missing', 'wrong', 'incorrect', 'damaged', 'late delivery'
+        ]
         
         # Strong positive keywords
-        strong_positive = ['love', 'amazing', 'excellent', 'best', 'highly recommend',
-                          'fantastic', 'perfect', 'delicious', 'fresh', 'great quality']
+        strong_positive = [
+            'love it', 'loving', 'amazing', 'excellent', 'best', 'highly recommend',
+            'fantastic', 'perfect', 'delicious', 'fresh', 'great quality',
+            'satisfied', 'happy with', 'impressed', 'exceeded expectations',
+            'worth it', 'great value', 'favorite'
+        ]
         
         # Check for strong keywords first
         has_strong_negative = any(keyword in text_lower for keyword in strong_negative)

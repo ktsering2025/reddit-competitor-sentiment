@@ -1,6 +1,6 @@
 {
-  "scrape_timestamp": "2025-10-29T03:13:35.699293+00:00",
-  "processing_timestamp": "2025-10-29T03:13:35.699310+00:00",
+  "scrape_timestamp": "2025-10-29T03:15:42.110430+00:00",
+  "processing_timestamp": "2025-10-29T03:15:42.110459+00:00",
   "date_range": {
     "start": "2025-10-27T00:00:00+00:00",
     "end": "2025-11-01T23:59:59+00:00"
@@ -73,11 +73,11 @@
         "HelloFresh"
       ],
       "author": "Reasonable-Employee6",
-      "upvote_ratio": 1.0,
+      "upvote_ratio": 0.93,
       "is_self": false,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
-      "sentiment": "positive",
+      "sentiment": "negative",
       "confidence": 0.9,
       "reasoning": "VADER: 0.44, TextBlob: 0.38"
     },
@@ -104,7 +104,7 @@
     {
       "title": "Some of my cheap go-to Aldi meals for two!",
       "selftext": "Some other recipes I make but they need a few more ingredients than Aldi usually has:\n\n\\- [Turkish pasta](https://www.reddit.com/r/tonightsdinner/comments/1j3zzq5/i_can_not_and_will_not_stop_eating_this_damn/)\n\n\\- [Pork schnitzel](https://www.hellofresh.com/recipes/pork-schnitzel-5dc042bdabd5bb5e5c129538)\n\n\\- [Firecracker meatballs](https://www.hellofresh.com/recipes/firecracker-meatballs-5ea70fe14c4efb3fb12140f1)",
-      "score": 479,
+      "score": 478,
       "num_comments": 36,
       "subreddit": "aldi",
       "url": "https://reddit.com/r/aldi/comments/1oiju6o/some_of_my_cheap_goto_aldi_meals_for_two/",
@@ -204,7 +204,7 @@
     {
       "title": "Mmmm! Mystery \"Poultry\" FACTOR meal!",
       "selftext": "",
-      "score": 10,
+      "score": 8,
       "num_comments": 7,
       "subreddit": "factor75",
       "url": "https://reddit.com/r/factor75/comments/1ohnxa6/mmmm_mystery_poultry_factor_meal/",
@@ -213,7 +213,7 @@
         "Factor75"
       ],
       "author": "PurpleCatBlues",
-      "upvote_ratio": 1.0,
+      "upvote_ratio": 0.91,
       "is_self": false,
       "source_brand": "Factor75",
       "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
@@ -295,7 +295,7 @@
         "Blue Apron"
       ],
       "author": "Excellent_Weather583",
-      "upvote_ratio": 0.44,
+      "upvote_ratio": 0.5,
       "is_self": true,
       "source_brand": "Blue Apron",
       "source_url": "https://www.reddit.com/search/?q=blue+apron+mealkit+brand&type=posts&t=week",
@@ -327,7 +327,7 @@
     {
       "title": "So what service is everybody switching to?",
       "selftext": "I see the official consensus on here is that BA service as a whole has completely tanked ever since the recent rebrand. I\u2019ve been a customer since 2020 and it used to be very unusual to have any problems other than an occasional ingredient substitution or more rarely something that came spoiled. Now, there is some kind of significant issue every single week\u2014 meals entirely missing or incorrect, spoiled food, important ingredients replaced with something completely different (pomegranate syrup replaced with VEGETABLE CONCENTRATE\u2026..) without so much as an explanatory email, and once a box was just skipped entirely without any notice for the first time in 5 years\u2026 of course I report these things every time, but in the past I\u2019d get a response right away, and now it takes several days before I get a partial refund! Like many (or all?) of you, I also got a physical letter in the mail with a coupon code for 50% off the next 2 boxes as a sort of apology for these repeated fuckups, which I guess was effective in terms of making me say \u201cokay I won\u2019t cancel for a couple of weeks,\u201d so I loaded up those boxes with extra stuff so I could get more bang for my buck, and then half of that stuff didn\u2019t even show up\u2026 so I get more credits on my account every week, and the cycle continues \ud83d\ude2d. (Plus, there seem to be more of the same meal options available every week\u2026) \n\nAll of this seems to point to a business that is dying anyway\u2026 I mean handing out 50% off coupons to make up for bad service and then doing nothing to change that service\u2026 it smacks of desperation. I feel like they\u2019ll shutter within a year at this rate. \n\nMeanwhile, I want to use a service like this to meal prep on weekends because I just started a 9-5 office job with a commute. So for me, quick, healthy and nutritious meals (or specifically things geared towards meal prep) would be a priority. (And of course, deliveries that are on time, fresh, and consist of the things that I actually ordered\u2026 but that *should* be a given.) I don\u2019t know much about any other meal kits so I\u2019m kind of lost when it comes to choice here. I tried Hello Fresh for a trial run back in 2020 and my perception was that the meals seemed a bit unhealthy (probably colored by the fact that they were sending random candy bars as freebies lol) but this could be inaccurate/ things could have changed since then.  \n\ntl;dr **If you\u2019re leaving Blue Apron for a different meal kit service, which one are you choosing and why?** Any prior experience you\u2019ve had with these services would be appreciated\u2014 although as we all know, it\u2019s not necessarily applicable to the present, as these things can easily go to shit. ",
-      "score": 7,
+      "score": 8,
       "num_comments": 18,
       "subreddit": "blueapron",
       "url": "https://reddit.com/r/blueapron/comments/1oikj44/so_what_service_is_everybody_switching_to/",
@@ -337,7 +337,7 @@
         "Blue Apron"
       ],
       "author": "matchagrl",
-      "upvote_ratio": 0.68,
+      "upvote_ratio": 0.7,
       "is_self": true,
       "source_brand": "Blue Apron",
       "source_url": "https://www.reddit.com/search/?q=blue+apron+mealkit+brand&type=posts&t=week",
@@ -368,7 +368,7 @@
     {
       "title": "Stay away from Marley Spoon and Dinnerly",
       "selftext": "I subscribed to see what they had to offer. I browsed for a bit but didn\u2019t like the options so I canceled my subscription 10 mins after signing up. Didn\u2019t think anything of it. Today I get home to a big delivery from both. I check my credit card and I was charged for both. But I canceled, basically right away. Why would they send random food to someone who isn\u2019t subscribed. Such a shady business practice. I called them but of course they are experiencing high call volumes. I used there chatbot on their site and they just end the convo. I disputed it with my credit card company too. This is ridiculous. ",
-      "score": 11,
+      "score": 8,
       "num_comments": 27,
       "subreddit": "mealkits",
       "url": "https://reddit.com/r/mealkits/comments/1ohpgd4/stay_away_from_marley_spoon_and_dinnerly/",
@@ -377,7 +377,7 @@
         "Marley Spoon"
       ],
       "author": "ProblematicSchematic",
-      "upvote_ratio": 0.67,
+      "upvote_ratio": 0.64,
       "is_self": true,
       "source_brand": "Marley Spoon",
       "source_url": "https://www.reddit.com/search/?q=marley+spoon+mealkit+brand&type=posts&t=week",
