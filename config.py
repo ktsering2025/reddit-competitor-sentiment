@@ -66,10 +66,10 @@ SENTIMENT_THRESHOLD = 0.1
 POSITIVE_THRESHOLD = 0.05
 NEGATIVE_THRESHOLD = -0.05
 
-# Week Window Strategy (A) Week-window & data sources per your spec
-WEEK_MODE = "MON_SAT"   # allowed: MON_FRI | MON_SAT | FULL_7
-WEEK_END_OVERRIDE = None  # or "2025-10-25" when WEEK_END env is set
-INCLUDE_SATURDAY_THRESHOLD = 5
+# Week Window Strategy - Simple 7-day rolling window
+WEEK_MODE = "FULL_7"   # Always use past 7 days
+WEEK_END_OVERRIDE = None  # Set via WEEK_END env variable if needed
+INCLUDE_SATURDAY_THRESHOLD = 5  # Not used in FULL_7 mode
 
 # Chart Configuration
 CHART_FIGSIZE = (12, 6)  # Medium image size as specified

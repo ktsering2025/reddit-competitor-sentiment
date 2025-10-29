@@ -160,7 +160,7 @@
         
         <div class="update-info">
             <h3>Weekly Automation Status</h3>
-            <p><strong>Current Data:</strong> 23 actionable posts from global Reddit search (2025-10-20 to 2025-10-25)</p>
+            <p><strong>Current Data:</strong> <span id="total-posts">Loading...</span> actionable posts from global Reddit search (<span id="date-range-text">Loading...</span>)</p>
             <p><strong>Automation:</strong> New data collected every Sunday, reports generated Monday morning</p>
             <p><strong>Data Quality:</strong> 100% actionable discussions, filtered for relevance (spam removed)</p>
         </div>
@@ -238,17 +238,28 @@
                 const dataPeriod = document.getElementById('data-period');
                 
                 if (data.status === 'valid') {
-                    // Format dates nicely
-                    const startDate = new Date(data.date_window_utc.start + 'T00:00:00Z');
-                    const endDate = new Date(data.date_window_utc.end + 'T00:00:00Z');
-                    const options = { month: 'short', day: 'numeric', year: 'numeric' };
+                    // Format dates nicely - use UTC to avoid timezone issues
+                    const startParts = data.date_window_utc.start.split('-');
+                    const endParts = data.date_window_utc.end.split('-');
+                    const startDate = new Date(Date.UTC(startParts[0], startParts[1] - 1, startParts[2]));
+                    const endDate = new Date(Date.UTC(endParts[0], endParts[1] - 1, endParts[2]));
+                    
+                    const options = { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' };
                     const formattedStart = startDate.toLocaleDateString('en-US', options);
                     const formattedEnd = endDate.toLocaleDateString('en-US', options);
                     
                     dataPeriod.textContent = `${formattedStart} - ${formattedEnd}`;
+                    document.getElementById('date-range-text').textContent = `${data.date_window_utc.start} to ${data.date_window_utc.end}`;
                     healthText.innerHTML = `Last Run: Valid ✓ | Commit ${data.commit}`;
+                    
+                    // Get total posts from the page stats
+                    const totalPostsElement = document.querySelector('.stat-card.total .stat-number');
+                    if (totalPostsElement) {
+                        document.getElementById('total-posts').textContent = totalPostsElement.textContent;
+                    }
                 } else {
                     dataPeriod.textContent = 'Unknown';
+                    document.getElementById('date-range-text').textContent = 'Unknown';
                     healthText.innerHTML = 'Last Run: Error ✗ | Check system status';
                 }
             })
