@@ -25,7 +25,8 @@ def calculate_brand_stats(data):
     posts = data.get('posts', [])
     
     for brand in ALL_COMPETITORS:
-        brand_posts = [post for post in posts if brand in post.get('competitors_mentioned', [])]
+        # Use primary_brand to ensure accurate counts
+        brand_posts = [post for post in posts if post.get('primary_brand') == brand]
         
         if brand_posts:
             positive = len([p for p in brand_posts if p.get('sentiment') == 'positive'])
