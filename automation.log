@@ -1630,3 +1630,101 @@ Data sources echoed from config.py:
 2025-10-28 20:41:30,635 - INFO - [SUCCESS] Artifacts archived to reports/archive/2025-10-28
 2025-10-28 20:41:30,635 - INFO - 
 [STEP 7] Git commit and push...
+2025-10-28 20:41:30,709 - INFO - [SUCCESS] Updated index.html with BUILD_TOKEN: 20251029004130
+2025-10-28 20:41:31,530 - INFO - [SUCCESS] GitHub Pages updated successfully
+2025-10-28 20:41:31,552 - INFO - [SUCCESS] HEALTH.json created for site freshness check
+2025-10-28 20:41:31,552 - INFO - 
+[EMAIL] SKIPPED
+2025-10-28 20:41:31,552 - INFO - 
+==================================================
+2025-10-28 20:41:31,552 - INFO - WHAT I DID
+2025-10-28 20:41:31,552 - INFO - ==================================================
+2025-10-28 20:41:31,552 - INFO - [OK] Links Updated (Brian's data sources):
+2025-10-28 20:41:31,552 - INFO -   HelloFresh → https://old.reddit.com/search/?q=hellofresh&type=posts&t=week&sort=new
+2025-10-28 20:41:31,552 - INFO -   Factor75 → https://old.reddit.com/search/?q=factor75&type=posts&t=week&sort=new
+2025-10-28 20:41:31,552 - INFO -   Home Chef → https://old.reddit.com/search/?q=home+chef&type=posts&t=week&sort=new
+2025-10-28 20:41:31,552 - INFO -   Blue Apron → https://old.reddit.com/search/?q=blue+apron&type=posts&t=week&sort=new
+2025-10-28 20:41:31,552 - INFO -   Marley Spoon → https://old.reddit.com/search/?q=marley+spoon&type=posts&t=week&sort=new
+2025-10-28 20:41:31,552 - INFO -   Hungryroot → https://old.reddit.com/search/?q=hungryroot&type=posts&t=week&sort=new
+2025-10-28 20:41:31,552 - INFO - 
+[OK] Files Kept (canonical only):
+2025-10-28 20:41:31,552 - INFO -   [OK] accurate_scraper.py
+2025-10-28 20:41:31,552 - INFO -   [OK] step1_chart.py
+2025-10-28 20:41:31,552 - INFO -   [OK] step2_ACTIONABLE_analysis.py
+2025-10-28 20:41:31,552 - INFO -   [OK] complete_automation.py
+2025-10-28 20:41:31,552 - INFO -   [OK] send_to_gmail.py
+2025-10-28 20:41:31,552 - INFO -   [OK] sanity_check.py
+2025-10-28 20:41:31,552 - INFO -   [OK] config.py
+2025-10-28 20:41:31,552 - INFO -   [OK] README.md
+2025-10-28 20:41:31,552 - INFO -   [OK] index.html
+2025-10-28 20:41:31,552 - INFO -   [OK] requirements.txt
+2025-10-28 20:41:31,552 - INFO -   [OK] .nojekyll
+2025-10-28 20:41:31,552 - INFO -   [OK] .gitignore
+2025-10-28 20:41:31,552 - INFO - 
+[OK] Artifacts Generated:
+2025-10-28 20:41:31,552 - INFO -   [OK] reports/step1_chart.png
+2025-10-28 20:41:31,553 - INFO -   [OK] reports/step2_ACTIONABLE_analysis_LATEST.html
+2025-10-28 20:41:31,553 - INFO -   [OK] reports/working_reddit_data.json
+2025-10-28 20:41:31,553 - INFO - 
+==================================================
+2025-10-28 20:41:31,553 - INFO - RUN SUMMARY
+2025-10-28 20:41:31,553 - INFO - -----------
+2025-10-28 20:41:31,553 - INFO - Date window (UTC): 2025-10-20 to 2025-10-25
+2025-10-28 20:41:31,553 - INFO - HelloFresh  : 3/0/1 = 4
+2025-10-28 20:41:31,553 - INFO - Factor75    : 1/0/1 = 2
+2025-10-28 20:41:31,553 - INFO - Home Chef   : 0/0/0 = 0
+2025-10-28 20:41:31,553 - INFO - Blue Apron  : 2/0/7 = 9
+2025-10-28 20:41:31,553 - INFO - Marley Spoon: 1/0/1 = 2
+2025-10-28 20:41:31,553 - INFO - Hungryroot  : 0/0/0 = 0
+2025-10-28 20:41:31,553 - INFO - Validation: PASSED
+2025-10-28 20:41:31,553 - INFO - Artifacts:
+2025-10-28 20:41:31,553 - INFO - - Chart: reports/step1_chart.png
+2025-10-28 20:41:31,553 - INFO - - Deep dive: reports/step2_ACTIONABLE_analysis_LATEST.html
+2025-10-28 20:41:31,553 - INFO - - Archive: reports/archive/2025-10-28/
+2025-10-28 20:41:31,553 - INFO - - Raw: reports/raw/{raw_,filtered_,metadata_}2025-10-28.json
+2025-10-28 20:41:31,553 - INFO - GitHub Pages: updated
+2025-10-28 20:41:31,565 - INFO - Commit: 1290431e
+2025-10-28 20:41:31,565 - INFO - Email: SKIPPED
+2025-10-28 20:41:31,565 - INFO - 
+==================================================
+2025-10-28 20:41:31,565 - INFO - QUICK SELF-CHECK
+2025-10-28 20:41:31,565 - INFO - ==================================================
+2025-10-28 20:41:31,565 - INFO - ABS PATH used: /Users/kunsang.tsering/Desktop/reddit-competitor-sentiment
+2025-10-28 20:41:31,565 - INFO - 
+Data sources echoed from config.py:
+2025-10-28 20:41:31,565 - INFO -   HelloFresh → verified
+2025-10-28 20:41:31,565 - INFO -   Factor75 → verified
+2025-10-28 20:41:31,565 - INFO -   Home Chef → verified
+2025-10-28 20:41:31,565 - INFO -   Blue Apron → verified
+2025-10-28 20:41:31,565 - INFO -   Marley Spoon → verified
+2025-10-28 20:41:31,565 - INFO -   Hungryroot → verified
+2025-10-28 20:41:31,565 - INFO - Step-1 == Step-2 (HF & Factor) totals: True (HF:4, F75:2)
+2025-10-28 20:41:31,565 - INFO - ==================================================
+2025-10-28 20:47:31,222 - INFO - ============================================================
+2025-10-28 20:47:31,222 - INFO - BRIAN'S COMPETITOR ANALYSIS - COMPLETE AUTOMATION
+2025-10-28 20:47:31,222 - INFO - ============================================================
+2025-10-28 20:47:31,223 - INFO - ABS PATH: /Users/kunsang.tsering/Desktop/reddit-competitor-sentiment
+2025-10-28 20:47:31,223 - INFO - Week mode: MON_SAT
+2025-10-28 20:47:31,223 - INFO - Week end override: 2025-11-01
+2025-10-28 20:47:31,223 - INFO - 
+[STEP 1] Running accurate_scraper.py...
+2025-10-28 20:47:43,809 - INFO - [SUCCESS] Scraper completed - data saved to working_reddit_data.json
+2025-10-28 20:47:43,810 - INFO - 
+[STEP 2] Processing raw data...
+2025-10-28 20:47:43,824 - INFO - [SUCCESS] Raw data processing complete - files saved with 2025-10-28
+2025-10-28 20:47:43,824 - INFO - 
+[STEP 3] Generating Step 1 chart...
+2025-10-28 20:47:44,347 - INFO - [SUCCESS] Step 1 chart generated successfully
+2025-10-28 20:47:44,347 - INFO - 
+[STEP 4] Generating Step 2 ACTIONABLE analysis...
+2025-10-28 20:47:44,408 - INFO - [SUCCESS] Step 2 analysis generated successfully
+2025-10-28 20:47:44,408 - INFO - \n[STEP 5] Generating Step 3 competitor analysis...
+2025-10-28 20:47:44,445 - INFO - [SUCCESS] Step 3 competitor analysis generated successfully
+2025-10-28 20:47:44,446 - INFO - 
+[STEP 5] Running Brian's validation rules...
+2025-10-28 20:47:44,446 - INFO - [SUCCESS] All validation rules PASSED
+2025-10-28 20:47:44,446 - INFO - 
+[STEP 6] Archiving artifacts...
+2025-10-28 20:47:44,467 - INFO - [SUCCESS] Artifacts archived to reports/archive/2025-10-28
+2025-10-28 20:47:44,467 - INFO - 
+[STEP 7] Git commit and push...
