@@ -541,21 +541,6 @@ class AccurateScraper:
             if keyword.lower() in text:
                 return True
         
-        # CRITICAL FIX: Block irrelevant subreddits (non-meal-kit contexts)
-        # These are subreddits where brand mentions are unrelated to meal kits
-        subreddit = post.get('subreddit', '').lower()
-        irrelevant_subreddits = [
-            'dyadbuilders', 'domains', 'koreamilitaryrentals', 'heritagewear', 
-            'barndosandcabins', 'nashvillebeer', 'crybabydolls', 'stlouis', 
-            'morristown', 'byndinvest', 'tik toklounge', 'tiktoklounge', 
-            'mitsuruxmakoto', 'behindthebastards', 'christmas', 'poems', 
-            'ocpoetry', 'himrfam'
-        ]
-        
-        for irrelevant_sub in irrelevant_subreddits:
-            if irrelevant_sub in subreddit:
-                return True
-        
         # ACTIONABLE FILTER: Remove referral/promo spam
         spam_keywords = ['referral', 'promo code', 'free box', 'discount', 'coupon', 'voucher', 'gift card']
         engagement_score = post.get('score', 0) + 3 * post.get('num_comments', 0)
@@ -566,6 +551,7 @@ class AccurateScraper:
                 return True
         
         # Filter out posts from dedicated promo/referral subreddits
+        subreddit = post.get('subreddit', '').lower()
         promo_subreddits = ['referral', 'promocode', 'hellofreshdeutschland', 'referralaffiliatecode', 
                            'referralnotreferal', 'referrallinks', 'referralcodes', 'promocodeshare']
         

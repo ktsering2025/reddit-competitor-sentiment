@@ -2489,3 +2489,137 @@ Data sources echoed from config.py:
 2025-10-28 22:29:20,706 - INFO - [SUCCESS] Homepage updated with current actionable data
 2025-10-28 22:29:20,706 - INFO - 
 [STEP 8] Git commit and push...
+2025-10-28 22:29:20,805 - INFO - [SUCCESS] Updated index.html with BUILD_TOKEN: 20251029022919
+2025-10-28 22:29:21,434 - INFO - [SUCCESS] GitHub Pages updated successfully
+2025-10-28 22:29:21,456 - INFO - [SUCCESS] HEALTH.json created for site freshness check
+2025-10-28 22:29:21,456 - INFO - 
+[EMAIL] SKIPPED
+2025-10-28 22:29:21,456 - INFO - 
+==================================================
+2025-10-28 22:29:21,456 - INFO - WHAT I DID
+2025-10-28 22:29:21,456 - INFO - ==================================================
+2025-10-28 22:29:21,456 - INFO - [OK] Links Updated (Brian's data sources):
+2025-10-28 22:29:21,456 - INFO -   HelloFresh → 3 sources
+2025-10-28 22:29:21,456 - INFO -     1: https://www.reddit.com/search/?q=hellofresh&type=posts&t=week
+2025-10-28 22:29:21,457 - INFO -     2: https://www.reddit.com/search/?q=hellofresh+mealkit+brand&type=posts&t=week
+2025-10-28 22:29:21,457 - INFO -     3: https://www.reddit.com/search/?q=hellofresh+food+brand&type=posts&t=week
+2025-10-28 22:29:21,457 - INFO -   Factor75 → 3 sources
+2025-10-28 22:29:21,457 - INFO -     1: https://www.reddit.com/search/?q=factor75&type=posts&t=week
+2025-10-28 22:29:21,457 - INFO -     2: https://www.reddit.com/search/?q=factor+mealkit+brand&type=posts&t=week
+2025-10-28 22:29:21,457 - INFO -     3: https://www.reddit.com/search/?q=factor+food+brand&type=posts&t=week
+2025-10-28 22:29:21,457 - INFO -   Home Chef → 1 sources
+2025-10-28 22:29:21,457 - INFO -     1: https://www.reddit.com/search/?q=homechef+mealkit+brand&type=posts&t=week
+2025-10-28 22:29:21,457 - INFO -   Blue Apron → 2 sources
+2025-10-28 22:29:21,457 - INFO -     1: https://www.reddit.com/search/?q=blue+apron+mealkit+brand&type=posts&t=week
+2025-10-28 22:29:21,457 - INFO -     2: https://www.reddit.com/search/?q=blue+apron+food+brand&type=posts&t=week
+2025-10-28 22:29:21,457 - INFO -   Marley Spoon → 2 sources
+2025-10-28 22:29:21,457 - INFO -     1: https://www.reddit.com/search/?q=marley+spoon+food+brand&type=posts&t=week
+2025-10-28 22:29:21,457 - INFO -     2: https://www.reddit.com/search/?q=marley+spoon+mealkit+brand&type=posts&t=week
+2025-10-28 22:29:21,457 - INFO -   Hungryroot → 1 sources
+2025-10-28 22:29:21,457 - INFO -     1: https://www.reddit.com/search/?q=Hungryroot+food+brand&type=posts&t=week
+2025-10-28 22:29:21,457 - INFO - 
+[OK] Files Kept (canonical only):
+2025-10-28 22:29:21,457 - INFO -   [OK] accurate_scraper.py
+2025-10-28 22:29:21,457 - INFO -   [OK] step1_chart.py
+2025-10-28 22:29:21,457 - INFO -   [OK] step2_ACTIONABLE_analysis.py
+2025-10-28 22:29:21,457 - INFO -   [OK] complete_automation.py
+2025-10-28 22:29:21,457 - INFO -   [OK] send_to_gmail.py
+2025-10-28 22:29:21,457 - INFO -   [OK] sanity_check.py
+2025-10-28 22:29:21,457 - INFO -   [OK] config.py
+2025-10-28 22:29:21,457 - INFO -   [OK] README.md
+2025-10-28 22:29:21,457 - INFO -   [OK] index.html
+2025-10-28 22:29:21,457 - INFO -   [OK] requirements.txt
+2025-10-28 22:29:21,458 - INFO -   [OK] .nojekyll
+2025-10-28 22:29:21,458 - INFO -   [OK] .gitignore
+2025-10-28 22:29:21,458 - INFO - 
+[OK] Artifacts Generated:
+2025-10-28 22:29:21,458 - INFO -   [OK] reports/step1_chart.png
+2025-10-28 22:29:21,458 - INFO -   [OK] reports/step2_ACTIONABLE_analysis_LATEST.html
+2025-10-28 22:29:21,458 - INFO -   [OK] reports/working_reddit_data.json
+2025-10-28 22:29:21,458 - INFO - 
+==================================================
+2025-10-28 22:29:21,458 - INFO - RUN SUMMARY
+2025-10-28 22:29:21,458 - INFO - -----------
+2025-10-28 22:29:21,458 - INFO - Date window (UTC): 2025-10-20 to 2025-10-25
+2025-10-28 22:29:21,458 - INFO - HelloFresh  : 0/0/0 = 0
+2025-10-28 22:29:21,458 - INFO - Factor75    : 0/0/0 = 0
+2025-10-28 22:29:21,458 - INFO - Home Chef   : 0/0/0 = 0
+2025-10-28 22:29:21,458 - INFO - Blue Apron  : 0/0/0 = 0
+2025-10-28 22:29:21,458 - INFO - Marley Spoon: 0/0/1 = 1
+2025-10-28 22:29:21,458 - INFO - Hungryroot  : 0/0/0 = 0
+2025-10-28 22:29:21,458 - INFO - Validation: PASSED
+2025-10-28 22:29:21,458 - INFO - Artifacts:
+2025-10-28 22:29:21,458 - INFO - - Chart: reports/step1_chart.png
+2025-10-28 22:29:21,458 - INFO - - Deep dive: reports/step2_ACTIONABLE_analysis_LATEST.html
+2025-10-28 22:29:21,458 - INFO - - Archive: reports/archive/2025-10-28/
+2025-10-28 22:29:21,458 - INFO - - Raw: reports/raw/{raw_,filtered_,metadata_}2025-10-28.json
+2025-10-28 22:29:21,458 - INFO - GitHub Pages: updated
+2025-10-28 22:29:21,474 - INFO - Commit: 109ea7bb
+2025-10-28 22:29:21,474 - INFO - Email: SKIPPED
+2025-10-28 22:29:21,474 - INFO - 
+==================================================
+2025-10-28 22:29:21,474 - INFO - QUICK SELF-CHECK
+2025-10-28 22:29:21,474 - INFO - ==================================================
+2025-10-28 22:29:21,474 - INFO - ABS PATH used: /Users/kunsang.tsering/Desktop/reddit-competitor-sentiment
+2025-10-28 22:29:21,474 - INFO - 
+Data sources echoed from config.py:
+2025-10-28 22:29:21,474 - INFO -   HelloFresh → 3 sources
+2025-10-28 22:29:21,474 - INFO -   Factor75 → 3 sources
+2025-10-28 22:29:21,474 - INFO -   Home Chef → 1 sources
+2025-10-28 22:29:21,474 - INFO -   Blue Apron → 2 sources
+2025-10-28 22:29:21,474 - INFO -   Marley Spoon → 2 sources
+2025-10-28 22:29:21,474 - INFO -   Hungryroot → 1 sources
+2025-10-28 22:29:21,474 - INFO - Step-1 == Step-2 (HF & Factor) totals: True (HF:0, F75:0)
+2025-10-28 22:29:21,474 - INFO - ==================================================
+2025-10-28 22:31:28,072 - INFO - ============================================================
+2025-10-28 22:31:28,073 - INFO - BRIAN'S COMPETITOR ANALYSIS - COMPLETE AUTOMATION
+2025-10-28 22:31:28,073 - INFO - ============================================================
+2025-10-28 22:31:28,073 - INFO - ABS PATH: /Users/kunsang.tsering/Desktop/reddit-competitor-sentiment
+2025-10-28 22:31:28,073 - INFO - Week mode: MON_SAT
+2025-10-28 22:31:28,073 - INFO - Week end override: 2025-10-25
+2025-10-28 22:31:28,073 - INFO - 
+[STEP 1] Running accurate_scraper.py...
+2025-10-28 22:31:54,407 - ERROR - PIPELINE_FAILED: Scraper failed: /Users/kunsang.tsering/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/kunsang.tsering/Desktop/reddit-competitor-sentiment/accurate_scraper.py", line 674, in <module>
+    main()
+  File "/Users/kunsang.tsering/Desktop/reddit-competitor-sentiment/accurate_scraper.py", line 612, in main
+    data = scraper.scrape_weekly_data()
+  File "/Users/kunsang.tsering/Desktop/reddit-competitor-sentiment/accurate_scraper.py", line 318, in scrape_weekly_data
+    if not self.should_exclude_post(post):
+  File "/Users/kunsang.tsering/Desktop/reddit-competitor-sentiment/accurate_scraper.py", line 558, in should_exclude_post
+    if promo_sub in subreddit:
+NameError: name 'subreddit' is not defined
+
+2025-10-28 22:32:13,964 - INFO - ============================================================
+2025-10-28 22:32:13,964 - INFO - BRIAN'S COMPETITOR ANALYSIS - COMPLETE AUTOMATION
+2025-10-28 22:32:13,964 - INFO - ============================================================
+2025-10-28 22:32:13,964 - INFO - ABS PATH: /Users/kunsang.tsering/Desktop/reddit-competitor-sentiment
+2025-10-28 22:32:13,964 - INFO - Week mode: MON_SAT
+2025-10-28 22:32:13,964 - INFO - Week end override: 2025-10-25
+2025-10-28 22:32:13,964 - INFO - 
+[STEP 1] Running accurate_scraper.py...
+2025-10-28 22:32:39,043 - INFO - [SUCCESS] Scraper completed - data saved to working_reddit_data.json
+2025-10-28 22:32:39,043 - INFO - 
+[STEP 2] Processing raw data...
+2025-10-28 22:32:39,055 - INFO - [SUCCESS] Raw data processing complete - files saved with 2025-10-28
+2025-10-28 22:32:39,055 - INFO - 
+[STEP 3] Generating Step 1 chart...
+2025-10-28 22:32:39,691 - INFO - [SUCCESS] Step 1 chart generated successfully
+2025-10-28 22:32:39,691 - INFO - 
+[STEP 4] Generating Step 2 ACTIONABLE analysis...
+2025-10-28 22:32:39,745 - INFO - [SUCCESS] Step 2 analysis generated successfully
+2025-10-28 22:32:39,745 - INFO - \n[STEP 5] Generating Step 3 competitor analysis...
+2025-10-28 22:32:39,776 - INFO - [SUCCESS] Step 3 competitor analysis generated successfully
+2025-10-28 22:32:39,776 - INFO - 
+[STEP 5] Running Brian's validation rules...
+2025-10-28 22:32:39,777 - INFO - [SUCCESS] All validation rules PASSED
+2025-10-28 22:32:39,777 - INFO - 
+[STEP 6] Archiving artifacts...
+2025-10-28 22:32:39,786 - INFO - [SUCCESS] Artifacts archived to reports/archive/2025-10-28
+2025-10-28 22:32:39,786 - INFO - 
+[STEP 7] Updating homepage with current data...
+2025-10-28 22:32:39,820 - INFO - [SUCCESS] Homepage updated with current actionable data
+2025-10-28 22:32:39,820 - INFO - 
+[STEP 8] Git commit and push...
