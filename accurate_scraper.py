@@ -535,66 +535,40 @@ class AccurateScraper:
     def should_exclude_post(self, post):
         """Filter out spam/promo content as per Brian's spec"""
         text = (post['title'] + ' ' + post['selftext']).lower()
+        title = post['title'].lower()
+        subreddit = post.get('subreddit', '').lower()
         
         # Check for excluded keywords
         for keyword in EXCLUDE_KEYWORDS:
             if keyword.lower() in text:
                 return True
         
-        # AGGRESSIVE BLACKLIST: Block all non-food/meal-kit subreddits
-        # Based on actual false positives found in Factor75 data
-        subreddit = post.get('subreddit', '').lower()
-        irrelevant_subreddits = [
-            # Crypto/Finance
-            'vechain', 'auxlycannabis', 'nepalstock', 'ffie', 'blockdaginvestors',
-            'letsexchange', 'secwatch', 'secfilingsai', 'flankinvesting',
-            # Shopping/Frugal (non-food)
-            'frugal_ind', 'gamecollecting', 'buyitforlife', 'dailygolfsteals',
-            # Tech/Gaming
-            'callofdutymobile', 'virtualreality', 'pcbuild', 'gaminglaptops',
-            'suggestalaptop', 'hardwareswap', 'flashlight', 'smartwatch',
-            # Hobbies/Lifestyle
-            'fountainpens', 'acousticguitar', 'mtg', 'watches', 'iems',
-            'cookware', 'tools', 'detailing', 'broncosport', 'forddiesels',
-            # Health/Medical (non-food)
-            'fasting', 'epilepsy', 'askvet', 'varicocele', 'bevelhealth',
-            # Other
-            'letstalkmusic', 'funk', 'dangelo', 'boruto', 'amandaknox',
-            'divorce_men', 'aita_wibta_public', 'apprenticeuk', 'velo',
-            'giftcardexchange', 'cozumel', 'heatpumps', 'capitalismvsocialism',
-            # User profiles (spam)
-            'u_upper-bit4889', 'u_guilty-age5580', 'u_uncommonwebdesign',
-            'u_rahulsingh1991', 'u_junioroffice2289', 'u_atlantarecordingus',
-            'u_nittotireusa', 'u_intelligent-field812', 'u_party-pension8925',
-            'u_funfamous274', 'u_one_scallion_6415', 'u_webtrills7',
-            'u_significant-war-7247',
-            # Poetry/Creative
-            'poems', 'ocpoetry', 'poetry',
-            # Tech/Dev
-            'dyadbuilders', 'programming', 'coding',
-            # Domain sales
-            'domains', 'domainsales',
-            # Gossip/Drama
-            'himrfam', 'gossip', 'ahneet2', 'snarkingonselena',
-            # Marketing/SEO spam
-            'instagrammarketing', 'socialmediamarketing', 'seojobs',
-            'mktgsupermarket', 'digitalmarketinghelp', 'joshmaraney',
-            'marketingsecrets101', 'jobhuntify',
-            # Job/Career
-            'stock_trading_india', 'cpa',
-            # Random
-            'labubuswap', 'leopardgeckos', 'skincareaddicts', 'skincareaddictionuk',
-            'canadianrepladies', 'r4r30plus', 'keepthisinmind', 'recording',
-            'cocktails', 'privatehealthcoveruk', 'ped_asthma_rsv', 'animation',
-            'facebookads', 'allbasescoveredstocks', 'udemyfreeebies',
-            'psychology_india', 'hotshotstartup', 'thecowboybunkhouse',
-            'bestlaptopdeals', 'whatcarshouldiby',
-            'golf', '2under2', 'shook'
+        # WHITELIST APPROACH: Only keep posts from meal-kit related subreddits
+        # OR posts that explicitly mention meal kits/meal delivery/meal service
+        meal_kit_subreddits = [
+            'hellofresh', 'factor75', 'blueapron', 'homechef', 'marleyspoon',
+            'hungryroot', 'mealkits', 'mealkit', 'readymeals', 'mealprep',
+            'mealplanning', 'eatcheapandhealthy', 'cooking', 'recipes',
+            'foodhacks', 'budgetfood', 'easyrecipes', 'quickmeals'
         ]
         
-        for irrelevant in irrelevant_subreddits:
-            if irrelevant in subreddit:  # Partial match to catch variations
-                return True
+        # Check if post is from a meal-kit subreddit
+        is_meal_kit_sub = any(mk_sub in subreddit for mk_sub in meal_kit_subreddits)
+        
+        # Check if post explicitly discusses meal kits/services
+        meal_service_keywords = [
+            'meal kit', 'meal service', 'meal delivery', 'meal plan',
+            'food delivery', 'prepared meals', 'ready meals', 'meal subscription',
+            'hellofresh', 'factor75', 'factor 75', 'blue apron', 'home chef',
+            'marley spoon', 'hungryroot', 'purple carrot', 'dinnerly',
+            'everyplate', 'gobble', 'sunbasket', 'freshly', 'cookunity'
+        ]
+        
+        discusses_meal_service = any(keyword in text for keyword in meal_service_keywords)
+        
+        # KEEP post if it's from a meal-kit subreddit OR discusses meal services
+        if not (is_meal_kit_sub or discusses_meal_service):
+            return True  # Exclude if neither condition is met
         
         # ACTIONABLE FILTER: Remove referral/promo spam
         spam_keywords = ['referral', 'promo code', 'free box', 'discount', 'coupon', 'voucher', 'gift card']

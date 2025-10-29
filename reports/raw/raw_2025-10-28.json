@@ -1,11 +1,11 @@
 {
-  "scrape_timestamp": "2025-10-29T02:44:49.123210+00:00",
-  "processing_timestamp": "2025-10-29T02:44:49.123232+00:00",
+  "scrape_timestamp": "2025-10-29T02:56:08.566354+00:00",
+  "processing_timestamp": "2025-10-29T02:56:08.566380+00:00",
   "date_range": {
     "start": "2025-10-27T00:00:00+00:00",
     "end": "2025-11-01T23:59:59+00:00"
   },
-  "total_posts": 24,
+  "total_posts": 17,
   "data_sources": {
     "HelloFresh": [
       "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -30,14 +30,14 @@
   },
   "filter_stats": {
     "HelloFresh": {
-      "pre": 65,
-      "post": 7,
-      "removed": 58
+      "pre": 68,
+      "post": 9,
+      "removed": 59
     },
     "Factor75": {
-      "pre": 128,
-      "post": 14,
-      "removed": 114
+      "pre": 130,
+      "post": 5,
+      "removed": 125
     },
     "Home Chef": {
       "pre": 0,
@@ -46,8 +46,8 @@
     },
     "Blue Apron": {
       "pre": 5,
-      "post": 4,
-      "removed": 1
+      "post": 5,
+      "removed": 0
     },
     "Marley Spoon": {
       "pre": 1,
@@ -64,8 +64,8 @@
     {
       "title": "This didn\u2019t used to have an upcharge!",
       "selftext": "This is a longtime favorite of ours and now there\u2019s an upcharge for it! It used to have the \u201cbest seller\u201d ID on it, before HF got obsessed with protein ",
-      "score": 8,
-      "num_comments": 6,
+      "score": 9,
+      "num_comments": 7,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oish8t/this_didnt_used_to_have_an_upcharge/",
       "created_utc": 1761703480.0,
@@ -84,7 +84,7 @@
     {
       "title": "Nightly dinner pic of spicy maple chicken and weekly meal list this week \ud83d\ude04",
       "selftext": "These are my recipes that got delivered this week let me know if any of you have made these/how they are! \n\n- spicy maple chicken\n- cheesy smash burgers (ive gotten this one more than once because it\u2019s easy and I love making the fries) \n- silky Sicilian chicken penne \n- steak au poivre with maple sage sweet potatoes and lemony asparagus \n- cheesy chicken enchiladas \n\n\nPic is the maple chicken. I just want to say that I feel bad for people that blindly follow some of these recipes for the first time that contain pepper flakes and trust hello fresh enough to EVER put the entire pack of red pepper flakes. I literally never use the whole pack of pepper flakes or seasoning in general. For this recipe i literally used barely any, only used a pinch and tossed out the rest and it was still a tad too spicy for us, imagine if I\u2019d put in the whole packet! \ud83e\udd75\ud83e\udd75\n\n",
-      "score": 4,
+      "score": 3,
       "num_comments": 1,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oiposn/nightly_dinner_pic_of_spicy_maple_chicken_and/",
@@ -93,7 +93,7 @@
         "HelloFresh"
       ],
       "author": "Fit-Elderberry7120",
-      "upvote_ratio": 1.0,
+      "upvote_ratio": 0.81,
       "is_self": false,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -104,7 +104,7 @@
     {
       "title": "Some of my cheap go-to Aldi meals for two!",
       "selftext": "Some other recipes I make but they need a few more ingredients than Aldi usually has:\n\n\\- [Turkish pasta](https://www.reddit.com/r/tonightsdinner/comments/1j3zzq5/i_can_not_and_will_not_stop_eating_this_damn/)\n\n\\- [Pork schnitzel](https://www.hellofresh.com/recipes/pork-schnitzel-5dc042bdabd5bb5e5c129538)\n\n\\- [Firecracker meatballs](https://www.hellofresh.com/recipes/firecracker-meatballs-5ea70fe14c4efb3fb12140f1)",
-      "score": 452,
+      "score": 462,
       "num_comments": 36,
       "subreddit": "aldi",
       "url": "https://reddit.com/r/aldi/comments/1oiju6o/some_of_my_cheap_goto_aldi_meals_for_two/",
@@ -124,7 +124,7 @@
     {
       "title": "A Word of Caution - DO NOT Redeem Gift Cards/Vouchers",
       "selftext": "I've been subscribed to HelloFresh for over 2 years now, I originally subscribed when they offered the free add-on item for life with any active subscription. Loved all the fresh and delicious meals I've cooked over the years. \n\nLast Christmas, I was gifted a voucher for one free box from a family member (as an aside, it didn't even cover the full box price, only $80 but whatever). I finally redeemed it two weeks ago, and last week I received an email saying my subscription had been cancelled. I immediately logged in and re-activated the subscription, and confirmed there was an active card on file still. My assumption is their system tried redeeming the gift card a second time, saw zero balance, and cancelled the account... But honestly I am unsure how this happened. Their support team offered no answers. I also noticed I no longer get the free add-on item with my weekly box and so I called customer service to report this issue.\n\nAfter multiple calls with their customer service, their best solution for me was offering me 40% off for one box, stating that they no longer offer the free item for life voucher and as such cannot re-activate it on my account. \n\nI am writing this post after a half hour long frustrating call with them where I cancelled my subscription and will be looking elsewhere since they refused to honor their own mistake. \n\nIf you plan on redeeming any sort of gift voucher code, please double check your account the following week or share the same situation I find myself in.",
-      "score": 9,
+      "score": 10,
       "num_comments": 2,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oic9jq/a_word_of_caution_do_not_redeem_gift_cardsvouchers/",
@@ -133,7 +133,7 @@
         "HelloFresh"
       ],
       "author": "oldaccsuspndedwhy",
-      "upvote_ratio": 0.85,
+      "upvote_ratio": 0.92,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -142,24 +142,24 @@
       "reasoning": "VADER: 0.99, TextBlob: 0.24"
     },
     {
-      "title": "A Not-So-Miracle but a Major Shift: What the Latest GLP-1 Data Means for Obesity Care",
-      "selftext": "Hey everyone! Dr. Vijai Chandra here, co-founder of Joult Health. I wanted to share some thoughts on a [recent article by NPR](https://www.npr.org/sections/shots-health-news/2025/10/28/nx-s1-5587805/glp-1-ozempic-zepbound-gallup-obesity-rate) that caught my eye: according to a report via Gallup, the U.S. adult obesity rate has dipped to 37 percent, down from nearly 40 percent just a few years ago.\u00a0\n\n  \nThat decline happens to line up with a large uptick in use of GLP-1 receptor agonists (the drugs behind brands like Ozempic, Zepbound etc) for weight management.\u00a0\n\nI wanted to talk about how I\u2019m interpreting these numbers, how Joult Health is placing itself in the mix, and what I think matters as we move forward.\n\n# What the data shows:\n\n* The obesity rate of 37 percent is meaningful because for decades the U.S. obesity number was stuck, or creeping upward.\n* The usage of GLP-1 weight-loss drugs has more than doubled recently, from about 5.8 percent in early 2024 to 12.4 percent in surveys.\n* The decline in obesity appears stronger among the 40-64 age group \u2014 the group where uptake of GLP-1s is highest.\u00a0\n\n# What this means and why I\u2019m cautiously optimistic:\n\nAt Joult Health, our mission is to reduce obesity and chronic health conditions by giving people access to medical tests, data insights, and when eligible, GLP-1 medications. What these recent numbers suggest is that\u00a0**the physiology of obesity is being addressed in a meaningful way**\u00a0\u2014 not just via diet/exercise alone but via pharmacology\u00a0*plus*\u00a0data-driven support.\n\nHere\u2019s what I like:\n\n* We\u2019re moving toward treating obesity like the complex metabolic condition it is \u2014 not just \u201ceat less, move more.\u201d The brain, hormones, metabolism all matter.\n* The fact that a measurable drop in obesity coincides with wider GLP-1 use hints that these medications may be shifting the baseline of what \u201cnormal\u201d weight looks like for many people.\n* For our model at Joult, the data-first approach (tracking labs, measuring metabolic biomarkers, monitoring progress) becomes even more relevant: medication helps, but without monitoring you lose insight and risk inefficient or unsafe care.\n\n# But, and yes there\u2019s a but. (no pun intended!)\n\nI remain cautious for several reasons:\n\n* **Correlation is not causation.** Just because obesity rates dropped while GLP-1 use climbed doesn\u2019t mean the drugs alone are responsible. Other changes (diet culture shifts, public health programs, etc) might play roles.\n* **Access remains unequal.** These drugs tend to be used by those who can get them (age, insurance status, cost factors) which means the benefit may not reach everyone equally.\n* **Long-term outcomes matter.** Weight loss is useful, but what we care most about is reducing cardiovascular risk, improving metabolic health, improving quality of life \u2014 not just hitting a number on the scale.\n* **Sustainability is a question.** If people stop the medication or no longer adhere, weight regain is a risk. Stopping the drug doesn\u2019t always mean the metabolic shift remains.\n\nHere\u2019s how we think about it at Joult Health:\n\n1. **Baseline testing.**\u00a0Before starting any medication (including GLP-1s) we do metabolic panels, hormone checks, body composition measurements, and get the \u201clay of the land.\u201d\n2. **Eligibility & guided use.**\u00a0Not everyone is a candidate for GLP-1s. We screen for underlying conditions, contraindications, and ensure patients understand what the medication can\u00a0*and cannot*\u00a0do.\n3. **Lifestyle integration.**\u00a0Medication is not a standalone fix \u2014 we integrate dietary guidance, physical activity planning, stress & sleep optimization. The medication opens a \u201cwindow of opportunity\u201d and you fill it with good habits.\n4. **Data monitoring and adaptation.**\u00a0We track labs, metrics, subjective feedback (e.g., \u201cfood noise\u201d, cravings, mood) and adjust protocols. This is part of the \u201cdata-first\u201d promise.\n5. **Equity lens.**\u00a0We are trying to make access broader and transparent. The more people who can benefit safely, the more the population effect improves.\n\n# My take-home message:\n\nIf you\u2019re reading this and thinking:\u00a0*\u201cIs this miracle time for obesity?\u201d*, I\u2019d say yes\u2026 but\u00a0*with caveats*. We\u2019re seeing real progress. The drop to 37 percent is a signal that this class of drugs plus system changes\u00a0**might**\u00a0be shifting the curve. But we\u2019re still early days. It\u2019s not a silver bullet. It\u2019s a powerful tool.\n\nIf you are considering taking action (whether via Joult or another provider), ask these questions:\n\n* **Are you being assessed properly** (labs, baseline, overall health)?\n* Are you clear on what the medication\u00a0*can*\u00a0do and what it\u00a0*can\u2019t*?\n* Do you have a support system (nutrition/exercise/sleep/stress) to make the most of the intervention?\n* Are you clear on monitoring, side-effects, cost, long-term plan?\n\nWould love to hear from you, especially if you\u2019ve used or considered GLP-1s, or if you\u2019re working in obesity/chronic care management. What\u2019s your experience? What worries you? What excites you?",
-      "score": 1,
+      "title": "We were testing how to turn FAQ-style content into scroll-stoppers.",
+      "selftext": "So we looked at HelloFresh\u2019s \u201cWhat is HelloFresh?\u201d video, the kind of explainer that usually flops on TikTok. But this one held view rate longer than we expected.   \n  \nWhy?\n\nThe structure was clean: direct voiceover, fast cuts, and visual proof of value (fresh ingredients, cooking, plating). Basically, they explained but didn\u2019t bore. It felt like \u201ctalking to a friend who cooks more than you.\u201d\n\nWe tried something similar for a food client.\n\nVersion A: classic FAQ script, lots of brand lines.  \nVersion B: same info but rephrased like a comment reply (\u201ceveryone keeps asking what this is, so here\u2019s the deal\u2026\u201d).\n\nB pulled +23% higher watch time and +12% CTR.\n\nThe comment-style hook gave it that native feel, while the explainer stayed tight enough to educate.\n\nOur takeaway: FAQ content doesn\u2019t need to be brand talking to camera.   \nIt works when it sounds like an answer inside the feed, not an ad dropped into it.\n\nAnyone else tested FAQ or \u201canswer format\u201d creatives lately? Curious if it performs across non-food categories too.\n\n",
+      "score": 2,
       "num_comments": 0,
-      "subreddit": "JoultHealth",
-      "url": "https://reddit.com/r/JoultHealth/comments/1oimzkq/a_notsomiracle_but_a_major_shift_what_the_latest/",
-      "created_utc": 1761689131.0,
+      "subreddit": "shook",
+      "url": "https://reddit.com/r/shook/comments/1ois5x1/we_were_testing_how_to_turn_faqstyle_content_into/",
+      "created_utc": 1761702595.0,
       "competitors_mentioned": [
-        "Factor75"
+        "HelloFresh"
       ],
-      "author": "DrChandra_Longevity",
+      "author": "Shama_lala",
       "upvote_ratio": 1.0,
-      "is_self": true,
+      "is_self": false,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh+food+brand&type=posts&t=week",
       "sentiment": "positive",
       "confidence": 1.0,
-      "reasoning": "VADER: 1.00, TextBlob: 0.16"
+      "reasoning": "VADER: 0.97, TextBlob: 0.12"
     },
     {
       "title": "Factor75 ingredient lists",
@@ -204,7 +204,7 @@
     {
       "title": "Mmmm! Mystery \"Poultry\" FACTOR meal!",
       "selftext": "",
-      "score": 8,
+      "score": 10,
       "num_comments": 7,
       "subreddit": "factor75",
       "url": "https://reddit.com/r/factor75/comments/1ohnxa6/mmmm_mystery_poultry_factor_meal/",
@@ -213,173 +213,13 @@
         "Factor75"
       ],
       "author": "PurpleCatBlues",
-      "upvote_ratio": 0.91,
+      "upvote_ratio": 1.0,
       "is_self": false,
       "source_brand": "Factor75",
       "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
       "sentiment": "neutral",
       "confidence": 1.0,
       "reasoning": "VADER: 0.00, TextBlob: 0.00"
-    },
-    {
-      "title": "The Uncomfortable Truth About Cashmere and How Sustainable Herding Makes All the Difference",
-      "selftext": "Hey everyone,\n\nI spend a lot of time working with cashmere, and while the silky-soft feel is what we all love, there's an uncomfortable reality behind the luxury that rarely gets discussed. It boils down to this: not all cashmere is created equal, and the cheap stuff is literally changing the face of the planet.\n\nI wanted to break down the \"fast fashion cashmere\" problem and show you what true, sustainable luxury cashmere production actually looks like on the ground.\n\n**The Problem: Why Your $50 Cashmere Sweater Isn't a Bargain**\n\nCashmere comes from the fine undercoat of the Cashmere goat, which is naturally shed in the spring. It's rare, it's fine (measured in microns), and it's expensive to produce ethically.\n\nThe issue started when fast fashion brands caught on. When demand skyrocketed, the price had to plummet. To meet this massive, cheap demand, producers did three things that created a huge ecological and quality crisis:\n\n1. **They Increased Herd Sizes Dramatically:** More goats = more cashmere. Simple, right? But the fragile grasslands and ecosystems in places like Mongolia and Tibet can only sustain a certain number of grazing animals.\n2. **Overgrazing & Desertification:** Goats don't *trim* grass; they uproot it. When there are too many goats in one area, they eat the root systems, leaving the soil exposed. This accelerates desertification\u2014turning fertile land into desert. It\u2019s an irreversible environmental disaster.\n3. **They Took Short, Coarse Fibers:** When quality is ignored for quantity, they harvest *all* the fiber, including the coarser, shorter hairs. This requires more chemical processing to soften it up, and it's why that bargain sweater pills into a ball of fluff after three wears. The quality is bad because the production is destructive.\n\nThe result is a fiber that's cheaper, less durable, and comes with a high environmental cost.\n\n**The Solution: Back to Tradition and Regenerative Practices**\n\nTo make cashmere truly \"natural\" and ethical, you have to prioritize the health of the land and the animal over profit margins. This is the ethos we follow.\n\n**1. Working with Small Nomadic Families, Not Industrial Farms:** Instead of huge industrial herds, we partner with small, traditional nomadic communities in the Himalayas. For generations, they have practiced rotational grazing. They move their herds seasonally to let the pastureland fully recover. This ensures the grass roots are strong, the soil stays healthy, and the ecosystem is preserved.\n\n**2. Paying a Premium for \"Grade A\" Fiber:** We deliberately pay a significantly higher price (often 3-4x more) for the longest, finest fibers (often 14-15 microns). Why?\n\n* **It's Rarity:** The finest fiber comes from the neck and underbelly, and you only get a few ounces per goat per year.\n* **It\u2019s Durability:** Longer fibers mean tighter, stronger yarn. This is the difference between a sweater that pills immediately and one you wear for two decades. The best quality is a direct result of the most sustainable, low-impact practice.\n\n**3. True Transparency (The Social Impact):** In many regions, low cashmere prices hurt the herders. Our model ensures the communities we work with are paid a fair, above-market wage. This stabilizes their traditional way of life, which is essential for maintaining the very sustainable herding practices the land needs. You are essentially investing in the stability of a whole ecosystem and culture.\n\n**The Impact: Why it Matters to Your Wardrobe**\n\nWhen you choose truly sustainable cashmere, the fiber is:\n\n* **Truly Natural:** It is minimally processed because the quality is already high.\n* **Stronger and Lasts Longer:** It holds its shape and structure, making it a genuine investment piece.\n* **Inherently Ethical:** The environmental and social debt is factored out, leaving you with an item that genuinely feels good, in every sense of the word.\n\nIt\u2019s about shifting your mindset from 'fast fashion luxury' to 'slow fashion investment.' A single, high-quality, sustainably-sourced cashmere item is a zero-waste win compared to five cheap sweaters that will end up in a landfill.\n\nWhat are your thoughts on this? Have you noticed a difference in quality between a mass-market cashmere sweater and one from a smaller, ethical source?\n\nFull disclosure: I am a co-founder of a luxury cashmere brand called Himalayan Warmth. My intent here is purely educational. We believe people should know the whole story behind their clothes, regardless of where they shop.",
-      "score": 9,
-      "num_comments": 5,
-      "subreddit": "SustainableFashion",
-      "url": "https://reddit.com/r/SustainableFashion/comments/1oilryo/the_uncomfortable_truth_about_cashmere_and_how/",
-      "created_utc": 1761686275.0,
-      "competitors_mentioned": [
-        "Factor75"
-      ],
-      "author": "HimalayanWarmth",
-      "upvote_ratio": 0.74,
-      "is_self": true,
-      "source_brand": "Factor75",
-      "source_url": "https://www.reddit.com/search/?q=factor+mealkit+brand&type=posts&t=week",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 1.00, TextBlob: 0.14"
-    },
-    {
-      "title": "Need help: First time car buyer",
-      "selftext": "Planning to buy a car in first week of jan 2026 under 20 lakhs budget (can increase by 1-2 lakhs). My daily travel sums around 80 kms and fuel efficiency is my priority. I am expecting to use the car for atleast 10 years. I have been researching online for the past 2 weeks but couldn't get out of this dilemma: hybrid vs electric\n\nFactors not to choose hybrid: Rapidly changing fuel policies may cause engine issues in future (E30 policy by 2030)\n\nFactors not to choose electric: Battery reliability in long run. Standard battery warranty is around 8 years on an average for most brands.\n\nAny advice or factors to consider in making a good decision is appreciated ",
-      "score": 1,
-      "num_comments": 4,
-      "subreddit": "CarsIndia",
-      "url": "https://reddit.com/r/CarsIndia/comments/1oi8z2x/need_help_first_time_car_buyer/",
-      "created_utc": 1761657105.0,
-      "competitors_mentioned": [
-        "Factor75"
-      ],
-      "author": "Prize_Captain5950",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "Factor75",
-      "source_url": "https://www.reddit.com/search/?q=factor+mealkit+brand&type=posts&t=week",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.88, TextBlob: 0.13"
-    },
-    {
-      "title": "Torn between three vehicle options!",
-      "selftext": "Hello all!\nI am shopping around for a new vehicle to upgrade from my Civic. I am looking for something a little more capable although I do not go off-roading, just some light trails in the desert for shooting and whatnot. They are too much for the Civic but any crossover/SUB/truck will make it just fine.\nI have narrowed it down to three options:\n1. 2020 4Runner 48k miles\n I am a GM technician and I am getting a great discount on this used 4Runner that is on our lot, but it has no warranty and I enjoy the piece of mind that comes with warranty even though I am a mechanic. (parts are expensive!) I would probably purchase an aftermarket service contract with it even though it is known as a reliable vehicle but they won\u2019t let me do my own repairs with the warranty so I\u2019ll have to have a buddy do it. \n\n2. 2024 GMC Canyon 18k miles\nThis one is CPO and I am able to perform my own repairs under this warranty. Downside is it is GM junk, so the longevity is not there, it will probably need major engine and transmission work around 100k or less. Upside is I know them well. I love driving these little trucks and I love the interior. I hate that it is a piece of crap at the end of the day but hey, warranty!\nI would get paid to fix it on the clock! Plus I get discounts on all the GM parts, accessories, and maintenance items. \n\n3. 2025 Toyota Rav 4 XLE Brand New\nThis one meets all of my needs but doesn\u2019t have the \u201ctruck factor\u201d for me. I like how they look but at the same time I don\u2019t feel like it\u2019s a \u201ccool\u201d vehicle, but more so a smart and stylish choice. It has the added benefit of great MPG like my Civic but it isn\u2019t a top priority as I don\u2019t drive that much. I understand that is is the best daily driver of the three.\n\nAt the end of the day the 4 Runner is what I have wanted since high school (2014) \nBut I also would enjoy the warranty and having the ability to do all my own work during that period on the Canyon\nI feel like either Toyota is a much better financial choice though. \nThoughts?",
-      "score": 3,
-      "num_comments": 4,
-      "subreddit": "whatcarshouldIbuy",
-      "url": "https://reddit.com/r/whatcarshouldIbuy/comments/1oi8o3t/torn_between_three_vehicle_options/",
-      "created_utc": 1761656298.0,
-      "competitors_mentioned": [
-        "Factor75"
-      ],
-      "author": "thenewguy_1995",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "Factor75",
-      "source_url": "https://www.reddit.com/search/?q=factor+mealkit+brand&type=posts&t=week",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 1.00, TextBlob: 0.23"
-    },
-    {
-      "title": "Which soundbar is right for my home theater?",
-      "selftext": "Hey everyone! I've been a home theater enthusiast for over 8 years now, and I wanted to share my experience about choosing the perfect soundbar. I know how overwhelming it can be when you're trying to upgrade your TV audio setup, especially with so many options out there.\n\nRecently, I spent countless hours researching soundbars for my living room setup, and I've learned quite a bit that might help you out. First things first - your room size matters a lot. If you've got a smaller space, a 2.1 channel soundbar might be all you need. But for larger rooms, you might want to consider a 5.1 or even a 7.1 channel system for that immersive surround sound experience.\n\nI personally went with a Dolby Atmos-enabled soundbar (you can check out some great options here: https://athometouch.com/soundbar), and let me tell you, the difference is night and day! The overhead sound effects make movie nights feel like you're in a real theater.\n\nHere's what I consider most important when choosing a soundbar:\n\n1. Room Size and Layout\n2. Budget (good ones range from $200-$1000+)\n3. Connection Options (HDMI, Optical, Bluetooth)\n4. Additional Features (Voice Control, WiFi streaming)\n5. Brand Reliability\n\nOne thing that often gets overlooked is the subwoofer situation. Some soundbars come with wireless subwoofers, while others let you add one later. If you're big on action movies or bass-heavy music, definitely consider a system with a good subwoofer.\n\nFor gaming, look for soundbars with low latency and HDMI 2.1 support. These features ensure your audio stays perfectly synced with what's happening on screen. Trust me, in fast-paced games, this makes a huge difference!\n\nI've found some really good deals at https://athometouch.com/soundbar - they've got a solid selection of soundbars ranging from budget-friendly to premium options.\n\nWhat about smart features? Most modern soundbars come with Alexa or Google Assistant built-in, which is super convenient for voice control and streaming music. But if you don't care about these features, you can save some money by going for a simpler model.\n\nOne pro tip: Don't just focus on the specs. Read user reviews about real-world performance and reliability. Sometimes a mid-range soundbar with great tuning can sound better than a more expensive one with fancy features you might never use.\n\nAnyone else here running a soundbar setup? I'd love to hear about your experiences and what factors influenced your choice!",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "AskHome",
-      "url": "https://reddit.com/r/AskHome/comments/1oht702/which_soundbar_is_right_for_my_home_theater/",
-      "created_utc": 1761605532.0,
-      "competitors_mentioned": [
-        "Factor75"
-      ],
-      "author": "Xtra4Good",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "Factor75",
-      "source_url": "https://www.reddit.com/search/?q=factor+mealkit+brand&type=posts&t=week",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 1.00, TextBlob: 0.33"
-    },
-    {
-      "title": "Protease\u2010Activated Receptor 2 Activation Provokes an Increase in Intracellular Calcium and Serotonin Secretion in a Human Enteroendocrine Cell Line",
-      "selftext": "# ABSTRACT\n\nThe P\u2010STS human ileal enteroendocrine tumor cell line responds with an increase in intracellular calcium and serotonin secretion to acetylcholine and histamine. Here we show that the cells react similarly to the protease\u2010activated receptor 2 (PAR2) agonists trypsin and SLIGRL\u2010NH2 peptide. The calcium increase induced by both agonists is inhibited by the PAR2 antagonist I\u2010191. PAR2\u2010IN\u20101, another PAR2 antagonist, did not inhibit the response to the agonist peptide. Trypsin can also be looked upon as a surrogate for mast cell tryptase which cleaves PAR2 at the same site as trypsin. As mast cells may secrete tryptase simultaneously with histamine in close proximity to enteroendocrine cells, we tested whether trypsin and histamine might induce mutual desensitization. Histamine did not desensitize the response to trypsin and trypsin did not desensitize the response to histamine or acetylcholine. Further known effects of short\u2010time incubation with trypsin, namely phosphorylation of p38 mitogen\u2010activated protein kinase and activation of the nuclear factor \u03baB pathway, were not detected in P\u2010STS cells. In conclusion, our findings indicate that **serotonin secretion by enterochromaffin cells** in response to **PAR2 activation** might contribute to gastrointestinal symptoms **after mast cell activation by food allergens** or irritable bowel syndrome. **Our data suggest that histamine and mast cell tryptase may have at least additive effects on serotonin secretion.**",
-      "score": 1,
-      "num_comments": 1,
-      "subreddit": "IBSResearch",
-      "url": "https://reddit.com/r/IBSResearch/comments/1oiszph/proteaseactivated_receptor_2_activation_provokes/",
-      "created_utc": 1761704968.0,
-      "competitors_mentioned": [
-        "Factor75"
-      ],
-      "author": "Robert_Larsson",
-      "upvote_ratio": 1.0,
-      "is_self": false,
-      "source_brand": "Factor75",
-      "source_url": "https://www.reddit.com/search/?q=factor+food+brand&type=posts&t=week",
-      "sentiment": "neutral",
-      "confidence": 0.32,
-      "reasoning": "VADER: -0.73, TextBlob: -0.05"
-    },
-    {
-      "title": "Differential Effects of Probiotic Strains on Chronic Stress-Exacerbated Colonic Motility in Rats: A Comparative Evaluation",
-      "selftext": "# Abstract\n\n**Background/Objectives:** Psychological stress is a main factor in the pathophysiology of irritable bowel syndrome (IBS) and contributes to changes in gastrointestinal motility and inflammatory responses. We investigated the effects of three probiotic strains,\u00a0*Lactobacillus brevis*\u00a0N1,\u00a0*L. brevis*\u00a0N2, and\u00a0*Bacillus amyloliquefaciens*\u00a0S1, isolated from Korean fermented foods, on stress-induced colonic hypermotility and inflammatory signaling in a rat model. \n\n**Methods:** Thirty female Wistar rats were divided into five groups: Control (sham), Stress (water avoidance stress, WAS), Treatment A (WAS +\u00a0*L. brevis*\u00a0N1), Treatment B (WAS +\u00a0*L. brevis*\u00a0N2), and Treatment C (WAS +\u00a0*B. amyloliquefaciens*\u00a0S1) (*n*\u00a0= 6 per group). Rats were exposed to WAS for 1 h daily for nine consecutive days. Furthermore, before stress exposure, probiotics were administered by oral gavage. The fecal pellet output (FPO), body weight, and food intake were recorded daily. Colon tissues were harvested for protein extraction, and inflammatory signaling was evaluated by Western blotting for NF-\u03baB and I\u03baB\u03b1, with \u03b2-actin as loading control. Immunoreactive bands were visualized by enhanced chemiluminescence (ECL) and quantified using ImageJ software version 1.54k. \n\n**Results:** The WAS group showed significantly higher FPO than the sham group (*p*\u00a0< 0.01). FPO was significantly decreased in rats treated with\u00a0*L. brevis*\u00a0N2 compared to that in the WAS-only group (*p*\u00a0< 0.05). Additionally, immunohistochemical analysis revealed that NF-\u03baB expression was suppressed in all the probiotic groups. \n\n**Conclusions:** Therefore, probiotics are suggested to have elevated anti-inflammatory effects through the downregulation of the NF-\u03baB signaling pathway by restoring I\u03baB\u03b1 expression and can be utilized as potential therapeutics for stress-induced gastrointestinal dysfunction.",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "IBSResearch",
-      "url": "https://reddit.com/r/IBSResearch/comments/1oisxcl/differential_effects_of_probiotic_strains_on/",
-      "created_utc": 1761704774.0,
-      "competitors_mentioned": [
-        "Factor75"
-      ],
-      "author": "Robert_Larsson",
-      "upvote_ratio": 1.0,
-      "is_self": false,
-      "source_brand": "Factor75",
-      "source_url": "https://www.reddit.com/search/?q=factor+food+brand&type=posts&t=week",
-      "sentiment": "neutral",
-      "confidence": 0.06,
-      "reasoning": "VADER: -0.97, TextBlob: -0.03"
-    },
-    {
-      "title": "When and why did tomatoes become such a central ingredient in Southern European cuisines?",
-      "selftext": "It's hard to imagine Italian or Spanish food without tomatoes, but I know they are a New World crop. After their introduction to Europe, was there a period of resistance or slow adoption? What were the key historical, agricultural, or social factors that led to tomatoes being embraced so thoroughly in the Mediterranean, transforming the flavor profile of entire national cuisines, as opposed to other regions where their use remained more marginal?\n\n  \n",
-      "score": 14,
-      "num_comments": 10,
-      "subreddit": "AskFoodHistorians",
-      "url": "https://reddit.com/r/AskFoodHistorians/comments/1oioq44/when_and_why_did_tomatoes_become_such_a_central/",
-      "created_utc": 1761693397.0,
-      "competitors_mentioned": [
-        "Factor75"
-      ],
-      "author": "Tookie1010",
-      "upvote_ratio": 0.89,
-      "is_self": true,
-      "source_brand": "Factor75",
-      "source_url": "https://www.reddit.com/search/?q=factor+food+brand&type=posts&t=week",
-      "sentiment": "neutral",
-      "confidence": 0.82,
-      "reasoning": "VADER: -0.19, TextBlob: -0.00"
-    },
-    {
-      "title": "Junk food vegan trying to make the switch, but need advice/encouragement",
-      "selftext": "Hey everyone!\n\nThank you for you time.  I really respect this community and could use advice and support.  I want to join your ranks!\n\n**My food background**\n\nI (30M) went vegan almost overnight a little over 6 years ago for ethical reasons.  \n\nHowever, despite the reputation that accompanies the label, I have been FAR from the pinnacle of nutrition.  Think Oreos and impossible burgers on white bread buns, not broccoli, sweet potatoes, and salads.\n\n**Where I'm currently at** \n\nI've always wanted to get my nutrition on track at some point down the line.  \n\nI'm 6'0 and a little under 180lbs, and in a perfect would I'd like to get to \\~155lbs, get over my fear of the gym, and then put on some bulk.  That said losing weight is NOT the motivating factor for me.\n\nI don't also don't feel bad on my current diet, even though I'm open to (and hope to!) feel better.  What I really want to do it look out for my future health. \n\nI sought out books on nutrition and have found myself working through *How Not to Die* and have found it incredible persuasive.  \n\nIt really seems I can put more years (and more good years!) into my life by changing my diet to WFPB*.*  Combined with my doctor telling me my LDL cholesterol was \"very mildly elevated,\" I've finally found the motivation to clear out all my processed foods, throw away the canned iced tea, and shopped the rainbow at my grocery store. (Cheapest grocery haul ever!)\n\n**My relationship with food**\n\nI don't really like eating, and I don't think I have since I've become vegan.  \n\nI have absolutely zero regrets about that change--but the only foods I really crave are foods I gave up years ago.  I've never become physically grossed out by meat or learned to love veggies, I've never figured out how to keep down mushrooms, and eating broccoli is a chore (even if it's one I can manage).\n\nThe only exceptions are things like impossible whoppers/candy that makes me feel \"meh\" afterwards, and obviously not worth keeping in my diet.\n\nAll this is actually part of the reason I think I'm ready to make this change.  \n\nIf I already think of eating as a necessary habit rather than a source of enjoyment, why not make that habit as good as it can be?  \n\nSure it's not exactly fun, but if you have to take your medicine--why not take the best medicine available.\n\n**My current struggle**\n\nThis brings me to my early attempts to eat a WFPB diet.\n\nJust a couple days in, and I feel like this a lot more than just taking my medicine.\n\nFor breakfast I had tofu patties rolled in nutritional yeast and a bunch of baby kale on toasted whole grain bread.  I also had a banana and 2 mandarin oranges.\n\nFor lunch I cooked a large sweet potato (for the first time!), seasoned it, and ate that alongside another banana and orange.  No oil!!\n\nThe problem?  I did the math and I'm only at like 800 calories on the day even though I feel like I've been eating all day, I'm also still hungry and can't focus on other things.  I had to wake up in the middle of the night to eat peanut butter on toast to get back to sleep.\n\n**What are my options?**\n\nGiven that I don't enjoy eating, and at best tolerate the foods I need to get down--I'm going to be miserable if I have to spend all day preparing and swallowing foods.  At least with an impossible burger I could eat it and feel full for the afternoon.\n\nI'm ready to take my medicine, but I don't want it to take up my whole day literally or mentally.\n\nI suppose I could eat peanut butter, brown rice, and beans every day, but I don't want to burn out on foods I already don't like.\n\n**Help Please :)**\n\nDespite sounding so negative, I really am excited about the benefits of a WFPB diet and want to join your ranks--but I'm looking for a help finding a way to implement the diet that doesn't leave me hungry or unhappy because I have to eat greens 4 hours a day to get enough calories.\n\nAny advice, perspective or encouragement would be so so helpful*.  Thank you!!*\n\n  \n",
-      "score": 17,
-      "num_comments": 16,
-      "subreddit": "WholeFoodsPlantBased",
-      "url": "https://reddit.com/r/WholeFoodsPlantBased/comments/1oin4cs/junk_food_vegan_trying_to_make_the_switch_but/",
-      "created_utc": 1761689440.0,
-      "competitors_mentioned": [
-        "Factor75"
-      ],
-      "author": "Someone_Care",
-      "upvote_ratio": 0.96,
-      "is_self": true,
-      "source_brand": "Factor75",
-      "source_url": "https://www.reddit.com/search/?q=factor+food+brand&type=posts&t=week",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 1.00, TextBlob: 0.13"
     },
     {
       "title": "Trying to find the best meal service for weight loss \u2014 tired of DoorDash and not cooking",
@@ -464,6 +304,27 @@
       "reasoning": "VADER: -0.95, TextBlob: -0.12"
     },
     {
+      "title": "Toddler lunch / dinner cookbook or super easy meal suggestions",
+      "selftext": "Anyone have  cookbook suggestion for toddler lunches and/or super fast family dinners? Or meal services you liked? Hello fresh or blue apron? I\u2019m running out of lunch and dinner ideas and I have no mental energy to even think of what to make.",
+      "score": 1,
+      "num_comments": 2,
+      "subreddit": "2under2",
+      "url": "https://reddit.com/r/2under2/comments/1oiks27/toddler_lunch_dinner_cookbook_or_super_easy_meal/",
+      "created_utc": 1761683974.0,
+      "competitors_mentioned": [
+        "HelloFresh",
+        "Blue Apron"
+      ],
+      "author": "MENTION_it_all1",
+      "upvote_ratio": 1.0,
+      "is_self": true,
+      "source_brand": "Blue Apron",
+      "source_url": "https://www.reddit.com/search/?q=blue+apron+mealkit+brand&type=posts&t=week",
+      "sentiment": "positive",
+      "confidence": 1.0,
+      "reasoning": "VADER: 0.92, TextBlob: 0.28"
+    },
+    {
       "title": "So what service is everybody switching to?",
       "selftext": "I see the official consensus on here is that BA service as a whole has completely tanked ever since the recent rebrand. I\u2019ve been a customer since 2020 and it used to be very unusual to have any problems other than an occasional ingredient substitution or more rarely something that came spoiled. Now, there is some kind of significant issue every single week\u2014 meals entirely missing or incorrect, spoiled food, important ingredients replaced with something completely different (pomegranate syrup replaced with VEGETABLE CONCENTRATE\u2026..) without so much as an explanatory email, and once a box was just skipped entirely without any notice for the first time in 5 years\u2026 of course I report these things every time, but in the past I\u2019d get a response right away, and now it takes several days before I get a partial refund! Like many (or all?) of you, I also got a physical letter in the mail with a coupon code for 50% off the next 2 boxes as a sort of apology for these repeated fuckups, which I guess was effective in terms of making me say \u201cokay I won\u2019t cancel for a couple of weeks,\u201d so I loaded up those boxes with extra stuff so I could get more bang for my buck, and then half of that stuff didn\u2019t even show up\u2026 so I get more credits on my account every week, and the cycle continues \ud83d\ude2d. (Plus, there seem to be more of the same meal options available every week\u2026) \n\nAll of this seems to point to a business that is dying anyway\u2026 I mean handing out 50% off coupons to make up for bad service and then doing nothing to change that service\u2026 it smacks of desperation. I feel like they\u2019ll shutter within a year at this rate. \n\nMeanwhile, I want to use a service like this to meal prep on weekends because I just started a 9-5 office job with a commute. So for me, quick, healthy and nutritious meals (or specifically things geared towards meal prep) would be a priority. (And of course, deliveries that are on time, fresh, and consist of the things that I actually ordered\u2026 but that *should* be a given.) I don\u2019t know much about any other meal kits so I\u2019m kind of lost when it comes to choice here. I tried Hello Fresh for a trial run back in 2020 and my perception was that the meals seemed a bit unhealthy (probably colored by the fact that they were sending random candy bars as freebies lol) but this could be inaccurate/ things could have changed since then.  \n\ntl;dr **If you\u2019re leaving Blue Apron for a different meal kit service, which one are you choosing and why?** Any prior experience you\u2019ve had with these services would be appreciated\u2014 although as we all know, it\u2019s not necessarily applicable to the present, as these things can easily go to shit. ",
       "score": 7,
@@ -507,7 +368,7 @@
     {
       "title": "Stay away from Marley Spoon and Dinnerly",
       "selftext": "I subscribed to see what they had to offer. I browsed for a bit but didn\u2019t like the options so I canceled my subscription 10 mins after signing up. Didn\u2019t think anything of it. Today I get home to a big delivery from both. I check my credit card and I was charged for both. But I canceled, basically right away. Why would they send random food to someone who isn\u2019t subscribed. Such a shady business practice. I called them but of course they are experiencing high call volumes. I used there chatbot on their site and they just end the convo. I disputed it with my credit card company too. This is ridiculous. ",
-      "score": 9,
+      "score": 8,
       "num_comments": 27,
       "subreddit": "mealkits",
       "url": "https://reddit.com/r/mealkits/comments/1ohpgd4/stay_away_from_marley_spoon_and_dinnerly/",
@@ -516,7 +377,7 @@
         "Marley Spoon"
       ],
       "author": "ProblematicSchematic",
-      "upvote_ratio": 0.66,
+      "upvote_ratio": 0.64,
       "is_self": true,
       "source_brand": "Marley Spoon",
       "source_url": "https://www.reddit.com/search/?q=marley+spoon+mealkit+brand&type=posts&t=week",
@@ -544,5 +405,13 @@
       "confidence": 0.13,
       "reasoning": "VADER: -0.86, TextBlob: 0.01"
     }
-  ]
+  ],
+  "brand_counts": {
+    "HelloFresh": 9,
+    "Factor75": 5,
+    "Home Chef": 0,
+    "Blue Apron": 5,
+    "Marley Spoon": 1,
+    "Hungryroot": 1
+  }
 }
