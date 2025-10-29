@@ -1,0 +1,103 @@
+{
+  "generated_utc": "2025-10-28T21:23:09.072974",
+  "date_range": {
+    "start": "2025-10-20",
+    "end": "2025-10-25",
+    "period": "2025-10-20 to 2025-10-25"
+  },
+  "total_posts": 15,
+  "brands": {
+    "HelloFresh": {
+      "total": 2,
+      "positive": 1,
+      "negative": 0,
+      "neutral": 1,
+      "positive_pct": 50.0
+    },
+    "Factor75": {
+      "total": 2,
+      "positive": 1,
+      "negative": 0,
+      "neutral": 1,
+      "positive_pct": 50.0
+    },
+    "Home Chef": {
+      "total": 0,
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0,
+      "positive_pct": 0
+    },
+    "Blue Apron": {
+      "total": 9,
+      "positive": 2,
+      "negative": 0,
+      "neutral": 7,
+      "positive_pct": 22.22222222222222
+    },
+    "Marley Spoon": {
+      "total": 2,
+      "positive": 1,
+      "negative": 0,
+      "neutral": 1,
+      "positive_pct": 50.0
+    },
+    "Hungryroot": {
+      "total": 0,
+      "positive": 0,
+      "negative": 0,
+      "neutral": 0,
+      "positive_pct": 0
+    }
+  },
+  "filter_stats": {
+    "HelloFresh": {
+      "pre": 4,
+      "post": 2,
+      "removed": 2
+    },
+    "Factor75": {
+      "pre": 3,
+      "post": 2,
+      "removed": 1
+    },
+    "Home Chef": {
+      "pre": 0,
+      "post": 0,
+      "removed": 0
+    },
+    "Blue Apron": {
+      "pre": 9,
+      "post": 9,
+      "removed": 0
+    },
+    "Marley Spoon": {
+      "pre": 2,
+      "post": 2,
+      "removed": 0
+    },
+    "Hungryroot": {
+      "pre": 0,
+      "post": 0,
+      "removed": 0
+    }
+  },
+  "data_quality": {
+    "spam_filtered": true,
+    "actionable_only": true,
+    "source": "Reddit API + Web Scraping"
+  },
+  "dashboard_stats": {
+    "hellofresh": {
+      "posts": 2,
+      "positive_pct": 50.0,
+      "performance": "Mixed"
+    },
+    "factor75": {
+      "posts": 2,
+      "positive_pct": 50.0,
+      "performance": "Balanced"
+    },
+    "total_actionable": 15
+  }
+}
