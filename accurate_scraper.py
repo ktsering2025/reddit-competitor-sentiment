@@ -541,6 +541,20 @@ class AccurateScraper:
             if keyword.lower() in text:
                 return True
         
+        # MINIMAL BLACKLIST: Block obviously irrelevant subreddits
+        # Only block subreddits that are clearly not about food/meal kits
+        subreddit = post.get('subreddit', '').lower()
+        obvious_irrelevant = [
+            'poems', 'ocpoetry', 'poetry',  # Poetry
+            'dyadbuilders', 'programming', 'coding',  # Tech/Dev
+            'domains', 'domainsales',  # Domain sales
+            'himrfam', 'gossip',  # Gossip/Drama
+        ]
+        
+        for irrelevant in obvious_irrelevant:
+            if irrelevant == subreddit:  # Exact match only
+                return True
+        
         # ACTIONABLE FILTER: Remove referral/promo spam
         spam_keywords = ['referral', 'promo code', 'free box', 'discount', 'coupon', 'voucher', 'gift card']
         engagement_score = post.get('score', 0) + 3 * post.get('num_comments', 0)
