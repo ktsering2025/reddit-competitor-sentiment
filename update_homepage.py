@@ -5,6 +5,7 @@ Update homepage with current actionable data
 
 import json
 import os
+import re
 from datetime import datetime
 from config import ALL_COMPETITORS, PRIMARY_DEEPDIVE
 
@@ -75,49 +76,71 @@ def update_homepage():
     with open('index.html', 'r') as f:
         html_content = f.read()
     
-    # Update the stats section
-    html_content = html_content.replace(
-        f'<p><strong>Current Data:</strong> 37 actionable posts from global Reddit search (Oct 27-Nov 01, 2025)</p>',
-        f'<p><strong>Current Data:</strong> {total_posts} actionable posts from global Reddit search ({start_date} to {end_date})</p>'
+    # Update using regex for more robust replacements
+    # Update HelloFresh stats (first occurrence after "hellofresh" class)
+    html_content = re.sub(
+        r'(<div class="stat-card hellofresh">.*?<div class="stat-number">)\d+(</div>)',
+        rf'\g<1>{hf_stats.get("total", 0)}\g<2>',
+        html_content,
+        count=1,
+        flags=re.DOTALL
     )
     
-    html_content = html_content.replace(
-        '<div class="stat-number">7</div>',
-        f'<div class="stat-number">{hf_stats.get("total", 0)}</div>'
+    html_content = re.sub(
+        r'(<div class="stat-card hellofresh">.*?<p[^>]*>)\d+% Positive(</p>)',
+        rf'\g<1>{hf_stats.get("positive_pct", 0):.0f}% Positive\g<2>',
+        html_content,
+        count=1,
+        flags=re.DOTALL
     )
     
-    html_content = html_content.replace(
-        '<p style="margin-top: 0.5rem; color: #27ae60; font-weight: bold;">57% Positive</p>',
-        f'<p style="margin-top: 0.5rem; color: #27ae60; font-weight: bold;">{hf_stats.get("positive_pct", 0):.0f}% Positive</p>'
+    # Update Factor75 stats (first occurrence after "factor75" class)
+    html_content = re.sub(
+        r'(<div class="stat-card factor75">.*?<div class="stat-number">)\d+(</div>)',
+        rf'\g<1>{f75_stats.get("total", 0)}\g<2>',
+        html_content,
+        count=1,
+        flags=re.DOTALL
     )
     
-    html_content = html_content.replace(
-        '<div class="stat-number">8</div>',
-        f'<div class="stat-number">{f75_stats.get("total", 0)}</div>'
+    html_content = re.sub(
+        r'(<div class="stat-card factor75">.*?<p[^>]*>)\d+% Positive(</p>)',
+        rf'\g<1>{f75_stats.get("positive_pct", 0):.0f}% Positive\g<2>',
+        html_content,
+        count=1,
+        flags=re.DOTALL
     )
     
-    html_content = html_content.replace(
-        '<p style="margin-top: 0.5rem; color: #27ae60; font-weight: bold;">50% Positive</p>',
-        f'<p style="margin-top: 0.5rem; color: #27ae60; font-weight: bold;">{f75_stats.get("positive_pct", 0):.0f}% Positive</p>'
+    # Update total posts (first occurrence after "total" class)
+    html_content = re.sub(
+        r'(<div class="stat-card total">.*?<div class="stat-number">)\d+(</div>)',
+        rf'\g<1>{total_posts}\g<2>',
+        html_content,
+        count=1,
+        flags=re.DOTALL
     )
     
-    html_content = html_content.replace(
-        '<div class="stat-number">37</div>',
-        f'<div class="stat-number">{total_posts}</div>'
+    # Update current data description
+    html_content = re.sub(
+        r'<p><strong>Current Data:</strong> \d+ actionable posts from global Reddit search \([^)]+\)</p>',
+        f'<p><strong>Current Data:</strong> {total_posts} actionable posts from global Reddit search ({start_date} to {end_date})</p>',
+        html_content
     )
     
     # Update email summary
     hf_performance = "Excellent performance" if hf_stats.get("positive_pct", 0) >= 70 else "Mixed performance" if hf_stats.get("positive_pct", 0) >= 50 else "Needs attention"
     f75_performance = "Excellent performance" if f75_stats.get("positive_pct", 0) >= 70 else "Balanced sentiment" if f75_stats.get("positive_pct", 0) >= 50 else "Needs attention"
     
-    html_content = html_content.replace(
-        f'<li><strong>HelloFresh:</strong> 7 posts (57% positive) - Mixed performance</li>',
-        f'<li><strong>HelloFresh:</strong> {hf_stats.get("total", 0)} posts ({hf_stats.get("positive_pct", 0):.0f}% positive) - {hf_performance}</li>'
+    html_content = re.sub(
+        r'<li><strong>HelloFresh:</strong> \d+ posts \(\d+% positive\) - [^<]+</li>',
+        f'<li><strong>HelloFresh:</strong> {hf_stats.get("total", 0)} posts ({hf_stats.get("positive_pct", 0):.0f}% positive) - {hf_performance}</li>',
+        html_content
     )
     
-    html_content = html_content.replace(
-        f'<li><strong>Factor75:</strong> 8 posts (50% positive) - Balanced sentiment</li>',
-        f'<li><strong>Factor75:</strong> {f75_stats.get("total", 0)} posts ({f75_stats.get("positive_pct", 0):.0f}% positive) - {f75_performance}</li>'
+    html_content = re.sub(
+        r'<li><strong>Factor75:</strong> \d+ posts \(\d+% positive\) - [^<]+</li>',
+        f'<li><strong>Factor75:</strong> {f75_stats.get("total", 0)} posts ({f75_stats.get("positive_pct", 0):.0f}% positive) - {f75_performance}</li>',
+        html_content
     )
     
     # Write updated content

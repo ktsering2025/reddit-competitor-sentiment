@@ -1,18 +1,9 @@
 {
-  "processing_timestamp": "2025-10-29T02:41:50.232539+00:00",
-  "total_posts": 24,
+  "processing_timestamp": "2025-10-29T02:44:49.123232+00:00",
   "date_range": {
     "start": "2025-10-27T00:00:00+00:00",
     "end": "2025-11-01T23:59:59+00:00"
   },
-  "brands_analyzed": [
-    "HelloFresh",
-    "Factor75",
-    "Home Chef",
-    "Blue Apron",
-    "Marley Spoon",
-    "Hungryroot"
-  ],
   "data_sources": {
     "HelloFresh": [
       "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -24,9 +15,7 @@
       "https://www.reddit.com/search/?q=factor+mealkit+brand&type=posts&t=week",
       "https://www.reddit.com/search/?q=factor+food+brand&type=posts&t=week"
     ],
-    "Home Chef": [
-      "https://www.reddit.com/search/?q=homechef+mealkit+brand&type=posts&t=week"
-    ],
+    "Home Chef": "https://www.reddit.com/search/?q=homechef+mealkit+brand&type=posts&t=week",
     "Blue Apron": [
       "https://www.reddit.com/search/?q=blue+apron+mealkit+brand&type=posts&t=week",
       "https://www.reddit.com/search/?q=blue+apron+food+brand&type=posts&t=week"
@@ -35,36 +24,55 @@
       "https://www.reddit.com/search/?q=marley+spoon+food+brand&type=posts&t=week",
       "https://www.reddit.com/search/?q=marley+spoon+mealkit+brand&type=posts&t=week"
     ],
-    "Hungryroot": [
-      "https://www.reddit.com/search/?q=Hungryroot+food+brand&type=posts&t=week"
-    ]
+    "Hungryroot": "https://www.reddit.com/search/?q=Hungryroot+food+brand&type=posts&t=week"
   },
-  "validation_status": "passed",
-  "commit_hash": "ca444bb2",
   "filter_stats": {
     "HelloFresh": {
-      "pre_filter": 0,
-      "post_filter": 7
+      "pre": 65,
+      "post": 7,
+      "removed": 58
     },
     "Factor75": {
-      "pre_filter": 0,
-      "post_filter": 14
+      "pre": 128,
+      "post": 14,
+      "removed": 114
     },
     "Home Chef": {
-      "pre_filter": 0,
-      "post_filter": 0
+      "pre": 0,
+      "post": 0,
+      "removed": 0
     },
     "Blue Apron": {
-      "pre_filter": 0,
-      "post_filter": 4
+      "pre": 5,
+      "post": 4,
+      "removed": 1
     },
     "Marley Spoon": {
-      "pre_filter": 0,
-      "post_filter": 1
+      "pre": 1,
+      "post": 1,
+      "removed": 0
     },
     "Hungryroot": {
-      "pre_filter": 0,
-      "post_filter": 1
+      "pre": 1,
+      "post": 1,
+      "removed": 0
     }
-  }
+  },
+  "brand_counts": {
+    "HelloFresh": 7,
+    "Factor75": 14,
+    "Home Chef": 0,
+    "Blue Apron": 4,
+    "Marley Spoon": 1,
+    "Hungryroot": 1
+  },
+  "brands_analyzed": [
+    "HelloFresh",
+    "Factor75",
+    "Home Chef",
+    "Blue Apron",
+    "Marley Spoon",
+    "Hungryroot"
+  ],
+  "total_posts": 24
 }

@@ -1,6 +1,6 @@
 {
-  "scrape_timestamp": "2025-10-29T02:41:50.167736+00:00",
-  "processing_timestamp": "2025-10-29T02:41:50.167771+00:00",
+  "scrape_timestamp": "2025-10-29T02:44:49.123210+00:00",
+  "processing_timestamp": "2025-10-29T02:44:49.123232+00:00",
   "date_range": {
     "start": "2025-10-27T00:00:00+00:00",
     "end": "2025-11-01T23:59:59+00:00"
@@ -35,9 +35,9 @@
       "removed": 58
     },
     "Factor75": {
-      "pre": 129,
+      "pre": 128,
       "post": 14,
-      "removed": 115
+      "removed": 114
     },
     "Home Chef": {
       "pre": 0,
@@ -64,7 +64,7 @@
     {
       "title": "This didn\u2019t used to have an upcharge!",
       "selftext": "This is a longtime favorite of ours and now there\u2019s an upcharge for it! It used to have the \u201cbest seller\u201d ID on it, before HF got obsessed with protein ",
-      "score": 5,
+      "score": 8,
       "num_comments": 6,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oish8t/this_didnt_used_to_have_an_upcharge/",
@@ -73,7 +73,7 @@
         "HelloFresh"
       ],
       "author": "Reasonable-Employee6",
-      "upvote_ratio": 0.86,
+      "upvote_ratio": 1.0,
       "is_self": false,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -84,7 +84,7 @@
     {
       "title": "Nightly dinner pic of spicy maple chicken and weekly meal list this week \ud83d\ude04",
       "selftext": "These are my recipes that got delivered this week let me know if any of you have made these/how they are! \n\n- spicy maple chicken\n- cheesy smash burgers (ive gotten this one more than once because it\u2019s easy and I love making the fries) \n- silky Sicilian chicken penne \n- steak au poivre with maple sage sweet potatoes and lemony asparagus \n- cheesy chicken enchiladas \n\n\nPic is the maple chicken. I just want to say that I feel bad for people that blindly follow some of these recipes for the first time that contain pepper flakes and trust hello fresh enough to EVER put the entire pack of red pepper flakes. I literally never use the whole pack of pepper flakes or seasoning in general. For this recipe i literally used barely any, only used a pinch and tossed out the rest and it was still a tad too spicy for us, imagine if I\u2019d put in the whole packet! \ud83e\udd75\ud83e\udd75\n\n",
-      "score": 5,
+      "score": 4,
       "num_comments": 1,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oiposn/nightly_dinner_pic_of_spicy_maple_chicken_and/",
@@ -104,7 +104,7 @@
     {
       "title": "Some of my cheap go-to Aldi meals for two!",
       "selftext": "Some other recipes I make but they need a few more ingredients than Aldi usually has:\n\n\\- [Turkish pasta](https://www.reddit.com/r/tonightsdinner/comments/1j3zzq5/i_can_not_and_will_not_stop_eating_this_damn/)\n\n\\- [Pork schnitzel](https://www.hellofresh.com/recipes/pork-schnitzel-5dc042bdabd5bb5e5c129538)\n\n\\- [Firecracker meatballs](https://www.hellofresh.com/recipes/firecracker-meatballs-5ea70fe14c4efb3fb12140f1)",
-      "score": 447,
+      "score": 452,
       "num_comments": 36,
       "subreddit": "aldi",
       "url": "https://reddit.com/r/aldi/comments/1oiju6o/some_of_my_cheap_goto_aldi_meals_for_two/",
@@ -124,7 +124,7 @@
     {
       "title": "A Word of Caution - DO NOT Redeem Gift Cards/Vouchers",
       "selftext": "I've been subscribed to HelloFresh for over 2 years now, I originally subscribed when they offered the free add-on item for life with any active subscription. Loved all the fresh and delicious meals I've cooked over the years. \n\nLast Christmas, I was gifted a voucher for one free box from a family member (as an aside, it didn't even cover the full box price, only $80 but whatever). I finally redeemed it two weeks ago, and last week I received an email saying my subscription had been cancelled. I immediately logged in and re-activated the subscription, and confirmed there was an active card on file still. My assumption is their system tried redeeming the gift card a second time, saw zero balance, and cancelled the account... But honestly I am unsure how this happened. Their support team offered no answers. I also noticed I no longer get the free add-on item with my weekly box and so I called customer service to report this issue.\n\nAfter multiple calls with their customer service, their best solution for me was offering me 40% off for one box, stating that they no longer offer the free item for life voucher and as such cannot re-activate it on my account. \n\nI am writing this post after a half hour long frustrating call with them where I cancelled my subscription and will be looking elsewhere since they refused to honor their own mistake. \n\nIf you plan on redeeming any sort of gift voucher code, please double check your account the following week or share the same situation I find myself in.",
-      "score": 11,
+      "score": 9,
       "num_comments": 2,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oic9jq/a_word_of_caution_do_not_redeem_gift_cardsvouchers/",
@@ -133,7 +133,7 @@
         "HelloFresh"
       ],
       "author": "oldaccsuspndedwhy",
-      "upvote_ratio": 0.92,
+      "upvote_ratio": 0.85,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -224,7 +224,7 @@
     {
       "title": "The Uncomfortable Truth About Cashmere and How Sustainable Herding Makes All the Difference",
       "selftext": "Hey everyone,\n\nI spend a lot of time working with cashmere, and while the silky-soft feel is what we all love, there's an uncomfortable reality behind the luxury that rarely gets discussed. It boils down to this: not all cashmere is created equal, and the cheap stuff is literally changing the face of the planet.\n\nI wanted to break down the \"fast fashion cashmere\" problem and show you what true, sustainable luxury cashmere production actually looks like on the ground.\n\n**The Problem: Why Your $50 Cashmere Sweater Isn't a Bargain**\n\nCashmere comes from the fine undercoat of the Cashmere goat, which is naturally shed in the spring. It's rare, it's fine (measured in microns), and it's expensive to produce ethically.\n\nThe issue started when fast fashion brands caught on. When demand skyrocketed, the price had to plummet. To meet this massive, cheap demand, producers did three things that created a huge ecological and quality crisis:\n\n1. **They Increased Herd Sizes Dramatically:** More goats = more cashmere. Simple, right? But the fragile grasslands and ecosystems in places like Mongolia and Tibet can only sustain a certain number of grazing animals.\n2. **Overgrazing & Desertification:** Goats don't *trim* grass; they uproot it. When there are too many goats in one area, they eat the root systems, leaving the soil exposed. This accelerates desertification\u2014turning fertile land into desert. It\u2019s an irreversible environmental disaster.\n3. **They Took Short, Coarse Fibers:** When quality is ignored for quantity, they harvest *all* the fiber, including the coarser, shorter hairs. This requires more chemical processing to soften it up, and it's why that bargain sweater pills into a ball of fluff after three wears. The quality is bad because the production is destructive.\n\nThe result is a fiber that's cheaper, less durable, and comes with a high environmental cost.\n\n**The Solution: Back to Tradition and Regenerative Practices**\n\nTo make cashmere truly \"natural\" and ethical, you have to prioritize the health of the land and the animal over profit margins. This is the ethos we follow.\n\n**1. Working with Small Nomadic Families, Not Industrial Farms:** Instead of huge industrial herds, we partner with small, traditional nomadic communities in the Himalayas. For generations, they have practiced rotational grazing. They move their herds seasonally to let the pastureland fully recover. This ensures the grass roots are strong, the soil stays healthy, and the ecosystem is preserved.\n\n**2. Paying a Premium for \"Grade A\" Fiber:** We deliberately pay a significantly higher price (often 3-4x more) for the longest, finest fibers (often 14-15 microns). Why?\n\n* **It's Rarity:** The finest fiber comes from the neck and underbelly, and you only get a few ounces per goat per year.\n* **It\u2019s Durability:** Longer fibers mean tighter, stronger yarn. This is the difference between a sweater that pills immediately and one you wear for two decades. The best quality is a direct result of the most sustainable, low-impact practice.\n\n**3. True Transparency (The Social Impact):** In many regions, low cashmere prices hurt the herders. Our model ensures the communities we work with are paid a fair, above-market wage. This stabilizes their traditional way of life, which is essential for maintaining the very sustainable herding practices the land needs. You are essentially investing in the stability of a whole ecosystem and culture.\n\n**The Impact: Why it Matters to Your Wardrobe**\n\nWhen you choose truly sustainable cashmere, the fiber is:\n\n* **Truly Natural:** It is minimally processed because the quality is already high.\n* **Stronger and Lasts Longer:** It holds its shape and structure, making it a genuine investment piece.\n* **Inherently Ethical:** The environmental and social debt is factored out, leaving you with an item that genuinely feels good, in every sense of the word.\n\nIt\u2019s about shifting your mindset from 'fast fashion luxury' to 'slow fashion investment.' A single, high-quality, sustainably-sourced cashmere item is a zero-waste win compared to five cheap sweaters that will end up in a landfill.\n\nWhat are your thoughts on this? Have you noticed a difference in quality between a mass-market cashmere sweater and one from a smaller, ethical source?\n\nFull disclosure: I am a co-founder of a luxury cashmere brand called Himalayan Warmth. My intent here is purely educational. We believe people should know the whole story behind their clothes, regardless of where they shop.",
-      "score": 8,
+      "score": 9,
       "num_comments": 5,
       "subreddit": "SustainableFashion",
       "url": "https://reddit.com/r/SustainableFashion/comments/1oilryo/the_uncomfortable_truth_about_cashmere_and_how/",
@@ -233,7 +233,7 @@
         "Factor75"
       ],
       "author": "HimalayanWarmth",
-      "upvote_ratio": 0.75,
+      "upvote_ratio": 0.74,
       "is_self": true,
       "source_brand": "Factor75",
       "source_url": "https://www.reddit.com/search/?q=factor+mealkit+brand&type=posts&t=week",
@@ -364,7 +364,7 @@
     {
       "title": "Junk food vegan trying to make the switch, but need advice/encouragement",
       "selftext": "Hey everyone!\n\nThank you for you time.  I really respect this community and could use advice and support.  I want to join your ranks!\n\n**My food background**\n\nI (30M) went vegan almost overnight a little over 6 years ago for ethical reasons.  \n\nHowever, despite the reputation that accompanies the label, I have been FAR from the pinnacle of nutrition.  Think Oreos and impossible burgers on white bread buns, not broccoli, sweet potatoes, and salads.\n\n**Where I'm currently at** \n\nI've always wanted to get my nutrition on track at some point down the line.  \n\nI'm 6'0 and a little under 180lbs, and in a perfect would I'd like to get to \\~155lbs, get over my fear of the gym, and then put on some bulk.  That said losing weight is NOT the motivating factor for me.\n\nI don't also don't feel bad on my current diet, even though I'm open to (and hope to!) feel better.  What I really want to do it look out for my future health. \n\nI sought out books on nutrition and have found myself working through *How Not to Die* and have found it incredible persuasive.  \n\nIt really seems I can put more years (and more good years!) into my life by changing my diet to WFPB*.*  Combined with my doctor telling me my LDL cholesterol was \"very mildly elevated,\" I've finally found the motivation to clear out all my processed foods, throw away the canned iced tea, and shopped the rainbow at my grocery store. (Cheapest grocery haul ever!)\n\n**My relationship with food**\n\nI don't really like eating, and I don't think I have since I've become vegan.  \n\nI have absolutely zero regrets about that change--but the only foods I really crave are foods I gave up years ago.  I've never become physically grossed out by meat or learned to love veggies, I've never figured out how to keep down mushrooms, and eating broccoli is a chore (even if it's one I can manage).\n\nThe only exceptions are things like impossible whoppers/candy that makes me feel \"meh\" afterwards, and obviously not worth keeping in my diet.\n\nAll this is actually part of the reason I think I'm ready to make this change.  \n\nIf I already think of eating as a necessary habit rather than a source of enjoyment, why not make that habit as good as it can be?  \n\nSure it's not exactly fun, but if you have to take your medicine--why not take the best medicine available.\n\n**My current struggle**\n\nThis brings me to my early attempts to eat a WFPB diet.\n\nJust a couple days in, and I feel like this a lot more than just taking my medicine.\n\nFor breakfast I had tofu patties rolled in nutritional yeast and a bunch of baby kale on toasted whole grain bread.  I also had a banana and 2 mandarin oranges.\n\nFor lunch I cooked a large sweet potato (for the first time!), seasoned it, and ate that alongside another banana and orange.  No oil!!\n\nThe problem?  I did the math and I'm only at like 800 calories on the day even though I feel like I've been eating all day, I'm also still hungry and can't focus on other things.  I had to wake up in the middle of the night to eat peanut butter on toast to get back to sleep.\n\n**What are my options?**\n\nGiven that I don't enjoy eating, and at best tolerate the foods I need to get down--I'm going to be miserable if I have to spend all day preparing and swallowing foods.  At least with an impossible burger I could eat it and feel full for the afternoon.\n\nI'm ready to take my medicine, but I don't want it to take up my whole day literally or mentally.\n\nI suppose I could eat peanut butter, brown rice, and beans every day, but I don't want to burn out on foods I already don't like.\n\n**Help Please :)**\n\nDespite sounding so negative, I really am excited about the benefits of a WFPB diet and want to join your ranks--but I'm looking for a help finding a way to implement the diet that doesn't leave me hungry or unhappy because I have to eat greens 4 hours a day to get enough calories.\n\nAny advice, perspective or encouragement would be so so helpful*.  Thank you!!*\n\n  \n",
-      "score": 18,
+      "score": 17,
       "num_comments": 16,
       "subreddit": "WholeFoodsPlantBased",
       "url": "https://reddit.com/r/WholeFoodsPlantBased/comments/1oin4cs/junk_food_vegan_trying_to_make_the_switch_but/",
@@ -373,7 +373,7 @@
         "Factor75"
       ],
       "author": "Someone_Care",
-      "upvote_ratio": 1.0,
+      "upvote_ratio": 0.96,
       "is_self": true,
       "source_brand": "Factor75",
       "source_url": "https://www.reddit.com/search/?q=factor+food+brand&type=posts&t=week",
@@ -455,7 +455,7 @@
         "Blue Apron"
       ],
       "author": "Excellent_Weather583",
-      "upvote_ratio": 0.5,
+      "upvote_ratio": 0.44,
       "is_self": true,
       "source_brand": "Blue Apron",
       "source_url": "https://www.reddit.com/search/?q=blue+apron+mealkit+brand&type=posts&t=week",
@@ -507,7 +507,7 @@
     {
       "title": "Stay away from Marley Spoon and Dinnerly",
       "selftext": "I subscribed to see what they had to offer. I browsed for a bit but didn\u2019t like the options so I canceled my subscription 10 mins after signing up. Didn\u2019t think anything of it. Today I get home to a big delivery from both. I check my credit card and I was charged for both. But I canceled, basically right away. Why would they send random food to someone who isn\u2019t subscribed. Such a shady business practice. I called them but of course they are experiencing high call volumes. I used there chatbot on their site and they just end the convo. I disputed it with my credit card company too. This is ridiculous. ",
-      "score": 11,
+      "score": 9,
       "num_comments": 27,
       "subreddit": "mealkits",
       "url": "https://reddit.com/r/mealkits/comments/1ohpgd4/stay_away_from_marley_spoon_and_dinnerly/",
@@ -516,7 +516,7 @@
         "Marley Spoon"
       ],
       "author": "ProblematicSchematic",
-      "upvote_ratio": 0.69,
+      "upvote_ratio": 0.66,
       "is_self": true,
       "source_brand": "Marley Spoon",
       "source_url": "https://www.reddit.com/search/?q=marley+spoon+mealkit+brand&type=posts&t=week",
@@ -544,13 +544,5 @@
       "confidence": 0.13,
       "reasoning": "VADER: -0.86, TextBlob: 0.01"
     }
-  ],
-  "brand_counts": {
-    "HelloFresh": 7,
-    "Factor75": 14,
-    "Home Chef": 0,
-    "Blue Apron": 4,
-    "Marley Spoon": 1,
-    "Hungryroot": 1
-  }
+  ]
 }
