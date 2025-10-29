@@ -548,7 +548,8 @@ class AccurateScraper:
             'dyadbuilders', 'domains', 'koreamilitaryrentals', 'heritagewear', 
             'barndosandcabins', 'nashvillebeer', 'crybabydolls', 'stlouis', 
             'morristown', 'byndinvest', 'tik toklounge', 'tiktoklounge', 
-            'mitsuruxmakoto', 'behindthebastards', 'christmas'
+            'mitsuruxmakoto', 'behindthebastards', 'christmas', 'poems', 
+            'ocpoetry', 'himrfam'
         ]
         
         for irrelevant_sub in irrelevant_subreddits:

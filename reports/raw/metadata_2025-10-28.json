@@ -1,6 +1,6 @@
 {
-  "processing_timestamp": "2025-10-29T02:28:20.064256+00:00",
-  "total_posts": 4,
+  "processing_timestamp": "2025-10-29T02:29:19.935667+00:00",
+  "total_posts": 1,
   "date_range": {
     "start": "2025-10-20T00:00:00+00:00",
     "end": "2025-10-25T23:59:59+00:00"
@@ -40,7 +40,7 @@
     ]
   },
   "validation_status": "passed",
-  "commit_hash": "e818f290",
+  "commit_hash": "28dce251",
   "filter_stats": {
     "HelloFresh": {
       "pre_filter": 0,
@@ -48,7 +48,7 @@
     },
     "Factor75": {
       "pre_filter": 0,
-      "post_filter": 3
+      "post_filter": 0
     },
     "Home Chef": {
       "pre_filter": 0,
