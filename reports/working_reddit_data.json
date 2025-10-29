@@ -1,6 +1,6 @@
 {
-  "scrape_timestamp": "2025-10-29T02:16:40.856085+00:00",
-  "processing_timestamp": "2025-10-29T02:16:40.856116+00:00",
+  "scrape_timestamp": "2025-10-29T02:17:33.350214+00:00",
+  "processing_timestamp": "2025-10-29T02:17:33.350237+00:00",
   "date_range": {
     "start": "2025-10-20T00:00:00+00:00",
     "end": "2025-10-25T23:59:59+00:00"
@@ -16,9 +16,9 @@
   },
   "filter_stats": {
     "HelloFresh": {
-      "pre": 2,
+      "pre": 3,
       "post": 0,
-      "removed": 2
+      "removed": 3
     },
     "Factor75": {
       "pre": 3,
@@ -32,13 +32,13 @@
     },
     "Blue Apron": {
       "pre": 9,
-      "post": 4,
-      "removed": 5
+      "post": 3,
+      "removed": 6
     },
     "Marley Spoon": {
-      "pre": 0,
-      "post": 0,
-      "removed": 0
+      "pre": 2,
+      "post": 1,
+      "removed": 1
     },
     "Hungryroot": {
       "pre": 0,
@@ -70,7 +70,7 @@
     {
       "title": "Blue Apron Black Friday 2025 deals vs just learning to meal prep cause these prices are just",
       "selftext": "Honestly feels like meal kits are for people who can't plan meals or don't know how to cook. But we're both busy with work and tired of eating the same 5 things on rotation or ordering expensive takeout. Is Blue Apron actually good quality and interesting recipes or is it mediocre food at premium prices?\n\nHas anyone used Blue Apron long term and think it's worth it? Do they even do Black Friday deals or is it just the constant new customer promotions? And for people who quit meal kits, did you find a better solution or just go back to regular grocery shopping?",
-      "score": 1,
+      "score": 2,
       "num_comments": 17,
       "subreddit": "blueapron",
       "url": "https://reddit.com/r/blueapron/comments/1oemwm8/blue_apron_black_friday_2025_deals_vs_just/",
@@ -79,7 +79,7 @@
         "Blue Apron"
       ],
       "author": "Psychological_Way_4",
-      "upvote_ratio": 0.52,
+      "upvote_ratio": 0.54,
       "is_self": true,
       "source_brand": "Blue Apron",
       "source_url": "https://old.reddit.com/search/?q=blue+apron&type=posts&t=week&sort=new",
@@ -99,7 +99,7 @@
         "Blue Apron"
       ],
       "author": "ElkEquivalent6848",
-      "upvote_ratio": 0.6,
+      "upvote_ratio": 0.63,
       "is_self": true,
       "source_brand": "Blue Apron",
       "source_url": "https://old.reddit.com/search/?q=blue+apron&type=posts&t=week&sort=new",
@@ -108,32 +108,32 @@
       "reasoning": "VADER: -0.66, TextBlob: -0.03"
     },
     {
-      "title": "How can I find brands that are actually willing to do paid partnerships with a smaller creator?",
-      "selftext": "Finding brands that are genuinely open to paying smaller creators is absolutely possible in 2025 the trick is knowing where to look and how to pitch yourself strategically.\n\nHere\u2019s a breakdown of **how and where** small creators are landing paid partnerships right now:\n\nFirst, use **micro\u2011influencer connection platforms**. Tools like **Social Cat**, **Collabstr**, **AspireIQ**, **Upfluence**, and **FindMeCreators** are built specifically to pair small creators (even under 10K followers) with brands actively searching for collaborators. Social Cat, for example, currently hosts over 2,000 brands and pays out for both gifted and cash campaigns. Collabstr allows brands to post open briefs and pay directly through the platform no middlemen or contracts needed.\u200b\n\nSecond, look to **brands that already collaborate with micro influencers**. Beauty and lifestyle companies like **Sephora** (through #SephoraSquad), **Glossier**, **Daniel Wellington**, **Levi\u2019s**, **Blue Apron**, and **Lush Cosmetics** have proven programs where creators with under 15K followers can still land campaigns. On TikTok, even major names like **Saie**, **CASETiFY**, **Maybelline**, and **Drunk Elephant** are working with smaller creators under 10K followers.\u200b\n\nFinally, understand that most partnerships now happen via **direct outreach**, not waiting to be discovered. Research shows that only about 5% of brands proactively seek out creators, so sending authentic pitches is essential. Keep messages personal and focused on what you can deliver engagement rates, content quality, or niche expertise often matter more than follower count.\u200b\n\nIf you mix platform outreach (Social Cat, Collabstr) with personal brand alignment (targeting brands that share your niche values), you\u2019ll have a steady stream of partnership opportunities even as a small creator.",
+      "title": "Miniature vegetables?",
+      "selftext": "I am a vegetarian, really really enjoy Marley spoon overall but the veg have been getting smaller and smaller last few months. Anyone else experiencing this?\n\nI don\u2019t want to cancel, I like the recipes and the cooking is kinda at my level, I don\u2019t have time to shop and meal plan much, but I\u2019m getting hungry.",
       "score": 6,
-      "num_comments": 6,
-      "subreddit": "TikTokLounge",
-      "url": "https://reddit.com/r/TikTokLounge/comments/1odxukq/how_can_i_find_brands_that_are_actually_willing/",
-      "created_utc": 1761208242.0,
+      "num_comments": 8,
+      "subreddit": "marleyspoon",
+      "url": "https://reddit.com/r/marleyspoon/comments/1oekb6b/miniature_vegetables/",
+      "created_utc": 1761267247.0,
       "competitors_mentioned": [
-        "Blue Apron"
+        "Marley Spoon"
       ],
-      "author": "iamradnetro",
+      "author": "Quiet-Arm-641",
       "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "Blue Apron",
-      "source_url": "https://old.reddit.com/search/?q=blue+apron&type=posts&t=week&sort=new",
+      "is_self": false,
+      "source_brand": "Marley Spoon",
+      "source_url": "https://old.reddit.com/search/?q=marley+spoon&type=posts&t=week&sort=new",
       "sentiment": "neutral",
-      "confidence": 0.09,
-      "reasoning": "VADER: 0.97, TextBlob: 0.06"
+      "confidence": 0.45,
+      "reasoning": "VADER: 0.61, TextBlob: 0.06"
     }
   ],
   "brand_counts": {
     "HelloFresh": 0,
     "Factor75": 0,
     "Home Chef": 0,
-    "Blue Apron": 4,
-    "Marley Spoon": 0,
+    "Blue Apron": 3,
+    "Marley Spoon": 1,
     "Hungryroot": 0
   }
 }

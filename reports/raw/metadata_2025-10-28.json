@@ -1,5 +1,5 @@
 {
-  "processing_timestamp": "2025-10-29T02:16:40.900668+00:00",
+  "processing_timestamp": "2025-10-29T02:17:33.391919+00:00",
   "total_posts": 4,
   "date_range": {
     "start": "2025-10-20T00:00:00+00:00",
@@ -22,7 +22,7 @@
     "Hungryroot": "https://old.reddit.com/search/?q=hungryroot&type=posts&t=week&sort=new"
   },
   "validation_status": "passed",
-  "commit_hash": "0a23cf9d",
+  "commit_hash": "d409d414",
   "filter_stats": {
     "HelloFresh": {
       "pre_filter": 0,
@@ -38,11 +38,11 @@
     },
     "Blue Apron": {
       "pre_filter": 0,
-      "post_filter": 4
+      "post_filter": 3
     },
     "Marley Spoon": {
       "pre_filter": 0,
-      "post_filter": 0
+      "post_filter": 1
     },
     "Hungryroot": {
       "pre_filter": 0,

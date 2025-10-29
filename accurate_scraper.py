@@ -542,8 +542,8 @@ class AccurateScraper:
         irrelevant_subreddits = [
             'dyadbuilders', 'domains', 'koreamilitaryrentals', 'heritagewear', 
             'barndosandcabins', 'nashvillebeer', 'crybabydolls', 'stlouis', 
-            'morristown', 'byndinvest', 'tik toklounge', 'mitsuruxmakoto', 
-            'behindthebastards', 'christmas'
+            'morristown', 'byndinvest', 'tik toklounge', 'tiktoklounge', 
+            'mitsuruxmakoto', 'behindthebastards', 'christmas'
         ]
         
         for irrelevant_sub in irrelevant_subreddits:
