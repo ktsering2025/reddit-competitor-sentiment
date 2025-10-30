@@ -96,7 +96,10 @@ def create_chart(brand_sentiment, data):
     # X-axis label (Brian's exact text)
     ax.set_xlabel('Counts are unique posts (no comments/reposts)', fontsize=12, fontweight='bold')
     ax.set_xticks(x)
-    ax.set_xticklabels(ALL_COMPETITORS, rotation=35, ha='right')  # 30-40° rotation for legibility
+    
+    # Add (HF) label to HelloFresh family brands
+    brand_labels = [f"{brand} (HF)" if brand in HF_FAMILY_BRANDS else brand for brand in ALL_COMPETITORS]
+    ax.set_xticklabels(brand_labels, rotation=35, ha='right')  # 30-40° rotation for legibility
     
     # Y-axis - better tick intervals for readability
     max_y = max([sum([positive_counts[i], negative_counts[i], neutral_counts[i]]) for i in range(len(ALL_COMPETITORS))])

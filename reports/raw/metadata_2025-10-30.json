@@ -1,25 +1,14 @@
 {
-  "processing_timestamp": "2025-10-30T16:07:05.666826+00:00",
-  "total_posts": 26,
+  "processing_timestamp": "2025-10-30T16:24:16.417577+00:00",
   "date_range": {
     "start": "2025-10-27T00:00:00+00:00",
-    "end": "2025-11-02T23:59:59+00:00"
+    "end": "2025-11-04T23:59:58+00:00"
   },
-  "brands_analyzed": [
-    "HelloFresh",
-    "Factor75",
-    "Home Chef",
-    "Blue Apron",
-    "Marley Spoon",
-    "Hungryroot",
-    "EveryPlate",
-    "Green Chef"
-  ],
   "data_sources": {
     "HelloFresh": [
       "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
       "https://www.reddit.com/search/?q=hello+fresh&type=posts&t=week",
-      "https://www.reddit.com/r/hellofresh/search/?q=&type=posts&t=week&restrict_sr=1",
+      "https://www.reddit.com/r/hellofresh/search/?type=posts&t=week&restrict_sr=1",
       "https://www.reddit.com/r/mealkits/search/?q=hellofresh&type=posts&t=week&restrict_sr=1"
     ],
     "Factor75": [
@@ -35,7 +24,7 @@
     ],
     "Blue Apron": [
       "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
-      "https://www.reddit.com/r/blueapron/search/?q=&type=posts&t=week&restrict_sr=1",
+      "https://www.reddit.com/r/blueapron/search/?type=posts&t=week&restrict_sr=1",
       "https://www.reddit.com/r/mealkits/search/?q=blue+apron&type=posts&t=week&restrict_sr=1"
     ],
     "Marley Spoon": [
@@ -44,54 +33,84 @@
     ],
     "Hungryroot": [
       "https://www.reddit.com/search/?q=hungryroot&type=posts&t=week",
-      "https://www.reddit.com/r/hungryroot/search/?q=&type=posts&t=week&restrict_sr=1",
+      "https://www.reddit.com/r/hungryroot/search/?type=posts&t=week&restrict_sr=1",
       "https://www.reddit.com/r/mealkits/search/?q=hungryroot&type=posts&t=week&restrict_sr=1"
     ],
     "EveryPlate": [
       "https://www.reddit.com/search/?q=everyplate&type=posts&t=week",
       "https://www.reddit.com/search/?q=every+plate&type=posts&t=week",
+      "https://www.reddit.com/search/?q=Every+Plate+food&type=all&t=week",
+      "https://www.reddit.com/search/?q=Every+Plate+Food+Brand&type=all&t=week",
       "https://www.reddit.com/r/mealkits/search/?q=everyplate&type=posts&t=week&restrict_sr=1"
     ],
     "Green Chef": [
       "https://www.reddit.com/search/?q=green+chef&type=posts&t=week",
       "https://www.reddit.com/search/?q=greenchef&type=posts&t=week",
+      "https://www.reddit.com/search/?q=Green+Chef+mealkit+brand&type=all&t=week",
       "https://www.reddit.com/r/mealkits/search/?q=green+chef&type=posts&t=week&restrict_sr=1"
     ]
   },
-  "validation_status": "passed",
-  "commit_hash": "cbba1bf1",
   "filter_stats": {
     "HelloFresh": {
-      "pre_filter": 0,
-      "post_filter": 13
+      "pre": 0,
+      "post": 0,
+      "removed": 0
     },
     "Factor75": {
-      "pre_filter": 0,
-      "post_filter": 9
+      "pre": 0,
+      "post": 0,
+      "removed": 0
     },
     "Home Chef": {
-      "pre_filter": 0,
-      "post_filter": 4
+      "pre": 0,
+      "post": 0,
+      "removed": 0
     },
     "Blue Apron": {
-      "pre_filter": 0,
-      "post_filter": 4
+      "pre": 0,
+      "post": 0,
+      "removed": 0
     },
     "Marley Spoon": {
-      "pre_filter": 0,
-      "post_filter": 2
+      "pre": 0,
+      "post": 0,
+      "removed": 0
     },
     "Hungryroot": {
-      "pre_filter": 0,
-      "post_filter": 1
+      "pre": 0,
+      "post": 0,
+      "removed": 0
     },
     "EveryPlate": {
-      "pre_filter": 0,
-      "post_filter": 2
+      "pre": 0,
+      "post": 0,
+      "removed": 0
     },
     "Green Chef": {
-      "pre_filter": 0,
-      "post_filter": 0
+      "pre": 0,
+      "post": 0,
+      "removed": 0
     }
-  }
+  },
+  "brand_counts": {
+    "HelloFresh": 0,
+    "Factor75": 0,
+    "Home Chef": 0,
+    "Blue Apron": 0,
+    "Marley Spoon": 0,
+    "Hungryroot": 0,
+    "EveryPlate": 0,
+    "Green Chef": 0
+  },
+  "brands_analyzed": [
+    "HelloFresh",
+    "Factor75",
+    "Home Chef",
+    "Blue Apron",
+    "Marley Spoon",
+    "Hungryroot",
+    "EveryPlate",
+    "Green Chef"
+  ],
+  "total_posts": 0
 }

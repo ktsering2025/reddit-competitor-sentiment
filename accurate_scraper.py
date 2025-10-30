@@ -176,8 +176,12 @@ class AccurateScraper:
                             'source_url': url
                         }
                         
-                        # Analyze sentiment
-                        sentiment_result = self.analyze_sentiment(title, '')
+                        # Determine primary brand
+                        primary_brand = self.get_primary_brand(post)
+                        post['primary_brand'] = primary_brand
+                        
+                        # Analyze sentiment with primary brand context
+                        sentiment_result = self.analyze_sentiment(title, title_only=title, primary_brand=primary_brand)
                         post['sentiment'] = sentiment_result['sentiment']
                         post['confidence'] = sentiment_result['confidence']
                         post['reasoning'] = sentiment_result['reasoning']
@@ -477,8 +481,8 @@ class AccurateScraper:
             primary_brand = self.get_primary_brand(post_data)
             post_data['primary_brand'] = primary_brand
             
-            # Add sentiment analysis
-            sentiment_data = self.analyze_sentiment(text)
+            # Add sentiment analysis (pass primary_brand for context-aware sentiment)
+            sentiment_data = self.analyze_sentiment(text, title_only=submission.title, primary_brand=primary_brand)
             post_data.update(sentiment_data)
             
             return post_data
@@ -642,8 +646,14 @@ class AccurateScraper:
         
         return None
     
-    def analyze_sentiment(self, text, title_only=''):
-        """Analyze sentiment using dual-method approach with keyword overrides"""
+    def analyze_sentiment(self, text, title_only='', primary_brand=None):
+        """Analyze sentiment using dual-method approach with keyword overrides
+        
+        Args:
+            text: Full text to analyze
+            title_only: Title text (optional)
+            primary_brand: The brand this post is primarily about (for context-aware sentiment)
+        """
         # Normalize text: replace curly quotes/apostrophes with straight ones
         text = text.replace(''', "'").replace(''', "'").replace('"', '"').replace('"', '"')
         text_lower = text.lower()
@@ -689,6 +699,56 @@ class AccurateScraper:
         has_strong_negative = any(keyword in text_lower for keyword in strong_negative)
         has_strong_positive = any(keyword in text_lower for keyword in strong_positive)
         
+        # CRITICAL: Check if negative sentiment is about a DIFFERENT brand
+        # E.g., "Don't switch from HelloFresh to Marley Spoon - MS is terrible!"
+        # This should be POSITIVE for HelloFresh, not negative
+        if primary_brand and has_strong_negative:
+            # Find all brand mentions in the text
+            other_brands = [b for b in ALL_COMPETITORS if b != primary_brand]
+            
+            # Check if negative words are near OTHER brands (within 50 chars)
+            for other_brand in other_brands:
+                other_brand_lower = other_brand.lower()
+                if other_brand_lower in text_lower:
+                    # Find position of other brand
+                    brand_pos = text_lower.find(other_brand_lower)
+                    # Check if negative words are near this other brand
+                    context_start = max(0, brand_pos - 50)
+                    context_end = min(len(text_lower), brand_pos + len(other_brand_lower) + 50)
+                    context = text_lower[context_start:context_end]
+                    
+                    # If negative words are in this context, they're about the OTHER brand
+                    if any(keyword in context for keyword in strong_negative):
+                        # Check if primary brand is mentioned positively
+                        # Look for brand name OR abbreviation (e.g., "HelloFresh" or "HF")
+                        import re
+                        primary_lower = primary_brand.lower()
+                        
+                        # Create abbreviation from capital letters (HelloFresh -> HF, Factor75 -> F7)
+                        primary_abbrev = ''.join([c for c in primary_brand if c.isupper() or c.isdigit()]).lower()
+                        if not primary_abbrev:
+                            primary_abbrev = primary_brand[:2].lower()
+                        
+                        # Find all mentions of primary brand (full name or abbreviation)
+                        brand_pattern = rf'\b({re.escape(primary_lower)}|{re.escape(primary_abbrev)})\b'
+                        brand_matches = list(re.finditer(brand_pattern, text_lower))
+                        
+                        if brand_matches:
+                            # Check each mention for positive context
+                            for match in brand_matches:
+                                primary_pos = match.start()
+                                primary_context_start = max(0, primary_pos - 50)
+                                primary_context_end = min(len(text_lower), primary_pos + 50)
+                                primary_context = text_lower[primary_context_start:primary_context_end]
+                                
+                                # Positive indicators: "better", "resolved", "fairly", "look better"
+                                positive_comparison = ['better', 'resolved', 'fairly', 'look better', 'makes', 'always']
+                                if any(pos in primary_context for pos in positive_comparison):
+                                    # This is POSITIVE for primary brand!
+                                    has_strong_negative = False
+                                    has_strong_positive = True
+                                    break
+        
         # VADER sentiment
         vader_scores = self.analyzer.polarity_scores(text)
         vader_compound = vader_scores['compound']
@@ -702,15 +762,16 @@ class AccurateScraper:
             # Clear negative sentiment always wins
             sentiment = 'negative'
             confidence = 0.9
+        elif has_strong_positive:
+            # Strong positive wins over neutral comparison
+            # (e.g., "Don't switch from HF - they're better!")
+            sentiment = 'positive'
+            confidence = 0.9
         elif has_neutral_comparison:
-            # Questions/comparisons are neutral even if they contain positive words
+            # Questions/comparisons are neutral if no strong positive/negative
             # (Brian's feedback: "Positive post #1 for HF isn't actually positive")
             sentiment = 'neutral'
             confidence = 0.85
-        elif has_strong_positive:
-            # Only mark as positive if it's praise without being a question
-            sentiment = 'positive'
-            confidence = 0.9
         # Combined sentiment decision (Brian's spec: Positive/Negative/Suggestion(Neutral))
         elif vader_compound >= POSITIVE_THRESHOLD and textblob_polarity >= 0.1:
             sentiment = 'positive'
