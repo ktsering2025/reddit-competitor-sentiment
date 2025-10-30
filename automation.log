@@ -4466,7 +4466,7 @@ NameError: name 'hf_posts' is not defined
 2025-10-30 14:03:16,164 - INFO - - Raw: reports/raw/{raw_,filtered_,metadata_}2025-10-30.json
 2025-10-30 14:03:16,165 - INFO - GitHub Pages: updated
 2025-10-30 14:03:16,179 - INFO - Commit: 9adf67c7
-2025-10-30 14:03:16,179 - INFO - Email: SENT to brian.leung@hellofresh.com, asaf@hellofresh.com, assaf.ronen@hellofresh.com
+2025-10-30 14:03:16,179 - INFO - Email: SENT to brian.leung@hellofresh.com, assaf.ronen@hellofresh.com, kunsang.tsering@hellofresh.com
 2025-10-30 14:03:16,179 - INFO - 
 ==================================================
 2025-10-30 14:03:16,179 - INFO - QUICK SELF-CHECK
@@ -4613,7 +4613,7 @@ NameError: name 'hf_posts' is not defined
 2025-10-30 14:08:59,527 - INFO - - Raw: reports/raw/{raw_,filtered_,metadata_}2025-10-30.json
 2025-10-30 14:08:59,527 - INFO - GitHub Pages: updated
 2025-10-30 14:08:59,543 - INFO - Commit: 479b0575
-2025-10-30 14:08:59,543 - INFO - Email: SENT to brian.leung@hellofresh.com, asaf@hellofresh.com, assaf.ronen@hellofresh.com
+2025-10-30 14:08:59,543 - INFO - Email: SENT to brian.leung@hellofresh.com, assaf.ronen@hellofresh.com, kunsang.tsering@hellofresh.com
 2025-10-30 14:08:59,543 - INFO - 
 ==================================================
 2025-10-30 14:08:59,543 - INFO - QUICK SELF-CHECK

@@ -87,6 +87,117 @@ def get_top_posts_for_email():
     
     return hf_positive, hf_negative, f75_positive, f75_negative
 
+def send_via_mime_email(recipient_email):
+    """Send email using Python's email library with proper MIME attachment (not inline)"""
+    from email.mime.multipart import MIMEMultipart
+    from email.mime.text import MIMEText
+    from email.mime.base import MIMEBase
+    from email import encoders
+    import smtplib
+    
+    print(f"=== SENDING MIME EMAIL TO: {recipient_email} ===")
+    
+    # Get date range from data
+    with open('reports/working_reddit_data.json', 'r') as f:
+        data = json.load(f)
+    
+    date_range = data.get('date_range', {})
+    start_date = date_range.get('start', '2025-10-20').split('T')[0]
+    end_date = date_range.get('end', '2025-10-25').split('T')[0]
+    
+    subject = f"Weekly Reddit Competitor Sentiment Report — {start_date} to {end_date}"
+    
+    # Get summary stats
+    posts = data.get('posts', [])
+    hf_posts = [p for p in posts if p.get('primary_brand') == 'HelloFresh']
+    f75_posts = [p for p in posts if p.get('primary_brand') == 'Factor75']
+    
+    hf_positive = len([p for p in hf_posts if p['sentiment'] == 'positive'])
+    hf_negative = len([p for p in hf_posts if p['sentiment'] == 'negative'])
+    hf_neutral = len([p for p in hf_posts if p['sentiment'] == 'neutral'])
+    hf_total = len(hf_posts)
+    hf_pct = int((hf_positive / hf_total * 100)) if hf_total > 0 else 0
+    
+    f75_positive = len([p for p in f75_posts if p['sentiment'] == 'positive'])
+    f75_negative = len([p for p in f75_posts if p['sentiment'] == 'negative'])
+    f75_neutral = len([p for p in f75_posts if p['sentiment'] == 'neutral'])
+    f75_total = len(f75_posts)
+    f75_pct = int((f75_positive / f75_total * 100)) if f75_total > 0 else 0
+    
+    # Build email body
+    body = f"""Weekly Reddit Competitor Sentiment Report
+============================================================
+
+Analysis Period: {start_date} to {end_date}
+
+QUICK SUMMARY:
+------------------------------------------------------------
+HelloFresh: {hf_total} posts ({hf_pct}% positive)
+  • {hf_positive} positive, {hf_negative} negative, {hf_neutral} neutral
+
+Factor75: {f75_total} posts ({f75_pct}% positive)
+  • {f75_positive} positive, {f75_negative} negative, {f75_neutral} neutral
+
+DASHBOARD ACCESS:
+------------------------------------------------------------
+Main Dashboard:
+https://ktsering2025.github.io/reddit-competitor-sentiment/
+
+📊 Step 1 Chart (see attachment: step1_chart.png)
+  • Or view online: https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step1_chart.png
+
+Step 2 Deep Dive (HelloFresh & Factor75):
+https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_ACTIONABLE_analysis_LATEST.html
+
+Step 3 Competitor Analysis:
+https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step3_competitor_analysis_LATEST.html
+
+============================================================
+Data refreshed weekly • Built for Brian's competitive intelligence"""
+    
+    # Create message
+    msg = MIMEMultipart()
+    msg['From'] = 'Reddit Sentiment System'
+    msg['To'] = recipient_email
+    msg['Subject'] = subject
+    
+    # Attach body
+    msg.attach(MIMEText(body, 'plain'))
+    
+    # Attach chart as file (not inline)
+    chart_path = 'reports/step1_chart.png'
+    with open(chart_path, 'rb') as f:
+        part = MIMEBase('application', 'octet-stream')
+        part.set_payload(f.read())
+    
+    encoders.encode_base64(part)
+    part.add_header('Content-Disposition', f'attachment; filename=step1_chart.png')
+    msg.attach(part)
+    
+    # Use AppleScript to send the MIME email via Mail.app
+    import tempfile
+    with tempfile.NamedTemporaryFile(mode='w', suffix='.eml', delete=False) as tmp:
+        tmp.write(msg.as_string())
+        eml_path = tmp.name
+    
+    applescript = f'''
+    tell application "Mail"
+        set theMessage to open POSIX file "{eml_path}"
+        send theMessage
+    end tell
+    '''
+    
+    try:
+        subprocess.run(['osascript', '-e', applescript], check=True)
+        os.unlink(eml_path)
+        print(f"[SUCCESS] Email sent to {recipient_email}")
+        return True
+    except Exception as e:
+        print(f"[ERROR] Failed to send email: {e}")
+        if os.path.exists(eml_path):
+            os.unlink(eml_path)
+        return False
+
 def send_via_mailto(recipient_email):
     """Send email using system mail client with automatic chart attachment"""
     print(f"=== SENDING TO: {recipient_email} ===")
@@ -139,8 +250,9 @@ def send_via_mailto(recipient_email):
     body_lines.append("https://ktsering2025.github.io/reddit-competitor-sentiment/")
     body_lines.append("")
     body_lines.append("📊 Step 1 Chart:")
-    body_lines.append("  • Attached as PNG file (click to view full-size)")
-    body_lines.append("  • View online: https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step1_chart.png")
+    body_lines.append("  • Attached as PNG file (see attachment bar at top)")
+    body_lines.append("  • Click attachment icon to download/save")
+    body_lines.append("  • Or view online: https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step1_chart.png")
     body_lines.append("")
     body_lines.append("Step 2 Deep Dive (HelloFresh & Factor75):")
     body_lines.append("https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_ACTIONABLE_analysis_LATEST.html")
@@ -153,17 +265,22 @@ def send_via_mailto(recipient_email):
     
     body = "\n".join(body_lines)
     
-    # Create AppleScript to send email with attachment
+    # Create AppleScript to send email with attachment (not inline)
+    # Note: Attachments in Mail.app are tricky - they often show inline in the compose window
+    # but appear as proper attachments when received in Gmail/Outlook
     applescript = f'''
     tell application "Mail"
         set newMessage to make new outgoing message with properties {{subject:"{subject}", content:"{body}"}}
         tell newMessage
             make new to recipient with properties {{address:"{recipient_email}"}}
-            
-            -- Attach the chart
-            set chartPath to POSIX file "{os.path.abspath('reports/step1_chart.png')}"
-            make new attachment with properties {{file name:chartPath}} at after the last paragraph
         end tell
+        
+        -- Attach file without embedding inline
+        tell newMessage
+            set chartPath to POSIX file "{os.path.abspath('reports/step1_chart.png')}"
+            make new attachment with properties {{file name:chartPath}}
+        end tell
+        
         send newMessage
     end tell
     '''
@@ -261,26 +378,11 @@ end tell
         return False
 
 def send_via_web_service(recipient_email):
-    """Try sending via a free web email service"""
-    print(f"=== TRYING WEB SERVICE TO: {recipient_email} ===")
+    """Send email via Mail.app"""
+    print(f"=== SENDING EMAIL TO: {recipient_email} ===")
     
-    date_range, summary_lines, total_posts = get_weekly_summary()
-    subject = f"Weekly Reddit Competitor Sentiment Report — {date_range}"
-    
-    # Simple text email
-    text_body = f"""Weekly Reddit Sentiment Report - {date_range}
-
-{chr(10).join(summary_lines)}
-
-Total posts: {total_posts}
-Chart available at: reports/step1_chart.png
-
-Sent from Reddit Sentiment Analysis System"""
-    
-    # Try EmailJS or similar service (requires setup)
-    print("Web services require API keys")
-    print("Using mailto instead for reliability...")
-    
+    # Note: Mail.app displays image attachments inline by default
+    # Users can still download the attachment from the attachment bar
     return send_via_mailto(recipient_email)
 
 def main():

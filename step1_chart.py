@@ -93,34 +93,28 @@ def create_chart(brand_sentiment, data):
     ax.set_title(f'Reddit Competitor Sentiment Analysis\n{date_str}', 
                 fontsize=16, fontweight='bold', pad=20)
     
-    # X-axis label (Brian's exact text)
-    ax.set_xlabel('Counts are unique posts (no comments/reposts)', fontsize=12, fontweight='bold')
+    # X-axis - no label, just brand names
     ax.set_xticks(x)
     
     # Add (HF) label to HelloFresh family brands
     brand_labels = [f"{brand} (HF)" if brand in HF_FAMILY_BRANDS else brand for brand in ALL_COMPETITORS]
     ax.set_xticklabels(brand_labels, rotation=35, ha='right')  # 30-40° rotation for legibility
     
-    # Y-axis - better tick intervals for readability
+    # Y-axis - count by 2s as requested
     max_y = max([sum([positive_counts[i], negative_counts[i], neutral_counts[i]]) for i in range(len(ALL_COMPETITORS))])
+    
+    # Always count by 2s (0, 2, 4, 6, 8, ...)
     if max_y > 0:
-        # Use better tick intervals based on max value
-        if max_y <= 10:
-            step = 1
-        elif max_y <= 50:
-            step = 5
-        else:
-            step = 10
-        
-        y_ticks = list(range(0, max_y + step, step))
+        # Round up to nearest even number
+        max_y_rounded = max_y + (2 - max_y % 2) if max_y % 2 != 0 else max_y
+        y_ticks = list(range(0, max_y_rounded + 2, 2))
         ax.set_yticks(y_ticks)
+        ax.set_ylim(0, max_y_rounded + 2)
     else:
-        ax.set_yticks([0, 1, 2, 3, 4, 5])
+        ax.set_yticks([0, 2, 4, 6, 8, 10])
+        ax.set_ylim(0, 10)
     
     ax.set_ylabel('Number of Posts', fontsize=12, fontweight='bold')
-    
-    # Center y-axis around zero
-    ax.set_ylim(0, max(max_y + 1, 5))
     
     # Legend
     ax.legend(loc='upper right')
@@ -128,19 +122,24 @@ def create_chart(brand_sentiment, data):
     # Grid for better readability
     ax.grid(True, alpha=0.3, axis='y')
     
-    # Check for zero posts and add footnote (Brian's spec)
-    zero_brands = [brand for brand in ALL_COMPETITORS if sum(brand_sentiment[brand].values()) == 0]
-    if zero_brands:
-        plt.figtext(0.02, 0.02, '* No posts this week', fontsize=8, style='italic')
-    
-    # Footer with metadata (Brian's exact format)
+    # Footer with metadata - well-spaced, clean layout
     timestamp = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
     commit_hash = get_git_commit_hash()
     
-    footer_text = f"Data period: {start_date}–{end_date} • Generated (UTC): {timestamp} • Commit: {commit_hash}"
-    plt.figtext(0.5, 0.02, footer_text, ha='center', fontsize=8, style='italic')
+    # Line 1: Note about counts (darker, more visible, higher position)
+    plt.figtext(0.5, 0.08, 'Counts are unique posts (no comments/reposts)', 
+                ha='center', fontsize=10, style='italic', color='#333')
     
-    # Adjust layout to prevent clipping
+    # Line 2: Data period and metadata (well-spaced, lower position)
+    footer_text = f"Data period: {start_date}–{end_date}  •  Generated (UTC): {timestamp}  •  Commit: {commit_hash}"
+    plt.figtext(0.5, 0.03, footer_text, ha='center', fontsize=8, color='#666')
+    
+    # Check for zero posts and add footnote (left side, same height as footer)
+    zero_brands = [brand for brand in ALL_COMPETITORS if sum(brand_sentiment[brand].values()) == 0]
+    if zero_brands:
+        plt.figtext(0.02, 0.03, '* No posts this week', fontsize=8, style='italic', color='#666')
+    
+    # Adjust layout to prevent clipping and overlap
     plt.tight_layout()
     plt.subplots_adjust(bottom=0.15)
     
