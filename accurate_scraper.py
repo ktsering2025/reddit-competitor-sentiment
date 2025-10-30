@@ -204,48 +204,15 @@ class AccurateScraper:
         return posts
         
     def scrape_weekly_data(self, days_back=7):
-        """Scrape data using your exact week window and data sources"""
-        # Get week mode and end override from environment or config
-        week_mode = os.getenv('WEEK_MODE', WEEK_MODE)
-        week_end_override = os.getenv('WEEK_END', WEEK_END_OVERRIDE)
-        
+        """Scrape data using ROLLING 7-DAY WINDOW from current time"""
+        # Simple rolling 7-day window: past 7 days from now
         now = datetime.now(timezone.utc)
+        end_time = now
+        start_time = now - timedelta(days=days_back)
         
-        if week_end_override:
-            # Use specific week end date
-            try:
-                end_date = datetime.fromisoformat(week_end_override).replace(tzinfo=timezone.utc)
-                # Find the Monday of that week
-                days_since_monday = end_date.weekday()
-                start_time = end_date - timedelta(days=days_since_monday)
-            except:
-                print(f"Invalid WEEK_END format: {week_end_override}, using current week")
-                start_time = now - timedelta(days=now.weekday())
-        else:
-            # Calculate based on current time
-            if now.weekday() == 6:  # Sunday = 6, use previous week
-                days_since_monday = 7 + now.weekday()
-                start_time = now - timedelta(days=days_since_monday)
-            else:
-                # Use current week
-                days_since_monday = now.weekday()
-                start_time = now - timedelta(days=days_since_monday)
-        
-        # Set to Monday 00:00 UTC
-        start_time = start_time.replace(hour=0, minute=0, second=0, microsecond=0)
-        
-        # Calculate end time based on week mode
-        if week_mode == "MON_FRI":
-            end_time = start_time + timedelta(days=4, hours=23, minutes=59, seconds=59)  # Friday
-        elif week_mode == "MON_SAT":
-            end_time = start_time + timedelta(days=5, hours=23, minutes=59, seconds=59)  # Saturday
-        elif week_mode == "FULL_7":
-            end_time = start_time + timedelta(days=6, hours=23, minutes=59, seconds=59)  # Sunday
-        else:
-            end_time = start_time + timedelta(days=5, hours=23, minutes=59, seconds=59)  # Default: Saturday
-        
-        print(f"Using week mode: {week_mode}")
-        print(f"Date window: {start_time.strftime('%Y-%m-%d')} to {end_time.strftime('%Y-%m-%d')}")
+        print(f"Using ROLLING 7-DAY WINDOW")
+        print(f"Date window: {start_time.strftime('%Y-%m-%d %H:%M')} to {end_time.strftime('%Y-%m-%d %H:%M')} UTC")
+        print(f"(Past {days_back} days from current time)")
         
         all_posts = []
         saturday_posts = []
@@ -482,7 +449,7 @@ class AccurateScraper:
             post_data['primary_brand'] = primary_brand
             
             # Add sentiment analysis (pass primary_brand for context-aware sentiment)
-            sentiment_data = self.analyze_sentiment(text, title_only=submission.title, primary_brand=primary_brand)
+            sentiment_data = self.analyze_sentiment(text, title_only=post.title, primary_brand=primary_brand)
             post_data.update(sentiment_data)
             
             return post_data

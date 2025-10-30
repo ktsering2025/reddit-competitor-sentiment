@@ -4330,3 +4330,10 @@ Data sources echoed from config.py:
 2025-10-30 12:22:10,593 - INFO - 
 [STEP 5] Running Brian's validation rules...
 2025-10-30 12:22:10,593 - ERROR - VALIDATION_FAILED: Date window is 8 days, expected 4-7 days
+2025-10-30 13:42:47,419 - INFO - ============================================================
+2025-10-30 13:42:47,419 - INFO - BRIAN'S COMPETITOR ANALYSIS - COMPLETE AUTOMATION
+2025-10-30 13:42:47,419 - INFO - ============================================================
+2025-10-30 13:42:47,419 - INFO - ABS PATH: /Users/kunsang.tsering/Desktop/reddit-competitor-sentiment
+2025-10-30 13:42:47,420 - INFO - Week mode: FULL_7
+2025-10-30 13:42:47,420 - INFO - 
+[STEP 1] Running accurate_scraper.py...
