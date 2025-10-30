@@ -432,17 +432,19 @@ def main():
     args = parser.parse_args()
     
     # Determine email settings
-    send_email = False
-    email_recipients = []
+    # DEFAULT: Send emails to configured recipients (for cron automation)
+    send_email = True
+    email_recipients = EMAIL_RECIPIENTS if EMAIL_RECIPIENTS and EMAIL_RECIPIENTS[0] else []
     
     if args.no_send:
         send_email = False
+        email_recipients = []
     elif args.send:
         send_email = True
         email_recipients = args.send
     elif args.send_email:
         send_email = True
-        if EMAIL_RECIPIENTS and EMAIL_RECIPIENTS[0]:  # Check if env var is set
+        if EMAIL_RECIPIENTS and EMAIL_RECIPIENTS[0]:
             email_recipients = EMAIL_RECIPIENTS
         else:
             print("[WARNING] --send-email specified but EMAIL_RECIPIENTS not configured")
