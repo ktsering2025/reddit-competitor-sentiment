@@ -169,12 +169,13 @@ def send_via_mailto(recipient_email):
     try:
         subprocess.run(['osascript', '-e', applescript], check=True)
         print(f"[SUCCESS] Email sent to {recipient_email}")
+        return True
     except subprocess.CalledProcessError as e:
         print(f"[ERROR] Failed to send email: {e}")
-    
-    hf_sentiment_pct = int((hf_positive / hf_posts) * 100) if hf_posts > 0 else 0
-    factor_sentiment_pct = int((factor_positive / factor_posts) * 100) if factor_posts > 0 else 0
-    
+        return False
+
+def send_via_web_service_OLD_ORPHANED(recipient_email):
+    """ORPHANED CODE - NOT USED"""
     body = f"""Hi there,
 
 Here's your weekly Reddit sentiment analysis ({date_range}).
