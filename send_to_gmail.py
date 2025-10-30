@@ -250,9 +250,9 @@ def send_via_mailto(recipient_email):
     body_lines.append("https://ktsering2025.github.io/reddit-competitor-sentiment/")
     body_lines.append("")
     body_lines.append("Step 1 Chart:")
-    body_lines.append("  - Attached as PNG file (see attachment bar at top)")
-    body_lines.append("  - Click attachment icon to download/save")
-    body_lines.append("  - Or view online: https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step1_chart.png")
+    body_lines.append("  - Attached as PDF file (crystal clear, never blurry)")
+    body_lines.append("  - Click attachment to view full-size chart")
+    body_lines.append("  - Or view PNG online: https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step1_chart.png")
     body_lines.append("")
     body_lines.append("Step 2 Deep Dive (HelloFresh & Factor75):")
     body_lines.append("https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_ACTIONABLE_analysis_LATEST.html")
@@ -275,9 +275,9 @@ def send_via_mailto(recipient_email):
             make new to recipient with properties {{address:"{recipient_email}"}}
         end tell
         
-        -- Attach file without embedding inline
+        -- Attach PDF (won't display inline, stays as attachment)
         tell newMessage
-            set chartPath to POSIX file "{os.path.abspath('reports/step1_chart.png')}"
+            set chartPath to POSIX file "{os.path.abspath('reports/step1_chart.pdf')}"
             make new attachment with properties {{file name:chartPath}}
         end tell
         

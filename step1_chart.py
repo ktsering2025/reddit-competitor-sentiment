@@ -150,6 +150,11 @@ def create_chart(brand_sentiment, data):
     plt.savefig(CHART_OUTPUT, dpi=600, bbox_inches='tight', facecolor='white', edgecolor='none')
     print(f"[SUCCESS] Step 1 chart saved to {CHART_OUTPUT} (Ultra high-res: 600 DPI)")
     
+    # Also save as PDF for email attachment (vector format, never blurry)
+    pdf_output = CHART_OUTPUT.replace('.png', '.pdf')
+    plt.savefig(pdf_output, format='pdf', bbox_inches='tight', facecolor='white', edgecolor='none')
+    print(f"[SUCCESS] Step 1 chart also saved as PDF: {pdf_output}")
+    
     return CHART_OUTPUT
 
 def print_run_summary(brand_sentiment, data):
