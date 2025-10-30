@@ -47,11 +47,21 @@ WEEKLY_LINKS = {
         "https://www.reddit.com/search/?q=hungryroot&type=posts&t=week",
         "https://www.reddit.com/r/hungryroot/search/?q=&type=posts&t=week&restrict_sr=1",
         "https://www.reddit.com/r/mealkits/search/?q=hungryroot&type=posts&t=week&restrict_sr=1"
+    ],
+    "EveryPlate": [
+        "https://www.reddit.com/search/?q=everyplate&type=posts&t=week",
+        "https://www.reddit.com/search/?q=every+plate&type=posts&t=week",
+        "https://www.reddit.com/r/mealkits/search/?q=everyplate&type=posts&t=week&restrict_sr=1"
+    ],
+    "Green Chef": [
+        "https://www.reddit.com/search/?q=green+chef&type=posts&t=week",
+        "https://www.reddit.com/search/?q=greenchef&type=posts&t=week",
+        "https://www.reddit.com/r/mealkits/search/?q=green+chef&type=posts&t=week&restrict_sr=1"
     ]
 }
 
-# All competitors for Step 1 chart (exactly 6 brands)
-ALL_COMPETITORS = ["HelloFresh", "Factor75", "Home Chef", "Blue Apron", "Marley Spoon", "Hungryroot"]
+# All competitors for Step 1 chart (8 brands total)
+ALL_COMPETITORS = ["HelloFresh", "Factor75", "Home Chef", "Blue Apron", "Marley Spoon", "Hungryroot", "EveryPlate", "Green Chef"]
 
 # Primary brands for Step 2 deep dive (60% of HF revenue)
 PRIMARY_DEEPDIVE = ["HelloFresh", "Factor75"]

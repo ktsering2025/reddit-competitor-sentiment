@@ -498,7 +498,9 @@ class AccurateScraper:
             'Blue Apron': ['blue apron', 'blueapron'],
             'Home Chef': ['home chef', 'homechef'],
             'Marley Spoon': ['marley spoon', 'marleyspoon', 'martha stewart'],
-            'Hungryroot': ['hungryroot', 'hungry root']
+            'Hungryroot': ['hungryroot', 'hungry root'],
+            'EveryPlate': ['everyplate', 'every plate'],
+            'Green Chef': ['green chef', 'greenchef']
         }
         
         for brand, patterns in brand_patterns.items():
@@ -523,6 +525,8 @@ class AccurateScraper:
             'Home Chef': ['home chef', 'homechef'],
             'Marley Spoon': ['marley spoon', 'marleyspoon'],
             'Hungryroot': ['hungryroot', 'hungry root'],
+            'EveryPlate': ['everyplate', 'every plate'],
+            'Green Chef': ['green chef', 'greenchef'],
             'Purple Carrot': ['purple carrot', 'purplecarrot']
         }
         
@@ -576,6 +580,8 @@ class AccurateScraper:
             'homechef': 'Home Chef',
             'marleyspoon': 'Marley Spoon',
             'hungryroot': 'Hungryroot',
+            'everyplate': 'EveryPlate',
+            'greenchef': 'Green Chef',
             'purplecarrot': 'Purple Carrot'
         }
         
@@ -643,6 +649,13 @@ class AccurateScraper:
         text_lower = text.lower()
         title_lower = title_only.lower() if title_only else text_lower
         
+        # Neutral comparison/switching keywords (Brian's feedback: ambiguous posts should be neutral)
+        neutral_comparison = [
+            'switching to', 'switch to', 'switching from', 'compared to', 'vs', 'versus',
+            'which is better', 'better than', 'trying to decide', 'considering',
+            'what service', 'which service', 'recommendations', 'anyone tried'
+        ]
+        
         # Strong negative keywords/phrases that override sentiment analysis
         strong_negative = [
             'stay away', 'avoid', 'terrible', 'worst', 'horrible', 'awful', 
@@ -665,7 +678,10 @@ class AccurateScraper:
             'worth it', 'great value', 'favorite'
         ]
         
-        # Check for strong keywords first
+        # Check for neutral comparison first (Brian's feedback)
+        has_neutral_comparison = any(keyword in text_lower for keyword in neutral_comparison)
+        
+        # Check for strong keywords
         has_strong_negative = any(keyword in text_lower for keyword in strong_negative)
         has_strong_positive = any(keyword in text_lower for keyword in strong_positive)
         
@@ -677,8 +693,12 @@ class AccurateScraper:
         blob = TextBlob(text)
         textblob_polarity = blob.sentiment.polarity
         
-        # Override with strong keywords
-        if has_strong_negative:
+        # Override with strong keywords (Brian's feedback: comparison posts should be neutral)
+        if has_neutral_comparison and not has_strong_negative and not has_strong_positive:
+            # Comparison/switching posts without clear praise/criticism = neutral
+            sentiment = 'neutral'
+            confidence = 0.85
+        elif has_strong_negative:
             sentiment = 'negative'
             confidence = 0.9
         elif has_strong_positive:

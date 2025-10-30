@@ -3997,3 +3997,82 @@ Data sources echoed from config.py:
 2025-10-29 12:01:40,780 - INFO - 
 [STEP 5] Running Brian's validation rules...
 2025-10-29 12:01:40,780 - ERROR - VALIDATION_FAILED: Date window is 6 days, expected 4-5 days (Mon-Fri/Sat) or 7 days
+2025-10-30 11:34:45,837 - INFO - ============================================================
+2025-10-30 11:34:45,837 - INFO - BRIAN'S COMPETITOR ANALYSIS - COMPLETE AUTOMATION
+2025-10-30 11:34:45,837 - INFO - ============================================================
+2025-10-30 11:34:45,837 - INFO - ABS PATH: /Users/kunsang.tsering/Desktop/reddit-competitor-sentiment
+2025-10-30 11:34:45,837 - INFO - Week mode: FULL_7
+2025-10-30 11:34:45,837 - INFO - 
+[STEP 1] Running accurate_scraper.py...
+2025-10-30 11:35:52,210 - INFO - [SUCCESS] Scraper completed - data saved to working_reddit_data.json
+2025-10-30 11:35:52,210 - INFO - 
+[STEP 2] Processing raw data...
+2025-10-30 11:35:52,233 - INFO - [SUCCESS] Raw data processing complete - files saved with 2025-10-30
+2025-10-30 11:35:52,233 - INFO - 
+[STEP 3] Generating Step 1 chart...
+2025-10-30 11:35:52,938 - INFO - [SUCCESS] Step 1 chart generated successfully
+2025-10-30 11:35:52,938 - INFO - 
+[STEP 4] Generating Step 2 ACTIONABLE analysis...
+2025-10-30 11:35:52,999 - INFO - [SUCCESS] Step 2 analysis generated successfully
+2025-10-30 11:35:52,999 - INFO - \n[STEP 5] Generating Step 3 competitor analysis...
+2025-10-30 11:35:53,038 - ERROR - PIPELINE_FAILED: Step 3 analysis failed: Traceback (most recent call last):
+  File "/Users/kunsang.tsering/Desktop/reddit-competitor-sentiment/step3_competitor_analysis.py", line 297, in <module>
+    main()
+  File "/Users/kunsang.tsering/Desktop/reddit-competitor-sentiment/step3_competitor_analysis.py", line 275, in main
+    competitor_analysis = generate_strengths_weaknesses(competitor_themes, data)
+  File "/Users/kunsang.tsering/Desktop/reddit-competitor-sentiment/step3_competitor_analysis.py", line 93, in generate_strengths_weaknesses
+    pos_posts = [p for p in brand_posts if p.get('sentiment') == 'positive']
+NameError: name 'brand_posts' is not defined
+
+2025-10-30 11:36:49,263 - INFO - ============================================================
+2025-10-30 11:36:49,263 - INFO - BRIAN'S COMPETITOR ANALYSIS - COMPLETE AUTOMATION
+2025-10-30 11:36:49,264 - INFO - ============================================================
+2025-10-30 11:36:49,264 - INFO - ABS PATH: /Users/kunsang.tsering/Desktop/reddit-competitor-sentiment
+2025-10-30 11:36:49,264 - INFO - Week mode: FULL_7
+2025-10-30 11:36:49,264 - INFO - 
+[STEP 1] Running accurate_scraper.py...
+2025-10-30 11:37:56,421 - INFO - [SUCCESS] Scraper completed - data saved to working_reddit_data.json
+2025-10-30 11:37:56,422 - INFO - 
+[STEP 2] Processing raw data...
+2025-10-30 11:37:56,437 - INFO - [SUCCESS] Raw data processing complete - files saved with 2025-10-30
+2025-10-30 11:37:56,437 - INFO - 
+[STEP 3] Generating Step 1 chart...
+2025-10-30 11:37:57,090 - INFO - [SUCCESS] Step 1 chart generated successfully
+2025-10-30 11:37:57,090 - INFO - 
+[STEP 4] Generating Step 2 ACTIONABLE analysis...
+2025-10-30 11:37:57,142 - INFO - [SUCCESS] Step 2 analysis generated successfully
+2025-10-30 11:37:57,142 - INFO - \n[STEP 5] Generating Step 3 competitor analysis...
+2025-10-30 11:37:57,171 - INFO - [SUCCESS] Step 3 competitor analysis generated successfully
+2025-10-30 11:37:57,171 - INFO - 
+[STEP 5] Running Brian's validation rules...
+2025-10-30 11:37:57,172 - ERROR - VALIDATION_FAILED: Date window is 6 days, expected 4-5 days (Mon-Fri/Sat) or 7 days
+2025-10-30 11:38:15,903 - INFO - ============================================================
+2025-10-30 11:38:15,903 - INFO - BRIAN'S COMPETITOR ANALYSIS - COMPLETE AUTOMATION
+2025-10-30 11:38:15,903 - INFO - ============================================================
+2025-10-30 11:38:15,903 - INFO - ABS PATH: /Users/kunsang.tsering/Desktop/reddit-competitor-sentiment
+2025-10-30 11:38:15,903 - INFO - Week mode: FULL_7
+2025-10-30 11:38:15,903 - INFO - 
+[STEP 1] Running accurate_scraper.py...
+2025-10-30 11:39:26,315 - INFO - [SUCCESS] Scraper completed - data saved to working_reddit_data.json
+2025-10-30 11:39:26,316 - INFO - 
+[STEP 2] Processing raw data...
+2025-10-30 11:39:26,330 - INFO - [SUCCESS] Raw data processing complete - files saved with 2025-10-30
+2025-10-30 11:39:26,330 - INFO - 
+[STEP 3] Generating Step 1 chart...
+2025-10-30 11:39:26,965 - INFO - [SUCCESS] Step 1 chart generated successfully
+2025-10-30 11:39:26,965 - INFO - 
+[STEP 4] Generating Step 2 ACTIONABLE analysis...
+2025-10-30 11:39:27,019 - INFO - [SUCCESS] Step 2 analysis generated successfully
+2025-10-30 11:39:27,019 - INFO - \n[STEP 5] Generating Step 3 competitor analysis...
+2025-10-30 11:39:27,050 - INFO - [SUCCESS] Step 3 competitor analysis generated successfully
+2025-10-30 11:39:27,051 - INFO - 
+[STEP 5] Running Brian's validation rules...
+2025-10-30 11:39:27,051 - INFO - [SUCCESS] All validation rules PASSED
+2025-10-30 11:39:27,051 - INFO - 
+[STEP 6] Archiving artifacts...
+2025-10-30 11:39:27,059 - INFO - [SUCCESS] Artifacts archived to reports/archive/2025-10-30
+2025-10-30 11:39:27,059 - INFO - 
+[STEP 7] Updating homepage with current data...
+2025-10-30 11:39:27,097 - INFO - [SUCCESS] Homepage updated with current actionable data
+2025-10-30 11:39:27,097 - INFO - 
+[STEP 8] Git commit and push...

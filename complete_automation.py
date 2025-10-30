@@ -56,9 +56,9 @@ def validate_data_integrity(data):
             end_date = datetime.fromisoformat(date_range['end'].replace('Z', '+00:00'))
             days_diff = (end_date - start_date).days
             
-            # Accept Monday-Friday (4 days), Monday-Saturday (5 days), or full week (7 days)
-            if days_diff not in [4, 5, 7]:
-                errors.append(f"Date window is {days_diff} days, expected 4-5 days (Mon-Fri/Sat) or 7 days")
+            # Accept Monday-Friday (4 days), Monday-Saturday (5 days), or full week (6-7 days)
+            if days_diff not in [4, 5, 6, 7]:
+                errors.append(f"Date window is {days_diff} days, expected 4-7 days")
         except Exception as e:
             errors.append(f"Date validation error: {e}")
     

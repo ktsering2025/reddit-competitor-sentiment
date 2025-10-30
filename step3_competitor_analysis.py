@@ -64,7 +64,10 @@ def generate_strengths_weaknesses(competitor_themes, data):
     for brand in ALL_COMPETITORS:
         total_posts = brand_counts.get(brand, 0)
         
-        if total_posts == 0:
+        # Get actual posts for this brand
+        brand_posts = [p for p in data.get('posts', []) if p.get('primary_brand') == brand]
+        
+        if total_posts == 0 or not brand_posts:
             # No posts recorded this week
             results[brand] = {
                 'strengths': "No posts recorded this week.",
@@ -87,14 +90,44 @@ def generate_strengths_weaknesses(competitor_themes, data):
                 elif negative_pct >= 60:  # 60%+ negative
                     weaknesses.append(f"{theme} ({negative_pct:.0f}% negative)")
         
-        # Fallback narratives if no themes meet thresholds
+        # Create strategic narratives (Brian's feedback: be more specific and actionable)
         if not strengths:
-            strengths_text = "Low volume this week; no theme reached 60% positive."
+            # Look at actual positive posts to create narrative
+            pos_posts = [p for p in brand_posts if p.get('sentiment') == 'positive']
+            if pos_posts:
+                # Extract key themes from positive posts
+                pos_text = ' '.join([p.get('title', '') + ' ' + p.get('selftext', '') for p in pos_posts]).lower()
+                if 'price' in pos_text or 'cheap' in pos_text or 'affordable' in pos_text:
+                    strengths_text = "Competitive pricing mentioned by customers"
+                elif 'quality' in pos_text or 'fresh' in pos_text or 'delicious' in pos_text:
+                    strengths_text = "Food quality praised by customers"
+                elif 'easy' in pos_text or 'convenient' in pos_text:
+                    strengths_text = "Convenience and ease of use highlighted"
+                else:
+                    strengths_text = "Positive customer feedback (low volume)"
+            else:
+                strengths_text = "No significant positive feedback this week"
         else:
             strengths_text = "; ".join(strengths)
             
         if not weaknesses:
-            weaknesses_text = "Sentiment is balanced; no theme reached 60% negative."
+            # Look at actual negative posts to create narrative
+            neg_posts = [p for p in brand_posts if p.get('sentiment') == 'negative']
+            if neg_posts:
+                # Extract key issues from negative posts
+                neg_text = ' '.join([p.get('title', '') + ' ' + p.get('selftext', '') for p in neg_posts]).lower()
+                if 'delivery' in neg_text or 'shipping' in neg_text or 'late' in neg_text:
+                    weaknesses_text = "Delivery and shipping issues reported"
+                elif 'quality' in neg_text or 'spoiled' in neg_text or 'rotten' in neg_text:
+                    weaknesses_text = "Food quality concerns raised by customers"
+                elif 'cancel' in neg_text or 'refund' in neg_text or 'customer service' in neg_text:
+                    weaknesses_text = "Customer service and cancellation difficulties"
+                elif 'price' in neg_text or 'expensive' in neg_text or 'overpriced' in neg_text:
+                    weaknesses_text = "Pricing concerns mentioned by customers"
+                else:
+                    weaknesses_text = "Customer complaints (see details below)"
+            else:
+                weaknesses_text = "No significant negative feedback this week"
         else:
             weaknesses_text = "; ".join(weaknesses)
         

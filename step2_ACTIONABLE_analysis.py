@@ -181,8 +181,8 @@ def create_html_report(posts_by_brand, brand_totals, data):
         
         <div class="validation-box">
             <h4>[VALIDATION] Sync with Step 1</h4>
-            <p><strong>HelloFresh:</strong> {brand_totals.get('HelloFresh', {}).get('positive', 0)}/{brand_totals.get('HelloFresh', {}).get('negative', 0)}/{brand_totals.get('HelloFresh', {}).get('neutral', 0)} = {hf_total} posts ({brand_totals.get('HelloFresh', {}).get('pct_positive', 0)}% positive)</p>
-            <p><strong>Factor75:</strong> {brand_totals.get('Factor75', {}).get('positive', 0)}/{brand_totals.get('Factor75', {}).get('negative', 0)}/{brand_totals.get('Factor75', {}).get('neutral', 0)} = {f75_total} posts ({brand_totals.get('Factor75', {}).get('pct_positive', 0)}% positive)</p>
+            <p><strong>HelloFresh:</strong> {brand_totals.get('HelloFresh', {}).get('positive', 0)} positive, {brand_totals.get('HelloFresh', {}).get('negative', 0)} negative, {brand_totals.get('HelloFresh', {}).get('neutral', 0)} neutral = {hf_total} posts ({brand_totals.get('HelloFresh', {}).get('pct_positive', 0)}% positive)</p>
+            <p><strong>Factor75:</strong> {brand_totals.get('Factor75', {}).get('positive', 0)} positive, {brand_totals.get('Factor75', {}).get('negative', 0)} negative, {brand_totals.get('Factor75', {}).get('neutral', 0)} neutral = {f75_total} posts ({brand_totals.get('Factor75', {}).get('pct_positive', 0)}% positive)</p>
         </div>
     </div>"""
     
