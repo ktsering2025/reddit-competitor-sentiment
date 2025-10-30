@@ -98,7 +98,8 @@ def create_chart(brand_sentiment, data):
     
     # Add (HF) label to HelloFresh family brands
     brand_labels = [f"{brand} (HF)" if brand in HF_FAMILY_BRANDS else brand for brand in ALL_COMPETITORS]
-    ax.set_xticklabels(brand_labels, rotation=35, ha='right')  # 30-40° rotation for legibility
+    # 45° rotation for maximum readability and no overlap
+    ax.set_xticklabels(brand_labels, rotation=45, ha='right', fontsize=10)
     
     # Y-axis - count by 2s as requested
     max_y = max([sum([positive_counts[i], negative_counts[i], neutral_counts[i]]) for i in range(len(ALL_COMPETITORS))])
@@ -122,26 +123,26 @@ def create_chart(brand_sentiment, data):
     # Grid for better readability
     ax.grid(True, alpha=0.3, axis='y')
     
-    # Footer with metadata - well-spaced, clean layout
+    # Footer with metadata - maximum spacing to prevent overlap with rotated labels
     timestamp = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
     commit_hash = get_git_commit_hash()
     
-    # Line 1: Note about counts (darker, more visible, higher position)
-    plt.figtext(0.5, 0.08, 'Counts are unique posts (no comments/reposts)', 
+    # Line 1: Note about counts (clear, well-positioned)
+    plt.figtext(0.5, 0.10, 'Counts are unique posts (no comments/reposts)', 
                 ha='center', fontsize=10, style='italic', color='#333')
     
-    # Line 2: Data period and metadata (well-spaced, lower position)
+    # Line 2: Data period and metadata (compact, lower position)
     footer_text = f"Data period: {start_date}–{end_date}  •  Generated (UTC): {timestamp}  •  Commit: {commit_hash}"
-    plt.figtext(0.5, 0.03, footer_text, ha='center', fontsize=8, color='#666')
+    plt.figtext(0.5, 0.04, footer_text, ha='center', fontsize=8, color='#666')
     
-    # Check for zero posts and add footnote (left side, same height as footer)
+    # Check for zero posts and add footnote (left side)
     zero_brands = [brand for brand in ALL_COMPETITORS if sum(brand_sentiment[brand].values()) == 0]
     if zero_brands:
-        plt.figtext(0.02, 0.03, '* No posts this week', fontsize=8, style='italic', color='#666')
+        plt.figtext(0.02, 0.04, '* No posts this week', fontsize=8, style='italic', color='#666')
     
-    # Adjust layout to prevent clipping and overlap
+    # Adjust layout with extra bottom margin for 45° rotated labels
     plt.tight_layout()
-    plt.subplots_adjust(bottom=0.15)
+    plt.subplots_adjust(bottom=0.20)
     
     # Save chart (stable name as per Brian's spec)
     # MAXIMUM DPI (600) for crystal-clear viewing when opened
