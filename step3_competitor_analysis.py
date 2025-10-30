@@ -53,83 +53,41 @@ def analyze_competitor_themes(data):
     return competitor_themes
 
 def generate_strengths_weaknesses(competitor_themes, data):
-    """Generate strengths and weaknesses for each competitor with fallback narratives"""
+    """Generate ACTUAL sentiment breakdown for each competitor based on real data"""
     results = {}
     
-    # Get brand counts from metadata for total posts per brand
-    brand_counts = {}
-    if 'brand_counts' in data:
-        brand_counts = data['brand_counts']
-    
     for brand in ALL_COMPETITORS:
-        total_posts = brand_counts.get(brand, 0)
-        
         # Get actual posts for this brand
         brand_posts = [p for p in data.get('posts', []) if p.get('primary_brand') == brand]
         
-        if total_posts == 0 or not brand_posts:
+        if not brand_posts:
             # No posts recorded this week
             results[brand] = {
-                'strengths': "No posts recorded this week.",
-                'weaknesses': "No posts recorded this week."
+                'strengths': "No posts this week",
+                'weaknesses': "No posts this week"
             }
             continue
-            
-        themes = competitor_themes.get(brand, {})
-        strengths = []
-        weaknesses = []
         
-        for theme, sentiment_counts in themes.items():
-            total = sum(sentiment_counts.values())
-            if total > 0:
-                positive_pct = (sentiment_counts['positive'] / total) * 100
-                negative_pct = (sentiment_counts['negative'] / total) * 100
-                
-                if positive_pct >= 60:  # 60%+ positive
-                    strengths.append(f"{theme} ({positive_pct:.0f}% positive)")
-                elif negative_pct >= 60:  # 60%+ negative
-                    weaknesses.append(f"{theme} ({negative_pct:.0f}% negative)")
+        # Count ACTUAL sentiment
+        pos_count = len([p for p in brand_posts if p.get('sentiment') == 'positive'])
+        neg_count = len([p for p in brand_posts if p.get('sentiment') == 'negative'])
+        neu_count = len([p for p in brand_posts if p.get('sentiment') == 'neutral'])
+        total = len(brand_posts)
         
-        # Create strategic narratives (Brian's feedback: be more specific and actionable)
-        if not strengths:
-            # Look at actual positive posts to create narrative
-            pos_posts = [p for p in brand_posts if p.get('sentiment') == 'positive']
-            if pos_posts:
-                # Extract key themes from positive posts
-                pos_text = ' '.join([p.get('title', '') + ' ' + p.get('selftext', '') for p in pos_posts]).lower()
-                if 'price' in pos_text or 'cheap' in pos_text or 'affordable' in pos_text:
-                    strengths_text = "Competitive pricing mentioned by customers"
-                elif 'quality' in pos_text or 'fresh' in pos_text or 'delicious' in pos_text:
-                    strengths_text = "Food quality praised by customers"
-                elif 'easy' in pos_text or 'convenient' in pos_text:
-                    strengths_text = "Convenience and ease of use highlighted"
-                else:
-                    strengths_text = "Positive customer feedback (low volume)"
-            else:
-                strengths_text = "No significant positive feedback this week"
+        pos_pct = int((pos_count / total) * 100) if total > 0 else 0
+        neg_pct = int((neg_count / total) * 100) if total > 0 else 0
+        
+        # Build strengths text
+        if pos_count > 0:
+            strengths_text = f"{pos_count} positive post{'s' if pos_count != 1 else ''} ({pos_pct}% of {total} total)"
         else:
-            strengths_text = "; ".join(strengths)
-            
-        if not weaknesses:
-            # Look at actual negative posts to create narrative
-            neg_posts = [p for p in brand_posts if p.get('sentiment') == 'negative']
-            if neg_posts:
-                # Extract key issues from negative posts
-                neg_text = ' '.join([p.get('title', '') + ' ' + p.get('selftext', '') for p in neg_posts]).lower()
-                if 'delivery' in neg_text or 'shipping' in neg_text or 'late' in neg_text:
-                    weaknesses_text = "Delivery and shipping issues reported"
-                elif 'quality' in neg_text or 'spoiled' in neg_text or 'rotten' in neg_text:
-                    weaknesses_text = "Food quality concerns raised by customers"
-                elif 'cancel' in neg_text or 'refund' in neg_text or 'customer service' in neg_text:
-                    weaknesses_text = "Customer service and cancellation difficulties"
-                elif 'price' in neg_text or 'expensive' in neg_text or 'overpriced' in neg_text:
-                    weaknesses_text = "Pricing concerns mentioned by customers"
-                else:
-                    weaknesses_text = "Customer complaints (see details below)"
-            else:
-                weaknesses_text = "No significant negative feedback this week"
+            strengths_text = f"0 positive posts this week ({total} total posts)"
+        
+        # Build weaknesses text
+        if neg_count > 0:
+            weaknesses_text = f"{neg_count} negative post{'s' if neg_count != 1 else ''} ({neg_pct}% of {total} total)"
         else:
-            weaknesses_text = "; ".join(weaknesses)
+            weaknesses_text = f"0 negative posts this week ({total} total posts)"
         
         results[brand] = {
             'strengths': strengths_text,
@@ -149,18 +107,18 @@ def create_competitor_table_html(competitor_analysis, data):
 <head>
     <title>Step 3: Competitor Deep Dive Analysis</title>
     <style>
-        body {{ font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }}
-        .container {{ max-width: 1200px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }}
-        h1 {{ color: #2c3e50; text-align: center; margin-bottom: 30px; }}
-        .date-info {{ text-align: center; color: #7f8c8d; margin-bottom: 30px; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 20px; background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); min-height: 100vh; }}
+        .container {{ max-width: 1200px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(34, 197, 94, 0.1); border-top: 3px solid #22c55e; }}
+        h1 {{ color: #166534; text-align: center; margin-bottom: 30px; }}
+        .date-info {{ text-align: center; color: #64748b; margin-bottom: 30px; padding: 15px; background-color: #f0fdf4; border-radius: 8px; }}
         .competitor-table {{ width: 100%; border-collapse: collapse; margin-top: 20px; }}
-        .competitor-table th, .competitor-table td {{ border: 1px solid #ddd; padding: 12px; text-align: left; }}
-        .competitor-table th {{ background-color: #34495e; color: white; font-weight: bold; }}
-        .competitor-table tr:nth-child(even) {{ background-color: #f8f9fa; }}
-        .strengths {{ color: #27ae60; font-weight: bold; }}
-        .weaknesses {{ color: #e74c3c; font-weight: bold; }}
-        .brand-name {{ font-weight: bold; color: #2c3e50; }}
-        .summary {{ margin-top: 30px; padding: 20px; background-color: #ecf0f1; border-radius: 5px; }}
+        .competitor-table th, .competitor-table td {{ border: 1px solid #dcfce7; padding: 12px; text-align: left; }}
+        .competitor-table th {{ background: linear-gradient(135deg, #86efac 0%, #4ade80 100%); color: white; font-weight: bold; }}
+        .competitor-table tr:nth-child(even) {{ background-color: #f0fdf4; }}
+        .strengths {{ color: #22c55e; font-weight: bold; }}
+        .weaknesses {{ color: #ef4444; font-weight: bold; }}
+        .brand-name {{ font-weight: bold; color: #166534; }}
+        .summary {{ margin-top: 30px; padding: 20px; background-color: #dcfce7; border-radius: 8px; border: 1px solid #86efac; }}
     </style>
 </head>
 <body>
@@ -215,37 +173,37 @@ def create_competitor_table_html(competitor_analysis, data):
                              key=lambda x: x['engagement_score'], reverse=True)[:3]
         
         html += f"""
-        <h2 style="margin-top: 40px;">{brand} - Top Reddit Posts</h2>
-        <h3 style="color: #27ae60;">Top Positive Posts</h3>"""
+        <h2 style="margin-top: 40px; color: #166534;">{brand} - Top Reddit Posts</h2>
+        <h3 style="color: #22c55e;">Top Positive Posts</h3>"""
         
         if top_positive:
             for i, post in enumerate(top_positive, 1):
                 preview = post.get('selftext', '')[:300] + ('...' if len(post.get('selftext', '')) > 300 else '')
                 html += f"""
-        <div style="border-left: 4px solid #27ae60; padding: 15px; margin: 15px 0; background-color: #f8f9fa;">
-            <h4>#{i}: <a href="{post['url']}" target="_blank">{post['title']}</a></h4>
-            <p><strong>Engagement:</strong> {post['engagement_score']:.0f} | <strong>Subreddit:</strong> r/{post['subreddit']}</p>
-            <p>{preview}</p>
-            <p><small>Score: {post.get('score', 0)} | Comments: {post.get('num_comments', 0)}</small></p>
+        <div style="border-left: 4px solid #22c55e; padding: 15px; margin: 15px 0; background-color: #f0fdf4; border-radius: 8px;">
+            <h4>#{i}: <a href="{post['url']}" target="_blank" style="color: #22c55e;">{post['title']}</a></h4>
+            <p style="color: #64748b;"><strong>Engagement:</strong> {post['engagement_score']:.0f} | <strong>Subreddit:</strong> r/{post['subreddit']}</p>
+            <p style="color: #475569;">{preview}</p>
+            <p><small style="color: #64748b;">Score: {post.get('score', 0)} | Comments: {post.get('num_comments', 0)}</small></p>
         </div>"""
         else:
-            html += "<p>No positive posts found.</p>"
+            html += "<p style='color: #64748b;'>No positive posts found.</p>"
         
         html += f"""
-        <h3 style="color: #e74c3c;">Top Negative Posts</h3>"""
+        <h3 style="color: #ef4444;">Top Negative Posts</h3>"""
         
         if top_negative:
             for i, post in enumerate(top_negative, 1):
                 preview = post.get('selftext', '')[:300] + ('...' if len(post.get('selftext', '')) > 300 else '')
                 html += f"""
-        <div style="border-left: 4px solid #e74c3c; padding: 15px; margin: 15px 0; background-color: #f8f9fa;">
-            <h4>#{i}: <a href="{post['url']}" target="_blank">{post['title']}</a></h4>
-            <p><strong>Engagement:</strong> {post['engagement_score']:.0f} | <strong>Subreddit:</strong> r/{post['subreddit']}</p>
-            <p>{preview}</p>
-            <p><small>Score: {post.get('score', 0)} | Comments: {post.get('num_comments', 0)}</small></p>
+        <div style="border-left: 4px solid #ef4444; padding: 15px; margin: 15px 0; background-color: #fef2f2; border-radius: 8px;">
+            <h4>#{i}: <a href="{post['url']}" target="_blank" style="color: #ef4444;">{post['title']}</a></h4>
+            <p style="color: #64748b;"><strong>Engagement:</strong> {post['engagement_score']:.0f} | <strong>Subreddit:</strong> r/{post['subreddit']}</p>
+            <p style="color: #475569;">{preview}</p>
+            <p><small style="color: #64748b;">Score: {post.get('score', 0)} | Comments: {post.get('num_comments', 0)}</small></p>
         </div>"""
         else:
-            html += "<p>No negative posts found.</p>"
+            html += "<p style='color: #64748b;'>No negative posts found.</p>"
     
     html += """
         <div class="summary">

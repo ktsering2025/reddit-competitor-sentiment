@@ -14,8 +14,9 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f5f7fa;
+            color: #2d3748;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            min-height: 100vh;
         }
         
         .container {
@@ -25,13 +26,13 @@
         }
         
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #86efac 0%, #4ade80 100%);
             color: white;
             padding: 2rem;
-            border-radius: 10px;
+            border-radius: 12px;
             text-align: center;
             margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(74, 222, 128, 0.2);
         }
         
         .header h1 {
@@ -67,25 +68,25 @@
         .stat-number {
             font-size: 2rem;
             font-weight: bold;
-            color: #667eea;
+            color: #22c55e;
             margin-bottom: 0.5rem;
         }
         
         .stat-label {
             font-size: 1rem;
-            color: #666;
+            color: #64748b;
         }
         
         .hellofresh {
-            border-left: 4px solid #ff6b35;
+            border-left: 4px solid #22c55e;
         }
         
         .factor75 {
-            border-left: 4px solid #4ecdc4;
+            border-left: 4px solid #10b981;
         }
         
         .total {
-            border-left: 4px solid #667eea;
+            border-left: 4px solid #4ade80;
         }
         
         .analysis-grid {
@@ -98,36 +99,37 @@
         .analysis-card {
             background: white;
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(34, 197, 94, 0.1);
+            border-top: 3px solid #22c55e;
         }
         
         .analysis-card h3 {
-            color: #333;
+            color: #22c55e;
             margin-bottom: 1rem;
             font-size: 1.3rem;
         }
         
         .analysis-card p {
-            color: #666;
+            color: #64748b;
             margin-bottom: 1.5rem;
         }
         
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
             color: white;
             padding: 12px 24px;
             text-decoration: none;
             border-radius: 25px;
             font-weight: bold;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 2px 10px rgba(34, 197, 94, 0.3);
         }
         
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
         }
         
         .update-info {
@@ -163,6 +165,14 @@
             <p><strong>Current Data:</strong> <span id="total-posts">Loading...</span> actionable posts from global Reddit search (<span id="date-range-text">Loading...</span>)</p>
             <p><strong>Automation:</strong> New data collected every Sunday, reports generated Monday morning</p>
             <p><strong>Data Quality:</strong> 100% actionable discussions, filtered for relevance (spam removed)</p>
+            <div style="margin-top: 1rem;">
+                <button onclick="manualRefresh()" class="btn" style="cursor: pointer; border: none; font-size: 1rem;">
+                    🔄 Manual Refresh Data Now
+                </button>
+                <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">
+                    Click to fetch latest Reddit posts and regenerate all reports (Chart, Step 2, Step 3)
+                </p>
+            </div>
         </div>
         
         <div class="stats-grid">
@@ -183,6 +193,23 @@
                 <div class="stat-label">Total Actionable Posts</div>
                 <p style="margin-top: 0.5rem; color: #666;">Global Reddit Search</p>
             </div>
+        </div>
+        
+        <!-- Quick Summary Table -->
+        <div class="analysis-card" style="margin-bottom: 2rem;">
+            <h3>📊 Quick Brand Overview</h3>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                <thead>
+                    <tr style="background: linear-gradient(135deg, #86efac 0%, #4ade80 100%); color: white;">
+                        <th style="padding: 12px; text-align: left; border: 1px solid #dcfce7;">Brand</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #dcfce7;">Doing Well (Positive)</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #dcfce7;">Needs Attention (Negative)</th>
+                    </tr>
+                </thead>
+                <tbody id="brand-summary-table">
+                    <tr><td colspan="3" style="padding: 12px; text-align: center; color: #64748b;">Loading data...</td></tr>
+                </tbody>
+            </table>
         </div>
         
         <div class="analysis-grid">
@@ -230,6 +257,39 @@
     </div>
     
     <script>
+        // Manual refresh function
+        function manualRefresh() {
+            const btn = event.target;
+            btn.disabled = true;
+            btn.textContent = '⏳ Refreshing... (this may take 30-60 seconds)';
+            btn.style.opacity = '0.6';
+            
+            // Call the automation script
+            fetch('/run-refresh', {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    btn.textContent = '✅ Refresh Complete! Reloading page...';
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 2000);
+                } else {
+                    btn.textContent = '❌ Refresh Failed - Try again';
+                    btn.disabled = false;
+                    btn.style.opacity = '1';
+                    alert('Refresh failed. Please run manually: python3 complete_automation.py --no-send');
+                }
+            })
+            .catch(error => {
+                btn.textContent = '❌ Error - Run manually instead';
+                btn.disabled = false;
+                btn.style.opacity = '1';
+                alert('To refresh manually, run this command in terminal:\n\ncd /Users/kunsang.tsering/Desktop/reddit-competitor-sentiment\npython3 complete_automation.py --no-send');
+            });
+        }
+        
         // Load health status
             fetch('reports/HEALTH.json')
             .then(response => response.json())
@@ -266,6 +326,48 @@
             .catch(error => {
                 document.getElementById('data-period').textContent = 'Unknown';
                 document.getElementById('health-text').innerHTML = 'Last Run: Unknown | System offline';
+            });
+        
+        // Load brand summary table
+        fetch('reports/working_reddit_data.json')
+            .then(response => response.json())
+            .then(data => {
+                const brands = ['HelloFresh', 'Factor75', 'Home Chef', 'Blue Apron', 'Marley Spoon', 'Hungryroot', 'EveryPlate', 'Green Chef'];
+                const tableBody = document.getElementById('brand-summary-table');
+                
+                let html = '';
+                brands.forEach(brand => {
+                    const brandPosts = data.posts.filter(p => p.primary_brand === brand);
+                    const posCount = brandPosts.filter(p => p.sentiment === 'positive').length;
+                    const negCount = brandPosts.filter(p => p.sentiment === 'negative').length;
+                    const total = brandPosts.length;
+                    
+                    const posPct = total > 0 ? Math.round((posCount / total) * 100) : 0;
+                    const negPct = total > 0 ? Math.round((negCount / total) * 100) : 0;
+                    
+                    let posText, negText;
+                    if (total === 0) {
+                        posText = 'No posts this week';
+                        negText = 'No posts this week';
+                    } else {
+                        posText = posCount > 0 ? `${posCount} positive post${posCount !== 1 ? 's' : ''} (${posPct}% of ${total} total)` : `0 positive posts (${total} total)`;
+                        negText = negCount > 0 ? `${negCount} negative post${negCount !== 1 ? 's' : ''} (${negPct}% of ${total} total)` : `0 negative posts (${total} total)`;
+                    }
+                    
+                    const rowBg = total === 0 ? '#f8fafc' : (brand === 'HelloFresh' || brand === 'Factor75' ? '#f0fdf4' : 'white');
+                    html += `
+                        <tr style="background-color: ${rowBg};">
+                            <td style="padding: 12px; border: 1px solid #e5e7eb; font-weight: bold; color: #166534;">${brand}</td>
+                            <td style="padding: 12px; border: 1px solid #e5e7eb; color: #22c55e;">${posText}</td>
+                            <td style="padding: 12px; border: 1px solid #e5e7eb; color: #ef4444;">${negText}</td>
+                        </tr>
+                    `;
+                });
+                
+                tableBody.innerHTML = html;
+            })
+            .catch(error => {
+                document.getElementById('brand-summary-table').innerHTML = '<tr><td colspan="3" style="padding: 12px; text-align: center; color: #ef4444;">Error loading data</td></tr>';
             });
     </script>
 </body>
