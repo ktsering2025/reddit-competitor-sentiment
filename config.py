@@ -88,7 +88,7 @@ WEEK_END_OVERRIDE = None  # Set via WEEK_END env variable if needed
 INCLUDE_SATURDAY_THRESHOLD = 5  # Not used in FULL_7 mode
 
 # Chart Configuration
-CHART_FIGSIZE = (12, 6)  # Medium image size as specified
+CHART_FIGSIZE = (16, 8)  # Larger size for email clarity
 CHART_OUTPUT = "reports/step1_chart.png"
 
 # File Paths

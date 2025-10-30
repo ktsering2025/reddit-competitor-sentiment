@@ -145,9 +145,10 @@ def create_chart(brand_sentiment, data):
     plt.subplots_adjust(bottom=0.15)
     
     # Save chart (stable name as per Brian's spec)
+    # High DPI (400) for crystal-clear email attachment
     os.makedirs('reports', exist_ok=True)
-    plt.savefig(CHART_OUTPUT, dpi=300, bbox_inches='tight')
-    print(f"[SUCCESS] Step 1 chart saved to {CHART_OUTPUT}")
+    plt.savefig(CHART_OUTPUT, dpi=400, bbox_inches='tight', facecolor='white', edgecolor='none')
+    print(f"[SUCCESS] Step 1 chart saved to {CHART_OUTPUT} (High-res: 400 DPI)")
     
     return CHART_OUTPUT
 
