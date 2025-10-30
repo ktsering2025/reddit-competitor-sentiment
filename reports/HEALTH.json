@@ -4,14 +4,16 @@
     "start": "2025-10-27",
     "end": "2025-11-02"
   },
-  "commit": "c9874da9",
-  "generated_utc": "2025-10-29T15:55:52.000000+00:00",
+  "commit": "54cfae82",
+  "generated_utc": "2025-10-30T15:39:28.149096+00:00",
   "brands": [
     "HelloFresh",
     "Factor75",
     "Home Chef",
     "Blue Apron",
     "Marley Spoon",
-    "Hungryroot"
+    "Hungryroot",
+    "EveryPlate",
+    "Green Chef"
   ]
 }
