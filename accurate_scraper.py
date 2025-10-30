@@ -671,6 +671,7 @@ class AccurateScraper:
         ]
         
         # Strong negative keywords/phrases that override sentiment analysis
+        # NOTE: Only include phrases that express DISSATISFACTION, not just stating facts
         strong_negative = [
             'stay away', 'avoid', 'terrible', 'worst', 'horrible', 'awful', 
             'disgusting', 'rotten', 'spoiled', 'cancelled', 'cancel', 'refund',
@@ -678,10 +679,8 @@ class AccurateScraper:
             'never again', 'waste of money', 'do not recommend', 'not recommend',
             'caution', 'warning', 'beware', 'upcharge', 'overpriced', 'rip off',
             'complaint', 'unhappy', 'dissatisfied', 'poor quality', 'bad experience',
-            'missing', 'wrong', 'incorrect', 'damaged', 'late delivery',
-            'not available', 'isn\'t available', 'isnt available', 'doesn\'t offer', 
-            'doesnt offer', 'don\'t offer', 'dont offer', 'can\'t do', 'cant do',
-            'cannot', 'won\'t', 'wont', 'will not', 'no longer', 'stopped'
+            'missing', 'wrong', 'incorrect', 'damaged', 'late delivery', 'disaster',
+            'gross', 'contaminated', 'ruined', 'laughable'
         ]
         
         # Strong positive keywords
@@ -695,9 +694,15 @@ class AccurateScraper:
         # Check for neutral comparison first (Brian's feedback)
         has_neutral_comparison = any(keyword in text_lower for keyword in neutral_comparison)
         
+        # Check if title is a question (strong indicator of neutral)
+        is_question = title_lower.strip().endswith('?') or any(q in title_lower for q in ['what', 'which', 'how', 'does anyone', 'has anyone'])
+        
         # Check for strong keywords
         has_strong_negative = any(keyword in text_lower for keyword in strong_negative)
         has_strong_positive = any(keyword in text_lower for keyword in strong_positive)
+        
+        # Track if positive sentiment came from context-aware analysis
+        context_aware_positive = False
         
         # CRITICAL: Check if negative sentiment is about a DIFFERENT brand
         # E.g., "Don't switch from HelloFresh to Marley Spoon - MS is terrible!"
@@ -747,6 +752,7 @@ class AccurateScraper:
                                     # This is POSITIVE for primary brand!
                                     has_strong_negative = False
                                     has_strong_positive = True
+                                    context_aware_positive = True  # Mark as context-aware
                                     break
         
         # VADER sentiment
@@ -762,16 +768,19 @@ class AccurateScraper:
             # Clear negative sentiment always wins
             sentiment = 'negative'
             confidence = 0.9
-        elif has_strong_positive:
-            # Strong positive wins over neutral comparison
-            # (e.g., "Don't switch from HF - they're better!")
+        elif context_aware_positive:
+            # Context-aware positive (e.g., "Don't switch!") wins over neutral comparison
             sentiment = 'positive'
             confidence = 0.9
-        elif has_neutral_comparison:
-            # Questions/comparisons are neutral if no strong positive/negative
-            # (Brian's feedback: "Positive post #1 for HF isn't actually positive")
+        elif is_question or has_neutral_comparison:
+            # Questions/comparisons are ALWAYS neutral (Brian's feedback)
+            # Even if they contain positive words like "love" or "best"
             sentiment = 'neutral'
             confidence = 0.85
+        elif has_strong_positive:
+            # Strong positive only if NOT a question/comparison
+            sentiment = 'positive'
+            confidence = 0.9
         # Combined sentiment decision (Brian's spec: Positive/Negative/Suggestion(Neutral))
         elif vader_compound >= POSITIVE_THRESHOLD and textblob_polarity >= 0.1:
             sentiment = 'positive'
