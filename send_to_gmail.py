@@ -101,52 +101,53 @@ def send_via_mailto(recipient_email):
     
     subject = f"Weekly Reddit Competitor Sentiment Report — {start_date} to {end_date}"
     
-    # Get top posts
-    hf_positive, hf_negative, f75_positive, f75_negative = get_top_posts_for_email()
+    # Get summary stats
+    posts = data.get('posts', [])
+    hf_posts = [p for p in posts if p.get('primary_brand') == 'HelloFresh']
+    f75_posts = [p for p in posts if p.get('primary_brand') == 'Factor75']
     
-    # Build email body
+    hf_positive = len([p for p in hf_posts if p['sentiment'] == 'positive'])
+    hf_negative = len([p for p in hf_posts if p['sentiment'] == 'negative'])
+    hf_neutral = len([p for p in hf_posts if p['sentiment'] == 'neutral'])
+    hf_total = len(hf_posts)
+    hf_pct = int((hf_positive / hf_total * 100)) if hf_total > 0 else 0
+    
+    f75_positive = len([p for p in f75_posts if p['sentiment'] == 'positive'])
+    f75_negative = len([p for p in f75_posts if p['sentiment'] == 'negative'])
+    f75_neutral = len([p for p in f75_posts if p['sentiment'] == 'neutral'])
+    f75_total = len(f75_posts)
+    f75_pct = int((f75_positive / f75_total * 100)) if f75_total > 0 else 0
+    
+    # Build SIMPLIFIED email body (no post lists)
     body_lines = []
     body_lines.append("Weekly Reddit Competitor Sentiment Report")
-    body_lines.append("=" * 50)
+    body_lines.append("=" * 60)
     body_lines.append("")
-    
-    # HelloFresh section
-    body_lines.append("HelloFresh:")
-    body_lines.append("Top 3 Positive:")
-    for i, post in enumerate(hf_positive, 1):
-        title = post.get('title', 'No title')[:80] + "..." if len(post.get('title', '')) > 80 else post.get('title', 'No title')
-        url = post.get('url', '#')
-        body_lines.append(f"  {i}. {title}")
-        body_lines.append(f"     Link: {url}")
-    
-    body_lines.append("Top 3 Negative:")
-    for i, post in enumerate(hf_negative, 1):
-        title = post.get('title', 'No title')[:80] + "..." if len(post.get('title', '')) > 80 else post.get('title', 'No title')
-        url = post.get('url', '#')
-        body_lines.append(f"  {i}. {title}")
-        body_lines.append(f"     Link: {url}")
-    
+    body_lines.append(f"Analysis Period: {start_date} to {end_date}")
     body_lines.append("")
-    
-    # Factor75 section
-    body_lines.append("Factor75:")
-    body_lines.append("Top 3 Positive:")
-    for i, post in enumerate(f75_positive, 1):
-        title = post.get('title', 'No title')[:80] + "..." if len(post.get('title', '')) > 80 else post.get('title', 'No title')
-        url = post.get('url', '#')
-        body_lines.append(f"  {i}. {title}")
-        body_lines.append(f"     Link: {url}")
-    
-    body_lines.append("Top 3 Negative:")
-    for i, post in enumerate(f75_negative, 1):
-        title = post.get('title', 'No title')[:80] + "..." if len(post.get('title', '')) > 80 else post.get('title', 'No title')
-        url = post.get('url', '#')
-        body_lines.append(f"  {i}. {title}")
-        body_lines.append(f"     Link: {url}")
-    
+    body_lines.append("QUICK SUMMARY:")
+    body_lines.append("-" * 60)
+    body_lines.append(f"HelloFresh: {hf_total} posts ({hf_pct}% positive)")
+    body_lines.append(f"  • {hf_positive} positive, {hf_negative} negative, {hf_neutral} neutral")
     body_lines.append("")
-    body_lines.append("Complete Analysis:")
+    body_lines.append(f"Factor75: {f75_total} posts ({f75_pct}% positive)")
+    body_lines.append(f"  • {f75_positive} positive, {f75_negative} negative, {f75_neutral} neutral")
+    body_lines.append("")
+    body_lines.append("DASHBOARD ACCESS:")
+    body_lines.append("-" * 60)
+    body_lines.append("Main Dashboard:")
+    body_lines.append("https://ktsering2025.github.io/reddit-competitor-sentiment/")
+    body_lines.append("")
+    body_lines.append("Step 1 Chart (attached as PNG)")
+    body_lines.append("")
+    body_lines.append("Step 2 Deep Dive (HelloFresh & Factor75):")
     body_lines.append("https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_ACTIONABLE_analysis_LATEST.html")
+    body_lines.append("")
+    body_lines.append("Step 3 Competitor Analysis:")
+    body_lines.append("https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step3_competitor_analysis_LATEST.html")
+    body_lines.append("")
+    body_lines.append("=" * 60)
+    body_lines.append("Data refreshed weekly • Built for Brian's competitive intelligence")
     
     body = "\n".join(body_lines)
     
