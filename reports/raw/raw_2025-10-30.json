@@ -1,9 +1,9 @@
 {
-  "scrape_timestamp": "2025-10-30T19:44:07.685847+00:00",
-  "processing_timestamp": "2025-10-30T19:44:07.685869+00:00",
+  "scrape_timestamp": "2025-10-30T19:52:54.673465+00:00",
+  "processing_timestamp": "2025-10-30T19:52:54.673479+00:00",
   "date_range": {
-    "start": "2025-10-23T19:42:41.169001+00:00",
-    "end": "2025-10-30T19:42:41.169001+00:00"
+    "start": "2025-10-23T19:51:29.811058+00:00",
+    "end": "2025-10-30T19:51:29.811058+00:00"
   },
   "total_posts": 34,
   "data_sources": {
@@ -141,7 +141,7 @@
     {
       "title": "Don't switch!",
       "selftext": "I was doing HF for a while. Had a few issues that I made me an unhappy customer. I switched to Marley Spoon. What a disaster! My second box in and I've already cancelled. Chicken blood contaminated everything. It was a gross, sticky mess. They don't separate veggies or bag them so when I say everything was ruined- I mean everything. I submitted my issue and they offered me a $9 credit. That is laughable. When I called customer service, you can't even be placed on hold. It's high volume and the call just ends. I requested a call back online but they say someone will get back to me in 24hrs. \nThis experience makes HF look better than I once thought bc they always resolved my issues fairly. \nSo here is my cautionary tale for anyone thinking of switching to MS lol",
-      "score": 32,
+      "score": 31,
       "num_comments": 8,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1ojejqh/dont_switch/",
@@ -151,7 +151,7 @@
         "Marley Spoon"
       ],
       "author": "anonymousanomoly83",
-      "upvote_ratio": 0.9,
+      "upvote_ratio": 0.88,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -268,7 +268,7 @@
     {
       "title": "In the pizza hello fresh meals do you get a finished dough you just have to roll out?",
       "selftext": "The first item on the ingredient list of this tex mex pizza is a dough is it just a pre made or finished dough that you have to roll out or do you need to make the dough yourself?",
-      "score": 3,
+      "score": 4,
       "num_comments": 5,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1ogn36y/in_the_pizza_hello_fresh_meals_do_you_get_a/",
@@ -277,7 +277,7 @@
         "HelloFresh"
       ],
       "author": "ImmortalYvind",
-      "upvote_ratio": 0.72,
+      "upvote_ratio": 0.83,
       "is_self": false,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/r/hellofresh/search/?type=posts&t=week&restrict_sr=1",
@@ -289,7 +289,7 @@
     {
       "title": "Home Chef- Blackened Shrimp with Asiago Asparagus Risotto",
       "selftext": "",
-      "score": 4,
+      "score": 5,
       "num_comments": 1,
       "subreddit": "mealkits",
       "url": "https://reddit.com/r/mealkits/comments/1oir5fl/home_chef_blackened_shrimp_with_asiago_asparagus/",
@@ -298,7 +298,7 @@
         "Home Chef"
       ],
       "author": "cera84",
-      "upvote_ratio": 0.84,
+      "upvote_ratio": 1.0,
       "is_self": false,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/r/mealkits/search/?q=hellofresh&type=posts&t=week&restrict_sr=1",
@@ -310,7 +310,7 @@
     {
       "title": "Prepared Meal Kits that don't use last mile carriers",
       "selftext": "Hi all,\n\nMy apartment building's security prevents last-mile carriers (like Veho, Lasership, etc.) used by companies like Factor and HelloFresh) from accessing the secure mailroom.\n\nThis means deliveries are constantly left outside, which means they're stolen, rained on, or left out in the heat.\n\nDoes anyone know of any prepared meal delivery services (preferably prepared meals) that reliably ship via UPS, FedEx, or USPS?\n\n",
-      "score": 5,
+      "score": 4,
       "num_comments": 9,
       "subreddit": "mealkits",
       "url": "https://reddit.com/r/mealkits/comments/1oinzhv/prepared_meal_kits_that_dont_use_last_mile/",
@@ -418,7 +418,7 @@
     {
       "title": "Stay away from Marley Spoon and Dinnerly",
       "selftext": "I subscribed to see what they had to offer. I browsed for a bit but didn\u2019t like the options so I canceled my subscription 10 mins after signing up. Didn\u2019t think anything of it. Today I get home to a big delivery from both. I check my credit card and I was charged for both. But I canceled, basically right away. Why would they send random food to someone who isn\u2019t subscribed. Such a shady business practice. I called them but of course they are experiencing high call volumes. I used there chatbot on their site and they just end the convo. I disputed it with my credit card company too. This is ridiculous. ",
-      "score": 16,
+      "score": 15,
       "num_comments": 27,
       "subreddit": "mealkits",
       "url": "https://reddit.com/r/mealkits/comments/1ohpgd4/stay_away_from_marley_spoon_and_dinnerly/",
@@ -502,7 +502,7 @@
     {
       "title": "Horrible Experience With Factor Meals",
       "selftext": "Do not sign up for Factor Meals unless you\u2019re prepared to be locked in, or spend many excruciating hours trying to cancel.\n\nLearn from my mistake and save\u00a0yourself money, time, and frustration. \n\nLured by a discount offer and intrigued by the possibility of portion controlled, healthy, pre-prepared meals, I made the mistake of visiting the Factor Meals website, only to get sucked in to what feels very much like a scam, with blatantly deceptive (and likely illegal) high-pressure marketing tactics.\u00a0\n\nSelecting an initial delivery date and inputting a credit card is required just to view the meals, which should\u2019ve been a huge red flag\u2026however, the sign-up page clearly states in bold that you can \u201cchange, skip, or cancel weekly deliveries anytime.\u201d\u00a0\n\nThere are no disclaimers, asterisks, or restrictions attached to that statement.\u00a0\n\nAll that is shown is a badge underneath stating \u201cSatisfaction Guaranteed.\u201d\u00a0\n\nUnfortunately, none of these statements are true in practice. \n\nAfter signing up and selecting an initial delivery date (which, again, is required just to view the meals they offer), I found out that you cannot change, pause or cancel your first delivery at all.\u00a0\n\nWhen I immediately tried to simply adjust my delivery date (literally 42 seconds after selecting it), I got a message saying changes weren\u2019t allowed for the first box. I then immediately cancelled my entire account, only to find that Factor still planned to charge me for the first order.\n\nIt took several hours and multiple frustrating attempts to contact customer support, by both phone and in-app chat, to finally get that first delivery canceled.\u00a0\n\nBoth the in-app chat and phone line had extreme wait times and would randomly (or deliberately?) disconnect.\u00a0\n\nWhen I finally got through, the customer service team was clearly following a system that makes it as hard as possible for customers to resolve issues, including he agent asking multiple times to verify information that I had already provided (such as my phone number and account name), and waiting 5+ minutes to reply between each response.\u00a0\n\nThe process was stressful, confusing, and felt intentionally designed to make it extremely difficult to opt out.\u00a0\n\nIf Factor\u2019s food is as good as they claim, they shouldn\u2019t need to trap new customers through not just misleading, but blatantly inaccurate \u201ccancel anytime\u201d promises and huge barriers to cancellation.\n\nThis experience completely ruined my trust in the company.\u00a0\n\nGiven the many negative reviews about the weird taste and texture of their food, and the misleadingly high fat and sodium content of their sauces, it seems like I dodged a bullet, but I wanted to warn anyone else thinking about inputting their information just to view the meals.\n\nTransparency and honesty go a long way. I hope Factor rethinks their misleading and shady practices, and hope everyone else thinks twice before signing up and getting locked in.\n\n_____\n\nTLDR: be warned that Factor Meals\nhas deliberately misleading marketing practices, blatant misstatements, and an extremely frustrating (and near impossible) cancellation experience.\n\n",
-      "score": 60,
+      "score": 58,
       "num_comments": 45,
       "subreddit": "ReadyMeals",
       "url": "https://reddit.com/r/ReadyMeals/comments/1oiciat/horrible_experience_with_factor_meals/",
@@ -565,7 +565,7 @@
     {
       "title": "I am in love with Home Chef",
       "selftext": "",
-      "score": 14,
+      "score": 13,
       "num_comments": 1,
       "subreddit": "HomeChef",
       "url": "https://reddit.com/r/HomeChef/comments/1ojltoq/i_am_in_love_with_home_chef/",
@@ -574,7 +574,7 @@
         "Home Chef"
       ],
       "author": "New_Woodpecker5604",
-      "upvote_ratio": 1.0,
+      "upvote_ratio": 0.94,
       "is_self": false,
       "source_brand": "Home Chef",
       "source_url": "https://www.reddit.com/search/?q=home+chef&type=posts&t=week",
@@ -586,7 +586,7 @@
     {
       "title": "Terrible. Terrible. Terrible.",
       "selftext": "For anyone on the fence, do not waste your money.\n\nThis was hands down the worst meal service I have ever tried. I enjoy Blue Apron, HelloFresh, and Daily Harvest. They have their ups and downs but are overall good. \n\nPurple carrot was literally trash. Very old and rotten vegetables wrapped in way too much plastic. The meals were inedible. My husband actually took the pot (mushroom stroganoff) outside because the smell was rancid. \n\nI tried to cancel immediately the day after delivery but of course there was no human to talk to. Just a useless AI chatbot that kept me trapped in a fruitless loop. A few days later a rep finally emailed me, not to fix anything, but to say they could not stop the next shipment and would refund me five dollars for the spoiled ingredients. \n\nI did not sign up for this service to argue over pocket change. I wanted healthy, easy plant-based meals. What I got was rotten trash in absurd amounts of plastic packaging.\n\nSave yourself the headache and avoid this service like the plague.\n\n",
-      "score": 0,
+      "score": 2,
       "num_comments": 9,
       "subreddit": "purplecarrot",
       "url": "https://reddit.com/r/purplecarrot/comments/1oimb9a/terrible_terrible_terrible/",
@@ -596,7 +596,7 @@
         "Blue Apron"
       ],
       "author": "Excellent_Weather583",
-      "upvote_ratio": 0.5,
+      "upvote_ratio": 0.58,
       "is_self": true,
       "source_brand": "Blue Apron",
       "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
@@ -630,7 +630,7 @@
     {
       "title": "App not showing menus of upcoming weeks",
       "selftext": "I miss the old BA. \n\nAfter a long break, I reactivated my account. When I did the new recipe cards just came out. I don\u2019t hate the new cards, but I did like the older ones better. Maybe it was because I was more familiar with them. \n\nBut THEN\u2026 the app update. It is just horrible. I hate the layout, but what really gets me the most is you used to be able to see like 10 weeks of recipes in advance. After many failed attempts of logging in the app, despite getting auto shipments, I finally did. And when I did, there were only about maybe four weeks showing in advance. I usually get most of them, but not all of them. Well, now today I got another unexpected blue apron. I go in to check the app thinking \u2018OK so I missed a week to skip?\u2019 It called for another update. Once in, I go to skip more weeks in advance and there\u2019s only one week showing now.\n\nSo now I skipped next week, which is the only week showing, and called to ask about recent unauthorized up charges in auto shipments, and also to ask about the app not showing any weeks in advance. I guess they\u2019re working on it? But next, I ask if they can pause me like I had before and they said that is not an option. There used to be some option, but I guess it\u2019s no longer there now. ",
-      "score": 5,
+      "score": 6,
       "num_comments": 4,
       "subreddit": "blueapron",
       "url": "https://reddit.com/r/blueapron/comments/1ohnmlw/app_not_showing_menus_of_upcoming_weeks/",
@@ -639,7 +639,7 @@
         "Blue Apron"
       ],
       "author": "MisselthwaiteGardens",
-      "upvote_ratio": 0.86,
+      "upvote_ratio": 0.87,
       "is_self": false,
       "source_brand": "Blue Apron",
       "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
@@ -651,7 +651,7 @@
     {
       "title": "No more premade Dishes?",
       "selftext": "Are you guys able to order premade Dishes in the app anymore? I no longer see the section to order them, and it's not a menu option like before. Did they get rid of this option or what?  Is it temporarily on hold or something? Premade Dishes was my whole reason for using Blue Apron. Is anyone else having this issue?",
-      "score": 3,
+      "score": 2,
       "num_comments": 3,
       "subreddit": "blueapron",
       "url": "https://reddit.com/r/blueapron/comments/1oevoic/no_more_premade_dishes/",
@@ -660,7 +660,7 @@
         "Blue Apron"
       ],
       "author": "Content-Strategy-512",
-      "upvote_ratio": 0.71,
+      "upvote_ratio": 0.67,
       "is_self": true,
       "source_brand": "Blue Apron",
       "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
@@ -672,7 +672,7 @@
     {
       "title": "Blue Apron Black Friday 2025 deals vs just learning to meal prep cause these prices are just",
       "selftext": "Honestly feels like meal kits are for people who can't plan meals or don't know how to cook. But we're both busy with work and tired of eating the same 5 things on rotation or ordering expensive takeout. Is Blue Apron actually good quality and interesting recipes or is it mediocre food at premium prices?\n\nHas anyone used Blue Apron long term and think it's worth it? Do they even do Black Friday deals or is it just the constant new customer promotions? And for people who quit meal kits, did you find a better solution or just go back to regular grocery shopping?",
-      "score": 3,
+      "score": 2,
       "num_comments": 17,
       "subreddit": "blueapron",
       "url": "https://reddit.com/r/blueapron/comments/1oemwm8/blue_apron_black_friday_2025_deals_vs_just/",
@@ -681,7 +681,7 @@
         "Blue Apron"
       ],
       "author": "Psychological_Way_4",
-      "upvote_ratio": 0.56,
+      "upvote_ratio": 0.54,
       "is_self": true,
       "source_brand": "Blue Apron",
       "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
@@ -735,7 +735,7 @@
     {
       "title": "Miniature vegetables?",
       "selftext": "I am a vegetarian, really really enjoy Marley spoon overall but the veg have been getting smaller and smaller last few months. Anyone else experiencing this?\n\nI don\u2019t want to cancel, I like the recipes and the cooking is kinda at my level, I don\u2019t have time to shop and meal plan much, but I\u2019m getting hungry.",
-      "score": 7,
+      "score": 8,
       "num_comments": 8,
       "subreddit": "marleyspoon",
       "url": "https://reddit.com/r/marleyspoon/comments/1oekb6b/miniature_vegetables/",
