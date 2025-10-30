@@ -650,10 +650,14 @@ class AccurateScraper:
         title_lower = title_only.lower() if title_only else text_lower
         
         # Neutral comparison/switching keywords (Brian's feedback: ambiguous posts should be neutral)
+        # These indicate the post is asking for options/comparisons, not praising/criticizing
         neutral_comparison = [
             'switching to', 'switch to', 'switching from', 'compared to', 'vs', 'versus',
             'which is better', 'better than', 'trying to decide', 'considering',
-            'what service', 'which service', 'recommendations', 'anyone tried'
+            'what service', 'which service', 'what meal kit', 'which meal kit',
+            'recommendation', 'anyone know', 'anyone tried', 'anyone use',
+            'does anyone', 'has anyone', 'looking for', 'trying to find',
+            'best meal service', 'best meal kit', 'that don\'t use', 'that dont use'
         ]
         
         # Strong negative keywords/phrases that override sentiment analysis
@@ -693,15 +697,18 @@ class AccurateScraper:
         blob = TextBlob(text)
         textblob_polarity = blob.sentiment.polarity
         
-        # Override with strong keywords (Brian's feedback: comparison posts should be neutral)
-        if has_neutral_comparison and not has_strong_negative and not has_strong_positive:
-            # Comparison/switching posts without clear praise/criticism = neutral
-            sentiment = 'neutral'
-            confidence = 0.85
-        elif has_strong_negative:
+        # Override with strong keywords (Brian's feedback: comparison/question posts should be neutral)
+        if has_strong_negative:
+            # Clear negative sentiment always wins
             sentiment = 'negative'
             confidence = 0.9
+        elif has_neutral_comparison:
+            # Questions/comparisons are neutral even if they contain positive words
+            # (Brian's feedback: "Positive post #1 for HF isn't actually positive")
+            sentiment = 'neutral'
+            confidence = 0.85
         elif has_strong_positive:
+            # Only mark as positive if it's praise without being a question
             sentiment = 'positive'
             confidence = 0.9
         # Combined sentiment decision (Brian's spec: Positive/Negative/Suggestion(Neutral))

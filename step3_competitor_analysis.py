@@ -255,7 +255,7 @@ def create_competitor_table_html(competitor_analysis, data):
                 <li>Strengths: Areas with 60%+ positive sentiment</li>
                 <li>Weaknesses: Areas with 60%+ negative sentiment</li>
                 <li>Data categorized by Quality, Delivery, Service, and Price themes</li>
-                <li>Top posts ranked by engagement (Score + 3×Comments)</li>
+                <li><strong>Engagement Score:</strong> Reddit upvotes + (3 × number of comments) - Higher scores = more discussion and visibility</li>
             </ul>
         </div>
     </div>
