@@ -814,9 +814,9 @@
       "source_brand": "EveryPlate",
       "source_url": "https://www.reddit.com/search/?q=everyplate&type=posts&t=week",
       "primary_brand": "EveryPlate",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "VADER: 0.83, TextBlob: 0.13"
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "VADER: 0.83, TextBlob: 0.13 - Discusses delivery network improvement, mostly neutral/informational"
     },
     {
       "title": "Can Everyplate account credit be used on discount boxes? 2025",
@@ -835,9 +835,9 @@
       "source_brand": "EveryPlate",
       "source_url": "https://www.reddit.com/search/?q=everyplate&type=posts&t=week",
       "primary_brand": "EveryPlate",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.80, TextBlob: 0.34"
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "VADER: 0.80, TextBlob: 0.34 - Question about policy, mentions warm beef issue"
     }
   ],
   "brand_counts": {
