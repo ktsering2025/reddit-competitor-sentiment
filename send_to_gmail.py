@@ -297,7 +297,7 @@ def main():
         if recipients_env:
             recipients = [r.strip() for r in recipients_env.split(',')]
         else:
-            recipients = ['brian.leung@hellofresh.com', 'asaf@hellofresh.com']
+            recipients = ['brian.leung@hellofresh.com', 'assaf.ronen@hellofresh.com', 'kunsang.tsering@hellofresh.com']
     
     print("=== REDDIT SENTIMENT EMAIL SENDER ===")
     print(f"Recipients: {', '.join(recipients)}")
