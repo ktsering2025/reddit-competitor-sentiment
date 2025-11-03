@@ -112,9 +112,9 @@
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
       "primary_brand": "HelloFresh",
-      "sentiment": "positive",
+      "sentiment": "negative",
       "confidence": 0.9,
-      "reasoning": "VADER: 0.62, TextBlob: 0.10"
+      "reasoning": "User complains about misleading discount codes (75% → 30%)"
     },
     {
       "title": "Excellent steak dinner, no extra charge",
@@ -517,9 +517,9 @@
       "source_brand": "Factor75",
       "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
       "primary_brand": "Factor75",
-      "sentiment": "positive",
+      "sentiment": "neutral",
       "confidence": 1.0,
-      "reasoning": "VADER: 0.96, TextBlob: 0.19"
+      "reasoning": "AutoModerator sticky post for referral codes, not customer review"
     },
     {
       "title": "Factor75 ingredient lists",
@@ -622,9 +622,9 @@
       "source_brand": "Factor75",
       "source_url": "https://www.reddit.com/search/?q=factor+meals&type=posts&t=week",
       "primary_brand": "Factor75",
-      "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "VADER: 0.92, TextBlob: 0.63"
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "Question about expired meals, not expressing satisfaction"
     },
     {
       "title": "Looking to try meal service for family of 4",
@@ -920,9 +920,9 @@
       "source_brand": "EveryPlate",
       "source_url": "https://www.reddit.com/search/?q=everyplate&type=posts&t=week",
       "primary_brand": "EveryPlate",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "VADER: 0.83, TextBlob: 0.13"
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "Informational about delivery network change, mentions improvement"
     },
     {
       "title": "Can Everyplate account credit be used on discount boxes? 2025",
@@ -941,9 +941,9 @@
       "source_brand": "EveryPlate",
       "source_url": "https://www.reddit.com/search/?q=everyplate&type=posts&t=week",
       "primary_brand": "EveryPlate",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.80, TextBlob: 0.34"
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "Question about policy, mentions warm beef issue"
     }
   ],
   "brand_counts": {
