@@ -1,18 +1,49 @@
-# Python environment and cache files
-venv/            # Local Python environment - not needed on GitHub
-__pycache__/     # Python cache files
-*.pyc
-*.pyo
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
 
-# System files
-.DS_Store
-
-# Environment files
+# Environment variables
 .env
 
-# Keep Brian's deliverables but exclude old unused files
-charts/competitor_market_shares_august_2025.png
-charts/hellofresh_market_sizes_august_2025.png
-charts/project_status_for_brian_august_2025.png
-charts/trustpilot_ratings_comparison_august_2025.png
-reports/daily_analysis_2025-10-16.json
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+
+# Old documentation (keeping only README.md and PROJECT_SUMMARY.md)
+ACCURACY_VERIFICATION_REPORT.md
+PROJECT_JOURNEY.md
+SYSTEM_VERIFICATION.md
+SYSTEM_VERIFICATION_REPORT.txt
+GITHUB_SECRETS_SETUP.md
+
+# Setup scripts (no longer needed, using GitHub Actions)
+setup_cron.sh
+setup_github_actions.sh
+check_github_setup.sh
+weekly_reminder.sh
+manual_refresh.sh
+
+# Old files
+Agent
+Installer
+sanity_check.py
+generate_summary.py
