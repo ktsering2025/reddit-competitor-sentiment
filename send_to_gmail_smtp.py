@@ -47,21 +47,21 @@ def format_post_for_email(post, index):
     if len(title) > 80:
         title = title[:77] + '...'
     
-    # Sentiment emoji
-    sentiment_emoji = {
-        'positive': '',
-        'negative': '',
+    # Sentiment indicator (only ✅ and ❌)
+    sentiment_indicator = {
+        'positive': '✅',
+        'negative': '❌',
         'neutral': ''
     }
-    emoji = sentiment_emoji.get(sentiment, '')
+    indicator = sentiment_indicator.get(sentiment, '')
     
     return f"""
     <div style="margin: 10px 0; padding: 12px; background-color: #f8f9fa; border-left: 4px solid {'#22c55e' if sentiment == 'positive' else '#ef4444' if sentiment == 'negative' else '#64748b'}; border-radius: 4px;">
         <div style="font-weight: bold; margin-bottom: 5px;">
-            {emoji} {index}. <a href="{url}" style="color: #1a73e8; text-decoration: none;">{title}</a>
+            {indicator} {index}. <a href="{url}" style="color: #1a73e8; text-decoration: none;">{title}</a>
         </div>
         <div style="font-size: 12px; color: #666;">
-            r/{subreddit} •  {score} •  {comments} comments
+            r/{subreddit} | {score} upvotes | {comments} comments
         </div>
     </div>
     """
@@ -121,34 +121,34 @@ def create_email_html(data, chart_cid):
         
         <!-- Quick Summary -->
         <div style="padding: 25px; background-color: #f0fdf4; border-bottom: 2px solid #86efac;">
-            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #166534;"> Quick Summary</h2>
+            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #166534;">Quick Summary</h2>
             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
                 <div style="background-color: white; padding: 15px; border-radius: 8px; border-left: 4px solid #22c55e;">
                     <div style="font-weight: bold; color: #166534;">HelloFresh</div>
                     <div style="font-size: 24px; font-weight: bold; margin: 5px 0;">{hf_total} posts ({hf_pct}% positive)</div>
-                    <div style="font-size: 12px; color: #666;"> {hf_pos} positive •  {hf_neg} negative •  {hf_neu} neutral</div>
+                    <div style="font-size: 12px; color: #666;">{hf_pos} positive | {hf_neg} negative | {hf_neu} neutral</div>
                 </div>
                 <div style="background-color: white; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
                     <div style="font-weight: bold; color: #1e40af;">Factor</div>
                     <div style="font-size: 24px; font-weight: bold; margin: 5px 0;">{f75_total} posts ({f75_pct}% positive)</div>
-                    <div style="font-size: 12px; color: #666;"> {f75_pos} positive •  {f75_neg} negative •  {f75_neu} neutral</div>
+                    <div style="font-size: 12px; color: #666;">{f75_pos} positive | {f75_neg} negative | {f75_neu} neutral</div>
                 </div>
                 <div style="background-color: white; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
                     <div style="font-weight: bold; color: #92400e;">Hungryroot</div>
                     <div style="font-size: 24px; font-weight: bold; margin: 5px 0;">{hr_total} posts ({hr_pct}% positive)</div>
-                    <div style="font-size: 12px; color: #666;"> {hr_pos} positive •  {hr_neg} negative •  {hr_neu} neutral</div>
+                    <div style="font-size: 12px; color: #666;">{hr_pos} positive | {hr_neg} negative | {hr_neu} neutral</div>
                 </div>
                 <div style="background-color: white; padding: 15px; border-radius: 8px; border-left: 4px solid #8b5cf6;">
                     <div style="font-weight: bold; color: #5b21b6;">CookUnity</div>
                     <div style="font-size: 24px; font-weight: bold; margin: 5px 0;">{cu_total} posts ({cu_pct}% positive)</div>
-                    <div style="font-size: 12px; color: #666;"> {cu_pos} positive •  {cu_neg} negative •  {cu_neu} neutral</div>
+                    <div style="font-size: 12px; color: #666;">{cu_pos} positive | {cu_neg} negative | {cu_neu} neutral</div>
                 </div>
             </div>
         </div>
         
         <!-- Embedded Chart -->
         <div style="padding: 25px; background-color: white;">
-            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #166534;"> Sentiment Overview</h2>
+            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #166534;">Sentiment Overview</h2>
             <div style="text-align: center;">
                 <img src="cid:{chart_cid}" alt="Sentiment Chart" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
             </div>
@@ -156,67 +156,66 @@ def create_email_html(data, chart_cid):
         
         <!-- HelloFresh Top Posts -->
         <div style="padding: 25px; background-color: #f0fdf4; border-top: 2px solid #86efac;">
-            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #166534;"> HelloFresh - Top Posts</h2>
+            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #166534;">HelloFresh - Top Posts</h2>
             
-            <h3 style="margin: 15px 0 10px 0; font-size: 14px; color: #22c55e; text-transform: uppercase;"> Top Positive</h3>
+            <h3 style="margin: 15px 0 10px 0; font-size: 14px; color: #22c55e; text-transform: uppercase;">✅ Top Positive</h3>
             {''.join([format_post_for_email(post, i+1) for i, post in enumerate(hf_top_positive)]) if hf_top_positive else '<p style="color: #666; font-style: italic;">No positive posts this week</p>'}
             
-            <h3 style="margin: 20px 0 10px 0; font-size: 14px; color: #ef4444; text-transform: uppercase;"> Top Negative</h3>
+            <h3 style="margin: 20px 0 10px 0; font-size: 14px; color: #ef4444; text-transform: uppercase;">❌ Top Negative</h3>
             {''.join([format_post_for_email(post, i+1) for i, post in enumerate(hf_top_negative)]) if hf_top_negative else '<p style="color: #666; font-style: italic;">No negative posts this week</p>'}
         </div>
         
         <!-- Factor Top Posts -->
         <div style="padding: 25px; background-color: white;">
-            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #1e40af;"> Factor - Top Posts</h2>
+            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #1e40af;">Factor - Top Posts</h2>
             
-            <h3 style="margin: 15px 0 10px 0; font-size: 14px; color: #22c55e; text-transform: uppercase;"> Top Positive</h3>
+            <h3 style="margin: 15px 0 10px 0; font-size: 14px; color: #22c55e; text-transform: uppercase;">✅ Top Positive</h3>
             {''.join([format_post_for_email(post, i+1) for i, post in enumerate(f75_top_positive)]) if f75_top_positive else '<p style="color: #666; font-style: italic;">No positive posts this week</p>'}
             
-            <h3 style="margin: 20px 0 10px 0; font-size: 14px; color: #ef4444; text-transform: uppercase;"> Top Negative</h3>
+            <h3 style="margin: 20px 0 10px 0; font-size: 14px; color: #ef4444; text-transform: uppercase;">❌ Top Negative</h3>
             {''.join([format_post_for_email(post, i+1) for i, post in enumerate(f75_top_negative)]) if f75_top_negative else '<p style="color: #666; font-style: italic;">No negative posts this week</p>'}
         </div>
         
         <!-- Hungryroot Top Posts -->
         <div style="padding: 25px; background-color: #fef3c7; border-top: 2px solid #f59e0b;">
-            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #92400e;"> Hungryroot - Top Posts</h2>
+            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #92400e;">Hungryroot - Top Posts</h2>
             
-            <h3 style="margin: 15px 0 10px 0; font-size: 14px; color: #22c55e; text-transform: uppercase;"> Top Positive</h3>
+            <h3 style="margin: 15px 0 10px 0; font-size: 14px; color: #22c55e; text-transform: uppercase;">✅ Top Positive</h3>
             {''.join([format_post_for_email(post, i+1) for i, post in enumerate(hr_top_positive)]) if hr_top_positive else '<p style="color: #666; font-style: italic;">No positive posts this week</p>'}
             
-            <h3 style="margin: 20px 0 10px 0; font-size: 14px; color: #ef4444; text-transform: uppercase;"> Top Negative</h3>
+            <h3 style="margin: 20px 0 10px 0; font-size: 14px; color: #ef4444; text-transform: uppercase;">❌ Top Negative</h3>
             {''.join([format_post_for_email(post, i+1) for i, post in enumerate(hr_top_negative)]) if hr_top_negative else '<p style="color: #666; font-style: italic;">No negative posts this week</p>'}
         </div>
         
         <!-- CookUnity Top Posts -->
         <div style="padding: 25px; background-color: white;">
-            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #5b21b6;"> CookUnity - Top Posts</h2>
+            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #5b21b6;">CookUnity - Top Posts</h2>
             
-            <h3 style="margin: 15px 0 10px 0; font-size: 14px; color: #22c55e; text-transform: uppercase;"> Top Positive</h3>
+            <h3 style="margin: 15px 0 10px 0; font-size: 14px; color: #22c55e; text-transform: uppercase;">✅ Top Positive</h3>
             {''.join([format_post_for_email(post, i+1) for i, post in enumerate(cu_top_positive)]) if cu_top_positive else '<p style="color: #666; font-style: italic;">No positive posts this week</p>'}
             
-            <h3 style="margin: 20px 0 10px 0; font-size: 14px; color: #ef4444; text-transform: uppercase;"> Top Negative</h3>
+            <h3 style="margin: 20px 0 10px 0; font-size: 14px; color: #ef4444; text-transform: uppercase;">❌ Top Negative</h3>
             {''.join([format_post_for_email(post, i+1) for i, post in enumerate(cu_top_negative)]) if cu_top_negative else '<p style="color: #666; font-style: italic;">No negative posts this week</p>'}
         </div>
         
         <!-- Links to Full Reports -->
         <div style="padding: 25px; background-color: #f0fdf4; border-top: 2px solid #86efac;">
-            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #166534;"> Full Reports & Dashboards</h2>
+            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #166534;">Full Reports & Dashboards</h2>
             <div style="background-color: white; padding: 15px; border-radius: 8px;">
-                <p style="margin: 5px 0;"><strong> Main Dashboard:</strong><br>
+                <p style="margin: 5px 0;"><strong>Main Dashboard:</strong><br>
                 <a href="https://ktsering2025.github.io/reddit-competitor-sentiment/" style="color: #1a73e8;">https://ktsering2025.github.io/reddit-competitor-sentiment/</a></p>
                 
-                <p style="margin: 15px 0 5px 0;"><strong>🔍 Deep Dive (HelloFresh & Factor):</strong><br>
+                <p style="margin: 15px 0 5px 0;"><strong>Deep Dive (HelloFresh & Factor):</strong><br>
                 <a href="https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_ACTIONABLE_analysis_LATEST.html" style="color: #1a73e8;">View Detailed Analysis</a></p>
                 
-                <p style="margin: 15px 0 5px 0;"><strong>🏆 All Competitors Analysis:</strong><br>
+                <p style="margin: 15px 0 5px 0;"><strong>All Competitors Analysis:</strong><br>
                 <a href="https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step3_competitor_analysis_LATEST.html" style="color: #1a73e8;">View Full Competitor Report</a></p>
             </div>
         </div>
         
         <!-- Footer -->
         <div style="padding: 20px; text-align: center; background-color: #f5f5f5; color: #666; font-size: 12px;">
-            <p style="margin: 5px 0;">Data refreshed weekly • Built for competitive intelligence</p>
-            <p style="margin: 5px 0;">Generated on {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}</p>
+            <p style="margin: 5px 0;">Data refreshed weekly - Built for competitive intelligence</p>
         </div>
         
     </div>
@@ -226,6 +225,103 @@ def create_email_html(data, chart_cid):
     
     return html
 
+def send_via_mailto(recipient_email):
+    """Send enhanced HTML email using Mail.app via AppleScript"""
+    print(f"=== SENDING TO: {recipient_email} ===")
+    
+    # Load data
+    with open('reports/working_reddit_data.json', 'r') as f:
+        data = json.load(f)
+    
+    date_range = data.get('date_range', {})
+    start_date = date_range.get('start', '').split('T')[0]
+    end_date = date_range.get('end', '').split('T')[0]
+    
+    subject = f"Weekly Reddit Competitor Sentiment Report — {start_date} to {end_date}"
+    
+    # Create MIME message with HTML
+    msg = MIMEMultipart('related')
+    msg['Subject'] = subject
+    msg['To'] = recipient_email
+    
+    # Create HTML body with embedded chart
+    chart_cid = 'chart_image'
+    html_body = create_email_html(data, chart_cid)
+    
+    # Attach HTML
+    msg_alternative = MIMEMultipart('alternative')
+    msg.attach(msg_alternative)
+    msg_alternative.attach(MIMEText(html_body, 'html'))
+    
+    # Embed chart image
+    chart_path = 'reports/step1_chart.png'
+    if os.path.exists(chart_path):
+        with open(chart_path, 'rb') as f:
+            img = MIMEImage(f.read())
+            img.add_header('Content-ID', f'<{chart_cid}>')
+            img.add_header('Content-Disposition', 'inline', filename='chart.png')
+            msg.attach(img)
+    
+    # Save as .eml file and open with Mail.app
+    with tempfile.NamedTemporaryFile(mode='w', suffix='.eml', delete=False) as tmp:
+        tmp.write(msg.as_string())
+        eml_path = tmp.name
+    
+    # Use AppleScript to open and send the email
+    applescript = f'''
+    tell application "Mail"
+        set theMessage to open POSIX file "{eml_path}"
+        send theMessage
+    end tell
+    '''
+    
+    try:
+        subprocess.run(['osascript', '-e', applescript], check=True)
+        os.unlink(eml_path)
+        print(f"[SUCCESS] Email sent to {recipient_email}")
+        return True
+    except Exception as e:
+        print(f"[ERROR] Failed to send email: {e}")
+        if os.path.exists(eml_path):
+            os.unlink(eml_path)
+        return False
+
+def send_via_web_service(recipient_email):
+    """Send email via Mail.app"""
+    print(f"=== SENDING EMAIL TO: {recipient_email} ===")
+    return send_via_mailto(recipient_email)
+
+def main():
+    """Main function"""
+    import sys
+    
+    # Use command line args or environment variable for recipients
+    recipients = []
+    if len(sys.argv) > 1:
+        recipients = sys.argv[1:]
+    else:
+        # Default recipients per Brian's spec
+        recipients_env = os.getenv('EMAIL_RECIPIENTS', '')
+        if recipients_env:
+            recipients = [r.strip() for r in recipients_env.split(',')]
+        else:
+            recipients = ['brian.leung@hellofresh.com', 'assaf.ronen@hellofresh.com', 'kunsang.tsering@hellofresh.com']
+    
+    print("=== REDDIT SENTIMENT EMAIL SENDER ===")
+    print(f"Recipients: {', '.join(recipients)}")
+    print()
+    
+    # Send to each recipient
+    for recipient in recipients:
+        success = send_via_web_service(recipient)
+        
+        if success:
+            print(f"\n[SUCCESS] EMAIL SENT to {recipient}")
+        else:
+            print(f"\n[ERROR] Email failed for {recipient}")
+
+if __name__ == "__main__":
+    main()
 def send_email_smtp(recipients):
     """Send email via Gmail SMTP (works on Linux/GitHub Actions)"""
     
