@@ -368,7 +368,7 @@ def send_email_smtp(recipients):
             msg.attach(msg_alternative)
             msg_alternative.attach(MIMEText(html_body, 'html'))
             
-            # Embed chart image
+            # Embed chart image (inline only, no PDF attachment)
             chart_path = 'reports/step1_chart.png'
             if os.path.exists(chart_path):
                 with open(chart_path, 'rb') as f:
@@ -378,17 +378,6 @@ def send_email_smtp(recipients):
                     msg.attach(img)
             else:
                 print(f"[WARNING] Chart not found: {chart_path}")
-            
-            # Also attach PDF as downloadable file
-            pdf_path = 'reports/step1_chart.pdf'
-            if os.path.exists(pdf_path):
-                with open(pdf_path, 'rb') as f:
-                    part = MIMEBase('application', 'pdf')
-                    part.set_payload(f.read())
-                
-                encoders.encode_base64(part)
-                part.add_header('Content-Disposition', f'attachment; filename=step1_chart.pdf')
-                msg.attach(part)
             
             # Send via Gmail SMTP
             server = smtplib.SMTP('smtp.gmail.com', 587)

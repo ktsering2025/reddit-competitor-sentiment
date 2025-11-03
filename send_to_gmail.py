@@ -256,7 +256,7 @@ def send_via_mailto(recipient_email):
     msg.attach(msg_alternative)
     msg_alternative.attach(MIMEText(html_body, 'html'))
     
-    # Embed chart image
+    # Embed chart image (inline only, no PDF attachment)
     chart_path = 'reports/step1_chart.png'
     if os.path.exists(chart_path):
         with open(chart_path, 'rb') as f:
