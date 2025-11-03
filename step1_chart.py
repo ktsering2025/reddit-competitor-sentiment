@@ -127,13 +127,13 @@ def create_chart(brand_sentiment, data):
     timestamp = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
     commit_hash = get_git_commit_hash()
     
-    # Line 1: Note about counts (clear, well-positioned)
-    plt.figtext(0.5, 0.10, 'Counts are unique posts (no comments/reposts)', 
-                ha='center', fontsize=10, style='italic', color='#333')
-    
-    # Line 2: Data period and metadata (compact, lower position)
+    # Line 1: Data period and metadata (top line)
     footer_text = f"Data period: {start_date}–{end_date}  •  Generated (UTC): {timestamp}  •  Commit: {commit_hash}"
-    plt.figtext(0.5, 0.04, footer_text, ha='center', fontsize=8, color='#666')
+    plt.figtext(0.5, 0.08, footer_text, ha='center', fontsize=8, color='#666')
+    
+    # Line 2: Note about counts (bottom line - right at the bottom)
+    plt.figtext(0.5, 0.02, 'Counts are unique posts (no comments/reposts)', 
+                ha='center', fontsize=10, style='italic', color='#333')
     
     # Check for zero posts and add footnote (left side)
     zero_brands = [brand for brand in ALL_COMPETITORS if sum(brand_sentiment[brand].values()) == 0]
