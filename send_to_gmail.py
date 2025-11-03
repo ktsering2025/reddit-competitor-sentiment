@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 Send Report to Gmail Inbox - NO PASSWORDS NEEDED
-Uses a web service to send emails directly to your Gmail
+Uses Mail.app on Mac to send enhanced HTML emails
+Enhanced with embedded chart and top posts per Assaf's feedback
 """
 
 import requests
@@ -10,176 +11,267 @@ import base64
 import subprocess
 import os
 from datetime import datetime, timedelta
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
+from email.mime.base import MIMEBase
+from email import encoders
+import tempfile
 
-def get_weekly_summary():
-    """Get weekly summary from data"""
-    with open('reports/working_reddit_data.json', 'r') as f:
-        data = json.load(f)
+def calculate_engagement_score(post):
+    """Calculate engagement score: score + 3×comments"""
+    score = max(0, post.get('score', 0))
+    comments = post.get('num_comments', 0)
+    return score + (3 * comments)
+
+def get_top_posts_for_brand(posts, brand, sentiment, limit=3):
+    """Get top posts for a specific brand and sentiment"""
+    brand_posts = [p for p in posts if brand in p.get('competitors_mentioned', []) 
+                   and p.get('sentiment') == sentiment]
+    
+    # Add engagement scores
+    for post in brand_posts:
+        post['engagement_score'] = calculate_engagement_score(post)
+    
+    # Sort by engagement
+    sorted_posts = sorted(brand_posts, key=lambda x: x['engagement_score'], reverse=True)
+    return sorted_posts[:limit]
+
+def format_post_for_email(post, index):
+    """Format a single post for email display"""
+    title = post.get('title', 'No title')
+    url = post.get('url', '#')
+    score = post.get('score', 0)
+    comments = post.get('num_comments', 0)
+    subreddit = post.get('subreddit', 'unknown')
+    sentiment = post.get('sentiment', 'neutral')
+    
+    # Truncate title if too long
+    if len(title) > 80:
+        title = title[:77] + '...'
+    
+    # Sentiment emoji
+    sentiment_emoji = {
+        'positive': '✅',
+        'negative': '❌',
+        'neutral': '➖'
+    }
+    emoji = sentiment_emoji.get(sentiment, '➖')
+    
+    return f"""
+    <div style="margin: 10px 0; padding: 12px; background-color: #f8f9fa; border-left: 4px solid {'#22c55e' if sentiment == 'positive' else '#ef4444' if sentiment == 'negative' else '#64748b'}; border-radius: 4px;">
+        <div style="font-weight: bold; margin-bottom: 5px;">
+            {emoji} {index}. <a href="{url}" style="color: #1a73e8; text-decoration: none;">{title}</a>
+        </div>
+        <div style="font-size: 12px; color: #666;">
+            r/{subreddit} • ⬆️ {score} • 💬 {comments} comments
+        </div>
+    </div>
+    """
+
+def create_email_html(data, chart_cid):
+    """Create HTML email body with embedded chart and top posts"""
     
     posts = data.get('posts', [])
     date_range = data.get('date_range', {})
+    start_date = date_range.get('start', '').split('T')[0]
+    end_date = date_range.get('end', '').split('T')[0]
     
-    # Use actual date window from scraped data
-    if date_range and 'start' in date_range and 'end' in date_range:
-        start_date = datetime.fromisoformat(date_range['start'].replace('Z', '+00:00'))
-        end_date = datetime.fromisoformat(date_range['end'].replace('Z', '+00:00'))
-    else:
-        # Fallback to 7 days ago
-        end_date = datetime.now()
-        start_date = end_date - timedelta(days=7)
+    # Calculate summary stats
+    hf_posts = [p for p in posts if p.get('primary_brand') == 'HelloFresh']
+    f75_posts = [p for p in posts if p.get('primary_brand') == 'Factor75']
+    hr_posts = [p for p in posts if 'Hungryroot' in p.get('competitors_mentioned', [])]
+    cu_posts = [p for p in posts if 'CookUnity' in p.get('competitors_mentioned', [])]
     
-    # Filter posts within the actual date window
-    start_timestamp = start_date.timestamp()
-    end_timestamp = end_date.timestamp()
+    def calc_stats(brand_posts):
+        positive = len([p for p in brand_posts if p['sentiment'] == 'positive'])
+        negative = len([p for p in brand_posts if p['sentiment'] == 'negative'])
+        neutral = len([p for p in brand_posts if p['sentiment'] == 'neutral'])
+        total = len(brand_posts)
+        pct = int((positive / total * 100)) if total > 0 else 0
+        return positive, negative, neutral, total, pct
     
-    brand_stats = {}
-    for post in posts:
-        created = post.get('created_utc', 0)
-        if start_timestamp <= created <= end_timestamp:
-            brands = post.get('competitors_mentioned', [])
-            sentiment = post.get('sentiment', 'neutral')
+    hf_pos, hf_neg, hf_neu, hf_total, hf_pct = calc_stats(hf_posts)
+    f75_pos, f75_neg, f75_neu, f75_total, f75_pct = calc_stats(f75_posts)
+    hr_pos, hr_neg, hr_neu, hr_total, hr_pct = calc_stats(hr_posts)
+    cu_pos, cu_neg, cu_neu, cu_total, cu_pct = calc_stats(cu_posts)
+    
+    # Get top posts
+    hf_top_positive = get_top_posts_for_brand(posts, 'HelloFresh', 'positive', 3)
+    hf_top_negative = get_top_posts_for_brand(posts, 'HelloFresh', 'negative', 3)
+    f75_top_positive = get_top_posts_for_brand(posts, 'Factor75', 'positive', 3)
+    f75_top_negative = get_top_posts_for_brand(posts, 'Factor75', 'negative', 3)
+    hr_top_positive = get_top_posts_for_brand(posts, 'Hungryroot', 'positive', 3)
+    hr_top_negative = get_top_posts_for_brand(posts, 'Hungryroot', 'negative', 3)
+    cu_top_positive = get_top_posts_for_brand(posts, 'CookUnity', 'positive', 3)
+    cu_top_negative = get_top_posts_for_brand(posts, 'CookUnity', 'negative', 3)
+    
+    html = f"""
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5;">
+    <div style="max-width: 800px; margin: 0 auto; background-color: #ffffff;">
+        
+        <!-- Header -->
+        <div style="background: linear-gradient(135deg, #86efac 0%, #4ade80 100%); color: white; padding: 30px; text-align: center;">
+            <h1 style="margin: 0; font-size: 24px;">Weekly Reddit Competitor Sentiment Report</h1>
+            <p style="margin: 10px 0 0 0; font-size: 14px; opacity: 0.9;">Analysis Period: {start_date} to {end_date}</p>
+        </div>
+        
+        <!-- Quick Summary -->
+        <div style="padding: 25px; background-color: #f0fdf4; border-bottom: 2px solid #86efac;">
+            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #166534;">📊 Quick Summary</h2>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+                <div style="background-color: white; padding: 15px; border-radius: 8px; border-left: 4px solid #22c55e;">
+                    <div style="font-weight: bold; color: #166534;">HelloFresh</div>
+                    <div style="font-size: 24px; font-weight: bold; margin: 5px 0;">{hf_total} posts ({hf_pct}% positive)</div>
+                    <div style="font-size: 12px; color: #666;">✅ {hf_pos} positive • ❌ {hf_neg} negative • ➖ {hf_neu} neutral</div>
+                </div>
+                <div style="background-color: white; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                    <div style="font-weight: bold; color: #1e40af;">Factor</div>
+                    <div style="font-size: 24px; font-weight: bold; margin: 5px 0;">{f75_total} posts ({f75_pct}% positive)</div>
+                    <div style="font-size: 12px; color: #666;">✅ {f75_pos} positive • ❌ {f75_neg} negative • ➖ {f75_neu} neutral</div>
+                </div>
+                <div style="background-color: white; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                    <div style="font-weight: bold; color: #92400e;">Hungryroot</div>
+                    <div style="font-size: 24px; font-weight: bold; margin: 5px 0;">{hr_total} posts ({hr_pct}% positive)</div>
+                    <div style="font-size: 12px; color: #666;">✅ {hr_pos} positive • ❌ {hr_neg} negative • ➖ {hr_neu} neutral</div>
+                </div>
+                <div style="background-color: white; padding: 15px; border-radius: 8px; border-left: 4px solid #8b5cf6;">
+                    <div style="font-weight: bold; color: #5b21b6;">CookUnity</div>
+                    <div style="font-size: 24px; font-weight: bold; margin: 5px 0;">{cu_total} posts ({cu_pct}% positive)</div>
+                    <div style="font-size: 12px; color: #666;">✅ {cu_pos} positive • ❌ {cu_neg} negative • ➖ {cu_neu} neutral</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Embedded Chart -->
+        <div style="padding: 25px; background-color: white;">
+            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #166534;">📈 Sentiment Overview</h2>
+            <div style="text-align: center;">
+                <img src="cid:{chart_cid}" alt="Sentiment Chart" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+        
+        <!-- HelloFresh Top Posts -->
+        <div style="padding: 25px; background-color: #f0fdf4; border-top: 2px solid #86efac;">
+            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #166534;">🍽️ HelloFresh - Top Posts</h2>
             
-            for brand in brands:
-                if brand not in brand_stats:
-                    brand_stats[brand] = {'positive': 0, 'negative': 0, 'neutral': 0}
-                brand_stats[brand][sentiment] += 1
-    
-    summary_lines = []
-    sorted_brands = sorted(brand_stats.items(), key=lambda x: sum(x[1].values()), reverse=True)
-    
-    for brand, stats in sorted_brands:
-        total = sum(stats.values())
-        pos_pct = int((stats['positive'] / total) * 100) if total > 0 else 0
+            <h3 style="margin: 15px 0 10px 0; font-size: 14px; color: #22c55e; text-transform: uppercase;">✅ Top Positive</h3>
+            {''.join([format_post_for_email(post, i+1) for i, post in enumerate(hf_top_positive)]) if hf_top_positive else '<p style="color: #666; font-style: italic;">No positive posts this week</p>'}
+            
+            <h3 style="margin: 20px 0 10px 0; font-size: 14px; color: #ef4444; text-transform: uppercase;">❌ Top Negative</h3>
+            {''.join([format_post_for_email(post, i+1) for i, post in enumerate(hf_top_negative)]) if hf_top_negative else '<p style="color: #666; font-style: italic;">No negative posts this week</p>'}
+        </div>
         
-        if brand in ['HelloFresh', 'Factor', 'EveryPlate', 'Green Chef']:
-            brand_name = f"{brand} (HF)"
-        else:
-            brand_name = brand
+        <!-- Factor Top Posts -->
+        <div style="padding: 25px; background-color: white;">
+            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #1e40af;">🥗 Factor - Top Posts</h2>
+            
+            <h3 style="margin: 15px 0 10px 0; font-size: 14px; color: #22c55e; text-transform: uppercase;">✅ Top Positive</h3>
+            {''.join([format_post_for_email(post, i+1) for i, post in enumerate(f75_top_positive)]) if f75_top_positive else '<p style="color: #666; font-style: italic;">No positive posts this week</p>'}
+            
+            <h3 style="margin: 20px 0 10px 0; font-size: 14px; color: #ef4444; text-transform: uppercase;">❌ Top Negative</h3>
+            {''.join([format_post_for_email(post, i+1) for i, post in enumerate(f75_top_negative)]) if f75_top_negative else '<p style="color: #666; font-style: italic;">No negative posts this week</p>'}
+        </div>
         
-        summary_lines.append(f"• {brand_name} — {total} posts ({pos_pct}% positive)")
+        <!-- Hungryroot Top Posts -->
+        <div style="padding: 25px; background-color: #fef3c7; border-top: 2px solid #f59e0b;">
+            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #92400e;">🥕 Hungryroot - Top Posts</h2>
+            
+            <h3 style="margin: 15px 0 10px 0; font-size: 14px; color: #22c55e; text-transform: uppercase;">✅ Top Positive</h3>
+            {''.join([format_post_for_email(post, i+1) for i, post in enumerate(hr_top_positive)]) if hr_top_positive else '<p style="color: #666; font-style: italic;">No positive posts this week</p>'}
+            
+            <h3 style="margin: 20px 0 10px 0; font-size: 14px; color: #ef4444; text-transform: uppercase;">❌ Top Negative</h3>
+            {''.join([format_post_for_email(post, i+1) for i, post in enumerate(hr_top_negative)]) if hr_top_negative else '<p style="color: #666; font-style: italic;">No negative posts this week</p>'}
+        </div>
+        
+        <!-- CookUnity Top Posts -->
+        <div style="padding: 25px; background-color: white;">
+            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #5b21b6;">👨‍🍳 CookUnity - Top Posts</h2>
+            
+            <h3 style="margin: 15px 0 10px 0; font-size: 14px; color: #22c55e; text-transform: uppercase;">✅ Top Positive</h3>
+            {''.join([format_post_for_email(post, i+1) for i, post in enumerate(cu_top_positive)]) if cu_top_positive else '<p style="color: #666; font-style: italic;">No positive posts this week</p>'}
+            
+            <h3 style="margin: 20px 0 10px 0; font-size: 14px; color: #ef4444; text-transform: uppercase;">❌ Top Negative</h3>
+            {''.join([format_post_for_email(post, i+1) for i, post in enumerate(cu_top_negative)]) if cu_top_negative else '<p style="color: #666; font-style: italic;">No negative posts this week</p>'}
+        </div>
+        
+        <!-- Links to Full Reports -->
+        <div style="padding: 25px; background-color: #f0fdf4; border-top: 2px solid #86efac;">
+            <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #166534;">🔗 Full Reports & Dashboards</h2>
+            <div style="background-color: white; padding: 15px; border-radius: 8px;">
+                <p style="margin: 5px 0;"><strong>📊 Main Dashboard:</strong><br>
+                <a href="https://ktsering2025.github.io/reddit-competitor-sentiment/" style="color: #1a73e8;">https://ktsering2025.github.io/reddit-competitor-sentiment/</a></p>
+                
+                <p style="margin: 15px 0 5px 0;"><strong>🔍 Deep Dive (HelloFresh & Factor):</strong><br>
+                <a href="https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_ACTIONABLE_analysis_LATEST.html" style="color: #1a73e8;">View Detailed Analysis</a></p>
+                
+                <p style="margin: 15px 0 5px 0;"><strong>🏆 All Competitors Analysis:</strong><br>
+                <a href="https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step3_competitor_analysis_LATEST.html" style="color: #1a73e8;">View Full Competitor Report</a></p>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div style="padding: 20px; text-align: center; background-color: #f5f5f5; color: #666; font-size: 12px;">
+            <p style="margin: 5px 0;">Data refreshed weekly • Built for competitive intelligence</p>
+            <p style="margin: 5px 0;">Generated on {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}</p>
+        </div>
+        
+    </div>
+</body>
+</html>
+    """
     
-    # Format date range for email (UTC)
-    date_range_str = f"{start_date.strftime('%Y-%m-%d')} to {end_date.strftime('%Y-%m-%d')} UTC"
-    
-    return date_range_str, summary_lines, sum(sum(stats.values()) for stats in brand_stats.values())
+    return html
 
-def get_top_posts_for_email():
-    """Get Top 3 Positive and Negative posts for HelloFresh and Factor75"""
-    with open('reports/working_reddit_data.json', 'r') as f:
-        data = json.load(f)
+def send_via_mailto(recipient_email):
+    """Send enhanced HTML email using Mail.app via AppleScript"""
+    print(f"=== SENDING TO: {recipient_email} ===")
     
-    posts = data.get('posts', [])
-    hf_posts = [p for p in posts if 'HelloFresh' in p.get('competitors_mentioned', [])]
-    f75_posts = [p for p in posts if 'Factor75' in p.get('competitors_mentioned', [])]
-    
-    def calculate_engagement(post):
-        return post.get('score', 0) + 3 * post.get('num_comments', 0)
-    
-    # Get top 3 positive and negative for each brand
-    hf_positive = sorted([p for p in hf_posts if p.get('sentiment') == 'positive'], 
-                        key=calculate_engagement, reverse=True)[:3]
-    hf_negative = sorted([p for p in hf_posts if p.get('sentiment') == 'negative'], 
-                        key=calculate_engagement, reverse=True)[:3]
-    f75_positive = sorted([p for p in f75_posts if p.get('sentiment') == 'positive'], 
-                         key=calculate_engagement, reverse=True)[:3]
-    f75_negative = sorted([p for p in f75_posts if p.get('sentiment') == 'negative'], 
-                         key=calculate_engagement, reverse=True)[:3]
-    
-    return hf_positive, hf_negative, f75_positive, f75_negative
-
-def send_via_mime_email(recipient_email):
-    """Send email using Python's email library with proper MIME attachment (not inline)"""
-    from email.mime.multipart import MIMEMultipart
-    from email.mime.text import MIMEText
-    from email.mime.base import MIMEBase
-    from email import encoders
-    import smtplib
-    
-    print(f"=== SENDING MIME EMAIL TO: {recipient_email} ===")
-    
-    # Get date range from data
+    # Load data
     with open('reports/working_reddit_data.json', 'r') as f:
         data = json.load(f)
     
     date_range = data.get('date_range', {})
-    start_date = date_range.get('start', '2025-10-20').split('T')[0]
-    end_date = date_range.get('end', '2025-10-25').split('T')[0]
+    start_date = date_range.get('start', '').split('T')[0]
+    end_date = date_range.get('end', '').split('T')[0]
     
     subject = f"Weekly Reddit Competitor Sentiment Report — {start_date} to {end_date}"
     
-    # Get summary stats
-    posts = data.get('posts', [])
-    hf_posts = [p for p in posts if p.get('primary_brand') == 'HelloFresh']
-    f75_posts = [p for p in posts if p.get('primary_brand') == 'Factor75']
-    
-    hf_positive = len([p for p in hf_posts if p['sentiment'] == 'positive'])
-    hf_negative = len([p for p in hf_posts if p['sentiment'] == 'negative'])
-    hf_neutral = len([p for p in hf_posts if p['sentiment'] == 'neutral'])
-    hf_total = len(hf_posts)
-    hf_pct = int((hf_positive / hf_total * 100)) if hf_total > 0 else 0
-    
-    f75_positive = len([p for p in f75_posts if p['sentiment'] == 'positive'])
-    f75_negative = len([p for p in f75_posts if p['sentiment'] == 'negative'])
-    f75_neutral = len([p for p in f75_posts if p['sentiment'] == 'neutral'])
-    f75_total = len(f75_posts)
-    f75_pct = int((f75_positive / f75_total * 100)) if f75_total > 0 else 0
-    
-    # Build email body
-    body = f"""Weekly Reddit Competitor Sentiment Report
-============================================================
-
-Analysis Period: {start_date} to {end_date}
-
-QUICK SUMMARY:
-------------------------------------------------------------
-HelloFresh: {hf_total} posts ({hf_pct}% positive)
-  • {hf_positive} positive, {hf_negative} negative, {hf_neutral} neutral
-
-Factor75: {f75_total} posts ({f75_pct}% positive)
-  • {f75_positive} positive, {f75_negative} negative, {f75_neutral} neutral
-
-DASHBOARD ACCESS:
-------------------------------------------------------------
-Main Dashboard:
-https://ktsering2025.github.io/reddit-competitor-sentiment/
-
-Step 1 Chart (see attachment: step1_chart.png)
-  • Or view online: https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step1_chart.png
-
-Step 2 Deep Dive (HelloFresh & Factor75):
-https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_ACTIONABLE_analysis_LATEST.html
-
-Step 3 Competitor Analysis:
-https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step3_competitor_analysis_LATEST.html
-
-============================================================
-Data refreshed weekly • Built for Brian's competitive intelligence"""
-    
-    # Create message
-    msg = MIMEMultipart()
-    msg['From'] = 'Reddit Sentiment System'
-    msg['To'] = recipient_email
+    # Create MIME message with HTML
+    msg = MIMEMultipart('related')
     msg['Subject'] = subject
+    msg['To'] = recipient_email
     
-    # Attach body
-    msg.attach(MIMEText(body, 'plain'))
+    # Create HTML body with embedded chart
+    chart_cid = 'chart_image'
+    html_body = create_email_html(data, chart_cid)
     
-    # Attach chart as file (not inline)
+    # Attach HTML
+    msg_alternative = MIMEMultipart('alternative')
+    msg.attach(msg_alternative)
+    msg_alternative.attach(MIMEText(html_body, 'html'))
+    
+    # Embed chart image
     chart_path = 'reports/step1_chart.png'
-    with open(chart_path, 'rb') as f:
-        part = MIMEBase('application', 'octet-stream')
-        part.set_payload(f.read())
+    if os.path.exists(chart_path):
+        with open(chart_path, 'rb') as f:
+            img = MIMEImage(f.read())
+            img.add_header('Content-ID', f'<{chart_cid}>')
+            img.add_header('Content-Disposition', 'inline', filename='chart.png')
+            msg.attach(img)
     
-    encoders.encode_base64(part)
-    part.add_header('Content-Disposition', f'attachment; filename=step1_chart.png')
-    msg.attach(part)
-    
-    # Use AppleScript to send the MIME email via Mail.app
-    import tempfile
+    # Save as .eml file and open with Mail.app
     with tempfile.NamedTemporaryFile(mode='w', suffix='.eml', delete=False) as tmp:
         tmp.write(msg.as_string())
         eml_path = tmp.name
     
+    # Use AppleScript to open and send the email
     applescript = f'''
     tell application "Mail"
         set theMessage to open POSIX file "{eml_path}"
@@ -198,191 +290,9 @@ Data refreshed weekly • Built for Brian's competitive intelligence"""
             os.unlink(eml_path)
         return False
 
-def send_via_mailto(recipient_email):
-    """Send email using system mail client with automatic chart attachment"""
-    print(f"=== SENDING TO: {recipient_email} ===")
-    
-    # Get date range from data
-    with open('reports/working_reddit_data.json', 'r') as f:
-        data = json.load(f)
-    
-    date_range = data.get('date_range', {})
-    start_date = date_range.get('start', '2025-10-20').split('T')[0]
-    end_date = date_range.get('end', '2025-10-25').split('T')[0]
-    
-    subject = f"Weekly Reddit Competitor Sentiment Report — {start_date} to {end_date}"
-    
-    # Get summary stats
-    posts = data.get('posts', [])
-    hf_posts = [p for p in posts if p.get('primary_brand') == 'HelloFresh']
-    f75_posts = [p for p in posts if p.get('primary_brand') == 'Factor75']
-    
-    hf_positive = len([p for p in hf_posts if p['sentiment'] == 'positive'])
-    hf_negative = len([p for p in hf_posts if p['sentiment'] == 'negative'])
-    hf_neutral = len([p for p in hf_posts if p['sentiment'] == 'neutral'])
-    hf_total = len(hf_posts)
-    hf_pct = int((hf_positive / hf_total * 100)) if hf_total > 0 else 0
-    
-    f75_positive = len([p for p in f75_posts if p['sentiment'] == 'positive'])
-    f75_negative = len([p for p in f75_posts if p['sentiment'] == 'negative'])
-    f75_neutral = len([p for p in f75_posts if p['sentiment'] == 'neutral'])
-    f75_total = len(f75_posts)
-    f75_pct = int((f75_positive / f75_total * 100)) if f75_total > 0 else 0
-    
-    # Build SIMPLIFIED email body (no post lists)
-    body_lines = []
-    body_lines.append("Weekly Reddit Competitor Sentiment Report")
-    body_lines.append("=" * 60)
-    body_lines.append("")
-    body_lines.append(f"Analysis Period: {start_date} to {end_date}")
-    body_lines.append("")
-    body_lines.append("QUICK SUMMARY:")
-    body_lines.append("-" * 60)
-    body_lines.append(f"HelloFresh: {hf_total} posts ({hf_pct}% positive)")
-    body_lines.append(f"  • {hf_positive} positive, {hf_negative} negative, {hf_neutral} neutral")
-    body_lines.append("")
-    body_lines.append(f"Factor75: {f75_total} posts ({f75_pct}% positive)")
-    body_lines.append(f"  • {f75_positive} positive, {f75_negative} negative, {f75_neutral} neutral")
-    body_lines.append("")
-    body_lines.append("DASHBOARD ACCESS:")
-    body_lines.append("-" * 60)
-    body_lines.append("Main Dashboard:")
-    body_lines.append("https://ktsering2025.github.io/reddit-competitor-sentiment/")
-    body_lines.append("")
-    body_lines.append("Step 1 Chart:")
-    body_lines.append("  - Attached as PDF file (crystal clear, never blurry)")
-    body_lines.append("  - Click attachment to view full-size chart")
-    body_lines.append("  - Or view PNG online: https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step1_chart.png")
-    body_lines.append("")
-    body_lines.append("Step 2 Deep Dive (HelloFresh & Factor75):")
-    body_lines.append("https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_ACTIONABLE_analysis_LATEST.html")
-    body_lines.append("")
-    body_lines.append("Step 3 Competitor Analysis:")
-    body_lines.append("https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step3_competitor_analysis_LATEST.html")
-    body_lines.append("")
-    body_lines.append("=" * 60)
-    body_lines.append("Data refreshed weekly • Built for Brian's competitive intelligence")
-    
-    body = "\n".join(body_lines)
-    
-    # Create AppleScript to send email with attachment (not inline)
-    # Note: Attachments in Mail.app are tricky - they often show inline in the compose window
-    # but appear as proper attachments when received in Gmail/Outlook
-    applescript = f'''
-    tell application "Mail"
-        set newMessage to make new outgoing message with properties {{subject:"{subject}", content:"{body}"}}
-        tell newMessage
-            make new to recipient with properties {{address:"{recipient_email}"}}
-        end tell
-        
-        -- Attach PDF (won't display inline, stays as attachment)
-        tell newMessage
-            set chartPath to POSIX file "{os.path.abspath('reports/step1_chart.pdf')}"
-            make new attachment with properties {{file name:chartPath}}
-        end tell
-        
-        send newMessage
-    end tell
-    '''
-    
-    # Execute AppleScript
-    try:
-        subprocess.run(['osascript', '-e', applescript], check=True)
-        print(f"[SUCCESS] Email sent to {recipient_email}")
-        return True
-    except subprocess.CalledProcessError as e:
-        print(f"[ERROR] Failed to send email: {e}")
-        return False
-
-def send_via_web_service_OLD_ORPHANED(recipient_email):
-    """ORPHANED CODE - NOT USED"""
-    body = f"""Hi there,
-
-Here's your weekly Reddit sentiment analysis ({date_range}).
-
-QUICK SUMMARY:
-• HelloFresh: {hf_posts} posts ({hf_sentiment_pct}% positive) - {'Excellent brand health' if hf_sentiment_pct >= 70 else 'Good performance' if hf_sentiment_pct >= 50 else 'Needs attention'}
-• Factor75: {factor_posts} posts ({factor_sentiment_pct}% positive) - {'Strong performance' if factor_sentiment_pct >= 70 else 'Good performance' if factor_sentiment_pct >= 50 else 'Needs immediate attention'}
-
-COMPLETE COMPETITOR BREAKDOWN:
-{chr(10).join(summary_lines)}
-
-LIVE DASHBOARD ACCESS:
-Main Dashboard: https://ktsering2025.github.io/reddit-competitor-sentiment/
-Step 1 Chart: https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step1_chart.png
-Step 2 Analysis: https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_ACTIONABLE_analysis_LATEST.html
-
-KEY INSIGHTS:
-• Real-time Reddit weekly search data (last 7 days)
-• Brand-specific filtering for HelloFresh and Factor75 only
-• Engagement scoring prioritizes comments for discussion value
-• Manual sentiment classification for business accuracy
-
-IMMEDIATE ACTIONS:
-• Review live dashboard using links above
-• Focus on {'Factor75' if factor_sentiment_pct < 50 else 'HelloFresh'} - {'immediate attention needed' if factor_sentiment_pct < 50 else 'maintain current strategy'}
-• Monitor competitive landscape weekly
-
-Best regards,
-Reddit Sentiment Analysis System
-
----
-Total posts analyzed: {total_posts}
-Next report: {(datetime.now() + timedelta(days=7)).strftime('%B %d, %Y')}
-All links work on mobile, tablet, and desktop"""
-    
-    try:
-        # Create AppleScript to send email with attachment via Mail app
-        chart_path = f"{subprocess.check_output(['pwd']).decode().strip()}/reports/step1_chart.png"
-        
-        applescript = f'''
-tell application "Mail"
-    activate
-    set theMessage to make new outgoing message with properties {{subject:"{subject}", content:"{body}"}}
-    tell theMessage
-        set visible to true
-        make new to recipient at end of to recipients with properties {{address:"{recipient_email}"}}
-        make new attachment with properties {{file name:"{chart_path}"}} at after the last paragraph
-    end tell
-end tell
-'''
-        
-        # Save and run AppleScript
-        with open('/tmp/send_email.scpt', 'w') as f:
-            f.write(applescript)
-        
-        result = subprocess.run(['osascript', '/tmp/send_email.scpt'], capture_output=True, text=True)
-        
-        if result.returncode == 0:
-            print("Mail app opened with email and chart attached!")
-            print("Review the email and click Send")
-            print("Chart should be automatically attached")
-            return True
-        else:
-            print(f"AppleScript error: {result.stderr}")
-            print("Falling back to manual attachment...")
-            
-            # Fallback to original method
-            import urllib.parse
-            subject_encoded = urllib.parse.quote(subject)
-            body_encoded = urllib.parse.quote(body)
-            mailto_url = f"mailto:{recipient_email}?subject={subject_encoded}&body={body_encoded}"
-            
-            subprocess.run(['open', mailto_url])
-            subprocess.run(['open', 'reports/step1_chart.png'])
-            print("Mail client opened - manually drag chart to attach")
-            return True
-        
-    except Exception as e:
-        print(f"Error: {e}")
-        return False
-
 def send_via_web_service(recipient_email):
     """Send email via Mail.app"""
     print(f"=== SENDING EMAIL TO: {recipient_email} ===")
-    
-    # Note: Mail.app displays image attachments inline by default
-    # Users can still download the attachment from the attachment bar
     return send_via_mailto(recipient_email)
 
 def main():

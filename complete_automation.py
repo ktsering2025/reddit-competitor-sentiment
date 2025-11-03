@@ -346,7 +346,7 @@ def run_pipeline(send_email=False, email_recipients=None):
             try:
                 # Set environment variable for recipients
                 os.environ['EMAIL_RECIPIENTS'] = ','.join(email_recipients)
-                result = subprocess.run([sys.executable, 'send_to_gmail.py'], 
+                result = subprocess.run([sys.executable, 'send_to_gmail_smtp.py'], 
                                       capture_output=True, text=True)
                 if result.returncode == 0:
                     log_and_print(f"[SUCCESS] Email sent to {', '.join(email_recipients)}")
