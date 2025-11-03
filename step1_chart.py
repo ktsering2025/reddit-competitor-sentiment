@@ -135,11 +135,6 @@ def create_chart(brand_sentiment, data):
     plt.figtext(0.5, 0.02, 'Counts are unique posts (no comments/reposts)', 
                 ha='center', fontsize=10, style='italic', color='#333')
     
-    # Check for zero posts and add footnote (left side)
-    zero_brands = [brand for brand in ALL_COMPETITORS if sum(brand_sentiment[brand].values()) == 0]
-    if zero_brands:
-        plt.figtext(0.02, 0.04, '* No posts this week', fontsize=8, style='italic', color='#666')
-    
     # Adjust layout with extra bottom margin for 45° rotated labels
     plt.tight_layout()
     plt.subplots_adjust(bottom=0.20)
