@@ -6,6 +6,9 @@ on:
     - cron: '0 1 * * 1'  # 1 AM UTC Monday = 8 PM EST Sunday (accounting for EST = UTC-5)
   workflow_dispatch:  # Allow manual trigger for testing
 
+permissions:
+  contents: write  # Allow pushing commits
+
 jobs:
   run-automation:
     runs-on: ubuntu-latest
