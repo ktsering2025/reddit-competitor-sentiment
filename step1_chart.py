@@ -90,7 +90,7 @@ def create_chart(brand_sentiment, data):
     except:
         date_str = f"{start_date} – {end_date}"
     
-    ax.set_title(f'Reddit Competitor Sentiment Analysis\n{date_str}', 
+    ax.set_title(f'Reddit Competitor Sentiment Analysis (Past 7 Days)\n{date_str}', 
                 fontsize=16, fontweight='bold', pad=20)
     
     # X-axis - no label, just brand names
