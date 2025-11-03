@@ -920,9 +920,9 @@
       "source_brand": "EveryPlate",
       "source_url": "https://www.reddit.com/search/?q=everyplate&type=posts&t=week",
       "primary_brand": "EveryPlate",
-      "sentiment": "neutral",
-      "confidence": 0.85,
-      "reasoning": "Informational about delivery network change, mentions improvement"
+      "sentiment": "positive",
+      "confidence": 0.9,
+      "reasoning": "User says 'definitely a positive change' - ice packs more frozen with HFDN"
     },
     {
       "title": "Can Everyplate account credit be used on discount boxes? 2025",
