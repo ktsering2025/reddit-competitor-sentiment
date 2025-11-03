@@ -39,8 +39,17 @@ jobs:
         GMAIL_EMAIL: ${{ secrets.GMAIL_EMAIL }}
         GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       run: |
-        python complete_automation.py
+        python complete_automation.py --no-send
+        
+    - name: Send emails via SMTP
+      env:
+        GMAIL_EMAIL: ${{ secrets.GMAIL_EMAIL }}
+        GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
+      run: |
+        python send_to_gmail_smtp.py
         
     - name: Commit and push changes
       run: |
