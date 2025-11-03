@@ -405,6 +405,46 @@ Internal HelloFresh tool - Not for public distribution
 
 ---
 
-**Last Updated:** October 30, 2025  
-**Version:** 3.0 (GitHub Actions + Claude AI)  
-**Status:** Production Ready
+**Last Updated:** November 3, 2025  
+**Version:** 3.0 (GitHub Actions + SMTP Email)  
+**Status:** Production Ready - Fully Automated
+
+---
+
+## Current Week's Data (Oct 27 - Nov 3, 2025)
+
+**Total Posts:** 37 actionable posts (filtered from 331 raw posts)
+
+**HelloFresh:** 15 posts (20% positive, 47% negative, 33% neutral)
+- Top concern: Upcharges and pricing changes
+- Top positive: Quality compared to Marley Spoon
+
+**Factor75:** 9 posts (0% positive, 22% negative, 78% neutral)
+- Top concern: Cancellation process difficulties
+- Mostly neutral/informational posts
+
+**Competitors:**
+- Blue Apron: 6 posts (0% positive, 83% negative) - Service quality declining
+- Marley Spoon: 3 posts (0% positive, 100% negative) - Delivery/refund issues
+- Home Chef: 1 post (0% positive, 100% negative) - Refund dispute
+- Hungryroot: 1 post (0% positive, 100% negative) - Delivery issues
+- EveryPlate: 2 posts (0% positive, 0% negative, 100% neutral)
+- Green Chef: 0 posts this week
+
+---
+
+## GitHub Actions Status
+
+**Last Successful Run:** November 3, 2025 at 11:46 AM EST  
+**Workflow:** https://github.com/ktsering2025/reddit-competitor-sentiment/actions  
+**Next Scheduled Run:** Sunday, November 10, 2025 at 8:00 PM EST
+
+**What Works:**
+- Reddit scraping (28 URLs)
+- Sentiment analysis (accurate classification)
+- Report generation (chart + Step 2 + Step 3)
+- Email delivery (SMTP to 3 recipients)
+- Git commit and push (with write permissions)
+- GitHub Pages deployment (auto-updates)
+
+---
