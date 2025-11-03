@@ -175,9 +175,9 @@
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
       "primary_brand": "HelloFresh",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "VADER: 0.97, TextBlob: 0.05"
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "User says \"I'm not unhappy with the dishes\" - complaint about variety/selection, not quality"
     },
     {
       "title": "Falafel burger (meh)",
@@ -196,9 +196,9 @@
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
       "primary_brand": "HelloFresh",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "VADER: 0.86, TextBlob: 0.05"
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "\"Meh\" indicates lukewarm/neutral sentiment. Detailed critique but not angry or satisfied."
     },
     {
       "title": "HFDN is now basically veho 2.0",
