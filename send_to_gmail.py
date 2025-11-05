@@ -256,14 +256,25 @@ def send_via_mailto(recipient_email):
     msg.attach(msg_alternative)
     msg_alternative.attach(MIMEText(html_body, 'html'))
     
-    # Embed chart image (inline only, no PDF attachment)
+    # Embed chart image (high quality PNG)
     chart_path = 'reports/step1_chart.png'
     if os.path.exists(chart_path):
         with open(chart_path, 'rb') as f:
-            img = MIMEImage(f.read())
+            img = MIMEImage(f.read(), _subtype='png')
             img.add_header('Content-ID', f'<{chart_cid}>')
             img.add_header('Content-Disposition', 'inline', filename='chart.png')
             msg.attach(img)
+    
+    # Also attach PDF for crystal-clear viewing (never blurry)
+    pdf_path = 'reports/step1_chart.pdf'
+    if os.path.exists(pdf_path):
+        with open(pdf_path, 'rb') as f:
+            part = MIMEBase('application', 'pdf')
+            part.set_payload(f.read())
+        
+        encoders.encode_base64(part)
+        part.add_header('Content-Disposition', f'attachment; filename=step1_chart.pdf')
+        msg.attach(part)
     
     # Save as .eml file and open with Mail.app
     with tempfile.NamedTemporaryFile(mode='w', suffix='.eml', delete=False) as tmp:
