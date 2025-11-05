@@ -149,12 +149,10 @@ def create_email_html(data, chart_cid):
             </div>
         </div>
         
-        <!-- Embedded Chart -->
-        <div style="padding: 25px; background-color: white;">
+        <!-- Chart Note -->
+        <div style="padding: 25px; background-color: white; text-align: center;">
             <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #166534;">Sentiment Overview</h2>
-            <div style="text-align: center;">
-                <img src="cid:{chart_cid}" alt="Sentiment Chart" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-            </div>
+            <p style="color: #666; font-style: italic;">See attached PDF for full sentiment chart (step1_chart.pdf)</p>
         </div>
         
         <!-- HelloFresh Top Posts -->
@@ -256,16 +254,7 @@ def send_via_mailto(recipient_email):
     msg.attach(msg_alternative)
     msg_alternative.attach(MIMEText(html_body, 'html'))
     
-    # Embed chart image (high quality PNG)
-    chart_path = 'reports/step1_chart.png'
-    if os.path.exists(chart_path):
-        with open(chart_path, 'rb') as f:
-            img = MIMEImage(f.read(), _subtype='png')
-            img.add_header('Content-ID', f'<{chart_cid}>')
-            img.add_header('Content-Disposition', 'inline', filename='chart.png')
-            msg.attach(img)
-    
-    # Also attach PDF for crystal-clear viewing (never blurry)
+    # Attach PDF only (crystal-clear, never blurry)
     pdf_path = 'reports/step1_chart.pdf'
     if os.path.exists(pdf_path):
         with open(pdf_path, 'rb') as f:
