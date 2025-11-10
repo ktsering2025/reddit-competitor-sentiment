@@ -21,21 +21,16 @@ This system automatically tracks what people are saying about HelloFresh, Factor
 
 ## Current Week's Data
 
-**Data Period:** October 27 - November 3, 2025
+**Live Dashboard:** https://ktsering2025.github.io/reddit-competitor-sentiment/
 
-**HelloFresh Family:**
-- HelloFresh: 15 posts (20% positive, 33% negative, 47% neutral)
-- Factor75: 9 posts (0% positive, 22% negative, 78% neutral)
-- EveryPlate: 2 posts (50% positive, 0% negative, 50% neutral)
-- Green Chef: 0 posts this week
+The dashboard is updated automatically every Sunday at 8 PM EST with the latest data from Reddit.
 
-**Key Insight:** HelloFresh family has 4 positive posts. All competitors have 0 positive posts.
-
-**Competitors:**
-- Blue Apron: 6 posts (0% positive, 83% negative)
-- Marley Spoon: 3 posts (0% positive, 100% negative)
-- Home Chef: 1 post (0% positive, 100% negative)
-- Hungryroot: 1 post (0% positive, 100% negative)
+**What you'll see:**
+- Current week's date range
+- Post counts for all 8 brands
+- Sentiment percentages (positive/negative/neutral)
+- Links to all 3 reports
+- Real-time data (always fresh)
 - CookUnity: 0 posts this week
 
 ---
