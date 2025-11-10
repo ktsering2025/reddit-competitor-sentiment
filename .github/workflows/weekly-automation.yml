@@ -4,7 +4,7 @@ on:
   schedule:
     # Every Sunday at 8:00 PM EST = Monday 1:00 AM UTC
     # In cron: 0=Sunday, 1=Monday, 2=Tuesday, etc.
-    - cron: '0 1 * * 0'  # Sunday 1:00 AM UTC = Sunday 8:00 PM EST (EST = UTC-5)
+    - cron: '0 1 * * 1'  # Monday 1:00 AM UTC = Sunday 8:00 PM EST (EST = UTC-5)
   workflow_dispatch:  # Allow manual trigger for testing
 
 permissions:
@@ -46,7 +46,7 @@ jobs:
       run: |
         python complete_automation.py --no-send
         
-    - name: Send emails via SMTP
+    - name: Send weekly email report
       env:
         GMAIL_EMAIL: ${{ secrets.GMAIL_EMAIL }}
         GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
