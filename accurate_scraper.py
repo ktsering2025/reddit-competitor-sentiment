@@ -204,15 +204,44 @@ class AccurateScraper:
         return posts
         
     def scrape_weekly_data(self, days_back=7):
-        """Scrape data using ROLLING 7-DAY WINDOW from current time"""
-        # Simple rolling 7-day window: past 7 days from now
+        """Scrape data using ROLLING 7-DAY WINDOW from current time or PREVIOUS COMPLETE WEEK"""
         now = datetime.now(timezone.utc)
-        end_time = now
-        start_time = now - timedelta(days=days_back)
         
-        print(f"Using ROLLING 7-DAY WINDOW")
-        print(f"Date window: {start_time.strftime('%Y-%m-%d %H:%M')} to {end_time.strftime('%Y-%m-%d %H:%M')} UTC")
-        print(f"(Past {days_back} days from current time)")
+        # Check if WEEK_MODE environment variable is set
+        week_mode = os.getenv('WEEK_MODE', 'FULL_7')
+        
+        if week_mode == 'PREVIOUS_COMPLETE_WEEK':
+            # Calculate the previous complete week (Monday-Sunday)
+            # If today is Monday (0), go back to last Monday
+            # If today is Tuesday-Sunday (1-6), go back to the Monday before last
+            days_since_monday = now.weekday()  # 0=Monday, 6=Sunday
+            
+            if days_since_monday == 0:
+                # Today is Monday, get last week (Mon-Sun)
+                days_to_last_monday = 7
+            else:
+                # Go back to the most recent past Monday
+                days_to_last_monday = days_since_monday + 7
+            
+            # End of last week is Sunday 23:59:59
+            end_time = now - timedelta(days=days_since_monday + 1)
+            end_time = end_time.replace(hour=23, minute=59, second=59, microsecond=999999)
+            
+            # Start of last week is Monday 00:00:00
+            start_time = end_time - timedelta(days=6)
+            start_time = start_time.replace(hour=0, minute=0, second=0, microsecond=0)
+            
+            print(f"Using PREVIOUS COMPLETE WEEK MODE")
+            print(f"Date window: {start_time.strftime('%Y-%m-%d %H:%M')} to {end_time.strftime('%Y-%m-%d %H:%M')} UTC")
+            print(f"(Last complete Monday-Sunday week)")
+        else:
+            # Simple rolling 7-day window: past 7 days from now
+            end_time = now
+            start_time = now - timedelta(days=days_back)
+            
+            print(f"Using ROLLING 7-DAY WINDOW")
+            print(f"Date window: {start_time.strftime('%Y-%m-%d %H:%M')} to {end_time.strftime('%Y-%m-%d %H:%M')} UTC")
+            print(f"(Past {days_back} days from current time)")
         
         all_posts = []
         saturday_posts = []
