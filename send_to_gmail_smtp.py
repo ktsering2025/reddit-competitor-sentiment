@@ -8,6 +8,8 @@ Enhanced with embedded chart and top posts per Assaf's feedback
 import json
 import os
 import smtplib
+import tempfile
+import subprocess
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
