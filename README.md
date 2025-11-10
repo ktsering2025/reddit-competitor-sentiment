@@ -1,267 +1,248 @@
-# Reddit Competitor Sentiment Analysis
+# 📊 Reddit Competitor Sentiment Analysis
 
-Automated weekly competitive intelligence dashboard for HelloFresh and competitors.
+**Automated weekly sentiment tracking for meal kit brands**
 
-**Live Dashboard:** https://ktsering2025.github.io/reddit-competitor-sentiment/
-
----
-
-## What This Does
-
-This system automatically tracks what people are saying about HelloFresh, Factor75, and 7 competitors on Reddit every week.
-
-**Every Sunday at 8 PM EST, it:**
-1. Searches Reddit for posts about all 9 meal kit brands
-2. Analyzes if posts are positive, negative, or neutral
-3. Creates 3 reports with charts and insights
-4. **Sends enhanced email with embedded chart and top posts** to Brian, Assaf, and Kunsang
-5. Updates the live dashboard
+[![Weekly Analysis](https://github.com/ktsering2025/reddit-competitor-sentiment/actions/workflows/weekly-automation.yml/badge.svg)](https://github.com/ktsering2025/reddit-competitor-sentiment/actions/workflows/weekly-automation.yml)
 
 ---
 
-## Current Week's Data
+## 🎯 What This Does
 
-**Live Dashboard:** https://ktsering2025.github.io/reddit-competitor-sentiment/
+Automatically scrapes Reddit **every Sunday at 8:00 PM EST**, analyzes sentiment for 8 meal kit brands, and sends a professional email report with:
 
-The dashboard is updated automatically every Sunday at 8 PM EST with the latest data from Reddit.
-
-**What you'll see:**
-- Current week's date range
-- Post counts for all 8 brands
-- Sentiment percentages (positive/negative/neutral)
-- Links to all 3 reports
-- Real-time data (always fresh)
-- CookUnity: 0 posts this week
+- 📊 **Sentiment bar chart** (positive/negative/neutral breakdown)
+- 📧 **Top posts** (3 positive + 3 negative per brand)
+- 📎 **PDF attachment** (crystal-clear chart)
+- 🔗 **Dashboard links** (live website with full reports)
 
 ---
 
-## Enhanced Weekly Email (NEW!)
+## 🏢 Brands Tracked
 
-**Per Assaf's feedback, the email now includes ALL key data in one place:**
-
-✅ **Embedded Bar Chart** - Shows directly in email (no clicking needed)  
-✅ **HelloFresh Top 3** - Positive & Negative posts with engagement scores  
-✅ **Factor Top 3** - Positive & Negative posts with engagement scores  
-✅ **Hungryroot Top 3** - Positive & Negative posts with engagement scores  
-✅ **CookUnity Top 3** - Positive & Negative posts with engagement scores  
-✅ **Links to Full Reports** - For other competitors (Blue Apron, Marley Spoon, etc.)  
-✅ **Clean Design** - Professional format with minimal emojis (only ✅ and ❌)
-
-**Leaders can now see all critical insights without clicking any links!**
+1. **HelloFresh** (Primary - 60% HF revenue)
+2. **Factor75** (Primary - 60% HF revenue)
+3. Home Chef
+4. Blue Apron
+5. Marley Spoon
+6. Hungryroot
+7. EveryPlate
+8. Green Chef
 
 ---
 
-## The 3 Reports
+## 📅 Schedule
 
-### Step 1: Chart Overview
-Visual bar chart showing all 9 brands with sentiment breakdown (positive/negative/neutral).
+**Every Sunday at 8:00 PM EST:**
+- Scrapes Reddit for the **previous complete week** (Monday-Sunday)
+- Analyzes 30-50 posts per week
+- Sends email to: brian.leung@hellofresh.com, assaf.ronen@hellofresh.com, kunsang.tsering@hellofresh.com
+- Updates website: https://ktsering2025.github.io/reddit-competitor-sentiment/
 
-**View:** [Step 1 Chart](https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step1_chart.png)
-
-### Step 2: HelloFresh & Factor Deep Dive
-Focus on the two revenue-driving brands (60% of revenue):
-- Top 3 positive posts (ranked by engagement)
-- Top 3 negative posts (ranked by engagement)
-- Complete list of all posts
-- Links to verify on Reddit
-
-**View:** [Step 2 Analysis](https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_ACTIONABLE_analysis_LATEST.html)
-
-### Step 3: Competitor Analysis
-Table showing what competitors are doing well vs. poorly:
-- Real sentiment data (not generic)
-- Top 3 posts for each competitor
-- Engagement scoring
-
-**View:** [Step 3 Competitor Analysis](https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step3_competitor_analysis_LATEST.html)
+**Next Run:** Sunday, November 17, 2025 at 8:00 PM EST
 
 ---
 
-## How It Works
+## 🔬 Sentiment Analysis
 
-### Data Collection
-- **Sources:** 3-5 Reddit search URLs per brand
-- **Time Window:** Past 7 days (rolling window)
-- **Example:** Run on Nov 3 → Gets posts from Oct 27-Nov 3
-- **Next Run:** Nov 10 → Gets NEW posts from Nov 3-Nov 10
+### Method:
+- **Dual-Algorithm:** VADER + TextBlob for accuracy
+- **Context-Aware:** Detects questions, comparisons, neutral discussions
+- **Keyword Override:** Strong phrases override algorithmic scores
+- **Brand Detection:** Identifies all brands mentioned per post
 
-### Sentiment Analysis
-The system reads each post and determines if it's:
-- **Positive:** "Love it", "excellent", "highly recommend"
-- **Negative:** "Terrible", "cancelled", "disappointed"
-- **Neutral:** Questions, comparisons, asking for recommendations
-
-**Smart Detection:**
-- "Don't switch from HelloFresh to Marley Spoon - MS is terrible!" → **Positive** for HelloFresh
-- "We looooved HelloFresh, how to get discounts?" → **Neutral** (question about price)
-- "This didn't used to have an upcharge!" → **Negative** (complaint)
-
-### Spam Filtering
-Removes 95%+ of irrelevant posts:
-- Referral codes
-- Promo spam
-- News articles
-- Unrelated mentions
-
-Only keeps genuine customer discussions.
+### Classification:
+- **Positive:** "love it", "amazing", "highly recommend", "delicious", "fresh"
+- **Negative:** "terrible", "avoid", "cancelled", "disappointed", "waste of money"
+- **Neutral:** Questions, comparisons, recommendation requests
 
 ---
 
-## Automation
+## 🚀 Quick Start
 
-**Schedule:** Every Sunday at 8 PM EST
+### Setup (One-Time):
 
-**Runs automatically via GitHub Actions** (cloud-based, free):
-- No need to keep laptop on
-- Runs 24/7 in the cloud
-- Always on time
+1. **Add GitHub Secrets:**  
+   Go to: [Settings → Secrets](https://github.com/ktsering2025/reddit-competitor-sentiment/settings/secrets/actions)
+   
+   Add these 6 secrets:
+   - `REDDIT_CLIENT_ID`
+   - `REDDIT_CLIENT_SECRET`
+   - `REDDIT_USER_AGENT`
+   - `GMAIL_EMAIL`
+   - `GMAIL_APP_PASSWORD`
+   - `EMAIL_RECIPIENTS`
 
-**Email Recipients:**
-- brian.leung@hellofresh.com
-- assaf.ronen@hellofresh.com
-- kunsang.tsering@hellofresh.com
+   *(See [COMPLETE_SETUP_GUIDE.md](COMPLETE_SETUP_GUIDE.md) for values)*
 
-**Email Includes (Enhanced Format):**
-- Embedded bar chart (visible in email body)
-- Quick summary stats for all 4 focus brands
-- Top 3 positive & negative posts for HelloFresh
-- Top 3 positive & negative posts for Factor
-- Top 3 positive & negative posts for Hungryroot
-- Top 3 positive & negative posts for CookUnity
-- Links to full reports for all competitors
-- Clean, professional design
+2. **Done!** The automation runs automatically every Sunday.
 
----
+### Manual Run (For Testing):
 
-## Data Quality
+**Option 1: GitHub Actions**
+1. Go to [Actions tab](https://github.com/ktsering2025/reddit-competitor-sentiment/actions)
+2. Click "Weekly Reddit Sentiment Analysis"
+3. Click "Run workflow" → "Run workflow"
+4. Check your email in 3 minutes
 
-**100% Real Reddit Posts:**
-- All posts verified with Reddit URLs
-- No fake data
-- No sample data
-
-**Accurate Sentiment:**
-- Manually verified for accuracy
-- Context-aware analysis
-- Handles edge cases correctly
-
-**Always Fresh:**
-- Rolling 7-day window
-- New data every week
-- Never stale
-
----
-
-## Tracked Brands (9 Total)
-
-**HelloFresh Family (4 brands):**
-1. HelloFresh
-2. Factor75
-3. EveryPlate
-4. Green Chef
-
-**Competitors (5 brands):**
-5. Blue Apron
-6. Home Chef
-7. Marley Spoon
-8. Hungryroot
-9. CookUnity
-
----
-
-## Quick Links
-
-**Dashboard:** https://ktsering2025.github.io/reddit-competitor-sentiment/
-
-**Reports:**
-- [Step 1 Chart](https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step1_chart.png)
-- [Step 2: HF & Factor Deep Dive](https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step2_ACTIONABLE_analysis_LATEST.html)
-- [Step 3: Competitor Analysis](https://ktsering2025.github.io/reddit-competitor-sentiment/reports/step3_competitor_analysis_LATEST.html)
-
-**GitHub Repository:** https://github.com/ktsering2025/reddit-competitor-sentiment
-
-**GitHub Actions Status:** https://github.com/ktsering2025/reddit-competitor-sentiment/actions
-
----
-
-## For Technical Users
-
-### Run Manually
+**Option 2: Local**
 ```bash
-cd /Users/kunsang.tsering/Desktop/reddit-competitor-sentiment
-python3 complete_automation.py --no-send  # Generate reports
-python3 send_to_gmail_smtp.py             # Send emails (production)
-python3 send_to_gmail.py                  # Send emails (Mac local)
+python3 complete_automation.py
 ```
 
-### Dependencies
-```bash
-pip install -r requirements.txt
+---
+
+## 📧 Email Report Example
+
+```
+Weekly Reddit Competitor Sentiment Report — Nov 3 to Nov 9
+
+Quick Summary:
+- HelloFresh: 13 posts (23% positive)
+- Factor75: 5 posts (0% positive, 60% negative)
+- Blue Apron: 5 posts (40% positive)
+
+HelloFresh - Top Posts:
+✅ Top Positive:
+  1. Gyoza Pork Tacos (44 upvotes, 8 comments)
+  2. Meal delivery that does serving of 1 (1 upvote, 17 comments)
+
+❌ Top Negative:
+  1. Potato wedges....again?!?! (17 upvotes, 38 comments)
+  2. What is the best mealprep kit? (2 upvotes, 18 comments)
+
+📎 Attachment: step1_chart.pdf
 ```
 
-### Key Files
-- `accurate_scraper.py` - Reddit scraper (PRAW + web scraping)
-- `step1_chart.py` - Chart generator (matplotlib)
-- `step2_ACTIONABLE_analysis.py` - HelloFresh & Factor deep dive
-- `step3_competitor_analysis.py` - Competitor analysis
-- `complete_automation.py` - Main orchestrator
-- `send_to_gmail_smtp.py` - Email sender (GitHub Actions/production)
-- `send_to_gmail.py` - Email sender (Mac local)
-- `config.py` - Configuration (search URLs, email settings)
+---
 
-### Email System
-- **Production (GitHub Actions):** Uses `send_to_gmail_smtp.py` with Gmail SMTP
-- **Local (Mac):** Uses `send_to_gmail.py` with Mail.app
-- **Format:** HTML email with embedded chart image
-- **No Attachments:** Chart is embedded inline (not as PDF attachment)
+## 🌐 Live Dashboard
 
-### Sentiment Logic
-- **VADER Sentiment** (social media optimized)
-- **TextBlob** (general text analysis)
-- **Keyword overrides** (context-aware)
-- **Priority:** Strong negative > Context-aware positive > Questions/comparisons > Strong positive > VADER+TextBlob
+**URL:** https://ktsering2025.github.io/reddit-competitor-sentiment/
 
-### Data Sources
-Each brand has 3-5 Reddit search URLs:
-- General Reddit search (e.g., "hellofresh", "hello fresh")
-- Brand-specific subreddit (e.g., r/hellofresh)
-- Meal kit discussion subreddits (e.g., r/mealkits, r/ReadyMeals)
+**Features:**
+- Interactive sentiment bar chart
+- Current week's data
+- Links to detailed reports
+- Archive of previous weeks
+
+**Auto-Updates:** Every Sunday after automation runs
 
 ---
 
-## Project Status
+## 📁 Project Structure
 
-**Status:** ✅ Production Ready
-
-**Last Updated:** November 3, 2025
-
-**Next Automatic Run:** Sunday, November 10, 2025 at 8:00 PM EST
-
-**Cost:** $0/month (GitHub Actions + GitHub Pages are free)
-
-**Recent Updates:**
-- ✅ Enhanced email format with embedded chart and top posts (Nov 3, 2025)
-- ✅ Added CookUnity tracking (Nov 3, 2025)
-- ✅ Removed PDF attachment per Assaf's feedback (Nov 3, 2025)
-- ✅ Clean design with minimal emojis (Nov 3, 2025)
-
----
-
-## Project Complete! 🎉
-
-This project is **100% complete** per Brian and Assaf's requirements:
-- ✅ Automated weekly scraping of Reddit posts
-- ✅ Accurate sentiment analysis
-- ✅ Beautiful reports and dashboard
-- ✅ Enhanced email with all key data embedded
-- ✅ No manual work needed - runs automatically every Sunday
-
-**Leaders can now get all critical insights directly in their inbox without clicking any links!**
+```
+reddit-competitor-sentiment/
+├── accurate_scraper.py          # Reddit scraping + sentiment analysis
+├── step1_chart.py               # Bar chart generator (PNG + PDF)
+├── step2_ACTIONABLE_analysis.py # Deep dive (HelloFresh & Factor)
+├── step3_competitor_analysis.py # Full competitor report
+├── send_to_gmail_smtp.py        # Email sender
+├── complete_automation.py       # Main orchestrator
+├── update_homepage.py           # Website updater
+├── config.py                    # Configuration
+├── index.html                   # Dashboard homepage
+├── reports/
+│   ├── working_reddit_data.json # Current week's data
+│   ├── step1_chart.png          # Bar chart
+│   ├── step1_chart.pdf          # PDF for email
+│   ├── step2_ACTIONABLE_analysis_LATEST.html
+│   ├── step3_competitor_analysis_LATEST.html
+│   ├── archive/                 # Historical data
+│   └── raw/                     # Raw scraped data
+└── .github/workflows/
+    └── weekly-automation.yml    # GitHub Actions schedule
+```
 
 ---
 
-## Contact
+## 🔍 Data Sources
 
-Built by Kunsang Tsering for Brian's competitive intelligence needs.
+### Reddit Sources Per Brand:
+- **HelloFresh:** 4 sources (search + r/hellofresh + r/mealkits)
+- **Factor75:** 5 sources (search + r/ReadyMeals + r/mealkits)
+- **Others:** 2-4 sources each
 
-For questions or issues, contact: kunsang.tsering@hellofresh.com
+### Time Frame:
+- **Previous complete week** (Monday-Sunday)
+- Example: Sunday Nov 17 report covers Nov 11-17
+
+### Filtering:
+- ✅ Keeps: Customer reviews, experiences, comparisons
+- ❌ Removes: Spam, promos, off-topic, SNAP discussions
+
+---
+
+## 📊 Validation
+
+Built-in checks ensure data quality:
+- ✅ Date window is 4-8 days
+- ✅ Sentiment totals match (pos + neg + neu = total)
+- ✅ All brands tracked (even if 0 posts)
+- ✅ Reddit API working
+- ✅ Email credentials valid
+
+---
+
+## 🛠️ Tech Stack
+
+- **Python 3.10+**
+- **PRAW** (Reddit API)
+- **VADER + TextBlob** (Sentiment analysis)
+- **Matplotlib** (Charts)
+- **GitHub Actions** (Automation)
+- **GitHub Pages** (Website hosting)
+
+---
+
+## 📖 Documentation
+
+- **[COMPLETE_SETUP_GUIDE.md](COMPLETE_SETUP_GUIDE.md)** - Full setup instructions
+- **[HOW_AUTOMATION_WORKS.md](HOW_AUTOMATION_WORKS.md)** - Technical details
+- **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)** - Project overview
+
+---
+
+## 🚨 Troubleshooting
+
+### "0 posts" in report:
+→ Add Reddit API secrets to GitHub (see Setup above)
+
+### Email not received:
+→ Check [GitHub Actions logs](https://github.com/ktsering2025/reddit-competitor-sentiment/actions)
+
+### Wrong date range:
+→ System uses **previous complete week** (intentional for production)
+
+---
+
+## ✅ Status
+
+- ✅ **Production Ready**
+- ✅ Sentiment analysis: Dual-method with context awareness
+- ✅ Time frame: 7-day weekly (previous Monday-Sunday)
+- ✅ Schedule: Every Sunday 8:00 PM EST
+- ✅ Automation: GitHub Actions (no manual intervention)
+- ✅ Email: Professional report with top posts + PDF
+- ✅ Website: Auto-updates with latest data
+
+**Next automatic run:** Sunday, November 17, 2025 at 8:00 PM EST 🚀
+
+---
+
+## 📞 Support
+
+**Repository:** https://github.com/ktsering2025/reddit-competitor-sentiment
+
+**Check Status:**
+- [GitHub Actions](https://github.com/ktsering2025/reddit-competitor-sentiment/actions)
+- [Live Dashboard](https://ktsering2025.github.io/reddit-competitor-sentiment/)
+
+**Manual Test:**
+1. Go to [Actions](https://github.com/ktsering2025/reddit-competitor-sentiment/actions)
+2. Run "Weekly Reddit Sentiment Analysis" workflow
+3. Check email in 3 minutes
+
+---
+
+Built for HelloFresh competitive intelligence team 🍽️

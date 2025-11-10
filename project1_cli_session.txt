@@ -1,6 +1,0 @@
-Script started on Mon Nov  3 14:46:11 2025
-Restored session: Tue Oct 28 22:14:05 EDT 2025
-[1m[7m%[27m[1m[0m                                                                                            ]7;file://US-HF-kunsang.tsering/Users/kunsang.tsering/Desktop/reddit-competitor-sentiment[0m[27m[24m[Jkunsang.tsering@US-HF-kunsang reddit-competitor-sentiment % [K[?2004hScript started on Mon Nov  3 14:47:39 2025
-[7mscript -a project1_cli_session.t[7mx[7mt[27m[K[A[58C[27ms[27mc[27mr[27mi[27mp[27mt[27m [27m-[27ma[27m [27mp[27mr[27mo[27mj[27me[27mc[27mt[27m1[27m_[27mc[27ml[27mi[27m_[27ms[27me[27ms[27ms[27mi[27mo[27mn[27m.[27mtx[27mt[?2004l
-Script started, output file is project1_cli_session.txt
-[1m[7m%[27m[1m[0m                                                                                            ]7;file://US-HF-kunsang.tsering/Users/kunsang.tsering/Desktop/reddit-competitor-sentiment[0m[27m[24m[Jkunsang.tsering@US-HF-kunsang reddit-competitor-sentiment % [K[?2004h[1m[7m%[27m[1m[0m                                                                                            ]7;file://US-HF-kunsang.tsering/Users/kunsang.tsering/Desktop/reddit-competitor-sentiment[0m[27m[24m[Jkunsang.tsering@US-HF-kunsang reddit-competitor-sentiment % [K[?2004h
