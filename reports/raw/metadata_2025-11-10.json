@@ -1,25 +1,14 @@
 {
-  "processing_timestamp": "2025-11-10T15:21:25.567808+00:00",
-  "total_posts": 0,
+  "processing_timestamp": "2025-11-10T15:25:51.440711+00:00",
   "date_range": {
     "start": "2025-11-03T00:00:00+00:00",
-    "end": "2025-11-11T23:59:58.999999+00:00"
+    "end": "2025-11-09T23:59:59.999999+00:00"
   },
-  "brands_analyzed": [
-    "HelloFresh",
-    "Factor75",
-    "Home Chef",
-    "Blue Apron",
-    "Marley Spoon",
-    "Hungryroot",
-    "EveryPlate",
-    "Green Chef"
-  ],
   "data_sources": {
     "HelloFresh": [
       "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
       "https://www.reddit.com/search/?q=hello+fresh&type=posts&t=week",
-      "https://www.reddit.com/r/hellofresh/search/?q=&type=posts&t=week&restrict_sr=1",
+      "https://www.reddit.com/r/hellofresh/search/?type=posts&t=week&restrict_sr=1",
       "https://www.reddit.com/r/mealkits/search/?q=hellofresh&type=posts&t=week&restrict_sr=1"
     ],
     "Factor75": [
@@ -35,7 +24,7 @@
     ],
     "Blue Apron": [
       "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
-      "https://www.reddit.com/r/blueapron/search/?q=&type=posts&t=week&restrict_sr=1",
+      "https://www.reddit.com/r/blueapron/search/?type=posts&t=week&restrict_sr=1",
       "https://www.reddit.com/r/mealkits/search/?q=blue+apron&type=posts&t=week&restrict_sr=1"
     ],
     "Marley Spoon": [
@@ -44,7 +33,7 @@
     ],
     "Hungryroot": [
       "https://www.reddit.com/search/?q=hungryroot&type=posts&t=week",
-      "https://www.reddit.com/r/hungryroot/search/?q=&type=posts&t=week&restrict_sr=1",
+      "https://www.reddit.com/r/hungryroot/search/?type=posts&t=week&restrict_sr=1",
       "https://www.reddit.com/r/mealkits/search/?q=hungryroot&type=posts&t=week&restrict_sr=1"
     ],
     "EveryPlate": [
@@ -61,40 +50,67 @@
       "https://www.reddit.com/r/mealkits/search/?q=green+chef&type=posts&t=week&restrict_sr=1"
     ]
   },
-  "validation_status": "passed",
-  "commit_hash": "4b30e5c",
   "filter_stats": {
     "HelloFresh": {
-      "pre_filter": 0,
-      "post_filter": 0
+      "pre": 58,
+      "post": 14,
+      "removed": 44
     },
     "Factor75": {
-      "pre_filter": 0,
-      "post_filter": 0
+      "pre": 137,
+      "post": 5,
+      "removed": 132
     },
     "Home Chef": {
-      "pre_filter": 0,
-      "post_filter": 0
+      "pre": 13,
+      "post": 3,
+      "removed": 10
     },
     "Blue Apron": {
-      "pre_filter": 0,
-      "post_filter": 0
+      "pre": 20,
+      "post": 9,
+      "removed": 11
     },
     "Marley Spoon": {
-      "pre_filter": 0,
-      "post_filter": 0
+      "pre": 6,
+      "post": 4,
+      "removed": 2
     },
     "Hungryroot": {
-      "pre_filter": 0,
-      "post_filter": 0
+      "pre": 4,
+      "post": 0,
+      "removed": 4
     },
     "EveryPlate": {
-      "pre_filter": 0,
-      "post_filter": 0
+      "pre": 6,
+      "post": 2,
+      "removed": 4
     },
     "Green Chef": {
-      "pre_filter": 0,
-      "post_filter": 0
+      "pre": 1,
+      "post": 0,
+      "removed": 1
     }
-  }
+  },
+  "brand_counts": {
+    "HelloFresh": 14,
+    "Factor75": 5,
+    "Home Chef": 3,
+    "Blue Apron": 9,
+    "Marley Spoon": 4,
+    "Hungryroot": 0,
+    "EveryPlate": 2,
+    "Green Chef": 0
+  },
+  "brands_analyzed": [
+    "HelloFresh",
+    "Factor75",
+    "Home Chef",
+    "Blue Apron",
+    "Marley Spoon",
+    "Hungryroot",
+    "EveryPlate",
+    "Green Chef"
+  ],
+  "total_posts": 32
 }

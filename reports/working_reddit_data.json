@@ -1,11 +1,11 @@
 {
-  "scrape_timestamp": "2025-11-10T15:21:25.524676+00:00",
-  "processing_timestamp": "2025-11-10T15:21:25.524696+00:00",
+  "scrape_timestamp": "2025-11-10T15:25:51.440685+00:00",
+  "processing_timestamp": "2025-11-10T15:25:51.440711+00:00",
   "date_range": {
     "start": "2025-11-03T00:00:00+00:00",
-    "end": "2025-11-11T23:59:58.999999+00:00"
+    "end": "2025-11-09T23:59:59.999999+00:00"
   },
-  "total_posts": 0,
+  "total_posts": 32,
   "data_sources": {
     "HelloFresh": [
       "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -54,55 +54,733 @@
   },
   "filter_stats": {
     "HelloFresh": {
-      "pre": 0,
-      "post": 0,
-      "removed": 0
+      "pre": 58,
+      "post": 14,
+      "removed": 44
     },
     "Factor75": {
-      "pre": 0,
-      "post": 0,
-      "removed": 0
+      "pre": 137,
+      "post": 5,
+      "removed": 132
     },
     "Home Chef": {
-      "pre": 0,
-      "post": 0,
-      "removed": 0
+      "pre": 13,
+      "post": 3,
+      "removed": 10
     },
     "Blue Apron": {
-      "pre": 0,
-      "post": 0,
-      "removed": 0
+      "pre": 20,
+      "post": 9,
+      "removed": 11
     },
     "Marley Spoon": {
-      "pre": 0,
-      "post": 0,
-      "removed": 0
+      "pre": 6,
+      "post": 4,
+      "removed": 2
     },
     "Hungryroot": {
-      "pre": 0,
+      "pre": 4,
       "post": 0,
-      "removed": 0
+      "removed": 4
     },
     "EveryPlate": {
-      "pre": 0,
-      "post": 0,
-      "removed": 0
+      "pre": 6,
+      "post": 2,
+      "removed": 4
     },
     "Green Chef": {
-      "pre": 0,
+      "pre": 1,
       "post": 0,
-      "removed": 0
+      "removed": 1
     }
   },
-  "posts": [],
+  "posts": [
+    {
+      "title": "What's your favorite recipe so far? :)",
+      "selftext": "Tbh I've been enjoying 98% of the things I hat to cook so far. I don't know if the recipes change from one country to another but as a vegetarian I've hat loads of delicious meals to cook and cooking/eating has been a pleasure since then ! \n\nPictures:\n\n1- Vegetarian Loc lac \n2- Mushroom linguine \n3- Thai style noodles with satay sauce\n4- Satay fried tofu with noodles \n5- portobello penne with hazelnut\n6- Cold thai salad with noodles\n7- veggie African style Maf\u00e9\n8- Aioli and portobello mushroom burger and potato wedges with herbs\n9- Chorba Aadess (Egyptian lentil soup) with toasts\n10- Filipino Monggo (mungo bean soup)\n11- Leek and mushrooms \"Galette\" (it's a veggie version of traditional dish from Brittany)\n12- Mushroom Conchiglie with parmesan \n13- Toasts from Normandy (with an onion and apple chutney and Camembert Cheese) with salad with apple, hazelnut and honey dressing.\n14- Cheesy enchiladas with black beans and salad and sweet potato fries (they're not on the picture but they were really \ud83d\udc4d)\n15- Rigatoni with portobello mushroom and  spinach sauce (+ I added sesame seed to top it all)\n16- beyond burger with Italian grated cheese and onion chutney, roquette salad and fries with spices\n17- grilled tofu with a satay sauce and its rice and veggies cooked in coconut milk.\n\nThere are lots of them that I love and I forgot to take pictures of but I gotta say the burgers and the Normandy's toasts are very popular here at home. The Filipino Monggo was an awesome discovery and is so delicious I made it twice despite being long to prepare for me (my hands are very weak and I am going to get surgery for it, I hope it will allow me to cut the veggies faster after this, bc I am so done with spending 1h cutting two carrots, one onion and a cucumber u____u )\n\nANYWAYS! What's YOUR favorite Hello fresh meal and have you ever had one of the meals on my pictures? If yes how did you like them? :)\n\nHave a nice day wherever you are in the world! \ud83d\udc95",
+      "score": 21,
+      "num_comments": 12,
+      "subreddit": "hellofresh",
+      "url": "https://reddit.com/r/hellofresh/comments/1oshu8a/whats_your_favorite_recipe_so_far/",
+      "created_utc": 1762690357.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "NovaCoon",
+      "upvote_ratio": 0.97,
+      "is_self": false,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+      "primary_brand": "HelloFresh",
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "VADER: 1.00, TextBlob: 0.25"
+    },
+    {
+      "title": "got my proteins (fish) but not the meal kits",
+      "selftext": "We're having friends over for dinner, so I bought 2x of a kit. Received the fish in the bottom of the box, but not the meal kits! Thankfully got the directions too and ordered a grocery delivery of the missing ingredients. HF refunded me for the full meals, but still weird. Been ordering weekly for the last 2 months since having some temporary mobility issues.\n\nIs this kind of goof normal? This is only my 6th box. First box had canned corn instead of canned black beans ($2.10 credit). ",
+      "score": 6,
+      "num_comments": 3,
+      "subreddit": "hellofresh",
+      "url": "https://reddit.com/r/hellofresh/comments/1or2xlt/got_my_proteins_fish_but_not_the_meal_kits/",
+      "created_utc": 1762541800.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "Fair-Flower6907",
+      "upvote_ratio": 0.87,
+      "is_self": true,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+      "primary_brand": "HelloFresh",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: 0.83, TextBlob: 0.05"
+    },
+    {
+      "title": "Anyone tried this?",
+      "selftext": "Anyone tried this? I had one bad pasta from hello fresh and now I\u2019m hesitant to try another. ",
+      "score": 6,
+      "num_comments": 12,
+      "subreddit": "hellofresh",
+      "url": "https://reddit.com/r/hellofresh/comments/1oqhrke/anyone_tried_this/",
+      "created_utc": 1762480296.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "AggressiveCry8262",
+      "upvote_ratio": 0.87,
+      "is_self": false,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+      "primary_brand": "HelloFresh",
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "VADER: -0.55, TextBlob: -0.20"
+    },
+    {
+      "title": "Graph over the years of my hellofresh/everyplate usage",
+      "selftext": "https://preview.redd.it/46d3zi7i7qzf1.png?width=708&format=png&auto=webp&s=9379c48dc2ec0a11dc87a75f7e9cf3db773cc742\n\n  \nCopied my transaction data to chatGPT and had it make a table/chart of my deals/orders of time. I did not really do anything tricky here aside from just ordering from one or the other when deals were mailed/sent to me. \n\nSo many people think its really expensive, but its fairly easy to use a service like this and get the benefits every few weeks/when you need and save some $ too.",
+      "score": 1,
+      "num_comments": 2,
+      "subreddit": "hellofresh",
+      "url": "https://reddit.com/r/hellofresh/comments/1oqfdx4/graph_over_the_years_of_my_hellofresheveryplate/",
+      "created_utc": 1762473880.0,
+      "competitors_mentioned": [
+        "HelloFresh",
+        "EveryPlate"
+      ],
+      "author": "igraph",
+      "upvote_ratio": 0.67,
+      "is_self": true,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+      "primary_brand": "HelloFresh",
+      "sentiment": "positive",
+      "confidence": 0.9,
+      "reasoning": "VADER: 0.94, TextBlob: 0.00"
+    },
+    {
+      "title": "Gyoza Pork Tacos",
+      "selftext": "Been getting HF for a little over a month, and these are by far the best thing i\u2019ve made. 10/10",
+      "score": 44,
+      "num_comments": 8,
+      "subreddit": "hellofresh",
+      "url": "https://reddit.com/r/hellofresh/comments/1oqeydl/gyoza_pork_tacos/",
+      "created_utc": 1762472799.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "Spiritual_Price5707",
+      "upvote_ratio": 1.0,
+      "is_self": false,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+      "primary_brand": null,
+      "sentiment": "positive",
+      "confidence": 0.9,
+      "reasoning": "VADER: 0.64, TextBlob: 0.30"
+    },
+    {
+      "title": "Some of my favourite HF meals I\u2019ve made!",
+      "selftext": "",
+      "score": 36,
+      "num_comments": 8,
+      "subreddit": "hellofresh",
+      "url": "https://reddit.com/r/hellofresh/comments/1oq0ywk/some_of_my_favourite_hf_meals_ive_made/",
+      "created_utc": 1762440735.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "BisexualFangirl",
+      "upvote_ratio": 0.92,
+      "is_self": false,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+      "primary_brand": "HelloFresh",
+      "sentiment": "neutral",
+      "confidence": 1.0,
+      "reasoning": "VADER: 0.00, TextBlob: 0.00"
+    },
+    {
+      "title": "Cheesy chicken prosciutto rollatini",
+      "selftext": "this was really good! I added extra seasoning to the chicken as usual because Hellofresh always says just salt and pepper. I added garlic powder and Italian seasoning which I think really helped bring out flavors. Otherwise I think this would lean a bit too heavily on the sauce",
+      "score": 17,
+      "num_comments": 3,
+      "subreddit": "hellofresh",
+      "url": "https://reddit.com/r/hellofresh/comments/1opl27r/cheesy_chicken_prosciutto_rollatini/",
+      "created_utc": 1762390843.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "nettiktac",
+      "upvote_ratio": 1.0,
+      "is_self": false,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+      "primary_brand": "HelloFresh",
+      "sentiment": "positive",
+      "confidence": 0.9,
+      "reasoning": "VADER: 0.54, TextBlob: -0.12"
+    },
+    {
+      "title": "Can other people use resubscribe discount codes?",
+      "selftext": "I haven\u2019t used HelloFresh in several months due to lack of motivation to cook. I\u2019m sent every so often a code in the mail to come back for $180 off +First Box Ships Free",
+      "score": 1,
+      "num_comments": 1,
+      "subreddit": "hellofresh",
+      "url": "https://reddit.com/r/hellofresh/comments/1opjd1y/can_other_people_use_resubscribe_discount_codes/",
+      "created_utc": 1762386448.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "Relative-Damage-8394",
+      "upvote_ratio": 0.67,
+      "is_self": true,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+      "primary_brand": "HelloFresh",
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "VADER: 0.53, TextBlob: 0.07"
+    },
+    {
+      "title": "Silky Sicilian penne except I used shrimp",
+      "selftext": "Literally better than any restaurant. There\u2019s no need to even get take out again because half the time it\u2019s mediocre unlike hf which is 1000 times better ",
+      "score": 29,
+      "num_comments": 5,
+      "subreddit": "hellofresh",
+      "url": "https://reddit.com/r/hellofresh/comments/1op865w/silky_sicilian_penne_except_i_used_shrimp/",
+      "created_utc": 1762361564.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "Fit-Elderberry7120",
+      "upvote_ratio": 0.91,
+      "is_self": false,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+      "primary_brand": "HelloFresh",
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "VADER: 0.56, TextBlob: 0.08"
+    },
+    {
+      "title": "Issue with buying a Gift card to be delivered in December?",
+      "selftext": "Trying to get a gift card for a Christmas gift (just want to check it off my to do list) but it won\u2019t let me have it delivered on any dates in December. Just until the end of November. Is this an issue with me or with Hello Fresh?",
+      "score": 1,
+      "num_comments": 0,
+      "subreddit": "hellofresh",
+      "url": "https://reddit.com/r/hellofresh/comments/1oohadh/issue_with_buying_a_gift_card_to_be_delivered_in/",
+      "created_utc": 1762285737.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "Jewel_Tone_Shell",
+      "upvote_ratio": 1.0,
+      "is_self": true,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+      "primary_brand": "HelloFresh",
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "VADER: 0.81, TextBlob: 0.30"
+    },
+    {
+      "title": "Potato wedges....again?!?!",
+      "selftext": "Okay, I know this subject has been discussed over and over again...sorry...\n\n  \nI have been using Hello Fresh for about 4 years.  I really enjoy it, and I've had lots and lots of really good food.  I honestly have zero complaints other than....those damn potato wedges!\n\nMy boys (14 year old twins) and I love all the sandwiches- fish, mushroom, burger, etc.  And ALL of them come with potato wedges.  I didn't like the potatoes the first time I got them.  By the 10th time I was starting to loathe them, and by now- these dang potato wedges are the bane of my existence!  (Okay, that was totally dramatic...but really, I don't like them at all!)\n\nThis morning, I was hoping that with the expanded customization, I could replace the potatoes.  On the first couple of meals I looked at, there were no replacements- yes, I could choose pork for the burgers, but that was it.  \n\nOn another meal (cheesy smashed burgers) I saw that asparagus or green beans were an option.  I assume that is a replacement for the potatoes?  If so, I would take asparagus over potatoes every time.   Has anyone gotten this replacement?\n\nI had planned on starting to make mashed potatoes instead of wedges, but I am worried about the timing.  Can you make mashed potatoes in the same time that the wedges cook?  We really do rely on the timing on the menu cards, and I have no idea what the timing would be for mashed potatoes.  I know it is a simple question, but we are just 3 simple dudes trying to make burgers, and I have no clue.\n\nI don't really want to improve the wedges, because I have gotten them at least 200 times (really....4 years, average 1.5 times per week, that is a lot of potato wedges!) and I'm really done with them. Last night I had them with the schnitzel and once again I passed up the chance to make mashed potatoes because...well, because once we start rolling, I don't want to change things up and mess up the timing.  \n\nHelp a brother and his sons out.  What is the answer for anything BUT roasted potatoes?  Something that can be done in the same time as a cheesy smashed burger?\n\n",
+      "score": 17,
+      "num_comments": 38,
+      "subreddit": "hellofresh",
+      "url": "https://reddit.com/r/hellofresh/comments/1oo7wdw/potato_wedgesagain/",
+      "created_utc": 1762264857.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "Heavy-Hospital7077",
+      "upvote_ratio": 0.8,
+      "is_self": true,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/r/hellofresh/search/?type=posts&t=week&restrict_sr=1",
+      "primary_brand": "HelloFresh",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: -0.52, TextBlob: 0.09"
+    },
+    {
+      "title": "Tempo from Kroger by Home Chef",
+      "selftext": "",
+      "score": 2,
+      "num_comments": 0,
+      "subreddit": "mealkits",
+      "url": "https://reddit.com/r/mealkits/comments/1os7d6f/tempo_from_kroger_by_home_chef/",
+      "created_utc": 1762654450.0,
+      "competitors_mentioned": [
+        "Home Chef"
+      ],
+      "author": "tae27",
+      "upvote_ratio": 1.0,
+      "is_self": false,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/r/mealkits/search/?q=hellofresh&type=posts&t=week&restrict_sr=1",
+      "primary_brand": null,
+      "sentiment": "neutral",
+      "confidence": 1.0,
+      "reasoning": "VADER: 0.00, TextBlob: 0.00"
+    },
+    {
+      "title": "Marley Spoon recipes don't work as written",
+      "selftext": "",
+      "score": 3,
+      "num_comments": 0,
+      "subreddit": "mealkits",
+      "url": "https://reddit.com/r/mealkits/comments/1orh8en/marley_spoon_recipes_dont_work_as_written/",
+      "created_utc": 1762579708.0,
+      "competitors_mentioned": [
+        "Marley Spoon"
+      ],
+      "author": "webblue",
+      "upvote_ratio": 1.0,
+      "is_self": false,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/r/mealkits/search/?q=hellofresh&type=posts&t=week&restrict_sr=1",
+      "primary_brand": "Marley Spoon",
+      "sentiment": "neutral",
+      "confidence": 1.0,
+      "reasoning": "VADER: 0.00, TextBlob: 0.00"
+    },
+    {
+      "title": "Meal delivery that does serving of 1",
+      "selftext": "As I browse through Hello Fresh, Blue Apron, and other options, I realize I get frustrated with how they charge for 2 servings when I\u2019m only ordering for myself and I wonder if there\u2019s any that cater to 1? Haha \ud83d\ude2d",
+      "score": 1,
+      "num_comments": 17,
+      "subreddit": "mealkits",
+      "url": "https://reddit.com/r/mealkits/comments/1ooq7zc/meal_delivery_that_does_serving_of_1/",
+      "created_utc": 1762307495.0,
+      "competitors_mentioned": [
+        "HelloFresh",
+        "Blue Apron"
+      ],
+      "author": "Angelhappy43",
+      "upvote_ratio": 1.0,
+      "is_self": true,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/r/mealkits/search/?q=hellofresh&type=posts&t=week&restrict_sr=1",
+      "primary_brand": "HelloFresh",
+      "sentiment": "positive",
+      "confidence": 0.9,
+      "reasoning": "VADER: -0.30, TextBlob: -0.05"
+    },
+    {
+      "title": "Anyone recognize this meal?",
+      "selftext": "It\u2019s either hello fresh or blue apron and it\u2019s shrimp with  creme fraiche, it was over rice which you mix carrots and green peppers in with. I can not find the recipe and can\u2019t figure out which meal kit I used. Help!",
+      "score": 3,
+      "num_comments": 1,
+      "subreddit": "mealkits",
+      "url": "https://reddit.com/r/mealkits/comments/1on9yk4/anyone_recognize_this_meal/",
+      "created_utc": 1762171535.0,
+      "competitors_mentioned": [
+        "HelloFresh",
+        "Blue Apron"
+      ],
+      "author": "Throwitaway821",
+      "upvote_ratio": 1.0,
+      "is_self": false,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/r/mealkits/search/?q=hellofresh&type=posts&t=week&restrict_sr=1",
+      "primary_brand": "HelloFresh",
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "VADER: 0.65, TextBlob: 0.02"
+    },
+    {
+      "title": "After switching to Cook Unity, took Factor up on their offer to try the \"new\" Factor...",
+      "selftext": "Did Factor for a while  Their meals were decent, but I didn't feel there was enough selection, too much sodium, etc.\n\nSwitched over to Cook Unity and I've preferred that, by a wide margin, actually.\n\nJust ran out of Cook Unit discounts and promotions, while Factor offered me $155 in discounts to revisit and try the \"new\" Factor, so I took them up on that.  We'll see how it goes.\n\n",
+      "score": 8,
+      "num_comments": 3,
+      "subreddit": "factor75",
+      "url": "https://reddit.com/r/factor75/comments/1orcit6/after_switching_to_cook_unity_took_factor_up_on/",
+      "created_utc": 1762565424.0,
+      "competitors_mentioned": [
+        "Factor75"
+      ],
+      "author": "Stockjock1",
+      "upvote_ratio": 0.9,
+      "is_self": true,
+      "source_brand": "Factor75",
+      "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
+      "primary_brand": "Factor75",
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "VADER: 0.00, TextBlob: 0.08"
+    },
+    {
+      "title": "Factor 75 - Premium meals aren't discounted? Try calling",
+      "selftext": "Howdy y'all.\n\nI'll keep the post short since I'm still on call with Factor customer service because I was charged for the box first, given a total receipt for the full price of only the box, then also charged for the premium meals.\n\nCheck their terms and conditions on the site!\n\n6.1: We reserve the right to adjust prices in our sole discretion, at any time and without notice to you\n\nSpooky right? But let's look a little further.\n\n6.2 **Plan Add-Ons.** Different features and other customized options may become available in addition to your plan, including, but not limited to, **premium options**, new product add-ons, and modified shipping options. These may change the price of your plan on a recurring basis.\n\nNow nowhere here does it say premium add-ons affect the pricing APART from the plan.\n\nThe only part in the 9. Voucher section that limits what vouchers can do is:\n\nThe discount found on the Voucher only lasts for the first week of your subscription plan unless it specifically states otherwise on the Voucher or when you sign-up.\n\nSo? If you got surcharged start calling. They've taken note of the call and are now working to fix their terms and conditions.\n\n  \nEdit: Got a refund for the entire surcharge",
+      "score": 2,
+      "num_comments": 0,
+      "subreddit": "factor75",
+      "url": "https://reddit.com/r/factor75/comments/1onvjrk/factor_75_premium_meals_arent_discounted_try/",
+      "created_utc": 1762222805.0,
+      "competitors_mentioned": [
+        "Factor75"
+      ],
+      "author": "BalrockDM",
+      "upvote_ratio": 0.75,
+      "is_self": true,
+      "source_brand": "Factor75",
+      "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
+      "primary_brand": "Factor75",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: 0.24, TextBlob: 0.09"
+    },
+    {
+      "title": "How do I cancel a Factor subscription?",
+      "selftext": "I'm going into the app on my phone and hitting the cancel button in plan settings. It does a spin load animation and then nothing. It is still showing that I can select meals and the number of meals I'm getting under plan settings. If I can't get rid of this subscription I'm cancelling my debit card.  I don't know what to do. ",
+      "score": 5,
+      "num_comments": 6,
+      "subreddit": "factor75",
+      "url": "https://reddit.com/r/factor75/comments/1onnrrj/how_do_i_cancel_a_factor_subscription/",
+      "created_utc": 1762203422.0,
+      "competitors_mentioned": [
+        "Factor75"
+      ],
+      "author": "Suspicious_Bother181",
+      "upvote_ratio": 1.0,
+      "is_self": true,
+      "source_brand": "Factor75",
+      "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
+      "primary_brand": "Factor75",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: -0.54, TextBlob: 0.00"
+    },
+    {
+      "title": "Tempo from Kroger by Home Chef",
+      "selftext": "Or is it Tempo by Kroger from Home Chef?\n\nFirst meal prep delivery! I am attempting to eat more healthy as I have various issues that will supposedly be cured with \u201cdiet & exercise\u201d. Well suck it, chronic health issues make both of those things nearly impossible. I will be starting on tirzepatide soon and will slowly begin working in some strength training and toning. But the diet problem\u2026that\u2019s a conundrum. I can\u2019t cook, don\u2019t cook and absolutely will not ever have the energy that all entails. Thus, trying out meal prep delivery services. \n\nI\u2019m starting with Tempo (aka Kroger branded Home Chef meals) as they are one the cheapest right now with 60% off your first order (as low as *$4.99* a meal! Yeah, before shipping). Have I mentioned that I\u2019m cheap as fuck? That\u2019s important to remember here. My goal is to only order once or twice a month thus keeping the shipping costs to a minimum. Most of these meals can be frozen and the ones I received were good for at least 10 days to 2 weeks. So stock up and save (on shipping). I ordered on a Friday and they were delivered on Monday morning.  \n\nI am trying to justify (see above re: being cheap) the cost of doing this. And let\u2019s face it, food prices are ridiculous right now. By doing this I am saving money by not wasting food, and not buying with my stomach instead of my head. I am also saving *energy* and *time* both very valuable things, especially to someone with chronic illnesses. I am also appealing to the part of me that has started craving variety and fresher food - I am so sick of processed everything.\n\nI am however being very terrible to the environment. Yes, a lot of the packaging can be reused or recycled IF you live somewhere with a decent recycling system. Oregon has yoyo\u2019d back and forth forever over what can be recycled and it\u2019s difficult to keep track of. Currently some of this cannot be recycled. And I feel bad. But my body feels better?\n\n10 meals plus shipping ($10.99 for us) came to $60.91 so just over 6 bucks a meal. (Rakuten also has a $10 back on your first order deal, check that out if you use it!) \n\n(As an aside, I made the rookie mistake of forgetting when the next week charged vs when to have your menu selected - so got charged nearly full price for another 10 meals. However, their customer service chat on the website was fast, easy and efficient - credited the charge immediately and apologized for the confusion!)\n\nAll in all, I was really pleased with most of these meals. They had good variety, amazing serving sizes and just really easy & tasty food.\n\nWould anyone be interested in my individual meal reviews?\n\nAffiliate links in bio.  Disclaimer blah blah this is not a sponsored post, I paid for this service with my own money and these are my honest blatherings etc etc.",
+      "score": 7,
+      "num_comments": 6,
+      "subreddit": "ReadyMeals",
+      "url": "https://reddit.com/r/ReadyMeals/comments/1os3v4u/tempo_from_kroger_by_home_chef/",
+      "created_utc": 1762644599.0,
+      "competitors_mentioned": [
+        "Home Chef"
+      ],
+      "author": "tae27",
+      "upvote_ratio": 1.0,
+      "is_self": true,
+      "source_brand": "Factor75",
+      "source_url": "https://www.reddit.com/r/ReadyMeals/search/?q=factor&type=posts&t=week&restrict_sr=1",
+      "primary_brand": "Home Chef",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: 0.98, TextBlob: 0.14"
+    },
+    {
+      "title": "Factor 75 - Premium meals aren't discounted? Try calling",
+      "selftext": "Howdy y'all.\n\nI'll keep the post short since I'm still on call with Factor customer service because I was charged for the box first, given a total receipt for the full price of only the box, then also charged for the premium meals.\n\nCheck their terms and conditions on the site!\n\n6.1: We reserve the right to adjust prices in our sole discretion, at any time and without notice to you\n\nSpooky right? But let's look a little further.\n\n6.2 **Plan Add-Ons.** Different features and other customized options may become available in addition to your plan, including, but not limited to, **premium options**, new product add-ons, and modified shipping options. These may change the price of your plan on a recurring basis.\n\nNow nowhere here does it say premium add-ons affect the pricing APART from the plan.\n\nThe only part in the 9. Voucher section that limits what vouchers can do is:\n\nThe discount found on the Voucher only lasts for the first week of your subscription plan unless it specifically states otherwise on the Voucher or when you sign-up.\n\nSo? If you got surcharged start calling. They've taken note of the call and are now working to fix their terms and conditions.\n\n  \nEdit: Got a refund for the entire surcharge",
+      "score": 2,
+      "num_comments": 0,
+      "subreddit": "ReadyMeals",
+      "url": "https://reddit.com/r/ReadyMeals/comments/1onvj1z/factor_75_premium_meals_arent_discounted_try/",
+      "created_utc": 1762222750.0,
+      "competitors_mentioned": [
+        "Factor75"
+      ],
+      "author": "BalrockDM",
+      "upvote_ratio": 0.67,
+      "is_self": true,
+      "source_brand": "Factor75",
+      "source_url": "https://www.reddit.com/r/ReadyMeals/search/?q=factor&type=posts&t=week&restrict_sr=1",
+      "primary_brand": "Factor75",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: 0.24, TextBlob: 0.09"
+    },
+    {
+      "title": "First delivery from Tempo by Home Chef. Never again.",
+      "selftext": "Delivery arrived, packaged securely in a foam padded box with a ship date of Saturday from Chicago (to the East coast). That gave me a bit of concern. Then I opened it to find no ice pack on top. Top meal felt warm. It's about 70 degrees outside today, surely they must have put something in the box to keep the meals cold? One ice pack in the bottom. 12 meals. One ice pack. Out came the thermometer. The 2 meals in contact with the ice pack: 50\u00b0 at the center of the protein. Meals at the top almost 60\u00b0 Safe to say we won't be eating any of these. Called customer service and they offered a credit. I said no way and cancel the account while you're at it. They refunded within about 20 seconds so can't fault them on that end, but probably the worst first impression of any of these services I've tried. ",
+      "score": 126,
+      "num_comments": 30,
+      "subreddit": "ReadyMeals",
+      "url": "https://reddit.com/r/ReadyMeals/comments/1onqpmu/first_delivery_from_tempo_by_home_chef_never_again/",
+      "created_utc": 1762210171.0,
+      "competitors_mentioned": [
+        "Home Chef"
+      ],
+      "author": "CJPTK",
+      "upvote_ratio": 0.98,
+      "is_self": false,
+      "source_brand": "Factor75",
+      "source_url": "https://www.reddit.com/r/ReadyMeals/search/?q=factor&type=posts&t=week&restrict_sr=1",
+      "primary_brand": "Home Chef",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: 0.17, TextBlob: 0.18"
+    },
+    {
+      "title": "Factor Meal Delivery Issue?",
+      "selftext": "I'm based in Brussels and decided to give Factor a try after seeing an ad for it in my gym. Its 9.15am here and when I woke up I saw that there was an attempted delivery notification at 6.45. Is it common for Factor to deliver at an inappropriate time like this?",
+      "score": 4,
+      "num_comments": 1,
+      "subreddit": "ReadyMeals",
+      "url": "https://reddit.com/r/ReadyMeals/comments/1on68q9/factor_meal_delivery_issue/",
+      "created_utc": 1762157818.0,
+      "competitors_mentioned": [
+        "Factor75"
+      ],
+      "author": "Powerful-Film-8164",
+      "upvote_ratio": 1.0,
+      "is_self": true,
+      "source_brand": "Factor75",
+      "source_url": "https://www.reddit.com/r/ReadyMeals/search/?q=factor&type=posts&t=week&restrict_sr=1",
+      "primary_brand": "Factor75",
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "VADER: 0.43, TextBlob: -0.30"
+    },
+    {
+      "title": "Recipes don't work as written",
+      "selftext": "I recently switched to Marley Spoon after about 10 years with Blue Apron. Somehow, even though I'm following the recipes as written, I'm burning food to the point that it's inedible frustratingly often. That didn't happen once with BA.\n\nBaked brie pasta recipe said to put thinly sliced shallot and chopped garlic (and other things) in an oven-safe skillet and roast at 425 for 35-40 mins. At 35 mins, of course it was completely black, burnt, and bitter.\n\nAnother recipe had me broil carrots for something like 6-10 mins. Sure, it warned me that not all broilers are the same, but after less than 3 mins black smoke was coming out of the sides and the fire alarm went off.\n\nCaramelizing onions: the recipe casually said to use medium-high heat for something like 20-25 mins and scrape up any that get stuck to the bottom. I only learned later that other recipes say to be careful to keep the heat low.\n\nAnd another had me roast sliced red onion for way too long. Again, almost powdery black.\n\nWe use our oven often for baking with no issues; it's calibrated well enough. And we roasted things all the time for BA and nothing burned.\n\nI had heard Marley Spoon is for slightly more experienced cooks. That's fine. I suppose there's a lesson here in knowing my food and cooking techniques. I should probably know how to carmelize onions. But in all these cases, the only way to make the recipes work would have been to second guess basic, unambiguous, adversarial instructions.\n\nWhat am I missing?",
+      "score": 4,
+      "num_comments": 3,
+      "subreddit": "marleyspoon",
+      "url": "https://reddit.com/r/marleyspoon/comments/1orh6ut/recipes_dont_work_as_written/",
+      "created_utc": 1762579566.0,
+      "competitors_mentioned": [
+        "Blue Apron",
+        "Marley Spoon"
+      ],
+      "author": "webblue",
+      "upvote_ratio": 0.84,
+      "is_self": true,
+      "source_brand": "Blue Apron",
+      "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
+      "primary_brand": "Marley Spoon",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: -0.85, TextBlob: -0.02"
+    },
+    {
+      "title": "What is the best mealprep kit?",
+      "selftext": "Before I start this off, yes I know that most meal prep are not exactly cheap, and I should be focusing on actually buying crucial ingredients, however at this time due to certain restraints as well as dealing with financial woe, as well as not having to use takeout daily, I'd like to opt for a better options once I've gotten into independence, as well as use it for my credit stuffs at the same time.\n\nNow that done, here's my scenario - I am currently working 2 jobs both the week and weekend and I plan on eating two or three meals each days - I also am looking for something that can sustain 1500 calories for my weight loss journey.\n\nI also don't tend to cook very much - if any at all, due to time constraint, however I also want to learn to do so given that it is a crucial skill and I plan on staggering it out 4 days.\n\nI also want to be clear in that I realize that meal prep can also be unhealthy as well, given the circumstances they're stored in, however I also realize that eating takeouts isn't exactly healthy either, but I want to look for the best options possible.\n\nGiven that constraints, I've came across Blue Apron, Hello Fresh, as well as countless other and what get to me is that certain services seem to be underbrushing all of the negative complaints (too much sodium, food is undercooked, etc.) - I can fault some of it up to user error or similar, but I am worried about the quality of food that I'd be getting, but at the very least I want something healthy. Is there a viable options to review which options is the best?\n\nTLDR: Looking for a meal prep, cook 4 days a week, and want something with 1500 calories max across 3 meals per day.",
+      "score": 1,
+      "num_comments": 19,
+      "subreddit": "mealprep",
+      "url": "https://reddit.com/r/mealprep/comments/1oqzyyz/what_is_the_best_mealprep_kit/",
+      "created_utc": 1762535120.0,
+      "competitors_mentioned": [
+        "HelloFresh",
+        "Blue Apron"
+      ],
+      "author": "Fit_Case_03",
+      "upvote_ratio": 0.56,
+      "is_self": true,
+      "source_brand": "Blue Apron",
+      "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
+      "primary_brand": "HelloFresh",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: 0.96, TextBlob: 0.15"
+    },
+    {
+      "title": "Pretzel Burgers with Hoppy Cheddar Sauce & Roasted Sweet Potato Rounds",
+      "selftext": "https://media.blueapron.com/recipes/347/c_card_pdfs/20160122-1850-3-0554/M-Burger-Pretzel-Bun.pdf\n\nMy grocery store had pretzel buns that looked just like the Blue Apron photo.\n\nI used ground bison instead of beef.\n\nOf course finding fresh hops was problematic. However a local micro brewer sold me a small plastic ramekin of pelletized hops. The second photo shows the container as well as how much I used for the cheese sauce (I crushed the pellets with the back of a spoon before adding). They were very important to the dish. I'm storing the remaining hop pellets in the freezer.",
+      "score": 5,
+      "num_comments": 0,
+      "subreddit": "blueapron",
+      "url": "https://reddit.com/r/blueapron/comments/1oq8g5d/pretzel_burgers_with_hoppy_cheddar_sauce_roasted/",
+      "created_utc": 1762457465.0,
+      "competitors_mentioned": [
+        "Blue Apron"
+      ],
+      "author": "ancient_snowboarder",
+      "upvote_ratio": 1.0,
+      "is_self": false,
+      "source_brand": "Blue Apron",
+      "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
+      "primary_brand": "Blue Apron",
+      "sentiment": "positive",
+      "confidence": 0.9,
+      "reasoning": "VADER: 0.65, TextBlob: 0.10"
+    },
+    {
+      "title": "French Onion Soup",
+      "selftext": "So decadent and so tasty! I would absolutely get this one again. I\u2019ve been really enjoying the soup season of Blue Apron, and I feel like they\u2019re getting their shit together with deliveries complete/on time. ",
+      "score": 14,
+      "num_comments": 13,
+      "subreddit": "blueapron",
+      "url": "https://reddit.com/r/blueapron/comments/1oosdq6/french_onion_soup/",
+      "created_utc": 1762313567.0,
+      "competitors_mentioned": [
+        "Blue Apron"
+      ],
+      "author": "PNWcouchpotato",
+      "upvote_ratio": 1.0,
+      "is_self": false,
+      "source_brand": "Blue Apron",
+      "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
+      "primary_brand": "Blue Apron",
+      "sentiment": "neutral",
+      "confidence": 0.66,
+      "reasoning": "VADER: 0.44, TextBlob: 0.10"
+    },
+    {
+      "title": "Ehhh it might be good?! Or will be???",
+      "selftext": "I\u2019ve been a Blue Apron gal for over a decade and like many of you have been questioning quality lately. My husband and I have sent in multiple customer support issues during the transition and they have been responsive\u2026 BUT recently I have to say there have been a few meals where we have looked at each other and said, \u201cwow - this is good.\u201d Maybe it\u2019s my husband\u2019s cooking skills but\u2026 do we need to take a beat and let this happen? Give them some grace? I promise I have not been paid. Quick check into my profile I am all new mom and random stuff.\n",
+      "score": 16,
+      "num_comments": 27,
+      "subreddit": "blueapron",
+      "url": "https://reddit.com/r/blueapron/comments/1ooqi24/ehhh_it_might_be_good_or_will_be/",
+      "created_utc": 1762308244.0,
+      "competitors_mentioned": [
+        "Blue Apron"
+      ],
+      "author": "JellyfishGullible359",
+      "upvote_ratio": 0.87,
+      "is_self": true,
+      "source_brand": "Blue Apron",
+      "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
+      "primary_brand": "Blue Apron",
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "VADER: 0.91, TextBlob: 0.12"
+    },
+    {
+      "title": "Middle Eastern Chicken Thighs with Stewed Tomatoes & Lemon Labneh",
+      "selftext": "https://media.blueapron.com/recipes/25309/c_card_pdfs/1616610640-28-0025-2455/2PRE10_ShawarmaChicken_Cust_WEB.pdf\n\nInstead of brown rice I made freekeh.\n\nThis was good, but maybe my lemon was too big, I could have used a little less lemon juice. \n\n",
+      "score": 11,
+      "num_comments": 0,
+      "subreddit": "blueapron",
+      "url": "https://reddit.com/r/blueapron/comments/1os5lkz/middle_eastern_chicken_thighs_with_stewed/",
+      "created_utc": 1762649371.0,
+      "competitors_mentioned": [
+        "Blue Apron"
+      ],
+      "author": "ancient_snowboarder",
+      "upvote_ratio": 0.87,
+      "is_self": false,
+      "source_brand": "Blue Apron",
+      "source_url": "https://www.reddit.com/r/blueapron/search/?type=posts&t=week&restrict_sr=1",
+      "primary_brand": "Blue Apron",
+      "sentiment": "neutral",
+      "confidence": 0.72,
+      "reasoning": "VADER: 0.24, TextBlob: -0.04"
+    },
+    {
+      "title": "Adobo-Style Chicken with Roasted Bok Choy & Jasmine Rice",
+      "selftext": "https://media.blueapron.com/recipes/1513/c_card_pdfs/20160301-1752-4-0131/Adobo-Style-Chicken.pdf\n\nI came across fresh bay leaves yesterday so finally got to make this again",
+      "score": 6,
+      "num_comments": 0,
+      "subreddit": "blueapron",
+      "url": "https://reddit.com/r/blueapron/comments/1ontz8n/adobostyle_chicken_with_roasted_bok_choy_jasmine/",
+      "created_utc": 1762218487.0,
+      "competitors_mentioned": [
+        "Blue Apron"
+      ],
+      "author": "ancient_snowboarder",
+      "upvote_ratio": 0.88,
+      "is_self": false,
+      "source_brand": "Blue Apron",
+      "source_url": "https://www.reddit.com/r/blueapron/search/?type=posts&t=week&restrict_sr=1",
+      "primary_brand": "Blue Apron",
+      "sentiment": "positive",
+      "confidence": 0.9,
+      "reasoning": "VADER: 0.32, TextBlob: -0.10"
+    },
+    {
+      "title": "Is anyone else unable to get support for their undelivered box?",
+      "selftext": "I didn't get my box this week, which is annoying on its own end, but nothing I haven't dealt with before, unfortunately. However, when I go to support to declare that it wasn't delivered, my only option is to go to their FAQ. I tried to contact them through their page, but even that didn't work and led to a page that doesn't load. And now the Marley Spoon app won't open at all. On their FAQ page, it says they are having very high rates of people reaching out, so I'm just wondering if anyone else is having issues with this? ",
+      "score": 4,
+      "num_comments": 4,
+      "subreddit": "marleyspoon",
+      "url": "https://reddit.com/r/marleyspoon/comments/1oqa8yh/is_anyone_else_unable_to_get_support_for_their/",
+      "created_utc": 1762461575.0,
+      "competitors_mentioned": [
+        "Marley Spoon"
+      ],
+      "author": "izzyyam",
+      "upvote_ratio": 1.0,
+      "is_self": true,
+      "source_brand": "Marley Spoon",
+      "source_url": "https://www.reddit.com/search/?q=marley+spoon&type=posts&t=week",
+      "primary_brand": "Marley Spoon",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: 0.46, TextBlob: -0.14"
+    },
+    {
+      "title": "$12 credit? REALLY?",
+      "selftext": "\"Due to an unforeseen issue with our supplier, we were unable to send you the sirloin steaks for your Seared Steak with Crumbled Feta. We are working closely with our suppliers to ensure that this type of incident doesn\u2019t happen again in the future and we are very sorry for the inconvenience this may cause.\n\nTo compensate you for this ingredient, we have applied a credit of $12 to your Marley Spoon account which will be deducted automatically from your next billed order.\"\n\nIts not like you're missing the garlic, that's the whole meal, what's left a couple potatoes and brussel sprouts for... the other $28!?  I dont want a credit, I want one full meal refunded. I can't cancel fast enough.",
+      "score": 14,
+      "num_comments": 9,
+      "subreddit": "marleyspoon",
+      "url": "https://reddit.com/r/marleyspoon/comments/1ontfxd/12_credit_really/",
+      "created_utc": 1762217057.0,
+      "competitors_mentioned": [
+        "Marley Spoon"
+      ],
+      "author": "licinius",
+      "upvote_ratio": 1.0,
+      "is_self": true,
+      "source_brand": "Marley Spoon",
+      "source_url": "https://www.reddit.com/search/?q=marley+spoon&type=posts&t=week",
+      "primary_brand": "Marley Spoon",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: 0.61, TextBlob: -0.07"
+    },
+    {
+      "title": "What do y'all do with the contents of your ice gel packs before recycling?",
+      "selftext": "I had it laying in a cake pan for a couple of days when I got sick and tired of it literally just being standing water and then used my sifter to sift out as much water as possible, and throw away as much gel as possible, but I know gel got down the sink. It is causing too much stress and I might cancel my every plate over this. I cannot just pour gel into the trashcan because sometimes my trash bags might leak not every time but sometimes and the times they do leak I am not gonna want to deal with that.",
+      "score": 0,
+      "num_comments": 7,
+      "subreddit": "everyplate",
+      "url": "https://reddit.com/r/everyplate/comments/1osp5rm/what_do_yall_do_with_the_contents_of_your_ice_gel/",
+      "created_utc": 1762709232.0,
+      "competitors_mentioned": [
+        "EveryPlate"
+      ],
+      "author": "Yourmom1912",
+      "upvote_ratio": 0.33,
+      "is_self": true,
+      "source_brand": "EveryPlate",
+      "source_url": "https://www.reddit.com/search/?q=everyplate&type=posts&t=week",
+      "primary_brand": "EveryPlate",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: -0.94, TextBlob: -0.08"
+    }
+  ],
   "brand_counts": {
-    "HelloFresh": 0,
-    "Factor75": 0,
-    "Home Chef": 0,
-    "Blue Apron": 0,
-    "Marley Spoon": 0,
+    "HelloFresh": 14,
+    "Factor75": 5,
+    "Home Chef": 3,
+    "Blue Apron": 9,
+    "Marley Spoon": 4,
     "Hungryroot": 0,
-    "EveryPlate": 0,
+    "EveryPlate": 2,
     "Green Chef": 0
   }
 }
