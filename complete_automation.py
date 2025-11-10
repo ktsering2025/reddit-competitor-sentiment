@@ -149,7 +149,17 @@ def run_pipeline(send_email=False, email_recipients=None):
         
         result = subprocess.run([sys.executable, 'accurate_scraper.py'], 
                               capture_output=True, text=True, env=env)
+        
+        # Print scraper output for debugging
+        if result.stdout:
+            for line in result.stdout.split('\n'):
+                if line.strip():
+                    log_and_print(f"  {line}")
+        
         if result.returncode != 0:
+            log_and_print(f"[ERROR] Scraper failed with return code {result.returncode}", "ERROR")
+            if result.stderr:
+                log_and_print(f"[ERROR] {result.stderr}", "ERROR")
             raise Exception(f"Scraper failed: {result.stderr}")
         log_and_print("[SUCCESS] Scraper completed - data saved to working_reddit_data.json")
         
