@@ -55,7 +55,7 @@ Add these **6 secrets**:
    **Value:** `prczfvibtgcamqpi`
 
 6. **Name:** `EMAIL_RECIPIENTS`  
-   **Value:** `brian.leung@hellofresh.com,assaf.ronen@hellofresh.com,kunsang.tsering@hellofresh.com`
+   **Value:** `brian.leung@hellofresh.com,assaf.ronen@hellofresh.com,kunsang.tsering@hellofresh.com,adam.kalikow@hellofresh.com,adam.park@factor75.com`
 
 ---
 

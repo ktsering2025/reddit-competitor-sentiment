@@ -35,7 +35,7 @@ Automatically scrapes Reddit **every Sunday at 8:00 PM EST**, analyzes sentiment
 **Every Sunday at 8:00 PM EST:**
 - Scrapes Reddit for the **previous complete week** (Monday-Sunday)
 - Analyzes 30-50 posts per week
-- Sends email to: brian.leung@hellofresh.com, assaf.ronen@hellofresh.com, kunsang.tsering@hellofresh.com
+- Sends email to: brian.leung@hellofresh.com, assaf.ronen@hellofresh.com, kunsang.tsering@hellofresh.com, adam.kalikow@hellofresh.com, adam.park@factor75.com
 - Updates website: https://ktsering2025.github.io/reddit-competitor-sentiment/
 
 **Next Run:** Sunday, November 17, 2025 at 8:00 PM EST
