@@ -57,37 +57,60 @@ Automatically scrapes Reddit **every Sunday at 8:00 PM EST**, analyzes sentiment
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start (For New Users)
 
-### Setup (One-Time):
+### ⚡ Get Your First Report in 3 Minutes:
 
-1. **Add GitHub Secrets:**  
-   Go to: [Settings → Secrets](https://github.com/ktsering2025/reddit-competitor-sentiment/settings/secrets/actions)
-   
-   Add these 6 secrets:
-   - `REDDIT_CLIENT_ID`
-   - `REDDIT_CLIENT_SECRET`
-   - `REDDIT_USER_AGENT`
-   - `GMAIL_EMAIL`
-   - `GMAIL_APP_PASSWORD`
-   - `EMAIL_RECIPIENTS`
+1. **Go to GitHub Actions:**  
+   👉 [Click here to run workflow](https://github.com/ktsering2025/reddit-competitor-sentiment/actions/workflows/weekly-automation.yml)
 
-   *(See [COMPLETE_SETUP_GUIDE.md](COMPLETE_SETUP_GUIDE.md) for values)*
+2. **Click the green "Run workflow" button**  
+   → Then click "Run workflow" again
 
-2. **Done!** The automation runs automatically every Sunday.
+3. **Wait 3 minutes**  
+   → Check your email! 📧
 
-### Manual Run (For Testing):
+**That's it!** You'll get a full report with:
+- 📊 Sentiment bar chart (PDF attached)
+- 📝 Top positive & negative posts per brand
+- 🔗 Links to detailed analysis
 
-**Option 1: GitHub Actions**
-1. Go to [Actions tab](https://github.com/ktsering2025/reddit-competitor-sentiment/actions)
-2. Click "Weekly Reddit Sentiment Analysis"
-3. Click "Run workflow" → "Run workflow"
-4. Check your email in 3 minutes
+---
 
-**Option 2: Local**
-```bash
-python3 complete_automation.py
-```
+### 🔄 Weekly Automation Options:
+
+**Option 1: Manual Trigger (30 seconds every Sunday) ⭐ RECOMMENDED**
+- Every Sunday at 8 PM, click "Run workflow" button
+- 100% reliable, works with laptop closed
+- Takes 30 seconds
+
+**Option 2: Local Cron (Fully Automated)**
+- Run once: `./setup_local_cron.sh`
+- Runs automatically every Sunday at 8 PM
+- Requires Mac to be on and awake
+
+**Option 3: Hybrid (Best of Both)**
+- Set up local cron + use manual trigger as backup
+- 100% reliability with minimal effort
+
+📖 **See [WEEKLY_AUTOMATION_GUARANTEE.md](WEEKLY_AUTOMATION_GUARANTEE.md) for detailed setup**
+
+---
+
+### 🔧 First-Time Setup (For Admins):
+
+If you're setting this up for the first time, you need to add GitHub Secrets:
+
+1. Go to: [Settings → Secrets → Actions](https://github.com/ktsering2025/reddit-competitor-sentiment/settings/secrets/actions)
+2. Add these 6 secrets:
+   - `REDDIT_CLIENT_ID` - Your Reddit app client ID
+   - `REDDIT_CLIENT_SECRET` - Your Reddit app secret
+   - `REDDIT_USER_AGENT` - Your Reddit app name
+   - `GMAIL_EMAIL` - Gmail address for sending
+   - `GMAIL_APP_PASSWORD` - Gmail app password (not regular password)
+   - `EMAIL_RECIPIENTS` - Comma-separated list of recipients
+
+📖 **See [COMPLETE_SETUP_GUIDE.md](COMPLETE_SETUP_GUIDE.md) for detailed instructions**
 
 ---
 
@@ -197,6 +220,8 @@ Built-in checks ensure data quality:
 
 ## 📖 Documentation
 
+- **[WEEKLY_AUTOMATION_GUARANTEE.md](WEEKLY_AUTOMATION_GUARANTEE.md)** - ⭐ How to ensure weekly reports
+- **[AUTOMATION_EXPLAINED.md](AUTOMATION_EXPLAINED.md)** - Complete logic and workflow
 - **[COMPLETE_SETUP_GUIDE.md](COMPLETE_SETUP_GUIDE.md)** - Full setup instructions
 - **[HOW_AUTOMATION_WORKS.md](HOW_AUTOMATION_WORKS.md)** - Technical details
 - **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)** - Project overview
@@ -205,14 +230,17 @@ Built-in checks ensure data quality:
 
 ## 🚨 Troubleshooting
 
+### "Didn't get email this Sunday":
+→ Manually trigger workflow: [Run workflow](https://github.com/ktsering2025/reddit-competitor-sentiment/actions/workflows/weekly-automation.yml) (takes 30 seconds)
+
 ### "0 posts" in report:
-→ Add Reddit API secrets to GitHub (see Setup above)
+→ Check Reddit API secrets in GitHub Settings → Secrets
 
 ### Email not received:
-→ Check [GitHub Actions logs](https://github.com/ktsering2025/reddit-competitor-sentiment/actions)
+→ Check [GitHub Actions logs](https://github.com/ktsering2025/reddit-competitor-sentiment/actions) for errors
 
 ### Wrong date range:
-→ System uses **previous complete week** (intentional for production)
+→ System uses **previous complete week** (Monday-Sunday) by design
 
 ---
 
@@ -221,12 +249,14 @@ Built-in checks ensure data quality:
 - ✅ **Production Ready**
 - ✅ Sentiment analysis: Dual-method with context awareness
 - ✅ Time frame: 7-day weekly (previous Monday-Sunday)
-- ✅ Schedule: Every Sunday 8:00 PM EST
-- ✅ Automation: GitHub Actions (no manual intervention)
-- ✅ Email: Professional report with top posts + PDF
+- ✅ Email: Professional report with top posts + PDF (5 recipients)
 - ✅ Website: Auto-updates with latest data
+- ✅ Manual trigger: 100% reliable (30 seconds)
+- ⚠️ Automatic cron: Use manual trigger or local cron for reliability
 
-**Next automatic run:** Sunday, November 17, 2025 at 8:00 PM EST 🚀
+**Current recipients:** brian.leung@hellofresh.com, assaf.ronen@hellofresh.com, kunsang.tsering@hellofresh.com, adam.kalikow@hellofresh.com, adam.park@factor75.com
+
+**Latest data:** Nov 3-9, 2025 (32 posts analyzed)
 
 ---
 
