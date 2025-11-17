@@ -1,11 +1,11 @@
 {
-  "scrape_timestamp": "2025-11-17T01:53:12.626526+00:00",
-  "processing_timestamp": "2025-11-17T01:53:12.626543+00:00",
+  "scrape_timestamp": "2025-11-17T03:55:07.059025+00:00",
+  "processing_timestamp": "2025-11-17T03:55:07.059041+00:00",
   "date_range": {
     "start": "2025-11-10T00:00:00+00:00",
     "end": "2025-11-16T23:59:59.999999+00:00"
   },
-  "total_posts": 34,
+  "total_posts": 32,
   "data_sources": {
     "HelloFresh": [
       "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -54,19 +54,19 @@
   },
   "filter_stats": {
     "HelloFresh": {
-      "pre": 63,
-      "post": 23,
+      "pre": 61,
+      "post": 21,
       "removed": 40
     },
     "Factor75": {
-      "pre": 187,
+      "pre": 181,
       "post": 4,
-      "removed": 183
+      "removed": 177
     },
     "Home Chef": {
-      "pre": 7,
+      "pre": 6,
       "post": 1,
-      "removed": 6
+      "removed": 5
     },
     "Blue Apron": {
       "pre": 7,
@@ -107,7 +107,7 @@
         "HelloFresh"
       ],
       "author": "A7O747D",
-      "upvote_ratio": 0.88,
+      "upvote_ratio": 1.0,
       "is_self": false,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -119,7 +119,7 @@
     {
       "title": "Bringing back free ready to eat meals?",
       "selftext": "When is hellofresh planning to bring back the free ready to eat meals for life they promised me? Did they say when they are considering bringing them back? Im not to happy about loosing the main reason I joined.",
-      "score": 3,
+      "score": 4,
       "num_comments": 4,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oymnqq/bringing_back_free_ready_to_eat_meals/",
@@ -128,7 +128,7 @@
         "HelloFresh"
       ],
       "author": "Busy-Examination1924",
-      "upvote_ratio": 0.8,
+      "upvote_ratio": 0.83,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -140,8 +140,8 @@
     {
       "title": "Good Gravy\u2014EIGHT cups of flour!",
       "selftext": "Good gravy! I thought some poor packer had finally lost it, but, no, the ingredient list actually says eight cups of flour. The directions say to \u201csprinkle\u201d the flour into the gravy. I\u2019m already feeling sorry for the poor soul who unwittingly dumps cups of flour into their gravy. Also got green beans instead of broccoli, which I\u2019m never happy about, but I understand there is a broccoli issue. So, thanks for the flour, I guess? Surely this must be another winning AI move. Don\u2019t be penny wise and pound foolish, Hello Fresh. Maybe leave the pics and recipes to the real-life employees. ",
-      "score": 83,
-      "num_comments": 29,
+      "score": 86,
+      "num_comments": 30,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oxzdgv/good_gravyeight_cups_of_flour/",
       "created_utc": 1763232112.0,
@@ -149,7 +149,7 @@
         "HelloFresh"
       ],
       "author": "depeched",
-      "upvote_ratio": 0.97,
+      "upvote_ratio": 0.98,
       "is_self": false,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -161,8 +161,8 @@
     {
       "title": "Meals are not filling- is it just me?",
       "selftext": "I am a pretty active person, but I\u2019m an average sized female (healthy for my height) and usually I meal prep rice and beef/chicken and stuff for myself for lunch for the work week, but I was going to try HelloFresh to see if I could change up some of the things I cook in the kitchen because I\u2019m starting to get bored. I\u2019ve noticed that the calories are very high for a lot of the meals even the low-calorie meals are pretty high in calorie for what you get out of it. I am usually able to make pretty satiating meals for like 400 cal by just having good sources of protein, fat and carbs. In addition, I feel like after I eat HelloFresh meals I\u2019m still hungry most of the time and I\u2019ve had the serving size recommended. Anyone else experience this?\n\nEdit: just wanted to add that I have been portion controlling my food for a very long time. When I meal prep I weigh everything out so it is to serving size or maybe 1.5 servings to adequately support my workouts and active lifestyle.",
-      "score": 13,
-      "num_comments": 25,
+      "score": 16,
+      "num_comments": 28,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oxxig6/meals_are_not_filling_is_it_just_me/",
       "created_utc": 1763227688.0,
@@ -170,7 +170,7 @@
         "HelloFresh"
       ],
       "author": "mel_lisa14",
-      "upvote_ratio": 0.7,
+      "upvote_ratio": 0.74,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -182,7 +182,7 @@
     {
       "title": "FYI - HelloFresh is 100% monitoring this subreddit",
       "selftext": "",
-      "score": 6,
+      "score": 7,
       "num_comments": 3,
       "subreddit": "mealkits",
       "url": "https://reddit.com/r/mealkits/comments/1oxuntn/fyi_hellofresh_is_100_monitoring_this_subreddit/",
@@ -212,7 +212,7 @@
         "HelloFresh"
       ],
       "author": "Triangle9393",
-      "upvote_ratio": 0.08,
+      "upvote_ratio": 0.14,
       "is_self": false,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -224,8 +224,8 @@
     {
       "title": "FYI - HelloFresh is 100% monitoring this subreddit",
       "selftext": "There is a slack channel and everything.  The swap back to the old recipe card format was definitely brought upon at least partly from comments here.  ",
-      "score": 308,
-      "num_comments": 94,
+      "score": 310,
+      "num_comments": 95,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1oxfao1/fyi_hellofresh_is_100_monitoring_this_subreddit/",
       "created_utc": 1763171674.0,
@@ -245,8 +245,8 @@
     {
       "title": "The best week of my LIFE",
       "selftext": "Hello Fresh sent me two boxes this week for some reason, which meant I got to eat this incredible meal TWICE. One of my favorites of all time, I could not be happier. \n\nMy other meals this week were the Tini's Crispy Chicken Cutlets & Rigatoni, and Herby Chicken & Caramelized Onion sandwiches. Great box to get double portions of.",
-      "score": 40,
-      "num_comments": 7,
+      "score": 39,
+      "num_comments": 8,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1ox69x4/the_best_week_of_my_life/",
       "created_utc": 1763149076.0,
@@ -254,7 +254,7 @@
         "HelloFresh"
       ],
       "author": "honchedbisc",
-      "upvote_ratio": 0.96,
+      "upvote_ratio": 0.95,
       "is_self": false,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -266,8 +266,8 @@
     {
       "title": "Cancelled over the AI images",
       "selftext": "I have been a fairly loyal Hello Fresh user for over two years now but I draw the line at AI images on recipe cards. It is lazy and just creepy and gross. I hate how AI food looks, perfect and wet and shiny. It looks nothing like real food to me, so why would I purchase food and recipes from a company that isn't even going to test their own recipes anymore, just throw out AI slop to the masses. I cancelled and wrote that as a reason for canceling and I hope anyone who feels the same lets them know. ",
-      "score": 405,
-      "num_comments": 134,
+      "score": 416,
+      "num_comments": 135,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1ox4cyv/cancelled_over_the_ai_images/",
       "created_utc": 1763144734.0,
@@ -287,7 +287,7 @@
     {
       "title": "Should a substituted vegetable be reported if not given notice that it was substituted?",
       "selftext": "I have the Tuscan Sirloin & Tomato-Basil Gremolata premium meal in my box this week and will cook it on Sunday. It's supposed to come with Broccoli but they sent Green Beans instead. Someone on another post said there's been a recall or shortage of broccoli lately and HF is substituting green beans instead. If they didn't send me notice that they've substituted something in a meal, should I report that I didn't get the right vegetable?",
-      "score": 1,
+      "score": 2,
       "num_comments": 17,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1ox4add/should_a_substituted_vegetable_be_reported_if_not/",
@@ -296,7 +296,7 @@
         "HelloFresh"
       ],
       "author": "cabinmate",
-      "upvote_ratio": 0.54,
+      "upvote_ratio": 0.58,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -338,7 +338,7 @@
         "HelloFresh"
       ],
       "author": "jman7843",
-      "upvote_ratio": 0.23,
+      "upvote_ratio": 0.21,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -350,7 +350,7 @@
     {
       "title": "Is HelloFresh using ai now??",
       "selftext": "A lot of the new recipes this week are ai generated and its really obvious. This might be my final straw for hello fresh. Does anyone have any good alternatives because I hate supporting companies who replace people with ai slop ",
-      "score": 417,
+      "score": 418,
       "num_comments": 135,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1owezqn/is_hellofresh_using_ai_now/",
@@ -380,7 +380,7 @@
         "HelloFresh"
       ],
       "author": "RiderBTV",
-      "upvote_ratio": 0.96,
+      "upvote_ratio": 1.0,
       "is_self": false,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -392,7 +392,7 @@
     {
       "title": "Green Beans",
       "selftext": "I think the green beans that HF supplies are terrible. There, I said it. I've steamed them, roasted them, pan fried them... They're always so chewy/stringy... something just isn't right. Does anyone have any tips and tricks to make them... semi-delicious? I love green beans, but man... HF get a new supplier for your beans! ",
-      "score": 28,
+      "score": 27,
       "num_comments": 19,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1ovpwkz/green_beans/",
@@ -401,7 +401,7 @@
         "HelloFresh"
       ],
       "author": "Amazing-Camera3445",
-      "upvote_ratio": 0.92,
+      "upvote_ratio": 0.9,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -434,7 +434,7 @@
     {
       "title": "One-Pan Chicken Enchiladas Verdes",
       "selftext": "Very tasty. I traded out chicken for their suggested pork and the beans and the tomatoes were an add-on not from HelloFresh, but the enchiladas were all HelloFresh and were very tasty.",
-      "score": 16,
+      "score": 15,
       "num_comments": 0,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1ovk7wl/onepan_chicken_enchiladas_verdes/",
@@ -455,7 +455,7 @@
     {
       "title": "What are tweaks you always make?",
       "selftext": "I started hello fresh to be more comfortable cooking my own food. Now that I'm more confident in the kitchen, there are some recipes where I go rogue and tweak a few steps.\n\nLike last night's sun dried tomato spaghetti, the recipe said to add the fresh tomatoes as a finishing step, but I cooked them down along with the sun dried and garlic. Another recipe said to add raw zucchini to a bake, but I seared them first so they had more flavor.\n\nWhat are some steps that you like to modify?",
-      "score": 13,
+      "score": 12,
       "num_comments": 58,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1ov97kb/what_are_tweaks_you_always_make/",
@@ -464,7 +464,7 @@
         "HelloFresh"
       ],
       "author": "TheRealCarmnSandiego",
-      "upvote_ratio": 0.93,
+      "upvote_ratio": 0.88,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -472,48 +472,6 @@
       "sentiment": "neutral",
       "confidence": 0.85,
       "reasoning": "VADER: 0.88, TextBlob: 0.19"
-    },
-    {
-      "title": "Hello Fresh sucks",
-      "selftext": "Was a longterm customer during the pandemic, canceled bc it wasn't worth the repetitive menus and cost after the pandemic ended. I got a promotion for a free caraway pan earlier this year and decided to sign back up because I really needed a new pan. Never received the code. After looking it up here I saw they later send an email after a few weeks (never received an email after 5 weeks). I eventually messaged them in app about this and they gave me a code. A week later I tried to use the code. It had expired. No one told me when it would expire or that I had to use it the day I messaged them. Terrible customer service, terrible menus and the produce half the time arrives already turning spoiled. I canceled my subscription and will never come back. ",
-      "score": 0,
-      "num_comments": 3,
-      "subreddit": "hellofresh",
-      "url": "https://reddit.com/r/hellofresh/comments/1ouhwgl/hello_fresh_sucks/",
-      "created_utc": 1762887103.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Flashy_Commission_93",
-      "upvote_ratio": 0.26,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
-      "primary_brand": "HelloFresh",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "VADER: -0.64, TextBlob: -0.10"
-    },
-    {
-      "title": "What do you recommend?",
-      "selftext": "So received my box and a packet of sauce exploded all over everything. Complete mess, leaking all over the herbs and potatoes covered in liquid. I threw out the potatoes. I\u2019m down a packet of sauce for my meal. I did the on-line help and they credited me a whole $3.49 for the meal. WWYD? I don\u2019t have my potatoes and the convenience of making a meal is now out the door so I will improvise. \nThis hasn\u2019t happened to me in awhile. Honestly, I\u2019ve been using Hello Fresh for 3 years and might have an issue twice a year, if that, so I get sometimes this happens. ",
-      "score": 3,
-      "num_comments": 38,
-      "subreddit": "hellofresh",
-      "url": "https://reddit.com/r/hellofresh/comments/1ou959w/what_do_you_recommend/",
-      "created_utc": 1762866899.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "annetoanne",
-      "upvote_ratio": 0.62,
-      "is_self": false,
-      "source_brand": "HelloFresh",
-      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
-      "primary_brand": "HelloFresh",
-      "sentiment": "neutral",
-      "confidence": 0.85,
-      "reasoning": "VADER: 0.87, TextBlob: 0.14"
     },
     {
       "title": "Vegan meal kit - purple carrot",
@@ -539,7 +497,7 @@
     {
       "title": "Anyone never get their recipe cards from Home Chef?",
       "selftext": "4th week in a row with food and no recipes. Only my first box included the recipe cards and binder, and one of the recipes was for something I didn\u2019t order. I keep calling and they refund me for 1/3 meals, but at this point it\u2019s just annoying. It\u2019s also unsanitary to use your phone while cooking unless you sanitize it first. I get these meal kits because I enjoy getting stoned, listening to a podcast and zoning out in the kitchen. I shouldn\u2019t need a smart device to cook their meals.\n\nI really cannot imagine paying the full price for this service. It was $120 for three meals (4 servings) WITH a 45% discount for new customers. Last week they substituted parsnips for cauliflower because of a \u201cshortage.\u201d The recipe was for cauliflower and potato soup lol. This week they substituted chicken for shrimp in my shrimp penne recipe.\n\nA few of the meals have been really insanely unhealthy too. Cream cheese in half the recipes and overly salty. The quality of the ingredients does seem to be good, though. I have tried homechef, everyplate and hello fresh so far. Think I will be canceling homefresh very shortly.",
-      "score": 4,
+      "score": 3,
       "num_comments": 10,
       "subreddit": "mealkits",
       "url": "https://reddit.com/r/mealkits/comments/1oudies/anyone_never_get_their_recipe_cards_from_home_chef/",
@@ -550,7 +508,7 @@
         "EveryPlate"
       ],
       "author": "Blue_Crabs_",
-      "upvote_ratio": 0.75,
+      "upvote_ratio": 0.67,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/r/mealkits/search/?q=hellofresh&type=posts&t=week&restrict_sr=1",
@@ -563,7 +521,7 @@
       "title": "Factor referral codes",
       "selftext": "Post your personal referral links here in this thread.\n\nReferral codes are not allowed to be posted in the main feed.\n\n**This thread is NOT for free box codes. We have a separate thread for free box codes.**\n\nWhat is the difference between a referral code and a free box code?\n\nA referral code is a link that looks like this: \\`[https://www.factor75.com/plans?c=\\[REDACTED\\]&discount\\_comm\\_id=\\[REDACTED\\]&plans\\_ab=true&utm\\_campaign=notification&utm\\_medium=clipboard&utm\\_source=freebies\\`](https://www.factor75.com/plans?c=[REDACTED]&discount_comm_id=[REDACTED]&plans_ab=true&utm_campaign=notification&utm_medium=clipboard&utm_source=freebies`)\n\nReferral links don't expire. If one person uses it, the next person who comes along can still use it. When you use a referral code, you get a discount on your first few orders, you do not get a free box. The person who posted the referral code gets a credit to their account based on the number of people who have placed orders using their code.\n\nA free box code is not a link. It is a random-looking code like \\`FCB-YCAPDJPHW\\` that is entered in the factor website. It can only be used once. If one person uses it, the next person who comes along and tries to use it will receive a message that the voucher has expired. When you use a free box code, you get one box for free.",
       "score": 3,
-      "num_comments": 3,
+      "num_comments": 4,
       "subreddit": "factor75",
       "url": "https://reddit.com/r/factor75/comments/1oyuj6d/factor_referral_codes/",
       "created_utc": 1763320939.0,
@@ -592,7 +550,7 @@
         "Factor75"
       ],
       "author": "sethaub",
-      "upvote_ratio": 0.7,
+      "upvote_ratio": 0.67,
       "is_self": true,
       "source_brand": "Factor75",
       "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
@@ -604,7 +562,7 @@
     {
       "title": "I subscribed to factor sfor Four years. Since 2021.",
       "selftext": "Just sharing my experiance. After a bit over four years I have ended my factor subscription. I am just bored with the choices after hundreds and hundreds of meals and taking a break.\n\nTwo people, normally ordered 6-8 boxes a week. Mostly keto, lower carb options. Only paused for vacations, or a few times to take a break.  Never once had a delivery with warm food. Had late deliveries maybe ten times over the four years. Never once felt sick in any way from the food. Sometimes the quantity per serving was bordering on huge, other times just acceptable imo.\n\nLove the salmon and shrimp meals. Chicken is fine, just repetitive. The fact the offer cauliflower mashed is huge for low carb.\n\nDealing with customer service was a mixed bag, would probably rate as a C+\n\nMy biggest complaint looking back is all the packaging waste. For years the foil inner package insulation layer was not the most recycleable. They seem to have it dialed in now. Other than that I have nothing bad to say. Life has changed and now have more time to cook.\n\nEnjoy your meals, we did.",
-      "score": 23,
+      "score": 24,
       "num_comments": 4,
       "subreddit": "factor75",
       "url": "https://reddit.com/r/factor75/comments/1otbpfw/i_subscribed_to_factor_sfor_four_years_since_2021/",
@@ -625,7 +583,7 @@
     {
       "title": "Any service that doesn't use fedex?",
       "selftext": "I'm cancelling factor because they rely on fedex to deliver my meals, and my apartment complex is *slightly* oddly shaped which means there's a 50/50 chance the lazy fedex driver just decides to skip attempting a delivery altogether (I have literally watched the truck pull into the parking lot, sit there doing nothing, and then leave).\n\nI see people recommending cookunity, and it looks good, but if they also use fedex it's a no-go for me. I'd rather pick through the meager offerings at my workplace break room than deal with fedex ever again.\n\nAlso I guess I should mention I live in Missouri, so my big local grocery chain is Hy-vee. I don't know if they do any single person prepared meals, I don't see much on their website besides meals that only cook in the oven.",
-      "score": 5,
+      "score": 6,
       "num_comments": 20,
       "subreddit": "ReadyMeals",
       "url": "https://reddit.com/r/ReadyMeals/comments/1oues1a/any_service_that_doesnt_use_fedex/",
@@ -634,7 +592,7 @@
         "Factor75"
       ],
       "author": "Kolby_Jack33",
-      "upvote_ratio": 0.86,
+      "upvote_ratio": 0.87,
       "is_self": true,
       "source_brand": "Factor75",
       "source_url": "https://www.reddit.com/r/ReadyMeals/search/?q=factor&type=posts&t=week&restrict_sr=1",
@@ -646,7 +604,7 @@
     {
       "title": "Sweet Potato and Poblano Soup",
       "selftext": "I\u2019ve been loving soup season at Blue Apron! This one was super easy and delicious, and I love the cheese quesadilla side. ",
-      "score": 13,
+      "score": 12,
       "num_comments": 6,
       "subreddit": "blueapron",
       "url": "https://reddit.com/r/blueapron/comments/1ovqzow/sweet_potato_and_poblano_soup/",
@@ -655,7 +613,7 @@
         "Blue Apron"
       ],
       "author": "PNWcouchpotato",
-      "upvote_ratio": 0.85,
+      "upvote_ratio": 0.84,
       "is_self": false,
       "source_brand": "Blue Apron",
       "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
@@ -667,7 +625,7 @@
     {
       "title": "Cumin Sichuan Beef & Noodles with Bok Choy",
       "selftext": "https://media.blueapron.com/recipes/28835/c_card_pdfs/1632927308-28-0017-3625/FPM_CuminSichuanBeefRamen__WEB.pdf\n\nI'm not sure I'll make this recipe again, but there are other similar BA recipes without the Sichuan Peppercorns that I'll look into. The Sichuan Peppercorns were very potent compared to what I remembered. My tongue and mouth were well-numbed.\n\nI used these recipes for the Soy Glaze and Sichuan Peppercorn Sauce: \n\n* https://www.reddit.com/r/blueapron/s/cuiDuvAAwV\n* https://www.bigoven.com/recipe/blue-apron-cumin-sichuan-peppercorn-sauce/2391717\n\nI also replaced ground beef with ground bison and sesame seeds with chopped roasted peanuts\n\n\n\n\n\n",
-      "score": 11,
+      "score": 10,
       "num_comments": 0,
       "subreddit": "blueapron",
       "url": "https://reddit.com/r/blueapron/comments/1ourxat/cumin_sichuan_beef_noodles_with_bok_choy/",
@@ -676,7 +634,7 @@
         "Blue Apron"
       ],
       "author": "ancient_snowboarder",
-      "upvote_ratio": 0.83,
+      "upvote_ratio": 0.82,
       "is_self": false,
       "source_brand": "Blue Apron",
       "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
@@ -731,7 +689,7 @@
     {
       "title": "Crispy Chicken & Italian Tomato Sauce with Potatoes & Collard Greens",
       "selftext": "https://media.blueapron.com/recipes/2718/c_card_pdfs/1515534491-1-0031-1238/2PRE07_ItalianChicken_WEB.pdf\n\nA few deviations because of what I had on hand vs what the recipe called for: \n\n* Boneless **skinless** chicken thighs\n* **Red** onion\n* **Russet** potatoes",
-      "score": 5,
+      "score": 3,
       "num_comments": 0,
       "subreddit": "blueapron",
       "url": "https://reddit.com/r/blueapron/comments/1otog3l/crispy_chicken_italian_tomato_sauce_with_potatoes/",
@@ -740,7 +698,7 @@
         "Blue Apron"
       ],
       "author": "ancient_snowboarder",
-      "upvote_ratio": 0.86,
+      "upvote_ratio": 0.72,
       "is_self": false,
       "source_brand": "Blue Apron",
       "source_url": "https://www.reddit.com/r/blueapron/search/?type=posts&t=week&restrict_sr=1",
@@ -794,7 +752,7 @@
     {
       "title": "Cheeseburger crunch wrap",
       "selftext": "I realize I could make these without EveryPlate but I choose them every time it\u2019s available. Yum!",
-      "score": 23,
+      "score": 22,
       "num_comments": 9,
       "subreddit": "everyplate",
       "url": "https://reddit.com/r/everyplate/comments/1ovnxkn/cheeseburger_crunch_wrap/",
@@ -814,7 +772,7 @@
     }
   ],
   "brand_counts": {
-    "HelloFresh": 23,
+    "HelloFresh": 21,
     "Factor75": 4,
     "Home Chef": 1,
     "Blue Apron": 4,
