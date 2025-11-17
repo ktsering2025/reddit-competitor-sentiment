@@ -1,11 +1,12 @@
 name: Weekly Reddit Sentiment Analysis
 
 on:
-  # AUTOMATIC SCHEDULE DISABLED - Use manual trigger only
-  # schedule:
-  #   - cron: '0 1 * * 1'  # Monday 1:00 AM UTC = Sunday 8:00 PM EST
+  schedule:
+    # Every Sunday at 8:00 PM EST = Monday 1:00 AM UTC
+    # Runs ONCE per week only
+    - cron: '0 1 * * 1'  # Monday 1:00 AM UTC = Sunday 8:00 PM EST (EST = UTC-5)
   
-  workflow_dispatch:  # Manual trigger only (prevents unwanted automatic runs)
+  workflow_dispatch:  # Also allow manual trigger for testing
 
 permissions:
   contents: write  # Allow pushing commits
