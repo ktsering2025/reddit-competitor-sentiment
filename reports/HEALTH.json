@@ -1,11 +1,11 @@
 {
   "status": "valid",
   "date_window_utc": {
-    "start": "2025-11-10",
-    "end": "2025-11-16"
+    "start": "2025-11-17",
+    "end": "2025-11-23"
   },
-  "commit": "010a339",
-  "generated_utc": "2025-11-17T03:55:12.261288+00:00",
+  "commit": "42e7653",
+  "generated_utc": "2025-11-24T01:24:15.348924+00:00",
   "brands": [
     "HelloFresh",
     "Factor75",
