@@ -220,11 +220,33 @@ Built-in checks ensure data quality:
 
 ## 📖 Documentation
 
+### For Users
 - **[WEEKLY_AUTOMATION_GUARANTEE.md](WEEKLY_AUTOMATION_GUARANTEE.md)** - ⭐ How to ensure weekly reports
 - **[AUTOMATION_EXPLAINED.md](AUTOMATION_EXPLAINED.md)** - Complete logic and workflow
+- **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)** - Project overview
+- **[AUTOMATION_STATUS.md](AUTOMATION_STATUS.md)** - Current status and health
+
+### For Setup & Technical
 - **[COMPLETE_SETUP_GUIDE.md](COMPLETE_SETUP_GUIDE.md)** - Full setup instructions
 - **[HOW_AUTOMATION_WORKS.md](HOW_AUTOMATION_WORKS.md)** - Technical details
-- **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)** - Project overview
+- **[TECHNICAL_DOCUMENTATION.md](TECHNICAL_DOCUMENTATION.md)** - Deep technical reference
+
+### For Project Handoff
+- **[START_HERE_HANDOFF.md](START_HERE_HANDOFF.md)** - 🔄 Quick handoff guide
+- **[MANAGER_QUICK_START.md](MANAGER_QUICK_START.md)** - For new project owner
+- **[HANDOFF_GUIDE.md](HANDOFF_GUIDE.md)** - Complete handoff process
+- **[HANDOFF_CHECKLIST.md](HANDOFF_CHECKLIST.md)** - Track handoff progress
+- **[EMAIL_TO_MANAGER.md](EMAIL_TO_MANAGER.md)** - Email templates
+
+### For Getting Help
+- **[HOW_TO_ASK_FOR_HELP.md](HOW_TO_ASK_FOR_HELP.md)** - 🆘 Asking ML/AI team
+- **[ASK_FOR_HELP_TEMPLATE.md](ASK_FOR_HELP_TEMPLATE.md)** - Detailed templates
+- **[SIMPLE_PROJECT_SUMMARY.md](SIMPLE_PROJECT_SUMMARY.md)** - One-page overview
+- **[ELEVATOR_PITCH.md](ELEVATOR_PITCH.md)** - Quick pitches
+
+### For Conversation History
+- **[CONVERSATION_HISTORY_GUIDE.md](CONVERSATION_HISTORY_GUIDE.md)** - 📝 How to save AI chat sessions
+- **[conversation_history/](conversation_history/)** - All saved conversation logs
 
 ---
 

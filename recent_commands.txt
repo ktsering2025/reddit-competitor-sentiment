@@ -1,0 +1,16 @@
+  253  brew install google-cloud-sdk
+  254  gcloud init
+  255  gemini
+  256  cd reddit-competitor-sentiment
+  257  cd reddit-competitor-sentiment
+  258  ls
+  259  cd Desktop
+  260  ls
+  261  cd reddit-competitor-sentiment-agent
+  262  cd reddit-competitor-sentiment
+  263  gemini
+  264  cursor-agent
+  265  cursor
+  266  cursor agent
+  267   ~/.zsh_history  
+  268  cursor-agent --resume=42e3350a-900f-4830-b07a-a4eeaacdf273
