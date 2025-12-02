@@ -8,14 +8,10 @@ Enhanced with embedded chart and top posts per Assaf's feedback
 import json
 import os
 import smtplib
-import tempfile
-import subprocess
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from email.mime.image import MIMEImage
 from email.mime.base import MIMEBase
 from email import encoders
-from datetime import datetime
 
 def calculate_engagement_score(post):
     """Calculate engagement score: score + 3×comments"""
@@ -225,103 +221,6 @@ def create_email_html(data, chart_cid):
     
     return html
 
-def send_via_mailto(recipient_email):
-    """Send enhanced HTML email using Mail.app via AppleScript"""
-    print(f"=== SENDING TO: {recipient_email} ===")
-    
-    # Load data
-    with open('reports/working_reddit_data.json', 'r') as f:
-        data = json.load(f)
-    
-    date_range = data.get('date_range', {})
-    start_date = date_range.get('start', '').split('T')[0]
-    end_date = date_range.get('end', '').split('T')[0]
-    
-    subject = f"Weekly Reddit Competitor Sentiment Report — {start_date} to {end_date}"
-    
-    # Create MIME message with HTML
-    msg = MIMEMultipart('related')
-    msg['Subject'] = subject
-    msg['To'] = recipient_email
-    
-    # Create HTML body with embedded chart
-    chart_cid = 'chart_image'
-    html_body = create_email_html(data, chart_cid)
-    
-    # Attach HTML
-    msg_alternative = MIMEMultipart('alternative')
-    msg.attach(msg_alternative)
-    msg_alternative.attach(MIMEText(html_body, 'html'))
-    
-    # Embed chart image
-    chart_path = 'reports/step1_chart.png'
-    if os.path.exists(chart_path):
-        with open(chart_path, 'rb') as f:
-            img = MIMEImage(f.read())
-            img.add_header('Content-ID', f'<{chart_cid}>')
-            img.add_header('Content-Disposition', 'inline', filename='chart.png')
-            msg.attach(img)
-    
-    # Save as .eml file and open with Mail.app
-    with tempfile.NamedTemporaryFile(mode='w', suffix='.eml', delete=False) as tmp:
-        tmp.write(msg.as_string())
-        eml_path = tmp.name
-    
-    # Use AppleScript to open and send the email
-    applescript = f'''
-    tell application "Mail"
-        set theMessage to open POSIX file "{eml_path}"
-        send theMessage
-    end tell
-    '''
-    
-    try:
-        subprocess.run(['osascript', '-e', applescript], check=True)
-        os.unlink(eml_path)
-        print(f"[SUCCESS] Email sent to {recipient_email}")
-        return True
-    except Exception as e:
-        print(f"[ERROR] Failed to send email: {e}")
-        if os.path.exists(eml_path):
-            os.unlink(eml_path)
-        return False
-
-def send_via_web_service(recipient_email):
-    """Send email via Mail.app"""
-    print(f"=== SENDING EMAIL TO: {recipient_email} ===")
-    return send_via_mailto(recipient_email)
-
-def main():
-    """Main function"""
-    import sys
-    
-    # Use command line args or environment variable for recipients
-    recipients = []
-    if len(sys.argv) > 1:
-        recipients = sys.argv[1:]
-    else:
-        # Default recipients per Brian's spec
-        recipients_env = os.getenv('EMAIL_RECIPIENTS', '')
-        if recipients_env:
-            recipients = [r.strip() for r in recipients_env.split(',')]
-        else:
-            recipients = ['brian.leung@hellofresh.com', 'assaf.ronen@hellofresh.com', 'kunsang.tsering@hellofresh.com']
-    
-    print("=== REDDIT SENTIMENT EMAIL SENDER ===")
-    print(f"Recipients: {', '.join(recipients)}")
-    print()
-    
-    # Send to each recipient
-    for recipient in recipients:
-        success = send_via_web_service(recipient)
-        
-        if success:
-            print(f"\n[SUCCESS] EMAIL SENT to {recipient}")
-        else:
-            print(f"\n[ERROR] Email failed for {recipient}")
-
-if __name__ == "__main__":
-    main()
 def send_email_smtp(recipients):
     """Send email via Gmail SMTP (works on Linux/GitHub Actions)"""
     
@@ -411,7 +310,7 @@ def main():
         if recipients_env:
             recipients = [r.strip() for r in recipients_env.split(',')]
         else:
-            recipients = ['brian.leung@hellofresh.com', 'assaf.ronen@hellofresh.com', 'kunsang.tsering@hellofresh.com']
+            recipients = ['brian.leung@hellofresh.com', 'assaf.ronen@hellofresh.com', 'kunsang.tsering@hellofresh.com', 'adam.kalikow@hellofresh.com', 'adam.park@factor75.com']
     
     print("=== REDDIT SENTIMENT EMAIL SENDER (SMTP) ===")
     print(f"Recipients: {', '.join(recipients)}")
