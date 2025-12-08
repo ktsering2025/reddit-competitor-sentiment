@@ -1,6 +1,6 @@
 {
-  "scrape_timestamp": "2025-12-08T00:36:03.295921+00:00",
-  "processing_timestamp": "2025-12-08T00:36:03.295939+00:00",
+  "scrape_timestamp": "2025-12-08T02:50:54.562727+00:00",
+  "processing_timestamp": "2025-12-08T02:50:54.562743+00:00",
   "date_range": {
     "start": "2025-12-01T00:00:00+00:00",
     "end": "2025-12-07T23:59:59.999999+00:00"
@@ -54,14 +54,14 @@
   },
   "filter_stats": {
     "HelloFresh": {
-      "pre": 69,
+      "pre": 67,
       "post": 20,
-      "removed": 49
+      "removed": 47
     },
     "Factor75": {
-      "pre": 212,
+      "pre": 204,
       "post": 8,
-      "removed": 204
+      "removed": 196
     },
     "Home Chef": {
       "pre": 5,
@@ -98,7 +98,7 @@
     {
       "title": "(Premium) Pistachio-Crusted Lamb Chops & Creamy Polenta",
       "selftext": "I had $20 off Premium meals because of HF Rewards and chose this, so I think it was just $10 over the cost of a regular meal. I thought this was pretty good but it was messy to make and eat, particularly with the Polenta. I haven\u2019t eaten meat with bone in awhile given HF\u2019s boneless meats and at this point, I don\u2019t particularly love eating meat off the bone (unless it\u2019s BBQ ribs). Plus it seemed like the Polenta and the lamb breading somewhat overwhelmed the taste of the lamb. I believe the meal took me about 90 minutes to make. I don\u2019t think I\u2019ll repeat this particular meal though there\u2019s a different lamb meal I\u2019ve chosen in a few weeks that looks to be less messy so I\u2019ll see how it goes\n\nPic of my meal:\n\nhttps://preview.redd.it/vxhd1hng9v5g1.png?width=1546&format=png&auto=webp&s=c05c7179cf5abd9b075e8281eeb997e851ec2d67",
-      "score": 4,
+      "score": 6,
       "num_comments": 4,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1pgwz57/premium_pistachiocrusted_lamb_chops_creamy_polenta/",
@@ -120,7 +120,7 @@
       "title": "Is this really what it\u2019s like?",
       "selftext": "Just got my first box and honestly I think it\u2019s written by AI. Nobody honestly believes that raw potatoes in 425 F and going to be \u201ctender\u201d in 3-5 minutes. That temp also burned my chicken. Then the next recipe said to put my raw potato wedges in at 450 F for 20 minutes. Never in my life have I cooked anything on 450. Put it on 400F for 22 minutes and they were perfect. They also gave me potatoes with huge bad spots on them and completely forgot my sausage for another meal. \n\nIs this what hello fresh is gonna be like with every box?? ",
       "score": 0,
-      "num_comments": 30,
+      "num_comments": 32,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1pguiql/is_this_really_what_its_like/",
       "created_utc": 1765143830.0,
@@ -140,7 +140,7 @@
     {
       "title": "Cancelled plan",
       "selftext": "So I recently had an order shipped to me even though my card was declined. And the bank associated with said card charged me $7 in fees because HF tried to charge the card 14 times. This is a prepaid card. I couldn't afford the order this week, so I didn't update the payment and cancelled my plan. Well, they shipped out the order anyway for some reason and now are hassling me for the past due. Why would they ship the order if the card was declined?!",
-      "score": 8,
+      "score": 7,
       "num_comments": 2,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1pg84i1/cancelled_plan/",
@@ -149,7 +149,7 @@
         "HelloFresh"
       ],
       "author": "Impressive_Cut5390",
-      "upvote_ratio": 0.7,
+      "upvote_ratio": 0.67,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -203,7 +203,7 @@
     {
       "title": "Hello Fresh substituted jalapenos for long green peppers",
       "selftext": "And now my hands are on fire! They didn't look like long green peppers (skinnier than they should have been) but weren't as dark as jalapenos so I assumed they were some other variety of long green pepper. Now my right hand is absolutely ON FIRE and I couldn't even eat the dish because it was so spicy. This was the One-Pan Beef Enchiladas Verdes meal. If I had known they were jalapenos, I would have substituted a bell pepper of my own and I sure as hell wouldn't have cut them without wearing gloves. :(",
-      "score": 19,
+      "score": 17,
       "num_comments": 15,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1pfb3uu/hello_fresh_substituted_jalapenos_for_long_green/",
@@ -212,7 +212,7 @@
         "HelloFresh"
       ],
       "author": "CarolinaCamper",
-      "upvote_ratio": 0.83,
+      "upvote_ratio": 0.8,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -224,7 +224,7 @@
     {
       "title": "\u201cHalf the garlic (all for 4 servings)\u201d",
       "selftext": "LOL no. Screw that. With the puny amount of garlic HF gives us, I\u2019ll be using ALL of it.",
-      "score": 29,
+      "score": 31,
       "num_comments": 23,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1pf3pfv/half_the_garlic_all_for_4_servings/",
@@ -233,7 +233,7 @@
         "HelloFresh"
       ],
       "author": "DanielaThePialinist",
-      "upvote_ratio": 0.88,
+      "upvote_ratio": 0.92,
       "is_self": false,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -245,7 +245,7 @@
     {
       "title": "Homemade Chicken Noodle Soup\u2026Too much work for not a big payoff. Review Below \u2b07\ufe0f",
       "selftext": "I love HF soups and added this one to my cart without checking it out so I was surprised when I found out I had to make the noodles, a big D\u2019Oh moment! \n\nSo as you can see my noodles were a bit too thick and big. The rest of the soup tasted great though but I wouldn\u2019t get this again as it wasn\u2019t worth the effort. I thought I had some Parker house rolls but had this cornbread instead. I highly recommend getting the HF cornbreads, they\u2019re soo good! \n\nMy fav chicken soup from HF has been the Dilly Chicken & Pearl Pasta soup, I hope to see that one again. If it comes back, definitely give that one a try! ",
-      "score": 35,
+      "score": 36,
       "num_comments": 31,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1pe8yzx/homemade_chicken_noodle_souptoo_much_work_for_not/",
@@ -254,7 +254,7 @@
         "HelloFresh"
       ],
       "author": "aGirlySloth",
-      "upvote_ratio": 0.91,
+      "upvote_ratio": 0.93,
       "is_self": false,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -275,7 +275,7 @@
         "HelloFresh"
       ],
       "author": "yesletslift",
-      "upvote_ratio": 0.95,
+      "upvote_ratio": 0.93,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -329,7 +329,7 @@
     {
       "title": "Katie, ignore the AI photo drama for a second. We need to discuss the real scandal: The Micro-Garlic",
       "selftext": "Everyone is losing their minds analyzing pixels on recipe cards to see if a robot drew a bell pepper. It\u2019s madness. It\u2019s a waste of energy. Let\u2019s ask Katie about stuff that matters. The life-changing stuff.\n\nKatie, welcome to the sub. I have a very serious question for you: What is your personal stance on the HelloFresh garlic cloves?\n\nI\u2019m talking about the ones that are the size of a singular Tic Tac. The ones that look like they were grown in a bonsai garden for hamsters. Where does HelloFresh even find garlic this small? Is there a special farm where they stop the growing process at \"embryonic\"?\n\nWhen you cook a Hello Fresh meal at home, do you actually try to peel the micro-cloves? Or do you, like the rest of us, look at the \"1 Clove\" instruction, laugh, and grab a full-sized head of garlic from your own pantry because you actually appreciate flavor?\n\nWe need answers.",
-      "score": 334,
+      "score": 333,
       "num_comments": 76,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1pdhqan/katie_ignore_the_ai_photo_drama_for_a_second_we/",
@@ -372,7 +372,7 @@
     {
       "title": "\"HelloFresh is transforming from a food company that does tech into a tech company that does food\" - Your one and only CEO of HelloFresh",
       "selftext": "Apologies for yet another post on the subject. I just felt this was warranted. Look, I love the Hello Fresh subscription I have and I'm only invested in the wellbeing of that service for personal reasons, so I see AI-based enshittification as a bit of a threat to that. \n\nThe CEO proudly states this quote in speaking with a journalist at Forbes [here](https://www.forbes.com/sites/stephenwunker/2025/11/06/hellofreshs-recipe-revolution-why-ai-personalization-meant-redesign/)\n\nIn the article they state they were able to take a three month pipeline and reduce it down to three hours. It's a pretty bold claim, coming from the stakeholder who decided to [invest $70 million into their AI](https://www.bloomberg.com/news/articles/2025-08-04/exclusive-hellofresh-invests-70-million-to-have-ai-help-plan-dinner), you need to take such statements with a grain of salt. They essentially automated the asset pipeline behind recipes. As many have observed, recipe steps get AI photos, recipes are passed through LLMs for normalization and so on.\n\n> Initially, AI created drafts while human editors drove the process. As confidence grew, humans shifted to review mode. As Ronen puts it, they rode \"shotgun in the car\" rather than behind the wheel. Only after the system consistently matched or exceeded human output did HelloFresh fully deploy it.\n\nBut the Forbes article reveals a deeper issue: *the fact the CEO wants to be more of a tech company than a food company.* \n\nYou don't say stuff like this. Like this is just outright stupid PR and now my trust in the company has tanked knowing the captain of the ship probably has photos of Sam Altman and Mark Zuckerberg behind his desk on the wall instead of Jacques P\u00e9pin or Alton Brown. \n\nI can't help but be reminded of the recent video circulating of the [tech CEO rapping to a roomful of his subordinates](https://www.reddit.com/r/bayarea/s/N34U6rc28a), many of whom gleefully smile on. \n\nYou are not a tech company, Hello Fresh. You are not a flimsy algorithm or asset production pipeline. Those things are all in service to your primary purpose: **recipe curation and automated grocery shopping.**\n\nInvest your humans in that. Humans need to be driving the car, not riding shotgun. They need to be involved in the tedious steps of translating recipes to cards because that is where you need to build expertise and artistry. Yes, you should continue to pay food photographers and yes it should take months because that's the constraints of craftsmanship. It should cost time and money, because it should be thoroughly vetted. AI can definitely be involved, only as a service to the artists who get more time to craft better quality output. \n\nOr you can ignore this warning - and watch as customers suddenly see every fault, every mistake, every time they get annoyed by a step in a recipe, begin to question if this is because of AI, and begin to wonder what value they're getting out of the service. \n\nWhen the groceries aren't even that good and the recipes aren't even being curated anymore, and customers start leaving in swathes, at least you'll be able to say now \"we are a tech company\" and maybe you can pivot into something stupid like \"tinder for recipes.\"",
-      "score": 153,
+      "score": 154,
       "num_comments": 80,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1pd3bjs/hellofresh_is_transforming_from_a_food_company/",
@@ -393,7 +393,7 @@
     {
       "title": "How to cancel on a web browser",
       "selftext": "Decided to cancel after reading the Forbes article. It took seconds. Go to account settings, then plan settings there is an option to skip or cancel. \n\n\"HelloFresh is transforming from a food company that does tech into a tech company that does food,\" Ronen told me. \"\n\nhttps://www.forbes.com/sites/stephenwunker/2025/11/06/hellofreshs-recipe-revolution-why-ai-personalization-meant-redesign/",
-      "score": 245,
+      "score": 246,
       "num_comments": 36,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1pd2ihm/how_to_cancel_on_a_web_browser/",
@@ -435,7 +435,7 @@
     {
       "title": "Just learned HF invested $70 million in AI",
       "selftext": "This is all making sense now. Devastated because I love Hello Fresh, have ordered weekly meals for 3+ years. ",
-      "score": 216,
+      "score": 213,
       "num_comments": 117,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1pcv55w/just_learned_hf_invested_70_million_in_ai/",
@@ -477,7 +477,7 @@
     {
       "title": "Blog from HF Head of Culinary",
       "selftext": "https://hellofreshdinnerclub.substack.com/p/we-cook-in-color-not-code\n\nNo one is saying there aren\u2019t chefs in the kitchen.  People are saying that the photos are AI generated and so are the recipe steps on the card.\n\nThe editorial team was laid off, so how are you proofreading the recipes to ensure a customer doesn\u2019t get 4 cups of flour when they really need 4 tablespoons?\n\n",
-      "score": 118,
+      "score": 119,
       "num_comments": 42,
       "subreddit": "hellofresh",
       "url": "https://reddit.com/r/hellofresh/comments/1pcfp09/blog_from_hf_head_of_culinary/",
@@ -489,7 +489,7 @@
       "upvote_ratio": 0.98,
       "is_self": true,
       "source_brand": "HelloFresh",
-      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+      "source_url": "https://www.reddit.com/r/hellofresh/search/?type=posts&t=week&restrict_sr=1",
       "primary_brand": "HelloFresh",
       "sentiment": "positive",
       "confidence": 0.9,
@@ -510,7 +510,7 @@
       "upvote_ratio": 0.79,
       "is_self": true,
       "source_brand": "HelloFresh",
-      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+      "source_url": "https://www.reddit.com/r/hellofresh/search/?type=posts&t=week&restrict_sr=1",
       "primary_brand": "HelloFresh",
       "sentiment": "positive",
       "confidence": 0.9,
@@ -562,7 +562,7 @@
       "title": "Meals left outside office building in downtown metro area at 1:40am.",
       "selftext": "First week trying Factor meal delivery service, and they dump the box with 10 meals at 1:40am outside my office building in a downtown metro area filled with transients. Someone stole them and had a free feast. Thankfully, I received a full refund and cancelled my subscription permanently. Such a disappointing experience. If anyone has had a great experience with other meal delivery services please let me know. ",
       "score": 11,
-      "num_comments": 33,
+      "num_comments": 35,
       "subreddit": "factor75",
       "url": "https://reddit.com/r/factor75/comments/1pcuqrb/meals_left_outside_office_building_in_downtown/",
       "created_utc": 1764736288.0,
@@ -570,7 +570,7 @@
         "Factor75"
       ],
       "author": "TiddyStardust",
-      "upvote_ratio": 0.92,
+      "upvote_ratio": 0.87,
       "is_self": false,
       "source_brand": "Factor75",
       "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
@@ -591,7 +591,7 @@
         "Factor75"
       ],
       "author": "Interesting_Ad_9127",
-      "upvote_ratio": 0.77,
+      "upvote_ratio": 0.75,
       "is_self": false,
       "source_brand": "Factor75",
       "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
@@ -603,7 +603,7 @@
     {
       "title": "Kitchen table meals from walmart.",
       "selftext": "Has anyone else tried the kitchen table meals from Walmart? I had the southwest chicken meal yesterday. Today I'm about to eat the salmon and potatoes. I was joking with friends the Walmart now sales bootleg factor meals!",
-      "score": 19,
+      "score": 21,
       "num_comments": 13,
       "subreddit": "ReadyMeals",
       "url": "https://reddit.com/r/ReadyMeals/comments/1pgnf4y/kitchen_table_meals_from_walmart/",
@@ -612,7 +612,7 @@
         "Factor75"
       ],
       "author": "116unashamedR",
-      "upvote_ratio": 0.95,
+      "upvote_ratio": 0.96,
       "is_self": false,
       "source_brand": "Factor75",
       "source_url": "https://www.reddit.com/search/?q=factor+meals&type=posts&t=week",
@@ -625,7 +625,7 @@
       "title": "Recommendations on prepared meal services",
       "selftext": "Basically what the title says. I'm looking for recommendations on a good prepared meal service. (Something like CookUnity, Mighty Meals, Factor 75, etc.)\n\nI currently live on a diet of frozen pizza and canned pasta and I'm looking to change that. \n\nA couple of things:\n\nA. I need good portion sizes. Seriously, I can't with how a lot of companies skimp on portion sizes and I get extremely hungry. (As an example, I tried Hungry Root and those meals didn't fill me up at all.)\n\nB. I'm in the Central Kentucky area. (I've heard your location can determine the quality of certain services, so I wanted to put that out there.)\n\nI've got no special allergies or diet restrictions, thankfully. \n\nAgain, I'm looking for *recommendations*. There's plenty of posts I can find if I want to look up complaints, I'm trying to see what people actually like.",
       "score": 9,
-      "num_comments": 8,
+      "num_comments": 9,
       "subreddit": "ReadyMeals",
       "url": "https://reddit.com/r/ReadyMeals/comments/1pdy2we/recommendations_on_prepared_meal_services/",
       "created_utc": 1764849167.0,
@@ -646,7 +646,7 @@
     {
       "title": "Factor can f**k all the way off.",
       "selftext": "Ordered one of their \u201cfree\u201d boxes with a second box at a discount via my roommates promo cards. On my first one, I only got the microwaveable ones. I had 2 salads and some smoothie/matcha thing in there for their \u201c6\u201d items. So I got 3 items, when it was supposed to be 6. \n\nI also had  to call them 3 times because they charged me 95 bucks for the promo. And I have to call them again. And then again. By this time, they did refund everything except shipping costs for half of my order.\n\nI call them again today because I have another charge on my card and tell them just to F off and cancel it, because having 3 different people telling me different things isn\u2019t \u201cconvenient\u201d like they LOVE to promote - which is why I wanted it. Cool, all is good\u2026 you would think.\n\nThen I cook this box of BULLSHIT and realize I have a piece of fucking plastic in my teeth and\u2026 wow. It\u2019s not possible for this to happen during shipping, due to how much insulation is in the box. I\u2019m also going to add that my roommate left town for a week and half and had 3 boxes delivered in this time, even though he tried to change the date more than once. \n\nF this company. F factor. Fucking. Scam. Stay away. ",
-      "score": 274,
+      "score": 275,
       "num_comments": 76,
       "subreddit": "ReadyMeals",
       "url": "https://reddit.com/r/ReadyMeals/comments/1pemt1a/factor_can_fk_all_the_way_off/",
@@ -688,7 +688,7 @@
     {
       "title": "Grossest box yet",
       "selftext": "Apologies, I just need to rant because this past week was the most egregiously bad mealkit I received from blue apron.\n\n\nScheduled to arrive Tuesday before thanksgiving, it arrived saturday. Only when we started opening the bags were we hit with the worst moldy vegetable stink. I can\u2019t even begin to describe it, like imagine someone soaked dill in hot pee for days on end and soaked the box. My garbage and my refrigerator still smell like this horrible stink and nothing has worked so far. Best BA customer service could do is give me a $10 CREDIT because the box was in their words \u201ca day late\u201d (5 days late but ok) \n\n\nI\u2019ve been a big defender of BA for years, consistent subscriber since 2015, kept with it despite the rapidly declining quality in ingredients/recipe variety/customer service, never complained about my default meal selections always including meat stuffs like hamburgers (consistently veg diet in my BA history btw), and I\u2019m done. I\u2019ve looked at other mealkit options and honestly until someone can vouch for the produce quality I\u2019m just gonna go back to meal planning on weekends and hitting up the grocery store. If others are still having a good BA experience, great! This has been the worst week yet, my kitchen is still recovering, and I can never eat dill again. ",
-      "score": 9,
+      "score": 10,
       "num_comments": 16,
       "subreddit": "blueapron",
       "url": "https://reddit.com/r/blueapron/comments/1pe74tz/grossest_box_yet/",
@@ -697,7 +697,7 @@
         "Blue Apron"
       ],
       "author": "DeerWeekly6756",
-      "upvote_ratio": 0.76,
+      "upvote_ratio": 0.78,
       "is_self": true,
       "source_brand": "Blue Apron",
       "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
