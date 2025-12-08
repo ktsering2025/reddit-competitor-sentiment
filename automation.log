@@ -8835,3 +8835,105 @@ Data sources echoed from config.py:
 2025-12-08 17:34:48,714 - INFO - [SUCCESS] Homepage updated with current actionable data
 2025-12-08 17:34:48,714 - INFO - 
 [STEP 8] Git commit and push...
+2025-12-08 17:34:48,826 - INFO - [SUCCESS] Updated index.html with BUILD_TOKEN: 20251208173444
+2025-12-08 17:34:49,697 - INFO - [SUCCESS] GitHub Pages updated successfully
+2025-12-08 17:34:49,699 - INFO - [SUCCESS] HEALTH.json created for site freshness check
+2025-12-08 17:34:49,699 - INFO - 
+[EMAIL] SKIPPED
+2025-12-08 17:34:49,699 - INFO - 
+==================================================
+2025-12-08 17:34:49,699 - INFO - WHAT I DID
+2025-12-08 17:34:49,699 - INFO - ==================================================
+2025-12-08 17:34:49,700 - INFO - [OK] Links Updated (Brian's data sources):
+2025-12-08 17:34:49,700 - INFO -   HelloFresh → 4 sources
+2025-12-08 17:34:49,700 - INFO -     1: https://www.reddit.com/search/?q=hellofresh&type=posts&t=week
+2025-12-08 17:34:49,700 - INFO -     2: https://www.reddit.com/search/?q=hello+fresh&type=posts&t=week
+2025-12-08 17:34:49,700 - INFO -     3: https://www.reddit.com/r/hellofresh/search/?q=&type=posts&t=week&restrict_sr=1
+2025-12-08 17:34:49,700 - INFO -     4: https://www.reddit.com/r/mealkits/search/?q=hellofresh&type=posts&t=week&restrict_sr=1
+2025-12-08 17:34:49,700 - INFO -   Factor75 → 5 sources
+2025-12-08 17:34:49,700 - INFO -     1: https://www.reddit.com/search/?q=factor75&type=posts&t=week
+2025-12-08 17:34:49,700 - INFO -     2: https://www.reddit.com/search/?q=factor+75&type=posts&t=week
+2025-12-08 17:34:49,700 - INFO -     3: https://www.reddit.com/search/?q=factor+meals&type=posts&t=week
+2025-12-08 17:34:49,700 - INFO -     4: https://www.reddit.com/r/ReadyMeals/search/?q=factor&type=posts&t=week&restrict_sr=1
+2025-12-08 17:34:49,700 - INFO -     5: https://www.reddit.com/r/mealkits/search/?q=factor&type=posts&t=week&restrict_sr=1
+2025-12-08 17:34:49,700 - INFO -   Home Chef → 2 sources
+2025-12-08 17:34:49,700 - INFO -     1: https://www.reddit.com/search/?q=home+chef&type=posts&t=week
+2025-12-08 17:34:49,700 - INFO -     2: https://www.reddit.com/r/mealkits/search/?q=home+chef&type=posts&t=week&restrict_sr=1
+2025-12-08 17:34:49,700 - INFO -   Blue Apron → 3 sources
+2025-12-08 17:34:49,700 - INFO -     1: https://www.reddit.com/search/?q=blue+apron&type=posts&t=week
+2025-12-08 17:34:49,700 - INFO -     2: https://www.reddit.com/r/blueapron/search/?q=&type=posts&t=week&restrict_sr=1
+2025-12-08 17:34:49,700 - INFO -     3: https://www.reddit.com/r/mealkits/search/?q=blue+apron&type=posts&t=week&restrict_sr=1
+2025-12-08 17:34:49,700 - INFO -   Marley Spoon → 2 sources
+2025-12-08 17:34:49,700 - INFO -     1: https://www.reddit.com/search/?q=marley+spoon&type=posts&t=week
+2025-12-08 17:34:49,700 - INFO -     2: https://www.reddit.com/r/mealkits/search/?q=marley+spoon&type=posts&t=week&restrict_sr=1
+2025-12-08 17:34:49,700 - INFO -   Hungryroot → 3 sources
+2025-12-08 17:34:49,700 - INFO -     1: https://www.reddit.com/search/?q=hungryroot&type=posts&t=week
+2025-12-08 17:34:49,700 - INFO -     2: https://www.reddit.com/r/hungryroot/search/?q=&type=posts&t=week&restrict_sr=1
+2025-12-08 17:34:49,700 - INFO -     3: https://www.reddit.com/r/mealkits/search/?q=hungryroot&type=posts&t=week&restrict_sr=1
+2025-12-08 17:34:49,700 - INFO -   EveryPlate → 5 sources
+2025-12-08 17:34:49,700 - INFO -     1: https://www.reddit.com/search/?q=everyplate&type=posts&t=week
+2025-12-08 17:34:49,700 - INFO -     2: https://www.reddit.com/search/?q=every+plate&type=posts&t=week
+2025-12-08 17:34:49,700 - INFO -     3: https://www.reddit.com/search/?q=Every+Plate+food&type=all&t=week
+2025-12-08 17:34:49,700 - INFO -     4: https://www.reddit.com/search/?q=Every+Plate+Food+Brand&type=all&t=week
+2025-12-08 17:34:49,700 - INFO -     5: https://www.reddit.com/r/mealkits/search/?q=everyplate&type=posts&t=week&restrict_sr=1
+2025-12-08 17:34:49,700 - INFO -   Green Chef → 4 sources
+2025-12-08 17:34:49,700 - INFO -     1: https://www.reddit.com/search/?q=green+chef&type=posts&t=week
+2025-12-08 17:34:49,700 - INFO -     2: https://www.reddit.com/search/?q=greenchef&type=posts&t=week
+2025-12-08 17:34:49,700 - INFO -     3: https://www.reddit.com/search/?q=Green+Chef+mealkit+brand&type=all&t=week
+2025-12-08 17:34:49,700 - INFO -     4: https://www.reddit.com/r/mealkits/search/?q=green+chef&type=posts&t=week&restrict_sr=1
+2025-12-08 17:34:49,700 - INFO - 
+[OK] Files Kept (canonical only):
+2025-12-08 17:34:49,700 - INFO -   [OK] accurate_scraper.py
+2025-12-08 17:34:49,700 - INFO -   [OK] step1_chart.py
+2025-12-08 17:34:49,701 - INFO -   [OK] step2_ACTIONABLE_analysis.py
+2025-12-08 17:34:49,701 - INFO -   [OK] complete_automation.py
+2025-12-08 17:34:49,701 - INFO -   [OK] config.py
+2025-12-08 17:34:49,701 - INFO -   [OK] README.md
+2025-12-08 17:34:49,701 - INFO -   [OK] index.html
+2025-12-08 17:34:49,701 - INFO -   [OK] requirements.txt
+2025-12-08 17:34:49,701 - INFO -   [OK] .nojekyll
+2025-12-08 17:34:49,701 - INFO -   [OK] .gitignore
+2025-12-08 17:34:49,701 - INFO - 
+[OK] Artifacts Generated:
+2025-12-08 17:34:49,701 - INFO -   [OK] reports/step1_chart.png
+2025-12-08 17:34:49,701 - INFO -   [OK] reports/step2_ACTIONABLE_analysis_LATEST.html
+2025-12-08 17:34:49,701 - INFO -   [OK] reports/working_reddit_data.json
+2025-12-08 17:34:49,701 - INFO - 
+==================================================
+2025-12-08 17:34:49,701 - INFO - RUN SUMMARY
+2025-12-08 17:34:49,701 - INFO - -----------
+2025-12-08 17:34:49,701 - INFO - Date window (UTC): 2025-12-01 to 2025-12-07
+2025-12-08 17:34:49,701 - INFO - HelloFresh  : 6/6/5 = 17
+2025-12-08 17:34:49,701 - INFO - Factor75    : 0/6/2 = 8
+2025-12-08 17:34:49,701 - INFO - Home Chef   : 0/0/0 = 0
+2025-12-08 17:34:49,701 - INFO - Blue Apron  : 0/1/0 = 1
+2025-12-08 17:34:49,701 - INFO - Marley Spoon: 0/0/0 = 0
+2025-12-08 17:34:49,701 - INFO - Hungryroot  : 0/3/0 = 3
+2025-12-08 17:34:49,701 - INFO - EveryPlate  : 0/0/1 = 1
+2025-12-08 17:34:49,701 - INFO - Green Chef  : 0/0/0 = 0
+2025-12-08 17:34:49,701 - INFO - Validation: PASSED
+2025-12-08 17:34:49,701 - INFO - Artifacts:
+2025-12-08 17:34:49,701 - INFO - - Chart: reports/step1_chart.png
+2025-12-08 17:34:49,701 - INFO - - Deep dive: reports/step2_ACTIONABLE_analysis_LATEST.html
+2025-12-08 17:34:49,701 - INFO - - Archive: reports/archive/2025-12-08/
+2025-12-08 17:34:49,701 - INFO - - Raw: reports/raw/{raw_,filtered_,metadata_}2025-12-08.json
+2025-12-08 17:34:49,701 - INFO - GitHub Pages: updated
+2025-12-08 17:34:49,703 - INFO - Commit: dfa413c
+2025-12-08 17:34:49,703 - INFO - Email: SKIPPED
+2025-12-08 17:34:49,703 - INFO - 
+==================================================
+2025-12-08 17:34:49,703 - INFO - QUICK SELF-CHECK
+2025-12-08 17:34:49,703 - INFO - ==================================================
+2025-12-08 17:34:49,703 - INFO - ABS PATH used: /home/runner/work/reddit-competitor-sentiment/reddit-competitor-sentiment
+2025-12-08 17:34:49,703 - INFO - 
+Data sources echoed from config.py:
+2025-12-08 17:34:49,703 - INFO -   HelloFresh → 4 sources
+2025-12-08 17:34:49,703 - INFO -   Factor75 → 5 sources
+2025-12-08 17:34:49,703 - INFO -   Home Chef → 2 sources
+2025-12-08 17:34:49,703 - INFO -   Blue Apron → 3 sources
+2025-12-08 17:34:49,703 - INFO -   Marley Spoon → 2 sources
+2025-12-08 17:34:49,703 - INFO -   Hungryroot → 3 sources
+2025-12-08 17:34:49,703 - INFO -   EveryPlate → 5 sources
+2025-12-08 17:34:49,703 - INFO -   Green Chef → 4 sources
+2025-12-08 17:34:49,703 - INFO - Step-1 == Step-2 (HF & Factor) totals: True (HF:17, F75:8)
+2025-12-08 17:34:49,703 - INFO - ==================================================
