@@ -12,7 +12,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 GMAIL_EMAIL = os.getenv('GMAIL_EMAIL')
 GMAIL_APP_PASSWORD = os.getenv('GMAIL_APP_PASSWORD')
-EMAIL_RECIPIENTS = os.getenv('EMAIL_RECIPIENTS', 'brian.leung@hellofresh.com,assaf.ronen@hellofresh.com,kunsang.tsering@hellofresh.com,adam.kalikow@hellofresh.com,adam.park@factor75.com,daniel.seidel@hellofresh.com,ben@hellofresh.ca,sandra.nestic@hellofresh.ca,nunzio.disavino@hellofresh.com,dme@hellofresh.com,maureen@hellofresh.com,megan.thompson@hellofresh.ca,mara.hanerfeld@hellofresh.com,frankie.hernandez@hellofresh.com,pete.balodimas@hellofresh.com,kelsey.lindenschmidt@hellofresh.com,christopher.stadler@factor75.com,niklas.vanhusen@factor75.com').split(',')
+EMAIL_RECIPIENTS = os.getenv('EMAIL_RECIPIENTS', 'brian.leung@hellofresh.com,assaf.ronen@hellofresh.com,kunsang.tsering@hellofresh.com,adam.kalikow@hellofresh.com,adam.park@factor75.com,daniel.seidel@hellofresh.com,ben@hellofresh.ca,sandra.nestic@hellofresh.ca,nunzio.disavino@hellofresh.com,dme@hellofresh.com,maureen@hellofresh.com,megan.thompson@hellofresh.ca,mara.hanerfeld@hellofresh.com,frankie.hernandez@hellofresh.com,pete.balodimas@hellofresh.com,kelsey.lindenschmidt@hellofresh.com,christopher.stadler@factor75.com,niklas.vanhusen@factor75.com,katie.paganelli@hellofresh.com').split(',')
 
 # DATA SOURCES - Weekly Reddit Search Links (all competitors for Step 1)
 # Multiple links per brand for comprehensive data collection
