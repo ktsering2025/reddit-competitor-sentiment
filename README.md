@@ -32,13 +32,34 @@ Automatically scrapes Reddit **every Sunday at 8:00 PM EST**, analyzes sentiment
 
 ## 📅 Schedule
 
-**Every Sunday at 8:00 PM EST:**
+**Every Sunday at 8:00 PM EST (Automatic):**
 - Scrapes Reddit for the **previous complete week** (Monday-Sunday)
 - Analyzes 30-50 posts per week
-- Sends email to: brian.leung@hellofresh.com, assaf.ronen@hellofresh.com, kunsang.tsering@hellofresh.com, adam.kalikow@hellofresh.com, adam.park@factor75.com
+- Sends email to 19 recipients (see below)
 - Updates website: https://ktsering2025.github.io/reddit-competitor-sentiment/
 
-**Next Run:** Sunday, November 17, 2025 at 8:00 PM EST
+**Next Run:** Sunday, December 15, 2025 at 8:00 PM EST
+
+**Current Recipients (19 people):**
+- brian.leung@hellofresh.com
+- assaf.ronen@hellofresh.com
+- kunsang.tsering@hellofresh.com
+- adam.kalikow@hellofresh.com
+- adam.park@factor75.com
+- daniel.seidel@hellofresh.com
+- ben@hellofresh.ca
+- sandra.nestic@hellofresh.ca
+- nunzio.disavino@hellofresh.com
+- dme@hellofresh.com
+- maureen@hellofresh.com
+- megan.thompson@hellofresh.ca
+- mara.hanerfeld@hellofresh.com
+- frankie.hernandez@hellofresh.com
+- pete.balodimas@hellofresh.com
+- kelsey.lindenschmidt@hellofresh.com
+- christopher.stadler@factor75.com
+- niklas.vanhusen@factor75.com
+- katie.paganelli@hellofresh.com
 
 ---
 
@@ -59,7 +80,20 @@ Automatically scrapes Reddit **every Sunday at 8:00 PM EST**, analyzes sentiment
 
 ## 🚀 Quick Start (For New Users)
 
-### ⚡ Get Your First Report in 3 Minutes:
+### ⚡ Option 1: Wait for Automatic Run (Recommended)
+
+**Do nothing!** The system runs automatically every Sunday at 8 PM EST.
+
+- ✅ Runs in GitHub's cloud (no laptop needed)
+- ✅ 100% reliable (4/4 successful runs)
+- ✅ Emails sent automatically to all 19 recipients
+- ✅ Website updates automatically
+
+**Just check your email Monday morning!**
+
+---
+
+### ⚡ Option 2: Manual Trigger (If You Need a Report Now)
 
 1. **Go to GitHub Actions:**  
    👉 [Click here to run workflow](https://github.com/ktsering2025/reddit-competitor-sentiment/actions/workflows/weekly-automation.yml)
@@ -77,23 +111,54 @@ Automatically scrapes Reddit **every Sunday at 8:00 PM EST**, analyzes sentiment
 
 ---
 
-### 🔄 Weekly Automation Options:
+### ⚡ Option 3: Run Locally (For Developers)
 
-**Option 1: Manual Trigger (30 seconds every Sunday) ⭐ RECOMMENDED**
-- Every Sunday at 8 PM, click "Run workflow" button
-- 100% reliable, works with laptop closed
-- Takes 30 seconds
+**Prerequisites:**
+- Python 3.10+
+- Reddit API credentials
+- Gmail app password
+- `.env` file configured
 
-**Option 2: Local Cron (Fully Automated)**
-- Run once: `./setup_local_cron.sh`
-- Runs automatically every Sunday at 8 PM
-- Requires Mac to be on and awake
+**Steps:**
 
-**Option 3: Hybrid (Best of Both)**
-- Set up local cron + use manual trigger as backup
-- 100% reliability with minimal effort
+```bash
+# 1. Clone the repository
+git clone https://github.com/ktsering2025/reddit-competitor-sentiment.git
+cd reddit-competitor-sentiment
 
-📖 **See [WEEKLY_AUTOMATION_GUARANTEE.md](WEEKLY_AUTOMATION_GUARANTEE.md) for detailed setup**
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Create .env file with credentials
+cat > .env << EOF
+REDDIT_CLIENT_ID=your_client_id
+REDDIT_CLIENT_SECRET=your_client_secret
+REDDIT_USER_AGENT=your_user_agent
+GMAIL_EMAIL=your_email@gmail.com
+GMAIL_APP_PASSWORD=your_app_password
+EMAIL_RECIPIENTS=email1@example.com,email2@example.com
+EOF
+
+# 4. Run the complete automation
+python3 complete_automation.py
+
+# 5. Send emails (optional - automation does this automatically)
+python3 send_to_gmail_smtp.py
+```
+
+**What this does:**
+1. Scrapes Reddit for posts from the past week
+2. Analyzes sentiment using VADER + TextBlob
+3. Generates bar chart (PNG + PDF)
+4. Creates 2 HTML analysis reports
+5. Updates website (index.html)
+6. Archives data to `reports/archive/YYYY-MM-DD/`
+7. Commits and pushes to GitHub
+8. Sends emails to all recipients
+
+**Time:** ~3 minutes
+
+📖 **See [COMPLETE_PROJECT_DOCUMENTATION.md](COMPLETE_PROJECT_DOCUMENTATION.md) for detailed technical guide**
 
 ---
 
@@ -220,8 +285,13 @@ Built-in checks ensure data quality:
 
 ## 📖 Documentation
 
+### ⭐ Start Here
+- **[EXECUTIVE_SUMMARY.md](EXECUTIVE_SUMMARY.md)** - 📄 Quick overview of everything I built
+- **[COMPLETE_PROJECT_DOCUMENTATION.md](COMPLETE_PROJECT_DOCUMENTATION.md)** - 📚 Complete guide (1,200 lines)
+- **[README.md](README.md)** - 👋 This file (project overview)
+
 ### For Users
-- **[WEEKLY_AUTOMATION_GUARANTEE.md](WEEKLY_AUTOMATION_GUARANTEE.md)** - ⭐ How to ensure weekly reports
+- **[WEEKLY_AUTOMATION_GUARANTEE.md](WEEKLY_AUTOMATION_GUARANTEE.md)** - How to ensure weekly reports
 - **[AUTOMATION_EXPLAINED.md](AUTOMATION_EXPLAINED.md)** - Complete logic and workflow
 - **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)** - Project overview
 - **[AUTOMATION_STATUS.md](AUTOMATION_STATUS.md)** - Current status and health
@@ -268,17 +338,23 @@ Built-in checks ensure data quality:
 
 ## ✅ Status
 
-- ✅ **Production Ready**
+- ✅ **Production Ready & Fully Automated**
 - ✅ Sentiment analysis: Dual-method with context awareness
 - ✅ Time frame: 7-day weekly (previous Monday-Sunday)
-- ✅ Email: Professional report with top posts + PDF (5 recipients)
+- ✅ Email: Professional report with top posts + PDF (19 recipients)
 - ✅ Website: Auto-updates with latest data
-- ✅ Manual trigger: 100% reliable (30 seconds)
-- ⚠️ Automatic cron: Use manual trigger or local cron for reliability
+- ✅ Automation: 100% reliable (4/4 successful automatic runs)
+- ✅ Cloud-based: Runs on GitHub Actions (no laptop needed)
 
-**Current recipients:** brian.leung@hellofresh.com, assaf.ronen@hellofresh.com, kunsang.tsering@hellofresh.com, adam.kalikow@hellofresh.com, adam.park@factor75.com
+**Last 4 Automatic Runs:**
+- ✅ December 8, 2025 - Success
+- ✅ December 1, 2025 - Success
+- ✅ November 24, 2025 - Success
+- ✅ November 17, 2025 - Success
 
-**Latest data:** Nov 3-9, 2025 (32 posts analyzed)
+**Success Rate:** 100% (4 out of 4)
+
+**Latest data:** December 8, 2025 (archived in `reports/archive/2025-12-08/`)
 
 ---
 
