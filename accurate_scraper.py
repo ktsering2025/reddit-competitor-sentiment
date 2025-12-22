@@ -655,6 +655,25 @@ class AccurateScraper:
         text_lower = text.lower()
         title_lower = title_only.lower() if title_only else text_lower
         
+        # HIGH-CONFIDENCE COMPLAINT KEYWORDS (added Dec 22, 2025)
+        # These override all other sentiment analysis - if present, post is negative
+        # This catches subtle complaints that VADER/TextBlob miss (like "AI photos" post)
+        high_confidence_complaints = [
+            'fake', 'downgraded', 'frustrated', 'thrown off', 'vent', 'venting',
+            'not allowed', 'taking away', 'annoyed', 'upset', 'misleading',
+            'not happy', 'unhappy', 'angry', 'furious', 'ridiculous',
+            'unacceptable', 'pathetic', 'joke', 'laughable'
+        ]
+        
+        # Check for high-confidence complaint keywords first (before any other analysis)
+        for keyword in high_confidence_complaints:
+            if keyword in text_lower:
+                return {
+                    'sentiment': 'negative',
+                    'confidence': 0.85,
+                    'reasoning': f'High-confidence complaint keyword detected: "{keyword}"'
+                }
+        
         # Neutral comparison/switching keywords (Brian's feedback: ambiguous posts should be neutral)
         # These indicate the post is asking for options/comparisons, not praising/criticizing
         neutral_comparison = [
