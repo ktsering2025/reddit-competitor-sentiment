@@ -13263,3 +13263,133 @@ Data sources echoed from config.py:
 2026-06-15 06:22:40,027 - INFO - [SUCCESS] Homepage updated with current actionable data
 2026-06-15 06:22:40,028 - INFO - 
 [STEP 8] Git commit and push...
+2026-06-22 06:28:04,907 - INFO - ============================================================
+2026-06-22 06:28:04,907 - INFO - BRIAN'S COMPETITOR ANALYSIS - COMPLETE AUTOMATION
+2026-06-22 06:28:04,907 - INFO - ============================================================
+2026-06-22 06:28:04,907 - INFO - ABS PATH: /home/runner/work/reddit-competitor-sentiment/reddit-competitor-sentiment
+2026-06-22 06:28:04,907 - INFO - Week mode: PREVIOUS_COMPLETE_WEEK
+2026-06-22 06:28:04,907 - INFO - 
+[STEP 1] Running accurate_scraper.py...
+2026-06-22 06:29:10,188 - INFO -   Reddit API credentials check: ID=True, SECRET=True
+2026-06-22 06:29:10,188 - INFO -   Reddit API initialized successfully. User: None
+2026-06-22 06:29:10,188 - INFO -   Starting accurate Reddit scrape for Brian's competitor analysis...
+2026-06-22 06:29:10,188 - INFO -   Using PREVIOUS COMPLETE WEEK MODE
+2026-06-22 06:29:10,188 - INFO -   Date window: 2026-06-15 00:00 to 2026-06-21 23:59 UTC
+2026-06-22 06:29:10,188 - INFO -   (Last complete Monday-Sunday week)
+2026-06-22 06:29:10,188 - INFO -   Starting weekly Reddit scrape using your exact data sources...
+2026-06-22 06:29:10,188 - INFO -   Scraping HelloFresh...
+2026-06-22 06:29:10,188 - INFO -     Using PRAW API search for query: hellofresh
+2026-06-22 06:29:10,188 - INFO -     Found 37 posts via PRAW API
+2026-06-22 06:29:10,188 - INFO -     Found 37 posts from https://www.reddit.com/search/?q=hellofresh&type=posts&t=week
+2026-06-22 06:29:10,188 - INFO -     Using PRAW API search for query: hello fresh
+2026-06-22 06:29:10,188 - INFO -     Found 4 posts via PRAW API
+2026-06-22 06:29:10,188 - INFO -     Found 4 posts from https://www.reddit.com/search/?q=hello+fresh&type=posts&t=week
+2026-06-22 06:29:10,188 - INFO -     Found 14 posts from https://www.reddit.com/r/hellofresh/search/?type=posts&t=week&restrict_sr=1
+2026-06-22 06:29:10,188 - INFO -     Found 2 posts from https://www.reddit.com/r/mealkits/search/?q=hellofresh&type=posts&t=week&restrict_sr=1
+2026-06-22 06:29:10,188 - INFO -   Scraping Factor75...
+2026-06-22 06:29:10,188 - INFO -     Using PRAW API search for query: factor75
+2026-06-22 06:29:10,188 - INFO -     Found 10 posts via PRAW API
+2026-06-22 06:29:10,188 - INFO -     Found 10 posts from https://www.reddit.com/search/?q=factor75&type=posts&t=week
+2026-06-22 06:29:10,188 - INFO -     Using PRAW API search for query: factor 75
+2026-06-22 06:29:10,188 - INFO -     Found 70 posts via PRAW API
+2026-06-22 06:29:10,188 - INFO -     Found 70 posts from https://www.reddit.com/search/?q=factor+75&type=posts&t=week
+2026-06-22 06:29:10,188 - INFO -     Using PRAW API search for query: factor meals
+2026-06-22 06:29:10,188 - INFO -     Found 89 posts via PRAW API
+2026-06-22 06:29:10,188 - INFO -     Found 89 posts from https://www.reddit.com/search/?q=factor+meals&type=posts&t=week
+2026-06-22 06:29:10,189 - INFO -     Found 0 posts from https://www.reddit.com/r/ReadyMeals/search/?q=factor&type=posts&t=week&restrict_sr=1
+2026-06-22 06:29:10,189 - INFO -     Found 2 posts from https://www.reddit.com/r/mealkits/search/?q=factor&type=posts&t=week&restrict_sr=1
+2026-06-22 06:29:10,189 - INFO -   Scraping Home Chef...
+2026-06-22 06:29:10,189 - INFO -     Using PRAW API search for query: home chef
+2026-06-22 06:29:10,189 - INFO -     Found 19 posts via PRAW API
+2026-06-22 06:29:10,189 - INFO -     Found 19 posts from https://www.reddit.com/search/?q=home+chef&type=posts&t=week
+2026-06-22 06:29:10,189 - INFO -     Found 2 posts from https://www.reddit.com/r/mealkits/search/?q=home+chef&type=posts&t=week&restrict_sr=1
+2026-06-22 06:29:10,189 - INFO -   Scraping Blue Apron...
+2026-06-22 06:29:10,189 - INFO -     Using PRAW API search for query: blue apron
+2026-06-22 06:29:10,189 - INFO -     Found 7 posts via PRAW API
+2026-06-22 06:29:10,189 - INFO -     Found 7 posts from https://www.reddit.com/search/?q=blue+apron&type=posts&t=week
+2026-06-22 06:29:10,189 - INFO -     Found 0 posts from https://www.reddit.com/r/blueapron/search/?type=posts&t=week&restrict_sr=1
+2026-06-22 06:29:10,189 - INFO -     Found 2 posts from https://www.reddit.com/r/mealkits/search/?q=blue+apron&type=posts&t=week&restrict_sr=1
+2026-06-22 06:29:10,189 - INFO -   Scraping Marley Spoon...
+2026-06-22 06:29:10,189 - INFO -     Using PRAW API search for query: marley spoon
+2026-06-22 06:29:10,189 - INFO -     Found 4 posts via PRAW API
+2026-06-22 06:29:10,189 - INFO -     Found 4 posts from https://www.reddit.com/search/?q=marley+spoon&type=posts&t=week
+2026-06-22 06:29:10,189 - INFO -     Found 2 posts from https://www.reddit.com/r/mealkits/search/?q=marley+spoon&type=posts&t=week&restrict_sr=1
+2026-06-22 06:29:10,189 - INFO -   Scraping Hungryroot...
+2026-06-22 06:29:10,189 - INFO -     Using PRAW API search for query: hungryroot
+2026-06-22 06:29:10,189 - INFO -     Found 6 posts via PRAW API
+2026-06-22 06:29:10,189 - INFO -     Found 6 posts from https://www.reddit.com/search/?q=hungryroot&type=posts&t=week
+2026-06-22 06:29:10,189 - INFO -     Found 5 posts from https://www.reddit.com/r/hungryroot/search/?type=posts&t=week&restrict_sr=1
+2026-06-22 06:29:10,189 - INFO -     Found 2 posts from https://www.reddit.com/r/mealkits/search/?q=hungryroot&type=posts&t=week&restrict_sr=1
+2026-06-22 06:29:10,189 - INFO -   Scraping EveryPlate...
+2026-06-22 06:29:10,189 - INFO -     Using PRAW API search for query: everyplate
+2026-06-22 06:29:10,189 - INFO -     Found 4 posts via PRAW API
+2026-06-22 06:29:10,189 - INFO -     Found 4 posts from https://www.reddit.com/search/?q=everyplate&type=posts&t=week
+2026-06-22 06:29:10,189 - INFO -     Using PRAW API search for query: every plate
+2026-06-22 06:29:10,189 - INFO -     Found 4 posts via PRAW API
+2026-06-22 06:29:10,189 - INFO -     Found 4 posts from https://www.reddit.com/search/?q=every+plate&type=posts&t=week
+2026-06-22 06:29:10,189 - INFO -     Using PRAW API search for query: Every Plate food
+2026-06-22 06:29:10,189 - INFO -     Found 0 posts via PRAW API
+2026-06-22 06:29:10,189 - INFO -     Found 0 posts from https://www.reddit.com/search/?q=Every+Plate+food&type=all&t=week
+2026-06-22 06:29:10,189 - INFO -     Using PRAW API search for query: Every Plate Food Brand
+2026-06-22 06:29:10,189 - INFO -     Found 0 posts via PRAW API
+2026-06-22 06:29:10,189 - INFO -     Found 0 posts from https://www.reddit.com/search/?q=Every+Plate+Food+Brand&type=all&t=week
+2026-06-22 06:29:10,189 - INFO -     Found 2 posts from https://www.reddit.com/r/mealkits/search/?q=everyplate&type=posts&t=week&restrict_sr=1
+2026-06-22 06:29:10,189 - INFO -   Scraping Green Chef...
+2026-06-22 06:29:10,189 - INFO -     Using PRAW API search for query: green chef
+2026-06-22 06:29:10,189 - INFO -     Found 6 posts via PRAW API
+2026-06-22 06:29:10,189 - INFO -     Found 6 posts from https://www.reddit.com/search/?q=green+chef&type=posts&t=week
+2026-06-22 06:29:10,189 - INFO -     Using PRAW API search for query: greenchef
+2026-06-22 06:29:10,189 - INFO -     Found 1 posts via PRAW API
+2026-06-22 06:29:10,189 - INFO -     Found 1 posts from https://www.reddit.com/search/?q=greenchef&type=posts&t=week
+2026-06-22 06:29:10,189 - INFO -     Using PRAW API search for query: Green Chef mealkit brand
+2026-06-22 06:29:10,189 - INFO -     Found 3 posts via PRAW API
+2026-06-22 06:29:10,189 - INFO -     Found 3 posts from https://www.reddit.com/search/?q=Green+Chef+mealkit+brand&type=all&t=week
+2026-06-22 06:29:10,189 - INFO -     Found 2 posts from https://www.reddit.com/r/mealkits/search/?q=green+chef&type=posts&t=week&restrict_sr=1
+2026-06-22 06:29:10,189 - INFO -   FILTER IMPACT TABLE
+2026-06-22 06:29:10,189 - INFO -   Brand        | Pre-Filter | Post-Filter | Removed
+2026-06-22 06:29:10,189 - INFO -   --------------------------------------------------
+2026-06-22 06:29:10,189 - INFO -   HelloFresh   | 44         | 18          | 26     
+2026-06-22 06:29:10,189 - INFO -   Factor75     | 184        | 7           | 177    
+2026-06-22 06:29:10,189 - INFO -   Home Chef    | 12         | 4           | 8      
+2026-06-22 06:29:10,189 - INFO -   Blue Apron   | 6          | 4           | 2      
+2026-06-22 06:29:10,189 - INFO -   Marley Spoon | 4          | 3           | 1      
+2026-06-22 06:29:10,189 - INFO -   Hungryroot   | 6          | 5           | 1      
+2026-06-22 06:29:10,190 - INFO -   EveryPlate   | 5          | 2           | 3      
+2026-06-22 06:29:10,190 - INFO -   Green Chef   | 2          | 1           | 1      
+2026-06-22 06:29:10,190 - INFO -   --------------------------------------------------
+2026-06-22 06:29:10,190 - INFO -   [SUCCESS] Scraped 32 posts using Brian's data sources
+2026-06-22 06:29:10,190 - INFO -   [SUCCESS] Data saved to reports/raw/raw_2026-06-22.json
+2026-06-22 06:29:10,190 - INFO -   [SUCCESS] Working data saved to reports/working_reddit_data.json
+2026-06-22 06:29:10,190 - INFO -   [SUCCESS] Metadata saved to reports/raw/metadata_2026-06-22.json
+2026-06-22 06:29:10,190 - INFO -   Brand breakdown:
+2026-06-22 06:29:10,190 - INFO -     HelloFresh: 18 posts
+2026-06-22 06:29:10,190 - INFO -     Factor75: 7 posts
+2026-06-22 06:29:10,190 - INFO -     Home Chef: 4 posts
+2026-06-22 06:29:10,190 - INFO -     Blue Apron: 4 posts
+2026-06-22 06:29:10,190 - INFO -     Marley Spoon: 3 posts
+2026-06-22 06:29:10,190 - INFO -     Hungryroot: 5 posts
+2026-06-22 06:29:10,190 - INFO -     EveryPlate: 2 posts
+2026-06-22 06:29:10,190 - INFO -     Green Chef: 1 posts
+2026-06-22 06:29:10,190 - INFO - [SUCCESS] Scraper completed - data saved to working_reddit_data.json
+2026-06-22 06:29:10,190 - INFO - 
+[STEP 2] Processing raw data...
+2026-06-22 06:29:10,195 - INFO - [SUCCESS] Raw data processing complete - files saved with 2026-06-22
+2026-06-22 06:29:10,195 - INFO - 
+[STEP 3] Generating Step 1 chart...
+2026-06-22 06:29:13,629 - INFO - [SUCCESS] Step 1 chart generated successfully
+2026-06-22 06:29:13,629 - INFO - 
+[STEP 4] Generating Step 2 ACTIONABLE analysis...
+2026-06-22 06:29:13,662 - INFO - [SUCCESS] Step 2 analysis generated successfully
+2026-06-22 06:29:13,662 - INFO - \n[STEP 5] Generating Step 3 competitor analysis...
+2026-06-22 06:29:13,687 - INFO - [SUCCESS] Step 3 competitor analysis generated successfully
+2026-06-22 06:29:13,687 - INFO - 
+[STEP 5] Running Brian's validation rules...
+2026-06-22 06:29:13,687 - INFO - [SUCCESS] All validation rules PASSED
+2026-06-22 06:29:13,687 - INFO - 
+[STEP 6] Archiving artifacts...
+2026-06-22 06:29:13,691 - INFO - [SUCCESS] Artifacts archived to reports/archive/2026-06-22
+2026-06-22 06:29:13,691 - INFO - 
+[STEP 7] Updating homepage with current data...
+2026-06-22 06:29:13,717 - INFO - [SUCCESS] Homepage updated with current actionable data
+2026-06-22 06:29:13,717 - INFO - 
+[STEP 8] Git commit and push...
