@@ -1,11 +1,11 @@
 {
-  "scrape_timestamp": "2026-10-26T05:47:29.154707+00:00",
-  "processing_timestamp": "2026-10-26T05:47:29.154724+00:00",
+  "scrape_timestamp": "2026-11-02T07:14:28.929110+00:00",
+  "processing_timestamp": "2026-11-02T07:14:28.929128+00:00",
   "date_range": {
-    "start": "2026-10-19T00:00:00+00:00",
-    "end": "2026-10-25T23:59:59.999999+00:00"
+    "start": "2026-10-26T00:00:00+00:00",
+    "end": "2026-11-01T23:59:59.999999+00:00"
   },
-  "total_posts": 27,
+  "total_posts": 29,
   "data_sources": {
     "HelloFresh": [
       "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
@@ -54,627 +54,667 @@
   },
   "filter_stats": {
     "HelloFresh": {
-      "pre": 55,
-      "post": 13,
-      "removed": 42
+      "pre": 47,
+      "post": 10,
+      "removed": 37
     },
     "Factor75": {
-      "pre": 182,
-      "post": 10,
-      "removed": 172
+      "pre": 169,
+      "post": 9,
+      "removed": 160
     },
     "Home Chef": {
-      "pre": 6,
+      "pre": 9,
       "post": 2,
-      "removed": 4
+      "removed": 7
     },
     "Blue Apron": {
-      "pre": 3,
-      "post": 3,
-      "removed": 0
+      "pre": 11,
+      "post": 6,
+      "removed": 5
     },
     "Marley Spoon": {
-      "pre": 3,
-      "post": 1,
-      "removed": 2
+      "pre": 4,
+      "post": 3,
+      "removed": 1
     },
     "Hungryroot": {
-      "pre": 1,
-      "post": 0,
+      "pre": 2,
+      "post": 1,
       "removed": 1
     },
     "EveryPlate": {
-      "pre": 4,
-      "post": 1,
+      "pre": 3,
+      "post": 0,
       "removed": 3
     },
     "Green Chef": {
       "pre": 1,
-      "post": 1,
-      "removed": 0
+      "post": 0,
+      "removed": 1
     }
   },
   "posts": [
     {
-      "title": "I followed the pause procedure, but HelloFresh disputes this and refuses a refund.",
-      "selftext": "Pausing a HelloFresh delivery? Take screenshots. I followed the pause procedure before the cut-off, yet was charged anyway. HelloFresh insists its digital records say otherwise and has refused a refund. No willingness to consider that their system might have failed to record my action. \u201cOur system says no\u201d is not customer service\u2014and customers shouldn\u2019t have to gather evidence just to skip a delivery.",
-      "score": 0,
-      "num_comments": 5,
-      "subreddit": "hellofresh",
-      "url": "https://reddit.com/r/hellofresh/comments/1xexlzp/i_followed_the_pause_procedure_but_hellofresh/",
-      "created_utc": 1792919346.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "BreadRich5359",
-      "upvote_ratio": 0.38,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
-      "primary_brand": "HelloFresh",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "VADER: -0.92, TextBlob: -0.13"
-    },
-    {
-      "title": "First Hello Fresh Box",
-      "selftext": "Just signed up for my first box to be delivered on Sunday. What should I know about this subscription. Any things to avoid / definitely need to be done & tried to make the most of it ",
-      "score": 2,
-      "num_comments": 10,
-      "subreddit": "hellofresh",
-      "url": "https://reddit.com/r/hellofresh/comments/1xdp6gd/first_hello_fresh_box/",
-      "created_utc": 1792787399.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Ok-Let-3933",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
-      "primary_brand": "HelloFresh",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "VADER: 0.42, TextBlob: 0.26"
-    },
-    {
-      "title": "Lost my promotion because I wanted to give them more of my money (AKA sign up for Tempo too)",
-      "selftext": "Just a warning for everyone to learn from my mistake.  I recently signed up for Home Chef for the Hexclad pan offer, and it also came with one free item for life. I wanted to try Tempo too for my work lunches, so I went in the app and clicked on Tempo to try to sign up for that, well that was a mistake. Apparently, doing that \u201cpaused\u201d my Home Chef subscription.  I\u2019d rather have Home Chef and the pan over Tempo, so I canceled Tempo and tried going back to Home Chef.  Not only were all my meal selections for the upcoming weeks removed, but I also lost the promotion for the pan and the free item for life, just because it unknowingly paused my subscription because I wanted to sign up for Tempo. There was no more than five minutes from the time it paused to the time I unpaused. \n\nI called Home Chef and they said they will try to get my promotion back, but it will have to be reviewed by another team and can take up to a week and isn\u2019t guaranteed. I was also told that it is impossible to sign up for both HC and Tempo unless you use different email addresses, which is stupid.  My HC subscription hasn\u2019t even started yet and I\u2019ve already had to talk to Customer Service twice, so I don\u2019t have high hopes, which is a shame, because I\u2019ve been a HelloFresh subscriber for years and was ready for something new. \n\nAnd I guess I won\u2019t be trying Tempo.  But their meals looked overpriced anyway. ",
+      "title": "Don\u2019t expect your sign on bonus to be fulfilled",
+      "selftext": "This is my first post to Reddit ever! I had recently tried a few meal delivery services (including HELLOFRESH). They sent me something by mail offering a Zwilling wok for free quoting a 179$ value after ordering my 5th box. I used the code with every box and inquired about the pan before the deadline and was reassured by customer reps on the phone that my code to redeem the pan would likely be arriving the following week. That week came and went with no email with a reception link so I inquired again and was met with an entirely different story saying I actually don\u2019t qualify and that the other rep was wrong - mind you I had the fine print from the offer that was sent to me in the mail and when I was told to email it to them while on the phone with the rep they started to repeat \u201csorry we just don\u2019t seem to be getting the email but you can reach out to our email support\u201d. I followed all of their directions and was then informed I would not receive the pan because their parameters were different than the fine print in the offer I received (which is entirely inconsistent and crazy for a company as big as they seem to be) and I was not offered any way to make it right after spending hours on the phone/in communication which seemed very odd given the only reason I ordered all 5 boxes was because of this promise of the pan at the end - I waited until this entire process was over to post on here because I wanted to see if this could just be a one off with a rep but unfortunately this seems to be a common occurrence. The produce often came in bad shape as well/had to be thrown away. DO NOT TRY HELLOFRESH ESP THEIR INTRO OFFERS - they will not be fulfilled.",
       "score": 3,
-      "num_comments": 0,
-      "subreddit": "HomeChef",
-      "url": "https://reddit.com/r/HomeChef/comments/1xdh6wp/lost_my_promotion_because_i_wanted_to_give_them/",
-      "created_utc": 1792769317.0,
-      "competitors_mentioned": [
-        "HelloFresh",
-        "Home Chef"
-      ],
-      "author": "IIIlllIllllllII",
-      "upvote_ratio": 0.81,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
-      "primary_brand": "Home Chef",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "VADER: -0.63, TextBlob: 0.01"
-    },
-    {
-      "title": "Hello fresh discount code",
-      "selftext": "I\u2019ve been loving the new expanded HelloFresh menu: bigger portions and 100+ weekly recipes. Try a FREE box with my personal discount \ud83e\udd58 >> https://www.hellofresh.com/gw/share/d27F-dgi9?sharing\\_device=ios\\_app&sharing\\_method=clipboard",
-      "score": 0,
-      "num_comments": 0,
+      "num_comments": 2,
       "subreddit": "hellofresh",
-      "url": "https://reddit.com/r/hellofresh/comments/1xcd7ea/hello_fresh_discount_code/",
-      "created_utc": 1792658746.0,
+      "url": "https://reddit.com/r/hellofresh/comments/1xjkt5g/dont_expect_your_sign_on_bonus_to_be_fulfilled/",
+      "created_utc": 1793379376.0,
       "competitors_mentioned": [
         "HelloFresh"
       ],
-      "author": "Melocin27",
-      "upvote_ratio": 0.4,
+      "author": "Ok-Friendship-1943",
+      "upvote_ratio": 0.8,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
       "primary_brand": "HelloFresh",
-      "sentiment": "positive",
+      "sentiment": "negative",
       "confidence": 0.9,
-      "reasoning": "VADER: 0.88, TextBlob: 0.24"
+      "reasoning": "VADER: -0.82, TextBlob: -0.07"
     },
     {
-      "title": "Kale grain bowl with feta dressing",
-      "selftext": "This was better than I expected.  Not great for dinner, but made a nice lunch.  Definitely the healthiest HF meal I've had lol.  I would give it a solid 7/10.",
-      "score": 12,
-      "num_comments": 7,
+      "title": "[Australia] Door-to-door sales reps offering a \"promotion\" for existing customers to sign up AGAIN?",
+      "selftext": "Our household has used HelloFresh for 6 years now, subscribed through my wife's account. Generally, we're happy with the product given that we're a busy household, both work full time and have active kids with many school and after school commitments.\n\nYesterday, a HelloFresh representative knocked on my door and asked about our experience, the quality of the product and if we were satisfied. He wore a branded shirt, had an ID badge and, importantly, knew my wife's name and had access to our address record on his phone so I figured he was lefit.\n\nHe said that HelloFresh were offering a \"promotion\" for long standing customers as a reward for their loyalty and offerred to save us $30 per box for 6 weeks (our spend is around $140-150 per week depending on what we order). I'm always keen to save a bit of money!\n\nThe process was to sign up with a new account (in my name), scan a promotion code through a QR code in the app and place a new order. I asked about cancelling the other account and he confirmed that we'd need to do this once our latest order is delivered (this weekend) and then commence orders on the new account.\n\nI said that I found the \"pomotion\" mechanism weird and he said that they were working on better ways to do it in future but this was how it worked at the moment.\n\nI don't mind doing all of this, but I find it a strange business practice: encouraging customers to churn.\n\nWhy would they do this? Are they trying to drive \"new user\" numbers (ignoring the number of accoutns they close)? What benefit does the company gain by encouraging existing, paying customers to spend less?",
+      "score": 3,
+      "num_comments": 2,
       "subreddit": "hellofresh",
-      "url": "https://reddit.com/r/hellofresh/comments/1xbzno6/kale_grain_bowl_with_feta_dressing/",
-      "created_utc": 1792617244.0,
+      "url": "https://reddit.com/r/hellofresh/comments/1xj1xcy/australia_doortodoor_sales_reps_offering_a/",
+      "created_utc": 1793322538.0,
       "competitors_mentioned": [
         "HelloFresh"
       ],
-      "author": "mvicsmith",
+      "author": "logan_bogan13",
       "upvote_ratio": 1.0,
-      "is_self": false,
-      "source_brand": "HelloFresh",
-      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
-      "primary_brand": "HelloFresh",
-      "sentiment": "neutral",
-      "confidence": 0.85,
-      "reasoning": "VADER: 0.91, TextBlob: 0.20"
-    },
-    {
-      "title": "Products from Theo M\u00fcller in HelloFresh Box",
-      "selftext": "Hey everyone,\n\nI opened my HelloFresh box today and found a \"Joghurt mit der Ecke\" (Corner Yogurt) from the German dairy brand M\u00fcller included as a free product sample.\n\nFor those outside of Germany or unaware of the current political landscape here: the billionaire owner of the M\u00fcller group, Theo M\u00fcller, has been under massive public fire and facing widespread consumer boycotts. He openly maintains a close relationship with Alice Weidel, the co-leader of the far-right, extremist AfD (Alternative for Germany) party, publicly calling her a \"friend\" who frequently visits him.\n\nThe public pressure intensified significantly after a nationwide campaign exposed the depth of his ties, showing that he actively praises the party's election successes and uses his platform to suggest political coalitions with them. Critics and civil networks have repeatedly highlighted leaked communication and public declarations where he aligns himself with their agenda.\n\nI am honestly very disappointed to see HelloFresh partnering with a brand whose owner openly supports far-right extremism and using our paid boxes to distribute his marketing campaigns. I am currently in contact with customer support about this and am seriously considering canceling my subscription.  \nIf you do not know what the AFD is planning for Germany just google for AFD Emails.  \nHere is a good starting point:\n\n[https://www.reddit.com/r/cologne/comments/1xbg8db/ganz\\_normale\\_deutsche\\_aus\\_k%C3%B6ln/](https://www.reddit.com/r/cologne/comments/1xbg8db/ganz_normale_deutsche_aus_k%C3%B6ln/) \n\nHas anyone else received M\u00fcller products in their boxes lately? What are your thoughts on HelloFresh taking advertising money from controversial conglomerates like this?",
-      "score": 7,
-      "num_comments": 7,
-      "subreddit": "hellofresh",
-      "url": "https://reddit.com/r/hellofresh/comments/1xbp0r8/products_from_theo_m\u00fcller_in_hellofresh_box/",
-      "created_utc": 1792593684.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "mihenn87",
-      "upvote_ratio": 0.64,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
       "primary_brand": "HelloFresh",
       "sentiment": "negative",
       "confidence": 0.9,
-      "reasoning": "VADER: 0.93, TextBlob: 0.02"
+      "reasoning": "VADER: 0.98, TextBlob: 0.18"
     },
     {
-      "title": "delivery questions",
-      "selftext": "hi everyone, just had another question about delivery things for hello fresh. i live in a house surrounded by a fence/gate on all sides and have 2 dogs and was wondering if anyone would know/recommend the best delivery option for these circumstances? i just fear that if i ask them to leave at my gate then my dogs might get into the food, but the front door isn\u2019t an option as my dogs can be quite reactive and bark a lot so dont want any problems there. does hello fresh send a notification or anything when they\u2019re about to deliver as to help minimise these issues? or if anyone has some advice on what could work best? thankyou!!",
+      "title": "Hellofresh Freunde Werben",
+      "selftext": "Kann mir ein hellofresh kunde bitte eine einladung f\u00fcr eine gratisbox zusenden? Ich w\u00fcrde das sehr gerne mal probieren :)",
       "score": 1,
-      "num_comments": 4,
+      "num_comments": 3,
       "subreddit": "hellofresh",
-      "url": "https://reddit.com/r/hellofresh/comments/1xbcdku/delivery_questions/",
-      "created_utc": 1792552990.0,
+      "url": "https://reddit.com/r/hellofresh/comments/1xi4ire/hellofresh_freunde_werben/",
+      "created_utc": 1793231282.0,
       "competitors_mentioned": [
         "HelloFresh"
       ],
-      "author": "Expert-Diver-951",
-      "upvote_ratio": 1.0,
+      "author": "Similar-Damage-3428",
+      "upvote_ratio": 0.67,
       "is_self": true,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
       "primary_brand": "HelloFresh",
       "sentiment": "positive",
       "confidence": 0.9,
-      "reasoning": "VADER: 0.96, TextBlob: 0.55"
+      "reasoning": "VADER: 0.46, TextBlob: 0.50"
     },
     {
-      "title": "$14.29 per serving + $12.99 shipping??!!",
-      "selftext": "So I haven't done HF for a few years, but just for curiosity's sake I wanted to see what they are now charging customers. So I went to the site, and the price for 3 meals x 2 people (6 servings) is now $14.29 per serving + $12.99 shipping?!  Rolling the shipping in, that's $16.45 per serving, $32.91 per 2-serving meal, and $98.73 per week!!\n\nThat's more expensive than 90% of takeout (which you don't have to cook and clean up for) and more than three times the cost of the groceries that they deliver.  Are a lot of people actually paying that full price?  How do they expect to not go bankrupt at the rates they are charging?  Sure it's still cheaper than paying Doordash's extortionary delivery charges (doubling the price of takeout) but that's not saying much.",
-      "score": 19,
-      "num_comments": 43,
-      "subreddit": "hellofresh",
-      "url": "https://reddit.com/r/hellofresh/comments/1xauiag/1429_per_serving_1299_shipping/",
-      "created_utc": 1792508578.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "TheThinkerAck",
-      "upvote_ratio": 0.88,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
-      "primary_brand": "HelloFresh",
-      "sentiment": "positive",
-      "confidence": 1.0,
-      "reasoning": "VADER: 0.90, TextBlob: 0.17"
-    },
-    {
-      "title": "delivery times?",
-      "selftext": "hello everyone, first time on this subreddit so lmk if not allowed!!   \ni\u2019ve been thinking of ordering hello fresh for a while now and am finally deciding to do it just to see how it is but the main thing that putting me off is the delivery times, and how it\u2019s either between midnight and 7am or 8am to 6pm. i just wanted to know if they tend to stick to specific times for certain areas, like a specific city/area might get there\u2019s at noon most days for example or if it is truly random and i could get my delivery at 4am?if it helps, i\u2019m in australia (i assume it\u2019s differnt for all countries). any info or advice is much appreciated, thankyou! ",
-      "score": 3,
-      "num_comments": 6,
-      "subreddit": "hellofresh",
-      "url": "https://reddit.com/r/hellofresh/comments/1xan9rh/delivery_times/",
-      "created_utc": 1792487522.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "Expert-Diver-951",
-      "upvote_ratio": 0.81,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
-      "primary_brand": "HelloFresh",
-      "sentiment": "negative",
-      "confidence": 0.85,
-      "reasoning": "High-confidence complaint keyword detected: \"not allowed\""
-    },
-    {
-      "title": "Is it worth it?",
-      "selftext": "I\u2019m neurodivergent and i really struggle with cooking and planning meals. i\u2019m still living with my mom, but it\u2019s been in my plan to start a meal kit. Idk if it\u2019s worth it? I\u2019m really picky, i have the stereotypical chicken and macaroni pickiness. I\u2019d like to survive somewhat healthily, and i just wanna know if hello fresh is a good option? ",
-      "score": 11,
-      "num_comments": 17,
-      "subreddit": "hellofresh",
-      "url": "https://reddit.com/r/hellofresh/comments/1xaarwg/is_it_worth_it/",
-      "created_utc": 1792447938.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "ImpossibleJelly8003",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
-      "primary_brand": "HelloFresh",
-      "sentiment": "neutral",
-      "confidence": 0.85,
-      "reasoning": "VADER: 0.90, TextBlob: 0.16"
-    },
-    {
-      "title": "HelloFresh workers claim physical abuse and denied bathroom breaks in class action lawsuit",
-      "selftext": "",
-      "score": 77,
-      "num_comments": 17,
-      "subreddit": "hellofresh",
-      "url": "https://reddit.com/r/hellofresh/comments/1xa21za/hellofresh_workers_claim_physical_abuse_and/",
-      "created_utc": 1792428420.0,
-      "competitors_mentioned": [
-        "HelloFresh"
-      ],
-      "author": "uieLouAy",
-      "upvote_ratio": 0.96,
-      "is_self": false,
-      "source_brand": "HelloFresh",
-      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
-      "primary_brand": "HelloFresh",
-      "sentiment": "positive",
-      "confidence": 0.9,
-      "reasoning": "VADER: -0.84, TextBlob: 0.05"
-    },
-    {
-      "title": "Parmesan Chicken",
-      "selftext": "My kids loved this one!  Crispy Parmesan chicken, couscous and lemony carrots.  My 11 year old helped with the prep (garlic and lemon zest) plus he stirred the butter mixture on the stove for the couscous.   Great flavors. It\u2019s been more than a month since we started using Hello Fresh, and we are getting better at choosing the recipes we will all like.",
-      "score": 18,
+      "title": "Missing Add Ons Two Weeks",
+      "selftext": "I love hello fresh but just wanna rant\u2026 this is the second week I\u2019ve been missing addons and it sucks. I was so excited because I got the bagel hot dogs and the cold brew protein shakes and they\u2019re just not in there\u2026 and the other week I got the pesto chicken heroes, also missing\u2026 yeah I get a refund but still sucks :(",
+      "score": 7,
       "num_comments": 1,
       "subreddit": "hellofresh",
-      "url": "https://reddit.com/r/hellofresh/comments/1x9unj5/parmesan_chicken/",
-      "created_utc": 1792410285.0,
+      "url": "https://reddit.com/r/hellofresh/comments/1xi2a9n/missing_add_ons_two_weeks/",
+      "created_utc": 1793225661.0,
       "competitors_mentioned": [
         "HelloFresh"
       ],
-      "author": "cupletta",
-      "upvote_ratio": 0.88,
+      "author": "discothetechx",
+      "upvote_ratio": 1.0,
+      "is_self": true,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+      "primary_brand": "HelloFresh",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: 0.23, TextBlob: -0.13"
+    },
+    {
+      "title": "Anyone else missing their meats or main ingredients a lot recently? Or, giving the completely wrong bag of ingredients but the correct meat? I came back to hello fresh because I need the convenience, but every order has been missing things or completely wrong.",
+      "selftext": "Once I tried to do the butternut agnoltti, they gave me the pasta but the bag ended up being for chili. Who do they have doing these dang orders? ",
+      "score": 7,
+      "num_comments": 9,
+      "subreddit": "hellofresh",
+      "url": "https://reddit.com/r/hellofresh/comments/1xi1g1z/anyone_else_missing_their_meats_or_main/",
+      "created_utc": 1793223648.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "AutomaticClothes5833",
+      "upvote_ratio": 1.0,
+      "is_self": true,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+      "primary_brand": "HelloFresh",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: -0.80, TextBlob: -0.12"
+    },
+    {
+      "title": "UK - Kitchen Aid offer",
+      "selftext": "We switched to Gousto for a couple of years and were only enticed back to HF recently by the free kitchen aid chopper offer. I\u2019ve had 7 boxes and only just got my kitchen aid voucher (which was promised after the third box), only to find they have run out! Infuriating! Has anyone out there received their kitchen aid chopper and was it worth it?",
+      "score": 3,
+      "num_comments": 5,
+      "subreddit": "hellofresh",
+      "url": "https://reddit.com/r/hellofresh/comments/1xhywix/uk_kitchen_aid_offer/",
+      "created_utc": 1793217809.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "PlentyMall3724",
+      "upvote_ratio": 1.0,
+      "is_self": false,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+      "primary_brand": "HelloFresh",
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "VADER: 0.60, TextBlob: -0.01"
+    },
+    {
+      "title": "Horrible Quality Control--what happened here?",
+      "selftext": "3-4 years ago I lived with my brother and we shared Hello Fresh. We had a great experience and really loved it!\n\nFast forward to now and I am trying the service again... and its been an awful experience! Quality of ingredients seems way down. I have received 3 boxes and so far I have dealt with wilty vegetables, missing ingredients, being sent the wrong recipe cards, and shitty proteins.\n\nWith chicken you either get thicker pieces (preferable!) but they're only about the size of your palm. OR you get extremely thin chicken breasts that are impossible to get any color on because they finish cooking in 2 minutes. Also the chicken tastes... bland? I've never experienced this in my life where the chicken itself hardly has any flavor. Also one of the chicken breasts I received was mangled inside the bag, it looked like it was partially shredded. And its hilarious because the recipe cards show these big thick pieces of chicken in the pan and tell you cooking times for a thicker piece of chicken. Like, cook this thin ass chicken breast for 3-4 minutes per side like the recipe states and you've got a piece of rubber.\n\nThis last box I received, they sent me the wrong recipe card and a recipe with meatballs was missing the breadcrumbs. I tried some of the ketchup they sent to put in the meatballs and its disgustingly sweet, it tastes more like a sweet jelly than it does ketchup, so i ended up using my own.\n\nCancelled and will never recommend this service to anyone again! In fact I think I will take every opportunity I can to badmouth this company!",
+      "score": 4,
+      "num_comments": 10,
+      "subreddit": "hellofresh",
+      "url": "https://reddit.com/r/hellofresh/comments/1xhxqfl/horrible_quality_controlwhat_happened_here/",
+      "created_utc": 1793215234.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "buddhamunche",
+      "upvote_ratio": 0.7,
+      "is_self": true,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+      "primary_brand": "HelloFresh",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: 0.87, TextBlob: -0.18"
+    },
+    {
+      "title": "a fortune cookie is a surprisingly good way to get me to read something",
+      "selftext": "hellofresh on a fortune slip is so random but i read the whole thing. usually barely glance at these. curious how they decide which restaurants get them.",
+      "score": 49,
+      "num_comments": 9,
+      "subreddit": "hellofresh",
+      "url": "https://reddit.com/r/hellofresh/comments/1xhoac7/a_fortune_cookie_is_a_surprisingly_good_way_to/",
+      "created_utc": 1793194617.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "Main-Mountain-5747",
+      "upvote_ratio": 0.98,
       "is_self": false,
       "source_brand": "HelloFresh",
       "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
       "primary_brand": "HelloFresh",
       "sentiment": "positive",
       "confidence": 0.9,
-      "reasoning": "VADER: 0.94, TextBlob: 0.23"
+      "reasoning": "VADER: 0.67, TextBlob: 0.07"
+    },
+    {
+      "title": "Overcharged- not sure how to handle this situation?",
+      "selftext": "For a while, I've been using the hack of cancelling my HF account, then using a \"returning customer\" promo code.\n\nA few days ago the site quoted me the discounted promo code price per usual when I clicked \"Place Order\".  I am 100% sure of this, or else I wouldn't have placed the order- HF is just too expensive for me at full price (I'm very frugal).  A day later, once the order was \"placed\", I noticed my credit card was charged the full, non-discounted price.\n\nI called HF.  After talking a while, they said my account had been flagged- essentially for taking advantage of deactivating/reactivating my account, thus the \"returning customer\" promo code didn't apply.  Despite the fact that I was *clearly* quoted the discounted price before clicking \"Place order\".\n\nYes, I know that I've been taking advantage of HF in a sense for a while now (even though *technically*, I don't actually think I broke any law with any of the above).  Yes, I fully expected them to find out eventually.  I wouldn't have even been surprised if I was eventually banned or something.  But for a company to charge me $200+ more than what I was quoted seems like flat-out false advertising, illegal, etc.\n\nIn the end- they refused to apply the promo code (even this once).  They refused to give me any kind of \"credit\" to apply to a future order.  They refused to cancel the order, saying it's irreversible.\n\nAm I wrong about this?  Can/should I just dispute this on my credit card?  Or, try calling and getting a different representative?  Or what are the other options?\n\n  \n(This is also a warning for anyone else that uses the \"returning customer\" hack, by the way!)",
+      "score": 0,
+      "num_comments": 14,
+      "subreddit": "hellofresh",
+      "url": "https://reddit.com/r/hellofresh/comments/1xh7lm5/overcharged_not_sure_how_to_handle_this_situation/",
+      "created_utc": 1793141905.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "Specialist7545",
+      "upvote_ratio": 0.22,
+      "is_self": true,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+      "primary_brand": "HelloFresh",
+      "sentiment": "negative",
+      "confidence": 0.85,
+      "reasoning": "High-confidence complaint keyword detected: \"vent\""
+    },
+    {
+      "title": "Chicken no bueno",
+      "selftext": "NB: I'm still a HF devotee\u2014we really like the service, very rarely have issues, and have never had this particular problem\u2014but yeah, this bummed me out after a long, hard day when I just wanted a nice dinner.\n\nI reported this and got a $7ish credit. Am I crazy? Could I have eaten this? It looked like a parasite.\n\nThe meal was disappointing without the main protein, understandably. It was the chicken and prosciutto spring pea risotto, so there was some protein in it with the prosciutto, but it was definitely lacking sans chicken.\n\nEDIT TO ADD: So I'm thinking it's just a blood vessel. Derp. It's been a long week, friends. Thanks for reading.",
+      "score": 0,
+      "num_comments": 17,
+      "subreddit": "hellofresh",
+      "url": "https://reddit.com/r/hellofresh/comments/1xfkefp/chicken_no_bueno/",
+      "created_utc": 1792980050.0,
+      "competitors_mentioned": [
+        "HelloFresh"
+      ],
+      "author": "cannibal-cleavage",
+      "upvote_ratio": 0.36,
+      "is_self": false,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/search/?q=hellofresh&type=posts&t=week",
+      "primary_brand": "HelloFresh",
+      "sentiment": "neutral",
+      "confidence": -0.05,
+      "reasoning": "VADER: 0.94, TextBlob: -0.11"
+    },
+    {
+      "title": "lower sodium in texas",
+      "selftext": "I live near the DFW area of Texas. I have tried several meal services, but no luck so far. I need them to be lower in sodium. Which is not too difficult to have in healthy, non-preservative meals. They also need to be less carb dense. I don't mean low carb. I mean like not 95g of carbs in a meal.\n\nHere are my results so far.\n\n**factor75 -** tastes good when it is delivered on time and not room temp. I've had to get several refunds in the timespan of 6 weeks. If it weren't for the delivery issues, I would stay with factor.\n\n**Cook Unity** \\- I tried Cook Unity because it seems to be the most recommended. However, their website doesn't have full nutrition info and all of the meals I picked were unintentionally carb heavy, no veggies, and really high in sodium (a couple were over 70% of the daily allowance) enough to mess with my blood pressure. I was not able to determine this until after the food was delivered and there was a QR code that linked to the full nutrition info. I don't want to play whack a mole with ordering food.\n\n**Modify Health** \\- The meals didn't taste the same from delivery to delivery. The pot roast tasted like sauerkraut one time (yuck). Also, they have the most difficult to open packaging for meals I have ever experienced. I'm 6'4\" and 190lbs, I'm in good shape. I do not kid when I tell you some of the \"glue\" holding the top plastic is a struggle to remove and cutting it with a knife is difficult because it is super stretchy. I'm not trying to get a workout. I'm trying to eat.\n\nI really just want to my meals to show up, be healthy, and I can pop them in the microwave without thinking about it.",
+      "score": 2,
+      "num_comments": 4,
+      "subreddit": "mealkits",
+      "url": "https://reddit.com/r/mealkits/comments/1xjzbeh/lower_sodium_in_texas/",
+      "created_utc": 1793415817.0,
+      "competitors_mentioned": [
+        "Factor75"
+      ],
+      "author": "Sad-Outlandishness77",
+      "upvote_ratio": 0.75,
+      "is_self": true,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/r/mealkits/search/?q=hellofresh&type=posts&t=week&restrict_sr=1",
+      "primary_brand": "Factor75",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: 0.85, TextBlob: 0.09"
+    },
+    {
+      "title": "Marley passing on Blue Apron goods?",
+      "selftext": "Just got this today in our Marley Spoon order. Quality has been suspect at best. Used them a good bit three or four years ago, tried again for a few months and not impressed.",
+      "score": 12,
+      "num_comments": 10,
+      "subreddit": "mealkits",
+      "url": "https://reddit.com/r/mealkits/comments/1xgg4sh/marley_passing_on_blue_apron_goods/",
+      "created_utc": 1793066495.0,
+      "competitors_mentioned": [
+        "Blue Apron",
+        "Marley Spoon"
+      ],
+      "author": "iamhoop",
+      "upvote_ratio": 0.84,
+      "is_self": false,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/r/mealkits/search/?q=hellofresh&type=posts&t=week&restrict_sr=1",
+      "primary_brand": "Blue Apron",
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "VADER: 0.52, TextBlob: 0.20"
+    },
+    {
+      "title": "This is AMAZING! I would say top 1% of Home Chef meals",
+      "selftext": "",
+      "score": 7,
+      "num_comments": 4,
+      "subreddit": "mealkits",
+      "url": "https://reddit.com/r/mealkits/comments/1xfian2/this_is_amazing_i_would_say_top_1_of_home_chef/",
+      "created_utc": 1792974121.0,
+      "competitors_mentioned": [
+        "Home Chef"
+      ],
+      "author": "Important_Mud_6700",
+      "upvote_ratio": 0.77,
+      "is_self": false,
+      "source_brand": "HelloFresh",
+      "source_url": "https://www.reddit.com/r/mealkits/search/?q=hellofresh&type=posts&t=week&restrict_sr=1",
+      "primary_brand": "Home Chef",
+      "sentiment": "positive",
+      "confidence": 0.9,
+      "reasoning": "VADER: 0.77, TextBlob: 0.62"
+    },
+    {
+      "title": "What else?",
+      "selftext": "Can I ask what one might suggest besides factor? I\u2019m not seeing the best posts about them and looking for recommendations ",
+      "score": 5,
+      "num_comments": 5,
+      "subreddit": "factor75",
+      "url": "https://reddit.com/r/factor75/comments/1xkjot8/what_else/",
+      "created_utc": 1793476402.0,
+      "competitors_mentioned": [
+        "Factor75"
+      ],
+      "author": "Cool-Decision5002",
+      "upvote_ratio": 1.0,
+      "is_self": true,
+      "source_brand": "Factor75",
+      "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
+      "primary_brand": "Factor75",
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "VADER: -0.58, TextBlob: 1.00"
+    },
+    {
+      "title": "lower sodium in texas",
+      "selftext": "I live near the DFW area of Texas. I have tried several meal services, but no luck so far. I need them to be lower in sodium. Which is not too difficult to have in healthy, non-preservative meals. They also need to be less carb dense. I don't mean low carb. I mean like not 95g of carbs in a meal.  \n  \nHere are my results so far.  \n  \n**factor75 -** tastes good when it is delivered on time and not room temp. I've had to get several refunds in the timespan of 6 weeks. If it weren't for the delivery issues, I would stay with factor.  \n  \n**Cook Unity** \\- I tried Cook Unity because it seems to be the most recommended. However, their website doesn't have full nutrition info and all of the meals I picked were unintentionally carb heavy, no veggies, and really high in sodium (a couple were over 70% of the daily allowance) enough to mess with my blood pressure. I was not able to determine this until after the food was delivered and there was a QR code that linked to the full nutrition info. I don't want to play whack a mole with ordering food.  \n  \n**Modify Health** \\- The meals didn't taste the same from delivery to delivery. The pot roast tasted like sauerkraut one time (yuck). Also, they have the most difficult to open packaging for meals I have ever experienced. I'm 6'4\" and 190lbs, I'm in good shape. I do not kid when I tell you some of the \"glue\" holding the top plastic is a struggle to remove and cutting it with a knife is difficult because it is super stretchy. I'm not trying to get a workout. I'm trying to eat.\n\n  \nI really just want to my meals to show up, be healthy, and I can pop them in the microwave without thinking about it. ",
+      "score": 2,
+      "num_comments": 1,
+      "subreddit": "ReadyMeals",
+      "url": "https://reddit.com/r/ReadyMeals/comments/1xjlxm8/lower_sodium_in_texas/",
+      "created_utc": 1793381808.0,
+      "competitors_mentioned": [
+        "Factor75"
+      ],
+      "author": "Sad-Outlandishness77",
+      "upvote_ratio": 0.75,
+      "is_self": true,
+      "source_brand": "Factor75",
+      "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
+      "primary_brand": "Factor75",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: 0.85, TextBlob: 0.09"
+    },
+    {
+      "title": "Factor 75 is completely unreliable.",
+      "selftext": "I first tried factor about 3- 4 years ago. They did fine but after 5 months of the same meals we were burned out.\n\nWell, we recently moved and I needed a break from meal prep. I returned to factor and it only lasted 3 weeks. They screwed up EVERY box. Two boxes were late. Two boxes had half the meals I ordered. One had the right number of meals but half was food I didn\u2019t choose. I chose factor so I wouldn\u2019t have to meal prep. \n\nThey\u2019re completely unreliable. I don\u2019t know what\u2019s happened to this place and don\u2019t know how they survive with such atrocious service. \n\nAnd when you ask for refunds, they try to give you in-store credit. Awful company. ",
+      "score": 11,
+      "num_comments": 6,
+      "subreddit": "factor75",
+      "url": "https://reddit.com/r/factor75/comments/1xiz5aj/factor_75_is_completely_unreliable/",
+      "created_utc": 1793315062.0,
+      "competitors_mentioned": [
+        "Factor75"
+      ],
+      "author": "alwaysconfused231",
+      "upvote_ratio": 0.92,
+      "is_self": true,
+      "source_brand": "Factor75",
+      "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
+      "primary_brand": "Factor75",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: -0.34, TextBlob: -0.08"
+    },
+    {
+      "title": "Factor AI ads",
+      "selftext": "I\u2019m hoping Factor sees this, because your ads literally make my stomach turn! Stop using AI food photos! It makes the food look like it\u2019s diseased and covered in bugs! We, the people, don\u2019t want food that does not look like food! EEYUCK! \ud83e\udd22",
+      "score": 11,
+      "num_comments": 8,
+      "subreddit": "factor75",
+      "url": "https://reddit.com/r/factor75/comments/1xhbyrg/factor_ai_ads/",
+      "created_utc": 1793153605.0,
+      "competitors_mentioned": [
+        "Factor75"
+      ],
+      "author": "theartofsunshine",
+      "upvote_ratio": 0.77,
+      "is_self": false,
+      "source_brand": "Factor75",
+      "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
+      "primary_brand": "Factor75",
+      "sentiment": "neutral",
+      "confidence": -0.54,
+      "reasoning": "VADER: 0.54, TextBlob: -1.00"
+    },
+    {
+      "title": "Do not subscribe to factor literally ever",
+      "selftext": "I just recently subbed to factor and I have never cancelled a subscription so fast in my life. I received my first box this past Saturday, 3 days ago, and it is some of the worst food I\u2019ve ever had in my entire life. First of all it looks so disgusting and tastes worse than it looks. I\u2019m not expecting Michelin quality, it\u2019s microwave food. But, the way that it\u2019s presented on both the website, and all the people who promote it, hype it so much and how quality is of the utmost importance for their company\u2019s goal. Meanwhile it looks worse than school lunches in America, and tastes worse as well. Quality ingredients and quality culinary products are not what this company is. It looks worse than hungry man frozen dinners and tastes worse too. Fucking kids cuisine has more flavor than this and is actually filling enough to be a meal. A quarter of a chicken breast and a 1/3 cup of vegetables with what looks like the concept of a sauce is not remotely worth $140 or even $5. Not even to mention I explicitly stated that I\u2019m allergic to dairy when going through the meal selection process, yet 8 of the 10 meals I was sent have dairy in them. It\u2019s not like just a slab of butter or whatever, like the entirety of the meal is dairy. They also give you a 2 day window of canceling a delivery and will not give you any refund despite a transaction not even going through. But worst of all is them saying they focus on sustainability yet using ai for their customer support team and in the rare chance you have the opportunity to actually talk to a human they are more unhelpful than the ai, which literally does nothing to help you at all. Just get groceries. This is not worth $140 at all. It\u2019s not more affordable than getting groceries yourself. Which I mean that fully, even right now when groceries are so unnecessarily expensive. This service does not do anything of benefit. If you\u2019re a college student, don\u2019t have that much available time, or have limited mobility and can\u2019t do much to cook. Do not get this service. It is not worth it and you can get actually better tasting frozen meals from the grocery store for cheaper than this service. This is not quality. It is not great tasting. It is not sustainable. And it is not easy when you have basically a day to cancel an upcoming delivery. Do not give your money to these greedy, money hungry losers that do literally nothing to provide any of the components they say are most important to them and provided with every meal, because it looks like they ran into a restaurant and scraped off the bit of food that people didn\u2019t eat to send it to you. Which ironically that would be more sustainable than what they do. Do not give your money to this company. ",
+      "score": 15,
+      "num_comments": 31,
+      "subreddit": "factor75",
+      "url": "https://reddit.com/r/factor75/comments/1xgxmot/do_not_subscribe_to_factor_literally_ever/",
+      "created_utc": 1793119354.0,
+      "competitors_mentioned": [
+        "Factor75"
+      ],
+      "author": "zephir501",
+      "upvote_ratio": 0.64,
+      "is_self": true,
+      "source_brand": "Factor75",
+      "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
+      "primary_brand": "Factor75",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: -0.97, TextBlob: -0.09"
+    },
+    {
+      "title": "Someone shipping factor meals to my home",
+      "selftext": "Hi,\n\nHas this happened to someone else? Someone is shipping factor boxes to my home. I have received 4 boxes so far. I have called the factor customer service multiple times, shared my address, but they have not taken any action.\n\nThanks\n\nTejal",
+      "score": 1,
+      "num_comments": 0,
+      "subreddit": "ReadyMeals",
+      "url": "https://reddit.com/r/ReadyMeals/comments/1xlh0h4/someone_shipping_factor_meals_to_my_home/",
+      "created_utc": 1793573740.0,
+      "competitors_mentioned": [
+        "Factor75"
+      ],
+      "author": "International_Term_2",
+      "upvote_ratio": 1.0,
+      "is_self": true,
+      "source_brand": "Factor75",
+      "source_url": "https://www.reddit.com/search/?q=factor+meals&type=posts&t=week",
+      "primary_brand": "Factor75",
+      "sentiment": "positive",
+      "confidence": 0.78,
+      "reasoning": "VADER: 0.68, TextBlob: 0.10"
+    },
+    {
+      "title": "Factor 75 has plummeted in quality.",
+      "selftext": "I first tried factor about 3- 4 years ago. They did fine but after 5 months of the same meals we were burned out.\n\nWell, we recently moved and I needed a break from meal prep. I returned to factor and it only lasted 3 weeks. They screwed up EVERY box. Two boxes were late. Two boxes had half the meals I ordered. One had the right number of meals but half was food I didn\u2019t choose. I chose factor so I wouldn\u2019t have to meal prep.\n\nThey\u2019re completely unreliable. I don\u2019t know what\u2019s happened to this place and don\u2019t know how they survive with such atrocious service.\n\nAnd when you ask for refunds, they try to give you in-store credit. Awful company.",
+      "score": 16,
+      "num_comments": 18,
+      "subreddit": "ReadyMeals",
+      "url": "https://reddit.com/r/ReadyMeals/comments/1xiz6xn/factor_75_has_plummeted_in_quality/",
+      "created_utc": 1793315182.0,
+      "competitors_mentioned": [
+        "Factor75"
+      ],
+      "author": "alwaysconfused231",
+      "upvote_ratio": 1.0,
+      "is_self": true,
+      "source_brand": "Factor75",
+      "source_url": "https://www.reddit.com/search/?q=factor+meals&type=posts&t=week",
+      "primary_brand": "Factor75",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: -0.34, TextBlob: -0.10"
     },
     {
       "title": "Which is the best meal kit?",
       "selftext": "I know this is a super vague question and a lot of it will depend on health goals. But let\u2019s say I\u2019m looking for 0-15min of cooking, lots of plant based options but ensuring good balance of veggies and proteins. Not high in sodium.\n\nI tried factor and while the meals were nice so many were higher sodium content than is good for me  \nAnd yet tasted like they had no flavor.\n\nThistle seems interesting but at $18 a meal plus delivery fee, they\u2019re as pricey as take out.\n\nWhat\u2019s worth trying?",
-      "score": 0,
-      "num_comments": 1,
-      "subreddit": "mealkits",
-      "url": "https://reddit.com/r/mealkits/comments/1xetg7k/which_is_the_best_meal_kit/",
-      "created_utc": 1792904336.0,
+      "score": 2,
+      "num_comments": 8,
+      "subreddit": "ReadyMeals",
+      "url": "https://reddit.com/r/ReadyMeals/comments/1xfnhrk/which_is_the_best_meal_kit/",
+      "created_utc": 1792989736.0,
       "competitors_mentioned": [
         "Factor75"
       ],
       "author": "PresentationTop9547",
-      "upvote_ratio": 0.5,
+      "upvote_ratio": 1.0,
       "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://www.reddit.com/r/mealkits/search/?q=hellofresh&type=posts&t=week&restrict_sr=1",
+      "source_brand": "Factor75",
+      "source_url": "https://www.reddit.com/r/ReadyMeals/search/?q=factor&type=posts&t=week&restrict_sr=1",
       "primary_brand": "Factor75",
       "sentiment": "neutral",
       "confidence": 0.85,
       "reasoning": "VADER: 0.98, TextBlob: 0.39"
     },
     {
-      "title": "Spoilage/freezing home chef",
-      "selftext": "Is there any service which doesn\u2019t pre freeze all the ingredients and which does have good quality control on the ingredients? I just did a week of home chef for the first time in a couple years and I was so disappointed. My broccoli was moldy some was browned my cabbage was pre frozen (I believe) and so texturally was just inedible. The plantains were soggy and disgusting (tho they cooked up ok) \n\nI believe these two issues are what is happening. \n\nEverything gets bought months ahead of time by the company. The company freezes everything. Then ships it to you when it\u2019s that week. So nothing is fresh everything is pre frozen. \n\nThen there\u2019s also the issue of the lack of quality control on any ingredients that is fresh like broccoli. \n\nIt\u2019s really shameful to me that companies would charge so much higher prices for convenience (which would be ok with me) but would then have such sub par ingredients that things are literally inedible. \n\nI quite hello fresh more recently for the same issues. \n\nIs there ANY meal kit that doesn\u2019t have these problems? \n\nIf the kits were the same quality as the grocery store but in small quantities in a kit with the meal planned I\u2019d have no complaints at all but it has never seemed to work out that way. \n\nThe only other company I\u2019ve tried is Green Chef which I enjoyed but I quit because I have 3 kids and we eat more \u201cnormal\u201d (less green) foods. ",
-      "score": 2,
-      "num_comments": 5,
-      "subreddit": "mealkits",
-      "url": "https://reddit.com/r/mealkits/comments/1xchsh4/spoilagefreezing_home_chef/",
-      "created_utc": 1792673722.0,
+      "title": "Was so looking forward to the Salmon and Pork Chop recipes that were arriving today.  Blue Apron decided on their own to send me chicken breasts for both.",
+      "selftext": "There was no reach out to ask me if I was OK with the change to chicken breasts -- it just happened.  So disappointing.  I mean, if I am just going to cook chicken breasts every day, I can buy them in bulk at the grocery store for WAY less.  I really need to quit this food delivery service.",
+      "score": 10,
+      "num_comments": 13,
+      "subreddit": "blueapron",
+      "url": "https://reddit.com/r/blueapron/comments/1xjmrni/was_so_looking_forward_to_the_salmon_and_pork/",
+      "created_utc": 1793383676.0,
       "competitors_mentioned": [
-        "HelloFresh",
-        "Home Chef",
-        "Green Chef"
+        "Blue Apron"
       ],
-      "author": "court_swan",
-      "upvote_ratio": 1.0,
+      "author": "ANS4JBS",
+      "upvote_ratio": 0.81,
       "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://www.reddit.com/r/mealkits/search/?q=hellofresh&type=posts&t=week&restrict_sr=1",
-      "primary_brand": "Home Chef",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "VADER: 0.65, TextBlob: 0.09"
-    },
-    {
-      "title": "Athlete looking for affordable meal delivery services!",
-      "selftext": "Hi y\u2019all! I\u2019m a Muay Thai fighter currently in camp for my 8th amateur fight. I\u2019m also a nutrition coach and I\u2019m using this fight prep opportunity to create a list of pros and cons for my fighter clients (and myself) of meal delivery services as I explore them while I\u2019m in camp.\n\nI\u2019ve used Factor 75 in the past and have been using them for the last two weeks. They fit my macros well and the meals are delicious, but they\u2019re just not affordable\u2026 2 meals a day for 9 days at $229 (discounted rate) is CRAZY. (I\u2019ve paid \\~$400 for 36 meals with discounts which just seems excessive)\n\nThat\u2019s said, I\u2019m looking for suggestions for similar meals at \\~$150-$175/week. Thank you!",
-      "score": 1,
-      "num_comments": 7,
-      "subreddit": "mealkits",
-      "url": "https://reddit.com/r/mealkits/comments/1x9ycui/athlete_looking_for_affordable_meal_delivery/",
-      "created_utc": 1792420027.0,
-      "competitors_mentioned": [
-        "Factor75"
-      ],
-      "author": "lilferalkat",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "HelloFresh",
-      "source_url": "https://www.reddit.com/r/mealkits/search/?q=hellofresh&type=posts&t=week&restrict_sr=1",
-      "primary_brand": "Factor75",
+      "source_brand": "Blue Apron",
+      "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
+      "primary_brand": "Blue Apron",
       "sentiment": "neutral",
       "confidence": 0.85,
-      "reasoning": "VADER: 0.63, TextBlob: 0.01"
+      "reasoning": "VADER: -0.31, TextBlob: -0.16"
     },
     {
-      "title": "Factor referral codes",
-      "selftext": "Post your personal referral links here in this thread only once (no duplicate posts). Duplicate posts will be removed.\n\nReferral codes are not allowed to be posted in the main feed.\n\n**This thread is NOT for free box codes. We have a separate thread for free box codes.**\n\nWhat is the difference between a referral code and a free box code?\n\nA referral code is a link that looks like this: \\`[https://www.factor75.com/plans?c=\\[REDACTED\\]&discount\\_comm\\_id=\\[REDACTED\\]&plans\\_ab=true&utm\\_campaign=notification&utm\\_medium=clipboard&utm\\_source=freebies\\`](https://www.factor75.com/plans?c=[REDACTED]&discount_comm_id=[REDACTED]&plans_ab=true&utm_campaign=notification&utm_medium=clipboard&utm_source=freebies`)\n\nReferral links don't expire. If one person uses it, the next person who comes along can still use it. When you use a referral code, you get a discount on your first few orders, you do not get a free box. The person who posted the referral code gets a credit to their account based on the number of people who have placed orders using their code.\n\nA free box code is not a link. It is a random-looking code like \\`FCB-YCAPDJPHW\\` that is entered in the factor website. It can only be used once. If one person uses it, the next person who comes along and tries to use it will receive a message that the voucher has expired. When you use a free box code, you get one box for free.",
-      "score": 2,
-      "num_comments": 6,
-      "subreddit": "factor75",
-      "url": "https://reddit.com/r/factor75/comments/1xf9pb3/factor_referral_codes/",
-      "created_utc": 1792952537.0,
-      "competitors_mentioned": [
-        "Factor75"
-      ],
-      "author": "AutoModerator",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "Factor75",
-      "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
-      "primary_brand": "Factor75",
-      "sentiment": "negative",
-      "confidence": 0.85,
-      "reasoning": "High-confidence complaint keyword detected: \"not allowed\""
-    },
-    {
-      "title": "What happened?",
-      "selftext": "I used Factor a few years ago and it was pretty good. I got it this past week and what a drop off? Is it that bad or did I just make some bad picks?",
+      "title": "Disappointing return to BA and I\u2019ve already canceled",
+      "selftext": "I just came back to Blue Apron after roughly a year and a half away. I really missed it, but I was expecting a new baby and between the food diversion and exhaustion, I just didn\u2019t have it in me to cook.\n\nBox #1:  \nI tried to order a box, and the app confirmed the delivery address (which is different from my past orders, because I moved).  I also got an email confirming the correct address. \n\nThen, on the shipping day, I got a new email saying that it was on the way and being delivered to MY OLD ADDRESS. I contacted customer support and while they were very pleasant, unfortunately there was nothing they could do for me so I had to cancel the order.\n\nI made sure to delete my old address from the account altogether since their software couldn\u2019t handle delivery addresses from the app.\n\nBox #2:  \nI ordered the next available box, and was really excited that it was being shipped to the correct address, but then it got routed to the wrong state in the complete opposite direction of my state. Needless to say it arrived three days late and the box was completely destroyed, and the thermal bag was unsealed.\n\nI got my refund, was disappointed, and hoped the ruined bag and beat up box was a fluke.\n\nBox #3:   \nI ordered a new box and it was finally delivered on time, to the correct address. However, they never bothered to remove the white tape to seal the thermal bag on the inside and many of the ingredients arrived at room temperature.\n\nI was also given a refund from customer support but I have yet to receive a single useable box.  I don\u2019t want to keep paying for refunds and taking up space in my garbage can with spoiled ingredients, and I am tired of scrambling for alternative dinner plans at the last minute. \n\nI\u2019m sorry but I am over it, Blue Apron.  I was with you for years, but until the logistics are fixed, there\u2019s no point. ",
       "score": 5,
       "num_comments": 7,
-      "subreddit": "factor75",
-      "url": "https://reddit.com/r/factor75/comments/1xehkip/what_happened/",
-      "created_utc": 1792870196.0,
+      "subreddit": "blueapron",
+      "url": "https://reddit.com/r/blueapron/comments/1xi3iaw/disappointing_return_to_ba_and_ive_already/",
+      "created_utc": 1793228687.0,
       "competitors_mentioned": [
-        "Factor75"
+        "Blue Apron"
       ],
-      "author": "templeton_rat",
-      "upvote_ratio": 1.0,
-      "is_self": true,
-      "source_brand": "Factor75",
-      "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
-      "primary_brand": "Factor75",
-      "sentiment": "neutral",
-      "confidence": 0.85,
-      "reasoning": "VADER: -0.55, TextBlob: -0.15"
-    },
-    {
-      "title": "Issues with Orders",
-      "selftext": "Hello everyone! I\u2019ve been using factor for a couple of months now and I feel like the past 6 weeks I\u2019ve had to report an issue almost every week whether it be them swapping out my meals for something I don\u2019t like or just not putting meals in it. Is anybody else having this issue?",
-      "score": 4,
-      "num_comments": 5,
-      "subreddit": "factor75",
-      "url": "https://reddit.com/r/factor75/comments/1xe9m5a/issues_with_orders/",
-      "created_utc": 1792850906.0,
-      "competitors_mentioned": [
-        "Factor75"
-      ],
-      "author": "GapAdministrative158",
-      "upvote_ratio": 0.84,
-      "is_self": true,
-      "source_brand": "Factor75",
-      "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
-      "primary_brand": "Factor75",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "VADER: 0.65, TextBlob: -0.25"
-    },
-    {
-      "title": "Factor 75 has new packages and they melt!",
-      "selftext": "I often buy one of their popular salmon meals.\n\nI always cook it for 2 minutes, let it rest for 1 to 2 minutes, then cook it for another minute, then check the temperature. Sometimes it needs an additional 30 seconds.\n\nI use an oversized pin, to poke a few holes in the film for each section, to let the steam escape.\n\nThis time I cooked it for 2 minutes, let it rest for a minute, then cooked for one more minute, and this is what I got.\n\nThis package has a \"dishwasher safe\" icon, but no microwave icon. \n\nI looked up the company, \"Faerch\", that makes the package, and it claims that their CPET packages are safe in the microwave for reheating. \n\nThis package is labeled as PET. Is that the same as CPET?",
-      "score": 25,
-      "num_comments": 18,
-      "subreddit": "factor75",
-      "url": "https://reddit.com/r/factor75/comments/1xdl5t8/factor_75_has_new_packages_and_they_melt/",
-      "created_utc": 1792778235.0,
-      "competitors_mentioned": [
-        "Factor75"
-      ],
-      "author": "BluSpekz",
-      "upvote_ratio": 0.91,
+      "author": "newlycapacitated",
+      "upvote_ratio": 0.65,
       "is_self": false,
-      "source_brand": "Factor75",
-      "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
-      "primary_brand": "Factor75",
-      "sentiment": "positive",
-      "confidence": 0.97,
-      "reasoning": "VADER: 0.67, TextBlob: 0.30"
+      "source_brand": "Blue Apron",
+      "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
+      "primary_brand": "Blue Apron",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: -0.91, TextBlob: -0.01"
     },
     {
-      "title": "Is anyone else getting calls from Factor after cancelling?",
-      "selftext": "Cancelled maybe two months ago, and all of a sudden I\u2019m getting all these spam calls from them. \n\nI\u2019ve blocked the number, but they\u2019re calling me from a new number every single day. \n\nWhat the hell is going on? ",
-      "score": 3,
-      "num_comments": 5,
-      "subreddit": "factor75",
-      "url": "https://reddit.com/r/factor75/comments/1xdh5fl/is_anyone_else_getting_calls_from_factor_after/",
-      "created_utc": 1792769222.0,
+      "title": "Gift arrived",
+      "selftext": "I was very surprised to receive Blue Apron\u2019s gift of a little crock, Maldon sea salt, and Italian olive oil. I feel a bit like I\u2019m being courted by my longtime boyfriend who is begging me not to dump him, \u201cReally, baby, I\u2019ve changed!\u201d We\u2019ll see. But I\u2019m touched, regardless",
+      "score": 21,
+      "num_comments": 27,
+      "subreddit": "blueapron",
+      "url": "https://reddit.com/r/blueapron/comments/1xhsj16/gift_arrived/",
+      "created_utc": 1793204128.0,
       "competitors_mentioned": [
-        "Factor75"
+        "Blue Apron"
       ],
-      "author": "stifflette",
+      "author": "kimcondas",
       "upvote_ratio": 1.0,
       "is_self": true,
-      "source_brand": "Factor75",
-      "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
-      "primary_brand": "Factor75",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "VADER: -0.89, TextBlob: 0.02"
+      "source_brand": "Blue Apron",
+      "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
+      "primary_brand": "Blue Apron",
+      "sentiment": "neutral",
+      "confidence": 0.31,
+      "reasoning": "VADER: 0.73, TextBlob: 0.04"
     },
     {
-      "title": "Cancelling (Again)",
-      "selftext": "I really liked Factor when I gave it a try a few years ago.  Eventually I started having delivery issues and decided to stop using them.  I've moved to a different state and restarted my subscription.  Week 1 - received 3 substitutions of meals that I don't like.  Additionally, 4 of 7 meals said they should be used by 10/19 (they were delivered on 10/14).  This week, I should have received my delivery yesterday (10/21) but it was delayed.  I received it today, it was missing one of the meals, and a couple of them are only good through 10/23 (tomorrow).  I was credited for the missing meal and asked them to cancel. So yeah, I'm done for good this time.  Any recommendations on other meal delivery services?",
-      "score": 1,
-      "num_comments": 0,
-      "subreddit": "factor75",
-      "url": "https://reddit.com/r/factor75/comments/1xcpa5k/cancelling_again/",
-      "created_utc": 1792690777.0,
-      "competitors_mentioned": [
-        "Factor75"
-      ],
-      "author": "Fresh_Concept_4128",
-      "upvote_ratio": 0.67,
-      "is_self": true,
-      "source_brand": "Factor75",
-      "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
-      "primary_brand": "Factor75",
-      "sentiment": "negative",
-      "confidence": 0.85,
-      "reasoning": "High-confidence complaint keyword detected: \"vent\""
-    },
-    {
-      "title": "First Box Issue",
-      "selftext": "Hi factor friends! I just received my first box of 10 meals and received 7 roasted garlic chickens instead of 2 of each of the other 3 meals that I ordered ( lunch and dinner, 5 days a week box). Is this the norm? I\u2019ve seen other threads stating damaged boxes and things like that, so just wondering how the customer service truly is and if this is something I should stick with. \n\nI guess, as a bonus, is the roasted garlic chicken any good? \ud83d\ude02 ",
-      "score": 7,
-      "num_comments": 12,
-      "subreddit": "factor75",
-      "url": "https://reddit.com/r/factor75/comments/1xa3u0f/first_box_issue/",
-      "created_utc": 1792432320.0,
-      "competitors_mentioned": [
-        "Factor75"
-      ],
-      "author": "05072-LongShadow",
-      "upvote_ratio": 0.89,
-      "is_self": true,
-      "source_brand": "Factor75",
-      "source_url": "https://www.reddit.com/search/?q=factor75&type=posts&t=week",
-      "primary_brand": "Factor75",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "VADER: 0.94, TextBlob: 0.07"
-    },
-    {
-      "title": "Couldn\u2019t jive with Factor even for a week",
-      "selftext": "We were interested in just about 4-6 meals per week that would be easy to heat up. We both work in healthcare, sometimes days get late and neither of us may want to cook. Normally we try to meal prep out some air-fried chicken and veg with a starch so most of the Factor meals essentially boil down to exactly that. \n\nThe Factor promotions are alluring, the first box is discounted more heavily and they\u2019re running free breakfast for a year. We got 4 meals and some egg bites. Roughly like $57 with shipping for that which seemed alright. \n\nI will first say that their packaging feels incredibly wasteful, as soon as the big ice pack cooler hit our porch I started to feel guilty thinking about how many of those cold packs would be tossed every week with this big ass box. \n\nThe meals are okay, a little on the small end but not too bad. They don\u2019t taste frozen so that\u2019s nice but they still have a Lean Cuisine feel. The bacon egg bites I got, I guess I didn\u2019t check the macros because they are a whopping 400 cals versus the exact same Trader Joe\u2019s that are 240 cals and more protein. \n\nSo we\u2019re not going to continue with it. The next box was looking like >$70 for the same amount of meals. Ain\u2019t nobody is paying that much for just four Lean Cuisines. I could see how you could do 6 meals and use Factor Plus to keep it around $80 but that\u2019s just sunk cost fallacy. \n\nSide note. I did not find them difficult to cancel. I\u2019m not sure why yall have so much trouble. You literally just got on the website and cancel it. It takes like 10 seconds of scrolling through \u201cbut wait there\u2019s more!\u201d promos.",
-      "score": 19,
-      "num_comments": 23,
-      "subreddit": "ReadyMeals",
-      "url": "https://reddit.com/r/ReadyMeals/comments/1xapd6i/couldnt_jive_with_factor_even_for_a_week/",
-      "created_utc": 1792494904.0,
-      "competitors_mentioned": [
-        "Factor75"
-      ],
-      "author": "INGWR",
-      "upvote_ratio": 0.76,
-      "is_self": true,
-      "source_brand": "Factor75",
-      "source_url": "https://www.reddit.com/r/ReadyMeals/search/?q=factor&type=posts&t=week&restrict_sr=1",
-      "primary_brand": "Factor75",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "reasoning": "VADER: 0.89, TextBlob: 0.07"
-    },
-    {
-      "title": "Their Caribbean Chicken Stew is delish!",
-      "selftext": "I made this a little while back and it has left such an impression on me. It is seriously one of their best dishes that I have tried - pretty unique flavor with good depth and complexity. I want to recreate this at some point! It's dishes like this one that make me believe they can often be more flavorful than Marley Spoon and Blue Apron despite their reputation of being less so. ",
-      "score": 87,
-      "num_comments": 8,
+      "title": "Chicken - Odd Texture",
+      "selftext": "We have used Home Chef years ago and left because we found the texture of the chicken dishes off. Recently, we switched back after Blue Apron imploded. However, we are finding the same issue. Why does the texture of the Home Chef seem off ? Our entire family won't eat it. It looks perfect , but no matter what it has some type of texture issue that makes it unappealing. \n\nTonight we ended up buying Purdue chicken at the supermarket to replace the Home Chef chicken so not to waste the ingredients of the meal. \n\nThis has gone on for a few months now. The meals are otherwise delicious , but not having chicken as an option on weekly meals make the entire service tough for us to use. \n\nThanks for any feedback or suggestions. ",
+      "score": 2,
+      "num_comments": 13,
       "subreddit": "HomeChef",
-      "url": "https://reddit.com/r/HomeChef/comments/1xc8ced/their_caribbean_chicken_stew_is_delish/",
-      "created_utc": 1792641381.0,
+      "url": "https://reddit.com/r/HomeChef/comments/1xhdr5x/chicken_odd_texture/",
+      "created_utc": 1793159024.0,
       "competitors_mentioned": [
         "Blue Apron",
-        "Marley Spoon"
+        "Home Chef"
       ],
-      "author": "UniversalNomad1",
-      "upvote_ratio": 0.99,
-      "is_self": false,
+      "author": "CTek20",
+      "upvote_ratio": 0.75,
+      "is_self": true,
       "source_brand": "Blue Apron",
       "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
       "primary_brand": "Home Chef",
       "sentiment": "positive",
       "confidence": 0.9,
-      "reasoning": "VADER: 0.93, TextBlob: 0.12"
+      "reasoning": "VADER: 0.92, TextBlob: -0.11"
     },
     {
-      "title": "Farewell, old friend.",
-      "selftext": "Blue Apron has been part of our household off and on for over 10 years.  Today was the final straw and I will miss them.  Products arrived today covered in raw chicken juice, a leaky ice pack and completely room temperature.  Onion and tomatoes had mold.  The bread package had liquid inside.  The box holding the loose ingredients within the thermal bag was so wet it collapsed and the contents bathed in ice pack slime.  Spent an hour trying to wipe everything off to see if anything could be salvaged but all the meat was room temperature.  Super sad because Blue Apron was a fun tradition. ",
-      "score": 17,
-      "num_comments": 11,
+      "title": "Marley passing on Blue Apron goods?",
+      "selftext": "Is Marley just reselling BA now?",
+      "score": 3,
+      "num_comments": 2,
       "subreddit": "blueapron",
-      "url": "https://reddit.com/r/blueapron/comments/1xc5wd6/farewell_old_friend/",
-      "created_utc": 1792634033.0,
+      "url": "https://reddit.com/r/blueapron/comments/1xgg59s/marley_passing_on_blue_apron_goods/",
+      "created_utc": 1793066530.0,
       "competitors_mentioned": [
         "Blue Apron"
       ],
-      "author": "Long-Amount-5436",
-      "upvote_ratio": 0.81,
-      "is_self": false,
-      "source_brand": "Blue Apron",
-      "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
-      "primary_brand": "Blue Apron",
-      "sentiment": "neutral",
-      "confidence": 0.21,
-      "reasoning": "VADER: 0.73, TextBlob: -0.06"
-    },
-    {
-      "title": "BA's Response to \"Loyalty\" is More Greed",
-      "selftext": "The wife and I get two meals a week. Always have since we started. Even when we're choosing premium stuff, our cart rarely makes it over $60. We like the hybrid approach of still cooking our own meals and having room to eat out if we want without wasting food.\n\nBA sends over a \"thanks for being loyal\" and \"the changes we made are working!\" email with \"$100 off\\*\" which is $50 across two meals. \n\nGo to put the code in and it won't take on any of our orders for the week. Check the fine print, order has to be $75+\n\nPosting this for those who need further confirmation that Blue Apron either have their heads up their asses or don't actually care. Even in the face of a massive quality crisis, they're still trying to farm more money from us.",
-      "score": 20,
-      "num_comments": 28,
-      "subreddit": "blueapron",
-      "url": "https://reddit.com/r/blueapron/comments/1xaspc6/bas_response_to_loyalty_is_more_greed/",
-      "created_utc": 1792504264.0,
-      "competitors_mentioned": [
-        "Blue Apron"
-      ],
-      "author": "oohbeartrap",
-      "upvote_ratio": 0.71,
-      "is_self": false,
-      "source_brand": "Blue Apron",
-      "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
-      "primary_brand": "Blue Apron",
-      "sentiment": "positive",
-      "confidence": 0.98,
-      "reasoning": "VADER: 0.71, TextBlob: 0.27"
-    },
-    {
-      "title": "Box of Warm Meat",
-      "selftext": "I've been ordering through Every Plate for years. I've had a few missing items, a few unusable veggies. I figured - the law of large numbers, it was bound to happen. Even with the obvious decline in quality and increase in shipping cost, I still ordered and still referred when asked about such topics. \n\nBut this week finally broke me. I received a notification two days prior that my order was on the way, I thought nothing of it. But yesterday I open the app and see my order is in transit - with FedEx. I figured there's just a new shipping method since not one of the literal hundreds of boxes we've received has ever come via FedEx.\n\nLater in the afternoon my box arrives, I take it in immediately. Imagine my surprise to find fully melted gel packs that are no longer even as cold as the current outdoor temp, sweaty packages of meat that were not even cold to the touch and plastic bags of veggies that started to brown under either the weight or heat. \n\nI reach out to support immediately and am told Thursday deliveries have been happening via FedEx for a year. My previously frozen boxes and Ring camera footage make this provably untrue. I'm told if I select any day other than Thursday and possibly Friday, it will come via the usual courier. So I need to change the day off the week that I've planned this whole process around for years to ensure I don't receive beige, room temp meat? Got it. \n\n They did also refund the full purchase price of the box and delivery - as a credit. I didn't have it in me to argue my irritation with planning around a box I no longer have or my discomfort with ever ordering again so I ended the chat. \n\nI just saw someone else's post about the End of An Era and this truly feels like it. I don't know how they'll stay in business much longer at this rate, but I wish them well.",
-      "score": 8,
-      "num_comments": 8,
-      "subreddit": "everyplate",
-      "url": "https://reddit.com/r/everyplate/comments/1xdf77o/box_of_warm_meat/",
-      "created_utc": 1792764772.0,
-      "competitors_mentioned": [
-        "EveryPlate"
-      ],
-      "author": "MrsBenz2pointOh",
+      "author": "iamhoop",
       "upvote_ratio": 1.0,
+      "is_self": false,
+      "source_brand": "Blue Apron",
+      "source_url": "https://www.reddit.com/search/?q=blue+apron&type=posts&t=week",
+      "primary_brand": null,
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "VADER: 0.00, TextBlob: 0.00"
+    },
+    {
+      "title": "Not bad!",
+      "selftext": "After going on hiatus for a few months I tried Marley Spoon again. My box was delivered as scheduled (though delivered in front of my garage door instead of my front porch as instructed). Box was in decent shape but not taped as well as it could have been. I say this because the ingredients toward the top of the box were not very cold but all of the proteins were which is really what mattered. Only one ingredient missing and one substitution which I was emailed about. I ordered a soup from the market and it was somewhat crushed due to its placement in the box (under the ice packs). I was reluctant to try them again but I had a credit so I thought I\u2019d give them one last shot. Overall, I\u2019m happy with what was delivered today and realistically optimistic! ",
+      "score": 9,
+      "num_comments": 8,
+      "subreddit": "marleyspoon",
+      "url": "https://reddit.com/r/marleyspoon/comments/1xh7s4j/not_bad/",
+      "created_utc": 1793142357.0,
+      "competitors_mentioned": [
+        "Marley Spoon"
+      ],
+      "author": "mlbugg9",
+      "upvote_ratio": 0.85,
       "is_self": true,
-      "source_brand": "EveryPlate",
-      "source_url": "https://www.reddit.com/search/?q=everyplate&type=posts&t=week",
-      "primary_brand": "EveryPlate",
+      "source_brand": "Marley Spoon",
+      "source_url": "https://www.reddit.com/search/?q=marley+spoon&type=posts&t=week",
+      "primary_brand": "Marley Spoon",
       "sentiment": "negative",
       "confidence": 0.9,
-      "reasoning": "VADER: 0.80, TextBlob: -0.03"
+      "reasoning": "VADER: 0.75, TextBlob: 0.15"
+    },
+    {
+      "title": "Not bad!",
+      "selftext": "After going on hiatus for a few months I tried Marley Spoon again. My box was delivered as scheduled (though delivered in front of my garage door instead of my front porch as instructed). Box was in decent shape but not taped as well as it could have been. I say this because the ingredients toward the top of the box were not very cold but all of the proteins were which is really what mattered. Only one ingredient missing and one substitution which I was emailed about. I ordered a soup from the market and it was somewhat crushed due to its placement in the box (under the ice packs). I was reluctant to try them again but I had a credit so I thought I\u2019d give them one last shot. Overall, I\u2019m happy with what was delivered today and realistically optimistic! ",
+      "score": 11,
+      "num_comments": 0,
+      "subreddit": "marleyspoon",
+      "url": "https://reddit.com/r/marleyspoon/comments/1xh7s1z/not_bad/",
+      "created_utc": 1793142351.0,
+      "competitors_mentioned": [
+        "Marley Spoon"
+      ],
+      "author": "mlbugg9",
+      "upvote_ratio": 1.0,
+      "is_self": true,
+      "source_brand": "Marley Spoon",
+      "source_url": "https://www.reddit.com/search/?q=marley+spoon&type=posts&t=week",
+      "primary_brand": "Marley Spoon",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "reasoning": "VADER: 0.75, TextBlob: 0.15"
+    },
+    {
+      "title": "Prices increasing?",
+      "selftext": "Has anyone else noticed that the \u201ccredit\u201d cost of meals seems to be going up? \n\n  \nConveniently for HungryRoot, I can\u2019t see how many credits each meal cost in the past. I\u2019m struggling to find meals/recipes for 5 nights for 57 credits and I wasn\u2019t struggling a few weeks ago. \n\n  \nDo they rope you in with decent options then increase the \u201ccredit\u201d prices??",
+      "score": 12,
+      "num_comments": 18,
+      "subreddit": "hungryroot",
+      "url": "https://reddit.com/r/hungryroot/comments/1xgf0qz/prices_increasing/",
+      "created_utc": 1793063428.0,
+      "competitors_mentioned": [
+        "Hungryroot"
+      ],
+      "author": "SleuthCat",
+      "upvote_ratio": 0.94,
+      "is_self": true,
+      "source_brand": "Hungryroot",
+      "source_url": "https://www.reddit.com/search/?q=hungryroot&type=posts&t=week",
+      "primary_brand": "Hungryroot",
+      "sentiment": "neutral",
+      "confidence": 0.85,
+      "reasoning": "VADER: 0.39, TextBlob: 0.05"
     }
   ],
   "brand_counts": {
-    "HelloFresh": 13,
-    "Factor75": 10,
+    "HelloFresh": 10,
+    "Factor75": 9,
     "Home Chef": 2,
-    "Blue Apron": 3,
-    "Marley Spoon": 1,
-    "Hungryroot": 0,
-    "EveryPlate": 1,
-    "Green Chef": 1
+    "Blue Apron": 6,
+    "Marley Spoon": 3,
+    "Hungryroot": 1,
+    "EveryPlate": 0,
+    "Green Chef": 0
   }
 }
